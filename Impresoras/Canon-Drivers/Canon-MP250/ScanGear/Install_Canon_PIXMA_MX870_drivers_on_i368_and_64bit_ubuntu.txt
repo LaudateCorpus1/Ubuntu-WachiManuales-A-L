@@ -1,0 +1,181 @@
+
+
+ How To: Install Canon PIXMA MX870 drivers on i368 and 64bit ubuntu
+
+ http://ubuntuforums.org/showthread.php?t=1475336
+
+También en:
+
+http://ubuntuforums.org/showthread.php?t=1588333&page=2
+(Pero mejor es la primera o sea esta)
+ 
+    UPDATED FOR SCANNER DRIVER TOO.
+
+    This took a while and I didn't find the information elsewhere, so thought I'd throw the information here in case anyone else is looking for it!
+
+    1) PRINTING
+    Firstly, get the 32 bit printer drivers from Asia:
+
+    http://support-sg.canon-asia.com/con...100272302.html
+
+    Download is at the bottom of that page.
+
+    After you download it, untar the file and get into the directory that it creates
+
+    Code:
+
+    tar -xvf cnij*
+    cd cnij*
+
+    Now.. if you have a 32 bit / i386 system you are good to go!
+
+    Code:
+
+    ./install.sh
+
+    and follow your nose.
+
+    If you are using 64 bit though it's more tricky. The 32 bit deb file itself works fine on 64bit machines, but the stuff in the install script does all the hard work of actually getting the printer set up, so the thing to do is hack the install.sh file to force it to ignore the architecture.
+
+    open the file with your favorite editor and find the block:
+
+    Code:
+
+            ## rpm and deb are error, or rpm and deb are no error, is error ##
+            if [ $c_system_rpm = 0 -a $c_system_deb = 0 ] || [ $c_system_rpm != 0 -a $c_system_deb != 0 ]; then
+                   printf "$L_INST_COM_01_02"
+                   return $C_ERR_CODE
+            else
+                   if test $c_system_rpm -eq 0; then
+                           C_system="rpm"
+                   else
+                            C_system="deb"
+                   fi
+            fi
+
+    and comment out the logic so all that is left is C_system="deb"
+
+    Code:
+
+            ## rpm and deb are error, or rpm and deb are no error, is error ##
+            #if [ $c_system_rpm = 0 -a $c_system_deb = 0 ] || [ $c_system_rpm != 0 -a $c_system_deb != 0 ]; then
+            #       printf "$L_INST_COM_01_02"
+            #       return $C_ERR_CODE
+            #else
+            #       if test $c_system_rpm -eq 0; then
+            #               C_system="rpm"
+            #       else
+                            C_system="deb"
+            #       fi
+            #fi
+
+    Now search for:
+
+    Code:
+
+    C_FUNC_show_and_exec "sudo dpkg -iG $c_fpath_pkg_name"
+
+    and change it to
+
+    Code:
+
+    C_FUNC_show_and_exec "sudo dpkg --force-architecture -iG $c_fpath_pkg_name"
+
+    to force it to ignore the architecture..
+
+    You're done!
+
+    Run with
+
+    Code:
+
+    ./install
+
+
+    2) SCANNING
+    Thanks to others in this thread for doing the groundwork on scanning too. The process is very similar. I think for 386 installs of Ubuntu it should "just work".
+
+    Download the scanner driver from Asia:
+
+    http://support-sg.canon-asia.com/con...100273002.html
+
+
+    Download is at the bottom of that page.
+
+    After you download it, untar the file and get into the directory that it creates
+
+    Code:
+
+    tar -xvf scan*
+    cd scan*
+
+    Now.. if you have a 32 bit / i386 system you are good to go!
+
+    Code:
+
+    ./install.sh
+
+    and follow your nose.
+
+    If you are using 64 bit though it's more tricky. The 32 bit deb file itself works fine on 64bit machines, but the stuff in the install script does all the hard work of actually getting the printer set up, so the thing to do is hack the install.sh file to force it to ignore the architecture.
+
+    open the file with your favorite editor and find the block:
+
+    Code:
+
+            ## rpm and deb are error, or rpm and deb are no error, is error ##
+            if [ $c_system_rpm = 0 -a $c_system_deb = 0 ] || [ $c_system_rpm != 0 -a $c_system_deb != 0 ]; then
+                   printf "$L_INST_COM_01_02"
+                   return $C_ERR_CODE
+            else
+                   if test $c_system_rpm -eq 0; then
+                           C_system="rpm"
+                   else
+                            C_system="deb"
+                   fi
+            fi
+
+    and comment out the logic so all that is left is C_system="deb"
+
+    Code:
+
+            ## rpm and deb are error, or rpm and deb are no error, is error ##
+            #if [ $c_system_rpm = 0 -a $c_system_deb = 0 ] || [ $c_system_rpm != 0 -a $c_system_deb != 0 ]; then
+            #       printf "$L_INST_COM_01_02"
+            #       return $C_ERR_CODE
+            #else
+            #       if test $c_system_rpm -eq 0; then
+            #               C_system="rpm"
+            #       else
+                            C_system="deb"
+            #       fi
+            #fi
+
+    Now search for:
+
+    Code:
+
+    C_FUNC_show_and_exec "sudo dpkg -iG $c_fpath_pkg_name"
+
+    and change it to
+
+    Code:
+
+    C_FUNC_show_and_exec "sudo dpkg --force-architecture -iG $c_fpath_pkg_name"
+
+    to force it to ignore the architecture..
+
+    You're done!
+
+    Run with
+
+    Code:
+
+    ./install
+
+    Now.. You've just installed drivers AND a scanner app. To use the scanner app you have to run it. Hit ALT-F2 to pull up the run command and type "scangearmp". You should see a dialog box about scanners (first time it might say "NOT FOUND" but if you follow your nose, it will find the scanner and add it to the available list. To make life easier, make a launcher on your desktop for scangearmp for future use.
+
+
+    K 
+
+    Last edited by thewump; January 24th, 2011 at 01:18 AM. 

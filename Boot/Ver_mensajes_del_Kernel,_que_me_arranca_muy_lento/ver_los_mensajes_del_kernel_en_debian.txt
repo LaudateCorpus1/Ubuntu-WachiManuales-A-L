@@ -1,0 +1,10 @@
+
+
+Ver los mensajes del kernel
+
+tail -n 300 /var/log/dmesg
+
+sudo tail -n 300 /var/log/messages
+
+sudo tail -n 300 /var/log/kern.log
+ 

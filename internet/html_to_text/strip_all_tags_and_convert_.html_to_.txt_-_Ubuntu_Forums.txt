@@ -1,0 +1,30 @@
+strip all tags and convert .html to .txt - Ubuntu Forums
+https://ubuntuforums.org/showthread.php?t=2042120
+
+Tener instalado linx
+
+sudo apt-get install lynx
+
+
+For html to text
+
+#!/bin/bash
+
+for html_file in *.html; do
+   txt_file=${html_file%.html}".txt"
+   lynx --dump "$html_file" > "$txt_file"
+done
+
+
+
+For htm to text
+
+#!/bin/bash
+
+for htm_file in *.htm; do
+   txt_file=${htm_file%.htm}".txt"
+   lynx --dump "$htm_file" > "$txt_file"
+done
+
+Funciona. No es necesario crear el script para hacerlo funionar, basta con poner todo el script en la linea de comandos en el lugar donde están los html y ejecutarlo
+-Wachín

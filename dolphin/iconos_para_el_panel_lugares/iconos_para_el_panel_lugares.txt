@@ -1,0 +1,5 @@
+
+
+Modifiqué un tema de iconos para usarlo para el panel de dolphin
+
+/home/wachin/Dropbox/UbuntuManuales/icons/Meliae/WachoCompilación-modificada/ 

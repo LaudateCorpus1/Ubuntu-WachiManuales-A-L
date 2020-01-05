@@ -1,0 +1,9 @@
+
+
+
+/usr/share/images/fluxbox/ 
+
+file:///usr/share/images/fluxbox/fluxbox.png
+file:///usr/share/images/fluxbox/ubuntu-dark.png
+file:///usr/share/images/fluxbox/ubuntu-light.png
+

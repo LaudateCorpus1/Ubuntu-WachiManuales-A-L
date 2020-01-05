@@ -1,0 +1,14 @@
+[SOLVED] Ícono dropbox en Xubuntu 16.04
+https://ubuntuforums.org/showthread.php?t=2326582
+
+dropbox stop && dbus-launch dropbox start
+
+Si no te aparece el ícono correctamente, prueba con:
+
+dropbox stop && DBUS_SESSION_BUS_ADDRESS="" dropbox start
+
+
+por un caso luego hay que revisar este si no funciona:
+
+https://www.dropboxforum.com/t5/Error-messages/dropbox-failing-to-start-on-Ubuntu-14/td-p/14062
+https://bbs.archlinux.org/viewtopic.php?id=214147&p=2

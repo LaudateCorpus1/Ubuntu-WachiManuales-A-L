@@ -1,0 +1,12 @@
+
+
+
+00 Desabilitar partición del Sistema Operativo Windows y de su arranque para evitar accidentes
+
+Yo le instalé a un amigo el sistema operativo Ubuntu en una PC de marca HP All-in-One junto , y una vez el me dijo que ya no podia entrar a Windows, y yo supongo que él sin saberlo borró algo de las particiones de Windows pues uno desde Linux puede entrar, así que la solución para mi es no dejar visibles a las particiones de Windows en Linux para evitar accidentes (borrado de archivos críticos del sistema operativo)
+
+Voy a usar el programa Discos el cual en xubuntu 18.04 en los repositorios tiene el nombre:
+
+gnome-disk-utility
+
+y desde allí voy a dejar invisible la particion de Windows y su particion de arranque

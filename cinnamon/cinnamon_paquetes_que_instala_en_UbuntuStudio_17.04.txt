@@ -1,0 +1,39 @@
+
+sudo apt-get install cinnamon
+
+wachin@Dell-Inspiron-1750:~$ sudo synaptic
+C[sudo] password for wachin: 
+wachin@Dell-Inspiron-1750:~$ sudo apt-get install cinnamon
+Leyendo lista de paquetes... Hecho
+Creando árbol de dependencias       
+Leyendo la información de estado... Hecho
+Se instalarán los siguientes paquetes adicionales:
+  apg caribou cinnamon-common cinnamon-control-center
+  cinnamon-control-center-data cinnamon-desktop-data cinnamon-l10n
+  cinnamon-screensaver cinnamon-screensaver-x-plugin cinnamon-session
+  cinnamon-session-common cinnamon-settings-daemon cjs
+  gir1.2-accountsservice-1.0 gir1.2-caribou-1.0 gir1.2-cinnamondesktop-3.0
+  gir1.2-cmenu-3.0 gir1.2-cvc-1.0 gir1.2-gdesktopenums-3.0 gir1.2-gkbd-3.0
+  gir1.2-gnomebluetooth-1.0 gir1.2-gnomedesktop-3.0
+  gir1.2-javascriptcoregtk-3.0 gir1.2-keybinder-3.0 gir1.2-meta-muffin-0.0
+  gir1.2-networkmanager-1.0 gir1.2-nmgtk-1.0 gir1.2-polkit-1.0
+  gir1.2-upowerglib-1.0 gir1.2-xapp-1.0 gir1.2-xkl-1.0 gist gkbd-capplet
+  gnome-backgrounds hwdata iso-flags-png-320x240 libatk-adaptor
+  libcaribou-common libcaribou0 libcinnamon-control-center1
+  libcinnamon-desktop4 libcinnamon-menu-3-0 libcjs0 libcscreensaver0 libcvc0
+  libgle3 libgnome-bluetooth13 libgnomekbd-common libgnomekbd8
+  libkeybinder-3.0-0 libmozjs-24-0v5 libmuffin0 libnemo-extension1 libxapp1
+  mousetweaks muffin muffin-common nemo nemo-data nemo-fileroller python-pam
+  python-pexpect python-ptyprocess python-pyinotify python3-pyatspi
+  python3-setproctitle python3-xlib ruby-json xapps-common
+  xscreensaver-data-extra xscreensaver-gl xscreensaver-gl-extra
+Paquetes sugeridos:
+
+
+Entonces pra desinstalar
+
+sudo apt-get remove apg caribou cinnamon-common cinnamon-control-center cinnamon-control-center-data cinnamon-desktop-data cinnamon-l10n cinnamon-screensaver cinnamon-screensaver-x-plugin cinnamon-session cinnamon-session-common cinnamon-settings-daemon cjs gir1.2-accountsservice-1.0 gir1.2-caribou-1.0 gir1.2-cinnamondesktop-3.0 gir1.2-cmenu-3.0 gir1.2-cvc-1.0 gir1.2-gdesktopenums-3.0 gir1.2-gkbd-3.0 gir1.2-gnomebluetooth-1.0 gir1.2-gnomedesktop-3.0 gir1.2-javascriptcoregtk-3.0 gir1.2-keybinder-3.0 gir1.2-meta-muffin-0.0 gir1.2-networkmanager-1.0 gir1.2-nmgtk-1.0 gir1.2-polkit-1.0 gir1.2-upowerglib-1.0 gir1.2-xapp-1.0 gir1.2-xkl-1.0 gist gkbd-capplet gnome-backgrounds hwdata iso-flags-png-320x240 libatk-adaptor libcaribou-common libcaribou0 libcinnamon-control-center1 libcinnamon-desktop4 libcinnamon-menu-3-0 libcjs0 libcscreensaver0 libcvc0 libgle3 libgnome-bluetooth13 libgnomekbd-common libgnomekbd8 libkeybinder-3.0-0 libmozjs-24-0v5 libmuffin0 libnemo-extension1 libxapp1 mousetweaks muffin muffin-common nemo nemo-data nemo-fileroller python-pam python-pexpect python-ptyprocess python-pyinotify python3-pyatspi python3-setproctitle python3-xlib ruby-json xapps-common xscreensaver-data-extra xscreensaver-gl xscreensaver-gl-extra
+
+
+ 
+

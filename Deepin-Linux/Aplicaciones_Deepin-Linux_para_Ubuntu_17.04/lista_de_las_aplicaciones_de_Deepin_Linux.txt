@@ -1,0 +1,31 @@
+
+
+sudo apt install deepin-music deepin-screen-recorder deepin-movie deepin-screenshot deepin-picker deepin-image-viewer dde-file-manager
+
+sudo apt install deepin-screen-recorder deepin-screenshot deepin-picker deepin-image-viewer
+
+
+sudo apt install dde-file-manager
+
+
+deepin-screenshot
+
+
+dde-file-manager
+https://www.deepin.org/es/original/deepin-package-manager/
+
+https://www.deepin.org/es/original/deepin-image-viewer/
+
+
+deepin-picker
+https://www.deepin.org/es/original/deepin-picker/
+
+deepin-screen-recorder
+https://www.deepin.org/es/original/deepin-screen-recorder/
+
+Deepin voice recorder
+https://www.deepin.org/es/original/deepin-voice-recorder/
+
+
+
+

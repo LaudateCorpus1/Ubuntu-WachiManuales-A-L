@@ -1,0 +1,25 @@
+
+
+Cómo extraer varias imágenes de un archivo de video (con numero de imagenes por segundo) usando FFmpeg
+
+
+Quiero usar algunas imágenes de un video para subirlas a Instagram y tener un álbum de fotos de ese video, pero ponerme a revisar ese video de 6:59 minutos de duración es mucho tiempo, ¿por qué mejor no sacar muchas imágenes de ese video y verlas con un buen visor de imágenes? y así rápidamente escojo las mejores. Bueno esto es lo que hay que poner en la terminal dentro de una carpeta donde esté el archivo de video que necesite para hacer la extracción de las imágenes:
+
+
+ffmpeg -i "Reposa muñecas ergonómico para Laptop.mp4" -r 1 -f image2 image-%3d.jpeg
+
+
+-i Video de entrada, en este caso lo pongo entre paréntesis porque tienen espacios: "Reposa muñecas ergonómico para Laptop.mp4"
+-r 1 es para el numero de imágenes por segundo. Así para 60ips(imagen es por segundo es -r 60), o 24 es -r 24. Y para limitar la extracción es -ss [start] -t [duration]
+
+Esto significa que extraerá 1 imagen cada segundo. Este video https://www.youtube.com/watch?v=KYzHfRYR_yM dura 6:59 minutos y al usar este comando me ha extraído 421 imágenes
+
+
+
+Fuente:
+
+ubuntu - How to extract images from video file? - Unix & Linux Stack Exchange
+https://unix.stackexchange.com/questions/185877/how-to-extract-images-from-video-file
+
+Traduje este comentario:
+-r 1 is for the number of images per sec. So for 60ips, or 24, it's -r 24. And to limit the extract, it's -ss [start] -t [duration]

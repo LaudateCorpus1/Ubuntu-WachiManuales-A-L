@@ -1,0 +1,15 @@
+
+
+Electrum Bitcoin Wallet
+https://electrum.org/#download
+sudo apt-get install python3-setuptools python3-pyqt5 python3-pip
+Install Electrum:
+sudo pip3 install https://download.electrum.org/3.0.1/Electrum-3.0.1.tar.gz
+
+
+para desinstalar:
+
+sudo pip3 uninstall electrum
+
+Can't uninstall Electrum
+https://bitcointalk.org/index.php?topic=1594861.0

@@ -1,0 +1,24 @@
+
+
+sudo gedit /etc/apt/sources.list
+
+#deb cdrom:[Linux Mint 17.1 _Rebecca_ - Release amd64 20141126]/ trusty contrib main non-free
+
+
+
+
+
+sudo apt-get install entropypianotuner
+Leyendo lista de paquetes... Hecho
+Creando árbol de dependencias       
+Leyendo la información de estado... Hecho
+No se pudieron instalar algunos paquetes. Esto puede significar que
+usted pidió una situación imposible o, si está usando la distribución
+inestable, que algunos paquetes necesarios no han sido creados o han
+sido movidos fuera de Incoming.
+La siguiente información puede ayudar a resolver la situación:
+Los siguientes paquetes tienen dependencias incumplidas:
+ entropypianotuner : Depende: libc6 (>= 2.23) pero 2.19-0ubuntu6.9 va a ser instalado
+                     Depende: libqt5core5a (>= 5.5.0) pero 5.2.1+dfsg-1ubuntu14.3 va a ser instalado
+                     Depende: libstdc++6 (>= 5.2) pero 4.8.4-2ubuntu1~14.04.3 va a ser instalado
+E: No se pudieron corregir los problemas, usted ha retenido paquetes rotos.

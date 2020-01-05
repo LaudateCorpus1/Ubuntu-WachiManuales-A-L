@@ -1,0 +1,7 @@
+Xft.dpi: 100
+
+! Xft.dpi: 81 (el original de la página consultada, es muy pequeño para mi en este monitor ViewSonic VA1931-DED)
+! Xft.dpi: 100 (este quedaba mas o menos, pero aún así muy pequeño) 
+! Xft.dpi: 110 (Le subo a 110, éste si queda super bien)
+! Visto en "IceWM install and setup guide" http://forums.fedoraforum.org/showthread.php?t=282433
+

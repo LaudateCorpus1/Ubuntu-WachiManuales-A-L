@@ -1,0 +1,6 @@
+
+
+sudo apt-get install kio-extras 
+
+Dolphin under Gnome doesn't display any thumbnail, how to fix?
+https://askubuntu.com/a/1170825/145772

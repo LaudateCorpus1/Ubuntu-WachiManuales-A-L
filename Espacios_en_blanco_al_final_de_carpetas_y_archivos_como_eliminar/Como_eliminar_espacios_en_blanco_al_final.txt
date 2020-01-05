@@ -1,0 +1,9 @@
+
+[ubuntu] How to rename Folder [space]
+https://ubuntuforums.org/showthread.php?p=8895890
+
+lo siguiente los eliminará de carpetas y subcarpetas
+
+
+find . -depth -name "* *" -execdir bash -c 'for f; do mv -v "$f" "${f// /_}"; done' _ {} +
+ 

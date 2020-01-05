@@ -1,0 +1,25 @@
+Dolphin4 no tiene acceso al Celular con Android en Ubuntu 18.04 (SOLUCIÓN kio-mtp)
+https://facilitarelsoftwarelibre.blogspot.com/2018/06/dolphin4-no-tiene-acceso-al-celular-con.html
+
+En Ubuntu 18.04 (Bionic) y sus sabores (excepto en kubuntu) no funciona el administrador de dolphin4 para conectarse con el celular Android mediante el USB. Esta es la solución
+
+Instalar kio-mtp desde los repositorios para Xenial
+Descargue de aquí:
+
+https://packages.ubuntu.com/xenial/kio-mtp
+
+
+Yo escojo para 32 bits por mi Sistema Operativo, y clic en alguno de los mirror:
+
+descargo el deb y lo instalo con el centro de software (en 18.04 el centro de software es bien rapido, y funciona muy bien)
+
+y eso es
+
+sólo que se demora bastante en aparecer.
+
+Después que se instala reinicie dolphin4, es decir cierrelo y vuelvalo a abrir, retire el cable de su celular y vuelva a conectarlo, y aquí está:
+
+
+Nota: No se porqué retiraron ese paquete de los repositorios de Ubuntu 18.04, podría especular que en Kubuntu si funciona (pues dolphin es nativo de allí), pero lo que si se es que funciona
+
+Dios les bendiga

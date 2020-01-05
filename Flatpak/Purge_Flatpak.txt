@@ -1,0 +1,53 @@
+command line - How do one uninstall a program installed with Flatpak [Xubuntu 18.04] - Ask Ubuntu
+https://askubuntu.com/questions/1051095/how-do-one-uninstall-a-program-installed-with-flatpak-xubuntu-18-04
+
+Poner uno por uno los siguientes 5 comandos en una terminal ejecutandolos:
+
+sudo apt-get remove --auto-remove flatpak xdg-desktop-portal-gtk
+sudo apt-get purge --auto-remove flatpak xdg-desktop-portal-gtk
+sudo rm -r -f /var/lib/flatpak/
+rm -r -f  ~/.local/share/flatpak
+
+
+para reinstalar añadir el repositorio
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+reiniciar y allí si se puede instalar alguna aplicación
+
+
+Additional info on how to uninstall the package manager Flatpack
+As I also wanted to uninstall the package manager Flatpak as well I took the time to look up how to do that and thought I would collect it here as a future reference for anyone in need of this info.
+
+In short:
+
+Uninstalling flatpak and its dependencies
+
+sudo apt-get remove --auto-remove flatpak
+Purging the config/data too
+
+sudo apt-get purge --auto-remove flatpak
+More info here: http://installion.co.uk/ubuntu/yakkety/universe/f/flatpak/uninstall/index.html
+
+After that I did check the /var/lib/flatpak where Flatpak resides, and to my shock I discovered the folder took up a whooping 4.2 GB of massive space, all that after a couple of days trying it out and having 3 programs installed (Atom, Audacity, Gimp).
+
+Looking around the internet one will come across a few comments on this matter how much space Flatpak uses and fails to clean up after itself after uninstalling it.
+
+More on this here: https://github.com/flatpak/flatpak/issues/1391
+
+Anyhow, I went on and deleted the folder and its content with the following line:
+
+rm -r -f /var/lib/flatpak/
+Obs! Be careful with this command, read more on how to remove folders and its content here: How do I remove a folder?
+
+There is one more folder with, in my case, a tiny amount of data which I also removed.
+
+/home/YourUserName/.local/share/flatpak/
+I think that should have most traces and data of Flatpack removed.
+
+And as noted by @mook765 in his comment above I had to change from
+
+flatpak --user uninstall io.atom.Atom
+to..
+
+flatpak --system uninstall io.atom.Atom
+to get the program uninstalled.

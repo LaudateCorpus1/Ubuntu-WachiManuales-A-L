@@ -1,0 +1,22 @@
+
+
+Inkscape: Revisión ortográfica | Graphic Suite Libre Andalusí
+https://graphicsuitelibreandalusi.wordpress.com/2011/08/19/inkscape-revision-ortografica/
+
+
+Inkscape puede realizar la revisión ortográfica de un texto. Para ello solo hay que instalar el siguiente paquete desde la Synaptic.
+
+Accedemos a la Synaptic desde el menú Sistema>Administración>Gestor de Paquetes Synaptic. Nos solicitará nuestra clave de Usuario. En el campo Filtro rápido escribimos “aspell”. Elegimos el paquete aspell-es haciendo doble clic sobre la casilla de verificación correpondiente y a continuación le damos al botón Aplicar.
+
+en la linea de comandos sería así:
+
+sudo apt-get install aspell-es
+
+
+Ahora podremos aplicar la revisión ortográfica a los textos de Inkscape. No olvides reiniciar Inkscape si está abierto durante la instalación para que se efectúe el cambio.
+
+luego dar clic en 
+
+Texto/Comprobar ortografía 
+
+

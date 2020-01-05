@@ -1,0 +1,11 @@
+
+
+StarDict and Babylon dictionaries
+https://byobu.info/article/StarDict_and_Babylon_dictionaries/
+
+dictconv Babylon_English.BGL -o Babylon_English.ifo
+
+
+dictconv Gran_Diccionario_de_la_Lengua_Larousse.BGL -o Gran_Diccionario_de_la_Lengua_Larousse.dic
+
+dictconv Enciclopedia_Británica_Compacta.bgl -o Enciclopedia_Británica_Compacta.dic

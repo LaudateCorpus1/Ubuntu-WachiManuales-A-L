@@ -1,0 +1,62 @@
+
+
+Icono de Dropbox no funciona en Xubuntu, UbuntuStudio 17.04 (SOLUCIÓN)
+
+Dropbox icon is not working Xubuntu, UbuntuStudio 17.04
+
+
+First you need to install Gedit:
+
+sudo apt-get install gedit
+
+Create an script, in the terminal:
+
+gedit scriptdropbox
+
+copy next code inside:
+
+#! /bin/bash
+dbus-launch ~/.dropbox-dist/dropboxd &
+
+Save it. Now set executable:
+
+chmod 755 scriptdropbox
+
+Now make a backup 
+
+sudo cp /usr/share/applications/dropbox.desktop /usr/share/applications/dropbox.desktop.back
+
+and edit dropbox.desktop:
+
+sudo gedit /usr/share/applications/dropbox.desktop
+
+Change this:
+
+Exec=dropbox start -i
+
+for this:
+
+Exec=/home/yourusername/scriptdropbox
+
+Save it.
+
+Next put in the terminal:
+
+gedit ~/.config/autostart/dropbox.desktop
+
+Change this:
+
+Exec=dropbox start -i
+
+for this:
+
+Exec=/home/yourusername/scriptdropbox
+
+Save it.
+
+Restart
+
+This tutorial is a fork from:
+linux - Dropbox system tray icon missing, not working - Super User
+https://superuser.com/questions/1037769/dropbox-system-tray-icon-missing-not-working
+

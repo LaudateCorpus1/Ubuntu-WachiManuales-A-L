@@ -1,0 +1,13 @@
+
+Con este domando
+
+indicator-kdeconnect
+
+visto en los archivos instalados en synaptic:
+
+/usr/bin/indicator-kdeconnect
+/usr/bin/indicator-kdeconnect-settings
+/usr/bin/kdeconnect-send 
+
+
+http://www.webupd8.org/2017/04/new-kde-connect-indicator-ubuntu-linux.html

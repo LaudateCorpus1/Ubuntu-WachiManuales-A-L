@@ -1,0 +1,13 @@
+
+
+
+DocFetcher - Búsqueda Rápida de Documentos
+http://docfetcher.sourceforge.net/es/index.html
+
+Dice allí que está en los repositorios de Linux pero no hay
+
+pero aquí está el que funciona en todas las plataformas:
+
+http://docfetcher.sourceforge.net/es/download.html
+
+descargar el portable java

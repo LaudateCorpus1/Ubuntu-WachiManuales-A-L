@@ -1,0 +1,8 @@
+
+
+Descomprimir archivos en Linux desde la consola
+http://www.tecnologiadiaria.com/2008/12/descomprimir-archivos-en-linux-desde-la-consola.html
+
+
+
+tar xvzf archivo.tar.gz

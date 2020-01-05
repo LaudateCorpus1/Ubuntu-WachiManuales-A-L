@@ -1,0 +1,32 @@
+
+Consultar Biblioteca de Aplicaciones (Programas) para Linux, hecha por Deepin ~ Proyecto Facilitar el Software Libre en el Ecuador
+https://facilitarelsoftwarelibre.blogspot.com/2019/11/consultar-biblioteca-de-aplicaciones.html
+
+Alguna vez has buscado una aplicación para Linux y has querido un lugar donde estén las mejores aplicaciones que puedan haber, lo último en tecnología, bueno pues ya existe ese lugar, entre aquí:
+
+https://dstore-appstore.deepin.cn/international/index
+
+y como ve allí también están por "Rankings" lo cual es muy bueno conocer
+
+Esta página la ha hecho el equipo de Deepin Linux.
+
+Si bien, si uno no está usando Deepin Linux uno no puede instalar esas aplicaciones, pero a mi me sirve de consulta para saber los nombres y buscarlos en los repositorios del Linux que esté usando, o consultar a parte para buscar la pagina web donde está tal programa y ver si se puede instalar en el sistema operativo Linux que esté usando. 
+
+Para mi es muy util
+
+Aplicaciones de Deepin
+Ellos han desarrollado varias aplicaciones:
+
+Deepin AppStore – Comunidad Deepin Technology
+https://www.deepin.org/es/acknowledgments/deepin-appstore/
+
+
+para estos tiempos en los nuevos sistemas operativos Linux ya están siendo incorporadas poco a poco, debe usted buscar los nombres en los repositorios del Linux que esté usando a ver si están. 
+
+También hice un tutorial de instalación de algunas para Ubuntu 18.04:
+
+Aplicaciones de Deepin Linux para Ubuntu (transplante) 
+https://facilitarelsoftwarelibre.blogspot.com/2017/08/aplicaciones-que-solo-hay-para-ubuntu.html
+
+Dios les bendiga
+

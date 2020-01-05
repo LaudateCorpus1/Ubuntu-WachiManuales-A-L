@@ -1,0 +1,35 @@
+
+
+Cómo poner una ventana siempre encima en Fluxbox
+
+En la terminal ponga (debe tener instalado gedit)
+
+gedit ~/.fluxbox/keys
+
+y cuando se abra el archivo de texto pegue allí las siguientes tres lineas
+
+# Cómo poner una ventana siempre encima en Fluxbox
+# https://linux.byexamples.com/archives/306/makes-your-windows-stay-on-top-toggle-it/
+Mod1 a :ToggleCmd {MacroCmd {RaiseLayer} {RaiseLayer}} {MacroCmd {LowerLayer} {LowerLayer}}
+
+luego guarde el archivo y eso es todo
+
+MODO DE USO:
+En una ventana que usted tenga encima de las demás aplaste el atajo de teclado:
+
+Alt + A
+
+y esa ventana quedará siempre encima que las demás. Y si la quiere dejar como estaba, seleccione esa ventana y vuelva a usar el atajo de teclado Alt + A
+
+Si usted quiere cambiar a otro atajo de teclado debe investigar:
+
+fluxbox-wiki.org/category/howtos/en/Keyboard_shortcuts.html
+http://fluxbox-wiki.org/category/howtos/en/Keyboard_shortcuts.html
+
+Visto en:
+Linux by Examplesmakes your windows stay on top, toggle it. | Linux by Examples
+https://linux.byexamples.com/archives/306/makes-your-windows-stay-on-top-toggle-it/
+
+Palabras clave:
+
+Window always on top, fluxbox toggle on top window

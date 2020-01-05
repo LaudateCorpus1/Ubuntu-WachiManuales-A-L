@@ -1,0 +1,46 @@
+
+Para solucionar el problema de que la velocidad del cursor de mi teclado externo logitech k400 no funciona, debo poner en la terminal:
+
+xinput --list 
+
+Obtengo:
+
+wachin@Dell-Inspiron-1750:~$ xinput --list 
+⎡ Virtual core pointer                          id=2    [master pointer  (3)]
+⎜   ↳ Virtual core XTEST pointer                id=4    [slave  pointer  (2)]
+⎜   ↳ Logitech K400                             id=10   [slave  pointer  (2)]
+⎜   ↳ SynPS/2 Synaptics TouchPad                id=12   [slave  pointer  (2)]
+
+
+Luego como he obtenido el id=10 para mi teclado debo poner el siguiente comando:
+
+xinput list-props 10
+
+me sale:
+
+device 'Logitech K400':
+        Device Enabled (137):   1
+        Coordinate Transformation Matrix (139): 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000
+        libinput Accel Speed (274):     0.000000
+        libinput Accel Speed Default (275):     0.000000
+
+La coordenada de transformación de la matriz me sale 139(podría ser otro número, usarlo de ser así), para aumentar la velocidad debo poner así:
+
+xinput set-prop 10 139 2.500000, 0.000000, 0.000000, 0.000000, 2.500000, 0.000000, 0.000000, 0.000000, 1.000000
+
+
+Encontré información de este bug en:
+
+Bug #1682193 “Mouse acceleration significantly reduced after upg...” : Bugs : xorg package : Ubuntu
+https://bugs.launchpad.net/ubuntu/+source/xorg/+bug/1682193
+
+How to disable mouse acceleration in Ubuntu 16.04 - Ask Ubuntu
+https://askubuntu.com/questions/794185/how-to-disable-mouse-acceleration-in-ubuntu-16-04
+
+
+
+
+
+
+
+

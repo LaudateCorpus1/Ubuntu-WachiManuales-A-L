@@ -1,0 +1,14 @@
+
+
+flatpak remote-list
+
+a mi me da este resultado:
+
+wachin@Dell-Inspiron-1750:~$ flatpak remote-list
+Nombre  Opciones
+flathub system  
+kdeapps system
+
+
+flatpak remote-add [Energetică Generală]
+https://alexio.sisko.webdock.io/energetica/doku.php?id=playground:linux-apps:flatpak:remote-add

@@ -1,0 +1,16 @@
+
+
+
+
+- duplicar capa
+- añadir a la capa duplicada en: "Colores/Curvas" en medio para abajo
+- Aplicar
+- Clic derecho en la capa duplicada y clic en "Añadir máscara de capa " y añadir "Blanco (opacidad total)"
+- Elegir el pincel y el color negro
+- pintar en las zonas que quiero aclarar 
+
+Recuerda que siempre para oír una fuente de sonido sólo debe estar una, por lo que cuando añada una nueva tengo que remover la anterior
+
+Att
+Wachín 
+2018-02

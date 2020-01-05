@@ -1,0 +1,185 @@
+
+Manual de git
+
+
+Primeros
+
+Crear una cuenta en:
+
+www.github.com 
+
+
+INSTALACIÓN de Git
+
+Para Ubuntu, Debian basados
+
+sudo apt install git
+
+Para Android instalar:
+
+Termux
+
+Para Windwos instalar:
+
+https://git-scm.com/download/win
+
+Nota: Instalar git con todas las opciones por defecto 
+
+
+CONFIGURACIÓN
+
+En Linux abrir una terminal
+
+En Windows abrir el programa git que se instaló el cual tiene una terminal
+
+En Termux abrir el programa el cual es una terminal
+
+
+Para iniciar sesión desde mi repositorio local (esto quiere decir desde mi Ordenador con Windows o Linux, o celular con Android) hacía github.com
+
+poner en la terminal (en Linux, Windows o Android)
+
+git config --global user.name "wachin"
+git config --global user.email wachin.id@gmail.com
+
+PARA CONTINUAR EDITANDO UN REPOSITORIO YA EXISTENTE EN GITHUB
+En este caso pondré como ejemplo el repositorio https://github.com/wachin/Cancionero-Cristiano-con-acordes el cual yo he creado y donde tengo varios archivos, y quiero seguir añadiendo archivos desde mi celular o desde otra computadora
+
+Ir al directorio donde estará mi proyecto, ejem:
+
+cd /home/wachin/github/
+
+allí poner
+
+git clone https://github.com/wachin/Cancionero-Cristiano-con-acordes
+
+o en Android con Termux (navegar hasta allí)
+
+/storage/emulated/0/Download/github/
+
+poner:
+
+git clone https://github.com/wachin/Cancionero-Cristiano-con-acordes
+
+entrar en ese directorio
+
+cd Cancionero-Cristiano-con-acordes
+
+Si dentro de este directorio añado otro archivo ese cambio se notará poniendo en la terminal:
+
+git status
+
+y si he puesto nuevos archivos este comando me dirá cuantos hay. Ahora para guardar los cambios en el repositorio local poner:
+
+git add .
+
+Nota: Ese punto al final es para añadir todos los archivos que estén allí.
+
+
+Para agregar uno por uno, ejemplo:
+
+git add alabanza-a-subir.txt
+
+poner:
+
+git add -A
+
+Pero sigamos agregando todos los nuevos archivos que iré creando usaré ese comando, o también se puede usar
+
+git add .
+
+Nota: Si se vuelve a poner git status se verán los archivos guardados en verde
+
+Sean archivos y carpetas, con este los añadiré todos
+
+git commit -m "Mensaje"
+
+y habré guardado los cambios en el repositorio local
+
+
+GUARDANDO LOS CAMBIOS EN EL REPOSITORIO REMOTO (github)
+ahora debo poner
+
+git push origin master
+
+Donde
+origin.- Es el nombre del remoto
+master.- Es el nombre de la rama 
+
+-----------------------------------------------------------------
+Nota: Si hay varias ramas o necesiten saber algo más vean los tutoriales de makigas sobre este tema:
+Tutorial de Git - 19. Cómo hacer Push
+https://youtu.be/jgeLj45G0tk
+-----------------------------------------------------------------
+
+Sigamos. Al dar Enter me preguntará por mi usuario y contraseña, los pongo, y allí subirá todo al repositorio en GitHub
+
+POR HACER FUNCIONAR:
+
+Git Log
+Mostrar todos los cambios hechos
+
+Nota: el programa gitg es mejor para hacer eso.
+
+git checkout
+Para viajar en el tiempo
+
+
+PARA VER CAMBIOS HECHOS DESDE OTRA COMPUTADORA
+Hay que entrar en la terminal en la carpeta donde tenemos el repositorio y allí poner:
+
+git fetch
+
+y luego:
+
+git pull
+
+
+
+
+Fetching changes from a remote repository
+https://help.github.com/en/github/using-git/getting-changes-from-a-remote-repository
+
+Use git fetch to retrieve new work done by other people. Fetching from a repository grabs all the new remote-tracking branches and tags without merging those changes into your own branches.
+
+If you already have a local repository with a remote URL set up for the desired project, you can grab all the new information by using git fetch *remotename* in the terminal:
+
+$ git fetch remotename# Fetches updates made to a remote repository
+
+Otherwise, you can always add a new remoteand then fetch.
+Merging changes into your local branch
+
+
+Merging combines your local changes with changes made by others.
+
+Typically, you'd merge a remote-tracking branch (i.e., a branch fetched from a remote repository) with your local branch:
+
+$ git merge remotename/branchname# Merges updates made online with your local work
+
+
+Pulling changes from a remote repository
+
+git pull is a convenient shortcut for completing both git fetch and git mergein the same command:
+
+$ git pull remotename branchname# Grabs online updates and merges them with your local work
+
+Because pull performs a merge on the retrieved changes, you should ensure that your local work is committed before running the pull command. If you run intoa merge conflictyou cannot resolve, or if you decide to quit the merge, you can use git merge --abortto take the branch back to where it was in before you pulled.
+
+
+
+CONSULTAS
+
+Getting changes from a remote repository
+https://help.github.com/en/github/using-git/getting-changes-from-a-remote-repository
+
+Curso Git - Nuestro primer proyecto - YouTube
+https://www.youtube.com/watch?v=vH9pkFf1D7M
+
+5.- Curso Git - Empezando con Github - YouTube
+minuto 11:09
+https://youtu.be/Qn186NyDqOk?t=669
+
+https://git-scm.com/download/linux
+
+2.- Curso Git - Primeros pasos - YouTube
+https://www.youtube.com/watch?v=XXdaqtLgOGI

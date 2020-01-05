@@ -1,0 +1,22 @@
+
+
+How to turn off smooth scrolling in Google Chrome
+http://www.ghacks.net/2016/03/16/turn-off-smooth-scrolling-google-chrome/
+
+To disable smooth scrolling, do the following:
+
+Load 
+
+chrome://flags/#smooth-scrolling
+
+in the browser's address bar and hit enter. This takes you directly to the preference on the flags page.
+
+In the options chosse:
+
+Disabled
+
+clic on Reload buttom
+
+
+Alternatively, open chrome://flags directly, hit F3, and search for smooth scrolling to find it this way.
+Click on the disable link to turn the feature off. A restart button is displayed at the bottom which you need to click on to complete the process.

@@ -1,0 +1,20 @@
+
+
+Netflix on Linux Ubuntu | Opera forums
+https://forums.opera.com/topic/31273/netflix-on-linux-ubuntu/13
+
+
+oscar90000 7 mar. 2019 17:14
+I am using Linux Ubuntu (18.04) Since I started using Ubuntu I can not watch Netflix, when playing netflix I come to a page abut demands of "HTML5" and "Silvernight" player. Is there anyone who knows a way fixing this and play Netflix on Linux with Opera Browser?
+
+
+
+l33t4opera 3 sept. 2019 8:09  
+Hi @jwalker8 You can add the the line/repo: deb http://ppa.launchpad.net/canonical-chromium-builds/stage/ubuntu ubuntu-name-matching-your-mint-version* main to your /etc/apt/sources.list, and update the package (it's already @132 there), or simply download the appropriate pkg for you Ubuntu version from here:
+
+http://ppa.launchpad.net/canonical-chromium-builds/stage/ubuntu/pool/main/c/chromium-browser/?C=M;O=D
+
+, and install it manually.
+* e.g. bionic.
+
+By the way: the version .100 is still working here, when I add a symbolic link to the lib in "/opera's-installation-root/lib_extra/link-to-the-libffmpeg.so".

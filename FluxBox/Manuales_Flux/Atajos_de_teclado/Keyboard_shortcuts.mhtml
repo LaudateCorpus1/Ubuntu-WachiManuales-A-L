@@ -1,0 +1,814 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: http://fluxbox-wiki.org/category/howtos/en/Keyboard_shortcuts.html
+Subject: 
+Date: Fri, 8 Feb 2019 00:42:23 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--tgwUadBNf1jxlVxI17tp9GSHVkltdk7HGKy1DRKVvc----"
+
+
+------MultipartBoundary--tgwUadBNf1jxlVxI17tp9GSHVkltdk7HGKy1DRKVvc----
+Content-Type: text/html
+Content-ID: <frame-17A592FCF058EF776FEE2C7219A1E83E@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://fluxbox-wiki.org/category/howtos/en/Keyboard_shortcuts.html
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"tex=
+t/html; charset=3DUTF-8">
+ =20
+  <meta name=3D"generator" content=3D"pandoc">
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1.0, user-scalable=3Dyes">
+  <title></title>
+  <style type=3D"text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src=3D"http://html5shim.googlecode.com/svn/trunk/html5.js"></sc=
+ript>
+  <![endif]-->
+</head>
+<body>
+<p>__TOC__</p>
+<h2 id=3D"for-version-1.1.1-and-later">For version 1.1.1 and later</h2>
+<p>Please refer to the manpage <strong>fluxbox-keys(5)</strong>, as it is m=
+ore up-to-date than this wiki page. Some of the sections below may serve as=
+ a useful supplement to the man page.</p>
+<h2 id=3D"how-to-use-the-keys-file">How to use the keys file</h2>
+<p>The keys file is usually ~/.fluxbox/keys. It can be edited with an edito=
+r of your choice. When you're done editing, select "Reload config" from the=
+ menu for your changes to take effect. As an alternative, you can bind a ke=
+y to <strong>Reconfigure</strong> as described below. The following is basi=
+cally stolen from <a href=3D"http://darkshed.net/files/rcs/fluxbox/keys.htm=
+l">akira's keyfile</a>. Take a look at it since it's the most complete one.=
+</p>
+<p>The syntax for a keybinding is quite easy:</p>
+<p><code>&nbsp;&nbsp;</code><mod><code>&nbsp;[</code><mod><code>&nbsp;</cod=
+e><mod><code>]&nbsp;key&nbsp;[key&nbsp;key]&nbsp;:command&nbsp;</code><comm=
+and_options></command_options></mod></mod></mod></p>
+<p><mod> is what we call a "modifier" and you can use 'xmodmap -pm' from th=
+e command-line to see what modifiers are available. Typical modifiers to be=
+ use in the keys file are:</mod></p>
+<p><code>&nbsp;&nbsp;Mod1&nbsp;&nbsp;&nbsp;&nbsp;=3D=3D&nbsp;Alt</code><br>=
+<code>&nbsp;&nbsp;Mod4&nbsp;&nbsp;&nbsp;&nbsp;=3D=3D&nbsp;Windows&nbsp;key<=
+/code><br><code>&nbsp;&nbsp;Control&nbsp;=3D=3D&nbsp;Ctrl</code><br><code>&=
+nbsp;&nbsp;Shift&nbsp;&nbsp;&nbsp;=3D=3D&nbsp;Shift</code></p>
+<p>If you want to find out the name of a key, open a terminal and run 'xev'=
+. When the "Event Tester" window has focus, it will capture mouse movement,=
+ mouse clicks, and keypress events, then provide output in the terminal. If=
+ a key you want to use has no name, you can use its keycode and Fluxbox wil=
+l still understand.</p>
+<p>Here are a few examples:</p>
+<p><code>&nbsp;&nbsp;Control&nbsp;i&nbsp;:ExecCommand&nbsp;xterm&nbsp;&nbsp=
+;&nbsp;</code><em><code>#</code> <code>Ctrl+i</code> <code>will</code> <cod=
+e>bring</code> <code>up</code> <code>an</code> <code>xterm</code></em><br><=
+code>&nbsp;&nbsp;Mod4&nbsp;4&nbsp;:Workspace&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#</code> <=
+code>Windowskey+4</code> <code>will</code> <code>change</code> <code>to</co=
+de> <code>workspace</code> <code>4</code></em><br><code>&nbsp;&nbsp;None&nb=
+sp;F12&nbsp;:ExecCommand&nbsp;firefox&nbsp;&nbsp;</code><em><code>#</code> =
+<code>F12</code> <code>will</code> <code>start</code> <code>Firefox</code><=
+/em><br><code>&nbsp;&nbsp;Control&nbsp;Mod1&nbsp;r&nbsp;:exec&nbsp;fbrun&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#</code> <code>Ctrl+Alt+r</code=
+> <code>will</code> <code>bring</code> <code>up</code> <code>the</code> <co=
+de>Fluxbox</code> <code>command</code> <code>dialog</code></em><br><code>&n=
+bsp;&nbsp;Mod1&nbsp;Shift&nbsp;F4&nbsp;:KillWindow&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;</code><em><code>#</code> <code>Alt+Shift+F4</code> <code>kills<=
+/code> <code>the</code> <code>focused</code> <code>window</code></em><br><c=
+ode>&nbsp;&nbsp;Mod1&nbsp;113&nbsp;:exec&nbsp;xterm&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#</code> <code>J=
+ust</code> <code>to</code> <code>show</code> <code>the</code> <code>keycode=
+</code> <code>usage</code></em></p>
+<p>A basic, common command is <strong>ExecCommand</strong>, or <strong>Exec=
+</strong> if you like it shorter. You can execute apps, scripts (take care =
+of $PATH), set things via 'xset' and so on with it.</p>
+<h3 id=3D"some-things-to-know">Some things to know</h3>
+<ul>
+<li>Commands are case-insensitive</li>
+<li>Workspace numbering starts at 1</li>
+<li>Some commands have synonyms</li>
+<li>The space between the last key and the ":" is <strong>mandatory</strong=
+>.</li>
+</ul>
+<h3 id=3D"fluxkeys">Fluxkeys</h3>
+<p><strong>Caution:</strong> Currently the fluxkeys utility is out of date =
+and will break your ~/.fluxbox/keys file.</p>
+<h2 id=3D"mouse-events">Mouse Events</h2>
+<p>Since SVN r4704, Fluxbox now handles mouse events in the keys file. (<a =
+href=3D"http://fluxbox-wiki.org/category/howtos/en/How_to_build_fluxbox_fro=
+m_source#What_is_git_version_and_why_should_I_use_it.3F" title=3D"wikilink"=
+>details</a>)</p>
+<p>Figuring out the name of a mouse event is similar to figuring it out for=
+ a key. Just run 'xev' like before and use the button/wheel in the "Event T=
+ester" window. It usually generates a "ButtonPress" event, which will inclu=
+de the button number. Mouse buttons also add a new modifier called <strong>=
+OnDesktop</strong>, which makes the mouse event only trigger if it's on the=
+ desktop (AKA root window). This only works with mouse buttons and has to b=
+e called before each mouse event that wants to be triggered only on the roo=
+t window.</p>
+<p>For example, the typical Fluxbox behavior of mouse wheel up/down on root=
+ window to change desktop would be:</p>
+<p><code>&nbsp;&nbsp;OnDesktop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mou=
+se4&nbsp;:nextWorkspace</code><br><code>&nbsp;&nbsp;OnDesktop&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;Mouse5&nbsp;:prevWorkspace</code></p>
+<p>You can also keychain mouse events.</p>
+<p>If your keys file didn't get updated automatically, the default behaviou=
+r comes with following:</p>
+<p><code>&nbsp;&nbsp;OnDesktop&nbsp;Mouse1&nbsp;:HideMenus</code><br><code>=
+&nbsp;&nbsp;OnDesktop&nbsp;Mouse2&nbsp;:WorkspaceMenu</code><br><code>&nbsp=
+;&nbsp;OnDesktop&nbsp;Mouse3&nbsp;:RootMenu</code><br><code>&nbsp;&nbsp;OnD=
+esktop&nbsp;Mouse4&nbsp;:PrevWorkspace</code><br><code>&nbsp;&nbsp;OnDeskto=
+p&nbsp;Mouse5&nbsp;:NextWorkspace</code><br><code>&nbsp;&nbsp;</code><br><c=
+ode>&nbsp;&nbsp;#&nbsp;In&nbsp;1.1&nbsp;versions&nbsp;of&nbsp;fluxbox:</cod=
+e><br><code>&nbsp;&nbsp;OnToolbar&nbsp;Mouse4&nbsp;:PrevWorkspace</code><br=
+><code>&nbsp;&nbsp;OnToolbar&nbsp;Mouse5&nbsp;:NextWorkspace</code><br><cod=
+e>&nbsp;&nbsp;OnWindow&nbsp;Mod1&nbsp;Mouse1&nbsp;:MacroCmd&nbsp;{Raise}&nb=
+sp;{Focus}&nbsp;{StartMoving}</code><br><code>&nbsp;&nbsp;OnWindow&nbsp;Mod=
+1&nbsp;Mouse3&nbsp;:MacroCmd&nbsp;{Raise}&nbsp;{Focus}&nbsp;{StartResizing&=
+nbsp;NearestCorner}</code><br><code>&nbsp;&nbsp;OnWindow&nbsp;Mod1&nbsp;Mou=
+se2&nbsp;:Lower</code><br><code>&nbsp;&nbsp;OnTitlebar&nbsp;Control&nbsp;Mo=
+use1&nbsp;:StartTabbing</code><br><code>&nbsp;&nbsp;OnTitlebar&nbsp;Double&=
+nbsp;Mouse1&nbsp;:Shade</code><br><code>&nbsp;&nbsp;OnTitlebar&nbsp;Mouse2&=
+nbsp;:Lower</code><br><code>&nbsp;&nbsp;OnTitlebar&nbsp;Mouse3&nbsp;:Window=
+Menu</code></p>
+<h2 id=3D"keychains">Keychains</h2>
+<p>Fluxbox can handle keychains in a similar way to emacs. For example:</p>
+<p><code>&nbsp;&nbsp;Control&nbsp;n&nbsp;Mod1&nbsp;n&nbsp;:Close&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#</code> <code>ctrl+n</c=
+ode> <code>alt+n</code> <code>will</code> <code>close</code> <code>the</cod=
+e> <code>focused</code> <code>window</code></em><br><code>&nbsp;&nbsp;None&=
+nbsp;F11&nbsp;F12&nbsp;:ExecCommand&nbsp;ssh&nbsp;example.com&nbsp;&nbsp;</=
+code><em><code>#</code> <code>F11</code> <code>F12</code> <code>runs</code>=
+ <code>'ssh</code></em><code>'</code></p>
+<p>Note that to use a keychain without modifiers, "None" should only be use=
+d once. "None F11 None F12" will not work. Use "None F11 F12" as shown abov=
+e instead.</p>
+<h2 id=3D"fluxbox-keycommands">Fluxbox Keycommands</h2>
+<p>There are plenty of internal commands to make life easier. Use them the =
+same way as above just exchange the <strong>Exec[Command]</strong> part wit=
+h the one you want to use.</p>
+<h3 id=3D"window-manager-commands">Window Manager Commands</h3>
+<p><code>&nbsp;&nbsp;Restart&nbsp;</code><argument><code>&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;</code><em><code>#</code> <code>Restarts</code> <code>fluxbox,<=
+/code> <code>argument</code> <code>can</code> <code>be</code> <code>the</co=
+de> <code>binary</code> <code>of</code> <code>another</code> <code>window</=
+code> <code>manager</code> <code>to</code> <code>which</code> <code>will</c=
+ode> <code>be</code> <code>switched</code></em><br><code>&nbsp;&nbsp;Quit&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#</code> <code>Exits<=
+/code> <code>Fluxbox</code></em><br><code>&nbsp;&nbsp;Exit&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;</code><em><code>#</code> <code>Exits</code> <code>Fl=
+uxbox</code></em><br><code>&nbsp;&nbsp;Reconfigure&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#</code> <c=
+ode>Reloads</code> <code>the</code> <code>config</code></em><br><code>&nbsp=
+;&nbsp;Reload&nbsp;Style&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;</code><em><code>#</code> <code>Reloads</code> <code>the</co=
+de> <code>style</code> <code>if</code> <code>any</code> <code>files</code> =
+<code>were</code> <code>changed</code></em><br><code>&nbsp;&nbsp;SetStyle&n=
+bsp;</code><argument><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#</code=
+> <code>Sets</code> <code>a</code> <code>specific</code> <code>style.</code=
+> <code>useful</code> <code>for</code> <code>a</code> <code>standard</code>=
+ <code>style</code> <code>for</code> <code>testing</code> <code>purposes</c=
+ode></em><br><code>&nbsp;&nbsp;ExecCommand&nbsp;</code><argument><code>&nbs=
+p;</code><em><code>#</code> <code>Executes</code> <code>a</code> <code>comm=
+and.</code> <code>look</code> <code>above</code> <code>for</code> <code>wha=
+t</code> <code>the</code> <code>argument</code> <code>can</code> <code>be</=
+code></em><br><code>&nbsp;&nbsp;Exec&nbsp;</code><argument><code>&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#</code> <code>Execu=
+tes</code> <code>a</code> <code>command.</code> <code>look</code> <code>abo=
+ve</code> <code>for</code> <code>what</code> <code>the</code> <code>argumen=
+t</code> <code>can</code> <code>be</code></em></argument></argument></argum=
+ent></argument></p>
+<h3 id=3D"currently-focused-window-commands">Currently Focused Window Comma=
+nds</h3>
+<p><code>&nbsp;&nbsp;Fullscreen&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#</code> <code>=
+Makes</code> <code>the</code> <code>focused</code> <code>window</code> <cod=
+e>fullscreen</code> <code>covering</code> <code>all</code> <code>components=
+,</code> <code>even</code> <code>if</code> <code>they</code> <code>are</cod=
+e> <code>set</code> <code>to</code> <code>a</code> <code>higher</code> <cod=
+e>layer</code></em><br><code>&nbsp;&nbsp;Minimize&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</=
+code><em><code>#</code> <code>Minimizes</code> <code>the</code> <code>focus=
+ed</code> <code>window.</code> <code>equivalent</code> <code>to</code> <cod=
+e>the</code> <code>windowbutton</code></em><br><code>&nbsp;&nbsp;MinimizeWi=
+ndow&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><=
+em><code>#</code> <code>Minimizes</code> <code>the</code> <code>focused</co=
+de> <code>window.</code> <code>equivalent</code> <code>to</code> <code>the<=
+/code> <code>windowbutton</code></em><br><code>&nbsp;&nbsp;Iconify&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;</code><em><code>#</code> <code>Minimizes</code> <code=
+>the</code> <code>focused</code> <code>window.</code> <code>equivalent</cod=
+e> <code>to</code> <code>the</code> <code>windowbutton</code></em><br><code=
+>&nbsp;&nbsp;Maximize&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#</code> <cod=
+e>Maximizes</code> <code>the</code> <code>focused</code> <code>window.</cod=
+e> <code>equivalent</code> <code>to</code> <code>the</code> <code>windowbut=
+ton</code></em><br><code>&nbsp;&nbsp;MaximizeWindow&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#</code> <code>Maxi=
+mizes</code> <code>the</code> <code>focused</code> <code>window.</code> <co=
+de>equivalent</code> <code>to</code> <code>the</code> <code>windowbutton</c=
+ode></em><br><code>&nbsp;&nbsp;MaximizeHorizontal&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;</code><em><code>#</code> <code>Maximizes</code> <code>the</co=
+de> <code>focused</code> <code>window</code> <code>horizontally</code></em>=
+<br><code>&nbsp;&nbsp;MaximizeVertical&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;</code><em><code>#</code> <code>Maximizes</code> <code>the</c=
+ode> <code>focused</code> <code>window</code> <code>vertically</code></em><=
+br><code>&nbsp;&nbsp;ResizeTo&nbsp;</code><width><code>&nbsp;</code><height=
+><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;</code><em><code>#</code> <code>Resizes</code> <code>the</code> <code>f=
+ocused</code> <code>window</code> <code>to</code> <code>the</code> <code>sp=
+ecified</code> <code>values</code></em><br><code>&nbsp;&nbsp;Resize&nbsp;</=
+code><delta-width><code>&nbsp;</code><delta-height><code>&nbsp;&nbsp;</code=
+><em><code>#</code> <code>Scroll</code> <code>down</code> <code>for</code> =
+<code>some</code> <code>further</code> <code>information</code> <code>on</c=
+ode> <code>this</code> <code>command</code></em><br><code>&nbsp;&nbsp;Resiz=
+eHorizontal&nbsp;</code><delta-width><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;</code><em><code>#</code> <code>Scroll</code> <code>down</code> <=
+code>for</code> <code>some</code> <code>further</code> <code>information</c=
+ode> <code>on</code> <code>this</code> <code>command</code></em><br><code>&=
+nbsp;&nbsp;ResizeVertical&nbsp;</code><delta-height><code>&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#</code> <code>Scroll</code=
+> <code>down</code> <code>for</code> <code>some</code> <code>further</code>=
+ <code>information</code> <code>on</code> <code>this</code> <code>command</=
+code></em><br><code>&nbsp;&nbsp;MoveTo&nbsp;</code><x><code>&nbsp;</code><y=
+><code>&nbsp;</code><ref corner=3D""><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#</code> <code>Scroll</code> <=
+code>down</code> <code>for</code> <code>some</code> <code>further</code> <c=
+ode>information</code> <code>on</code> <code>this</code> <code>command</cod=
+e></em><br><code>&nbsp;&nbsp;Move&nbsp;</code><delta-x><code>&nbsp;</code><=
+delta-y><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;</code><em><code>#</code> <code>Scroll</code> <code>down</=
+code> <code>for</code> <code>some</code> <code>further</code> <code>informa=
+tion</code> <code>on</code> <code>this</code> <code>command</code></em><br>=
+<code>&nbsp;&nbsp;MoveRight&nbsp;</code><delta-x><code>&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;</code><em><code>#</code> <code>Scroll</code> <code>down</code=
+> <code>for</code> <code>some</code> <code>further</code> <code>information=
+</code> <code>on</code> <code>this</code> <code>command</code></em><br><cod=
+e>&nbsp;&nbsp;MoveLeft&nbsp;</code><delta-x><code>&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;</code><em><code>#</code> <code>Scroll</code> <code>down</cod=
+e> <code>for</code> <code>some</code> <code>further</code> <code>informatio=
+n</code> <code>on</code> <code>this</code> <code>command</code></em><br><co=
+de>&nbsp;&nbsp;MoveUp&nbsp;</code><delta-y><code>&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#</code> <code>Scroll</code> <cod=
+e>down</code> <code>for</code> <code>some</code> <code>further</code> <code=
+>information</code> <code>on</code> <code>this</code> <code>command</code><=
+/em><br><code>&nbsp;&nbsp;MoveDown&nbsp;</code><delta-y><code>&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#</code> <code>Scroll</code> <co=
+de>down</code> <code>for</code> <code>some</code> <code>further</code> <cod=
+e>information</code> <code>on</code> <code>this</code> <code>command</code>=
+</em><br><code>&nbsp;&nbsp;Raise&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<=
+/code><em><code>#</code> <code>Raises</code> <code>the</code> <code>focused=
+</code> <code>window</code></em><br><code>&nbsp;&nbsp;Lower&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#</code> <code>Lowers</code> <co=
+de>the</code> <code>focused</code> <code>window</code></em><br><code>&nbsp;=
+&nbsp;RaiseLayer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#</code> <code>Raises</code> <=
+code>the</code> <code>focused</code> <code>window</code> <code>one</code> <=
+code>layer.</code></em><br><code>&nbsp;&nbsp;LowerLayer&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><=
+em><code>#</code> <code>Lowers</code> <code>the</code> <code>focused</code>=
+ <code>window</code> <code>one</code> <code>layer.</code></em><br><code>&nb=
+sp;&nbsp;SetLayer&nbsp;</code><layer-name><code>&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code=
+><em><code>#</code> <code>Sets</code> <code>the</code> <code>focused</code>=
+ <code>window</code> <code>on</code> <code>the</code> <code>specified</code=
+> <code>layer</code></em><br><code>&nbsp;&nbsp;Close&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;</code><em><code>#</code> <code>Closes</code> <code>the<=
+/code> <code>focused</code> <code>window.</code> <code>same</code> <code>as=
+</code> <code>the</code> <code>windowbutton</code></em><br><code>&nbsp;&nbs=
+p;Shade&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#</code> =
+<code>Shades</code> <code>the</code> <code>focused</code> <code>window.</co=
+de> <code>same</code> <code>as</code> <code>the</code> <code>windowbutton</=
+code></em><br><code>&nbsp;&nbsp;ShadeWindow&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#</code> =
+<code>Shades</code> <code>the</code> <code>focused</code> <code>window.</co=
+de> <code>same</code> <code>as</code> <code>the</code> <code>windowbutton</=
+code></em><br><code>&nbsp;&nbsp;Stick&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;</code><em><code>#</code> <code>Makes</code> <code>the</code> <code>foc=
+used</code> <code>window</code> <code>sticky/unsticky.</code> <code>same</c=
+ode> <code>as</code> <code>the</code> <code>windowbutton</code></em><br><co=
+de>&nbsp;&nbsp;StickWindow&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#</code> <code>Makes</code=
+> <code>the</code> <code>focused</code> <code>window</code> <code>sticky/un=
+sticky.</code> <code>same</code> <code>as</code> <code>the</code> <code>win=
+dowbutton</code></em><br><code>&nbsp;&nbsp;ToggleDecor&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><cod=
+e>#</code> <code>Makes</code> <code>the</code> <code>focused</code> <code>w=
+indow</code> <code>borderless</code></em><br><code>&nbsp;&nbsp;SendToWorksp=
+ace&nbsp;</code><number><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#</code> <code>Sends</cod=
+e> <code>the</code> <code>focused</code> <code>window</code> <code>to</code=
+> <code>the</code> <code>workspace</code> <code>given</code> <code>by</code=
+> <code>number</code></em><br><code>&nbsp;&nbsp;SendToNextWorkspace&nbsp;</=
+code><number><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</=
+code><em><code>#</code> <code>Sends</code> <code>the</code> <code>focused</=
+code> <code>window</code> <code>to</code> <code>the</code> <code>next</code=
+> <code>workspace</code> <code>given</code> <code>by</code> <code>number</c=
+ode></em><br><code>&nbsp;&nbsp;SendToPrevWorkspace&nbsp;</code><number><cod=
+e>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#<=
+/code> <code>Sends</code> <code>the</code> <code>focused</code> <code>windo=
+w</code> <code>to</code> <code>the</code> <code>previous</code> <code>works=
+pace</code> <code>given</code> <code>by</code> <code>number</code></em><br>=
+<code>&nbsp;&nbsp;TakeToWorkspace&nbsp;</code><number><code>&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><=
+code>#</code> <code>Sends</code> <code>the</code> <code>focused</code> <cod=
+e>window</code> <code>to</code> <code>the</code> <code>workspace</code> <co=
+de>given</code> <code>by</code> <code>number</code> <code>and</code> <code>=
+switches</code> <code>the</code> <code>view</code> <code>to</code> <code>it=
+</code></em><br><code>&nbsp;&nbsp;TakeToNextWorkspace&nbsp;</code><number><=
+code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code=
+>#</code> <code>Sends</code> <code>the</code> <code>focused</code> <code>wi=
+ndow</code> <code>to</code> <code>the</code> <code>next</code> <code>worksp=
+ace</code> <code>given</code> <code>by</code> <code>number</code> <code>and=
+</code> <code>switches</code> <code>the</code> <code>view</code> <code>to</=
+code> <code>it</code></em><br><code>&nbsp;&nbsp;TakeToPrevWorkspace&nbsp;</=
+code><number><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</=
+code><em><code>#</code> <code>Sends</code> <code>the</code> <code>focused</=
+code> <code>window</code> <code>to</code> <code>the</code> <code>previous</=
+code> <code>workspace</code> <code>given</code> <code>by</code> <code>numbe=
+r</code> <code>and</code> <code>switches</code> <code>the</code> <code>view=
+</code> <code>to</code> <code>it</code></em><br><code>&nbsp;&nbsp;KillWindo=
+w&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;</code><em><code>#</code> <code>Kills</code> <code>the</code> =
+<code>focused</code> <code>window</code></em><br><code>&nbsp;&nbsp;NextTab&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#</code> <code>Switches</code=
+> <code>to</code> <code>the</code> <code>next</code> <code>tab</code> <code=
+>of</code> <code>the</code> <code>focused</code> <code>window</code></em><b=
+r><code>&nbsp;&nbsp;PrevTab&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#=
+</code> <code>Switches</code> <code>to</code> <code>the</code> <code>previo=
+us</code> <code>tab</code> <code>of</code> <code>the</code> <code>focused</=
+code> <code>window</code></em><br><code>&nbsp;&nbsp;MoveTabLeft&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code=
+><em><code>#</code> <code>Moves</code> <code>the</code> <code>focused</code=
+> <code>tab</code> <code>to</code> <code>the</code> <code>left</code></em><=
+br><code>&nbsp;&nbsp;MoveTabRight&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#</code> <code>Moves</cod=
+e> <code>the</code> <code>focused</code> <code>tab</code> <code>to</code> <=
+code>the</code> <code>right</code></em><br><code>&nbsp;&nbsp;DetachClient&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</=
+code><em><code>#</code> <code>Detaches</code> <code>the</code> <code>focuse=
+d</code> <code>tab</code> <code>from</code> <code>a</code> <code>group</cod=
+e></em><br><code>&nbsp;&nbsp;SetHead&nbsp;</code><int><code>&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#</c=
+ode> <code>Sets</code> <code>the</code> <code>default</code> <code>head</co=
+de> <code>for</code> <code>a</code> <code>window</code> <code>--&gt;</code>=
+ <code>xinerama</code></em><br><code>&nbsp;&nbsp;FocusUp&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;</code><em><code>#</code> <code>Sets</code> <code>the</code> <co=
+de>focus</code> <code>to</code> <code>the</code> <code>window</code> <code>=
+north</code> <code>of</code> <code>the</code> <code>focused</code> <code>on=
+e</code></em><br><code>&nbsp;&nbsp;FocusDown&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><c=
+ode>#</code> <code>Sets</code> <code>the</code> <code>focus</code> <code>to=
+</code> <code>the</code> <code>window</code> <code>south</code> <code>of</c=
+ode> <code>the</code> <code>focused</code> <code>one</code></em><br><code>&=
+nbsp;&nbsp;FocusLeft&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#</code> <code>Sets<=
+/code> <code>the</code> <code>focus</code> <code>to</code> <code>the</code>=
+ <code>window</code> <code>west</code> <code>of</code> <code>the</code> <co=
+de>focused</code> <code>one</code></em><br><code>&nbsp;&nbsp;FocusRight&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;</code><em><code>#</code> <code>Sets</code> <code>the</code> <code>=
+focus</code> <code>to</code> <code>the</code> <code>window</code> <code>eas=
+t</code> <code>of</code> <code>the</code> <code>focused</code> <code>one</c=
+ode></em><br><code>&nbsp;&nbsp;StartResizing&nbsp;</code><what><code>&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;</code><em><code>#</code> <code>Starts</code> <code>re=
+sizing</code> <code>the</code> <code>focused</code> <code>window</code> <co=
+de>(fore</code> <code>more</code> <code>see</code> <code>below...)</code></=
+em></what></int></number></number></number></number></number></number></lay=
+er-name></delta-y></delta-y></delta-x></delta-x></delta-y></delta-x></ref><=
+/y></x></delta-height></delta-width></delta-height></delta-width></height><=
+/width></p>
+<h3 id=3D"workspace-commands">Workspace Commands</h3>
+<p><code>&nbsp;&nbsp;NextWorkspace&nbsp;</code><by-number><code>&nbsp;&nbsp=
+;&nbsp;</code><em><code>#</code> <code>Switches</code> <code>"number"</code=
+> <code>workspaces</code> <code>to</code> <code>the</code> <code>right</cod=
+e></em><br><code>&nbsp;&nbsp;PrevWorkspace&nbsp;</code><by-number><code>&nb=
+sp;&nbsp;&nbsp;</code><em><code>#</code> <code>Switches</code> <code>"numbe=
+r"</code> <code>workspaces</code> <code>to</code> <code>the</code> <code>le=
+ft</code></em><br><code>&nbsp;&nbsp;RightWorkspace&nbsp;</code><by-number><=
+code>&nbsp;&nbsp;</code><em><code>#</code> <code>Switches</code> <code>"num=
+ber"</code> <code>workspaces</code> <code>to</code> <code>the</code> <code>=
+right</code> <code>without</code> <code>wrapping</code> <code>around</code>=
+</em><br><code>&nbsp;&nbsp;LeftWorkspace&nbsp;</code><by-number><code>&nbsp=
+;&nbsp;&nbsp;</code><em><code>#</code> <code>Switches</code> <code>"number"=
+</code> <code>workspaces</code> <code>to</code> <code>the</code> <code>left=
+</code> <code>without</code> <code>wrapping</code> <code>around</code></em>=
+<br><code>&nbsp;&nbsp;Workspace&nbsp;</code><number><code>&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#</code> <code>=
+Switches</code> <code>to</code> <code>the</code> <code>workspace</code> <co=
+de>given</code> <code>by</code> <code>number</code></em><br><code>&nbsp;&nb=
+sp;NextWindow&nbsp;</code><bitmask><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;</code><em><code>#</code> <code>Scroll</code> <code>down</cod=
+e> <code>for</code> <code>further</code> <code>information</code></em><br><=
+code>&nbsp;&nbsp;PrevWindow&nbsp;</code><bitmask><code>&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#</code> <code>Scroll</code> <=
+code>down</code> <code>for</code> <code>further</code> <code>information</c=
+ode></em><br><code>&nbsp;&nbsp;NextGroup&nbsp;</code><bitmask><code>&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#</code> <c=
+ode>Same</code> <code>as</code> <code>NextWindow</code> <code>but</code> <c=
+ode>cycles</code> <code>through</code> <code>groups</code> <code>only</code=
+></em><br><code>&nbsp;&nbsp;PrevGroup&nbsp;</code><bitmask><code>&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#</code> <code=
+>Same</code> <code>as</code> <code>PrevWindow</code> <code>but</code> <code=
+>cycles</code> <code>through</code> <code>groups</code> <code>only</code></=
+em><br><code>&nbsp;&nbsp;ArrangeWindows&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#</code> <=
+code>Arranges</code> <code>windows</code> <code>:)</code></em><br><code>&nb=
+sp;&nbsp;ShowDesktop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#</code> <c=
+ode>Iconifies</code> <code>all</code> <code>windows</code> <code>of</code> =
+<code>the</code> <code>current</code> <code>workspace</code></em><br><code>=
+&nbsp;&nbsp;RootMenu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em=
+><code>#</code> <code>Pops</code> <code>up</code> <code>the</code> <code>ri=
+ght-click</code> <code>menu</code></em><br><code>&nbsp;&nbsp;WorkspaceMenu&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;</code><em><code>#</code> <code>Pops</code> <code>up</code> <=
+code>the</code> <code>middle-click</code> <code>menu</code></em><br><code>&=
+nbsp;&nbsp;WindowMenu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#</c=
+ode> <code>Pops</code> <code>up</code> <code>the</code> <code>windowtitle</=
+code> <code>menu</code></em><br><code>&nbsp;&nbsp;SetWorkspaceName&nbsp;</c=
+ode><name><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#</code> <co=
+de>Renames</code> <code>the</code> <code>current</code> <code>workspace</co=
+de></em><br><code>&nbsp;&nbsp;Deiconify&nbsp;</code><mode><code>&nbsp;</cod=
+e><dest><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#</code> <code=
+>Restores</code> <code>minimized</code> <code>windows</code></em></dest></m=
+ode></name></bitmask></bitmask></bitmask></bitmask></number></by-number></b=
+y-number></by-number></by-number></p>
+<h3 id=3D"special-commands">Special Commands</h3>
+<p><code>&nbsp;&nbsp;MacroCmd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>#scroll</code> <code>down</code>=
+ <code>for</code> <code>further</code> <code>information</code></em><br><co=
+de>&nbsp;&nbsp;ToggleCmd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;</code><em><code>#scroll</code> <code>down</code> <code>for<=
+/code> <code>further</code> <code>information</code></em><br><code>&nbsp;&n=
+bsp;ReloadStyle&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code=
+><em><code>#reloads</code> <code>the</code> <code>style</code></em><br><cod=
+e>&nbsp;&nbsp;SetResourceValue&nbsp;</code><rc_name><code>&nbsp;</code><res=
+ource><code>&nbsp;value&nbsp;&nbsp;</code><em><code>#to</code> <code>be</co=
+de> <code>done...no</code> <code>one</code> <code>will</code> <code>ever</c=
+ode> <code>need</code> <code>this!</code></em><br><code>&nbsp;&nbsp;BindKey=
+&nbsp;</code><key><value><code>:&nbsp;</code><action><code>&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<=
+/code><em><code>#creates</code> <code>an</code> <code>"on</code> <code>the<=
+/code> <code>fly"</code> <code>keycommand</code></em><br><code>&nbsp;&nbsp;=
+ChangeWorkspace&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><em><code>called</code>=
+ <code>each</code> <code>time</code> <code>the</code> <code>workspace</code=
+> <code>changes</code></em></action></value></key></resource></rc_name></p>
+<p><strong>Explanation</strong></p>
+<ul>
+<li><strong>TakeToWorkspace</strong> will send you along with the window to=
+ the selected workspace. <strong>SendToWorkspace</strong> just sends the wi=
+ndow.</li>
+<li><strong>PrevWindow</strong>/<strong>NextWindow</strong> parameters take=
+ a bitmask:</li>
+</ul>
+<p>:* 0 or unspecified =3D Default/current behavior - no skipping</p>
+<p>:* 1 cycle groups</p>
+<p>:* 2 skip stuck windows</p>
+<p>:* 4 skip shaded windows</p>
+<p>:* 8 cycle linear (use the same order every time) For example, the follo=
+wing will skip any window that's, stuck or shaded since 6 =3D 4 + 2.</p>
+<p><code>&nbsp;&nbsp;Mod1&nbsp;tab&nbsp;:NextWindow&nbsp;6</code></p>
+<p>Configuration file version 13 (look for "FBCV13" in your keys file) requ=
+ires this syntax. This example cycles through all windows on the current wo=
+rkspace (and current head your mouse is on):</p>
+<p><code>&nbsp;&nbsp;Mod1&nbsp;Tab&nbsp;:NextWindow&nbsp;(workspace=3D[curr=
+ent])&nbsp;(head=3D[mouse])</code></p>
+<ul>
+<li><strong>Deiconify</strong> has options for which windows to deiconify a=
+nd which workspace they should be restored to.</li>
+</ul>
+<p>:* mode: All | AllWorkspace | Last | LastWorkspace</p>
+<p>:* dest: Current | Origin</p>
+<ul>
+<li><strong>BindKey</strong> will append key string and action to your keys=
+ file and bind the key.</li>
+<li>A delta value means the difference between the current setting and the =
+requested setting. Assume your window 100 is pixels wide.</li>
+</ul>
+<p><code>&nbsp;&nbsp;Mod1&nbsp;r&nbsp;:ResizeHorizontal&nbsp;10</code></p>
+<p>When you use that key it would increase the size of your window to 110 p=
+ixels. If you had used the following command, it would have decreased the s=
+ize by 10, setting it to 90 pixels.</p>
+<p><code>&nbsp;&nbsp;Mod1&nbsp;R&nbsp;:ResizeHorizontal&nbsp;-10</code></p>
+<ul>
+<li>The syntax of the <strong>MoveTo</strong> command is the following:</li=
+>
+</ul>
+<p><code>&nbsp;&nbsp;:MoveTo&nbsp;[int|*]&nbsp;[int|*]&nbsp;[reference&nbsp=
+;corner]</code></p>
+<p>The wildcard <strong>*</strong> means "use current value" and 'reference=
+ corner' is one of the following:</p>
+<p>:* Left, Right</p>
+<p>:* Upper, UpperLeft, UpperRight</p>
+<p>:* Lower, LowerLeft, LowerRight Examples:</p>
+<p><code>&nbsp;&nbsp;:MoveTo&nbsp;0&nbsp;*&nbsp;Left&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;-&gt;&nbsp;snap&nbsp;to&nbsp;left&nbsp;workspace&nbsp;ed=
+ge</code><br><code>&nbsp;&nbsp;:MoveTo&nbsp;*&nbsp;0&nbsp;Lower&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;-&gt;&nbsp;snap&nbsp;to&nbsp;lower&nbsp;workspace&n=
+bsp;edge</code><br><code>&nbsp;&nbsp;:MoveTo&nbsp;0&nbsp;0&nbsp;UpperRight&=
+nbsp;-&gt;&nbsp;snap&nbsp;to&nbsp;upper&nbsp;right&nbsp;workspace&nbsp;corn=
+er</code></p>
+<ul>
+<li>Grouped parameters of the <strong>StartResizing</strong> command (case =
+doesn't matter!):</li>
+</ul>
+<p>:* NearestCorner, NearestEdge</p>
+<p>:* TopLeft, Top, TopRight</p>
+<p>:* Left, Center, Right</p>
+<p>:* BottomLeft, Bottom, BottomRight Examples:</p>
+<p><code>&nbsp;&nbsp;:OnWindow&nbsp;Mod1&nbsp;Mouse3&nbsp;:StartResizing&nb=
+sp;BottomRight&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Fluxbox&nbsp;defau=
+lt&nbsp;(?)</code><br><code>&nbsp;&nbsp;:OnWindow&nbsp;Mod1&nbsp;Mouse3&nbs=
+p;:StartResizing&nbsp;NearestCorner&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;used&nbsp=
+;in&nbsp;most&nbsp;other&nbsp;window&nbsp;manager</code></p>
+<ul>
+<li><strong>ChangeWorkspace</strong></li>
+</ul>
+<p>Examples:</p>
+<p><code>&nbsp;&nbsp;#&nbsp;changes&nbsp;you&nbsp;background&nbsp;image&nbs=
+p;(requires&nbsp;images&nbsp;bg0.png...bgX.png&nbsp;in&nbsp;~/.fluxbox/&nbs=
+p;directory):</code><br><code>&nbsp;&nbsp;:ChangeWorkspace&nbsp;:Exec&nbsp;=
+fbsetbg&nbsp;~/.fluxbox/bg$(xprop&nbsp;-root&nbsp;_NET_CURRENT_DESKTOP&nbsp=
+;|&nbsp;awk&nbsp;'{print&nbsp;$3}').png</code><br><code>&nbsp;&nbsp;#&nbsp;=
+displays&nbsp;your&nbsp;workspace&nbsp;name.</code><br><code>&nbsp;&nbsp;:C=
+hangeWorkspace&nbsp;:Exec&nbsp;osdctl&nbsp;-s&nbsp;$(xprop&nbsp;-root&nbsp;=
+_NET_CURRENT_DESKTOP&nbsp;_WIN_WORKSPACE_NAMES&nbsp;|&nbsp;sed&nbsp;'s/[,"]=
+//g'&nbsp;|&nbsp;awk&nbsp;'NR=3D=3D1&nbsp;{cur=3D$3}&nbsp;NR=3D=3D2&nbsp;{n=
+ame=3D$(3+cur);&nbsp;print&nbsp;name&nbsp;","}')</code></p>
+<ul>
+<li><strong>RaiseLevel/LowerLevel</strong></li>
+</ul>
+<p>Note that there is a layer between named layers so you need to <em>Raise=
+Layer</em> twice to get from Normal layer to Top layer.</p>
+<h3 id=3D"macrocmd-syntax">MacroCmd Syntax</h3>
+<p><code>&nbsp;&nbsp;Mod1&nbsp;r&nbsp;:MacroCmd&nbsp;{command1}&nbsp;{comma=
+nd2}&nbsp;{command3}...</code></p>
+<p><strong>MacroCmd</strong> allows you to execute more than one command wi=
+th a single keybinding. The commands given to <strong>MacroCmd</strong> wil=
+l be executed in the order they are supplied, and can be either <strong>Exe=
+c[Command]</strong> or internal commands such as <strong>ShowDesktop</stron=
+g>.</p>
+<p>Example:</p>
+<p><code>&nbsp;&nbsp;Mod1&nbsp;u&nbsp;:MacroCmd&nbsp;{Moveto&nbsp;10&nbsp;5=
+}&nbsp;{ResizeTo&nbsp;1260&nbsp;590}</code><br><code>&nbsp;&nbsp;Mod1&nbsp;=
+o&nbsp;:MacroCmd&nbsp;{MoveTo&nbsp;10&nbsp;600}&nbsp;{ResizeTo&nbsp;1250&nb=
+sp;380}</code></p>
+<p>The first command could be used to move and resize your browser to the u=
+pper corner of the screen, while the second could be used in a terminal win=
+dows, to move and resizes it below.</p>
+<h3 id=3D"togglecmd-syntax">ToggleCmd Syntax</h3>
+<p><code>&nbsp;&nbsp;Mod1&nbsp;t&nbsp;:ToggleCmd&nbsp;{command1}&nbsp;{comm=
+and2}</code></p>
+<p>This alternates between the given commands each time you press Mod1 + t.=
+ For example, you could use <strong>ShowDesktop</strong> and <strong>DeIcon=
+ify all originquiet</strong>. The command to make Windows-key + m minimize =
+all windows, and then bring them back is:</p>
+<p><code>&nbsp;&nbsp;Mod4&nbsp;m&nbsp;:ToggleCmd&nbsp;{ShowDesktop}&nbsp;{D=
+eIconify&nbsp;all&nbsp;originquiet}</code></p>
+<h3 id=3D"combining-togglecmd-and-macrocmd">Combining ToggleCmd and MacroCm=
+d</h3>
+<p><code>&nbsp;&nbsp;</code><mod><code>&nbsp;</code><key><code>&nbsp;:Toggl=
+eCmd&nbsp;{MacroCmd&nbsp;{</code><command_1><code>}&nbsp;{</code><command_2=
+}} {macrocmd=3D"" {<command_1=3D""><code>}&nbsp;{</code><command_2}} '''tog=
+glecmd'''=3D"" and=3D"" '''macrocmd'''=3D"" can=3D"" be=3D"" used=3D"" in=
+=3D"" unison=3D"" order=3D"" to=3D"" use=3D"" keybinding=3D"" for=3D"" two=
+=3D"" macros.=3D"" it's=3D"" an=3D"" advanced=3D"" way=3D"" keys,=3D"" but=
+=3D"" it=3D"" may=3D"" not=3D"" of=3D"" any=3D"" value=3D"" you.=3D"" creat=
+ive=3D"" see=3D"" what=3D"" you=3D"" come=3D"" up=3D"" with.=3D"=3DMinimali=
+stic" application=3D"" usage=3D"=3D" fluxbox=3D"" promotes=3D"" minimalisti=
+c=3D"" usage,=3D"" keep=3D"" in-line=3D"" with=3D"" this=3D"" approach,=3D"=
+" prevent=3D"" more=3D"" than=3D"" instance=3D"" check=3D"" if=3D"" have=3D=
+"" [http:=3D"" www.sweb.cz=3D"" tripie=3D"" utils=3D"" wmctrl=3D"" wmctrl]=
+=3D"" installed=3D"" $=3D"" type=3D"" is=3D"" installed,=3D"" will=3D"" pre=
+sented=3D"" the=3D"" path,=3D"" not,=3D"" told.=3D"" please=3D"" install=3D=
+"" using=3D"" your=3D"" distrobution's=3D"" package=3D"" method.=3D"" easie=
+st=3D"" switch=3D"" exists=3D"" or=3D"" launch=3D"" wmctrl's=3D"" -a=3D"" o=
+ption.=3D"" firefox=3D"" ||=3D"" search=3D"" a=3D"" window=3D"" `firefox'=
+=3D"" its=3D"" title=3D"" (case-insensitive),=3D"" `||'=3D"" create=3D"" ne=
+w=3D"" couldn't=3D"" find=3D"" then=3D"" add=3D"" keys=3D"" file:=3D"" cont=
+rol=3D"" mod1=3D"" f=3D"" :execcommand=3D"" general,=3D"" anything=3D"" ope=
+n=3D"" else,=3D"" syntax=3D"" $searchterm=3D"" $app=3D"" another=3D"" longe=
+r=3D"" approach=3D"" below:=3D"" save=3D"" script=3D"" below=3D"" as=3D"" '=
+find_app.sh'=3D"" (anywhere=3D"" filesystem)=3D"" #!=3D"" bin=3D"" bash=3D"=
+" #=3D"" find_app=3D"" author:=3D"" lucas=3D"" van=3D"" staden=3D"" (lvs=3D=
+"" at=3D"" dedmeet.com=3D"" www.dedmeet.com)=3D"" little=3D"" try=3D"" atte=
+mpting=3D"" start=3D"" running=3D"" processes,=3D"" found,=3D"" focus=3D"" =
+usage:=3D"" find_app.sh=3D"" <application=3D"" full=3D"" path=3D""><br><cod=
+e>#&nbsp;params</code><br><code>#&nbsp;1&nbsp;-&nbsp;application&nbsp;to&nb=
+sp;start&nbsp;(full&nbsp;path)</code><br><code>#&nbsp;helper&nbsp;applicati=
+ons</code><br><code>WMCTRL=3D`which&nbsp;wmctrl`;</code><br><code>GREP=3D`w=
+hich&nbsp;grep`;</code><br><code>APPLICATION=3D$1;</code><br><code>BASENAME=
+=3D`basename&nbsp;$APPLICATION`;</code><br><code>BASENAME=3D`echo&nbsp;$BAS=
+ENAME&nbsp;|&nbsp;tr&nbsp;"[:upper:]"&nbsp;"[:lower:]"`</code><br><code>FOU=
+ND=3D0;</code><br><code>function&nbsp;findwindow&nbsp;{</code><br><code>#&n=
+bsp;1&nbsp;=3D&nbsp;BASENAME</code><br><code>#&nbsp;2&nbsp;=3D&nbsp;WMCTRL<=
+/code><br><code>#&nbsp;3&nbsp;=3D&nbsp;GREP</code><br><code>&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IFS=3D$'\n';</code><br><code>&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;RUNNING&nbsp;in&nbsp;`$2&nbsp;-=
+l&nbsp;-x`</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+do</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;[&nbsp;`echo&nbsp;$RUNNING&=
+nbsp;|&nbsp;tr&nbsp;"[:upper:]"&nbsp;"[:lower:]"&nbsp;|&nbsp;$3&nbsp;-c&nbs=
+p;$1`&nbsp;-gt&nbsp;0&nbsp;]</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;then</cod=
+e><br><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;HOSTNAME=3D`hostname`</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WINDOW=3D${RUNNING#*${HOSTNAME}&nbsp;=
+}</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;$2&nbsp;-a&nbsp;$WINDOW</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FOUND=3D1;</code><br><code>&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;fi;</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;done</code><br><code>}</code><br><code>findwindow&nbsp;$BASENAM=
+E&nbsp;$WMCTRL&nbsp;$GREP;&nbsp;</code><br><code>if&nbsp;[&nbsp;$FOUND&nbsp=
+;-eq&nbsp;0&nbsp;]</code><br><code>then</code><br><code>&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$APPLICATION&nbsp;&amp;</code><br><code>&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sleep&nbsp;2;</code><br><code>&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Try&nbsp;and&nbsp;find&=
+nbsp;the&nbsp;application,&nbsp;after&nbsp;opened</code><br><code>&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;findwindow&nbsp;$BASENAME&nbsp;$WMCT=
+RL&nbsp;$GREP;</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;if&nbsp;[&nbsp;$FOUND&nbsp;-eq&nbsp;0&nbsp;]</code><br><code>&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;then</code><br><code>&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;#&nbsp;Still&nbsp;not&nbsp;found,&nbsp;wait&nbsp;a&nbsp;bit&nbsp;more,=
+&nbsp;and&nbsp;try&nbsp;again</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sleep&nb=
+sp;3;</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;findwindow&nbsp;$BASENAME&nbsp;$=
+WMCTRL&nbsp;$GREP;</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;fi</code><br><code>fi</code></command_2}}></command_2}}></command_1=
+></key></mod></p>
+<p>Make sure the script is executable</p>
+<p><code>$&nbsp;chmod&nbsp;+x&nbsp;find_app.sh</code></p>
+<p>Now in your keys file, in place of calling the application directly, use=
+ the wrapper script above, for example the following line in the keys file<=
+/p>
+<p><code>Control&nbsp;Mod1&nbsp;f&nbsp;:ExecCommand&nbsp;~/.fluxbox/scripts=
+/find_app.sh&nbsp;/usr/bin/firefox</code></p>
+<p>will try and start firefox, but if firefox is already running, then it w=
+ill be set as the active, top-most application, and you will be moved to th=
+e desktop where it is running. If firefox is not running, it will be starte=
+d as usual, and after a short delay, you will be moved to the desktop where=
+ it started up.</p>
+<p>You can now use the keypress, not just to start an application, but to f=
+ind an open instance.</p>
+<h3 id=3D"xdotool">xdotool</h3>
+<p>Refer to posts here: <a href=3D"https://bbs.archlinux.org/viewtopic.php?=
+pid=3D624950">1</a></p>
+<p><code>#!/bin/bash&nbsp;</code><br><code>#</code><br><code>#&nbsp;Show&nb=
+sp;an&nbsp;application&nbsp;window&nbsp;or&nbsp;launch&nbsp;the&nbsp;applic=
+ation&nbsp;if&nbsp;no&nbsp;window</code><br><code>#&nbsp;could&nbsp;be&nbsp=
+;found.&nbsp;</code><br><code>#</code><br><code>#&nbsp;Requires&nbsp;xdotoo=
+l.&nbsp;(http://www.semicomplete.com/projects/xdotool)</code><br><code>#</c=
+ode><br><code>#&nbsp;To&nbsp;"show"&nbsp;means&nbsp;"switch&nbsp;to&nbsp;th=
+e&nbsp;window's&nbsp;desktop,&nbsp;then&nbsp;raise&nbsp;and</code><br><code=
+>#&nbsp;focus&nbsp;the&nbsp;window."</code><br><code>#&nbsp;</code><br><cod=
+e>#&nbsp;If&nbsp;the&nbsp;--move&nbsp;option&nbsp;is&nbsp;supplied,&nbsp;th=
+e&nbsp;window&nbsp;will&nbsp;be&nbsp;moved&nbsp;to&nbsp;the</code><br><code=
+>#&nbsp;current&nbsp;desktop&nbsp;before&nbsp;raising&nbsp;and&nbsp;focusin=
+g&nbsp;it.</code><br><code>#</code><br><code>#&nbsp;The&nbsp;method&nbsp;fo=
+r&nbsp;finding&nbsp;an&nbsp;existing&nbsp;window&nbsp;that&nbsp;is&nbsp;ass=
+ociated&nbsp;with</code><br><code>#&nbsp;the&nbsp;supplied&nbsp;command&nbs=
+p;relies&nbsp;on&nbsp;the&nbsp;assumption&nbsp;that&nbsp;the&nbsp;basename&=
+nbsp;of</code><br><code>#&nbsp;the&nbsp;first&nbsp;word&nbsp;of&nbsp;the&nb=
+sp;command&nbsp;matches&nbsp;either&nbsp;the&nbsp;"name"&nbsp;or&nbsp;"clas=
+s"</code><br><code>#&nbsp;portion&nbsp;of&nbsp;the&nbsp;window's&nbsp;WM_CL=
+ASS&nbsp;property.</code><br><code>#</code><br><code>#&nbsp;See&nbsp;</code=
+><a href=3D"http://bbs.archlinux.org/viewtopic.php?id=3D80554"><code>http:/=
+/bbs.archlinux.org/viewtopic.php?id=3D80554</code></a><code>&nbsp;for&nbsp;=
+details.</code><br><code>#</code><br><code>#&nbsp;Author:&nbsp;Henning&nbsp=
+;Bekel&nbsp;</code><h.bekel at=3D"" googlemail.com=3D""><code>.&nbsp;Inspir=
+ed&nbsp;by&nbsp;a</code><br><code>#&nbsp;similar&nbsp;script&nbsp;written&n=
+bsp;by&nbsp;Lucas&nbsp;van&nbsp;Staden&nbsp;</code><lvs at=3D"" dedmeet.com=
+=3D"" #=3D"" www.dedmeet.com=3D""><code>&nbsp;</code><br><br><code>usage&nb=
+sp;()&nbsp;{</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;"Usage:&nbsp=
+;$(basename&nbsp;$0)&nbsp;[-m|--move]&nbsp;command"</code><br><code>&nbsp;&=
+nbsp;&nbsp;&nbsp;echo</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;"&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-m,&nbsp;--move&nbsp;:&nbsp;move&nb=
+sp;the&nbsp;window&nbsp;to&nbsp;the&nbsp;current&nbsp;desktop&nbsp;instead&=
+nbsp;of"</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;"&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;switching&nbsp;to&nbsp;the&nbsp;desktop&nbsp;=
+the&nbsp;window&nbsp;is&nbsp;at."</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;e=
+xit&nbsp;1</code><br><code>}</code><br><br><code>#&nbsp;show&nbsp;usage&nbs=
+p;if&nbsp;no&nbsp;arguments&nbsp;were&nbsp;given&nbsp;or&nbsp;--help&nbsp;w=
+as&nbsp;requested</code><br><code>[[&nbsp;$#&nbsp;-eq&nbsp;0&nbsp;||&nbsp;"=
+$1"&nbsp;=3D~&nbsp;^(-h|--help)$&nbsp;]]&nbsp;&amp;&amp;&nbsp;usage&nbsp;</=
+code><br><br><code>move=3D0&nbsp;</code><br><code>wid=3D''&nbsp;&nbsp;</cod=
+e><br><br><code>#&nbsp;test&nbsp;for&nbsp;--move&nbsp;option</code><br><cod=
+e>if&nbsp;[[&nbsp;"$1"&nbsp;=3D~&nbsp;^(-m|--move)$&nbsp;]];&nbsp;then</cod=
+e><br><code>&nbsp;&nbsp;&nbsp;&nbsp;move=3D1</code><br><code>&nbsp;&nbsp;&n=
+bsp;&nbsp;shift</code><br><code>fi</code><br><br><code>mapped?&nbsp;()&nbsp=
+;{</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;test&nbsp;wether&nbsp;a&n=
+bsp;window&nbsp;exists&nbsp;whose&nbsp;WM_CLASS&nbsp;name&nbsp;or&nbsp;clas=
+s</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;property&nbsp;matches&nbsp=
+;the&nbsp;binary&nbsp;name&nbsp;supplied.&nbsp;Not&nbsp;using&nbsp;--title<=
+/code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;assures&nbsp;we&nbsp;don't&n=
+bsp;switch&nbsp;to&nbsp;some&nbsp;window&nbsp;which&nbsp;happens&nbsp;to&nb=
+sp;contain</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;the&nbsp;binary&n=
+bsp;name&nbsp;as&nbsp;well&nbsp;(i.e.&nbsp;a&nbsp;web&nbsp;browser).&nbsp;<=
+/code><br><br><code>&nbsp;&nbsp;&nbsp;&nbsp;wid=3D"$(xdotool&nbsp;search&nb=
+sp;--name&nbsp;--class&nbsp;$(basename&nbsp;"$1")&nbsp;|&nbsp;head&nbsp;-1)=
+"</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;[[&nbsp;"$wid"&nbsp;=3D~&nbsp;^[0=
+-9]+$&nbsp;]]</code><br><code>}&nbsp;</code><br><br><code>show&nbsp;()&nbsp=
+;{</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;show&nbsp;the&nbsp;window=
+,&nbsp;that&nbsp;is:</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;1.&nbsp=
+;move&nbsp;the&nbsp;window&nbsp;to&nbsp;the&nbsp;current&nbsp;desktop&nbsp;=
+if&nbsp;requested</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;2.&nbsp;sw=
+itch&nbsp;to&nbsp;the&nbsp;window's&nbsp;desktop,&nbsp;raise&nbsp;and&nbsp;=
+focus&nbsp;</code><br><br><code>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;[[&nbsp;mov=
+e&nbsp;-eq&nbsp;1&nbsp;]];&nbsp;then</code><br><code>&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;xdotool&nbsp;set_desktop_for_window&nbsp;$wid&nbs=
+p;$(xdotool&nbsp;get_desktop)</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;fi</c=
+ode><br><code>&nbsp;&nbsp;&nbsp;&nbsp;xdotool&nbsp;windowactivate&nbsp;$wid=
+&nbsp;&amp;&gt;&nbsp;/dev/null</code><br><code>}&nbsp;</code><br><br><code>=
+if&nbsp;mapped?&nbsp;"$1";&nbsp;then</code><br><code>&nbsp;&nbsp;&nbsp;&nbs=
+p;show</code><br><code>else</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;=
+launch&nbsp;the&nbsp;command&nbsp;in&nbsp;the&nbsp;background&nbsp;and&nbsp=
+;remove&nbsp;it&nbsp;from&nbsp;jobs</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp=
+;$*&nbsp;&amp;</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;disown</code><br><co=
+de>&nbsp;&nbsp;&nbsp;&nbsp;</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;=
+wait&nbsp;until&nbsp;the&nbsp;window&nbsp;has&nbsp;been&nbsp;created.&nbsp;=
+We'll&nbsp;exit&nbsp;after&nbsp;10</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;=
+#&nbsp;retries&nbsp;to&nbsp;avoid&nbsp;an&nbsp;infinite&nbsp;loop&nbsp;in&n=
+bsp;case&nbsp;the&nbsp;application&nbsp;failed</code><br><code>&nbsp;&nbsp;=
+&nbsp;&nbsp;#&nbsp;to&nbsp;launch&nbsp;at&nbsp;all.&nbsp;</code><br><br><co=
+de>&nbsp;&nbsp;&nbsp;&nbsp;retry=3D10</code><br><code>&nbsp;&nbsp;&nbsp;&nb=
+sp;until&nbsp;mapped?&nbsp;"$1";&nbsp;do</code><br><code>&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sleep&nbsp;1</code><br><code>&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((retry-=3D1))</code><br><code>&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[&nbsp;retry&nbsp;-eq&nbsp;0&nbsp;]]&n=
+bsp;&amp;&amp;&nbsp;exit&nbsp;1</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;don=
+e</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><br><code>&nbsp;&nbsp;&nbs=
+p;&nbsp;#&nbsp;the&nbsp;window&nbsp;may&nbsp;be&nbsp;on&nbsp;a&nbsp;differe=
+nt&nbsp;desktop&nbsp;now,&nbsp;so&nbsp;we'll&nbsp;show&nbsp;it</code><br><c=
+ode>&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;again&nbsp;to&nbsp;either&nbsp;move&nbsp=
+;it&nbsp;here&nbsp;(--move)&nbsp;or&nbsp;switch&nbsp;to&nbsp;it's&nbsp;desk=
+top</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;show</code><br><code>fi</code><=
+/lvs></h.bekel></p>
+<p><a href=3D"http://fluxbox-wiki.org/category/howtos/en/index.html">Catego=
+ry:English howtos</a></p>
+
+
+</body></html>
+------MultipartBoundary--tgwUadBNf1jxlVxI17tp9GSHVkltdk7HGKy1DRKVvc------

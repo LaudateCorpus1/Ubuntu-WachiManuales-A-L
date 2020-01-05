@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Install Free Office 2007 Fonts for Linux and XP</title>
+  </head>
+  <body>
+    <h1>
+      <a
+href="http://www.oooninja.com/2008/01/calibri-linux-vista-fonts-download.html"
+        rel="bookmark">Install Free Office 2007 Fonts for Linux and XP</a></h1>
+    <p><a
+href="http://www.oooninja.com/2008/01/calibri-linux-vista-fonts-download.html">http://www.oooninja.com/2008/01/calibri-linux-vista-fonts-download.html</a><br>
+    </p>
+    <h4>
+      Posted by
+      Andrew Z
+      at
+      Saturday, January 26, 2008 | <a
+href="http://www.oooninja.com/2008/01/calibri-linux-vista-fonts-download.html"
+        rel="bookmark" title="permanent link">Permalink</a></h4>
+    <div style="margin-top: 10px;">
+    </div>
+    <p>Windows Vista and Microsoft Office 2007 introduce the new
+      ClearType Collection typefaces: <span style="font-family:
+        calibri">Calibri</span>, <span style="font-family: cambria">Cambria</span>,
+      <span style="font-family: candara">Candara</span>, <span
+        style="font-family: consolas">Consolas</span>, <span
+        style="font-family: constantia">Constantia</span>, and <span
+        style="font-family: corbel">Corbel</span>. They replace the
+      classics Times New Roman, Arial, Courier New, etc. When passing
+      documents between systems, it's necessary to have the same:
+      otherwise, documents look and layout may suffer. If you get an
+      Office Open XML .docx or .pptx, chances are you need these new
+      fonts, but OpenOffice.org, Linux, and Windows XP users need not be
+      left out in the cold. Until Red Hat creates new metrically
+      equivalent fonts (<a
+        href="http://www.press.redhat.com/2007/05/09/liberation-fonts/">as
+        it did for the older Microsoft fonts</a>), it's easy to install
+      these new Microsoft fonts without Vista or Office.</p>
+    <img alt="The Office 2007 / Windows Vista shown in OpenOffice.org
+      2.3.1 on Linux"
+src="http://lh5.google.com/OOoNinja/R6Hak0RcAEI/AAAAAAAAAQY/_eCAO36QLFA/s640/OOo231_font_replacement.png">
+    <h3>License</h3>
+    <p>Please read the PowerPoint Viewer download page which includes
+      this statement:</p>
+    <p>
+    </p>
+    <blockquote>You may use the fonts that accompany the PowerPoint
+      Viewer only to display and print content from a device running a
+      Microsoft Windows operating system.</blockquote>
+    <p>I am not a lawyer, but I wonder whether having Windows in dual
+      boot or virtualization satisfies this requirement. If you want a
+      free-as-in-speech alternative, use <a
+href="http://www.oooninja.com/2008/02/metrical-equivalent-fonts-and-font.html">font
+        replacement</a>.</p>
+    <h3>Method 1: Windows only</h3>
+    <p>Just download and install <a
+href="http://www.microsoft.com/downloads/details.aspx?familyid=048DC840-14E1-467D-8DCA-19D2A8FD7485&amp;displaylang=en">PowerPoint
+        Viewer 2007</a>. Alternatively, you could use the Microsoft
+      Office Compatibility Pack, but a much larger download. Both
+      downloads are free and neither require Windows Genuine Advantage
+      validation.</p>
+    <h3>Method 2: cabextract (Linux only)</h3>
+    <ol>
+      <li>Install cabextract. On Fedora, simply run this command: <code style="display:block;overflow: auto;white-space: pre;">sudo yum -y install cabextract</code>
+        On Ubuntu run: <code style="display:block;overflow: auto;white-space: pre;">sudo apt-get install cabextract</code></li>
+      <li>Download <a
+href="http://www.microsoft.com/downloads/details.aspx?familyid=048DC840-14E1-467D-8DCA-19D2A8FD7485&amp;displaylang=en">PowerPoint
+          Viewer 2007</a>.</li>
+      <li>Extract the .exe: <code style="display:block;overflow: auto;white-space: pre;"> cabextract -F ppviewer.cab PowerPointViewer.exe</code></li>
+      <li>Prepare a separate target installation directory: <code style="display:block;overflow: auto;white-space: pre;">sudo mkdir /usr/share/fonts/vista</code></li>
+      <li>Extract the actual fonts: <code style="display:block;overflow: auto;white-space: pre;">sudo cabextract -F '*.TT?' -d /usr/share/fonts/vista ppviewer.cab </code>
+        <br>
+        Tip: You may substitute ~/.fonts instead of /usr/share/fonts for
+        local, single-user installation which does not require root
+        access.</li>
+      <li>Update the cache: <code>fc-cache -fv</code></li>
+    </ol>
+    <h3>Method 3: Wine (Linux only)</h3>
+    <ol>
+      <li>Install Wine. On Fedora, simply run: <code style="display:block;overflow: auto;white-space: pre;">sudo yum -y install wine</code>
+        On Ubuntu, run: <code style="display:block;overflow: auto;white-space: pre;">sudo apt-get install wine</code></li>
+      <li>Download <a
+href="http://www.microsoft.com/downloads/details.aspx?familyid=048DC840-14E1-467D-8DCA-19D2A8FD7485&amp;displaylang=en">PowerPoint
+          Viewer 2007</a>.</li>
+      <li>Install the viewer by running: <code style="display:block;overflow: auto;white-space: pre;">wine PowerPointViewer.exe</code></li>
+      <li>Install the fonts by moving them like so: <code style="display:block;overflow: auto;white-space: pre;">sudo mkdir /usr/share/fonts/vista
+cd ~/.wine/drive_c/windows/fonts/
+sudo mv {CALIBR,CAMBRIA,CANDARA,CONSOLA,CONSTAN,CORBEL}*.TT? \
+/usr/share/fonts/vista</code>
+        Tip: You may substitute ~/.fonts instead of /usr/share/fonts for
+        local, single-user installation which does not require root
+        access.
+      </li>
+      <li>Update the cache: <code>fc-cache -fv</code></li>
+    </ol>
+    <h3>Testing and comparison</h3>
+    <p>Once the fonts are installed, refresh this page. Exiting the
+      browser first may be necessary. Then, you should see the fonts
+      change below.</p>
+    <p>Did you know that OpenOffice.org installs the Bitstream fonts?</p>
+    <table caption="A table of the new and old Windows fonts"
+      style="font-size: 120%">
+      <tbody>
+        <tr>
+          <th>Windows Vista / Office 2007</th>
+          <th>Windows 95-XP era</th>
+          <th>OpenOffice.org</th>
+        </tr>
+        <tr>
+          <td><span style="font-family: calibri">Calibri</span></td>
+          <td><span style="font-family: Arial">Arial</span>
+            <br>
+            <span style="font-family: Arial Black">Arial Black</span></td>
+          <td><span style="font-family: Bitstream Vera Sans">Bitstream
+              Vera Sans</span>
+          </td>
+        </tr>
+        <tr>
+          <td><span style="font-family: cambria">Cambria</span></td>
+          <td>
+            <br>
+            <span style="font-family: Times New Roman">Times New Roman</span>
+            <br>
+            <span style="font-family: Georgia">Georgia</span>
+            <br>
+            <span style="font-family: Impact">Impact</span></td>
+          <td><span style="font-family: Bitstream Vera Serif">Bitstream
+              Vera Serif</span>
+          </td>
+        </tr>
+        <tr>
+          <td><span style="font-family: candara">Candara</span></td>
+          <td><span style="font-family: Trebuchet MS">Trebuchet MS</span></td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td><span style="font-family: consolas">Consolas</span></td>
+          <td><span style="font-family: Lucida Console">Lucida Console</span>
+            <br>
+            <span style="font-family: Courier New">Courier New</span></td>
+          <td><span style="font-family: Bitstream Vera Mono">Bitstream
+              Vera Mono</span>
+          </td>
+        </tr>
+        <tr>
+          <td><span style="font-family: constantia">Constantia</span></td>
+          <td>
+            <span style="font-family: Book Antiqua">Book Antiqua</span>
+            <br>
+            <span style="font-family: Palatino Linotype">Palatino
+              Linotype</span>
+            <br>
+            <span style="font-family: Tahoma">Tahoma</span>
+          </td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td><span style="font-family: corbel">Corbel</span></td>
+          <td><span style="font-family: Verdana">Verdana</span></td>
+          <td><br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <h3>Font replacement<a name="font_replacement"></a></h3>
+    <p>This section moved and expanded to <a
+href="http://www.oooninja.com/2008/02/metrical-equivalent-fonts-and-font.html">Metrical
+        Equivalent Fonts and Font Substitution </a>.</p>
+  </body>
+</html>

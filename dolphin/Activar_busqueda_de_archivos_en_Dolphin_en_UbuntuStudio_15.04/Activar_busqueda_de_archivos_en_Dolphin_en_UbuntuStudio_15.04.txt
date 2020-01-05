@@ -1,0 +1,44 @@
+
+
+Activar la busqueda de dolphin en UbuntuStudio 15.04
+
+Nota: Solo aplicable a 15.04, es decir Ubuntu, Xubuntu, Linux Mint, etc (en Kubuntu 15.04 no es necesario hacer esto)
+
+Instala:
+
+dolphin
+baloo-utils
+kde-config-baloo-advanced
+
+Listo, ahora debería funcionar bien.
+
+
+¿Cómo buscar en otras particiones?
+Yo tengo otras particiones, para buscar en ellas es necesario poner este comando en una terminal:
+
+kcmshell4 kcm_baloofileadv
+
+se abrirá una ventana y allí verá una pestaña "Folders", allí por defecto está añadida la carpeta de su usuario, usted debe añadir las otras particiones que tenga para que estén en la lista, ejemplo así para mi:
+
+
+Ahora, para lo contrario, si usted no desea buscar en alguna carpeta o particion, ponga en la terminal este comando:
+
+kcmshell4 kcm_baloofile
+
+Se abrirá una ventana, allí hay un más donde puede añadir
+
+Dios les bendiga
+
+
+
+
+
+
+
+
+
+
+/usr/share/kde4/services/kcm_baloofileadv.desktop
+
+
+

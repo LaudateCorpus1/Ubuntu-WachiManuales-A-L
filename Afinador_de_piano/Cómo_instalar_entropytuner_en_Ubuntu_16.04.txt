@@ -1,0 +1,20 @@
+
+software.opensuse.org: Instalar paquete home:entropytuner / entropypianotuner
+https://software.opensuse.org/download.html?project=home%3Aentropytuner&package=entropypianotuner
+
+Añadir repositorio e instalar de forma manual(ocultar)
+
+Para xUbuntu 16.04 ejecute lo siguiente:
+
+sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/entropytuner/xUbuntu_16.04/ /' >> /etc/apt/sources.list.d/entropypianotuner.list"
+
+sudo apt-get update
+
+sudo apt-get install entropypianotuner
+
+Puede añadir la clave del repositorio a apt. Tenga en cuenta que el usuario de la clave puede distribuir actualizaciones, paquetes y repositorios el los que su sistema confiara (mas información). Para añadir, ejecute :
+
+wget http://download.opensuse.org/repositories/home:entropytuner/xUbuntu_16.04/Release.key
+sudo apt-key add - < Release.key  
+
+

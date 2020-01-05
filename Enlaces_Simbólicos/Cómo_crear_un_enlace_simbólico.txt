@@ -1,0 +1,7 @@
+
+
+ln -s source_file myfile
+
+ejemplo para un archivo del sistema:
+
+sudo ln -s /usr/bin/chromium chromium-browser

@@ -1,0 +1,17 @@
+
+
+
+Bien, en su HOME entre en esta ruta(en dolphin aplaste las telcas 'Alt+.' para ver los archivos ocultos):
+
+
+.kde/share/
+
+si faltan las sig carpetas creelas, debe quedar así:
+
+.kde/share/kde4/services/ServiceMenus
+
+
+Allí copie estos dos archivos:
+fileroller_addtoservicemenu.desktop
+fileroller_servicemenu.desktop
+ 

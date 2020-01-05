@@ -1,0 +1,19 @@
+
+
+Por defecto en kdenlive
+Video 23 Audio 192
+
+Pero es necesario entender que está alrevés la calidad, explico mejor, entre más alto el valor del video más baja la calidad, y entre más bajo el valor del video más alta la calidad
+
+He probado 
+Video 20 Audio 192
+
+Estoy probando
+Video 17 Audio 192
+
+La maxima calidad que tiene kdenlive es
+Video 15 Audio 192
+
+
+
+ 

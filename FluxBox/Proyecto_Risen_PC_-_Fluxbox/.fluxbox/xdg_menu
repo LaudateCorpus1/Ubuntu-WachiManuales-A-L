@@ -1,0 +1,263 @@
+[submenu] (Aplicaciones) </usr/share/icons/oxygen/base/16x16/categories/applications-other.png>
+  [submenu] (Accesorios) </usr/share/icons/oxygen/base/16x16/categories/applications-accessories.png>
+    [exec] (Alarm Clock) {alarm-clock-applet} </usr/share/icons/hicolor/16x16/apps/alarm-clock.png>
+    [exec] (AntiMicro) {antimicro} </usr/share/pixmaps/antimicro.png>
+    [exec] (Archivos) {nemo } </usr/share/icons/oxygen/base/16x16/places/folder.png>
+    [exec] (Archivos) {nautilus --new-window } </usr/share/icons/hicolor/16x16/apps/org.gnome.Nautilus.png>
+    [exec] (BlueWho) {/usr/bin/bluewho}
+    [exec] (Brightness Controller) {/usr/share/brightness-controller/init.py}
+    [exec] (Brightness Controller Simple) {/usr/bin/brightness-controller-simple} </usr/share/icons/hicolor/16x16/apps/brightness-controller-simple.png>
+    [exec] (Buscador de aplicaciones) {xfce4-appfinder} </usr/share/icons/oxygen/base/16x16/actions/edit-find.png>
+    [exec] (Búsqueda de archivos Catfish) {/usr/bin/catfish}
+    [exec] (Calculadora de MATE) {mate-calc} </usr/share/icons/oxygen/base/16x16/apps/accessories-calculator.png>
+    [exec] (Captura de pantalla) {xfce4-screenshooter} </usr/share/icons/hicolor/48x48/apps/applets-screenshooter.png>
+    [exec] (ConvertAll) {convertall}
+    [exec] (Discos) {gnome-disks} </usr/share/icons/hicolor/16x16/apps/gnome-disks.png>
+    [exec] (Double Commander) {doublecmd } </usr/share/pixmaps/doublecmd.png>
+    [exec] (Editor de textos) {gedit } </usr/share/icons/hicolor/16x16/apps/gedit.png>
+    [exec] (FSearch) {fsearch} </usr/share/icons/oxygen/base/16x16/actions/system-search.png>
+    [exec] (Furius ISO Mount) {furiusisomount} </usr/share/pixmaps/furiusisomount.png>
+    [exec] (GShutdown) {/usr/bin/gshutdown} </usr/share/pixmaps/gshutdown.png>
+    [exec] (Gestor de archivadores) {file-roller } </usr/share/icons/hicolor/16x16/apps/file-roller.png>
+    [exec] (Gestor de archivadores Engrampa) {engrampa } </usr/share/icons/hicolor/16x16/apps/engrampa.png>
+    [exec] (KRename) {krename -qwindowtitle "} </usr/share/icons/hicolor/32x32/apps/krename.png>
+    [exec] (KShutdown) {kshutdown} </usr/share/icons/hicolor/16x16/actions/kshutdown.png>
+    [exec] (Kate) {kate -b } </usr/share/icons/oxygen/base/16x16/apps/kate.png>
+    [exec] (Krusader) {krusader -qwindowtitle } </usr/share/icons/hicolor/16x16/apps/krusader_user.png>
+    [exec] (Mapa de caracteres) {gucharmap} </usr/share/icons/oxygen/base/16x16/apps/accessories-character-map.png>
+    [exec] (Mouse Server for linux) {/usr/sbin/mouseserver}
+    [exec] (Mousepad) {mousepad } </usr/share/icons/oxygen/base/16x16/apps/accessories-text-editor.png>
+    [exec] (Métamorphose2) {/usr/bin/metamorphose2 -w 3.0} </usr/share/pixmaps/metamorphose2.png>
+    [exec] (Onboard) {onboard} </usr/share/icons/hicolor/16x16/apps/onboard.png>
+    [exec] (PeaZip) {peazip } </usr/local/share/icons/peazip.png>
+    [exec] (Pluma) {pluma } </usr/share/icons/oxygen/base/16x16/apps/accessories-text-editor.png>
+    [exec] (QJoyPad) {qjoypad} </usr/share/pixmaps/qjoypad.xpm>
+    [exec] (Shutter) {shutter } </usr/share/icons/hicolor/16x16/apps/shutter.png>
+    [exec] (Simplenote) {"/opt/Simplenote/simplenote" } </usr/share/icons/hicolor/16x16/apps/simplenote.png>
+    [exec] (SpeedCrunch) {speedcrunch} </usr/share/pixmaps/speedcrunch.png>
+    [exec] (SysPeek) {syspeek}
+    [exec] (Tipografías) {gnome-font-viewer } </usr/share/icons/oxygen/base/16x16/apps/preferences-desktop-font.png>
+    [exec] (TypeCatcher) {/usr/bin/typecatcher}
+    [exec] (Vim) {/usr/bin/x-terminal-emulator -e vim } </usr/share/icons/hicolor/48x48/apps/gvim.png>
+    [exec] (Visor de sensor) {xfce4-sensors} </usr/share/icons/hicolor/24x24/apps/xfce-sensors.png>
+    [exec] (qshutdown) {qshutdown} </usr/share/pixmaps/red_glasses.png>
+  [end] # (Accesorios)
+  [submenu] (Configuración) </usr/share/icons/oxygen/base/16x16/categories/preferences-desktop.png>
+    [exec] (Acerca de mí) {/usr/bin/mugshot}
+    [exec] (Administrador Bluetooth) {blueman-manager} </usr/share/icons/hicolor/16x16/apps/blueman.png>
+    [exec] (Administrador de archivos) {thunar-settings} </usr/share/icons/oxygen/base/16x16/apps/system-file-manager.png>
+    [exec] (Administrador de energía) {xfce4-power-manager-settings}
+    [exec] (Ajustes QT5) {qt5ct} </usr/share/icons/oxygen/base/16x16/apps/preferences-desktop-theme.png>
+    [exec] (Ajustes de KDE Connect) {kcmshell5 kcm_kdeconnect} </usr/share/icons/oxygen/base/16x16/apps/kdeconnect.png>
+    [exec] (Ajustes del monitor) {lxrandr} </usr/share/icons/oxygen/base/16x16/devices/video-display.png>
+    [exec] (Centro de control de LADI) {ladi-control-center} </usr/share/icons/oxygen/base/16x16/categories/preferences-system.png>
+    [exec] (CompizConfig Settings Manager) {ccsm} </usr/share/icons/hicolor/16x16/apps/ccsm.png>
+    [exec] (Conexiones de red) {nm-connection-editor} </usr/share/icons/oxygen/base/16x16/categories/preferences-system-network.png>
+    [exec] (Configuración de Onboard) {onboard-settings} </usr/share/icons/hicolor/16x16/apps/onboard.png>
+    [exec] (Configuración de la interfaz GTK+ de LightDM) {lightdm-gtk-greeter-settings-pkexec} </usr/share/icons/hicolor/16x16/apps/lightdm-gtk-greeter-settings.png>
+    [exec] (Controladores adicionales) {/usr/bin/software-properties-gtk --open-tab=4}
+    [exec] (Dispositivos y soportes extraíbles) {thunar-volman-settings} </usr/share/icons/oxygen/base/16x16/devices/drive-removable-media.png>
+    [exec] (Impresoras) {system-config-printer} </usr/share/icons/oxygen/base/16x16/devices/printer.png>
+    [exec] (LADI Log File Viewer) {ladi-system-log} </usr/share/icons/hicolor/16x16/apps/ladi-system-log.png>
+    [exec] (OpenJDK Java 8 Policy Tool) {/usr/bin/policytool} </usr/share/icons/hicolor/16x16/apps/openjdk-8.png>
+    [exec] (Personalizar apariencia y comportamiento) {lxappearance} </usr/share/icons/oxygen/base/16x16/apps/preferences-desktop-theme.png>
+    [exec] (Preferencias de PulseAudio) {paprefs} </usr/share/icons/oxygen/base/16x16/categories/preferences-desktop.png>
+    [exec] (Qt 4 Settings) {/usr/bin/qtconfig-qt4} </usr/share/pixmaps/qtconfig-qt4.png>
+    [exec] (Software y actualizaciones) {software-properties-gtk} </usr/share/icons/hicolor/16x16/apps/software-properties.png>
+    [exec] (Soporte de idiomas) {/usr/bin/gnome-language-selector} </usr/share/icons/oxygen/base/16x16/apps/preferences-desktop-locale.png>
+    [exec] (TeXdoctk) {texdoctk}
+    [exec] (Terminal de Xfce) {xfce4-terminal --preferences} </usr/share/icons/oxygen/base/16x16/apps/utilities-terminal.png>
+  [end] # (Configuración)
+  [submenu] (Desarrollo) </usr/share/icons/oxygen/base/16x16/categories/applications-development.png>
+    [exec] (DB Browser for SQLite) {sqlitebrowser } </usr/share/icons/hicolor/256x256/apps/sqlitebrowser.png>
+    [exec] (Geany) {geany } </usr/share/icons/hicolor/16x16/apps/geany.png>
+    [exec] (Icon Browser) {yad-icon-browser} </usr/share/icons/hicolor/16x16/apps/yad.png>
+    [exec] (VStudio) {/opt/VStudio/vstudio } </opt/VStudio/Resources/vstudio.png>
+  [end] # (Desarrollo)
+  [submenu] (Gráficos) </usr/share/icons/oxygen/base/16x16/categories/applications-graphics.png>
+    [exec] (Blender) {blender } </usr/share/icons/hicolor/16x16/apps/blender.png>
+    [exec] (Converseen) {converseen} </usr/share/pixmaps/converseen.png>
+    [exec] (E-book Viewer) {ebook-viewer } </usr/share/icons/hicolor/16x16/apps/calibre-viewer.png>
+    [exec] (Geeqie) {geeqie -r } </usr/share/pixmaps/geeqie.png>
+    [exec] (Gpick) {gpick } </usr/share/icons/hicolor/48x48/apps/gpick.png>
+    [exec] (Gwenview) {gwenview } </usr/share/icons/oxygen/base/16x16/apps/gwenview.png>
+    [exec] (Hugin Batch Processor) {PTBatcherGUI } </usr/share/pixmaps/ptbatcher.png>
+    [exec] (Hugin Calibrate Lens) {calibrate_lens_gui} </usr/share/pixmaps/hugin.png>
+    [exec] (Hugin Panorama Creator) {hugin } </usr/share/pixmaps/hugin.png>
+    [exec] (Inkscape) {inkscape } </usr/share/icons/oxygen/base/16x16/apps/inkscape.png>
+    [exec] (KRuler) {kruler} </usr/share/icons/hicolor/16x16/apps/kruler.png>
+    [exec] (Karbon) {karbon } </usr/share/icons/hicolor/16x16/apps/calligrakarbon.png>
+    [exec] (KeyMon) {key-mon} </usr/share/pixmaps/key-mon.xpm>
+    [exec] (Krita) {krita } </usr/share/icons/oxygen/base/16x16/apps/calligrakrita.png>
+    [exec] (LRF Viewer) {lrfviewer } </usr/share/icons/hicolor/16x16/apps/calibre-viewer.png>
+    [exec] (Okular) {okular } </usr/share/icons/oxygen/base/16x16/apps/okular.png>
+    [exec] (PhotoCollage) {photocollage} </usr/share/icons/hicolor/16x16/apps/photocollage.png>
+    [exec] (PhotoPrint) {photoprint } </usr/share/icons/hicolor/48x48/apps/fotoprint.png>
+    [exec] (Phototonic) {phototonic } </usr/share/icons/hicolor/16x16/apps/phototonic.png>
+    [exec] (Programa de manipulación de imágenes de GNU) {/usr/bin/flatpak run --branch=stable --arch=i386 --command=gimp-2.10 --file-forwarding org.gimp.GIMP @@u } </var/lib/flatpak/exports/share/icons/hicolor/16x16/apps/org.gimp.GIMP.png>
+    [exec] (Programa de manipulación de imágenes de GNU) {gimp-2.8 } </usr/share/icons/hicolor/16x16/apps/gimp.png>
+    [exec] (Scribus NG) {scribus-ng } </usr/share/icons/hicolor/16x16/apps/scribus-ng.png>
+    [exec] (Simple Scan) {simple-scan} </usr/share/icons/oxygen/base/16x16/devices/scanner.png>
+    [exec] (Visor de imágenes Ristretto) {ristretto } </usr/share/icons/hicolor/16x16/apps/ristretto.png>
+    [exec] (XnConvert) {xnconvert } </opt/XnConvert/xnconvert.png>
+    [exec] (XnView Multi Platform) {xnview } </opt/XnView/xnview.png>
+    [exec] (gscan2pdf) {gscan2pdf}
+  [end] # (Gráficos)
+  [submenu] (Juegos) </usr/share/icons/oxygen/base/16x16/categories/applications-games.png>
+    [exec] (Colección de puzles SGT) {/usr/games/sgt-launcher} </usr/share/pixmaps/sgt-launcher.png>
+    [exec] (Minas) {gnome-mines} </usr/share/icons/hicolor/16x16/apps/gnome-mines.png>
+    [exec] (PlayOnLinux) {playonlinux } </usr/share/pixmaps/playonlinux.png>
+    [exec] (Sudoku) {gnome-sudoku} </usr/share/icons/hicolor/16x16/apps/gnome-sudoku.png>
+  [end] # (Juegos)
+  [submenu] (Multimedia) </usr/share/icons/oxygen/base/16x16/categories/applications-multimedia.png>
+    [exec] (Ardour5) {/usr/bin/ardour5}
+    [exec] (Audacious) {audacious } </usr/share/icons/hicolor/48x48/apps/audacious.png>
+    [exec] (Audacious Qt Interface) {audacious --qt } </usr/share/icons/hicolor/48x48/apps/audacious.png>
+    [exec] (Audacity) {env UBUNTU_MENUPROXY=0 audacity } </usr/share/icons/hicolor/16x16/apps/audacity.png>
+    [exec] (Avidemux 2.7 (Qt 5\)) {avidemux2.7_qt5 } </usr/share/icons/hicolor/64x64/apps/avidemux_icon.png>
+    [exec] (Brasero) {brasero } </usr/share/icons/hicolor/16x16/apps/brasero.png>
+    [exec] (Calf Plugin Pack for JACK) {calfjackhost} </usr/share/icons/hicolor/16x16/apps/calf.png>
+    [exec] (Clementine) {clementine } </usr/share/icons/hicolor/64x64/apps/clementine.png>
+    [exec] (Control de Volumen de PulseAudio) {pavucontrol} </usr/share/icons/oxygen/base/16x16/apps/multimedia-volume-control.png>
+    [exec] (Conversor de sonido) {soundconverter } </usr/share/icons/hicolor/48x48/apps/soundconverter.png>
+    [exec] (Echomixer) {echomixer}
+    [exec] (Envy24 control) {envy24control}
+    [exec] (FF Multi Converter) {ffmulticonverter} </usr/share/pixmaps/ffmulticonverter.png>
+    [exec] (GNOME ALSA Mixer) {gnome-alsamixer} </usr/share/pixmaps/gnome-alsamixer/gnome-alsamixer-icon.png>
+    [exec] (HDAJackRetask) {hdajackretask}
+    [exec] (HDSPConf) {hdspconf}
+    [exec] (HDSPMixer) {hdspmixer}
+    [exec] (ISO Master) {isomaster } </usr/share/isomaster/icons/isomaster.png>
+    [exec] (JACK Keyboard) {jack-keyboard} </usr/share/pixmaps/jack-keyboard.png>
+    [exec] (JAMin) {/usr/share/jamin/jamin-wrapper }
+    [exec] (Jack Mixer) {jack_mixer} </usr/share/icons/hicolor/16x16/apps/jack_mixer.png>
+    [exec] (JackEQ) {jackeq} </usr/share/jackeq/thai-gold.png>
+    [exec] (K3b) {k3b } </usr/share/icons/oxygen/base/16x16/apps/k3b.png>
+    [exec] (Kazam) {kazam} </usr/share/icons/hicolor/16x16/apps/kazam.png>
+    [exec] (Kdenlive) {kdenlive } </usr/share/icons/hicolor/32x32/apps/kdenlive.png>
+    [exec] (Kylin Video) {kylin-video } </usr/share/pixmaps/kylin-video.png>
+    [exec] (LADI System Tray) {ladi-system-tray} </usr/share/icons/hicolor/16x16/apps/laditools.png>
+    [exec] (MKVToolNix GUI) {mkvtoolnix-gui } </usr/share/icons/hicolor/16x16/apps/mkvtoolnix-gui.png>
+    [exec] (MediaInfo) {mediainfo-gui } </usr/share/icons/hicolor/256x256/apps/mediainfo.png>
+    [exec] (Meterbridge) {/usr/bin/meterbridge -t vu alsa_pcm:playback_1 alsa_pcm:playback_2} </usr/share/pixmaps/meterbridge32x32.xpm>
+    [exec] (OpenLP) {openlp } </usr/share/icons/hicolor/16x16/apps/openlp.png>
+    [exec] (OpenShot Video Editor) {openshot-qt }
+    [exec] (PNMixer) {pnmixer} </usr/share/icons/hicolor/128x128/apps/pnmixer.png>
+    [exec] (Patchage) {/usr/bin/patchage} </usr/share/icons/hicolor/16x16/apps/patchage.png>
+    [exec] (PhotoFilmStrip) {photofilmstrip} </usr/share/icons/hicolor/16x16/apps/photofilmstrip.png>
+    [exec] (Play it Slowly) {playitslowly} </usr/share/pixmaps/playitslowly.png>
+    [exec] (PulseAudio Volume Meter (Capture\)) {pavumeter --record} </usr/share/icons/oxygen/base/16x16/devices/audio-input-microphone.png>
+    [exec] (PulseAudio Volume Meter (Playback\)) {pavumeter} </usr/share/icons/oxygen/base/16x16/devices/audio-input-microphone.png>
+    [exec] (PulseJoin) {pulsejoin} </usr/share/icons/oxygen/base/16x16/apps/multimedia-volume-control.png>
+    [exec] (QjackCtl) {/usr/bin/qjackctl} </usr/share/icons/hicolor/32x32/apps/qjackctl.png>
+    [exec] (Qsynth) {qsynth} </usr/share/icons/hicolor/32x32/apps/qsynth.png>
+    [exec] (Reproductor de LADI) {ladi-player} </usr/share/icons/hicolor/16x16/apps/ladi-player.png>
+    [exec] (Reproductor multimedia Parole) {parole } </usr/share/icons/hicolor/16x16/apps/parole.png>
+    [exec] (Reproductor multimedia VLC) {/usr/bin/vlc --started-from-file } </usr/share/icons/hicolor/16x16/apps/vlc.png>
+    [exec] (Rmedigicontrol) {rmedigicontrol}
+    [exec] (Rosegarden) {rosegarden } </usr/share/icons/hicolor/16x16/apps/rosegarden.png>
+    [exec] (SimpleScreenRecorder) {simplescreenrecorder --logfile} </usr/share/icons/hicolor/16x16/apps/simplescreenrecorder.png>
+    [exec] (Spotify) {/usr/bin/flatpak run --branch=stable --arch=i386 --command=spotify --file-forwarding com.spotify.Client @@u } </var/lib/flatpak/exports/share/icons/hicolor/16x16/apps/com.spotify.Client.png>
+    [exec] (Xfburn) {xfburn} </usr/share/icons/hicolor/16x16/stock/media/stock_xfburn.png>
+    [exec] (Xjadeo) {/usr/bin/xjadeo} </usr/share/icons/hicolor/128x128/apps/qjadeo.png>
+    [exec] (gladish) {gladish} </usr/share/icons/hicolor/16x16/apps/gladish.png>
+    [exec] (mkvinfo) {mkvinfo -g } </usr/share/icons/hicolor/16x16/apps/mkvinfo.png>
+    [exec] (mpv Media Player) {mpv --player-operation-mode=pseudo-gui -- } </usr/share/icons/hicolor/16x16/apps/mpv.png>
+    [exec] (puddletag) {puddletag } </usr/share/pixmaps/puddletag.png>
+    [exec] (vokoscreen) {vokoscreen} </usr/share/pixmaps/vokoscreen.png>
+  [end] # (Multimedia)
+  [submenu] (Oficina) </usr/share/icons/oxygen/base/16x16/categories/applications-office.png>
+    [exec] (Boomaga) {boomaga } </usr/share/icons/hicolor/16x16/apps/boomaga.png>
+    [exec] (Calendario Orage) {orage } </usr/share/icons/hicolor/48x48/apps/xfcalendar.png>
+    [exec] (Calligra Sheets) {calligrasheets } </usr/share/icons/oxygen/base/16x16/apps/calligrasheets.png>
+    [exec] (Calligra Words) {calligrawords } </usr/share/icons/oxygen/base/16x16/apps/calligrawords.png>
+    [exec] (ChordSmith) {cd /home/wachin/Apps-Linux-Instaladas/ChordSmith/ ; java -jar /home/wachin/Apps-Linux-Instaladas/ChordSmith/ChordSmith_INTL.jar} </home/wachin/Apps-Linux-Instaladas/ChordSmith/help/AboutChordSmith.png>
+    [exec] (Diccionario) {xfce4-dict}
+    [exec] (E-book Editor) {ebook-edit } </usr/share/icons/hicolor/16x16/apps/calibre-ebook-edit.png>
+    [exec] (GoldenDict) {goldendict} </usr/share/pixmaps/goldendict.png>
+    [exec] (Hora global de Orage) {globaltime} </usr/share/icons/hicolor/48x48/apps/orage_globaltime.png>
+    [exec] (KIT Scenarist) {scenarist } </usr/share/pixmaps/scenarist.png>
+    [exec] (LibreOffice) {libreoffice } </usr/share/icons/hicolor/16x16/apps/libreoffice-startcenter.png>
+    [exec] (LibreOffice Base) {libreoffice --base } </usr/share/icons/hicolor/16x16/apps/libreoffice-base.png>
+    [exec] (LibreOffice Calc) {libreoffice --calc } </usr/share/icons/hicolor/16x16/apps/libreoffice-calc.png>
+    [exec] (LibreOffice Draw) {libreoffice --draw } </usr/share/icons/hicolor/16x16/apps/libreoffice-draw.png>
+    [exec] (LibreOffice Impress) {libreoffice --impress } </usr/share/icons/hicolor/16x16/apps/libreoffice-impress.png>
+    [exec] (LibreOffice Math) {libreoffice --math } </usr/share/icons/hicolor/16x16/apps/libreoffice-math.png>
+    [exec] (LibreOffice Writer) {libreoffice --writer } </usr/share/icons/hicolor/16x16/apps/libreoffice-writer.png>
+    [exec] (Master PDF Editor 5) {cd /opt/master-pdf-editor-5 ; /opt/master-pdf-editor-5/masterpdfeditor5 } </opt/master-pdf-editor-5/masterpdfeditor5.png>
+    [exec] (OpenSong 2.1) {/opt/OpenSong/opensong} </opt/OpenSong/opensong.xpm>
+    [exec] (PDF-Shuffler) {pdfshuffler } </usr/share/pixmaps/pdfshuffler.png>
+    [exec] (PDFsam Basic) {cd /opt/pdfsam-basic/ ; /opt/pdfsam-basic/bin/pdfsam-basic }
+    [exec] (Visor de documentos Atril) {atril } </usr/share/icons/hicolor/16x16/apps/atril.png>
+    [exec] (WPS Presentation) {/usr/bin/wpp } </usr/share/icons/hicolor/48x48/apps/wps-office-wppmain.png>
+    [exec] (WPS Spreadsheets) {/usr/bin/et } </usr/share/icons/hicolor/48x48/apps/wps-office-etmain.png>
+    [exec] (WPS Writer) {/usr/bin/wps } </usr/share/icons/hicolor/48x48/apps/wps-office-wpsmain.png>
+    [exec] (calibre) {calibre } </usr/share/icons/hicolor/16x16/apps/calibre-gui.png>
+  [end] # (Oficina)
+  [submenu] (Otras) </usr/share/icons/oxygen/base/16x16/categories/applications-other.png>
+    [exec] (AP Guitar Tuner 1.02) {cd /home/wachin/.wine/dosdevices/c:/Program Files/Audio Phonics, Inc/AP Guitar Tuner 1.02 ; env WINEPREFIX="/home/wachin/.wine" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/wachin/.wine/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/Audio\\ Phonics,\\ Inc/AP\\ Guitar\\ Tuner\\ 1.02.lnk} </home/wachin/.local/share/icons/hicolor/16x16/apps/E796_APGuitarTuner.0.png>
+    [exec] (Ayuda de Mp3tag) {cd /home/wachin/.PlayOnLinux/wineprefix/Balabolkawine31/dosdevices/c:/Program Files/Mp3tag ; env WINEPREFIX="/home/wachin/.PlayOnLinux/wineprefix/Balabolkawine31" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/wachin/.PlayOnLinux/wineprefix/Balabolkawine31/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/Mp3tag/Ayuda\\ de\\ Mp3tag.lnk} </home/wachin/.local/share/icons/hicolor/16x16/apps/19D6_index.0.png>
+    [exec] (Configuración de Wine) {winecfg} </home/wachin/.local/share/icons/hicolor/16x16/apps/application-x-wine-extension-msp.png>
+    [exec] (Filtro de exportación a DOCX de MS Word) {}
+    [exec] (Florence Virtual Keyboard) {florence}
+    [exec] (Google Photos) {/usr/bin/chromium-browser --profile-directory=Default --app-id=ncmjhecbjeaamljdfahankockkkdmedg} </home/wachin/.local/share/icons/hicolor/32x32/apps/chrome-ncmjhecbjeaamljdfahankockkkdmedg-Default.png>
+    [exec] (Mp3tag) {cd /home/wachin/.PlayOnLinux/wineprefix/Balabolkawine31/dosdevices/c:/Program Files/Mp3tag ; env WINEPREFIX="/home/wachin/.PlayOnLinux/wineprefix/Balabolkawine31" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/wachin/.PlayOnLinux/wineprefix/Balabolkawine31/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/Mp3tag/Mp3tag.lnk} </home/wachin/.local/share/icons/hicolor/16x16/apps/30D8_MP3TAG.0.png>
+    [exec] (Nuevo en esta versión) {cd /home/wachin/.PlayOnLinux/wineprefix/Balabolkawine31/dosdevices/c:/Program Files/Mp3tag ; env WINEPREFIX="/home/wachin/.PlayOnLinux/wineprefix/Balabolkawine31" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/wachin/.PlayOnLinux/wineprefix/Balabolkawine31/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/Mp3tag/Nuevo\\ en\\ esta\\ versión.lnk} </home/wachin/.local/share/icons/hicolor/16x16/apps/01BE_mp3tagversion.0.png>
+  [end] # (Otras)
+  [submenu] (Red) </usr/share/icons/oxygen/base/16x16/actions/applications-internet.png>
+    [exec] (Cliente de correo Thunderbird) {thunderbird } </usr/share/pixmaps/thunderbird.png>
+    [exec] (Cliente de mensajería de Internet Pidgin) {pidgin} </usr/share/icons/hicolor/16x16/apps/pidgin.png>
+    [exec] (Dropbox) {dropbox start -i} </usr/share/icons/hicolor/16x16/apps/dropbox.png>
+    [exec] (HexChat) {hexchat --existing } </usr/share/icons/hicolor/48x48/apps/hexchat.png>
+    [exec] (Indicador de KDE Connect) {kdeconnect-indicator} </usr/share/icons/oxygen/base/16x16/apps/kdeconnect.png>
+    [exec] (JDownloader 2) {/bin/sh "/home/wachin/Apps-Linux-Instaladas/jd2/JDownloader2"} </home/wachin/Apps-Linux-Instaladas/jd2/.install4j/JDownloader2.png>
+    [exec] (JDownloader 2 Update & Rescue) {/bin/sh "/home/wachin/Apps-Linux-Instaladas/jd2/JDownloader2Update"} </home/wachin/Apps-Linux-Instaladas/jd2/.install4j/JDownloader2Update.png>
+    [exec] (KDE Connect Indicator Settings) {indicator-kdeconnect-settings} </usr/share/icons/oxygen/base/16x16/apps/kdeconnect.png>
+    [exec] (Navegador web Chromium) {chromium-browser } </usr/share/icons/hicolor/22x22/apps/chromium-browser.png>
+    [exec] (Pale Moon) {palemoon } </usr/share/icons/hicolor/16x16/apps/palemoon.png>
+    [exec] (Ramme) {"/opt/Ramme/ramme" } </usr/share/icons/hicolor/16x16/apps/ramme.png>
+    [exec] (Telegram Desktop) {/home/wachin/Apps-Linux-Instaladores/Telegram/Telegram/Telegram -- } </home/wachin/.local/share/icons/telegram.png>
+    [exec] (Transmission) {transmission-gtk } </usr/share/icons/hicolor/16x16/apps/transmission.png>
+    [exec] (Unified Remote) {/opt/urserver/urserver-start} </usr/share/icons/hicolor/48x48/apps/urserver.png>
+    [exec] (Vivaldi) {/usr/bin/vivaldi-stable } </usr/share/icons/hicolor/16x16/apps/vivaldi.png>
+    [exec] (YouTube DL GUI) {youtube-dl-gui} </usr/share/icons/hicolor/16x16/apps/youtube-dl-gui.png>
+  [end] # (Red)
+  [submenu] (Sistema) </usr/share/icons/oxygen/base/16x16/categories/applications-system.png>
+    [exec] (Actualización de software) {/usr/bin/update-manager} </usr/share/icons/oxygen/base/16x16/apps/system-software-update.png>
+    [exec] (BleachBit) {bleachbit} </usr/share/pixmaps/bleachbit.png>
+    [exec] (BleachBit (as root\)) {pkexec bleachbit} </usr/share/pixmaps/bleachbit.png>
+    [exec] (Cambio de nombre en masa de Thunar) {/usr/lib/i386-linux-gnu/Thunar/ThunarBulkRename } </usr/share/icons/hicolor/16x16/apps/Thunar.png>
+    [exec] (Creador de discos de arranque) {usb-creator-gtk}
+    [exec] (Creador de discos de arranque) {usb-creator-kde}
+    [exec] (Dolphin4) {dolphin4 } </usr/share/icons/oxygen/base/16x16/apps/system-file-manager.png>
+    [exec] (Editor de dconf) {dconf-editor} </usr/share/icons/hicolor/16x16/apps/ca.desrt.dconf-editor.png>
+    [exec] (GParted) {/usr/sbin/gparted } </usr/share/icons/hicolor/16x16/apps/gparted.png>
+    [exec] (Gestor de archivos Thunar) {thunar } </usr/share/icons/hicolor/16x16/apps/Thunar.png>
+    [exec] (Gestor de paquetes Synaptic) {synaptic-pkexec} </usr/share/pixmaps/synaptic.png>
+    [exec] (Gestor de tareas) {lxtask} </usr/share/icons/oxygen/base/16x16/apps/utilities-system-monitor.png>
+    [exec] (Gestor de tareas) {xfce4-taskmanager} </usr/share/icons/oxygen/base/16x16/apps/utilities-system-monitor.png>
+    [exec] (Gigolo) {gigolo}
+    [exec] (Grub Customizer) {grub-customizer}
+    [exec] (Hora y fecha) {time-admin} </usr/share/icons/hicolor/16x16/apps/time-admin.png>
+    [exec] (Htop) {/usr/bin/x-terminal-emulator -e htop} </usr/share/pixmaps/htop.png>
+    [exec] (Informacion y Rendimiento del Sistema) {/usr/bin/hardinfo} </usr/share/hardinfo/pixmaps/logo.png>
+    [exec] (Instalador de paquetes GDebi) {gdebi-gtk }
+    [exec] (KDE Connect Indicator) {indicator-kdeconnect} </usr/share/icons/oxygen/base/16x16/apps/kdeconnect.png>
+    [exec] (KDiskFree) {kdf -qwindowtitle } </usr/share/icons/oxygen/base/16x16/apps/kdf.png>
+    [exec] (KSysGuard) {ksysguard } </usr/share/icons/oxygen/base/16x16/apps/utilities-system-monitor.png>
+    [exec] (Konsole) {konsole} </usr/share/icons/oxygen/base/16x16/apps/utilities-terminal.png>
+    [exec] (KwikDisk) {kwikdisk -qwindowtitle } </usr/share/icons/hicolor/16x16/apps/kwikdisk.png>
+    [exec] (Listar equipamiento) {su-to-root -X -c lshw-gtk}
+    [exec] (Psensor) {psensor} </usr/share/icons/hicolor/16x16/apps/psensor.png>
+    [exec] (Red) {network-admin} </usr/share/icons/oxygen/base/16x16/categories/preferences-system-network.png>
+    [exec] (Software) {gnome-software } </usr/share/icons/hicolor/16x16/apps/org.gnome.Software.png>
+    [exec] (Terminal de Xfce) {xfce4-terminal} </usr/share/icons/oxygen/base/16x16/apps/utilities-terminal.png>
+    [exec] (Timeshift) {timeshift-launcher} </usr/share/icons/hicolor/16x16/apps/timeshift.png>
+    [exec] (UNetbootin) {/usr/bin/unetbootin_asroot} </usr/share/pixmaps/unetbootin.xpm>
+    [exec] (UXTerm) {uxterm} </usr/share/icons/hicolor/48x48/apps/xterm-color.png>
+    [exec] (Usuarios y grupos) {users-admin}
+    [exec] (VirtualBox) {VirtualBox } </usr/share/icons/hicolor/16x16/apps/virtualbox.png>
+    [exec] (XTerm) {xterm} </usr/share/icons/hicolor/48x48/apps/xterm-color.png>
+    [exec] (jstest-gtk) {jstest-gtk} </usr/share/pixmaps/jstest-gtk.png>
+  [end] # (Sistema)
+[end] # (Aplicaciones)

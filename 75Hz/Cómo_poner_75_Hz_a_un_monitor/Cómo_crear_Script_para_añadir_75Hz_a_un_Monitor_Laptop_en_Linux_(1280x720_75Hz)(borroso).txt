@@ -1,0 +1,57 @@
+
+
+Cómo crear Script para añadir 75Hz en Monitor Externo en Linux
+Por: Wachín
+Este tutorial es sólo para monitores externos conectados a una laptop, o para una computadora de escritorio (nunca para la pantalla de una laptop, exepto que sea una AlienWare o que sepa que acepta 75 o más Hz)
+
+INSTRUCCIONES PARA UNA LAPTOP CONECTADA A UN MONITOR EXTERNO
+Primero necesito saber el nombre del monitor externo, coloco en la terminal
+
+xrandr 
+
+y me da (haré un resumen de lo que sale):
+
+creen 0: minimum 320 x 200, current 1280 x 768, maximum 8192 x 8192
+LVDS-1 connected primary (normal left inverted right x axis y axis)
+   1600x900      60.08 +
+VGA-1 connected 1366x768+0+0 (normal left inverted right x axis y axis) 0mm x 0mm
+   1366x768      60.00 *
+
+Esto significa que el monitor de la laptop es "LVDS-1"
+
+Ahora, ingrese los siguientes datos a la terminal:
+
+wachin@Dell-Inspiron-1750:~$ gtf 1280 720 75
+
+como resultado aparece así:
+
+ # 1280x720 @ 75.00 Hz (GTF) hsync: 56.40 kHz; pclk: 95.65 MHz
+  Modeline "1280x720_75.00"  95.65  1280 1352 1488 1696  720 721 724 752  -HSync +Vsync
+
+Copie la segunda linea desde el: "1280x720_75.00"  95.65  1280 1352 1488 1696  720 721 724 752  -HSync +Vsync
+
+ y la pongala con xrandr --newmode al principio, así:
+
+wachin@Dell-Inspiron-1750:~$ xrandr --newmode "1280x720_75.00"  95.65  1280 1352 1488 1696  720 721 724 752  -HSync +Vsync
+
+luego añada las siguientes lineas con los datos 1280x720_75.00, así
+
+wachin@Dell-Inspiron-1750:~$ xrandr --addmode LVDS-1 1280x720_75.00
+wachin@Dell-Inspiron-1750:~$ xrandr --output LVDS-1 --mode 1280x720_75.00
+wachin@Dell-Inspiron-1750:~$
+
+Entonces esto es lo que pondré en el script que debo hacer para ejecutarlo en un archivo y no tener que siempre andar teniendo que poner esas tres lineas:
+
+
+---------------------------------------------------------
+xrandr --newmode "1280x768_75.00"  102.98  1280 1360 1496 1712  768 769 772 802  -HSync +Vsync
+xrandr --addmode LVDS-1 1280x768_75.00
+xrandr --output LVDS-1 --mode 1280x768_75.00
+-------------------------------------------------------------
+
+
+Adaptado para Ubuntu de:
+http://www.arunviswanathan.com/node/53
+
+
+                   

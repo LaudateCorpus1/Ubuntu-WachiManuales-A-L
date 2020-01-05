@@ -1,0 +1,30 @@
+
+******************************
+Estas instrucciones me sirven:
+******************************
+
+Plugable USB Bluetooth Adapter: Solving HFP/HSP and A2DP Profile Issues on Linux - Plugable
+https://plugable.com/2014/06/23/plugable-usb-bluetooth-adapter-solving-hfphsp-profile-issues-on-linux/ 
+
+las siguientes son las instrucciones que yo he mejorado para Ubuntu 18.04
+
+wget https://s3.amazonaws.com/plugable/bin/fw-0a5c_21e8.hcd
+sudo cp fw-0a5c_21e8.hcd /lib/firmware/brcm/BCM20702A1-0a5c-21e8.hcd
+
+después abrí el bluetooth y funciona
+
+
+
+
+
+*******************************************************************************
+aquí hay un archivo pero no me funciona, tal vez el el nombre que lo tiene mal:
+*******************************************************************************
+
+winterheart/broadcom-bt-firmware: Repository for various Broadcom Bluetooth firmware
+https://github.com/winterheart/broadcom-bt-firmware
+
+git clone https://github.com/winterheart/broadcom-bt-firmware
+
+
+

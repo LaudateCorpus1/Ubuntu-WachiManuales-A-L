@@ -1,0 +1,2 @@
+title=Importar los marcadores desde Google Chrome  Cómo  Ayuda de Mozilla
+location=https://support.mozilla.org/es/kb/Importar%20los%20marcadores%20desde%20Google%20Chrome

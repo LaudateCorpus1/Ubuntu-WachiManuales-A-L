@@ -1,0 +1,13 @@
+
+Blogger - Añadir Gadget "Nuevas Entradas" con script en Javascript
+
+He visto en varios Blogs que tienen en un lado las nuevas entradas que van subiendo para que las vean las personas que leen el blog (yo hago eso), este es el tutorial para añadir esa característica  a Blogger
+
+
+Blogger, Latest, nuevas, entradas, entry, xrecientes, recent, Gadget/HTML javascript, script
+
+
+
+
+
+

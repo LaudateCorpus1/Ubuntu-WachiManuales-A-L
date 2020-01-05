@@ -1,0 +1,30 @@
+
+startup - How do I disable the boot splash screen, and only show kernel and boot text instead? - Ask Ubuntu
+
+inicio: ¿Cómo deshabilito la pantalla de inicio y solo muestro el kernel y el texto de arranque? - Pregunte a Ubuntu
+
+https://askubuntu.com/questions/33416/how-do-i-disable-the-boot-splash-screen-and-only-show-kernel-and-boot-text-inst
+
+
+Yes. Edit /etc/default/grub (using:
+
+
+sudo gedit /etc/default/grub
+
+, and remove the "quiet splash" from the Linux command line:
+
+Here's what it looks like by default:
+
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+
+Make it look like this:
+
+GRUB_CMDLINE_LINUX_DEFAULT=""
+
+After this run 
+
+sudo update-grub2
+
+Also from the GRUB menu, if you want to do this temporarily, you can hit E on a line to edit it, then Ctrl+X to boot the kernel line.
+
+Make sure you don't have plymouth-theme-ubuntu-text package installed.

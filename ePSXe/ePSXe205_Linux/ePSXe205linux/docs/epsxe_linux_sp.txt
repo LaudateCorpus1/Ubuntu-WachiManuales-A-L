@@ -1,0 +1,254 @@
+================================LEA AQUI================================
+calb, Galtor y _Demo_ no garantizan el producto en algun modo.
+Utiliza el programa ePSXe en tu propio riesgo. Los autores no seran
+responsables de las consecuencias como resultado de utilizar o no
+poder utilizar este programa, al igual que su contenido o sus
+documentos, de cualquier modo posible.
+================================LEA AQUI================================
+
+Indice
+******
+0. Introduction.
+1. Notas sobre la version de linux.
+2. Requerimientos extra para linux.
+3. Fichero de configuracion en linux.
+4. Plugins en linux.
+5. Legalidad.
+
+**************************************************************************
+0. Introducción
+**************************************************************************
+
+ePSXe es un emulador de la consola de videojuegos Sony Playstation sobre 
+un PC, bajo el sistema operativo Android, Winxp/10, MacOSX o Linux. Que
+utiliza los plugins desarrollados para el psemupro.
+
+************************************************************************
+1. Notas sobre la version de linux.
+************************************************************************
+
+ePSXe v2.0.5 para linux, publicado el 23.06.2016
+
++ Arreglada configuración de gamepads.
++ Epsxe 2.0.5 cambiará el path en el arranque a "~/.epsxrc/" tenga cuidado
+  si usa path relativos en command lines.
++ No incluye el plugin pete gpu opengl2.
++ No incluye emulacion de la pistola.
+
+ePSXe v2.0.2 para linux, publicado el 11.05.2016
+
++ No incluye el plugin pete gpu opengl2.
++ No incluye emulacion de la pistola.
++ Actualizado a Gtk3.
+
+ePSXe v1.9.25-alpha para linux, publicado el 27.01.2015
+
++ Esta version no soporta emulacion de la pistola.
++ Incluye gpu plugin interno.
+
+ePSXe v1.9.0-alpha para linux, publicado el xx.08.2013
+
++ Esta version no soporta emulacion de la pistola.
++ Incluye gpu plugin interno.
+
+ePSXe v1.6.0-alpha para linux, publicado el xx.08.2003
+
++ Esta version no soporta emulacion de la pistola.
+
+ePSXe v1.5.2-alpha para linux, publicado el xx.05.2002
+
++ Ahora se puede ejecutar el emulador desde cualquier directorio.
+
+ePSXe v1.5.1-alpha para linux, publicado el xx.03.2002
+
++ Incluido soporte parcial para joystick plugins. Actualmente solo
+  funcionan aquellos plugins que no necesitan manipular los eventos
+  de teclado, es decir el plugin de "lamer0". 
++ Esta version no lee subchannels desde cdrom.
+
+ePSXe v1.5.0-alpha para linux, publicado el xx.01.2002
+
+Incluye lo mismo que la version de windows, excepto:
+
++ Plugin interno de sonido.
++ Soporte para plugins externos de cdrom.
++ Soporte de joystick, mouse, joystick analogico y force feed back.
++ Optimizaciones en ensamblador.
+
+Incluye soporte para plugins de netplay pero debido a que no
+existe ninguno en la fecha de la release esto no ha podido ser
+comprobado.
+
+Para mayor informacion generica sobre el emulador lea el fichero 
+"epsxe_sp.txt"
+
+************************************************************************
+2. Requerimientos extra para linux
+************************************************************************
+
+ePSXe 2.0.5 ha sido compilado en Ubuntu y
+precisa las siguientes bibliotecas de funciones, ademas de los 
+plugins correspondientes de sonido y graficos, y las bibliotecas de
+funciones que necesiten estos.
+
+	linux-gate.so.1 =>  (0xb77a4000)
+	libncurses.so.5 => /lib/i386-linux-gnu/libncurses.so.5 (0xb7759000)
+	libtinfo.so.5 => /lib/i386-linux-gnu/libtinfo.so.5 (0xb7737000)
+	libdl.so.2 => /lib/i386-linux-gnu/libdl.so.2 (0xb7731000)
+	libz.so.1 => /lib/i386-linux-gnu/libz.so.1 (0xb7717000)
+	libGL.so.1 => /usr/lib/i386-linux-gnu/mesa/libGL.so.1 (0xb76b7000)
+	libasound.so.2 => /usr/lib/i386-linux-gnu/libasound.so.2 (0xb75c1000)
+	libX11.so.6 => /usr/lib/i386-linux-gnu/libX11.so.6 (0xb748d000)
+	libcurl.so.4 => /usr/lib/i386-linux-gnu/libcurl.so.4 (0xb7424000)
+	libcrypto.so.1.0.0 => /lib/i386-linux-gnu/libcrypto.so.1.0.0 (0xb7277000)
+	libpthread.so.0 => /lib/i386-linux-gnu/libpthread.so.0 (0xb725b000)
+	libgtk-3.so.0 => /usr/lib/i386-linux-gnu/libgtk-3.so.0 (0xb6d0c000)
+	libgdk-3.so.0 => /usr/lib/i386-linux-gnu/libgdk-3.so.0 (0xb6c67000)
+	libgio-2.0.so.0 => /usr/lib/i386-linux-gnu/libgio-2.0.so.0 (0xb6ae5000)
+	libgdk_pixbuf-2.0.so.0 => /usr/lib/i386-linux-gnu/libgdk_pixbuf-2.0.so.0 (0xb6ac2000)
+	libgobject-2.0.so.0 => /usr/lib/i386-linux-gnu/libgobject-2.0.so.0 (0xb6a70000)
+	libglib-2.0.so.0 => /lib/i386-linux-gnu/libglib-2.0.so.0 (0xb6964000)
+	libSDL-1.2.so.0 => /usr/lib/i386-linux-gnu/libSDL-1.2.so.0 (0xb68cc000)
+	libSDL_ttf-2.0.so.0 => /usr/lib/i386-linux-gnu/libSDL_ttf-2.0.so.0 (0xb68c3000)
+	libstdc++.so.6 => /usr/lib/i386-linux-gnu/libstdc++.so.6 (0xb67db000)
+	libgcc_s.so.1 => /lib/i386-linux-gnu/libgcc_s.so.1 (0xb67be000)
+	libc.so.6 => /lib/i386-linux-gnu/libc.so.6 (0xb6610000)
+	/lib/ld-linux.so.2 (0xb77a5000)
+	libglapi.so.0 => /usr/lib/i386-linux-gnu/libglapi.so.0 (0xb65f8000)
+	libXext.so.6 => /usr/lib/i386-linux-gnu/libXext.so.6 (0xb65e4000)
+	libXdamage.so.1 => /usr/lib/i386-linux-gnu/libXdamage.so.1 (0xb65e0000)
+	libXfixes.so.3 => /usr/lib/i386-linux-gnu/libXfixes.so.3 (0xb65da000)
+	libX11-xcb.so.1 => /usr/lib/i386-linux-gnu/libX11-xcb.so.1 (0xb65d7000)
+	libxcb-glx.so.0 => /usr/lib/i386-linux-gnu/libxcb-glx.so.0 (0xb65bf000)
+	libxcb-dri2.so.0 => /usr/lib/i386-linux-gnu/libxcb-dri2.so.0 (0xb65b8000)
+	libxcb-dri3.so.0 => /usr/lib/i386-linux-gnu/libxcb-dri3.so.0 (0xb65b4000)
+	libxcb-present.so.0 => /usr/lib/i386-linux-gnu/libxcb-present.so.0 (0xb65b0000)
+	libxcb-sync.so.1 => /usr/lib/i386-linux-gnu/libxcb-sync.so.1 (0xb65a9000)
+	libxcb.so.1 => /usr/lib/i386-linux-gnu/libxcb.so.1 (0xb6587000)
+	libxshmfence.so.1 => /usr/lib/i386-linux-gnu/libxshmfence.so.1 (0xb6583000)
+	libXxf86vm.so.1 => /usr/lib/i386-linux-gnu/libXxf86vm.so.1 (0xb657d000)
+	libdrm.so.2 => /usr/lib/i386-linux-gnu/libdrm.so.2 (0xb6570000)
+	libm.so.6 => /lib/i386-linux-gnu/libm.so.6 (0xb652a000)
+	librt.so.1 => /lib/i386-linux-gnu/librt.so.1 (0xb6521000)
+	libidn.so.11 => /usr/lib/i386-linux-gnu/libidn.so.11 (0xb64ed000)
+	librtmp.so.0 => /usr/lib/i386-linux-gnu/librtmp.so.0 (0xb64d2000)
+	libssl.so.1.0.0 => /lib/i386-linux-gnu/libssl.so.1.0.0 (0xb647a000)
+	libgssapi_krb5.so.2 => /usr/lib/i386-linux-gnu/libgssapi_krb5.so.2 (0xb6435000)
+	liblber-2.4.so.2 => /usr/lib/i386-linux-gnu/liblber-2.4.so.2 (0xb6426000)
+	libldap_r-2.4.so.2 => /usr/lib/i386-linux-gnu/libldap_r-2.4.so.2 (0xb63d3000)
+	libgmodule-2.0.so.0 => /usr/lib/i386-linux-gnu/libgmodule-2.0.so.0 (0xb63ce000)
+	libpangocairo-1.0.so.0 => /usr/lib/i386-linux-gnu/libpangocairo-1.0.so.0 (0xb63c1000)
+	libXi.so.6 => /usr/lib/i386-linux-gnu/libXi.so.6 (0xb63b0000)
+	libcairo-gobject.so.2 => /usr/lib/i386-linux-gnu/libcairo-gobject.so.2 (0xb63a9000)
+	libcairo.so.2 => /usr/lib/i386-linux-gnu/libcairo.so.2 (0xb6285000)
+	libatk-1.0.so.0 => /usr/lib/i386-linux-gnu/libatk-1.0.so.0 (0xb6264000)
+	libatk-bridge-2.0.so.0 => /usr/lib/i386-linux-gnu/libatk-bridge-2.0.so.0 (0xb623a000)
+	libpangoft2-1.0.so.0 => /usr/lib/i386-linux-gnu/libpangoft2-1.0.so.0 (0xb6224000)
+	libpango-1.0.so.0 => /usr/lib/i386-linux-gnu/libpango-1.0.so.0 (0xb61d7000)
+	libfontconfig.so.1 => /usr/lib/i386-linux-gnu/libfontconfig.so.1 (0xb619b000)
+	libXinerama.so.1 => /usr/lib/i386-linux-gnu/libXinerama.so.1 (0xb6197000)
+	libXrandr.so.2 => /usr/lib/i386-linux-gnu/libXrandr.so.2 (0xb618c000)
+	libXcursor.so.1 => /usr/lib/i386-linux-gnu/libXcursor.so.1 (0xb6181000)
+	libXcomposite.so.1 => /usr/lib/i386-linux-gnu/libXcomposite.so.1 (0xb617d000)
+	libwayland-client.so.0 => /usr/lib/i386-linux-gnu/libwayland-client.so.0 (0xb6170000)
+	libxkbcommon.so.0 => /usr/lib/i386-linux-gnu/libxkbcommon.so.0 (0xb6134000)
+	libwayland-cursor.so.0 => /usr/lib/i386-linux-gnu/libwayland-cursor.so.0 (0xb612b000)
+	libselinux.so.1 => /lib/i386-linux-gnu/libselinux.so.1 (0xb6108000)
+	libresolv.so.2 => /lib/i386-linux-gnu/libresolv.so.2 (0xb60f0000)
+	libffi.so.6 => /usr/lib/i386-linux-gnu/libffi.so.6 (0xb60e8000)
+	libpcre.so.3 => /lib/i386-linux-gnu/libpcre.so.3 (0xb60aa000)
+	libpulse-simple.so.0 => /usr/lib/i386-linux-gnu/libpulse-simple.so.0 (0xb60a5000)
+	libpulse.so.0 => /usr/lib/i386-linux-gnu/libpulse.so.0 (0xb6056000)
+	libcaca.so.0 => /usr/lib/i386-linux-gnu/libcaca.so.0 (0xb5f8a000)
+	libfreetype.so.6 => /usr/lib/i386-linux-gnu/libfreetype.so.6 (0xb5ee9000)
+	libXau.so.6 => /usr/lib/i386-linux-gnu/libXau.so.6 (0xb5ee5000)
+	libXdmcp.so.6 => /usr/lib/i386-linux-gnu/libXdmcp.so.6 (0xb5ede000)
+	libgnutls.so.26 => /usr/lib/i386-linux-gnu/libgnutls.so.26 (0xb5e18000)
+	libgcrypt.so.11 => /lib/i386-linux-gnu/libgcrypt.so.11 (0xb5d91000)
+	libkrb5.so.3 => /usr/lib/i386-linux-gnu/libkrb5.so.3 (0xb5cd3000)
+	libk5crypto.so.3 => /usr/lib/i386-linux-gnu/libk5crypto.so.3 (0xb5ca3000)
+	libcom_err.so.2 => /lib/i386-linux-gnu/libcom_err.so.2 (0xb5c9e000)
+	libkrb5support.so.0 => /usr/lib/i386-linux-gnu/libkrb5support.so.0 (0xb5c92000)
+	libsasl2.so.2 => /usr/lib/i386-linux-gnu/libsasl2.so.2 (0xb5c76000)
+	libgssapi.so.3 => /usr/lib/i386-linux-gnu/libgssapi.so.3 (0xb5c3a000)
+	libpixman-1.so.0 => /usr/lib/i386-linux-gnu/libpixman-1.so.0 (0xb5b90000)
+	libpng12.so.0 => /lib/i386-linux-gnu/libpng12.so.0 (0xb5b68000)
+	libxcb-shm.so.0 => /usr/lib/i386-linux-gnu/libxcb-shm.so.0 (0xb5b64000)
+	libxcb-render.so.0 => /usr/lib/i386-linux-gnu/libxcb-render.so.0 (0xb5b59000)
+	libXrender.so.1 => /usr/lib/i386-linux-gnu/libXrender.so.1 (0xb5b4e000)
+	libatspi.so.0 => /usr/lib/i386-linux-gnu/libatspi.so.0 (0xb5b24000)
+	libdbus-1.so.3 => /lib/i386-linux-gnu/libdbus-1.so.3 (0xb5ad9000)
+	libharfbuzz.so.0 => /usr/lib/i386-linux-gnu/libharfbuzz.so.0 (0xb5a83000)
+	libthai.so.0 => /usr/lib/i386-linux-gnu/libthai.so.0 (0xb5a78000)
+	libexpat.so.1 => /lib/i386-linux-gnu/libexpat.so.1 (0xb5a4f000)
+	libpulsecommon-4.0.so => /usr/lib/i386-linux-gnu/pulseaudio/libpulsecommon-4.0.so (0xb59e0000)
+	libjson-c.so.2 => /lib/i386-linux-gnu/libjson-c.so.2 (0xb59d5000)
+	libslang.so.2 => /lib/i386-linux-gnu/libslang.so.2 (0xb58a5000)
+	libncursesw.so.5 => /lib/i386-linux-gnu/libncursesw.so.5 (0xb586e000)
+	libtasn1.so.6 => /usr/lib/i386-linux-gnu/libtasn1.so.6 (0xb585a000)
+	libp11-kit.so.0 => /usr/lib/i386-linux-gnu/libp11-kit.so.0 (0xb581e000)
+	libgpg-error.so.0 => /lib/i386-linux-gnu/libgpg-error.so.0 (0xb5819000)
+	libkeyutils.so.1 => /lib/i386-linux-gnu/libkeyutils.so.1 (0xb5814000)
+	libheimntlm.so.0 => /usr/lib/i386-linux-gnu/libheimntlm.so.0 (0xb580b000)
+	libkrb5.so.26 => /usr/lib/i386-linux-gnu/libkrb5.so.26 (0xb5785000)
+	libasn1.so.8 => /usr/lib/i386-linux-gnu/libasn1.so.8 (0xb56df000)
+	libhcrypto.so.4 => /usr/lib/i386-linux-gnu/libhcrypto.so.4 (0xb56aa000)
+	libroken.so.18 => /usr/lib/i386-linux-gnu/libroken.so.18 (0xb5693000)
+	libgraphite2.so.3 => /usr/lib/i386-linux-gnu/libgraphite2.so.3 (0xb5677000)
+	libdatrie.so.1 => /usr/lib/i386-linux-gnu/libdatrie.so.1 (0xb566e000)
+	libwrap.so.0 => /lib/i386-linux-gnu/libwrap.so.0 (0xb5664000)
+	libsndfile.so.1 => /usr/lib/i386-linux-gnu/libsndfile.so.1 (0xb55f2000)
+	libasyncns.so.0 => /usr/lib/i386-linux-gnu/libasyncns.so.0 (0xb55ea000)
+	libwind.so.0 => /usr/lib/i386-linux-gnu/libwind.so.0 (0xb55c1000)
+	libheimbase.so.1 => /usr/lib/i386-linux-gnu/libheimbase.so.1 (0xb55b2000)
+	libhx509.so.5 => /usr/lib/i386-linux-gnu/libhx509.so.5 (0xb556b000)
+	libsqlite3.so.0 => /usr/lib/i386-linux-gnu/libsqlite3.so.0 (0xb54ae000)
+	libcrypt.so.1 => /lib/i386-linux-gnu/libcrypt.so.1 (0xb547c000)
+	libnsl.so.1 => /lib/i386-linux-gnu/libnsl.so.1 (0xb5463000)
+	libFLAC.so.8 => /usr/lib/i386-linux-gnu/libFLAC.so.8 (0xb542f000)
+	libvorbisenc.so.2 => /usr/lib/i386-linux-gnu/libvorbisenc.so.2 (0xb52b7000)
+	libvorbis.so.0 => /usr/lib/i386-linux-gnu/libvorbis.so.0 (0xb528b000)
+	libogg.so.0 => /usr/lib/i386-linux-gnu/libogg.so.0 (0xb5281000)
+
+*************************************************************************
+3. Fichero de configuracion en linux
+*************************************************************************
+
+El fichero de configuracion se encuentra en un subfolder en el HOME del
+usuario llamado .epsxe y el fichero se llama epsxerc. La mayoria de las 
+opciones se pueden modificar desde la interfaz grafica, pero tambien es 
+posible hacerlo desde el fichero directamente.
+
+*************************************************************************
+4. Plugins en linux.
+*************************************************************************
+
+El emulador soporte plugins externos, pero actualmente incluye tanto
+plugin de sonido como plugin grafico.
+
+**************************************************************************
+5. Legalidad
+**************************************************************************
+
+ePSXe Copyright 2000/2016 ePSXe team.
+Sony Playstation es un marca registrada por Sony.
+Cada juego mencionado es una marca registrada por sus autores o empresas.
+Puede estar en posesion de la BIOS solo si legalmente puede hacerlo.
+Nadie del ePSXe team, ni software ni autores estan afiliados con Sony.
+ePSXe es freeware y puede ser distribuido libremente siempre y cuando
+ no sea modificado o vendido, y la BIOS no debe ser empaquetada junto
+ al programa. Este fichero de documentacion debe ser incluido junto al
+ ejecutable.
+Cuando usas este software lo hace en su propio riesgo. Los autores no
+ son responsable por la perdida o da¤o resultante de usar o no poder
+ usar este software.
+Si no acepta los terminos de esta licencia borre el software
+ inmediatamente.
+
+-------------------------------------------------------------------
+calb   calb@epsxe.com
+Galtor galtor@epsxe.com
+_Demo_ _Demo_@epsxe.com
+-------------------------------------------------------------------
+http://www.epsxe.com
+-------------------------------------------------------------------

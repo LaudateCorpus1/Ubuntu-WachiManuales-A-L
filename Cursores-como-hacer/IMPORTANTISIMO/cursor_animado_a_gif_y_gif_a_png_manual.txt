@@ -1,0 +1,9 @@
+
+
+
+Gimp: Export every layer as a separate PNG image - Ask Ubuntu
+http://askubuntu.com/questions/485917/gimp-export-every-layer-as-a-separate-png-image
+
+One could export the image as an animated GIF. This will save each layer as a separate frame in the GIF. Then, the imagemagik command 
+
+convert -coalesce ./myfile.gif outfile%05d.png will extract the frames as PNG images.

@@ -1,0 +1,12 @@
+
+Esto lo saqué de una imagen que yo había puesto en mi  blogger a la que le puse:
+
+"Extra grande"
+
+y esto es lo que tiene
+
+<a href="http://3.bp.blogspot.com/-7pSGVcDR9KY/V4O6wjUPnFI/AAAAAAAADSc/6t1jXh6KiDc7oo5GmBcdUYWFycvZ4vZfwCK4B/s1600/00%2BPortada.png" imageanchor="1"><img border="0" height="412" src="https://3.bp.blogspot.com/-7pSGVcDR9KY/V4O6wjUPnFI/AAAAAAAADSc/6t1jXh6KiDc7oo5GmBcdUYWFycvZ4vZfwCK4B/s640/00%2BPortada.png" width="640" /></a><br />
+<br /> 
+
+
+es decir de alto 412 y ancho 640

@@ -1,0 +1,52 @@
+
+
+
+primero abrir el archivo:
+
+gedit /home/wachin/.config/kdeglobals
+
+y allí poner al que uno necesite, puede ser Chromium en Ubuntu
+
+
+[General]
+BrowserApplication[$e]=!chromium-browser
+ColorScheme=Breeze
+Name=Breeze
+font=Noto Sans,11,-1,5,50,0,0,0,0,0
+menuFont=Noto Sans,11,-1,5,50,0,0,0,0,0
+shadeSortColumn=true
+smallestReadableFont=Noto Sans,11,-1,5,50,0,0,0,0,0
+toolBarFont=Noto Sans,11,-1,5,50,0,0,0,0,0
+widgetStyle=breeze 
+
+
+o puede ser Chromium en Debian:
+
+
+[General]
+BrowserApplication[$e]=!chromium
+ColorScheme=Breeze
+Name=Breeze
+font=Noto Sans,11,-1,5,50,0,0,0,0,0
+menuFont=Noto Sans,11,-1,5,50,0,0,0,0,0
+shadeSortColumn=true
+smallestReadableFont=Noto Sans,11,-1,5,50,0,0,0,0,0
+toolBarFont=Noto Sans,11,-1,5,50,0,0,0,0,0
+widgetStyle=breeze 
+
+
+
+y allí poner al que uno necesite, puede ser Firefox:
+
+
+
+[General]
+BrowserApplication[$e]=!firefox
+ColorScheme=Breeze
+Name=Breeze
+font=Noto Sans,11,-1,5,50,0,0,0,0,0
+menuFont=Noto Sans,11,-1,5,50,0,0,0,0,0
+shadeSortColumn=true
+smallestReadableFont=Noto Sans,11,-1,5,50,0,0,0,0,0
+toolBarFont=Noto Sans,11,-1,5,50,0,0,0,0,0
+widgetStyle=breeze 

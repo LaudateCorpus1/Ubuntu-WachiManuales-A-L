@@ -1,0 +1,126 @@
+﻿INSTALACION DE GNU Health 2.6.4 en Ubuntu 14.04 (32 Bits) 
+
+Instalando Paquetes Requeridos mediante el siguiente comando: 
+(lo dividiré en 4 comandos para una mejor visualización) 
+Pueden Instalar los Paquetes Requeridos completos mediante el 
+siguiente comando: 
+
+sudo apt-get install python-pip python-imaging postgresql build-essential python-dev libxml2-dev libxslt1-dev postgresql-server-dev-9.3 libldap2-dev libsasl2-dev 
+python-gtk2 python-psycopg2 python-sql                                                                                                                    
+
+Instalando Paquetes Requeridos en 4 pasos: 
+
+sudo apt-get install python-pip 
+
+sudo apt-get install python-pip python-imaging postgresql 
+
+sudo apt-get install build-essential python-dev libxml2-dev libxslt1-dev 
+
+sudo apt-get install postgresql-server-dev-9.3 libldap2-dev libsasl2-dev 
+
+Creando el Usuario de Sistema Operativo: 
+
+sudo adduser gnuhealth 
+
+Nos pedirá una contraseña, la cargamos y listo. 
+
+Creando el Usuario de Base de Datos como ROOT: 
+
+El siguiente comando cambia al usuario administrador postgres y le da permisos al recientemente creado administrador gnuhealth: 
+
+Ejecutando, como ROOT ingresar el siguiente comando: 
+
+sudo -i 
+
+su - postgres -c "createuser --createdb --no-createrole --no-superuser gnuhealth" 
+
+Descargamos e Instalación de GNU Health con el siguiente comando: 
+
+Haga la instalación con el usuario gnuhealth recientemente creado. NO USE root: 
+
+Los pasos principales se ejecutan con los siguientes comando: 
+
+1. Ingresar como usuario gnuhealth 
+
+su - gnuhealth 
+
+2. Descargar GNU Health desde GNU.org 
+
+wget http://ftp.gnu.org/gnu/health/gnuhealth-latest.tar.gz 
+
+3. Descomprimir el archivo 
+
+tar xzf gnuhealth-latest.tar.gz 
+cd gnuhealth-* 
+
+4. Ejecutar el script gnuhealth_install.sh 
+
+./gnuhealth_install.sh 
+
+5. Finalmente, habilite el entorno BASH para el usuario gnuhealth. 
+
+source $HOME/.gnuhealthrc 
+
+Tryton Server Ajustes:
+
+Ruta donde encontraremos el archivo a editar, trytond.conf
+
+Active los dispositivos de red para el protocolo JSON-RPC: 
+
+El servidor Tryton de GNU Health atiende peticiones de red de localhost en el puerto 8000,
+no permitiendo conexiones directas desde otras terminales. 
+
+Puede modificar la línea con el parámetro jsonrpc, activando el dispositivo de red para que
+ las terminales en su red se puedan conectar. Por ejemplo, la siguiente línea 
+
+jsonrpc = *:8000 
+
+Permitirá conectar con el servidor en los diferentes dispositivos de su sistema. 
+
+Configuración de un directorio local para archivos adjuntos 
+
+Por defecto, Tryton utiliza un directorio a nivel de sistema para almacenar los archivos 
+adjuntos. 
+En GNU Health es recomendable guardar los archivos adjuntos en el espacio de usuario 
+gnuhealth. Con un editor de texto, abra el archivo de configuración del servidor 
+trytond.conf e ingrese el directorio para archivos adjuntos, por ejemplo : 
+
+data_path = /home/gnuhealth/attach 
+
+
+Arrancardo el Servidor Tryton: 
+
+Loguin con Usuario "gnuhealth"
+
+Inglese los siguientes comandos: 
+
+cdexe 
+
+y arrancamos el servidor: 
+
+./trytond 
+
+
+Si instalamos paso por paso, deberá ver algo como lo siguiente. Preste atención a la última línea INFO:server:starting JSON-RPC protocol on localhost:8000 
+
+[Sat Oct 29 21:03:48 2011] INFO:server:using default configuration 
+[Sat Oct 29 21:03:48 2011] INFO:server:initialising distributed objects services 
+[Sat Oct 29 21:03:48 2011] INFO:server:starting JSON-RPC protocol on localhost:8000 
+
+
+PARA MÁS INFORMACIÓN, PUEDE UTILIZAR LOS SIGUIENTES CANALES:
+
+Web Site: www.gnuhealth.org/es (Español)
+Web Site: www.gnuhealth.org/ (Inglés)
+
+e-mail: gnuhealth@gnusolidario.org
+
+Blog: blog.gnuhealth.org/ (Inglés)
+
+Twitter: @gnuhealth
+
+Lista Gmail: health-es@gnu.org (Español)
+
++ SAMATE !!!
+
+y Gracias !!!

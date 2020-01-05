@@ -1,0 +1,6 @@
+[Added Associations]
+audio/mpeg=audacious.desktop;audacious-qt.desktop;ghb.desktop;soundconverter.desktop;kid3-qt.desktop;audacity.desktop;parole.desktop;vlc.desktop;mediainfo-gui.desktop;
+image/png=geeqie.desktop;display-im6.q16.desktop;wine-extension-png.desktop;firefox.desktop;kde4-okularApplication_kimgio.desktop;shutter.desktop;gimp.desktop;display-im6.desktop;mypaint.desktop;phatch.desktop;rawtherapee.desktop;ristretto.desktop;kde4-krita_png.desktop;darktable.desktop;feh.desktop;phatch-inspector.desktop;
+text/plain=geany.desktop;libreoffice-writer.desktop;kde4-okularApplication_txt.desktop;mousepad.desktop;org.gnome.gedit.desktop;wine-extension-txt.desktop;
+video/mp4=vlc.desktop;ghb.desktop;parole.desktop;mediainfo-gui.desktop;
+video/ogg=vlc.desktop;audacious-qt.desktop;ghb.desktop;soundconverter.desktop;kid3-qt.desktop;audacity.desktop;parole.desktop;mediainfo-gui.desktop;audacious.desktop;

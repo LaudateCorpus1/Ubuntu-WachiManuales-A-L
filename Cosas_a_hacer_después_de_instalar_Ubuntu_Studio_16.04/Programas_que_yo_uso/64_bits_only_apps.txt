@@ -1,0 +1,43 @@
+
+Los siguientes programas sólo están disponibles en 64 bits para Linux
+
+Moeditor
+https://moeditor.org/
+
+Atom
+https://atom.io/
+
+Krita 3.- En AppImage si hay para Ubuntu 16.04 (Xenial) sólo 64 bits
+https://krita.org/es/descargar/krita-desktop-es/
+https://download.kde.org/stable/krita/3.1.4/krita-3.1.4-x86_64.appimage
+Nota: Si hay de 32 y 64 bits pero para Ubuntu 17.04 (Zesty) solamente.
+
+draftsight.- Sólo hay para 64 tis
+https://www.3ds.com/es/productos-y-servicios/draftsight/descargagratuita/
+
+Lightworks: The professional editor for everyone
+https://www.lwks.com/
+
+Chrome para ordenadores
+https://www.google.es/chrome/browser/desktop/index.html
+
+Skype
+https://www.skype.com/es/download-skype/skype-for-computer/
+
+Simplenote
+https://simplenote.com/
+
+Google Earth, la nueva version sólo para Google Chrome
+https://earth.google.com/web/
+
+Ubuntu System Cleaner 'Stacer' Has Binned Electron - OMG! Ubuntu!
+http://www.omgubuntu.co.uk/2017/08/stacer-ubuntu-system-cleaner?utm_source=slideshow
+
+Stremio - All You Can Watch
+https://www.strem.io/
+
+
+
+
+ 
+

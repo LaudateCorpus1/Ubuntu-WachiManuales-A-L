@@ -1,0 +1,28 @@
+
+
+
+flatpak remote-ls
+
+flatpak remote-ls kdeapps
+
+Si hay una que me gusta ejemplo:
+
+org.gnome.Nautilus 
+
+debo instalarla así:
+
+flatpak install flathub org.gnome.Nautilus 
+
+flatpak install flathub org.kde.kdenlive
+
+
+flatpak remote-ls [Energetică Generală]
+https://alexio.sisko.webdock.io/energetica/doku.php?id=playground:linux-apps:flatpak:remote-ls
+
+
+Ejemplo voy a instalar un paquete :
+
+flatpak install org.gtk.Gtk3theme.Numix 
+
+
+

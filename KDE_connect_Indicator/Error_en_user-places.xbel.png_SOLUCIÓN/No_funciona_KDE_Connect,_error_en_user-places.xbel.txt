@@ -1,0 +1,31 @@
+No funciona KDE Connect, error en user-places.xbel
+https://facilitarelsoftwarelibre.blogspot.com/2019/01/no-funciona-kde-connect-error-en-user.html
+Si les aparece este mensaje alguna vez:
+
+el cual dice:
+
+"Ha sido imposible guardar marcadores en /home/wachin/.local/share/user-places.xbel. El error informado ha sido: El archivo existente /home/wachin/.local/share/user-places.xbel no es grabable. Este mensaje de error solo se mostrará una vez. La causa del error, posiblemente un disco duro lleno, necesita ser corregida cuanto antes."
+
+La solución la encontré aquí:
+
+Error user-places.xbel cannot be saved • KDE Community Forums https://forum.kde.org/viewtopic.php?f=66&t=131030
+
+
+
+le voy a explicar esto de la siguiente manera. Es necesario que usted sepa cual es su nombre de usuario
+
+¿CÓMO SABER CUAL ES MI NOMBRE DE USUARIO?:
+Es el nombre que está antes de la arroba en la terminal, ejemplo el mío es:
+
+ahora, copie esto en un editor de texto:
+
+sudo chown $USER:$USER /home/tuusuario/.local/share/user-places.xbel 
+
+y reemplace donde dice "tuusuario" por su nombre de usuario, en mi caso queda así:
+
+sudo chown $USER:$USER /home/wachin/.local/share/user-places.xbel 
+
+y esto debo ponerlo en la terminal así:
+sudo chown $USER:$USER /home/wachin/.local/share/user-places.xbel
+
+y me preguntará la contraseña y debo ponerla y listo, reinicie su ordenador y luego KDE Connect funcionará correctamente 

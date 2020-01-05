@@ -1,0 +1,23 @@
+
+
+
+
+La tematización para Qt4, las aplicaciones basadas en Qt4 y GTK que permanezcan en el sistema cambiarán ligeramente. Para integrar todo, la mejor opción en este momento es usar QtCurve. Esta actualización automáticamente instalará qtcurve y qtcurve4 por Ud, si usa aplicaciones GTK, instale también qtcurve-gtk.
+Una buena forma de integrar todo es crear un link simbólico desde sus configuraciones de Plasma 5 al antiguo kde4:
+
+ln -sf ~/.config/kdeglobals ~/.kde4/share/config/kdeglobals
+
+
+KDE4
+~/.kde4/share/config/kdeglobals
+
+KDE5
+~/.config/kdeglobals
+
+De esta manera, cada vez que haga cambios a la configuración de Plasma 5, estas se aplicarán automáticamente a todo.
+Si algunas aplicaciones Qt4 no se integran bien, puede aplicar los ajustes qtcurve para ellas con:
+qtconfig
+
+
+Cambio a Kf5, KDE 4 eliminado
+https://kaosx.us/news/2015/kf5movefeb/ 

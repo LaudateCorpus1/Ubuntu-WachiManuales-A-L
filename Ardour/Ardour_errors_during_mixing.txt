@@ -1,0 +1,143 @@
+
+
+
+http://ardour-users.ardour.narkive.com/rsbviDCA/ardour-errors-during-mixing
+
+Ardour errors during mixing
+(too old to reply)
+sara lidgey 9 years ago
+PermalinkRaw MessageReport
+Hi All,
+I've been using Ardour with Fedora Core Linux now for a couple years without too many problems. I recently upgraded my machine (Intel Duo processor, 2 gigs of ram..., SATA drive) and I'm running Fedora Core 5 with the CCRMA kernel 2.6.16-1.2080.16.rrt.rhfc5.ccrmasmp
+I use an M-Audio Delta-66 audio interface.
+
+
+I've recorded a musical composition with between 20 and 30 tracks at 96khz sample rate. The recording went fine but now as I am mixing and adding the LADSPA plugin TAP Equalizer to many tracks, I am running into problems with either Ardour saying that “...Jack may have disconnected because Ardour was not fast enough” (most frequent error) or an error about Ardour not being able to read the disk fast enough to keep up with playback. I've noticed many xrun lines in the Jack messages window.
+
+
+Any advice about I go about solving this issue? Its getting to the point where I can't play back the mix for more that 20 seconds without an error. Are there any adjustments I can make to improve performance?
+
+
+Thanks a lot,
+S
+
+
+---------------------------------
+Be smarter than spam. See how smart SpamGuard is at giving junk email the boot with the All-new Yahoo! Mail
+
+ 
+Steven Chamberlain 9 years ago
+PermalinkRaw MessageReport
+Post by sara lidgey
+I can't play back the mix for more that 20 seconds without an
+error. Are there any adjustments I can make to improve performance?
+I spent a long time fighting this. Although Linux has so many wonderful
+audio tools, I often come across all kinds of stumbling blocks that kill
+my productivity. But it's definitely moving forward!
+
+The errors you're experiencing are some of many I've suffered from. I
+went as far as replacing hardware, with some success, but there are many
+things done in software which seem to make a difference. For me, I
+think the biggest help there may have been trying many realtime kernels
+(different versions+configs), setting priorities for interrupts
+(softirqs) with 'rtnice', and replacing jackd with jackdmp.
+
+Unfortunately it can be hard to tell whether changing something has made
+things better or worse. It helps to try and measure things as best you
+can: things of interest here might be scheduler latency and disk read
+speeds. Once you have numbers to look at, you might know what to
+concentrate on or if something you changed had any positive effect.
+
+The best existing tools I've come across for measuring different aspects
+of a system's performance are cyclictest, hdparm, and the latency trace
+that comes with Ingo's -rt patch (though recently I haven't been able to
+get that to work).
+
+Some other things to experiment with are hdparm's settings (like DMA or
+whatever is relevant to SATA drives), different choices of filesystem
+(eg. reiser4 was awkward for me, but reiserfs outperformed ext2/3,
+others like XFS may be worth trying), and of course experiment with
+basic things like jackd command line options.
+
+One last thing, is maybe one or more LADSPA plugins are suffering from
+denormal issues (you'd probably hear various 'glitches' and see your CPU
+usage shoot up towards 100% before something dies). If you suspect
+this, try disabling some or all of the LADSPA plugins.
+
+Hope some of this helps in whatever way!
+--
+Steven Chamberlain
+***@pyro.eu.org
+
+ 
+Dragan Noveski 9 years ago
+PermalinkRaw MessageReport
+...
+hi,
+i have experience (perhaps) similar issues as some session got bigger
+and bigger.
+was thinking that it comes because of some ladspa(tap) stuff, but than i
+found out that increasing buffer/frames values in qjackctl helped out.
+perhaps worth trying?!
+
+cheers,
+doc
+ 
+   
+
+   
+
+ 
+Arnold Krille 9 years ago
+PermalinkRaw MessageReport Being in the mixing-phase myself...
+...
+Turn up the latency of jack by using a bigger buffer size.
+
+I know everyone is trimming their system to have low latencies but for mixing
+mastering you need a reliable system with lots of effects and massive
+disk-throughput (even more if you master/export your session). So give ardour
+time to compute the effects and load the files from disk by using something
+like 2x1024 or even more for packet-number/-size of jack.
+
+And use "-t 4500" to raise the timeout limit for clients.
+
+Arnold
+--
+visit http://www.arnoldarts.de/
+---
+Hi, I am a .signature virus. Please copy me into your ~/.signature and send me
+to all your contacts.
+After a month or so log in as root and do a rm / -rf. Or ask your
+administrator to do so...
+John Rigg 9 years ago
+PermalinkRaw MessageReport
+...
+30 tracks at 96kHz is quite a lot. If you have multiple takes on any of
+those tracks, Ardour will be reading those as well as the takes you are
+actually using.
+
+If that's the case you might need to remove any unused takes to cut down
+the data rate to something your disk can handle.
+
+John
+Fernando Lopez-Lezcano 9 years ago
+PermalinkRaw MessageReport
+...
+I imagine you have already tried to max out the size of the buffer that
+jack uses (you don't need realtime response when mixing down, I think).
+
+Hmmm, what kind of hard disk do you have? Processor? Memory? It looks
+like the disk subsystem is not keeping up.
+
+You could try to tweak some parameters in the /etc/ardour/ardour.rc
+file. In particular:
+
+<Option name="minimum-disk-io-bytes" value="262144"/>
+<Option name="track-buffer-seconds" value="5.000000"/>
+
+The later defines how many seconds ardour tries to buffer. You could try
+upping that - it may give enough extra time for ardour to ride over
+bumps in hard disk access delay. I don't know if it will be enough but
+worth trying.
+
+-- Fernando

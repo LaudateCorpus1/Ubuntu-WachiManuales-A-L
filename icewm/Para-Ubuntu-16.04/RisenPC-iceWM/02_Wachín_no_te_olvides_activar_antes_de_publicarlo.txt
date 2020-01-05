@@ -1,0 +1,17 @@
+
+
+He desactivado del archivo startup lo siguiente, actívalo cuando compartas el proyecto:
+
+#update-notifier &
+
+#pcmanfm --desktop &
+
+#blueman-applet &
+
+#mate-power-manager &
+
+-Wachín
+
+
+
+ 

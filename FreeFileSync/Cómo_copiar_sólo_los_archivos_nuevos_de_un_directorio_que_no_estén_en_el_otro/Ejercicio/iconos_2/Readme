@@ -1,0 +1,118 @@
+
+Nuvola Orange Icon Theme
+
+Tema de iconos modificado por Washington Indacochea Delgado (Wachín) para el Proyecto Facilitar el Software Libre en el Ecuador
+https://facilitarelsoftwarelibre.blogspot.com/ bifurcado desde el tema original iniciado por David Vignoni https://www.opendesktop.org/p/1120902 el cual tiene además otros iconos de otros trabajo en: https://packages.ubuntu.com/xenial/kde-icons-nuvola
+
+Este tema está hecho para las aplicaciones de KDE (en especial Dolphin) para se vean bien en el escritorio de XFCE. Depende del tema de iconos elementary-xfce-icon-theme el cual es un paquete de iconos de XFCE, así que si no lo tiene instalado debe instalarlo así:
+
+sudo apt-get install elementary-xfce-icon-theme
+
+y han sido hechos los siguientes cambios en los siguientes directorios
+
+16x16
+22x22
+32x32
+48x48
+64x64
+128x128
+256x256
+scalable
+
+--------------
+INKSCAPE ICON
+--------------
+He reemplazado el icono de Inkscape en todas las carpetas apps correspondientes por este:
+https://github.com/Nitrux/luv-icon-theme/blob/master/Luv/apps/32/inkscape.svg
+
+---------
+GIMP ICON
+---------
+He reemplazado el icono de Gimp en todas las carpetas apps correspondientes por este:
+https://github.com/varlesh/breeze-extra/blob/master/breeze-extra-kde/apps/48/gimp.svg
+
+---------------------------
+ADMINISTRADORES DE ARCHIVOS
+----------------------------
+Del mismo nuvola, copié este:
+/128x128/places/folder-blue.png
+y pequé aquí:
+/128x128/apps/system-file-manager.png
+esto para que aparezca este icono en otros administradores de archivos
+
+-------------
+NAUTILUS ICON
+-------------
+De Nautilus, puesto que el paquete: "nautilus-data" ha instalado este icono:
+/usr/share/icons/hicolor/512x512/apps/org.gnome.Nautilus.png
+He reemplazado el icono en todas las carpetas "apps" por ese:
+org.gnome.Nautilus.png
+esto para que el icono de Nautilus aparezca
+
+---------------------------------
+DOLPHIN ICONOS DE GRUPOS Y FILTRO
+---------------------------------
+En el Administrador de Archivos Dolphin los iconos de grupo y filtro no están en el tema original de Nuvola, así que usaré los de oxygen-icon-theme de xenial:
+
+/usr/share/icons/oxygen/base/32x32/actions/view-filter.png
+/usr/share/icons/oxygen/base/32x32/actions/view-group.png
+/usr/share/icons/oxygen/base/22x22/actions/view-filter.png
+/usr/share/icons/oxygen/base/22x22/actions/view-group.png
+/usr/share/icons/oxygen/base/16x16/actions/view-filter.png
+/usr/share/icons/oxygen/base/16x16/actions/view-group.png
+
+los pongo en:
+
+/32x32/actions/view-filter.png
+/32x32/actions/view-group.png
+/22x22/actions/view-filter.png
+/22x22/actions/view-group.png
+/16x16/actions/view-filter.png
+/16x16/actions/view-group.png
+
+--------------------
+DOLPHIN COLOR FOLDER
+--------------------
+Además añado los siguientes iconos:
+
+folder-black.png
+folder-brown.png
+folder-magenta.png
+
+con sus correspondientes tamaños en:
+
+/16x16/places/
+/22x22/places/
+/32x32/places/
+/48x48/places/
+/64x64/places/
+/128x128/places/
+
+estos para que también estén disponible estos tres colores faltantes en el tema original de Nuvola, para poder ponerles esos colores a las carpetas con "Dolphin-Folder-Color" (https://facilitarelsoftwarelibre.blogspot.com/2016/08/colores-en-las-carpetas-folder-color-de.html)
+
+
+AÑADO TAMBIÉN LOS SIGUIENTES ICONOS FALTANTES
+Faltaban los siguientes iconos de carpetas necesarios para el entorno de escritorio KDE:
+
+folder-activities.png
+folder-bookmark.png
+folder-development.png
+folder-temp.png
+mail-folder-sent.png
+
+Los he creado usando varios iconos de Nuvola y los pegué con sus correspondientes tamaños en:
+
+/16x16/places/
+/22x22/places/
+/32x32/places/
+/48x48/places/
+/64x64/places/
+/128x128/places/
+
+----------------
+Dios les bendiga
+----------------
+Washington Indacochea Delgado
+wachin.id@gmail.com
+Jipijapa-Manabí-Ecuador
+17 de Septiembre de 2019

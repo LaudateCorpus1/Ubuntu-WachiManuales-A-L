@@ -1,0 +1,95 @@
+
+
+DevComPack Setup Maker Assistant
+
+Step 1
+
+DCP Setup Maker is an open source application that generates java installers 
+It's all about 4 simple steps for your setup to be ready! 
+
+Scan the directory containing the files you want to include in your package. 
+
+- Press the 'Browse' button to choose a directory containing all of the files 
+  you need in your installer, then 'filter' some of them if you need so 
+- Press 'refresh' if the folder content was modified on the File System. 
+- A 'simple scan' treats a directory as a whole single pack of files, 
+- A 'recursive scan' gets packs from inside directories until 
+  'depth' is reached where folders are packs. 
+
+Custom filters can be set in 'settings.json' file. 
+Regular Expressions can be used to filter a file group 
+Example: ".*\.(exe|msi)" will filter all files with 'exe' or 'msi' extension 
+
+- 'Folders as groups' option will convert folders to groups 
+- 'Folders as paths' option will fill packs install paths with folder paths 
+
+Press Next when list of files is ready.. 
+
+
+Step 2
+
+Set the parameters of your files 
+
+The second step lets you set the properties for each of your packs (files) 
+and even organize them by Groups/Install groups. 
+
+You add a new group using the green '+' button at right, and entering its name 
+then you may use the 'Add to group' from context menu on packs or Drag and Drop them to a group. 
+You may then sort packs for execution priority. However executable packs can't be processed before others 
+The 'debug' option for Packs will validate all of packs' data and stop on an incorrect one, you may 
+get error details from a 'red' field by hovering over it and reading tooltip text. 
+
+- A Pack is either 'executed' during install, or 'copied' or 'extracted' to 'install path'. 
+- Packs can be part of many install groups. 
+- A Pack may depend on a Pack or a Group of packs on install 
+- A required pack will be installed and can't be disabled on install 
+- A hidden pack will be installed and won't display on install 
+- The arch (32/64) is checked at the running JVM arch (not the OS) 
+- A shortcut can be enabled for a pack or more to access it directly; 
+  advanced shortcut options are available to access a specific file inside a folder or extracted archive 
+- The 'Install path' of a pack is relative to the global install path of setup. 
+
+Single item options for packs or groups are accessed from context menu (Mouse Right clic) 
+An executable script can access its dependencies from code using the 'DEP' environment variable as path 
+
+Once all your packs and groups set, you press Next.. 
+
+
+Step 3
+
+Tweak the final custom settings for your application to be ready. 
+
+Finally, you add some informations for your package like the application name and version number. 
+You navigate between options types from the left tabs. 
+
+You may select any part of the version and increment it as long as it is a number 
+By default, the increment button will add 1 to the last part. 
+
+Additionally, you can add some resources like a Readme file, License, Images, 
+and set the desired target path for your packs and shortcuts, and even more... 
+
+- A 'forced' install path can't be modified on install. 
+  The package will suggest a platform-related path if install path field is empty. 
+- 'Langpacks' are different languages ready for installer's text. 
+- A 'version check' enabled installer check Windows' registry for installed version. 
+
+When finished, push Next.. 
+
+
+
+Step 4
+
+Your package is ready to be packaged at the given export path. 
+You just have to choose a builder and set the target path, then 'Compile'. 
+
+Once the build is successful, you may 'Launch' the resulting package or 'Debug' it for bug tracking. 
+
+Don't forget to 'save' your project to 'load' it later, and if you need, 'save default' settings 
+For developers who want more possibilities, they can edit the settings.json file to just generate 
+the IzPack specification files, edit them, then compile. 
+
+
+Enjoy packaging! ;) 
+
+
+More help at the official website: http://www.devcompack.com/setupmaker 

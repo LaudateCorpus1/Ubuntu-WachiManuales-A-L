@@ -1,0 +1,7 @@
+
+
+hay que buscar ese paquete para habilitar los plugins
+
+kipi-plugins
+
+o digikam 

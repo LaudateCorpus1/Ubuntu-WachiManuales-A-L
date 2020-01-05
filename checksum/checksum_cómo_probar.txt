@@ -1,0 +1,43 @@
+Message: 2
+Date: Sat, 11 Nov 2017 15:47:37 +0100
+From: Ralf Mardorf <ralf.mardorf@alice-dsl.net>
+To: ubuntu-studio-users@lists.ubuntu.com
+Subject: Re: [ubuntu-studio-users] 17.10 can't install on my Dell
+        Inspiron 1750
+Message-ID: <20171111154737.739d696c@archlinux.localdomain>
+Content-Type: text/plain; charset="utf-8"
+
+On Sat, 11 Nov 2017 09:26:07 -0500, WMID wrote:
+>ubuntustudio-17.10-dvd-i386.iso
+
+Hi,
+
+do you need 32 bit architecture? You are aware that it will get dropped
+soon? If you could use 64-bit architecture, too, consider to get the
+64-bit ISO.
+
+Did you check the ISO against a signed checksum? I suspect that the ISO
+comes with a checksum self-test, but a manual check against a signed
+cheksum is much more secure.
+
+After saving the attached script as
+
+  luamd64_1610.sh
+
+change to the directory were you saved it by running
+
+  cd /path/to/the/script/
+
+then run
+
+  chmod a+x luamd64_1610.sh
+
+and after that run
+
+  ./luamd64_1610.sh ubuntustudio 17.10
+
+it will download the 64-bit version and check the ISO against a signed
+checksum, just follow the advices of the script.
+
+Regards,
+Ralf

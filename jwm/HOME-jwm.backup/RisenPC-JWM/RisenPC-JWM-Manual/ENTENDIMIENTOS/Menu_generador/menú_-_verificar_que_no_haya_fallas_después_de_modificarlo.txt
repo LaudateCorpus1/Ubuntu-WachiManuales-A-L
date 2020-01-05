@@ -1,0 +1,11 @@
+
+joewing.net | JWM Configuration
+https://joewing.net/projects/jwm/config.shtml
+
+Overview
+Configuration of JWM is done by editing ".jwmrc". This file is XML making it easy to edit, either by hand or programmatically. The example.jwmrc gives an example configuration file which specifies most of the options.
+Before restarting JWM, it is a good idea to run "jwm -p" to make sure the configuration file is free of errors. Otherwise you may end up without a root menu.
+
+jwm -p
+
+

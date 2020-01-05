@@ -1,0 +1,10 @@
+
+
+
+
+INSTALAR JWM-MENU
+Ponga en la terminal uno por uno estos comandos y ejecutelos(ENTER):
+
+sudo add-apt-repository ppa:torios-dev/fltk-torios-apps
+sudo apt-get update
+sudo apt-get install jwm jwm-menu

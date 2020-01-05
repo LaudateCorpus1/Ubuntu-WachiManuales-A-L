@@ -1,0 +1,9 @@
+
+INSTALAR Discos (gnome-disk-utility).-
+Sirve para ver todas las particiones y editarlas, 
+
+sudo apt-get install gnome-disk-utility
+
+se lanza desde la terminal con 
+
+gnome-disks 

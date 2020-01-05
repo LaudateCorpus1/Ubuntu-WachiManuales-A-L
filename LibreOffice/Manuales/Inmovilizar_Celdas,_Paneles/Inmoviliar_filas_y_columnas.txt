@@ -1,0 +1,9 @@
+
+How to split/freeze rows or columns in LO 5.1
+https://ask.libreoffice.org/en/question/65061/how-to-splitfreeze-rows-or-columns-in-lo-51/
+
+See View menu (the main menus in Writer, Calc and Impress were reorganized to improve usability, group similar functions together, add functions that were not present and sorting items based on their usage and importance). 
+
+En Ver/Inmobilizar Columnas
+
+

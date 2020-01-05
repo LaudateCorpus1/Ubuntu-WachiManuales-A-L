@@ -1,0 +1,8 @@
+
+Poner en la terminal:
+
+exo-preferred-applications -c
+
+
+[Solved] Dolphin file manager cant search "invalid protocol" - Linux Mint Forums
+https://forums.linuxmint.com/viewtopic.php?t=182392

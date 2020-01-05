@@ -1,0 +1,32 @@
+partitioning - How large should I make root, home, and swap partitions? - Ask Ubuntu
+https://askubuntu.com/questions/21719/how-large-should-i-make-root-home-and-swap-partitions
+
+Partition : A H.D.D. can be divided into multiple pieces digitally. These pieces are known as Partitions/Drives.
+
+Mounting Point : In simple words it's a Flag/Name/Type assigned to a Partition.
+
+FileSys. Type : Type of the Partition.In Linux mostly used are ExtX(X=1,2,3,4) & NTFS.
+
+Primary Partition : There can be maximum '4' Primary Partitions in an H.D.D. A Primary Partition may contain one or more Logical Partitions.
+
+Logical Partition : Virtual Partition under a Primary Partition.
+
+SDA : The Storage Media such as H.D.D. or other Media as well. If you have more Drives then it will be named SDA,SDB,SDC,++
+
+Device for Boot Loader Installation :----
+
+Boot Loader : As we know BootLoader is a Program that is loaded on the Media which is run by the B.I.O.S. after conducting P.O.S.T..BootLoader further loads an Operating System or provides a menu if more than one O.S. is installed in the Media.
+
+Choosing Device : When you have a previously installed O.S. that means it has it's own BootLoader Program.Which is installed in the M.B.R.(master Boot Loader) of H.D.D.Now when you are installing Linux then it will ask you where to install the G.R.U.B.(Grand Unified Boot Loader) or Linux BootLoader.It gives you options to install it into the M.B.R. which will over write the existing BootLoader or install it into any of the Partitions,that will add this Linux entry point in the existing BootLoader.Now the choice is yours.
+
+You need at least '3' Partitions in order to install any Linux Distro..
+
+It just takes a 100 G.B. of Drive/Partition to install Linux decently.
+
+Partition 1 : Root(/) : For Linux Core Files : 20 G.B. (Minimum 15 G.B.)
+
+Partition 2 : Home(/home) : Drive for User Data : 70 G.B. (Minimum 30 G.B.)
+
+Partition 3 : Swap Area : Space that acts like extra R.A.M. : 2 x R.A.M. Size.
+
+Note : Swap Space behaves like an extra R.A.M. when the R.A.M. is full.

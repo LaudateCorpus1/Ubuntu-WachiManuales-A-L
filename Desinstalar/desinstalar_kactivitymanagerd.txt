@@ -1,0 +1,8 @@
+
+Installion: How To Uninstall kactivitymanagerd On Ubuntu 16.10
+http://installion.co.uk/ubuntu/yakkety/universe/k/kactivitymanagerd/uninstall/index.html
+
+sudo apt-get remove kactivitymanagerd
+
+
+

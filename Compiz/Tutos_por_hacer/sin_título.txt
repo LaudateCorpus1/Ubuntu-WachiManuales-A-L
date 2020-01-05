@@ -1,0 +1,7 @@
+
+
+How to set a specific window size for all windows that open to default
+http://askubuntu.com/questions/107951/how-to-set-a-specific-window-size-for-all-windows-that-open-to-default#960
+
+How To Create Window Rules Using CompizConfig Settings Manager On Ubuntu
+https://www.youtube.com/watch?v=SgqtrrrJOJk

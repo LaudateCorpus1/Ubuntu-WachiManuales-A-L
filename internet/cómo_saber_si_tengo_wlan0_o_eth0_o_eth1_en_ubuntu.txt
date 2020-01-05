@@ -1,0 +1,40 @@
+
+wireless - What is the active MAC Address of my computer? - Ask Ubuntu
+http://askubuntu.com/questions/203789/what-is-the-active-mac-address-of-my-computer
+Se pone 
+
+ifconfig
+
+en la terminal, ejemplo:
+
+
+wachin@Dell-Inspiron-1750:~$ ifconfig
+eth0      Link encap:Ethernet  direcciónHW a4:ba:db:9e:df:3d  
+          ACTIVO DIFUSIÓN MULTICAST  MTU:1500  Métrica:1
+          Paquetes RX:0 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:0 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:1000 
+          Bytes RX:0 (0.0 B)  TX bytes:0 (0.0 B)
+          Interrupción:18 
+
+lo        Link encap:Bucle local  
+          Direc. inet:127.0.0.1  Másc:255.0.0.0
+          Dirección inet6: ::1/128 Alcance:Anfitrión
+          ACTIVO BUCLE FUNCIONANDO  MTU:65536  Métrica:1
+          Paquetes RX:1286 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:1286 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:0 
+          Bytes RX:108228 (108.2 KB)  TX bytes:108228 (108.2 KB)
+
+wlan0     Link encap:Ethernet  direcciónHW 70:f1:a1:07:f6:78  
+          Direc. inet:192.168.1.2  Difus.:192.168.1.255  Másc:255.255.255.0
+          Dirección inet6: fe80::72f1:a1ff:fe07:f678/64 Alcance:Enlace
+          ACTIVO DIFUSIÓN FUNCIONANDO MULTICAST  MTU:1500  Métrica:1
+          Paquetes RX:28902 errores:0 perdidos:0 overruns:0 frame:34071
+          Paquetes TX:23816 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:1000 
+          Bytes RX:29206907 (29.2 MB)  TX bytes:4079148 (4.0 MB)
+          Interrupción:17 Dirección base: 0xc000 
+
+wachin@Dell-Inspiron-1750:~$ 
+ 

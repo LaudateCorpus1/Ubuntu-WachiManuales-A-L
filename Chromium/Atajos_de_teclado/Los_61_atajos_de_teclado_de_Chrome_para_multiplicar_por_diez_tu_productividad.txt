@@ -1,0 +1,102 @@
+
+Los 61 atajos de teclado de Chrome para multiplicar por diez tu productividad
+https://www.xataka.com/aplicaciones/los-61-atajos-de-teclado-de-chrome-para-multiplicar-por-diez-tu-productividad
+
+
+
+Estamos tan acostumbrados a trabajar casi siempre de la misma manera con el ordenador que prácticamente lo hacemos todo de forma mecánica. Por lo general esto es bueno, salvo cuando por costumbre nos complicamos demasiado haciendo algunas cosas que podríamos acelerar con una simple combinación de teclas.
+
+Por eso hoy os vamos a ofrecer una pequeña colección de atajos de teclado para Chrome. Muchos de ellos seguro que ya os los sabéis de memoria, pero también es posible que haya otros cuantos más que no conozcáis. Los comandos funcionarán para Windows y Linux, aunque en los casos en los que en Mac sean diferentes también los añadiremos.
+
+Atajos de teclado para pestañas y ventanas
+
+Google Chrome
+A la hora de operar con nuestro navegador es importante tener el control de las pestañas y ventanas. Esto no sólo implica utilizar los clásicos atajos para abrir ventanas y pestañas normales o en modo incógnito, sino también el conseguir facilitar la navegación entre ellas sin necesidad de tener que tocar el ratón y perder tiempo mientras escribimos.
+
+Especialmente útil puede resultar el atajo para navegar directamente y en orden entre la primera y octava pestaña abierta, así como el poder abrir en una nueva las últimas páginas de nuestro historial. También las hay para salir de Chrome cerrando o sin cerrar las pestañas, algo útil dependiendo de si tenéis activada la opción de recuperar la sesión anterior. Aquí están todos los atajos.
+
+Ctrl + N: Abrir ventana nueva. En Mac es ⌘ + N.
+Ctrl + Mayús + N: Abrir ventana nueva en modo incógnito. En Mac es ⌘ + Mayús + N.
+Ctrl + T: Abrir pestaña nueva e ir a ella. En Mac es ⌘ + T.
+Ctrl + Mayús + T: Reabrir una pestaña recién cerrada e ir a ella. En Mac es ⌘ + Mayús + T.
+Ctrl + Tab o Ctrl + AvPág: Ir a pestaña siguiente. En Mac es ⌘ + Opción + Der.
+Ctrl + Mayús + Tab o Ctrl + RePág: Ir a pestaña anterior. En Mac es ⌘ + Opción + Izq.
+Ctrl + 1 a 8: Ir a pestaña específica. En Mac es ⌘ + 1 a 8.
+Ctrl + 9: Ir a última pestaña. En Mac es ⌘ + 9.
+Alt + Inicio: Abrir página de inicio en pestaña activa.
+Alt + Flecha Izq: Abrir página anterior del historial en pestaña activa. En Mac es ⌘ + [ o ⌘ + Flecha Izq.
+Alt + Flecha Der: Abrir página siguiente del historial en pestaña activa. En Mac es ⌘ + ] o ⌘ + Flecha Der.
+Ctrl + W o Ctrl + F4: Cerrar pestaña activa.
+Ctrl + Mayús + W: Cerrar todas las pestañas y Chrome.
+Ctrl + Mayús + Q o Alt + F4: Salir de Chrome. En Mac es ⌘ + Q.
+Atajos para las funciones de Chrome
+
+Si hay algo para lo que algunos de nosotros dependemos demasiado del ratón es el utilizar funciones de Chrome, como los marcadores o el administrador de tareas. Pero si estamos escribiendo a buen ritmo quizá queramos saber algunos atajos que nos permitan realizar estas y otras opciones sin tener que quitar las manos del teclado.
+
+Especialmente útiles son las que nos permiten ir seleccionando cada uno de los elementos de la interfaz, así como el abrir el menú de búsqueda para localizar palabras concretas y navegar entre los resultados. Aquí están todos los atajos para poder realizar estas y muchas otras acciones.
+
+Alt + F, Alt + E o F10: Abrir menú.
+Ctrl + Mayús + B: Mostrar u ocultar barra de marcadores. En Mac es ⌘ + Mayús + B.
+Ctrl+Mayús+O: Abrir administrador de marcadores.En Mac es ⌘ + Opción + B.
+Ctrl + H: Abrir historial. En Mac es ⌘ + Y.
+Ctrl + J: Abrir página de Descargas. En Mac es ⌘ + Mayús + J.
+Mayús + Esc: Abrir administrador de tareas de Chrome.
+F6: Seleccionar y alternar entre barra de direcciones, barra de marcadores y el contenido de la página.
+Mayús + F6: Seleccionar y alternar en el orden inverso: contenido, marcadores y direcciones.
+Ctrl + F o F3: Abrir la barra de búsqueda. En Mac es ⌘ + F.
+Ctrl + G: Ir avanzando en la página entre los resultados de la búsqueda. En Mac es ⌘ + G.
+Ctrl + Mayús + G: Ir retrocediendo en la página entre los resultados de la búsqueda. En Mac es ⌘ + Mayús + G.
+Ctrl + Mayús + J o F12: Abrir herramientas para desarrolladores. En Mac es ⌘ + Opción + I.
+Ctrl + Mayús + Supr: Borrar datos de navegación. En Mac es ⌘ + Mayús + Suprimir.
+F1: Abrir ayuda.
+Ctrl + Mayús + M: Cambiar sesión de usuario o abrir modo incógnito. En Mac es ⌘ + Mayús + M.
+Atajos de teclado en la barra de direcciones
+
+Por lo general, a la hora de utilizar la barra de direcciones nos limitamos a hacer click sobre ella y elegir la dirección de la página a la que queremos entrar o el término o frase que queremos buscar en Google. Pero sí, también aquí tenemos algunos atajos de teclado con los que podemos hacer muchas otras cosas sin tocar el ratón.
+
+Por ejemplo podemos elegir un motor de búsqueda alterno, insertar automáticamente el www y el .com para convertir una palabra en web o ir navegando por las diferentes palabras que componen una URL. Y claro, tampoco podemos olvidarnos del imprescindible Ctrl + L para ir directamente a la barra de direcciones.
+
+Nombre de un motor de búsqueda + Tabulador: Buscar con otro motor de búsqueda.
+Ctrl + Intro: Añadir www. y .com al principio y final de la palabra introducida.
+Alt + Intro: Añadir www. y .com al principio y final de la palabra introducida y abrir en nueva pestaña. En Mac es Control + Mayús + Intro.
+Ctrl + L, Alt + D o F6: Ir a la barra de direcciones. En Mac es ⌘ + L.
+Ctrl + K o Ctrl + E: Introducir término de búsqueda desde cualquier parte de la página.
+Ctrl + Flecha Der o Izq: Avanzar a la palabra siguiente o anterior de la URL. En Mac es Mayús + Opción + Flecha Der o Izq.
+Acciones en las páginas web
+
+Chrome
+Hay muchas cosas que podemos hacer cuando estamos visitando una página web, desde imprimirla hasta abrir y cotillear su código fuente. Estas funciones suelen realizarse con un sencillo click derecho de ratón, pero más fácil aún es poder hacerlas sin tener que tocarlo.
+
+Algunos de estos atajos de teclado son de sobra conocidos, como el tabulador para ir avanzando entre los elementos accionables o el Ctrl + P para ir al menú de impresión. Pero también hay alguna otra un poco más compleja como la de cargar de nuevo una página desde cero ignorando el caché, o volver al tamaño original después de haber estado tocando el zoom más de la cuenta.
+
+Ctrl + P: Imprimir página actual. En Mac es ⌘ + P.
+Ctrl + S: Guardar página actual. En Mac es ⌘ + S.
+F5 o Ctrl + R: Volver a cargar página actual. En Mac es ⌘ + R.
+Mayús + F5 o Ctrl + Mayús + R: Volver a cargar página actual ignorando caché. En Mac es ⌘ + Mayús + R.
+Esc: Detener carga de la página.
+Tabulador: Avanzar entre los elementos clicables de la página.
+Mayús + Tabulador: Retroceder entre los elementos clicables de la página.
+Ctrl + O: Abrir archivo. En Mac es ⌘ + O.
+Ctrl + U: Abrir código fuente en nueva pestaña. En Mac es ⌘ + Opción + U.
+Ctrl + D: Guardar en marcadores En Mac es ⌘ + D.
+Ctrl + Mayús + D: Guardar todas las pestañas en marcadores. En Mac es ⌘ + Mayús + D.
+F11: Modo de pantalla completa. En Mac es ⌘ + Ctrl + F
+Ctrl y +, Ctrl y -: Ampliar o reducir con el zoom. En Mac es ⌘ y +, ⌘ y -.
+Ctrl + 0: Cancelar zoom restableciendo tamaño predeterminado. En Mac es ⌘ + 0.
+Espacio o AvPág: Desplazarse hacia abajo en la página.
+Mayús + Espacio o RePág: Desplazarse hacia arriba en la página.
+Inicio, Fin: Ir al principio o al final de la página
+Mayús + Scroll: Desplazarse horizontalmente en la página.
+Alt + Inicio: Abrir página de inicio en pestaña actual. En Mac es ⌘ + Mayús + H.
+Combinaciones de ratón para Chrome
+
+Y por último aquí tenemos unas cuantas combinaciones para las que sí que habrá que utilizar el ratón. ¿Cual es el sentido entonces si tenemos que dejar de escribir sí o sí para realizarlas? Pues el ahorrarnos algún que otro click de más, por supuesto.
+
+Arrastrar enlace a la barra de pestañas: Para abrirlo en una pestaña ya abierta o en una nueva.
+Ctrl + Click: Abrir enlace en pestaña nueva. En Mac es ⌘ + Click.
+Ctrl + Mayús + Click: Abrir enlace en pestaña nueva e ir a ella. En Mac es ⌘ + Mayús + Click.
+Mayús + Click: Abrir enlace en ventana nueva.
+Alt + Clicl: Descargar contenido de un enlace.
+Arrastrar pestaña fuera de la barra: Abrir pestaña en ventana nueva.
+Ctrl + Scroll: Ampliar o reducir el zoom.
+En Xataka | ¿De qué le sirve a Google que Chrome sea el navegador más usado?

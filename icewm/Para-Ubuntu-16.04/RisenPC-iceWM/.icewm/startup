@@ -1,0 +1,260 @@
+#!/bin/bash
+
+#	│▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+#	│                   Proyecto RisenPC                   │
+#	│      Resucitar PC de bajos recursos con iceWM        │
+#	│ script por Washington Indacochea Delgado (Wachín)    │
+#	│      E-Mail: wachin.id@gmail.com en Ecuador          │
+#	│  http://facilitarelsoftwarelibre.blogspot.com/       │
+#	│       Licencia Pública General de GNU version 2      │    
+#	│ licencia ES http://es.tldp.org/Otros/gples/gples.html  
+#	│ licencia EN: https://www.gnu.org/licenses/gpl-2.0.html  
+#	│▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+
+# Proyecto Resucitar PC de bajos recursos con iceWM
+# https://facilitarelsoftwarelibre.blogspot.com/2017/06/proyecto-resucitar-pc-de-bajos-recursos.html
+# Ayudas para entender el archivo startup
+# https://wiki.archlinux.org/index.php/IceWM#Autostarting    
+# https://celettu.wordpress.com/icewm-guide/ 
+
+# INSTRUCCIONES: 
+# Los siguientes comandos lanzarán las aplicaciones necesarias para 
+# que una PC tenga lo mejor posible en funcionalidad con bajos recursos
+# Nota: No se olvide de este signo "&" al final de cada comando para 
+# lanzar las aplicaciones, porque si usted va a añadir alguna aplicación
+# y se olvida de ponerlo se cortarán las demás ordenes y no 
+# se lanzarán las demás aplicaciones 
+
+sleep 2 &
+# Requerido para dar algo de tiempo a la barra de tareas de icewm para
+# iniciar antes que el resto
+
+xfce4-notes &
+# Para tomar notas rapidas, imprescindible
+
+xfce4-terminal &
+# La terminal, como siempre la uso ya que mejor esté abierta 
+
+nm-applet &
+# Para administrar las redes disponibles de internet
+# (se carga iconizado)
+
+setxkbmap -layout latam &
+# Para que siempre se cargue al inicio mi distribución de teclado,
+# en mi caso Español Latinoamericano "latam". Es recomendable 
+# que usted revise mi pagina por si tiene otra distribución
+# Visto en "Cambiar la distribución del teclado con setxkbmap 
+# (desde terminal) en Ubuntu" 
+# http://facilitarelsoftwarelibre.blogspot.com/2016/07/cambiar-la-distribucion-del-teclado-con.html
+#Ahora bien, para saber que distribución de teclado se está usando en antiX, abra una terminal y ponga:
+# setxkbmap -query | grep layout
+ 
+pnmixer &
+# el mejor, abre pulseaudio
+# Visto en "IceWM install and setup guide"
+# http://forums.fedoraforum.org/showthread.php?t=282433
+
+#xscreensaver -no-splash &
+# Este es necesario para que si dejas la PC sin usar después se apague
+# bloquee solita, y luego para entrar debes poner tu contraseña
+# Para que funcione debes tener instalado xscreensaver, y luego 
+# ponerlo en el archivo claro que para eso hay que configurarlo, 
+# el comando es /usr/bin/xscreensaver-demo el cual lo he añadido
+# al "menu" como un elemento para que con el comando 
+# "xscreensaver-command -lock &" 
+# manualmente lo puedas activar para entender mas de esto revisa 
+# el archivo menu que va incluido en este manual
+# Visto en "IceWM Guide" https://celettu.wordpress.com/icewm-guide/
+
+/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+# Agente de autenticación de GNOME para PolicyKit-1
+# Este paquete lo busqué en synaptic con la palabra clave "Gnome Policy",
+# el paquete en UbuntuStudio 16.04 x386 exactamente se llama 
+# "policykit-1-gnome", y en la descripción dice "PolicyKit-gnome 
+# proporciona un servicio del bus de sesión D-Bus que se usa para crear
+# ventanas de autenticación utilizadas para obtener privilegios".
+# Este paquete es necesario ejemplo para cuando uno va a instalar
+# algún idioma con "Soporte de idiomas" lo puede lanzar desde la 
+# terminal poniendo "gnome-language-selector" y vera que si
+# "policykit-1-gnome" no está activo, no funcionará el soporte de 
+# idiomas. Vi el uso de este en este archivo startup en:
+# "IceWM install and setup guide" 
+# http://forums.fedoraforum.org/showthread.php?t=282433
+# Puede que usted quiera activar este paquete en otra distribución de 
+# Ubuntu, así que le dejo el link para que consulte los nombres 
+# http://packages.ubuntu.com/xenial/policykit-1-gnome
+# allí busque en el paquete que usted quiera consultar sea 32 o 64 
+# bits (i386 o amd64) la "lista de los archivos"(list of files):
+# http://packages.ubuntu.com/trusty/i386/policykit-1-gnome/filelist
+# allí está esta linea /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
+# eso significa que eso es lo que hay que poner aquí. También puede 
+# buscar en el synaptic dandole clic derecho en propiedades y archivos
+# instalados disculpen tanta complicación, pero el nombre del archivo
+# que fue instalado en /usr/lib/ puede variar de una distribución a otra
+# o de 32 o 64 bits, por eso hay que saber el nombre exacto.
+
+# RÁPIDO
+#xset m 5 1 &
+#xset m 5 2 &
+#xset m 4 1 &
+#xset m 4 2 &
+#xset m 3 1 &
+#xset m 3 2 &
+#xset m 2 1 &
+#xset m 2 2 &
+#LENTO
+# Este comando es para poner la velocidad del cursor de su mouse o de
+# su touchpad, o de algún teclado externo con touchpad, para mi
+# la mejor velocidad del cursor es "xset m 4 1". Pero claro, puede que
+# usted necesite más o menos (esto depende de algunos factores como el 
+# tamaño de la pantalla de su PC, su mouse o touchpad).
+# Le dejo a usted esta lista de las velocidades que puede usar. 
+# También puede probar uno por uno cada comando en una terminal, luego
+# desmarque el que quiera que se cargue al inicio de su PC y el resto
+# dejelo marcado con el numeral para que no funcionen.
+# El comando para ver qué velocidad estás utilizando es:
+# xset q | grep -A 1 Pointer
+# Ejemplo para esta velocidad que estoy usando el resultado es
+# Pointer Control:
+# acceleration:  4/1    threshold:  1
+# Contultas
+# Visto en: https://wiki.archlinux.org/index.php/Mouse_acceleration
+ 
+numlockx on &
+#(opcional) Si tienes una laptop con teclado numerico deberías tenerlo 
+# activado. (para desactivar poner el numeral al inicio)
+# Visto en "Como configurar el gestor de ventanas IceWM como un campeón"
+# http://www.taringa.net/post/linux/19258241/Como-configurar-el-gestor-de-ventanas-IceWM-como-un-campeon.html
+
+#hp-systray -x &
+# Si alguien usa una impresora HP este comando hará que se iconice HPLIP pues tendrá que instalarlo
+# el comando es: sudo apt-get install hplip-gui
+# de allí deberá configurar su impresora
+
+#update-notifier &
+# esta aplicacion te avisará cuando hay nuevas actualizaciones(esta activada 
+# por defecto en todos los Linux)
+# Nota: Si usted es un usuario avanzado lo puede desactivar pues
+# sabrá que hay que actualizar el sistema operativo con frecuencia
+# y usará:
+# sudo apt-get update
+# sudo apt-get upgrade
+
+shutter --min_at_startup &
+# Para tomar captura de pantallas, este es el comando para que se
+# cargue iconizado y no ocupe espacio 
+# instalado desde PPA
+# http://shutter-project.org/downloads/
+
+#dropbox start -i &
+# Sincronizar tus archivos atravéz de computadoras y la web
+
+#pcmanfm --desktop &
+# Este es necesario para cargar el wallpaper del escritorio
+
+#blueman-applet &
+# (opcional) Si tu laptop tiene Bluetooth debes activarlo
+# mi laptop Dell Inspiron 1750 no tiene por eso no lo activo. Aunque,
+# si le pusiera un Bluetooh externo deberé de hacerlo
+# Visto en "Como configurar el gestor de ventanas IceWM como un campeón" 
+# http://www.taringa.net/post/linux/19258241/Como-configurar-el-gestor-de-ventanas-IceWM-como-un-campeon.html
+
+#mate-power-manager &
+# (opcional) Es un Power Manager applet (administrador de poder),
+# te mostrará el estado de la batería de la laptop, el estado de la
+# batería de tu teclado externo (si lo tienes), y otros estados, depende
+# del o los dispositivos conectados
+# Visto en "Why should I use IceWM?" 
+# https://help.ubuntu.com/community/IceWM
+
+
+#xfce4-appfinder &
+# Es el lanzador de XFCE, es bueno porque abre todas las aplicaciones 
+# y como el menú de iceWM no es muy completo este si lo es, aquí puedo
+# encontrar todas las aplicaciones del sistema, y tiene un buscador
+# CONFIGURAR.- Si quieres puedes configurar la aplicación para que 
+# haga cosas especiales. Para hacerlo cuando abras la aplicación
+# dale clic en la esquina izquierda donde dice "Preferencias"
+# Marcar
+# "Recoerda ultima categoría seleccionada"
+# "Siempre centrar la ventana"
+
+#Redshift personalizado
+#redshift -p; redshift-gtk &
+
+
+#	│▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+#	│               Programas que uso yo:                │
+#	│▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+# Los siguientes programas yo los uso y quiero que se carguen cuando 
+# enciendo la PC, usted puede poner los que usted usa aquí
+
+pluma &
+# Editor de Textos de Linux Mint, es un fork de gedit, exelente.
+
+brightness-controller &
+# Control de brillo, instalado desde PPA:
+# https://facilitarelsoftwarelibre.blogspot.com/2017/06/control-de-brillo-para-pantallas-en.html
+
+indicator-kdeconnect &
+# para lanzar KDE Connect Indicator (lo uso para compartir archivos
+# entre mi celular con Android 6.0.1 y UbuntuStudio 16.04)
+# http://www.webupd8.org/2017/04/new-kde-connect-indicator-ubuntu-linux.html
+# Nota: Para que se vea el icono debe estar abierto en tu celular
+# el programa KDE Connect sino no se cargará el icono
+
+#thunar &
+# Administrador de archivos
+
+#dolphin4 &
+# Es un administrador de archivos completo, muy bueno, lo uso
+# porque como con mucha frecuencia trabajo con fotos y en la vista
+# previa se ven grandes las imágenes y así puedo apreciar mejor,
+# para mi es el mejor que hay para quienes venimos de Windows.
+# Está en los repositorios de Ubuntu 16.04 (no confundir con dolphin
+# el cual no funciona bien en entornos de escritorio que no sean
+# kubuntu, plasma-desktop, Neon, donde es una App nativa).
+# Más información sobre dolphin4 en
+# https://facilitarelsoftwarelibre.blogspot.com/search/label/Dolphin4
+
+#sleep 15 &
+#goldendict &
+# El Diccionario, todos los días lo uso en algún momento 
+# (se lo puede configurar para que se cargue iconizado)
+# https://facilitarelsoftwarelibre.blogspot.com/2016/03/goldendict-el-mejor-diccionario-offline.html
+# https://facilitarelsoftwarelibre.blogspot.com/2016/05/diccionario-espanol-clave-para.html
+
+#chromium-browser &
+# Navegador Web. Debes tener instalado chromium-browser
+
+#google-chrome-stable &
+#Navegador Web
+
+
+#	│▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+#	│  Para activar cuando los necesite (OPCIONALES):    │
+#	│▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+
+#firefox &
+# Navegador Web instalado por defecto en muchos linux
+
+#caja &
+# Es un administrador de archivos bastante completo, tiene de bueno
+# que tiene la integración con Dropbox instalando el paquete:
+# caja-dropbox
+# Lo estoy usando bastante porque tiene buena integración con el 
+# cambio de temas visuales de iceWM con la herramienta "lxappearance"
+
+#alarm-clock-applet --hidden &
+# (opcional) Tiene un temporizador y un despertador, para mi es el mejor.
+# Yo uso este programa para cuando estoy en la PC y dejo algo cocinando
+# Nota: Vi como iniciaba minimizado el programa viendo en la ayuda
+# en la terminal poniendo 
+# alarm-clock-applet --help
+# allí hay varios comandos
+
+
+#Dios les bendiga
+
+
+

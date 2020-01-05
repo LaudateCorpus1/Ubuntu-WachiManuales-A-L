@@ -1,0 +1,12 @@
+
+
+Separate the stereo to two mono - KDE Community Forums
+https://forum.kde.org/viewtopic.php?f=271&t=113009
+
+Re: Separate the stereo to two mono
+Thu Sep 22, 2011 4:45 pm
+Trying to do the same thing as the original poster (get rid of a bad stereo channel). 
+
+Can't find that "Stereo to Mono" effect mentioned above, or was it only added to MLT? 
+
+Otherwise, tried with "copy channels", but can't get what I want (copy one of the original channels to both output channels). 

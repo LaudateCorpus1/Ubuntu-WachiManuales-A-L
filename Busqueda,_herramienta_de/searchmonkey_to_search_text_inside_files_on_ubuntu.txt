@@ -1,0 +1,9 @@
+
+
+Find All Files With Given Text Using SearchMonkey GUI Tool In Ubuntu - It's FOSS
+https://itsfoss.com/searchmonkey-search-text-files-linux/
+
+Install SearchMonkey in Ubuntu 16.04
+SearchMonkey is available in Ubuntu 16.04 (and other versions as well) repository. You can install it via Ubuntu Software Center or by just typing the following command in terminal:
+
+sudo apt-get install searchmonkey 

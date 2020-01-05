@@ -1,0 +1,15 @@
+
+docx a odt convertir con LibreOffice
+
+En una terminal pongase en el lugar donde estén todos los .docx que usted quiera convertir a odt y ponga esta línea y ejecútela:
+
+libreoffice --headless --convert-to *.odt *.docx
+
+Nota 1: El maximo de archivos que se puede convertir es 250
+
+Nota 2: En el comando primero van el comando que le explica a libreoffice a cual formato quiere convertir en este caso odt y de allí al final va que ingrese todos los *.docx
+
+Esta solución es una interpretación de Washington Indacochea Delgado de los comandos expuestos en:
+
+linux - Convert all .docx to .odt inside folder system and then delete all .docx files - Stack Overflow
+https://stackoverflow.com/questions/29506294/convert-all-docx-to-odt-inside-folder-system-and-then-delete-all-docx-files

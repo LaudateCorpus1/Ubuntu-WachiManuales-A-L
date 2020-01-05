@@ -1,0 +1,19 @@
+
+Problema aparece en inkscape
+
+inkscape : No module named sk1libs.utils.fs
+
+
+
+
+Meloman-zz commented on 7 Aug 2017 • 
+https://github.com/sk1project/uniconvertor/issues/11
+
+Have the same issue. Uniconvertor has been installed with apt on Ubuntu 16.04, trying to convert cdr to ai/svg
+
+For me, solution was to install missing library libjpeg-dev (with aptitude)
+
+sudo apt-get install libjpeg-dev
+
+
+

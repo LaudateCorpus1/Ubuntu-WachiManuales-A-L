@@ -1,0 +1,3 @@
+
+Gimp 2.10 - En desarrollo continuo, inestable
+https://github.com/aferrero2707/gimp-appimage/releases

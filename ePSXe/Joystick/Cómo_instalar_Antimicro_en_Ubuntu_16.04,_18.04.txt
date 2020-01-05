@@ -1,0 +1,34 @@
+
+Cómo instalar Antimicro en Ubuntu 16.04
+
+sudo add-apt-repository ppa:mdeguzis/libregeek
+sudo apt-get update
+sudo apt-get install antimicro
+
+CONSULTA: 
+
+LibreGeek : ProfessorKaos64
+https://launchpad.net/~mdeguzis/+archive/ubuntu/libregeek
+
+
+
+Cómo instalar Antimicro en Ubuntu 16.04
+
+$ sudo apt install gdebi
+
+$ wget https://launchpad.net/~mdeguzis/+archive/ubuntu/libregeek/+files/antimicro_2.23~artful-1_i386.deb
+
+$ sudo gdebi antimicro*.deb
+
+How to install AntiMicro on 64 bit Ubuntu 18.10 Cosmic Cuttlefish, Ubuntu 18.04 Bionic Beaver, Linux Mint 19.x and Elementary OS 0.5 Juno:
+
+$ sudo apt install gdebi
+
+$ wget https://launchpad.net/~mdeguzis/+archive/ubuntu/libregeek/+files/antimicro_2.23~artful-1_amd64.deb
+
+$ sudo gdebi antimicro*.deb
+
+
+How to Install AntiMicro on Ubuntu 18.10 And Ubuntu 18.04 | LinuxG.net
+http://linuxg.net/how-to-install-antimicro-on-ubuntu-18-10-and-ubuntu-18-04/
+

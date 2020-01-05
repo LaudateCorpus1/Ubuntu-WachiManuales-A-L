@@ -1,0 +1,11 @@
+
+
+Using Flatpak — Flatpak documentation
+http://docs.flatpak.org/en/latest/using-flatpak.html
+
+Updating
+To update all your installed applications and runtimes to the latest version, run:
+
+$ flatpak update
+
+

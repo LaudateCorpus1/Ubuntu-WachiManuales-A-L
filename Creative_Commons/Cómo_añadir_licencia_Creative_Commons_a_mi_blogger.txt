@@ -1,0 +1,28 @@
+
+
+Creative Commons — Atribución 4.0 Internacional — CC BY 4.0
+https://creativecommons.org/licenses/by/4.0/deed.es
+
+esta es la de la pagina 
+
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Esta obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Licencia Creative Commons Atribución 4.0 Internacional</a>.
+
+esta es modificada, añadida como gadget:
+
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Facilitar el Software Libre en el Ecuador</span> por <a xmlns:cc="http://creativecommons.org/ns#" href="http://facilitarelsoftwarelibre.blogspot.com/" property="cc:attributionName" rel="cc:attributionURL">Washington Indacochea Delgado</a> se distribuye bajo una <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Licencia Creative Commons Atribución 4.0 Internacional</a>.
+
+HAGO UNA CORRECCIÓN PUES HAY QUE PONERLA EN ESPAÑOL
+
+https://creativecommons.org/licenses/by/4.0/deed.es
+
+Y ASÍ DEBO CORREGIR:
+
+<a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.es"><img alt="Licencia Creative Commons" style="border-width:2" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Facilitar el Software Libre en el Ecuador</span> por <a xmlns:cc="http://creativecommons.org/ns#" href="http://facilitarelsoftwarelibre.blogspot.com/" property="cc:attributionName" rel="cc:attributionURL">Washington Indacochea Delgado</a> se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.es">Licencia Creative Commons Atribución 4.0 Internacional</a>.
+
+
+
+
+
+
+
+

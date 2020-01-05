@@ -1,0 +1,29 @@
+
+
+Como instalar ftmenu para fluxbox en Ubuntu 18.04
+
+necesitas instalar estas dependencias:
+
+sudo apt-get install git libgtk2.0-dev
+
+luego poner en la terminal
+
+git clone https://github.com/taq/ftmenu
+cd ftmenu
+./configure
+make
+sudo su
+make install
+
+y se instalará correctamente
+
+LANZARLO 
+debes poner en la terminal
+
+ftmenu
+
+
+CONSULTAS:
+getting an alternative start menu in fluxbox: make sure you install gtk2-devel (name may
+vary depend on distro)
+http://blogmirul.blogspot.com/2011/12/getting-alternative-start-menu-in.html

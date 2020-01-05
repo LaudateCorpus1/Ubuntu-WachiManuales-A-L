@@ -1,0 +1,25 @@
+#	│▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+#	│             Proyecto Resucitar PC de bajos recursos con iceWM          │
+#	│                                                    RisenPC                               │
+#	│             script por Washington Indacochea Delgado (Wachín)          │
+#	│                    E-Mail: wachin.id@gmail.com en Ecuador                 │
+#	│               http://facilitarelsoftwarelibre.blogspot.com/              │
+#	│                 Licencia Pública General de GNU version 2                │    
+#	│         En español: http://es.tldp.org/Otros/gples/gples.html        │
+#	│         en inglés: https://www.gnu.org/licenses/gpl-2.0.html         │
+#	│▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+#
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 
+# ATAJOS DE TECLADO EN ICEWM
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+
+
+# Ideas tomadas de la consulta
+# IceWM - Keyboard shortcuts
+# http://hrclinux.blogspot.com/2013/05/icewm-keyboard-shortcuts_24.html 
+
+key "Print" scrot
+# Comando para tomar captura de pantalla completa, se guarda en HOME
+
+
+

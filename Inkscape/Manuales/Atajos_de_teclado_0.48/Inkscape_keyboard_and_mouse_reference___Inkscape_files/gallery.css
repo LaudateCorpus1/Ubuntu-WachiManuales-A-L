@@ -1,0 +1,467 @@
+.galleryitem {
+  display: inline-block;
+  border: solid #cce 2px;
+  margin: 4px;
+  padding: 0px;
+  min-width: 150px;
+  min-height: 150px;
+  text-align: center;
+  vertical-align: middle;
+  margin: 5px 4px 25px 4px;
+}
+.galleryitem:hover {
+  background-color: #eef;
+}
+.galleryitem a.link img,
+.bioitem a.link img {
+  max-width: 150px;
+  max-height: 150px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.galleryitem a.link {
+  min-width: 150px;
+  min-height: 150px;
+  display: block;
+  line-height: 150px;
+}
+.galleryitem p {
+  max-width: 150px;
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+.galleryitem p a {
+  background-color: #eef;
+  display:table-cell;
+  margin: 2px;
+  padding: 3px;
+  color: #035;
+  height: 4em;
+  width: 150px;
+  vertical-align: middle;
+}
+.galleryitem p a:hover {
+  text-decoration: none;
+}
+.galleryitem p.new a {
+  background-color: #efe;
+}
+.galleryitem progress {
+  height: 15px;
+  margin: 23px 0px;
+  width: 130px;
+}
+.pagination .page {
+  display: inline-block;
+  font-size: 22px;
+ padding:0px 1px;
+  vertical-align: middle;
+}
+.pagination .prev {
+  display: inline-block;
+  padding: 0px 3px;
+  vertical-align: middle;
+}
+.pagination .next {
+  display: inline-block;
+  padding: 0px 3px;
+  vertical-align: middle;
+}
+.pagination .disabled {
+     color: #999;
+}
+table.bioitem {
+  border: solid #cce 2px;
+  margin: 5px;
+  padding: 6px;
+  min-width: 162px;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+}
+table.bioitem td {
+  height: 0px;
+}
+table.bioitem td.img {
+  width: 0px;
+  padding-right: 10px;
+}
+table.bioitem p {
+  text-align: left;
+}
+table.bioitem p.bio {
+  height: 110px;
+  width: 100%;
+}
+table.bioitem p a {
+  background-color: #eef;
+  display: block;
+  margin: 2px;
+  padding: 6px 3px 6px 6px;
+  font-size: 18px;
+  color: #157;
+}
+
+.galleryitem div.link input {
+  max-width: 150px;
+  max-height: 150px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.galleryitem div.link {
+  min-width: 150px;
+  min-height: 150px;
+  display: block;
+  line-height: 150px;
+}
+.galleryitem div.input input {
+  max-width: 140px;
+  text-align: center;
+}
+.galleryitem div.input {
+  background-color: #EEF;
+  display: table-cell;
+  margin: 2px;
+  padding: 3px;
+  color: #035;
+  height: 4em;
+  width: 150px;
+  vertical-align: middle;
+}
+
+.item {
+  padding: 10px 20px 0px;
+  margin-top: 10px;
+  margin-left:-20px;
+  margin-right:-20px;
+  color:#333;
+}
+
+.item form {
+  display: block;
+}
+
+.item .image {
+  background-color: #333;
+  background-image: linear-gradient(to bottom, #2E2A2E 0%, #1E1E1E 35%);
+  padding: 20px 35px;
+  line-height: 0px;
+  text-align:center;
+  border-radius: 10px 10px 0 0;
+}
+
+.item .image img {
+  background-color: white;
+  max-width: 780px;
+  margin: 0px;
+  border:none;
+  border-radius: 4px;
+}
+
+.item .info {
+  background-color: #fff;
+  border: 1px #ddd solid;
+}
+.item .desc {
+  width: 100%;
+  padding: 6px 20px;
+  min-height: 200px;
+}
+.item .side {
+  border-left: 1px #ddd solid;
+  text-align: center;
+  vertical-align: top;
+  overflow:hidden;
+  padding: 6px 10px;
+}
+.item .side h2 {
+  background-color: #eee;
+}
+.item form .side h2 {
+  background-color: #fff;
+  border-width: 0px;
+}
+.item .info textarea {
+  width: 100%;
+  height: 260px;
+}
+.item .info p.infoerr textarea {
+  border: 2px #d00 solid;
+}
+.item div.desc,
+.item div.side {
+  display: table-cell;
+}
+.item div.info h2 input {
+  width: 97%;
+  width: calc(100% - 22px);
+  font-size: 14pt;
+  padding: 3px;
+  margin: 5px;
+}
+.item .title {
+  background-color: #eee;
+  border-width: 1px #ddd solid;
+  padding: 16px 20px 10px;
+}
+.item h2 {
+  font-family: CallunaRegular,Calluna,"Trebuchet MS",Ubuntu,"Liberation Sans",FreeSans,sans-serif;
+  font-size: 17pt;
+  color:#333333;
+  border: 0px;
+  margin: 0px;
+}
+.item div.by {
+  font-size: 70%;
+  padding-left: 4px;
+  white-space: nowrap;
+}
+
+.item .side .link {
+  display: block;
+  position: relative;
+  top: -44px;
+  left: 170px;
+  height: 0px;
+}
+
+.item .side h2 {
+  font-size:18px !important;
+  font-weight: bold;
+  padding: 6px 6px 4px;
+  width:205px;
+  white-space:wrap;
+  line-height:22px;
+  border: 1px #ddd solid;
+}
+.item .side h1.error {
+  background-color: #e66;
+}
+.item .side input,
+.item .side select {
+  width: 200px;
+}
+.item .side dl{
+  font-size:15px;
+  line-height:17px;
+  width:100%;
+  overflow:hidden;
+  padding:8px 12px;
+  margin:0px 0px 7px 0px;
+}
+.item .side dd{
+  float:left;
+  margin:0px;
+}
+.item .side dt{
+  padding:0px;
+  clear:left;
+  float:left;
+  margin-right:8px;
+  color:#888;
+}
+
+.empty a.link > img {
+  opacity: 0.5;
+}
+.unpublished {
+  border-color: #e58;
+}
+.voted {
+  border-color: #5e4;
+}
+.unpublished .label {
+  background-color: #fdd;
+  border-radius: 0px 0px 8px 8px;
+  border: 2px #e58 solid;
+  text-align: center !important;
+}
+.unpublished .label a {
+  height: 0.5em;
+  padding: 3px;
+  line-height: 100%;
+}
+.galleryitem .label {
+  width: 148px;
+  visibility: hidden;
+  position: absolute;
+  text-align: right;
+}
+.galleryitem:hover .label {
+  visibility: visible;
+}
+.galleryitem p.blank {
+  width: 50px;
+  text-align: center;
+  margin-left: -2px;
+  border-width: 0px 2px 2px;
+  border-style: solid;
+  border-color: #CCE;
+  border-radius: 0px 0px 8px 8px;
+  padding: 2px 0px;
+  background-color: #EEF;
+}
+.galleryitem .label img {
+  position: relative;
+  right: -4px;
+  float: left;
+}
+.galleryitem .label img.l {
+  float: right;
+  left: -4px;
+}
+
+.item .text {
+  border: 2px solid #fff;
+  line-height: 16px;
+}
+.item .text code {
+  white-space: pre-wrap;
+  color: black;
+  font-size: 140%;
+}
+.item .text ol {
+  font-family: "Liberation Mono","Ubuntu Mono",mono;
+  border: 1px dotted #eee;
+  background: #fff;
+  color: #FFF;
+  overflow: hidden;
+  padding: 7px 0px 7px 3rem;
+}
+.item .text li {
+  color: #aaa;
+  background-color: white;
+  border-bottom: 1px dotted #eee;
+  font-size: 75%;
+}
+.edit .image img {
+  max-width: 350px;
+  max-height: 150px;
+}
+.edit .text {
+  overflow: hidden;
+  max-height: 200px;
+  border-bottom: 2px dashed #aaf;
+}
+.item .video iframe {
+  width: 780px;
+  height: 540px;
+}
+.item .upload {
+  border-radius: 0px;
+  background-image: none;
+  padding: 0px;
+}
+.item .padding {
+  padding: 5px;
+}
+#upload {
+  padding: 10px;
+  background-color: #333;
+  border-bottom: 5px white solid;
+}
+#upload textarea {
+  width: 100%;
+  min-height: 350px;
+}
+#upload {
+  color: transparent;
+}
+#upload input {
+  color: white;
+}
+#upload a {
+  display: none;
+}
+.errors {
+  background-color: white;
+  border: 2px #800 solid;
+  padding: 4px;
+  color: #800;
+}
+#item-title {
+  display: none;
+}
+
+.license img {
+  padding: 8px;
+}
+
+#item-footer {
+  background-color: #f8f8f8;
+  border: 1px #ddd solid;
+  border-top: 0px;
+  border-radius: 0px 0px 8px 8px;
+  padding: 4px 10px;
+  min-height: 26px;
+}
+#item-footer form {
+  display: block;
+}
+#item-footer input,
+#item-footer button {
+  float: right;
+}
+
+.info .tog {
+  background-color: white;
+  float: right;
+  display: inline-block;
+  border: 1px #ddd solid;
+  border-radius: 8px;
+  margin-left: 8px;
+}
+.info .tog a {
+  border-right: 1px #ddd solid;
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 8px 0px 0px 8px;
+  background-repeat: no-repeat;
+  background-position: 0px -32px;
+}
+.info .single a {
+  border-radius: 8px !important;
+}
+.info .tog a:hover {
+  text-decoration: none;
+  background-position: 0px 0px;
+}
+.info .tog a.disabled {
+  background-position: 0px -32px;
+  opacity: 0.5;
+  cursor: default;
+}
+.info .tog p {
+  margin: 0px;
+  padding: 4px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 3px;
+  font-family: verdana, sans-serif;
+  min-width: 32px;
+  text-align: center;
+}
+div#view a {
+  background-image: url("../images/icons/view.svg");
+}
+div#download a {
+  background-image: url("../images/icons/download.svg");
+}
+div#vote a {
+  background-image: url("../images/icons/vote.svg");
+}
+div#flag a {
+  background-image: url("../images/icons/flag.svg");
+}
+div.tog a.remove {
+  background-position: -32px -32px;
+}
+div.tog a.remove:hover {
+  background-position: -32px 0px;
+}
+

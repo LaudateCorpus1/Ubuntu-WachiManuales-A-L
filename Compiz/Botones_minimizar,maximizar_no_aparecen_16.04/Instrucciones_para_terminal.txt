@@ -1,0 +1,9 @@
+
+
+http://askubuntu.com/questions/294938/close-minimize-maximize-button-not-appearing
+
+
+Poner en la terminal (es más rapido):
+
+gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close,' 
+

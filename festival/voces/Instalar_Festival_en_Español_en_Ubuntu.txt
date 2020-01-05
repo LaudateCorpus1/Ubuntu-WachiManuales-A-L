@@ -1,0 +1,62 @@
+
+Instalar Festival en Español en Ubuntu
+http://hojsoftware.blogspot.com/2009/11/instalar-festival-en-espanol-en-ubuntu.html
+
+
+sudo apt-get install festival festival-doc festvox-kdlpc16k festvox-ellpc11k
+
+voces:
+festvox-kdlpc16k -> Ingles
+festvox-ellpc11k -> Español
+
+para probarlo solo ejecutamos
+
+festival --language spanish
+
+esto nos mostrara algo como:
+
+Festival Speech Synthesis System 1.96:beta July 2004
+Copyright (C) University of Edinburgh, 1996-2004. All rights reserved.
+For details type `(festival_warranty)'
+festival>
+
+para probar como se escucha solo escribe:
+
+festival>(SayText "hola como estas, soy una maquina")
+festival>(quit)
+
+
+Mejorando las voces 
+Descargar de:
+
+http://repositorio.canaima.softwarelibre.gob.ve/pool/usuarios/f/
+
+
+En la carpeta /usr/share/festival/voices/spanish encontraremos estas dos carpetas:
+
+JuntaDeAndalucia_es_pa_diphone  JuntaDeAndalucia_es_sf_diphone
+
+La primera es la voz masculina y la segunda la voz femenina.
+
+Modificamos la configuración de Festival para usar la voz femenina:
+
+nano /usr/share/festival/festival.scm
+
+y antes de la ultima línea del archivo pegamos:
+
+;(language__spanish) 
+(set! voice_default 'voice_JuntaDeAndalucia_es_sf_diphone) 
+    (define (tts_textasterisk string mode) 
+    "(tts_textasterisk STRING MODE) 
+    Apply tts to STRING. This function is specifically designed for 
+    use in server mode so a single function call may synthesize the string. 
+    This function name may be added to the server safe functions." 
+    (let ((wholeutt (utt.synth (eval (list 'Utterance 'Text string))))) 
+    (utt.wave.resample wholeutt 8000) 
+    (utt.wave.rescale wholeutt 5) 
+    (utt.send.wave.client wholeutt)))
+
+Guardamos los cambios y hacemos nuestras pruebas. Notarán un mejoramiento de la calidad.
+
+Fuente:
+https://www.voztovoice.org/?q=node/213

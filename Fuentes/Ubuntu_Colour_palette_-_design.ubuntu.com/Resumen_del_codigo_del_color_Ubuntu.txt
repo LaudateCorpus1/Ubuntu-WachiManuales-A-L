@@ -1,0 +1,19 @@
+
+Colour palette | Ubuntu Design
+http://design.ubuntu.com/brand/colour-palette
+
+Naranja de Ubuntu
+Ubuntu orange
+Screen
+HEX #E95420
+Print
+C0 M79 Y100 K0 (Pantone 1665) 
+
+
+Berenjena Clara
+Light aubergine
+Screen
+HEX #77216F
+Print
+C60 M100 Y15 K5
+Pantone 512

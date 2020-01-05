@@ -1,0 +1,5 @@
+kde - Get "recent files" in global file manager (Dolphin?) - Unix & Linux Stack Exchange
+https://unix.stackexchange.com/questions/220145/get-recent-files-in-global-file-manager-dolphin
+
+
+You can add this entry manually: right click on the Places, choose Add Entry, enter this in Location field: recentdocuments:/// and save it. It should be available now in all KDE/Qt file dialogs.

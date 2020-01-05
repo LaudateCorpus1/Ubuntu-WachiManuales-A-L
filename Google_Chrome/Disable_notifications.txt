@@ -1,0 +1,4 @@
+
+http://www.makeuseof.com/tag/how-to-disable-facebook-and-other-notifications-in-chrome/
+
+Meanwhile, if you want to block your phone from ever receiving notifications through Chrome, you can open the Chrome menu and go to Settings > Site Settings > Notifications and select Blocked.	

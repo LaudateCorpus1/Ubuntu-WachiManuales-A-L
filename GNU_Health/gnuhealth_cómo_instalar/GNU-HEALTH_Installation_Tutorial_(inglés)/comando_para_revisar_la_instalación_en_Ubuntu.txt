@@ -1,0 +1,5 @@
+
+
+sudo apt-get install build-essential python-dev python-pip libxml2-dev libxslt1-dev libldap2-dev libsasl2-dev python-ldap bsdtar python-imaging python2.7-cracklib postgresql postgresql-server-dev-all libjpeg-dev
+
+basado en: https://en.wikibooks.org/wiki/GNU_Health/Operating_System-Specific_Notes#Ubuntu 

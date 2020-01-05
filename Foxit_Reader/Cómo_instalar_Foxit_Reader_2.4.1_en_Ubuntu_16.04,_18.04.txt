@@ -1,0 +1,40 @@
+
+
+Cómo instalar Foxit Reader 2.4.1 en Ubuntu 16.04, 18.04
+RESUMEN: 
+El famoso visor de PDF Foxit Reader tiene una versión para Linux, tiene la ventana de que tiene multiples pestañas lo cual no se va a encontrar en ninguno de los programas lectores de PDF de Linux, sin embargo está sólo en inglés y no es tan completo como el de Windows, pero como a mi me interesan las pestañas multiples e igual no uso tantas cosas de los PDF pues lo he instalado. Y la mejor manera de instalarlo, la más fácil de descargar e instalar es esta
+
+
+INSTALACIÓN: 
+Escoja su versión según sus sistema sea de 64 o 32 bits. Copie y pegue en la terminal ejecutando uno por uno de los cuatro comandos:
+
+
+
+32 Bits
+
+wget http://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/linux/2.x/2.4/en_us/FoxitReader2.4.1.0609_Server_x86_enu_Setup.run.tar.gz
+tar xzvf FoxitReader*.tar.gz
+sudo chmod a+x FoxitReader*.run
+sudo ./FoxitReader.*.run
+
+
+
+64 Bits
+
+wget http://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/linux/2.x/2.4/en_us/FoxitReader2.4.1.0609_Server_x64_enu_Setup.run.tar.gz
+tar xzvf FoxitReader*.tar.gz
+sudo chmod a+x FoxitReader*.run
+sudo ./FoxitReader.*.run
+
+
+INTERFAZ GRAFICA 
+Acepte 
+
+
+
+
+
+Esta entreda es una mejora de las siguientes CONSULTAS:
+http://www.elinuxbook.com/install-foxit-reader-foxit-pdf-reader-in-ubuntu-16-04-a-best-free-pdf-reader-for-linux/
+http://sourcedigit.com/20670-how-to-install-foxit-reader-in-ubuntu-using-terminal/
+https://www.linuxbabe.com/desktop-linux/install-foxit-pdf-reader-ubuntu-16-04

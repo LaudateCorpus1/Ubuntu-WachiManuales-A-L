@@ -1,0 +1,11 @@
+
+
+breeze-icon-theme dolphin4 icoutils kate-data katepart kde-runtime kde-runtime-data kde-style-breeze kde-style-breeze-qt4
+  kdelibs-bin kdelibs5-data kdelibs5-plugins kdoctools libattica0.4 libcanberra-pulse libdbusmenu-qt2 libdlrestrictions1
+  libgpgme++2v5 libkactivities6 libkatepartinterfaces4 libkcmutils4 libkde3support4 libkdeclarative5 libkdecore5 libkdesu5 libkdeui5
+  libkdewebkit5 libkdnssd4 libkemoticons4 libkf5style5 libkfile4 libkhtml5 libkio5 libkjsapi4 libkjsembed4 libkmediaplayer4
+  libknewstuff3-4 libknotifyconfig4 libkntlm4 libkonq-common libkonq5-templates libkonq5abi1 libkparts4 libkpty4 libkrosscore4
+  libktexteditor4 libkxmlrpcclient4 libnl-route-3-200 libntrack-qt4-1 libntrack0 libphonon4 libplasma3 libpolkit-qt-1-1 libqca2
+  libqca2-plugins libqt4-qt3support libsolid4 libstreamanalyzer0v5 libstreams0v5 libthreadweaver4 ntrack-module-libnl-0 phonon
+  phonon-backend-gstreamer phonon-backend-gstreamer-common plasma-scriptengine-javascript
+

@@ -1,0 +1,11 @@
+Install Brackets in Ubuntu via PPA
+http://www.webupd8.org/2013/11/install-brackets-in-ubuntu-via-ppa-open.html
+
+
+To add the Brackets PPA and install the application in Ubuntu (and derivatives), use the following commands:
+sudo add-apt-repository ppa:webupd8team/brackets
+sudo apt-get update
+sudo apt-get install brackets
+
+If you don't want to use our PPA or don't use Ubuntu, download Brackets from HERE
+http://download.brackets.io/

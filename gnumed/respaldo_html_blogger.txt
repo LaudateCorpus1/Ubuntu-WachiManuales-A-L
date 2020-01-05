@@ -1,0 +1,194 @@
+
+
+<b><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"></span></b><br />
+<b><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span></b>
+<b><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><a href="http://1.bp.blogspot.com/-efyLJ53EF3A/V_Jl7LWoFaI/AAAAAAAAEic/llbYc6HC4nEEKdvkf-9Nh2KcfzlPTpgvwCK4B/s1600/01%2Bgnumed%2Bdemo.png" imageanchor="1"><img border="0" height="517" src="https://1.bp.blogspot.com/-efyLJ53EF3A/V_Jl7LWoFaI/AAAAAAAAEic/llbYc6HC4nEEKdvkf-9Nh2KcfzlPTpgvwCK4B/s640/01%2Bgnumed%2Bdemo.png" width="640" /></a></span></b><br />
+<b><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span></b>
+<b><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">INTRODUCCIÓN</span></b><br />
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">Según Wikipedia GNUmed es un gestor de historia clínica electrónica libre. Este programa puede archivar también historias clinicas escaneadas o <a href="https://es.wikipedia.org/wiki/Metadato" target="_blank">metadatos</a><span style="background-color: white; color: #252525; font-size: 14px; line-height: 22.4px;">&nbsp;(1)</span></span><br />
+<div style="background-color: white; color: #252525; font-size: 14px; line-height: 22.4px; margin-bottom: 0.5em; margin-top: 0.5em;">
+<b style="line-height: 22.4px;"><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span></b></div>
+<div style="background-color: white; color: #252525; font-size: 14px; line-height: 22.4px; margin-bottom: 0.5em; margin-top: 0.5em;">
+<b style="line-height: 22.4px;"><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">TURORIAL HECHO EN UBUNTU STUDIO 16.04&nbsp;</span></b></div>
+<div style="background-color: white; color: #252525; font-size: 14px; line-height: 22.4px; margin-bottom: 0.5em; margin-top: 0.5em;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">Este tutorial está hecho para que usted pueda adaptar la instalación de acuerdo al sistema operativo Linux que use.</span></div>
+<div style="background-color: white; color: #252525; font-size: 14px; line-height: 22.4px; margin-bottom: 0.5em; margin-top: 0.5em;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><b>Nota: </b>UbuntuStudio usa los paquetes de Ubuntu para poder existir, por lo tanto este tutorial debe funcionar para todos los <a href="http://www.ubuntu.com/about/about-ubuntu/flavours" target="_blank">derivados oficiales de Ubuntu</a>.&nbsp;Así que aquí mencionaré la instalación en Ubuntu</span></div>
+<div style="background-color: white; color: #252525; font-size: 14px; line-height: 22.4px; margin-bottom: 0.5em; margin-top: 0.5em;">
+<b style="line-height: 22.4px;"><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span></b></div>
+<div style="background-color: white; color: #252525; font-size: 14px; line-height: 22.4px; margin-bottom: 0.5em; margin-top: 0.5em;">
+<b style="line-height: 22.4px;"><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">RESUMEN</span></b></div>
+<div style="background-color: white; color: #252525; font-size: 14px; line-height: 22.4px; margin-bottom: 0.5em; margin-top: 0.5em;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif; line-height: 22.4px;">Mi primo Paco me dijo que si le podía ayudar a hacer funcionar GNUmed en Linux Mint 17 pues no podía hacerlo funcionar con la base de datos en la misma computadora (el programa también puede conectarse a una base de datos en la nube, pero creo entender según la traducción que es solo como demostración. - Esto lo pongo al final del post -), entonces yo busqué y encontré toda la información necesaria en esta blog:</span></div>
+<div style="background-color: white; color: #252525; font-size: 14px; line-height: 22.4px; margin-bottom: 0.5em; margin-top: 0.5em;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span></div>
+<h3 class="post-title entry-title" itemprop="name" style="background-color: white; color: #333333; font-size: 18px; font-stretch: normal; font-weight: normal; margin: 0px; position: relative;">
+<i><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">Conectar a la base de datos de GNUmed localmente en Ubuntu 10.10</span></i></h3>
+<div style="background-color: white; margin-bottom: 0.5em; margin-top: 0.5em;">
+<span style="color: #252525; font-family: sans-serif;"><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif; font-size: 14px; line-height: 22.4px;"><a href="http://tonatiuhsanjulian.blogspot.com/2011/04/conectar-la-base-de-datos-de-gnumed.html">http://tonatiuhsanjulian.blogspot.com/2011/04/conectar-la-base-de-datos-de-gnumed.html</a></span></span></div>
+<div style="background-color: white; color: #252525; font-size: 14px; line-height: 22.4px; margin-bottom: 0.5em; margin-top: 0.5em;">
+<b><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span></b></div>
+<div style="background-color: white; color: #252525; font-size: 14px; line-height: 22.4px; margin-bottom: 0.5em; margin-top: 0.5em;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">Sin embargo este programa no es que se lo instala y ya funciona sino que hay que configurarlo, así que haré un video y aquí pondré un resumen de instalación, pero es necesario ir al blog mencionado para leer más sobre el programa u otra cosa que se necesite saber</span></div>
+<div style="background-color: white; color: #252525; font-size: 14px; line-height: 22.4px; margin-bottom: 0.5em; margin-top: 0.5em;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span></div>
+<div style="background-color: white; color: #252525; font-size: 14px; line-height: 22.4px; margin-bottom: 0.5em; margin-top: 0.5em;">
+<b><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">INSTALACIÓN</span></b></div>
+<div style="background-color: white; color: #252525; font-size: 14px; line-height: 22.4px; margin-bottom: 0.5em; margin-top: 0.5em;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">Ponga en la terminal el siguiente comando e instale gnumed (son como 700MB en mi PC por todas las dependencias que triene)</span></div>
+<pre class="linux-code" style="background: url(&quot;https://lh3.googleusercontent.com/-E2WZ-k5ArbU/VnnAeX-_qmI/AAAAAAAABDU/i1aaUUYLZh8/s540-Ic42/lincodewachin.gif&quot;) 0px 0px no-repeat scroll rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; color: #616161; font-size: 14.85px; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 28px 10px 10px; z-index: 10000;"><code><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">sudo apt-get install gnumed-client gnumed-server</span></code></pre>
+<div style="background-color: white; color: #252525; font-size: 14px; line-height: 22.4px; margin-bottom: 0.5em; margin-top: 0.5em;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><b>Nota:</b>&nbsp;El paquete gnumed-server sirve para poder usar el programa en la misma computadora</span></div>
+<div style="background-color: white; color: #252525; font-size: 14px; line-height: 22.4px; margin-bottom: 0.5em; margin-top: 0.5em;">
+<b><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span></b></div>
+<div style="background-color: white; color: #252525; font-size: 14px; line-height: 22.4px; margin-bottom: 0.5em; margin-top: 0.5em;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><b style="background-color: transparent; line-height: 22.4px;">INSTALACIÓN&nbsp;</b><b>OPCIONAL</b></span></div>
+<div style="background-color: white; color: #252525; font-size: 14px; line-height: 22.4px; margin-bottom: 0.5em; margin-top: 0.5em;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">En caso de que usted quiera tener la ultima versión instale así (ponga uno por uno estos comandos en la terminal):</span></div>
+<pre class="linux-code" style="background: url(&quot;https://lh3.googleusercontent.com/-E2WZ-k5ArbU/VnnAeX-_qmI/AAAAAAAABDU/i1aaUUYLZh8/s540-Ic42/lincodewachin.gif&quot;) 0px 0px no-repeat scroll rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 28px 10px 10px; z-index: 10000;"><span style="color: #616161; font-family: &quot;ubuntubeta mono&quot; , &quot;ubuntu mono&quot; , &quot;courier new&quot; , &quot;courier&quot; , monospace;"><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif; line-height: 22.4px;">sudo add-apt-repository ppa:gnumed/ppa
+sudo apt-get update
+sudo apt-get install gnumed-client gnumed-server </span></span></pre>
+<div style="background-color: white; color: #252525; font-size: 14px; line-height: 22.4px; margin-bottom: 0.5em; margin-top: 0.5em;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span></div>
+<div style="background-color: white; color: #252525; font-size: 14px; line-height: 22.4px; margin-bottom: 0.5em; margin-top: 0.5em;">
+<b><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">CONFIGURAR POSTGRESQL</span></b></div>
+<div style="background-color: white; color: #252525; font-size: 14px; line-height: 22.4px; margin-bottom: 0.5em; margin-top: 0.5em;">
+<span style="color: #333333; font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif; font-size: 14.85px; line-height: 20.79px;">Es necesario configurar la base de datos PostgreSQL para que el programa funcione localmente (en la misma PC y no usar la base de datos en la nube)</span></div>
+<div style="background-color: white; color: #252525; font-size: 14px; line-height: 22.4px; margin-bottom: 0.5em; margin-top: 0.5em;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif; line-height: 22.4px;"><br /></span></div>
+<div style="background-color: white; color: #252525; font-size: 14px; line-height: 22.4px; margin-bottom: 0.5em; margin-top: 0.5em;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif; line-height: 22.4px;">Editar el archivo:</span></div>
+<div style="background-color: white; margin-bottom: 0.5em; margin-top: 0.5em;">
+<span style="color: #252525; font-family: sans-serif;"><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif; font-size: 14px; line-height: 22.4px;"><b>pg_hba.conf</b></span></span></div>
+<div style="background-color: white; color: #252525; font-size: 14px; line-height: 22.4px; margin-bottom: 0.5em; margin-top: 0.5em;">
+<span style="color: #333333; font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif; font-size: 14.85px; line-height: 20.79px;">En el blog mencionado está esta instrucción para Ubuntu 10.10:</span></div>
+<div style="background-color: white; color: #252525; font-size: 14px; line-height: 22.4px; margin-bottom: 0.5em; margin-top: 0.5em;">
+<i style="color: #333333; font-size: 14.85px; line-height: 20.79px;"><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span></i></div>
+<div style="background-color: white; color: #252525; font-size: 14px; line-height: 22.4px; margin-bottom: 0.5em; margin-top: 0.5em;">
+<i style="color: #333333; font-size: 14.85px; line-height: 20.79px;"><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">gksu gedit /etc/postgresql/8.4/main/pg_hba.conf</span></i></div>
+<div style="background-color: white; color: #252525; font-size: 14px; line-height: 22.4px; margin-bottom: 0.5em; margin-top: 0.5em;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span></div>
+<div style="background-color: white; color: #252525; font-size: 14px; line-height: 22.4px; margin-bottom: 0.5em; margin-top: 0.5em;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">Pero para Ubuntu 16.04 ya no está esa carpeta 8.4 sino que el programa ha sido actualizado y ahora está la versión 9.5, así que usted debe copiar la nueva ruta y cambiarla en el comando, para hacerlo vea el siguiente video:</span><br />
+<div class="separator" style="clear: both; text-align: center;">
+<iframe allowfullscreen="" class="YOUTUBE-iframe-video" data-thumbnail-src="https://i.ytimg.com/vi/lSc4rL4RRV8/0.jpg" frameborder="0" height="300" src="https://www.youtube.com/embed/lSc4rL4RRV8?feature=player_embedded" width="500"></iframe></div>
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span></div>
+<div style="background-color: white; margin-bottom: 0.5em; margin-top: 0.5em;">
+<div style="color: #252525; font-size: 14px; line-height: 22.4px;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">Configurar gnumed con Postgresql <b>(necesitas entrar en esta pagina)</b></span></div>
+<span style="color: #252525; font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><span style="font-size: 14px; line-height: 22.4px;"><a href="http://tonatiuhsanjulian.blogspot.com/2011/04/configura-gnumed-en-ubuntu-1004.html">http://tonatiuhsanjulian.blogspot.com/2011/04/configura-gnumed-en-ubuntu-1004.html</a></span></span></div>
+<div style="background-color: white; margin-bottom: 0.5em; margin-top: 0.5em;">
+<div style="color: #252525; font-size: 14px; line-height: 22.4px;">
+<div style="color: #252525; font-size: 14px; line-height: 22.4px;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span></div>
+<div style="color: #252525; font-size: 14px; line-height: 22.4px;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">- Texto a reemplazar (le puse como aparece en Ubuntu 16.04)</span></div>
+<div style="color: #252525; font-size: 14px; line-height: 22.4px;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span></div>
+<div style="color: #252525; font-size: 14px; line-height: 22.4px;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><span style="color: #333333; font-family: &quot;arial&quot; , &quot;tahoma&quot; , &quot;helvetica&quot; , &quot;freesans&quot; , sans-serif; font-size: 14.85px; line-height: 20.79px;">&nbsp; &nbsp; &nbsp; Introduce este texto:</span></span></div>
+<blockquote style="color: #333333; font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif; font-size: 14.85px; line-height: 20.79px;">
+<pre style="font-family: &quot;Courier New&quot;, Courier, monospace;"><i># allow anyone knowing the proper password to
+# log into our GNUmed databases
+local   samegroup      +gm-logins                    md5</i></pre>
+</blockquote>
+<pre style="color: #333333; font-family: inherit; font-size: 14.85px; line-height: 20.79px;">Justo debajo de:</pre>
+<div style="color: #252525; font-size: 14px; line-height: 22.4px;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"></span></div>
+<blockquote>
+<pre><span style="color: #333333; font-family: &quot;courier new&quot; , &quot;courier&quot; , monospace;"><span style="font-size: 14.85px; line-height: 20.79px;"><i># TYPE  DATABASE   USER      ADDRESS         METHOD</i></span></span></pre>
+</blockquote>
+<div style="color: #252525; font-size: 14px; line-height: 22.4px;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span></div>
+</div>
+<div style="color: #252525; font-size: 14px; line-height: 22.4px;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">- Comando para Reiniciar&nbsp;</span><span style="line-height: 22.4px;">Postgresql</span><span style="line-height: 22.4px;">:</span></span></div>
+<div style="color: #252525; font-size: 14px; line-height: 22.4px;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"></span></div>
+<pre class="linux-code" style="background: url(&quot;https://lh3.googleusercontent.com/-E2WZ-k5ArbU/VnnAeX-_qmI/AAAAAAAABDU/i1aaUUYLZh8/s540-Ic42/lincodewachin.gif&quot;) 0px 0px no-repeat scroll rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; color: #616161; font-size: 14.85px; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 28px 10px 10px; z-index: 10000;"><code><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">sudo /etc/init.d/postgresql restart</span></code></pre>
+<div style="color: #252525; font-size: 14px; line-height: 22.4px;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif; line-height: 22.4px;">- Comando para crear la base de datos:</span></div>
+</div>
+<div style="background-color: white; color: #252525; font-size: 14px; line-height: 22.4px; margin-bottom: 0.5em; margin-top: 0.5em;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"></span><br />
+<pre class="linux-code" style="background: url(&quot;https://lh3.googleusercontent.com/-E2WZ-k5ArbU/VnnAeX-_qmI/AAAAAAAABDU/i1aaUUYLZh8/s540-Ic42/lincodewachin.gif&quot;) 0px 0px no-repeat scroll rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; color: #616161; font-size: 14.85px; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 28px 10px 10px; z-index: 10000;"><code><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">sudo gm-bootstrap_server</span></code></pre>
+</div>
+<div style="background-color: white; color: #252525; font-size: 14px; line-height: 22.4px; margin-bottom: 0.5em; margin-top: 0.5em;">
+<span style="line-height: 22.4px;">Listo, eso es todo para instalarlo y hacerlo funcionar.</span></div>
+<div style="background-color: white; margin-bottom: 0.5em; margin-top: 0.5em;">
+<div style="color: #252525; font-size: 14px; line-height: 22.4px;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span>
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><b>AÑADIR USUARIOS (2)</b></span></div>
+<div style="color: #252525; font-size: 14px; line-height: 22.4px;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">Para añadirse usted como doctor de clic en :</span></div>
+<div style="color: #252525; font-size: 14px; line-height: 22.4px;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span>
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">GNUmed/Usuarios/Añadir Usuarios</span></div>
+<div style="color: #252525; font-size: 14px; line-height: 22.4px;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span>
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><a href="http://2.bp.blogspot.com/-mRK_KVNo9Vw/V_JmJSns1YI/AAAAAAAAEik/2zqqShe7sSQL0pjidpG7JFh_j71ASSPIwCK4B/s1600/02%2Bgnumed%2Ba%25C3%25B1adir%2Busuarios.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-mRK_KVNo9Vw/V_JmJSns1YI/AAAAAAAAEik/2zqqShe7sSQL0pjidpG7JFh_j71ASSPIwCK4B/s1600/02%2Bgnumed%2Ba%25C3%25B1adir%2Busuarios.png" /></a></span></div>
+<div style="color: #252525; font-size: 14px; line-height: 22.4px;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><b>Nota:</b> Luego de hacer esto, al iniciar el programa usted tendrá que ingresar con su usuario</span>
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><b>AÑADIR PACIENTES</b></span></div>
+<div style="color: #252525; font-size: 14px; line-height: 22.4px;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">Para añadir pecientes de clic en:</span></div>
+<div style="color: #252525; font-size: 14px; line-height: 22.4px;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span>
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">Person/Registre una persona</span></div>
+<div style="color: #252525; font-size: 14px; line-height: 22.4px;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span>
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><a href="http://4.bp.blogspot.com/-mCu-BqgAFms/V_JooUwGGXI/AAAAAAAAEi0/h4-h0lTW8qMcEfb4vt4-LEwP2ZzJLlmIgCK4B/s1600/03%2BA%25C3%25B1adir%2Bpacientes.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-mCu-BqgAFms/V_JooUwGGXI/AAAAAAAAEi0/h4-h0lTW8qMcEfb4vt4-LEwP2ZzJLlmIgCK4B/s1600/03%2BA%25C3%25B1adir%2Bpacientes.png" /></a></span></div>
+<div style="color: #252525; font-size: 14px; line-height: 22.4px;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span></div>
+<div style="color: #252525; font-size: 14px; line-height: 22.4px;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><b>AYUDA DEL PROGRAMA</b></span></div>
+<div style="color: #252525; font-size: 14px; line-height: 22.4px;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">La ayuda en el programa no está en español (si usted sabe es bueno que lea la Wiki, el manual, la ayuda del Menú).&nbsp;</span><br />
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">Hay una parte importante de leer, sobre la base de datos online (la primera opción del programa cuando uno lo abre)</span></div>
+<div style="color: #252525; font-size: 14px; line-height: 22.4px;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span></div>
+<div style="color: #252525; font-size: 14px; line-height: 22.4px;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><a href="http://1.bp.blogspot.com/-1nFfQnj4eCw/V_JuubmXrvI/AAAAAAAAEjE/MgwDb6p9_RoPH9MEwmng2FhyBzNmwOFVwCK4B/s1600/04%2BAyuda%2B-%2BAcerca%2Bde%2Bla%2Bbase%2Bde%2Bdatos.png" imageanchor="1"><img border="0" src="https://1.bp.blogspot.com/-1nFfQnj4eCw/V_JuubmXrvI/AAAAAAAAEjE/MgwDb6p9_RoPH9MEwmng2FhyBzNmwOFVwCK4B/s1600/04%2BAyuda%2B-%2BAcerca%2Bde%2Bla%2Bbase%2Bde%2Bdatos.png" /></a></span></div>
+<div style="color: #252525; font-size: 14px; line-height: 22.4px;">
+<br /></div>
+<div style="color: #252525; font-size: 14px; line-height: 22.4px;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><a href="http://3.bp.blogspot.com/-IsNqBhM9kuU/V_JvEhSgR9I/AAAAAAAAEjM/nmYSg1erfGMFJDuqqZSjdUxoGP9GMVRnwCK4B/s1600/05%2BAcerca%2Bde%2Bla%2Bbase%2Bde%2Bdatos.png" imageanchor="1"><img border="0" src="https://3.bp.blogspot.com/-IsNqBhM9kuU/V_JvEhSgR9I/AAAAAAAAEjM/nmYSg1erfGMFJDuqqZSjdUxoGP9GMVRnwCK4B/s1600/05%2BAcerca%2Bde%2Bla%2Bbase%2Bde%2Bdatos.png" /></a></span></div>
+<div style="color: #252525; font-size: 14px; line-height: 22.4px;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span></div>
+<div style="color: #252525; font-size: 14px; line-height: 22.4px;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">Mi traducción es la siguiente:</span></div>
+<div style="color: #252525; font-size: 14px; line-height: 22.4px;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span></div>
+<span style="color: #252525; font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><span style="font-size: 14px; line-height: 22.4px;">"Bienvenido a la base de datos de la Empresa del Departamento Médico GNUmed USS.</span></span><br />
+<span style="color: #252525; font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><span style="font-size: 14px; line-height: 22.4px;">Esta base de tados es de la instalación por defecto que intenta hacer una demostración del cliente GNUmed. Este puede correr en un servidor publico accesible de internet. Por lo tanto cualquier dato que tu entres aquí es muy probable que sea eliminado cuando la base de datos sea actualizada, también se pone en riesgo su divulgación ilícita.</span></span><br />
+<br />
+<span style="color: #252525; font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><span style="font-size: 14px; line-height: 22.4px;">NO USE ESTA BASE DE DATOS PARA LA CONSERVACIÓN REAL DE DATOS DEL PACIENTE."</span></span><br />
+<div style="color: #252525; font-size: 14px; line-height: 22.4px;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span></div>
+<div style="color: #252525; font-size: 14px; line-height: 22.4px;">
+<div style="color: #252525; font-size: 14px; line-height: 22.4px;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><b>BACKUP (3)</b></span></div>
+<div style="color: #252525; font-size: 14px; line-height: 22.4px;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">Bueno por ultimo dejo aquí indicado sobre el link de la tercera consulta que se refiere a hacer respaldos, lo que pasa es que pienso que ya que este programa es para médicos es muy importante saber sobre eso, sin embargo sólo lo dejo como consulta</span></div>
+<div style="color: #252525; font-size: 14px; line-height: 22.4px;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span></div>
+<br /></div>
+</div>
+<div style="background-color: white; color: #252525; font-size: 14px; line-height: 22.4px; margin-bottom: 0.5em; margin-top: 0.5em;">
+<b><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">CONSULTAS</span></b></div>
+<div style="background-color: white; color: #252525; font-size: 14px; line-height: 22.4px; margin-bottom: 0.5em; margin-top: 0.5em;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">(1) GNUmed</span></div>
+<div style="background-color: white; margin-bottom: 0.5em; margin-top: 0.5em;">
+<span style="color: #252525; font-family: sans-serif;"><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif; font-size: 14px; line-height: 22.4px;"><a href="https://es.wikipedia.org/wiki/GNUmed">https://es.wikipedia.org/wiki/GNUmed</a></span></span><br />
+<span style="color: #252525; font-family: sans-serif;"><br /></span>
+<span style="color: #252525; font-family: sans-serif;">(2)&nbsp;GNUmed en Ubuntu: configuración inicial</span><br />
+<span style="color: #252525; font-family: sans-serif;"><a href="https://conalambre.wordpress.com/2012/08/23/gnumed-en-ubuntu-configuracion-inicial/">https://conalambre.wordpress.com/2012/08/23/gnumed-en-ubuntu-configuracion-inicial/</a></span><br />
+<span style="color: #252525; font-family: sans-serif;"><br /></span></div>
+<div style="background-color: white; margin-bottom: 0.5em; margin-top: 0.5em;">
+<span style="color: #252525; font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">(3)&nbsp;</span><span style="color: #252525; font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif; font-size: 14px; line-height: 22.4px;">Database Backup and Restore procedures</span><br />
+<span style="color: #252525; font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif; font-size: 14px; line-height: 22.4px;"><a href="http://wiki.gnumed.de/bin/view/Gnumed/GmManualDatabaseBackupRestore">http://wiki.gnumed.de/bin/view/Gnumed/GmManualDatabaseBackupRestore</a></span></div>
+<div style="background-color: white; margin-bottom: 0.5em; margin-top: 0.5em;">
+<span style="color: #252525; font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span></div>
+<div style="background-color: white; margin-bottom: 0.5em; margin-top: 0.5em;">
+<span style="color: #252525; font-family: sans-serif;"><span style="font-size: 14px; line-height: 22.4px;"><br /></span></span></div>
+ 

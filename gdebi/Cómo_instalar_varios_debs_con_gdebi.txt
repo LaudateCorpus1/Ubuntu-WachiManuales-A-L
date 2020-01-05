@@ -1,0 +1,7 @@
+
+
+En una terminal ubicarse en el directorio donde están los deb y poner allí este comando:
+
+sudo gdebi *.deb
+
+Esto es todo, si falta alguna dependencia deb , saldrá un mensaje explicando eso, sino se instalará normalmente

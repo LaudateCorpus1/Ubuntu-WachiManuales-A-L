@@ -1,0 +1,10 @@
+
+
+Dolphin - KDE UserBase Wiki
+https://userbase.kde.org/Dolphin
+
+Problem: Dolphin's Find File service doesn't find files you know are on your computer.
+
+Solution: Reindex Baloo. Baloo is a file indexing and search service that Dolphin uses to search for files. It needs to be indexed to work. To solve this problem, in a terminal type, 
+
+balooctl check

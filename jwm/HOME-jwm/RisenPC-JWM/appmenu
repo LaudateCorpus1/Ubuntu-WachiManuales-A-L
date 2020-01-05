@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<JWM>
+<Menu icon="/usr/share/icons/gnome/16x16/categories/applications-accessories.png" label="Accesorios">
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/alarm-clock.png" label="Alarm Clock">alarm-clock-applet</Program>
+  <Program icon="/usr/share/icons/gnome/16x16/apps/system-file-manager.png" label="Archivos">nautilus --new-window </Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/brightness-controller.svg" label="Brightness Controller">/usr/share/brightness-controller/init.py</Program>
+  <Program icon="/usr/share/icons/gnome/16x16/actions/edit-find.png" label="Buscador de aplicaciones">xfce4-appfinder</Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/catfish.svg" label="Buscador de archivos Catfish">/usr/bin/catfish</Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/byobu.svg" label="Byobu Terminal">/usr/bin/x-terminal-emulator -e env TERM=xterm-256color byobu</Program>
+  <Program icon="/usr/share/icons/gnome/16x16/apps/accessories-calculator.png" label="Calculadora">gnome-calculator</Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/applets-screenshooter.svg" label="Captura de pantalla">xfce4-screenshooter</Program>
+  <Program icon="/usr/share/pixmaps/convertall.xpm" label="ConvertAll">convertall</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/gnome-disks.png" label="Discos">gnome-disks</Program>
+  <Program icon="/usr/share/pixmaps/doublecmd.png" label="Double Commander">doublecmd </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/file-roller.png" label="Gestor de archivadores">file-roller </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/engrampa.png" label="Gestor de archivadores Engrampa">engrampa </Program>
+  <Program icon="/usr/share/icons/gnome/16x16/apps/accessories-character-map.png" label="Mapa de caracteres">gucharmap</Program>
+  <Program icon="/usr/share/icons/gnome/16x16/apps/accessories-text-editor.png" label="Mousepad">mousepad </Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/onboard.svg" label="Onboard">onboard</Program>
+  <Program icon="/usr/share/icons/gnome/16x16/apps/accessories-text-editor.png" label="Pluma">pluma </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/shutter.png" label="Shutter">shutter </Program>
+  <Program icon="/usr/share/pixmaps/speedcrunch.png" label="SpeedCrunch">speedcrunch</Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/gvim.svg" label="Vim">/usr/bin/x-terminal-emulator -e vim </Program>
+  <Program icon="/usr/share/icons/gnome/16x16/apps/accessories-text-editor.png" label="gedit">gedit </Program>
+</Menu>
+<Menu icon="/usr/share/icons/gnome/16x16/categories/preferences-desktop.png" label="Configuración">
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/mugshot.svg" label="Acerca de mí">/usr/bin/mugshot</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/blueman.png" label="Administrador Bluetooth">blueman-manager</Program>
+  <Program icon="/usr/share/icons/gnome/16x16/apps/system-file-manager.png" label="Administrador de archivos">thunar-settings</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/status/xfpm-ac-adapter.png" label="Administrador de energía">xfce4-power-manager-settings</Program>
+  <Program icon="/usr/share/icons/gnome/16x16/apps/preferences-desktop-theme.png" label="Ajustes QT5">qt5ct</Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/status/video-display.svg" label="Ajustes del monitor">lxrandr</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/ccsm.png" label="CompizConfig Settings Manager">ccsm</Program>
+  <Program icon="/usr/share/icons/gnome/16x16/categories/preferences-system-network.png" label="Conexiones de red">nm-connection-editor</Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/onboard.svg" label="Configuración de Onboard">onboard-settings</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/lightdm-gtk-greeter-settings.png" label="Configuración de la interfaz GTK+ de LightDM">lightdm-gtk-greeter-settings-pkexec</Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/gtk-theme-config.svg" label="Configuración del tema">gtk-theme-config</Program>
+  <Program label="Controladores adicionales">/usr/bin/software-properties-gtk --open-tab=4</Program>
+  <Program icon="/usr/share/icons/gnome/16x16/devices/drive-removable-media.png" label="Dispositivos y soportes extraíbles">thunar-volman-settings</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/menulibre.svg" label="Editor de menús">/usr/bin/menulibre</Program>
+  <Program icon="/usr/share/icons/gnome/16x16/devices/printer.png" label="Impresoras">system-config-printer</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/openjdk-8.png" label="OpenJDK Java 8 Policy Tool">/usr/bin/policytool</Program>
+  <Program icon="/usr/share/icons/gnome/16x16/apps/preferences-desktop-theme.png" label="Personalizar apariencia y comportamiento">lxappearance</Program>
+  <Program icon="/usr/share/pixmaps/qtconfig-qt4.png" label="Qt 4 Settings">/usr/bin/qtconfig-qt4</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/software-properties.png" label="Software y actualizaciones">software-properties-gtk</Program>
+  <Program icon="/usr/share/icons/gnome/16x16/apps/preferences-desktop-locale.png" label="Soporte de idiomas">/usr/bin/gnome-language-selector</Program>
+</Menu>
+<Menu label="Educación">
+  <Program label="Mendeley Desktop">/home/wachin/.local/share/mendeleydesktop </Program>
+</Menu>
+<Menu icon="/usr/share/icons/gnome/16x16/categories/applications-graphics.png" label="Gráficos">
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/gimp.png" label="Editor de imágenes GIMP">gimp-2.8 </Program>
+  <Program icon="/usr/share/pixmaps/geeqie.png" label="Geeqie">geeqie -r </Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/gpick.svg" label="Gpick">gpick</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/display-im6.q16.png" label="ImageMagick (display Q16)">/usr/bin/display-im6 </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/display-im6.q16.png" label="ImageMagick (display Q16)">/usr/lib/i386-linux-gnu/ImageMagick-6.8.9/bin-Q16/display </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/inkscape.png" label="Inkscape">inkscape </Program>
+  <Program icon="/usr/share/pixmaps/key-mon.xpm" label="KeyMon">key-mon</Program>
+  <Program icon="/var/lib/flatpak/exports/share/icons/hicolor/16x16/apps/org.kde.krita.png" label="Krita">/usr/bin/flatpak run --branch=stable --arch=i386 --command=krita --file-forwarding org.kde.krita @@ </Program>
+  <Program icon="/home/wachin/.local/share/icons/natronIcon256_linux.png" label="Natron2">/home/wachin/Apps-Linux-Instaladas/Natron/Natron </Program>
+  <Program icon="/home/wachin/.local/share/icons/natronIcon256_linux.png" label="Natron2 Setup">/home/wachin/Apps-Linux-Instaladas/Natron/NatronSetup</Program>
+  <Program icon="/var/lib/flatpak/exports/share/icons/hicolor/16x16/apps/org.kde.okular.png" label="Okular">/usr/bin/flatpak run --branch=stable --arch=i386 --command=okular --file-forwarding org.kde.okular @@u </Program>
+  <Program icon="/var/lib/flatpak/exports/share/icons/hicolor/16x16/apps/org.gimp.GIMP.png" label="Programa de manipulación de imágenes de GNU">/usr/bin/flatpak run --branch=stable --arch=i386 --command=gimp-2.10 --file-forwarding org.gimp.GIMP @@u </Program>
+  <Program icon="/usr/share/icons/gnome/16x16/devices/scanner.png" label="Simple Scan">simple-scan</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/ristretto.png" label="Visor de Imágenes Ristretto">ristretto </Program>
+  <Program icon="/opt/XnView/xnview.png" label="XnView Multi Platform">xnview </Program>
+</Menu>
+<Menu icon="/usr/share/icons/gnome/16x16/categories/applications-games.png" label="Juegos">
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/gnome-mines.png" label="Minas">gnome-mines</Program>
+  <Program icon="/usr/share/pixmaps/playonlinux.png" label="PlayOnLinux">playonlinux</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/gnome-sudoku.png" label="Sudoku">gnome-sudoku</Program>
+</Menu>
+<Menu icon="/usr/share/icons/gnome/16x16/categories/applications-multimedia.png" label="Multimedia">
+  <Program icon="/usr/share/pixmaps/ardour.svg" label="Ardour5">/usr/bin/ardour5</Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/audacious.svg" label="Audacious">audacious </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/audacity.png" label="Audacity">env UBUNTU_MENUPROXY=0 audacity </Program>
+  <Program icon="/usr/share/pixmaps/avidemux2.6-jobs.xpm" label="Avidemux 2.6 (Jobs)">avidemux3_jobs_qt5</Program>
+  <Program icon="/usr/share/pixmaps/avidemux2.6-qt.xpm" label="Avidemux 2.6 (Qt)">avidemux3_qt5</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/calf.png" label="Calf Plugin Pack for JACK">calfjackhost</Program>
+  <Program icon="/usr/share/icons/gnome/16x16/apps/multimedia-volume-control.png" label="Control de Volumen de PulseAudio">pavucontrol</Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/soundconverter.svg" label="Conversor de audio">soundconverter </Program>
+  <Program icon="/usr/share/pixmaps/ffmulticonverter.png" label="FF Multi Converter">ffmulticonverter</Program>
+  <Program icon="/usr/share/pixmaps/gtk-youtube-viewer.png" label="GTK Youtube Viewer">gtk-youtube-viewer</Program>
+  <Program icon="/usr/share/icons/jamin.svg" label="JAMin">jamin</Program>
+  <Program icon="/usr/share/jackeq/thai-gold.png" label="JackEQ">jackeq</Program>
+  <Program icon="/var/lib/flatpak/exports/share/icons/hicolor/16x16/apps/org.kde.kdenlive.png" label="Kdenlive">/usr/bin/flatpak run --branch=stable --arch=i386 --command=kdenlive --file-forwarding org.kde.kdenlive @@u </Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/mediainfo.svg" label="MediaInfo">mediainfo-gui </Program>
+  <Program icon="/usr/share/pixmaps/meterbridge32x32.xpm" label="Meterbridge">/usr/bin/meterbridge -t vu alsa_pcm:playback_1 alsa_pcm:playback_2</Program>
+  <Program icon="/usr/share/pixmaps/okjicon.svg" label="OpenKJ">/usr/bin/OpenKJ</Program>
+  <Program icon="/usr/share/pixmaps/openshot.svg" label="OpenShot Video Editor">openshot </Program>
+  <Program icon="/usr/share/icons/hicolor/128x128/apps/pnmixer.png" label="PNMixer">pnmixer</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/patchage.png" label="Patchage">/usr/bin/patchage</Program>
+  <Program icon="/usr/share/pixmaps/playitslowly.png" label="Play it Slowly">playitslowly</Program>
+  <Program icon="/usr/share/icons/hicolor/32x32/apps/qjackctl.png" label="QjackCtl">/usr/bin/qjackctl</Program>
+  <Program icon="/usr/share/icons/hicolor/32x32/apps/qsynth.png" label="Qsynth">/usr/bin/qsynth</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/parole.png" label="Reproductor multimedia Parole">parole </Program>
+  <Program icon="/var/lib/flatpak/exports/share/icons/hicolor/16x16/apps/org.videolan.VLC.png" label="Reproductor multimedia VLC">/usr/bin/flatpak run --branch=stable --arch=i386 --command=/app/bin/vlc --file-forwarding org.videolan.VLC --started-from-file @@u </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/vlc.png" label="Reproductor multimedia VLC">/usr/bin/vlc --started-from-file </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/simplescreenrecorder.png" label="SimpleScreenRecorder">env XDG_DATA_DIRS=/usr/share simplescreenrecorder --logfile</Program>
+  <Program icon="/var/lib/flatpak/exports/share/icons/hicolor/16x16/apps/com.spotify.Client.png" label="Spotify">/usr/bin/flatpak run --branch=stable --arch=i386 --command=spotify --file-forwarding com.spotify.Client @@u </Program>
+  <Program icon="/usr/share/icons/gnome/16x16/devices/media-cdrom.png" label="Xfburn">xfburn</Program>
+  <Program label="Xjadeo">/usr/bin/xjadeo</Program>
+  <Program icon="/usr/share/pixmaps/puddletag.png" label="puddletag">puddletag </Program>
+</Menu>
+<Menu icon="/usr/share/icons/gnome/16x16/categories/applications-office.png" label="Oficina">
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/xfcalendar.svg" label="Calendario Orage">orage </Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/xfce4-dict.svg" label="Diccionario">xfce4-dict</Program>
+  <Program icon="/usr/share/pixmaps/goldendict.png" label="GoldenDict">goldendict</Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/orage_globaltime.svg" label="Hora global de Orage">globaltime</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/libreoffice-startcenter.png" label="LibreOffice">libreoffice </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/libreoffice-base.png" label="LibreOffice Base">libreoffice --base </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/libreoffice-calc.png" label="LibreOffice Calc">libreoffice --calc </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/libreoffice-draw.png" label="LibreOffice Draw">libreoffice --draw </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/libreoffice-impress.png" label="LibreOffice Impress">libreoffice --impress </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/libreoffice-math.png" label="LibreOffice Math">libreoffice --math </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/libreoffice-writer.png" label="LibreOffice Writer">libreoffice --writer </Program>
+  <Program icon="/usr/share/pixmaps/pdfshuffler.png" label="PDF-Shuffler">pdfshuffler</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/evince.png" label="Visor de documentos">evince </Program>
+  <Program icon="/usr/share/icons/hicolor/48x48/apps/wps-office-wppmain.png" label="WPS Presentation">/usr/bin/wpp </Program>
+  <Program icon="/usr/share/icons/hicolor/48x48/apps/wps-office-etmain.png" label="WPS Spreadsheets">/usr/bin/et </Program>
+  <Program icon="/usr/share/icons/hicolor/48x48/apps/wps-office-wpsmain.png" label="WPS Writer">/usr/bin/wps </Program>
+</Menu>
+<Menu icon="/usr/share/icons/hicolor/48x48/categories/applications-other.png" label="Otras">
+  <Program icon="/home/wachin/.local/share/icons/hicolor/16x16/apps/E796_APGuitarTuner.0.png" label="AP Guitar Tuner 1.02">cd /home/wachin/.wine/dosdevices/c:/Program Files/Audio Phonics, Inc/AP Guitar Tuner 1.02 ; env WINEPREFIX="/home/wachin/.wine" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/wachin/.wine/dosdevices/c:/users/Public/Start\\ Menu/Programs/Audio\\ Phonics,\\ Inc/AP\\ Guitar\\ Tuner\\ 1.02.lnk</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/wine-notepad.png" label="Bloc de Notas">notepad</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/wine-winecfg.png" label="Configurar Wine">winecfg</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/wine-uninstaller.png" label="Desinstala software de Wine">wine uninstaller</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/places/folder-wine.png" label="Explorar la unidad C:">xdg-open .wine/dosdevices/c:</Program>
+  <Program icon="/usr/share/pixmaps/florence.svg" label="Florence Virtual Keyboard">florence</Program>
+  <Program icon="/usr/share/icons/gnome/16x16/apps/utilities-system-monitor.png" label="Mate-System-Monitor.desktop">mate-system-monitor</Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/winetricks.svg" label="Winetricks">winetricks</Program>
+  <Program icon="/home/wachin/.local/share/icons/hicolor/128x128/apps/B668_moduleinstaller.0.png" label="e-Sword Module Installer">cd /home/wachin/.wine/dosdevices/c:/Program Files/e-Sword Module Installer ; env WINEPREFIX="/home/wachin/.wine" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/wachin/.wine/dosdevices/c:/users/Public/Start\\ Menu/Programs/e-Sword\\ Module\\ Installer/e-Sword\\ Module\\ Installer.lnk</Program>
+</Menu>
+<Menu icon="/usr/share/icons/hicolor/48x48/categories/applications-internet.png" label="Red">
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/caja-dropbox.png" label="Caja Dropbox">caja-dropbox start -i</Program>
+  <Program icon="/usr/share/pixmaps/thunderbird.png" label="Cliente de correo Thunderbird">thunderbird </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/pidgin.png" label="Cliente de mensajería de Internet Pidgin">pidgin</Program>
+  <Program icon="/usr/share/icons/hicolor/22x22/apps/chromium-browser.png" label="Navegador web Chromium">chromium-browser </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/firefox.png" label="Navegador web Firefox">firefox </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/transmission.png" label="Transmission">transmission-gtk </Program>
+  <Program icon="/usr/share/icons/gnome/16x16/apps/web-browser.png" label="Web">epiphany </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/youtube-dl-gui.png" label="YouTube DL GUI">youtube-dl-gui</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/uget-icon.png" label="uGet">uget-gtk </Program>
+</Menu>
+<Menu icon="/usr/share/icons/gnome/16x16/categories/applications-system.png" label="Sistema">
+  <Program icon="/usr/share/icons/gnome/16x16/apps/system-software-update.png" label="Actualización de software">/usr/bin/update-manager</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/Thunar.png" label="Cambio de nombre en masa de Thunar">/usr/lib/i386-linux-gnu/Thunar/ThunarBulkRename </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/Thunar.png" label="Gestor de archivos Thunar">thunar </Program>
+  <Program icon="/usr/share/pixmaps/synaptic.png" label="Gestor de paquetes Synaptic">synaptic-pkexec</Program>
+  <Program icon="/usr/share/icons/gnome/16x16/apps/utilities-system-monitor.png" label="Gestor de tareas">lxtask</Program>
+  <Program icon="/usr/share/icons/gnome/16x16/apps/utilities-system-monitor.png" label="Gestor de tareas">xfce4-taskmanager</Program>
+  <Program icon="/usr/share/icons/gnome/16x16/places/gtk-network.png" label="Gigolo">gigolo</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/grub-customizer.svg" label="Grub Customizer">grub-customizer</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/time-admin.png" label="Hora y fecha">time-admin</Program>
+  <Program icon="/usr/share/pixmaps/htop.png" label="Htop">/usr/bin/x-terminal-emulator -e htop</Program>
+  <Program icon="/usr/share/icons/gnome/16x16/mimetypes/gnome-mime-application-x-deb.png" label="Instalador de paquetes GDebi">gdebi-gtk </Program>
+  <Program icon="/usr/share/icons/gnome/16x16/apps/utilities-terminal.png" label="Konsole">konsole</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/virtualbox.png" label="Oracle VM VirtualBox">VirtualBox </Program>
+  <Program icon="/usr/share/icons/gnome/16x16/categories/preferences-system-network.png" label="Red">network-admin</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/org.gnome.Software.png" label="Software">gnome-software </Program>
+  <Program icon="/usr/share/hardinfo/pixmaps/logo.png" label="System Profiler and Benchmark">hardinfo</Program>
+  <Program icon="/usr/share/icons/gnome/16x16/apps/utilities-terminal.png" label="Terminal de Xfce">xfce4-terminal</Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/xterm-color.svg" label="UXTerm">uxterm</Program>
+  <Program icon="/usr/share/icons/gnome/16x16/apps/config-users.png" label="Usuarios y grupos">users-admin</Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/xterm-color.svg" label="XTerm">xterm</Program>
+</Menu>
+</JWM>

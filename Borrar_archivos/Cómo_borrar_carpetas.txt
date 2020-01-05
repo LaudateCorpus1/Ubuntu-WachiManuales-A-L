@@ -1,0 +1,12 @@
+
+
+
+Y por último el que nos sera de más utilidad, con este comando podremos eliminar la carpeta con todos los elementos interiores, ya sean subcarpetas, archivo, etc:
+
+rm -R nombre_carpeta
+
+
+visto en:
+https://lignux.com/como-eliminar-carpetas-desde-la-terminal-en-gnu-linux/
+
+

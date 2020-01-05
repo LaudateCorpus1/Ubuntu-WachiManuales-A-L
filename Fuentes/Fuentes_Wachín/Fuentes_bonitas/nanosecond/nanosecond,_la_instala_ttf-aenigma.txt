@@ -1,0 +1,20 @@
+
+el paquete que instala esta fuente se llama:
+
+ttf-aenigma
+
+
+file:///usr/share/fonts/truetype/aenigma/nanosecw.ttf
+file:///usr/share/fonts/truetype/aenigma/nsecthck.ttf
+file:///usr/share/fonts/truetype/aenigma/nsecthin.ttf
+
+
+la fuente bonita para mi es
+
+Nanosecond Thick BRK
+
+/usr/share/fonts/truetype/aenigma/nsecthck.ttf
+
+
+
+

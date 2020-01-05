@@ -1,0 +1,8 @@
+
+
+Tip: Just the text, please!
+https://chrome.googleblog.com/2010/09/tip-just-text-please.html
+
+Wednesday, September 15, 2010
+Has this ever happened to you? You're writing an email online and you try to copy some text from a webpage. But when you paste it in, you get all the original fonts, colors, and spacing. "Wait!" you say, "I just wanted the text!"
+This happened to us so many times while building Google Chrome that we added a special shortcut to do just that. Alongside the common Ctrl-V keyboard shortcut for "paste", Google Chrome supports a similar shortcut, Ctrl-Shift-V, for "paste as plain text". (And it’s Command-Shift-Option-V on a Mac.) 

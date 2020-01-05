@@ -1,0 +1,1944 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://forums.freebsd.org/threads/59265/ -->
+<html id="XenForo" lang="en-US" dir="LTR" class="Public LoggedOut NoSidebar  Responsive hasJs NoTouch HasDragDrop" xmlns:fb="http://www.facebook.com/2008/fbml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	
+		<!--<base href="https://forums.freebsd.org/">--><base href=".">
+		<script>
+			var _b = document.getElementsByTagName('base')[0], _bH = "https://forums.freebsd.org/";
+			if (_b && _b.href != _bH) _b.href = _bH;
+		</script>
+	
+
+	<title>HOWTO: JWM Configuration | The FreeBSD Forums</title>
+	
+	
+	<link rel="stylesheet" href="./HOWTO_ JWM Configuration _ The FreeBSD Forums_files/css.php">
+	<link rel="stylesheet" href="./HOWTO_ JWM Configuration _ The FreeBSD Forums_files/css(1).php">
+	
+	
+
+	
+		<script src="./HOWTO_ JWM Configuration _ The FreeBSD Forums_files/jquery-1.11.0.min.js"></script>	
+		
+	<script src="./HOWTO_ JWM Configuration _ The FreeBSD Forums_files/xenforo.js"></script>
+
+	
+	<link rel="apple-touch-icon" href="https://forums.freebsd.org/styles/default/xenforo/logo.og.png">
+	<link rel="alternate" type="application/rss+xml" title="RSS feed for The FreeBSD Forums" href="https://forums.freebsd.org/forums/-/index.rss">
+	
+	
+	<link rel="canonical" href="https://forums.freebsd.org/threads/59265/">
+	<meta name="description" content="HOWTO: JWM Basic Configuration
+
+This is a very light, extremely fast window manager, one of my favorites. Uses 3 MB RAM.
+
+First thing I do is copy the...">	<meta property="og:site_name" content="The FreeBSD Forums">
+	<meta property="og:image" content="https://forums.freebsd.org/data/avatars/m/16/16018.jpg?1483394656">
+	<meta property="og:image" content="https://forums.freebsd.org/styles/default/xenforo/logo.og.png">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="https://forums.FreeBSD.org/threads/59265/">
+	<meta property="og:title" content="HOWTO: JWM Configuration">
+	<meta property="og:description" content="HOWTO: JWM Basic Configuration
+
+This is a very light, extremely fast window manager, one of my favorites. Uses 3 MB RAM.
+
+First thing I do is copy the...">
+	
+	
+	
+
+</head>
+
+<body class="node39 node23 SelectQuotable">
+
+
+
+
+
+
+<div id="freebsd_headercontainer">
+			<div id="freebsd_header">
+			  <div id="freebsd_headerlogoleft">
+			    <a title="FreeBSD" href="https://forums.freebsd.org/">
+			      <img width="457" height="75" alt="FreeBSD" src="./HOWTO_ JWM Configuration _ The FreeBSD Forums_files/freebsd_logo.png">
+			    </a>
+			  </div>
+			  <div id="freebsd_headerlogoright">
+			    <div class="frontdonateroundbox">
+			      <div class="frontdonatetop">
+				<div>
+				  <b style="display: none;">.</b>
+				</div>
+			      </div>
+			      <div class="frontdonatecontent">
+				<a href="http://www.freebsdfoundation.org/donate/">Donate to FreeBSD</a>
+			      </div>
+			      <div class="frontdonatebot">
+				<div>
+				  <b style="display: none;">.</b>
+				</div>
+			      </div>
+			    </div>
+			    <!-- freebsd search removed here -->
+			  </div>
+                
+                <!--
+                          <div id="search-box">
+				<form action="./search.php" method="get" id="search">
+				<fieldset>
+					<input name="keywords" id="keywords" type="text" maxlength="128" title="Search for keywords" class="inputbox search" value="Search…" onclick="if(this.value=='Search…')this.value='';" onblur="if(this.value=='')this.value='Search…';" />
+					<input class="button2" value="Search" type="submit" /><br />
+					<a href="./search.php" title="View the advanced search options">Advanced search</a> 
+				</fieldset>
+				</form>
+                              </div>
+                              -->
+		
+			</div>
+			<div id="freebsd_menu">
+			  <ul class="first">
+			    <li>
+			      <a href="http://www.freebsd.org/">Home</a>
+			    </li>
+			  </ul>
+			  <ul>
+			    <li>
+			      <a href="http://www.freebsd.org/about.html">About</a>
+			      <ul>
+				<li>
+				  <a href="http://www.freebsd.org/projects/newbies.html">Introduction</a>
+				</li>
+				<li>
+				  <a href="http://www.freebsd.org/features.html">Features</a>
+				</li>
+				<li>
+				  <a href="http://www.freebsd.org/advocacy/">Advocacy</a>
+				</li>
+				<li>
+				  <a href="http://www.freebsd.org/marketing/">Marketing</a>
+				</li>
+				<li>
+				  <a href="http://www.freebsd.org/privacy.html">Privacy Policy</a>
+				</li>
+			      </ul>
+			    </li>
+			  </ul>
+			  <ul>
+			    <li>
+			      <a href="http://www.freebsd.org/where.html">Get FreeBSD</a>
+			      <ul>
+				<li>
+				  <a href="http://www.freebsd.org/releases/">Release Information</a>
+				</li>
+				<li>
+				  <a href="http://www.freebsd.org/releng/">Release Engineering</a>
+				</li>
+			      </ul>
+			    </li>
+			  </ul>
+			  <ul>
+			    <li>
+			      <a href="http://www.freebsd.org/docs.html">Documentation</a>
+			      <ul>
+				<li>
+				  <a href="http://www.freebsd.org/doc/en_US.ISO8859-1/books/faq/">FAQ</a>
+				</li>
+				<li>
+				  <a href="http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/">Handbook</a>
+				</li>
+				<li>
+				  <a href="http://www.freebsd.org/doc/en_US.ISO8859-1/books/porters-handbook">Porter's Handbook</a>
+				</li>
+				<li>
+				  <a href="http://www.freebsd.org/doc/en_US.ISO8859-1/books/developers-handbook">Developer's Handbook</a>
+				</li>
+				<li>
+				  <a href="http://www.freebsd.org/cgi/man.cgi">Manual Pages</a>
+				</li>
+				<li>
+				  <a href="http://www.freebsd.org/doc/en_US.ISO8859-1/books/fdp-primer">Documentation Project Primer</a>
+				</li>
+				<li>
+				  <a href="http://www.freebsd.org/docs/books.html">All Books and Articles</a>
+				</li>
+			      </ul>
+			    </li>
+			  </ul>
+			  <ul>
+			    <li>
+			      <a href="http://www.freebsd.org/community.html">Community</a>
+			      <ul>
+				<li>
+				  <a href="http://www.freebsd.org/community/mailinglists.html">Mailing Lists</a>
+				</li>
+				<li>
+				  <a href="http://forums.freebsd.org/">Forums</a>
+				</li>
+				<li>
+				  <a href="http://www.freebsd.org/usergroups.html">User Groups</a>
+				</li>
+				<li>
+				  <a href="http://www.freebsd.org/events/events.html">Events</a>
+				</li>
+				<li>
+				  <a href="http://serverfault.com/questions/tagged/freebsd">Q&amp;A (external)</a>
+				</li>
+			      </ul>
+			    </li>
+			  </ul>
+			  <ul>
+			    <li>
+			      <a href="http://www.freebsd.org/projects/index.html">Developers</a>
+			      <ul>
+				<li>
+				  <a href="http://wiki.freebsd.org/IdeasPage">Project Ideas</a>
+				</li>
+				<li>
+				  <a href="http://svnweb.freebsd.org/">SVN Repository</a>
+				</li>
+				<li>
+				  <a href="http://p4web.freebsd.org/">Perforce Repository</a>
+				</li>
+			      </ul>
+			    </li>
+			  </ul>
+			  <ul>
+			    <li>
+			      <a href="http://www.freebsd.org/support.html">Support</a>
+			      <ul>
+				<li>
+				  <a href="http://www.freebsd.org/commercial/commercial.html">Vendors</a>
+				</li>
+				<li>
+				  <a href="http://security.freebsd.org/">Security Information</a>
+				</li>
+				<li>
+				  <a href="http://www.freebsd.org/cgi/query-pr-summary.cgi">Bug Reports</a>
+				</li>
+				<li>
+				  <a href="http://www.freebsd.org/send-pr.html">Submit Bug-report</a>
+				</li>
+			      </ul>
+			    </li>
+			  </ul>
+			  <ul>
+			    <li>
+			      <a href="http://www.freebsdfoundation.org/">Foundation</a>
+			      <ul>
+				<li>
+				  <a href="http://www.freebsdfoundation.org/donate/">Monetary Donations</a>
+				</li>
+				<li>
+				  <a href="http://www.freebsd.org/donations/">Hardware Donations</a>
+				</li>
+			      </ul>
+			    </li>
+			  </ul>
+			</div>
+		      </div>
+
+
+	
+
+<div id="loginBar">
+	<div class="pageWidth">
+		<div class="pageContent">	
+			<h3 id="loginBarHandle">
+				<label for="LoginControl"><a href="https://forums.freebsd.org/login/" class="concealed noOutline">Log in or Sign up</a></label>
+			</h3>
+			
+			<span class="helper"></span>
+
+			
+		<form action="https://forums.freebsd.org/login/login" method="post" class="xenForm " id="login" style="display:none">
+
+	
+
+	<div class="ctrlWrapper">
+		<dl class="ctrlUnit">
+			<dt><label for="LoginControl">Your name or email address:</label></dt>
+			<dd><input type="text" name="login" id="LoginControl" class="textCtrl" tabindex="101"></dd>
+		</dl>
+	
+	
+		<dl class="ctrlUnit">
+			<dt>
+				<label for="ctrl_password">Do you already have an account?</label>
+			</dt>
+			<dd>
+				<ul>
+					<li><label for="ctrl_not_registered"><input type="radio" name="register" value="1" id="ctrl_not_registered" tabindex="105">
+						No, create an account now.</label></li>
+					<li><label for="ctrl_registered"><input type="radio" name="register" value="0" id="ctrl_registered" tabindex="105" checked="checked" class="Disabler">
+						Yes, my password is:</label></li>
+					<li id="ctrl_registered_Disabler">
+						<input type="password" name="password" class="textCtrl" id="ctrl_password" tabindex="102">
+						<div class="lostPassword"><a href="https://forums.freebsd.org/lost-password/" class="OverlayTrigger OverlayCloser" tabindex="106">Forgot your password?</a></div>
+					</li>
+				</ul>
+			</dd>
+		</dl>
+	
+		
+		<dl class="ctrlUnit submitUnit">
+			<dt></dt>
+			<dd>
+				<input type="submit" class="button primary" value="Log in" tabindex="104" data-loginphrase="Log in" data-signupphrase="Sign up">
+				<label for="ctrl_remember" class="rememberPassword"><input type="checkbox" name="remember" value="1" id="ctrl_remember" tabindex="103"> Stay logged in</label>
+			</dd>
+		</dl>
+	</div>
+
+	<input type="hidden" name="cookie_check" value="1">
+	<input type="hidden" name="redirect" value="/threads/59265/">
+	<input type="hidden" name="_xfToken" value="">
+
+</form></div>
+	</div>
+</div>
+
+
+<div id="headerMover">
+	<div id="headerProxy"></div>
+
+<div id="content" class="thread_view">
+	<div class="pageWidth">
+		<div class="pageContent">
+			<!-- main content area -->
+			
+			
+			
+			
+						
+						
+						
+						
+						<div class="breadBoxTop ">
+							
+							
+
+<nav>
+	
+		
+			
+				
+			
+		
+			
+				
+			
+		
+	
+
+	<fieldset class="breadcrumb" style="">
+		<a href="https://forums.freebsd.org/misc/quick-navigation-menu?selected=node-39" class="OverlayTrigger jumpMenuTrigger" data-cacheoverlay="true" title="Open quick navigation"><!--Jump to...--></a>
+			
+		<div class="boardTitle"><strong>The FreeBSD Forums</strong></div>
+		
+		<span class="crumbs">
+			
+			
+			
+				<span class="crust selectedTabCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+					<a href="https://forums.freebsd.org/" class="crumb" rel="up" itemprop="url"><span itemprop="title">Forums</span></a>
+					<span class="arrow"><span>&gt;</span></span>
+				</span>
+			
+			
+			
+				
+					<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+						<a href="https://forums.freebsd.org/categories/23/" class="crumb" rel="up" itemprop="url"><span itemprop="title">Miscellaneous</span></a>
+						<span class="arrow"><span>&gt;</span></span>
+					</span>
+				
+					<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+						<a href="https://forums.freebsd.org/forums/39/" class="crumb" rel="up" itemprop="url"><span itemprop="title">Howtos and FAQs (Moderated)</span></a>
+						<span class="arrow"><span>&gt;</span></span>
+					</span>
+				
+			
+		</span>
+	</fieldset>
+</nav>
+						</div>
+						
+						
+						
+					
+						<!--[if lt IE 8]>
+							<p class="importantMessage">You are using an out of date browser. It  may not display this or other websites correctly.<br />You should upgrade or use an <a href="https://www.google.com/chrome/browser/" target="_blank">alternative browser</a>.</p>
+						<![endif]-->
+
+						
+						
+
+						
+						
+						
+						
+												
+							<!-- h1 title, description -->
+							<div class="titleBar">
+								
+								<h1>HOWTO: JWM Configuration</h1>
+								
+								<p id="pageDescription" class="muted ">
+	Discussion in '<a href="https://forums.freebsd.org/forums/39/">Howtos and FAQs (Moderated)</a>' started by <a href="https://forums.freebsd.org/members/16018/" class="username" dir="auto">macondo</a>, <a href="https://forums.freebsd.org/threads/59265/"><span class="DateTime" title="Jan 11, 2017 at 4:11 PM">Jan 11, 2017</span></a>.
+</p>
+							</div>
+						
+						
+						
+						
+						
+						<!-- main template -->
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+<div class="pageNavLinkGroup">
+	<div class="linkGroup SelectionCountContainer">
+		
+		
+	</div>
+
+	
+</div>
+
+
+
+
+
+<form action="https://forums.freebsd.org/inline-mod/post/switch" method="post" class="InlineModForm section" data-cookiename="posts" data-controls="#InlineModControls" data-imodoptions="#ModerationSelect option">
+
+	<ol class="messageList" id="messageList">
+		
+			
+				
+
+
+<li id="post-339632" class="message   " data-author="macondo">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forums.freebsd.org/members/16018/" class="avatar Av16018m" data-avatarhtml="true"><img src="./HOWTO_ JWM Configuration _ The FreeBSD Forums_files/16018.jpg" width="96" height="96" alt="macondo"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+			<a href="https://forums.freebsd.org/members/16018/" class="username" dir="auto" itemprop="name">macondo</a>
+			<em class="userTitle" itemprop="title">Member</em>
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Messages:</dt>
+						<dd><a href="https://forums.freebsd.org/search/member?user_id=16018" class="concealed" rel="nofollow">74</a></dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Thanks Received:</dt>
+						<dd>8</dd>
+					</dl>
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					HOWTO: JWM Basic Configuration<br>
+<br>
+This is a very light, extremely fast window manager, one of my favorites. Uses 3 MB RAM.<br>
+<br>
+First thing I do is copy the global config file <tt style="color: #007a00;">/usr/local/etc/system.jwmrc</tt> to my <tt style="color: #007a00;">/home</tt>.  You are NOT allowed to edit the global file.<br>
+<br>
+<code style="background-color: #dee3e7; padding: .2px; margin: .1em; display: inline-block;"> <kbd>$ cp /usr/local/etc/system.jwmrc .jwmrc</kbd></code><br>
+<br>
+So, from now on I can access this file as USER. <code style="background-color: #dee3e7; padding: .2px; margin: .1em; display: inline-block;"> <kbd>$ nano .jwmrc</kbd></code><br>
+<br>
+We're faced with a long config file but the good news is that there is only one file <img src="./HOWTO_ JWM Configuration _ The FreeBSD Forums_files/clear.png" class="mceSmilieSprite mceSmilie1" alt=":)" title="Smile    :)"><br>
+<br>
+Note that the window manager is very configurable and this is a subjective matter, what is good for me, is not necessarily good for you; there is a choice and it's all up to you.<br>
+<br>
+In the first part I configure my apps to be launched full-sized, maximized, I like it that way, easy for me to work. No dragging, no resizing, just alt-tab to move from one to the other.<br>
+<br>
+ APPS OPTIONS<br>
+<div class="bbCodeBlock bbCodeCode"><div class="type">Code:</div><pre>&lt;Group&gt;
+   &lt;Name&gt;roxterm&lt;/Name&gt;
+   &lt;Option&gt;maximized&lt;/Option&gt;
+&lt;/Group&gt;
+
+&lt;Group&gt;
+   &lt;Name&gt;firefox&lt;/Name&gt;
+   &lt;Option&gt;maximized&lt;/Option&gt;
+   &lt;Option&gt;notitle&lt;/Option&gt;
+&lt;/Group&gt;
+</pre></div><br>
+<br>
+And so on, I do the same for xfe, firefox, sylpheed, xchat, etc. Make sure lines are aligned correctly IF you want your apps maximized. If you want no titlebar add 'notitle'.<br>
+<br>
+Otherwise, if you like your apps floating, ignore this section.<br>
+<br>
+TASKBAR<br>
+For the regular look (taskbar at the bottom):<br>
+<br>
+<div class="bbCodeBlock bbCodeCode"><div class="type">Code:</div><pre>&lt;Tray x="0" y="-1"  autohide="off"&gt;
+</pre></div><br>
+<br>
+FOR THE TASKBAR ON TOP<br>
+<br>
+<div class="bbCodeBlock bbCodeCode"><div class="type">Code:</div><pre>  &lt;Tray x="0" y="+1"  autohide="off"&gt;
+</pre></div><br>
+<br>
+WITHOUT TITLEBAR<br>
+ <br>
+<div class="bbCodeBlock bbCodeCode"><div class="type">Code:</div><pre>    &lt;!-- Visual Styles --&gt;
+   &lt;WindowStyle&gt;
+
+      &lt;Font&gt;-*-fixed-*-r-*-*-10-*-*-*-*-*-*-*&lt;/Font&gt;
+      &lt;Width&gt;1&lt;/Width&gt;
+      &lt;Height&gt;2&lt;/Height&gt;
+</pre></div><br>
+<br>
+Or add 'notitle' in the Options at the beginning of the file to your apps.<br>
+ <br>
+TASKBAR IN AUTOHIDE (à la ratpoison)<br>
+<br>
+<div class="bbCodeBlock bbCodeCode"><div class="type">Code:</div><pre>  &lt;Tray x="0" y="+1"  autohide="top"&gt;
+</pre></div><br>
+<br>
+Depending wherever you have your taskbar. Put top or bottom.<br>
+ <br>
+WORKSPACES<br>
+By default it comes with several workspaces, one on top of each other, I only use 2, one next to the other:<br>
+<br>
+<div class="bbCodeBlock bbCodeCode"><div class="type">Code:</div><pre>     &lt;!-- Virtual Desktops --&gt;
+   &lt;!-- Desktop tags can be contained within Desktops for desktop names.
+--&gt;
+   &lt;Desktops width="2" height="1"&gt;
+</pre></div><br>
+ <br>
+Needless to say, if you want more workspaces, change the number of desktops in "width".<br>
+<br>
+KEYBINDINGS<br>
+<br>
+  A = Alt<br>
+  C = Control<br>
+  4 = Windows key<br>
+<br>
+<br>
+<div class="bbCodeBlock bbCodeCode"><div class="type">Code:</div><pre>   &lt;!-- Key bindings --&gt;
+   &lt;Key key="Up"&gt;up&lt;/Key&gt;
+   &lt;Key key="Down"&gt;down&lt;/Key&gt;
+   &lt;Key key="Right"&gt;right&lt;/Key&gt;
+   &lt;Key key="Left"&gt;left&lt;/Key&gt;
+   &lt;Key key="h"&gt;left&lt;/Key&gt;
+   &lt;Key key="j"&gt;down&lt;/Key&gt;
+   &lt;Key key="k"&gt;up&lt;/Key&gt;
+   &lt;Key key="l"&gt;right&lt;/Key&gt;
+   &lt;Key key="Return"&gt;select&lt;/Key&gt;
+   &lt;Key key="Escape"&gt;escape&lt;/Key&gt;
+
+   &lt;Key mask="A" key="Tab"&gt;next&lt;/Key&gt;
+   &lt;Key mask="" key="F4"&gt;close&lt;/Key&gt;
+   &lt;Key mask="" key="F12"&gt;maximize&lt;/Key&gt;
+   &lt;Key mask="C" key="Right"&gt;rdesktop&lt;/Key&gt;
+   &lt;Key mask="C" key="Left"&gt;ldesktop&lt;/Key&gt;
+
+   &lt;Key mask="" key="F1"&gt;exec:roxterm&lt;/Key&gt;
+   &lt;Key mask="" key="F2"&gt;exec:xfe&lt;/Key&gt;
+   &lt;Key mask="" key="F3"&gt;exec:firefox&lt;/Key&gt;
+   &lt;Key mask="" key="F7"&gt;exec:mirage&lt;/Key&gt;
+   &lt;Key mask="" key="F8"&gt;exec:hexchat&lt;/Key&gt;
+   &lt;Key mask="" key="F9"&gt;exec:libreoffice&lt;/Key&gt;
+   &lt;Key mask="" key="F10"&gt;exec:jwm -restart&lt;/Key&gt;
+   &lt;Key mask="" key="Print"&gt;exec:roxterm -e scrot -cd 10&lt;/Key&gt;
+   &lt;Key mask="" key="Super_L"&gt;root:1&lt;/Key&gt;
+   &lt;Key mask="C" key="space"&gt;exec:gmrun&lt;/Key&gt;
+
+#Volume
+   &lt;Key mask="C" key="Down"&gt;&gt;exec:amixer set Master 6%- &lt;/Key&gt;
+   &lt;Key mask="C" key="Up"&gt;exec:amixer set Master 6%+ &lt;/Key&gt;
+   &lt;Key mask="C" key="0"&gt;exec:amixer sset Master,0 toggle &lt;/Key&gt;
+
+&lt;/JWM&gt;
+</pre></div><br>
+<br>
+<br>
+HOW DOES IT WORK<br>
+<br>
+Alt-tab for moving between screens<br>
+Ctrl+ arrow right/left for changing workspaces<br>
+F4 closes apps<br>
+F12 maximizes screen<br>
+F3 launches browser<br>
+Print key takes a picture with <tt style="color: #007a00;">scrot</tt><br>
+F1 launches terminal<br>
+F2 launches file manager<br>
+F4 closes app<br>
+F8 launches xchat<br>
+Ctrl+spacebar gives you gmrun to launch apps<br>
+F10 restarts jwm<br>
+Windows key gives you the main menu. And so forth...<br>
+<br>
+I have no use for the Fn keys, but if you do, you can add Alt, Ctrl or the Windows key to the Fn keys or any letter you feel confortable with. A+Fn key or C+Fn key or 4+Fn key, C-f for firefox, C-m for mirage, you get the idea.<br>
+<br>
+The thing is to increase your speed, by the time you point and click with the mouse, you could be already working, with your keybinds.<br>
+<br>
+To start jwm automatically as you enter X, edit the file <tt style="color: #007a00;">.xinitrc</tt> as root:<br>
+<code style="background-color: #dee3e7; padding: .2px; margin: .1em; display: inline-block;"> <kbd># nano /home/user_name/.xinitrc</kbd></code><br>
+<br>
+Here's mine:<br>
+<div class="bbCodeBlock bbCodeCode"><div class="type">Code:</div><pre>#!/bin/sh
+
+firefox &amp;
+setxkbmap -option terminate:ctrl_alt_bksp
+xsetroot -solid black
+unclutter -idle 2 &amp;
+numlockx &amp;
+
+exec jwm
+</pre></div><br>
+<br>
+Or just put 'exec jwm'<br>
+<br>
+<br>
+save/exit from the editor, RESTART from the menu, next time you can restart with F10.<br>
+<br>
+<code style="background-color: #dee3e7; padding: .2px; margin: .1em; display: inline-block;"> <kbd>jwm -p (to see if there any parsing errors)</kbd></code><br>
+<br>
+#reboot<br>
+<br>
+Good luck,<br>
+macondo aka Lou, bobo, cerealkiller<br>
+<br>
+Reference:<br>
+<a href="http://joewing.net/projects/jwm/config.shtml" target="_blank" class="externalLink" rel="nofollow">http://joewing.net/projects/jwm/config.shtml</a><br>
+<br>
+P.S. The only application that can give you a menu is xdgmenumaker, otherwise, you have to do it manually. Unfortunately xdgmenumaker is not in the FreeBSD repositories.<br>
+<br>
+Screenies<br>
+<a href="http://www.imagebam.com/image/801d17525862027" target="_blank" class="externalLink" rel="nofollow"><img src="./HOWTO_ JWM Configuration _ The FreeBSD Forums_files/801d17525862027.jpg" class="bbCodeImage LbImage" alt="[​IMG]" data-url="http://thumbnails117.imagebam.com/52587/801d17525862027.jpg"></a> <a href="http://www.imagebam.com/image/e59f89525862075" target="_blank" class="externalLink" rel="nofollow"><img src="./HOWTO_ JWM Configuration _ The FreeBSD Forums_files/e59f89525862075.jpg" class="bbCodeImage LbImage" alt="[​IMG]" data-url="http://thumbnails117.imagebam.com/52587/e59f89525862075.jpg"></a><br>
+<br>
+Default look, and taskbar on top.
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+			
+				<div class="baseHtml signature messageText ugc"><aside>FreeBSD 11.0 - IceWM - JWM - Desktop with dual-Celeron/4 gigs RAM<br>
+KISS - Keep It Simple, Stupid</aside></div>
+			
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forums.freebsd.org/members/16018/" class="username author" dir="auto">macondo</a>,</span>
+					<a href="https://forums.freebsd.org/threads/59265/" title="Permalink" class="datePermalink"><span class="DateTime" title="Jan 11, 2017 at 4:11 PM">Jan 11, 2017</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forums.freebsd.org/threads/59265/" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/339632/permalink">#1</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-339632"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-341106" class="message   " data-author="Sevendogs">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forums.freebsd.org/members/49045/" class="avatar Av49045m" data-avatarhtml="true"><img src="./HOWTO_ JWM Configuration _ The FreeBSD Forums_files/49045.jpg" width="96" height="96" alt="Sevendogs"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+			<a href="https://forums.freebsd.org/members/49045/" class="username" dir="auto" itemprop="name">Sevendogs</a>
+			<em class="userTitle" itemprop="title">Active Member</em>
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Messages:</dt>
+						<dd><a href="https://forums.freebsd.org/search/member?user_id=49045" class="concealed" rel="nofollow">176</a></dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Thanks Received:</dt>
+						<dd>33</dd>
+					</dl>
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					Thanks Macondo - I have tried this WM a couple of times but could never figure out how to make the taskbar smaller: it is almost 1/2 inch tall and takes up too much space. Is this possible?
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+			
+				<div class="baseHtml signature messageText ugc"><aside>"Amongst all things, knowledge is truly the best thing: from it's not being liable ever to be stolen, from it's not being purchasable, and from it's being imperishable."</aside></div>
+			
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forums.freebsd.org/members/49045/" class="username author" dir="auto">Sevendogs</a>,</span>
+					<a href="https://forums.freebsd.org/threads/59265/#post-341106" title="Permalink" class="datePermalink"><span class="DateTime" title="Jan 26, 2017 at 12:45 AM">Jan 26, 2017</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forums.freebsd.org/threads/59265/#post-341106" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/341106/permalink">#2</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-341106"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-341109" class="message   " data-author="macondo">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forums.freebsd.org/members/16018/" class="avatar Av16018m" data-avatarhtml="true"><img src="./HOWTO_ JWM Configuration _ The FreeBSD Forums_files/16018.jpg" width="96" height="96" alt="macondo"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+			<a href="https://forums.freebsd.org/members/16018/" class="username" dir="auto" itemprop="name">macondo</a>
+			<em class="userTitle" itemprop="title">Member</em>
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Messages:</dt>
+						<dd><a href="https://forums.freebsd.org/search/member?user_id=16018" class="concealed" rel="nofollow">74</a></dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Thanks Received:</dt>
+						<dd>8</dd>
+					</dl>
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					<div class="bbCodeBlock bbCodeQuote" data-author="Sevendogs">
+	<aside>
+		
+			<div class="attribution type">Sevendogs said:
+				
+					<a href="https://forums.freebsd.org/goto/post?id=341106#post-341106" class="AttributionLink">↑</a>
+				
+			</div>
+		
+		<blockquote class="quoteContainer"><div class="quote">Thanks Macondo - I have tried this WM a couple of times but could never figure out how to make the taskbar smaller: it is almost 1/2 inch tall and takes up too much space. Is this possible?</div><div class="quoteExpand">Click to expand...</div></blockquote>
+	</aside>
+</div>You're welcome, np. you have to lower the number in the 'Tray at the bottom' , mine is at 20 by default. Different distros omit this figure as in FreeBSD, what distro are you using?<br>
+<br>
+Unfortunately, FreeBSD does not have this figure so you can NOT change the width. Instead, it comes at 20 by default. I will check the JWM site see if there is a hack for it, but yours shouldn't be this thick, I think my other box with Debian had this problem (thick taskbar), but I just lower the number to 20, (it's the figure prior to Autohide). Also, make sure the virtual desktops are in one horizontal line, instead of 2 or 3 lines one on top of the other.<br>
+<br>
+<div class="bbCodeBlock bbCodeCode"><div class="type">Code:</div><pre>  &lt;!-- Virtual Desktops --&gt;
+    &lt;!-- Desktop tags can be contained within Desktops for desktop names. --&gt;
+    &lt;Desktops width="2" height="1"&gt;
+</pre></div><br>
+Where 2 is the number of desktops, and 1 is one horizontal line only.<br>
+<br>
+<div class="bbCodeBlock bbCodeCode"><div class="type">Code:</div><pre>  &lt;!-- Tray at the bottom. --&gt;
+    &lt;Tray x="0" y="-1" autohide="off"&gt; The width is missing here.
+</pre></div><br>
+<br>
+This screenie is JWM in FreeBSD 10.3, notice how thin the taskbar is by DEFAULT:<br>
+<br>
+How many desktops you got?<br>
+<br>
+Greetings,<br>
+<a href="http://www.imagebam.com/image/03e07e528562429" target="_blank" class="externalLink" rel="nofollow"><img src="./HOWTO_ JWM Configuration _ The FreeBSD Forums_files/03e07e528562429.jpg" class="bbCodeImage LbImage" alt="[​IMG]" data-url="http://thumbnails117.imagebam.com/52857/03e07e528562429.jpg"></a>
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+			
+				<div class="baseHtml signature messageText ugc"><aside>FreeBSD 11.0 - IceWM - JWM - Desktop with dual-Celeron/4 gigs RAM<br>
+KISS - Keep It Simple, Stupid</aside></div>
+			
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forums.freebsd.org/members/16018/" class="username author" dir="auto">macondo</a>,</span>
+					<a href="https://forums.freebsd.org/threads/59265/#post-341109" title="Permalink" class="datePermalink"><span class="DateTime" title="Jan 26, 2017 at 1:10 AM">Jan 26, 2017</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forums.freebsd.org/threads/59265/#post-341109" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/341109/permalink">#3</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-341109">
+	
+	<div class="likesSummary secondaryContent">
+		<span class="LikeText">
+			<a href="https://forums.freebsd.org/members/49045/" class="username" dir="auto">Sevendogs</a> thanks for this.
+		</span>
+	</div>
+</div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-341111" class="message   " data-author="Sevendogs">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forums.freebsd.org/members/49045/" class="avatar Av49045m" data-avatarhtml="true"><img src="./HOWTO_ JWM Configuration _ The FreeBSD Forums_files/49045.jpg" width="96" height="96" alt="Sevendogs"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+			<a href="https://forums.freebsd.org/members/49045/" class="username" dir="auto" itemprop="name">Sevendogs</a>
+			<em class="userTitle" itemprop="title">Active Member</em>
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Messages:</dt>
+						<dd><a href="https://forums.freebsd.org/search/member?user_id=49045" class="concealed" rel="nofollow">176</a></dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Thanks Received:</dt>
+						<dd>33</dd>
+					</dl>
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					Using FreeBSD exclusively, I don't use Linux. Interesting: I have seen other screenshots that show it as small as the screenie you posted. Mine is huge for some reason and it really shouldn't be - I am running on a 26inch monitor with 1980x1200 resolution. Thanks again.
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+			
+				<div class="baseHtml signature messageText ugc"><aside>"Amongst all things, knowledge is truly the best thing: from it's not being liable ever to be stolen, from it's not being purchasable, and from it's being imperishable."</aside></div>
+			
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forums.freebsd.org/members/49045/" class="username author" dir="auto">Sevendogs</a>,</span>
+					<a href="https://forums.freebsd.org/threads/59265/#post-341111" title="Permalink" class="datePermalink"><span class="DateTime" title="Jan 26, 2017 at 1:18 AM">Jan 26, 2017</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forums.freebsd.org/threads/59265/#post-341111" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/341111/permalink">#4</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-341111"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-341112" class="message   " data-author="Sevendogs">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forums.freebsd.org/members/49045/" class="avatar Av49045m" data-avatarhtml="true"><img src="./HOWTO_ JWM Configuration _ The FreeBSD Forums_files/49045.jpg" width="96" height="96" alt="Sevendogs"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+			<a href="https://forums.freebsd.org/members/49045/" class="username" dir="auto" itemprop="name">Sevendogs</a>
+			<em class="userTitle" itemprop="title">Active Member</em>
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Messages:</dt>
+						<dd><a href="https://forums.freebsd.org/search/member?user_id=49045" class="concealed" rel="nofollow">176</a></dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Thanks Received:</dt>
+						<dd>33</dd>
+					</dl>
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					Macondo: this works:<br>
+<div class="bbCodeBlock bbCodeCode"><div class="type">Code:</div><pre>&lt;!-- Tray at the bottom. --&gt;
+   &lt;Tray x="0" y="-1" height="20" autohide="off"&gt;
+</pre></div><br>
+<br>
+Now it looks like the screenshot you posted. Thanks for the tip!
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+			
+				<div class="baseHtml signature messageText ugc"><aside>"Amongst all things, knowledge is truly the best thing: from it's not being liable ever to be stolen, from it's not being purchasable, and from it's being imperishable."</aside></div>
+			
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forums.freebsd.org/members/49045/" class="username author" dir="auto">Sevendogs</a>,</span>
+					<a href="https://forums.freebsd.org/threads/59265/#post-341112" title="Permalink" class="datePermalink"><span class="DateTime" title="Jan 26, 2017 at 1:29 AM">Jan 26, 2017</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forums.freebsd.org/threads/59265/#post-341112" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/341112/permalink">#5</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-341112"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-341114" class="message   " data-author="macondo">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forums.freebsd.org/members/16018/" class="avatar Av16018m" data-avatarhtml="true"><img src="./HOWTO_ JWM Configuration _ The FreeBSD Forums_files/16018.jpg" width="96" height="96" alt="macondo"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+			<a href="https://forums.freebsd.org/members/16018/" class="username" dir="auto" itemprop="name">macondo</a>
+			<em class="userTitle" itemprop="title">Member</em>
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Messages:</dt>
+						<dd><a href="https://forums.freebsd.org/search/member?user_id=16018" class="concealed" rel="nofollow">74</a></dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Thanks Received:</dt>
+						<dd>8</dd>
+					</dl>
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					Glad to help, buddy!
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+			
+				<div class="baseHtml signature messageText ugc"><aside>FreeBSD 11.0 - IceWM - JWM - Desktop with dual-Celeron/4 gigs RAM<br>
+KISS - Keep It Simple, Stupid</aside></div>
+			
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forums.freebsd.org/members/16018/" class="username author" dir="auto">macondo</a>,</span>
+					<a href="https://forums.freebsd.org/threads/59265/#post-341114" title="Permalink" class="datePermalink"><span class="DateTime" title="Jan 26, 2017 at 1:52 AM">Jan 26, 2017</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forums.freebsd.org/threads/59265/#post-341114" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/341114/permalink">#6</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-341114">
+	
+	<div class="likesSummary secondaryContent">
+		<span class="LikeText">
+			<a class="username" dir="auto">ASX</a> thanks for this.
+		</span>
+	</div>
+</div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+		
+	</ol>
+
+	
+
+	<input type="hidden" name="_xfToken" value="">
+
+</form>
+
+	<div class="pageNavLinkGroup">
+			
+				<div class="linkGroup">
+					
+						<label for="LoginControl"><a href="https://forums.freebsd.org/login/" class="concealed element">(You must log in or sign up to reply here.)</a></label>
+					
+				</div>
+			
+			<div class="linkGroup" style="display: none"><a href="javascript:" class="muted JsOnly DisplayIgnoredContent Tooltip">Show Ignored Content</a></div>
+
+			
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+						
+						
+						
+						
+							<!-- login form, to be moved to the upper drop-down -->
+							
+
+
+
+
+
+
+
+
+						
+						
+					
+			
+						
+			<div class="breadBoxBottom">
+
+<nav>
+	
+
+	<fieldset class="breadcrumb" style="">
+		<a href="https://forums.freebsd.org/misc/quick-navigation-menu?selected=node-39" class="OverlayTrigger jumpMenuTrigger" data-cacheoverlay="true" title="Open quick navigation"><!--Jump to...--></a>
+			
+		<div class="boardTitle"><strong>The FreeBSD Forums</strong></div>
+		
+		<span class="crumbs">
+			
+			
+			
+				<span class="crust selectedTabCrumb">
+					<a href="https://forums.freebsd.org/" class="crumb"><span>Forums</span></a>
+					<span class="arrow"><span>&gt;</span></span>
+				</span>
+			
+			
+			
+				
+					<span class="crust">
+						<a href="https://forums.freebsd.org/categories/23/" class="crumb"><span>Miscellaneous</span></a>
+						<span class="arrow"><span>&gt;</span></span>
+					</span>
+				
+					<span class="crust">
+						<a href="https://forums.freebsd.org/forums/39/" class="crumb"><span>Howtos and FAQs (Moderated)</span></a>
+						<span class="arrow"><span>&gt;</span></span>
+					</span>
+				
+			
+		</span>
+	</fieldset>
+</nav></div>
+			
+						
+			
+						
+		</div>
+	</div>
+</div>
+
+<header>
+	
+
+
+<div id="header">
+	<div id="logoBlock">
+	<div class="pageWidth">
+		<div class="pageContent">
+			
+			
+			<div id="logo"><a href="https://forums.freebsd.org/">
+				<span></span>
+				<!-- <img src="styles/default/xenforo/logo.png" alt="The FreeBSD Forums" /> -->
+			</a></div>
+			
+			<span class="helper"></span>
+		</div>
+	</div>
+</div>
+	
+
+<div id="navigation" class="pageWidth withSearch">
+	<div class="pageContent">
+		<nav>
+
+<div class="navTabs">
+	<ul class="publicTabs">
+	
+		<!-- home -->
+		
+		
+		
+		<!-- extra tabs: home -->
+		
+		
+		
+		<!-- forums -->
+		
+			<li class="navTab forums selected">
+			
+				<a href="https://forums.freebsd.org/" class="navLink">Forums</a>
+				<a href="https://forums.freebsd.org/" class="SplitCtrl" rel="Menu"></a>
+				
+				<div class="tabLinks forumsTabLinks">
+					<div class="primaryContent menuHeader">
+						<h3>Forums</h3>
+						<div class="muted">Quick Links</div>
+					</div>
+					<ul class="secondaryContent blockLinksList">
+					
+						
+						<li><a href="https://forums.freebsd.org/search/?type=post">Search Forums</a></li>
+						
+						<li><a href="https://forums.freebsd.org/find-new/posts" rel="nofollow">Recent Posts</a></li>
+					
+					</ul>
+				</div>
+			</li>
+		
+		
+		
+		<!-- extra tabs: middle -->
+		
+		
+		
+		<!-- members -->
+						
+		
+		<!-- extra tabs: end -->
+		
+
+		<!-- responsive popup -->
+		<li class="navTab navigationHiddenTabs Popup PopupControl PopupClosed PopupContainerControl" style="display: none;">	
+						
+			<a rel="Menu" class="navLink NoPopupGadget"><span class="menuIcon">Menu</span></a>
+			
+			
+		</li>
+			
+		
+		<!-- no selection -->
+		
+		
+	</ul>
+	
+	
+</div>
+
+<span class="helper"></span>
+			
+		</nav>	
+	</div>
+</div>
+	
+
+<div id="searchBar" class="pageWidth">
+	
+	<span id="QuickSearchPlaceholder" title="Search">Search</span>
+	<fieldset id="QuickSearch">
+		<form action="https://forums.freebsd.org/search/search" method="post" class="formPopup">
+			
+			<div class="primaryControls">
+				<!-- block: primaryControls -->
+				<input type="search" name="keywords" value="" class="textCtrl" placeholder="Search..." title="Enter your search and hit enter" id="QuickSearchQuery">				
+				<!-- end block: primaryControls -->
+			</div>
+			
+			<div class="secondaryControls">
+				<div class="controlsWrapper">
+				
+					<!-- block: secondaryControls -->
+					<dl class="ctrlUnit">
+						<dt></dt>
+						<dd><ul>
+							<li><label><input type="checkbox" name="title_only" value="1" id="search_bar_title_only" class="AutoChecker" data-uncheck="#search_bar_thread"> Search titles only</label></li>
+						</ul></dd>
+					</dl>
+				
+					<dl class="ctrlUnit">
+						<dt><label for="searchBar_users">Posted by Member:</label></dt>
+						<dd>
+							<input type="text" name="users" value="" class="textCtrl AutoComplete" id="searchBar_users" autocomplete="off">
+							<p class="explain">Separate names with a comma.</p>
+						</dd>
+					</dl>
+				
+					<dl class="ctrlUnit">
+						<dt><label for="searchBar_date">Newer Than:</label></dt>
+						<dd><input type="text" data-orig-type="date" name="date" value="" class="textCtrl date" id="searchBar_date"></dd>
+					</dl>
+					
+					
+					<dl class="ctrlUnit">
+						<dt></dt>
+						<dd><ul>
+								
+									<li><label title="Search only HOWTO: JWM Configuration"><input type="checkbox" name="type[post][thread_id]" value="59265" id="search_bar_thread" class="AutoChecker" data-uncheck="#search_bar_title_only, #search_bar_nodes"> Search this thread only</label></li>
+								
+									<li><label title="Search only Howtos and FAQs (Moderated)"><input type="checkbox" name="nodes[]" value="39" id="search_bar_nodes" class="Disabler AutoChecker" checked="checked" data-uncheck="#search_bar_thread"> Search this forum only</label>
+	<ul id="search_bar_nodes_Disabler">
+		<li><label><input type="checkbox" name="type[post][group_discussion]" value="1" id="search_bar_group_discussion" class="AutoChecker" data-uncheck="#search_bar_thread"> Display results as threads</label></li>
+	</ul></li>
+								
+						</ul></dd>
+					</dl>
+					
+				</div>
+				<!-- end block: secondaryControls -->
+				
+				<dl class="ctrlUnit submitUnit">
+					<dt></dt>
+					<dd>
+						<input type="submit" value="Search" class="button primary Tooltip">
+						<div class="Popup" id="commonSearches">
+							<a rel="Menu" class="button NoPopupGadget Tooltip PopupControl" data-tipclass="flipped"><span class="arrowWidget"></span></a>
+							
+						</div>
+						<a href="https://forums.freebsd.org/search/" class="button moreOptions Tooltip">More...</a>
+					</dd>
+				</dl>
+				
+			</div>
+			
+			<input type="hidden" name="_xfToken" value="">
+		</form>		
+	</fieldset>
+	
+</div>
+</div>
+
+	
+	
+</header>
+
+</div>
+
+<footer>
+	
+
+
+<div class="footer">
+	<div class="pageWidth">
+		<div class="pageContent">
+			
+			<dl class="choosers">
+				
+					<dt>Style</dt>
+					<dd><a href="https://forums.freebsd.org/misc/style?redirect=%2Fthreads%2F59265%2F" class="OverlayTrigger Tooltip" rel="nofollow">FreeBSD Style</a></dd>
+				
+				
+			</dl>
+			
+			
+			<ul class="footerLinks">
+			
+				
+					<li><a href="https://forums.freebsd.org/misc/contact" class="OverlayTrigger" data-overlayoptions="{&quot;fixed&quot;:false}">Contact Us</a></li>
+				
+				<li><a href="https://forums.freebsd.org/help/">Help</a></li>
+				<li><a href="https://forums.freebsd.org/" class="homeLink">Home</a></li>
+				<li><a href="https://forums.freebsd.org/threads/59265/#navigation" class="topLink">Top</a></li>
+				<li><a href="https://forums.freebsd.org/forums/-/index.rss" rel="alternate" class="globalFeed" target="_blank" title="RSS feed for The FreeBSD Forums">RSS</a></li>
+			
+			</ul>
+			
+			<span class="helper"></span>
+		</div>
+	</div>
+</div>
+
+<div class="footerLegal">
+	<div class="pageWidth">
+		<div class="pageContent">
+			<ul id="legal">
+			
+				<li><a href="https://forums.freebsd.org/forums/forum-rules-and-guidelines-required-reading.49/">Terms and Rules</a></li>
+				
+			
+			</ul>
+			
+			<div id="copyright"><a href="https://xenforo.com/" class="concealed">Forum software by XenForo™ <span>©2010-2016 XenForo Ltd.</span></a> 
+			<br>The mark FreeBSD is a registered trademark of The FreeBSD Foundation and is used by The FreeBSD Project with the permission of The FreeBSD Foundation.</div>
+			
+		
+			
+			
+			<span class="helper"></span>
+		</div>
+	</div>	
+</div>
+
+</footer>
+
+<script>
+
+
+jQuery.extend(true, XenForo,
+{
+	visitor: { user_id: 0 },
+	serverTimeInfo:
+	{
+		now: 1501625955,
+		today: 1501542000,
+		todayDow: 2
+	},
+	_lightBoxUniversal: "0",
+	_enableOverlays: "1",
+	_animationSpeedMultiplier: "1",
+	_overlayConfig:
+	{
+		top: "10%",
+		speed: 200,
+		closeSpeed: 100,
+		mask:
+		{
+			color: "rgb(255, 255, 255)",
+			opacity: "0.6",
+			loadSpeed: 200,
+			closeSpeed: 100
+		}
+	},
+	_ignoredUsers: [],
+	_loadedScripts: {"thread_view":true,"message":true,"bb_code":true,"message_user_info":true,"likes_summary":true,"freebsd_org_top_navigation_menu":true,"login_bar":true},
+	_cookieConfig: { path: "/", domain: "", prefix: "xf_"},
+	_csrfToken: "",
+	_csrfRefreshUrl: "login/csrf-token-refresh",
+	_jsVersion: "16052222",
+	_noRtnProtect: false,
+	_noSocialLogin: false
+});
+jQuery.extend(XenForo.phrases,
+{
+	cancel: "Cancel",
+
+	a_moment_ago:    "A moment ago",
+	one_minute_ago:  "1 minute ago",
+	x_minutes_ago:   "%minutes% minutes ago",
+	today_at_x:      "Today at %time%",
+	yesterday_at_x:  "Yesterday at %time%",
+	day_x_at_time_y: "%day% at %time%",
+
+	day0: "Sunday",
+	day1: "Monday",
+	day2: "Tuesday",
+	day3: "Wednesday",
+	day4: "Thursday",
+	day5: "Friday",
+	day6: "Saturday",
+
+	_months: "January,February,March,April,May,June,July,August,September,October,November,December",
+	_daysShort: "Sun,Mon,Tue,Wed,Thu,Fri,Sat",
+
+	following_error_occurred: "The following error occurred",
+	server_did_not_respond_in_time_try_again: "The server did not respond in time. Please try again.",
+	logging_in: "Logging in",
+	click_image_show_full_size_version: "Click this image to show the full-size version.",
+	show_hidden_content_by_x: "Show hidden content by {names}"
+});
+
+// Facebook Javascript SDK
+XenForo.Facebook.appId = "";
+XenForo.Facebook.forceInit = false;
+
+
+</script>
+
+
+
+
+
+<div id="calroot" style="display: none; position: absolute;"><div id="calhead"><a id="calprev">←</a><div id="caltitle"></div><a id="calnext">→</a></div><div id="calbody"><div id="caldays"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div><div id="calweeks"></div></div></div><div class="Menu JsOnly blockLinksList primaryContent" id="NavigationHiddenMenu"></div><div class="Menu" id="XenForoUniq0">
+								<div class="primaryContent menuHeader">
+									<h3>Useful Searches</h3>
+								</div>
+								<ul class="secondaryContent blockLinksList">
+									<!-- block: useful_searches -->
+									<li><a href="https://forums.freebsd.org/find-new/posts?recent=1" rel="nofollow">Recent Posts</a></li>
+									
+									<!-- end block: useful_searches -->
+								</ul>
+							</div></body></html>

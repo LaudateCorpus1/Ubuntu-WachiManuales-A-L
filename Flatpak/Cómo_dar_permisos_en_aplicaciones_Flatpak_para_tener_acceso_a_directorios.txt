@@ -1,0 +1,25 @@
+Cómo dar permisos en aplicaciones Flatpak para tener acceso a directorios
+
+You can do this via the command line. The specific command you need is (it may need to be run as sudo):
+
+flatpak override <package_name_here> --filesystem=<path_here>
+
+If you have an odd path & it complains about an "unexpected filesystem suffix", just put the path part in quotes.
+
+A more complete list of permissions commands is found here - http://docs.flatpak.org/en/latest/sandbox-permissions.html
+
+
+
+flatpak override <package_name_here> --filesystem=<path_here>
+
+
+WPS Office Flatpak por defecto sólo tiene acceso a las siguientes
+
+sudo flatpak override com.wps.Office --filesystem=/home/wachin/Dropbox/
+
+file:///var/lib/flatpak/app/com.wps.Office
+
+
+
+permissions - How to give a Flatpak app access to a directory - Ask Ubuntu
+https://askubuntu.com/questions/1086529/how-to-give-a-flatpak-app-access-to-a-directory?rq=1

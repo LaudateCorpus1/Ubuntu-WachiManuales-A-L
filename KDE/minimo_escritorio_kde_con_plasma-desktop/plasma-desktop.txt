@@ -1,0 +1,10 @@
+
+
++1 to mini install
+I'd say install these two packages.
+plasma-desktop
+konsole
+
+plasma-desktop will give you the barest desktop.
+it will have no file manager or much of anything.
+Which is why you also install konsole. So you can have at least a terminal.

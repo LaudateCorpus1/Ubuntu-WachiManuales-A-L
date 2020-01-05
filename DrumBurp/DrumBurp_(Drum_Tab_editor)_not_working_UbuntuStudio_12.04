@@ -1,0 +1,28 @@
+
+
+DrumBurp (Drum Tab editor) not working UbuntuStudio 12.04
+http://askubuntu.com/questions/291140/drumburp-drum-tab-editor-not-working-ubuntustudio-12-04/305733#305733
+
+I found a solution, I used UbuntuStudio 13.04 with Wine 1.5.31 (PPA from , then I download DrumBurp 0.9 Windows version from:
+
+http://whatang.org/download/
+
+or:
+
+http://ubuntuone.com/6FDLOXDweBWFTPSP23gtri
+
+Note: This program is portable.
+
+I install under synaptic: Timidity, and put under commnad line in a terminal:
+
+modprobe snd_seq
+
+then I put:
+
+timidity -iA -Os -B2,8 &
+
+Then a run the .exe and launch it, and working fine, all
+
+
+[SOLVED] Play midi with wine 
+http://ubuntuforums.org/showthread.php?t=1775132

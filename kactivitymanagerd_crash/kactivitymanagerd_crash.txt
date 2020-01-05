@@ -1,0 +1,16 @@
+
+
+
+Bug #1450660 Random crash with return to login page (kactivitymanagerd Bugs  kactivities-kf5 package  Ubuntu
+https://bugs.launchpad.net/ubuntu/+source/kactivities-kf5/+bug/1450660
+
+
+
+
+Marco Scacchi (scamar) wrote on 2015-05-20:
+
+I can confirm that removing the ~/.cache fix the problem.
+I've upgraded from 14.10 to 15.04
+
+
+rm ~/.cache/*

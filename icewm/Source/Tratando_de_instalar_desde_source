@@ -1,0 +1,61 @@
+
+
+https://github.com/bbidulock/icewm
+
+Prerequisites
+Building from tarball requires:
+
+gcc or clang
+libxft
+libxinerama
+libxpm
+libjpeg
+libxrandr
+Building from git also requires:
+
+complete autoconf or cmake toolchain
+asciidoctor or asciidoc
+
+
+Pero falta e instalé:
+
+asciidoctor
+
+Quick Start
+The quickest and easiest way to get IceWM up and running is to run the following commands:
+
+1 $> git clone http://github.com/bbidulock/icewm.git
+2 $> cd icewm
+3 $> ./autogen.sh
+4 $> ./configure --prefix=/usr --sysconfdir=/etc
+5 $> make
+6 $> sudo make DESTDIR="$pkgdir" install
+
+
+INSTALANDO
+Iba en el paso 4 y me aparece esto:
+
+checking for CORE... no
+configure: error: Package requirements (fontconfig xext x11) were not met:
+
+No package 'fontconfig' found
+No package 'xext' found
+No package 'x11' found
+
+
+Y bueno yo probando las siguientes soluciones:
+
+sudo apt install libfontconfig1-dev libx11-dev libxext-dev
+
+bueno ahora me dice:
+
+No package 'xpm' found
+
+
+Instalo:
+
+sudo apt install libxpm-dev
+
+correcto, ahora sigo con el siguiente, paso 5
+
+

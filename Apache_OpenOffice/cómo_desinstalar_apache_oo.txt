@@ -1,0 +1,13 @@
+
+
+Apache OpenOffice 4.0 Released–Here’s How To Install It In Ubuntu – Liberian Geek
+https://www.liberiangeek.net/2013/08/apache-openoffice-4-0-releasedheres-how-to-install-it-in-ubuntu/
+
+To revert the change and reinstall LibreOffice, run the commands below to completely remove Apache OpenOffice.
+
+sudo apt-get purge openoffice*.* && sudo apt-get autoremove
+ 
+
+Then install LibreOffice by running the commands below.
+
+sudo apt-get install libreoffice libreoffice-gnome

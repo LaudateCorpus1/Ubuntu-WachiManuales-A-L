@@ -1,0 +1,46 @@
+
+ERROR WACHIN ESTA SOLUCIÓN ESTÁ MAL
+
+Cómo añadir Disqus a varios Blogs en Blogger
+
+Primero hay que entrar aquí para ver cómo funciona:
+
+https://disqus.com/admin/blogger/
+
+Explico que yo tengo varios Blogs en Blogger y al entrar allí me dirige al que más lleno:
+
+https://facilitarelsoftwarelibre.disqus.com/admin/blogger/
+
+allí seguí los pasos y se añadió bien sin ningún inconveniente, es muy fácil.
+
+El problema viene al querer añadir Disqus a mis otros Blogs pues pasa que siempre me carga el Blog que más uso yo.
+
+Los siguientes son todos los blogs que tengo a los que les quiero añadir Disqus:
+
+https://facilitandoandroid.blogspot.com/
+
+https://facilitandowindows.blogspot.com/
+
+https://alabanzasbilingues.blogspot.com/
+
+https://facilitatingfreesoftware.blogspot.com/
+
+https://facilitarelsoftwarelibre.blogspot.com/
+
+Así que tendré que manualmente añadir aquí la dirección correcta para que Disqus los añada correctamente:
+
+https://facilitandoandroid.disqus.com/admin/blogger/
+
+https://facilitandowindows.disqus.com/admin/blogger/
+
+https://alabanzasbilingues.disqus.com/admin/blogger/
+
+https://facilitatingfreesoftware.disqus.com/admin/blogger/
+
+https://facilitarelsoftwarelibre.disqus.com/admin/blogger/
+
+
+
+
+
+

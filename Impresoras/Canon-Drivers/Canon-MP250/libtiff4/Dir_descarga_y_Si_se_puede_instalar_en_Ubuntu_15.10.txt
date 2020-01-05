@@ -1,0 +1,8 @@
+gdebi dice que todas las dependencias están satisfechas
+
+
+dir descarga
+
+http://packages.ubuntu.com/precise/libtiff4
+
+ 

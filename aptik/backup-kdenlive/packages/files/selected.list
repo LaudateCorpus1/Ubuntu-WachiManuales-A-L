@@ -1,0 +1,5 @@
+
+# Packages listed in this file will be installed on restore
+# Comment-out or remove lines for unwanted items
+
+kdenlive # non-linear video editor

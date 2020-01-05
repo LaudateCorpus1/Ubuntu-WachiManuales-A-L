@@ -1,0 +1,24 @@
+
+
+ 
+Cuando inserto videos en Youtube me los inserta con un tamaño muy pequeño:
+
+src="https://i.ytimg.com/vi/JacwZx0nLhQ/0.jpg" frameborder="0" height="266" src="https://www.youtube.com/embed/JacwZx0nLhQ?feature=player_embedded" width="320"></iframe></div>
+
+para cambiar el tamaño debo cambiarle los valores a:
+
+height="266" cambiar por height="360"
+width="320" cambiar por width="540"
+
+*********************************************************************
+Para grabar con el script de 75 HZ
+xrandr
+1280x768_75.00  75.00*
+usando SimpleScreenRecorder
+
+height="266" cambiar por height="360"
+width="320" cambiar por width="600"
+
+
+Estos datos los he obtenido con el método prueba y error
+

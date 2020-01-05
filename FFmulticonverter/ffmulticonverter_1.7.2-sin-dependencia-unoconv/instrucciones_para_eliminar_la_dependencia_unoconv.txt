@@ -1,0 +1,13 @@
+
+
+ubuntu - How do I get apt-get to ignore some dependencies? - Server Fault
+https://serverfault.com/questions/250224/how-do-i-get-apt-get-to-ignore-some-dependencies
+
+
+
+
+dpkg-deb -x ffmulticonverter_1.7.2-dmo2_all.deb PackageFolder
+dpkg-deb --control ffmulticonverter_1.7.2-dmo2_all.deb PackageFolder/DEBIAN
+gedit PackageFolder/DEBIAN/control
+dpkg -b PackageFolder ffmulticonverter_1.7.2-dmo2_777_all.deb
+sudo dpkg -i ffmulticonverter_1.7.2-dmo2_777_all.deb 

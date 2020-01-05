@@ -1,0 +1,15 @@
+
+Ver contraseñas guardadas
+https://support.google.com/chrome/answer/95606?hl=es
+
+En la configuración de Chrome
+Ordenador
+
+    Haz clic en el icono que se muestre en la parte superior derecha: el icono de menú Chrome menu o Más Más.
+    Selecciona Configuración.
+    Haz clic en Mostrar configuración avanzada en la parte inferior de la página.
+    Haz clic en Administrar contraseñas en la sección "Contraseñas y formularios". Aparecerá un cuadro de diálogo con una lista de las contraseñas guardadas.
+    En el cuadro de diálogo que aparece, la sección "Contraseñas guardadas" muestra todas las contraseñas que has guardado.
+
+
+Resumen: Configuración/Contraseñas y Formularios-Administrar contraseñas/"Contraseñas y formularios"

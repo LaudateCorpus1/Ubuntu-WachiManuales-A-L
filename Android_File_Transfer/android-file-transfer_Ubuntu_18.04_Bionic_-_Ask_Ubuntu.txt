@@ -1,0 +1,18 @@
+package management - Trying to install android-file-transfer Ubuntu 18.04 Bionic - Ask Ubuntu
+https://askubuntu.com/questions/1038145/trying-to-install-android-file-transfer-ubuntu-18-04-bionic
+
+There is a problem with the packaging of the PPA for Bionic. You can instead use Artful PPA to install Android File Transfer on Ubuntu 18.04. (Same version, 3.2-1 as of the time of writing)
+
+First add the PPA to your sources:
+
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 0BB4A1B2FA1A38EB
+sudo add-apt-repository "deb http://ppa.launchpad.net/samoilov-lex/aftl-stable/ubuntu artful main"
+
+
+Then install android-file-transfer the usual way:
+
+sudo apt install android-file-transfer
+
+
+
+

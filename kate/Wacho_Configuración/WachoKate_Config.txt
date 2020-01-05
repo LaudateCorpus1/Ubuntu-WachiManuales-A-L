@@ -1,0 +1,65 @@
+ Notepad++ Alternativa para Linux/Ubuntu es Kate
+
+Versión de Ubuntu que he usado para este tuto: UbuntuStudio 13.10 x86
+
+Para mi el mejor notepad que hay es  Notepad++, pero cuando me pasé a Linux no 
+sabía como hacer, bien, aquí está como configurar a Kate para que se comporte 
+así
+ 
+
+********************************************
+Preferencias/Configurar Kate/Aplicación/Sesiones/
+
+Marcar en "Comportamiento al iniciar la aplicación"
+
+"Cartar la última sesión utilizada"
+
+***********************************************
+Para que en Windows se abran bien los textos
+
+Preferencias/Configurar Kate.../Componente de edición/Abrir/guardar 
+
+Fin de linea poner "DOS/Windows"
+
+Nota: Si usted va a escribir algún script o programa usando el Kate, no haga 
+esto, pues después no le funcionará en Linux.
+
+
+*******************************************
+Corrector ortográfico activado por omisión
+
+Preferencias/Configurar Kate.../Componente de edición/Edición/Comprobación
+ortográfica/Opciones
+
+Marcar: Corrección ortográfica automática habilitada por omisión
+
+Luego para hacerla activa en el documento actual activarla manualmente en:
+
+"Herramientas/Comprobar ortografia/Comprobar ortográfica automática"
+
+
+******************************************
+
+Ajuste de linea activado por omisión
+
+Preferencias/Configurar Kate.../Componente de edición/Aspecto/
+
+Marcar: Ajuste de línea dinámico
+
+*******************************************
+Para activar la barra de Pestañas
+
+Preferencias/Configurar Kate/Aplicación/Complementos
+
+Marcar: Barra de pestañas
+
+
+
+***********
+Opcional:
+*******************************************
+Para que se vean los direcciones web resaltadas de verde
+
+Herramientas/Realce/Etiquetas/MediaWiki
+
+O puede probar otro.

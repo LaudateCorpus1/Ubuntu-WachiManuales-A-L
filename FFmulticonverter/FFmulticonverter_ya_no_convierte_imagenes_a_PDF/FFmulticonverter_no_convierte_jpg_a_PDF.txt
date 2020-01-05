@@ -1,0 +1,15 @@
+Trouble with batch conversion of .png to .pdf using convert - Ask Ubuntu
+https://askubuntu.com/questions/1081895/trouble-with-batch-conversion-of-png-to-pdf-using-convert
+
+As vanadium posted, you have to change the ImageMagick policy.
+
+sudo vim /etc/ImageMagick-6/policy.xml
+and replace the line
+
+<policy domain="coder" rights="none" pattern="PDF" />
+with
+
+<policy domain="coder" rights="read|write" pattern="PDF" />
+If you only want to allow write, and not read, you can also erase the read| part in the line above.
+
+

@@ -1,0 +1,82 @@
+
+Esto es lo que yo he hecho
+Poner en la barra de direcciones de firefox y ejecutar:
+
+about:config
+
+poner que si se lo que estoy haciendo y
+
+BUSCAR browser.cache.memory.enable
+
+browser.cache.memory.enable (por defecto true)
+browser.cache.memory.enable (poner false)
+
+
+BUSCAR browser.sessionhistory.max_total_viewers
+
+browser.sessionhistory.max_total_viewers (por defecto -1)
+browser.sessionhistory.max_total_viewers (poner 0)
+
+BUSCAR browser.tabs.animate
+
+browser.tabs.animate (por defecto true)
+browser.tabs.animate (poner false)
+
+How to Stop a Firefox Memory Leak
+http://www.werockyourweb.com/firefox-memory-leak/
+
+BUSCAR browser.sessionstore.max_concurrent_tabs
+
+browser.sessionstore.max_concurrent_tabs
+browser.sessionstore.max_concurrent_tabs
+
+
+
+*****************************************************************************************
+How to Stop a Firefox Memory Leak
+http://www.werockyourweb.com/firefox-memory-leak/
+
+Firefox is our browser of choice. It’s fast, stable, and developer friendly. It has tons of useful plugins and themes (skins) you can use to customize and make Firefox your own. The only problem is that amidst the excitement of adding all these cool plugins, you won’t realize the incredible amount of memory that Firefox will begin sucking from your system. The result? Slower loading web pages, a slower PC, slower everything. Fortunately, there’s a couple of steps you can take to get Firefox back on the fast track.
+Steps to Halt A Firefox Memory Leak
+
+There are some basic steps you can take to help reduce memory leakage in Firefox. These are:
+
+    Upgrade Firefox. Newer versions of Firefox use less memory by containing memory leaks more efficiently.
+    Disable unnecessary plugins and add-ons, and extensions (open your “Add-Ons manager” and shut down any you think you don’t need. You can always re-enable them if it turns out you do). This is by far the biggest memory saver. If Firefox is your primary browser, you might also consider using another browser for the add-ons you only use occasionally (for example, Java).
+    Reduce misuse by malicious sites by running a spam or antivirus blocker on a regular basis. We recommend the free Spybot Search & Destroy to get you started.
+    Keep your number of open tabs and windows to a minimum.
+    
+    Type “about:config” in your browser bar and adjust the following preferences (by double clicking on them) to free up some additional memory:
+    
+        browser.cache.memory.capacity (set to 0)
+        browser.cache.memory.enable (set to false)
+        browser.sessionhistory.max_total_viewers (set to 0)
+        browser.tabs.animate (disable)
+        browser.sessionstore.max_concurrent_tabs (set to 0)
+        
+    Here some more advanced settings to speed up page loading:
+    
+        javascript.options.jit.chrome (set to true)
+        javascript.options.jit.content (set to true)
+        content.notify.backoffcount (set to 5)
+        network.dns.disableIPv6 (set to true)
+        network.http.pipelining (set to true)
+        network.http.proxy.pipelining (set to true)
+        network.http.pipelining.maxrequests (set to 8 )
+        plugin.expose_full_path (set to true)
+        ui.submenuDelay (set to 0)
+        
+    When installing extensions, you can kill the default countdown (delay) by setting the following value:
+        security.dialog_enable_delay (set to 0)
+    If you have antivirus installed (Windows only), you can disable Firefox’s native virus scanner:
+        browser.download.manager.scanWhenDone (set to false)
+    Consider installing the Ramback extension (Firefox 3.x+).
+    
+    https://addons.mozilla.org/en-US/firefox/addon/ramback/
+        
+    Windows O/S tips: Turn on virtual memory or increase the size of your paging file.
+
+Also note that the more powerful your computer, the more memory Firefox will use. Benchmarking your Firefox memory compared to other PC’s based on the number of Windows or tabs you have open will be biased based on the power of any particular PC. Bottom line – if you’re able to browse without too much slow down or crashing, you’re probably fine.
+Have a Fix of Your Own?
+
+Tried something yourself that significantly increased Firefox memory efficiency? Please share with our readers below. Conversely, if you are having a heck of a time getting Firefox to run alongside your other apps, post below with specifics, including add-ons you have installed, the version of Firefox you’re running, etc., and we’ll do our best to help you diagnose your specific problem.

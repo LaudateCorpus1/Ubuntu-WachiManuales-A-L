@@ -1,0 +1,38 @@
+
+
+
+
+Todas las aplicaciones instalan sus iconos aquí
+
+/usr/share/icons
+
+Si el icono tiene un nombre extraño, así también lo deberá tener el archivo
+
+aplicacion-tal-tal.desktop
+
+dentro de ti.
+
+Ejemplo
+Cuando instalé youtube-dlg desde source:
+
+http://facilitarelsoftwarelibre.blogspot.com/2016/07/instalar-youtube-dlg-en-ubuntu-1604-en.html
+
+El programa instala estos iconos:
+
+/usr/share/icons/hicolor/16x16/apps/youtube-dl-gui_16x16.png
+/usr/share/icons/hicolor/32x32/apps/youtube-dl-gui_32x32.png
+/usr/share/icons/hicolor/48x48/apps/youtube-dl-gui_48x48.png
+/usr/share/icons/hicolor/64x64/apps/youtube-dl-gui_64x64.png
+/usr/share/icons/hicolor/128x128/apps/youtube-dl-gui_128x128.png
+/usr/share/icons/hicolor/256x256/apps/youtube-dl-gui_256x256.png
+
+y el que hizo el tutorial dice que hay que usar en el icono así:
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=YouTube Downloader
+Exec=youtube-dl-gui
+Icon=youtube-dl-gui_48x48.png
+Categories=AudioVideo;FileTransfer;
+Comment=Graphical front-end for youtube-dl 

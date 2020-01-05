@@ -1,0 +1,6 @@
+
+Dependencias de Drumburp en Ubuntu 16.04, 17.04
+
+sudo apt-get install python-pygame timgm6mb-soundfont
+
+

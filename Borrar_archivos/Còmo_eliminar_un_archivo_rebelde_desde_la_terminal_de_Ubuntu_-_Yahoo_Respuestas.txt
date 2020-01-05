@@ -1,0 +1,6 @@
+
+
+¿Còmo eliminar un archivo rebelde desde la terminal de Ubuntu? | Yahoo Respuestas
+https://es.answers.yahoo.com/question/index?qid=20081012091240AAF2YRt
+
+sudo chmod 777 -R direcciondelarchivo/elquequieras/cosa 

@@ -1,0 +1,8 @@
+
+
+https://launchpad.net/~nathan-renniewaldock/+archive/ubuntu/flux/+packages
+
+
+$ fluxgui
+/usr/lib/pymodules/python2.7/fluxgui/fluxapp.py:71: Warning: /build/glib2.0-iu42Um/glib2.0-2.50.3/./gobject/gsignal.c:2523: signal 'child-added' is invalid for instance '0x1972130' of type 'GtkMenu'
+  self.indicator.set_menu(self.create_menu())

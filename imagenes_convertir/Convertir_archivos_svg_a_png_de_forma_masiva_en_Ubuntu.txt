@@ -1,0 +1,58 @@
+
+
+https://www.atareao.es/ubuntu/convertir-archivos-svg-a-png-de-forma-masiva-en-ubuntu/
+
+
+
+Convertir archivos svg a png de forma masiva en Ubuntu
+
+  
+Publicado el Viernes, 7 de marzo de 2014. Actualizado el Viernes, 27 de noviembre de 2015 por atareao. Este artículo se ha leído 1.5K veces. Un comentario
+Introducción
+
+Hace ya algún tiempo que las imágenes vectoriales se han convertido en mis preferidas a la hora de realizar iconos imágenes y demás. La ventaja de sobre las imágenes de mapas de bits es sin lugar a duda es la de poder escalarla sin perder calidad de imagen.
+
+Esto cobra mas importancia hoy en día, con el desarrollo de aplicaciones para distintas plataformas, donde cada una, móvil, tableta, ordenador de sobremesa, requiere de una resolución distinta, y por tanto de un tamaño diferente de imagen.
+
+Lo cierto es que podemos hacer la imagen a mucha mas resolución y luego, ir reduciendo hasta llegar a los tamaños deseados, pero no creo que este sea el procedimiento mas acertado.
+
+Por otro lado, Inkscape, facilita mucho el trabajo a la hora de crear multitud de imágenes, como es el caso de las versiones de My-Weather-Indicator tanto para Ubuntu como para Android.
+
+El problema, es que una vez creados todos los archivos vectoriales, hay que pasarlos a mapa de bits, en mi caso imágenes PNG. Evidentemente, siempre podemos hacerlo a mano, pero ¿Como convertirlos de forma masiva?
+
+ plain_icons_016.png
+
+
+Convertir imágenes SVG a PNG de forma masiva en Ubuntu
+
+La solución viene de la mano del propio Inkscape, pero esta vez desde el emulador de terminal, y es que este nos permite realizar conversiones masivas de una forma muy sencilla, pudiendo establecer los parámetros que consideremos necesarios,
+
+
+-e, --export-png=FILENAME
+-a, --export-area=x0:y0:x1:y1
+-C, --export-area-page
+-D, --export-area-drawing
+-b, --export-background=COLOR
+-y, --export-background-opacity=VALUE
+-d, --export-dpi=DPI
+-w, --export-width=WIDTH
+-h, --export-height=HEIGHT
+
+Aunque tiene muchas mas opciones (man inkscape), con estas ya tenemos suficientes para trabajar, pues nos permite definir el archivo al que queremos exportar la imagen, si queremos exportar un área determinada, la página, u otra opción, el color de fondo, la opacidad del fondo, la densidad, el ancho o el alto.
+
+Si eres muy ordenado, en un solo golpe utilizando la opción –export-area, puedes guardar todas las imágenes una a una. Sin embargo, yo los diferentes iconos los he guardado en diferentes archivos SVG, así que la conversión es fácil.
+
+Sin embargo, con esto solo podemos convertir de uno en uno. Para hacerlos todos en una sola operación, ejecutaremos el siguiente comando en el directorio donde tenemos las imágenes con formato SVG,
+
+for i in *.svg; do inkscape $i --export-png=`echo $i | sed -e 's/svg$/png/'`; done
+
+Si quieres los iconos de una tamaño determinado, por ejemplo de 144×144, el comando a ejecutar sería,
+
+
+for i in *.svg; do inkscape $i --export-width=144 --export-height=144 --export-png=`echo $i | sed -e 's/svg$/png/'`; done
+
+Otra forma indirecta de hacer lo mismo, es utilizando la densidad de puntos por pulgada (dpi), pero esto te obliga a determinar la equivalencia. Así para 150 dpi, tenemos unas dimensiones de 200×200 pixel,
+
+for i in *.svg; do inkscape $i --export-dpi=150 --export-png=`echo $i | sed -e 's/svg$/png/'`; done
+
+Más información,

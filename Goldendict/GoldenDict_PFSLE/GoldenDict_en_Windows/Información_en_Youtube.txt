@@ -1,0 +1,56 @@
+4 Diccionarios Gratuitos para usar en el programa GoldenDict:
+
+Los cuatro en una sola carpeta comprimida lista para usar. Dirección de descarga:
+
+https://drive.google.com/file/d/0B7dT-0960K49WFkwcHp0dTVEX1E/edit?usp=sharing
+
+Contenido:
+
+- Español-Inglés e Inglés-Español de la Universidad de Granada
+
+- Español de la Real Academia Española
+
+- Inglés WordNet
+
+
+*******************************
+Tutorial complementario
+******************************
+Explicación de los archivos de los diccionarios y links de descarga:
+
+GoldenDict el mejor Diccionario OffLine Full para Ubuntu 
+https://www.youtube.com/watch?v=5JkCKZlOsUc
+
+
+**********************************************
+Si Ud. los quiere descargar uno por uno
+**********************************************
+
+https://www.dropbox.com/s/uq0f2hw7akjk17a/Informaci%C3%B3n%20de%20descarga%20de%20los%204%20diccionarios.txt
+
+
+**********************
+Atajos de teclado
+**********************
+- Para traducir una palabra en el portapapeles(es decir una palabra selecionada):
+
+Ctrl+C +C
+
+- Para mostrar u ocultar la ventana principal
+
+Ctrl+F11+F11
+
+Visto en:
+Editar/Preferencias/Teclas de acceso rápido
+
+
+*******************************************
+Alabanzas de fondo cantadas por mi:
+*******************************************
+
+https://soundcloud.com/washington-indacochea-delgado/dios-incomparable-washington-indacocheamidi-christian-matamoros
+
+https://soundcloud.com/washingto
+n-indacochea-delgado/a-quien-ire-washington-indacocheamidi-christian-matamoros
+
+https://soundcloud.com/washington-indacochea-delgado/renuevame-washington-indacocheamidi-karaotecacom

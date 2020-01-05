@@ -1,0 +1,22 @@
+
+Inkscape - Permanently Change Default Document Background Color
+https://graphicdesign.stackexchange.com/questions/74134/inkscape-permanently-change-default-document-background-color
+
+Go to your default file default.svg when interface has translated you have to change a file default_XX.svg
+
+eg: default_pt_BR.svg
+
+on the linux the default folder is /usr/share/inkscape/templates/
+
+on windows C:\Program Files (x86)\Inkscape\share\templates\.
+
+open the svg file with a text editor and change the line where is pagecolor="#ffffff"
+
+
+Yo copié el archivo que estaba en
+
+/usr/share/inkscape/templates/default.es.svg
+
+lo cambié cambiandole el color del fondo y ahora todos abren con ese color
+
+.config/inkscape/templates/default.es.svg

@@ -1,0 +1,11 @@
+
+Proyecto Facilitar el Software Libre en el Ecuador: No se pudo bloquear /var/lib/dpkg/lock - open (Recurso no disponible temporalmente)
+https://facilitarelsoftwarelibre.blogspot.com/2018/08/no-se-pudo-bloquear-varlibdpkglock-open.html
+
+SOLUCIÓN: 
+La solución es la siguiente, ponga en su terminal uno por uno estos cuatro comandos ejecutandolos con Enter y siguiendo sus instrucciones:
+
+sudo fuser -vki  /var/lib/dpkg/lock
+sudo rm -f /var/lib/dpkg/lock
+sudo dpkg --configure -a
+sudo apt-get autoremove 

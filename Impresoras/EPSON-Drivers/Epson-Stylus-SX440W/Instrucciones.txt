@@ -1,0 +1,40 @@
+
+
+Buscar el driver para linux
+
+http://download.ebz.epson.net/dsc/search/01/search/searchModule
+
+seleccioné mi sistema operativo y descargué el deb
+
+allí explica que :
+
+[Notice]
+In order to install these drivers, you need to install LSB package (version 3.2 or later) beforehand.
+
+Ubunbu:
+# apt-get install lsb
+
+y en la pagina de descarga también me envian a iscan como el driver para el escaner
+
+la pagina es:
+
+http://support.epson.net/linux/en/iscan_c.html
+
+
+allí también hay un link sobre la instalación:
+
+http://download.ebz.epson.net/man/linux/iscan_e.html#sec6-1
+
+importante pues allí menciona al plugin de gimp, dice que hay que poner esto para que funcione:
+
+$ ln -s /usr/bin/iscan ~/.gimp-2.2/plug-ins/
+
+
+en mi caso sería así:
+
+$ ln -s /usr/bin/iscan ~/.config/GIMP/2.9/plug-ins/
+
+
+
+
+ 

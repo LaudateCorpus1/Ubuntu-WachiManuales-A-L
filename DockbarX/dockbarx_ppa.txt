@@ -1,0 +1,6 @@
+DockBarX Xfce4 Panel Plugin Updated With Panel Blending ~ Web Upd8: Ubuntu / Linux blog
+http://www.webupd8.org/2015/09/dockbarx-xfce4-panel-plugin-updated.html
+sudo add-apt-repository ppa:dockbar-main/ppa
+sudo apt-get update
+sudo apt-get install --install-recommends xfce4-dockbarx-plugin dockbarx-themes-extra
+ 

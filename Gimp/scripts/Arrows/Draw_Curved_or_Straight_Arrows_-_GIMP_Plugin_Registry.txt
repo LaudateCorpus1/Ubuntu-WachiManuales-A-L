@@ -1,0 +1,25 @@
+Draw Curved or Straight Arrows | GIMP Plugin Registry
+http://registry.gimp.org/node/28566
+
+October 1, 2013 - 18:25 — programmer_ceds
+
+
+The attached Script-fu file is a modified version of B-Ranger's arrow drawing script. This version allows arrows to follow curved paths (splines) as well as maintaining the original scripts ability to draw straight arrows. (See http://registry.gimp.org/node/20269 for the original script)
+
+To use the script:
+
+1. create a single path of two points (the first point will be the one at which a single arrow head is drawn)
+2. bend the path to the desired shape if a curved arrow is to be drawn
+3. run the script by selecting "Arrow." from the "Tools" menu
+4. adjust the settings as required and draw the arrow
+
+I have found that with the default settings curved arrows look rather chunky - a setting of something like 5 for the brush size and 100 for the length of the wings looks better - but that's how I see it - play with the settings until you get what you want.
+
+(11.9.2014 - I am having trouble uploading a revised version of the file (I get an error message each time) so there is currently no script on this page. For the time being it can be downloaded from the following link: http://www.programmer97.talktalk.net/Files/arrow.zip)
+
+Tags: 
+script-fu arrow curved straight
+GIMP Version: 
+2.8
+Code License: 
+GPLv2+

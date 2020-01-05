@@ -1,0 +1,6 @@
+
+
+pci ven_168c&dev_002b&subsys_30ab1895&rev_01
+
+
+https://devid.drp.su/?dev=PCI\VEN_168C%26DEV_002B%26SUBSYS_30A117AA%26REV_01

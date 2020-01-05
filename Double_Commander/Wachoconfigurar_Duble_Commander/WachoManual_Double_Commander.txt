@@ -1,0 +1,43 @@
+
+Double Commander WachoManual para que quede como Total Commander
+
+------------------------------------------------
+No Mostrar corchetes cuadrados para las carpetas
+------------------------------------------------	
+
+Vista de archivos/Formateado/(Desmarcar)Mostrar corchetes cuadrados para las carpetas
+
+
+---------------------------------------------
+Ocultar automáticamente los discos sin montar
+---------------------------------------------
+Comportamiento/(Marcar)Ocultar automáticamente los discos sin montar
+
+
+------------------------------------------------
+Ordenar Carpetas como archivos y mostrar primero
+------------------------------------------------
+Esto es necesario para poder ordenar las  carpetas con sus respectivos tamaños (ejemplo para de usar Alt+Shift+Enter)
+
+/Vista de archivos/Ordenar Directorios:
+
+Vista de archivos/Ordenando/Ordenamiento de directorios/ordenar como archivos y mostrar primeros
+
+--------------------------------
+BUSCAR AL TECLEAR (BÚSQUEDA RÁPIDA)
+----------------------------
+Configuración/Opciones/Teclas/tecleando/Letters(Poner "Búsqueda rápida" = "Quick Search")
+
+y en 
+
+Configuración/Opciones/Teclas/tecleando/Ctrl+Alt+Letras(Poner "Nada" = "None")
+
+
+--------------------------------------------------------
+Hacer más grandes los iconos de la barra de herramientas 
+--------------------------------------------------------
+Clic en:
+
+configuración/Opciones/Barra de Herramientas
+
+En "Apariencia" cambiar "Tamaño de barra", "Tamaño de icono"

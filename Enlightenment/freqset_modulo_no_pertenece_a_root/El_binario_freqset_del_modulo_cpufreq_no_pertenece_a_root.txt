@@ -1,0 +1,20 @@
+
+El binario freqset del modulo cpufreq no pertenece a root o no tiene activado el bit setuid por favor asegúrese de que es así, Por ejemplo:
+
+
+sudo chown root /usr/lib/i386-linux-gnu/enlightenment/modules/cpufreq/linux-gnu-i686-ver-autocannoli-0.20/freqset
+
+sudo chmod u+s,a+x /usr/lib/i386-linux-gnu/enlightenment/modules/cpufreq/linux-gnu-i686-ver-autocannoli-0.20/freqset
+
+
+This solved my problem
+https://forums.opensuse.org/showthread.php/506053-Enlightenment-DE-Cpufreq-Permission-Error
+
+Code:
+
+chown root /usr/lib64/enlightenment/modules/cpufreq/linux-gnu-x86_64-ver-serious-0.19/freqset                                                         
+chmod u+s,a+x /usr/lib64/enlightenment/modules/cpufreq/linux-gnu-x86_64-ver-serious-0.19/freqset
+
+
+
+

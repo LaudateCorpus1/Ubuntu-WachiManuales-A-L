@@ -1,0 +1,14 @@
+
+how to determine in what viewport (compiz/unity) a window is placed?
+http://unix.stackexchange.com/questions/168731/how-to-determine-in-what-viewport-compiz-unity-a-window-is-placed
+
+
+It is actually very simple, the window viewport position information is relative to the current viewport.
+
+So, just type xwininfo and select a window.
+Now, change the viewport and type xwininfo -id 0x... (0x... is the id you collected for the window), the position values will show as outside of the current viewport limits, with relative values based on current viewport like:
+
+Absolute upper-left X:  -1270
+Absolute upper-left Y:  62
+Based on this is possible to determine where the window is.
+In this case I was on viewport 1 and the window on viewport 0.

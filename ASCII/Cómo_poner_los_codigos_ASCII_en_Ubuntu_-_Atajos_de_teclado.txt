@@ -1,0 +1,12 @@
+
+
+Shift+Ctrl+u
+
+y el codigo ASCII
+
+ejemplo:
+
+corchete izq: 5B
+
+corchete der: 5D
+

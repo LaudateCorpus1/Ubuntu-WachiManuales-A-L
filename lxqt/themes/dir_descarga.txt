@@ -1,0 +1,5 @@
+LXQT Themes
+http://intialonso.github.io/#
+
+
+Install: Extract the folder into /usr/share/lxqt/themes/ 

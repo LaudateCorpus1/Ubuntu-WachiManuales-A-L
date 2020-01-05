@@ -1,0 +1,108 @@
+
+
+StarDict and Babylon dictionaries
+
+https://byobu.info/article/StarDict_and_Babylon_dictionaries/
+
+
+Serrano Pereira
+Also try GoldenDict, a feature-rich dictionary tool that, unlike StarDict, has native support for Babylon dictionaries.
+Linux offers free dictionary tools which can be easily installed with the package manager that comes with your distribution. StarDict is one of those free dictionary tools that comes with some nifty functions like instant translation for selected words and speech.[^stardict] Many dictionaries are available for free from the StarDict webpage. As a former Windows user however, one might miss the more extensive dictionaries that come with the popular Windows translation tool called Babylon. Fortunately, Linux provides the tools necessary to make Babylon’s dictionary files usable by StarDict. This tutorial provides the steps necessary to convert Babylon dictionaries to StarDict dictionaries.
+
+Converting the Babylon glossaries
+For the purpose of converting the Babylon dictionary files, we make use of dictconv. Dictconv is a small tool for converting dictionary files from one file type to another. Luckily for us, it also has support for Babylon glossaries (\*.bgl).
+
+You can find dictconv in your package manager. At time of writing this tutorial, the latest version is 0.2-7. So you could just fire up your package manager and install the package called dictconv. And if you’re one of those lucky Ubuntu users, just run the following command from the command-line:
+
+sudo apt-get install dictconv
+Once you have the latest version of dictconv, you can now start converting your Babylon glossaries to StarDict dictionaries. To make things easier, you should first put all your Babylon glossaries (*.bgl) in separate folders (one folder for each glossary). Open up the terminal and move to one of the the folders containing your glossary file. Then convert the glossary by issuing the following command:
+
+dictconv Babylon_English.BGL -o Babylon_English.ifo
+Of course you need to replace 'Babylon_English' by the name of your glossary file. Notice the extension '.ifo' after '-o'. The extension of the output file determines the dictionary type. So basically were saying that the output file should be a StarDict dictionary file (.ifo). The command above should create three new files (*.ifo, \*.idx and \*.dict). These three files belong to the same StarDict dictionary. Now move the folder containing these three files to ~/.stardict/dic/:
+
+mv Babylon_English/ ~/.stardict/dic/
+In case the folder doesn’t exist yet, just create it first. Issue the following command as a regular user.
+
+mkdir -p ~/.stardict/dic/
+The tilde (~) points to the home folder of the current user, so the dictionaries placed in this folder will only be available to the currently logged in user. In case you want to make the dictionaries available system wide, just copy the folder containing the dictionary files to /usr/share/stardict/dic/ instead.
+
+sudo mv Babylon_English/ /usr/share/stardict/dic/
+When you’ve done all that, restart StarDict if it’s already running. The Babylon dictionary should now be available under 'Manage Dictionaries'. If that worked, you can repeat these steps for all your Babylon glossaries. But before you do, you might want to read this next part. It might save you a lot of headache.
+
+Fixing the dollar sign bug
+After testing your converted Babylon glossaries, you might notice some words that look like this: word$12345$. So when you are looking for a translation of "word", "word" might not show up as the best match. The problem lies within the *.idx files after conversion. Many words in the Babylon glossaries are suffixed by numbers within dollar signs. Sadly, these aren’t filtered out by dictconv and end up in the \*.idx files. Fixing this problem is actually quite simple. We just need to find a way to convert "word$12345$" to "word". The best way is to edit the source code of dictconv. I am not a C programmer, so I wouldn’t know how to go around this. But luckily, someone else has gone through that trouble for us.[^shevin] I’ve created a patch for the dollar sign bug, based on [the fix by florian](http://blog.shevin.info/2007/04/how-to-implement-babylon-dictionaries.html#comment-7226074336135359953). We shall now go through the steps of patching dictconv.
+
+Patching dictconv
+For this to work, we first need to have the source code of dictconv. The source code can be easily obtained from SourceForge.net. However, they only provide version 0.2 (not version 0.2-7). This is a problem, since you probably won’t be able to compile that version because of a compatibility issue with newer versions of gcc.[^bug] Version 0.2-7 of dictconv fixes this issue, so we need that version to compile it. You can get version 0.2-7 from Launchpad. You’ll notice three files on the download page:
+
+dictconv_0.2.orig.tar.gz
+dictconv_0.2-7.diff.gz
+dictconv_0.2-7.dsc
+Not so advanced Linux users (like myself) would probably scratch their head at this point. As you can see from the list, there’s only one package containing the source files, which is still version 0.2 (dictconv_0.2.orig.tar.gz). Why couldn’t they just upload version 0.2-7 of the source package you ask? Well, I’m not sure. But it doesn’t matter, because we just need to patch the original source package (dictconv_0.2.orig.tar.gz) with the provided .diff.gz file to update it to version 0.2-7. The tutorial [Introduction: Using diff and patch](http://pinehead.tv/linux/introduction-using-diff-and-patch/) has helped me a lot in figuring out how to use these .diff files. You’ll need both the original source package (dictconv_0.2.orig.tar.gz) and the .diff file (dictconv_0.2-7.diff.gz) to apply the patch. Download these two files to a new folder. Extract both files using the following commands:
+
+tar -zxf dictconv_0.2.orig.tar.gz
+gzip -d dictconv_0.2-7.diff.gz
+This should yield the directory containing the source files and the .diff file:
+
+dictconv-0.2/
+dictconv_0.2-7.diff
+Now we apply the first patch using the .diff file:
+
+patch -p0 -i dictconv_0.2-7.diff
+In case you’re wondering what the switches -p and -i are for, I’m directing you to the tutorial I mentioned earlier.[^using-diff]
+
+If this goes well, you should get the following output:
+
+patching file dictconv-0.2/debian/control
+patching file dictconv-0.2/debian/changelog
+patching file dictconv-0.2/debian/copyright
+patching file dictconv-0.2/debian/watch
+patching file dictconv-0.2/debian/rules
+patching file dictconv-0.2/debian/dictconv.1
+patching file dictconv-0.2/debian/compat
+patching file dictconv-0.2/debian/docs
+patching file dictconv-0.2/debian/patches/fixes-for-gcc-4.3.patch
+This patch didn’t really patch anything. As you can see it just creates a new folder ("debian") with some files in it. Actually, we’re just interested in the file fixes-for-gcc-4.3.patch. This is the patch we need in order to compile dictconv later. This is also the patch that updates dictconv to version 0.2-7. So lets apply that patch by issuing the following command:
+
+patch -p0 -i dictconv-0.2/debian/patches/fixes-for-gcc-4.3.patch
+This should produce the following output:
+
+patching file dictconv-0.2/src/babylon.cpp
+patching file dictconv-0.2/src/dictdbuilder.cpp
+patching file dictconv-0.2/src/dictdbuilder.h
+patching file dictconv-0.2/src/plaintextdictbuilder.h
+patching file dictconv-0.2/src/sdict.h
+patching file dictconv-0.2/src/stardictbuilder.h
+patching file dictconv-0.2/src/stardict.cpp
+patching file dictconv-0.2/src/stardict.h
+As you can see, this actually patched some source files. We should now be able to compile the package with our more recent version of the gcc compiler. But before we do, we need to apply the patch to fix the bug with the dollar signs. Download the patch file from this link: [fix-dollar-sign-bug.patch](http://byobu.info/download/dictconv/dictconv-0.2-patches/fix-dollar-sign-bug.patch)
+
+Save this file to the folder that contains the other patch file (dictconv_0.2-7.diff). Now apply the patch from that folder with the following command:
+
+patch -p0 -i fix-dollar-sign-bug.patch
+The output should be as follows:
+
+patching file dictconv-0.2/src/babylonreader.cpp
+There, we’ve finally finished patching. Now it’s time to turn the code into an executable. Move to the package folder:
+
+cd dictconv-0.2/
+And start compiling:
+
+./configure
+make
+If everything goes well, this should create the executable 'dictconv' in the 'src' folder. You can install it with the following command (you might want to remove the currently installed version with your package manager first):
+
+sudo make install
+Now convert the Babylon glossaries again using the steps mentioned earlier. The dollar signs should now be gone.
+
+External links
+StarDict project homepage
+
+Files to read to learn how to create StarDict dictionaries: http://stardict.sourceforge.net/HowToCreateDictionary and http://stardict.sourceforge.net/StarDictFileFormat.
+
+[Dictionaries Download](http://xdxf.revdanica.com/down/index.php XDXF) (choose StarDict in download format).
+
+References
+[^stardict]: StarDict project homepage [^bug]: [Debian Bug report logs - #486954](http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=486954) dictconv: FTBFS: babylon.cpp:53: error: 'memcmp' was not declared in this scope. [^shevin]: [How to implement the Babylon dictionaries in Ubuntu?](http://blog.shevin.info/2007/04/how-to-implement-babylon-dictionaries.html#comment-7226074336135359953) A fix for the dollar sign bug provided by florian. [^using-diff]: [Introduction: Using diff and patch](http://pinehead.tv/linux/introduction-using-diff-and-patch/)
+
+Last updated 2015-01-19 22:06:20 CET

@@ -1,0 +1,13 @@
+
+KXStudio : Repositories
+http://kxstudio.linuxaudio.org/Repositories#Ubuntu
+
+
+All Debian and Ubuntu users can enable our repositories by installing this deb file: kxstudio-repos.deb.
+You can install it manually by running this:
+
+# Download package file
+wget https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_9.0.0~kxstudio1_all.deb
+
+# Install it
+sudo dpkg -i kxstudio-repos_9.0.0~kxstudio1_all.deb

@@ -1,0 +1,9 @@
+
+
+
+Actualizar los repositorios
+Actualizar los paquetes
+
+A veces uno instala con el paso del tiempo nuevas aplicaciones 
+
+Alguna actualización del kernel puede hacer fallar la memoria SD

@@ -1,0 +1,12 @@
+
+6 great monospaced fonts for code and terminal in Fedora
+By Ryan Lerch
+
+Inconsolata http://www.cosmix.org/software/
+Source Code Pro
+Fira Mono
+Droid Sans Mono
+DejaVu Sans Mono
+Hack
+
+https://fedoramagazine.org/5-great-monospaced-fonts-for-coding-and-the-terminal-in-fedora/

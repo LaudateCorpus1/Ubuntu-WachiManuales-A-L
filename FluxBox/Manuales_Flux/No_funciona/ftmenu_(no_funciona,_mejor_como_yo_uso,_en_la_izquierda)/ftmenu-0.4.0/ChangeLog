@@ -1,0 +1,15 @@
+April 2 2010
+	Fully rewritten.
+
+October 25 2005
+	Bug fix:
+	- Fixed some memory corrupted messages.
+
+February 2 2005
+	Bux fix:
+	- Changed the way the menu items executables are called, now I'm using 
+	g_spawn_command_line_async(s,0) and not fork and sh anymore.
+	Some defunct processes were remaining using the previous approach.
+
+January 31 2005
+	- Initial release.

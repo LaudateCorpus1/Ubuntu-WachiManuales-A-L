@@ -1,0 +1,24 @@
+ 
+
+
+wachin@Dell-Inspiron-1750:~$ libreoffice
+/usr/lib/libreoffice/program/soffice.bin: symbol lookup error: /usr/lib/libreoffice/program/libmergedlo.so: undefined symbol: _ZN14LanguageTagIcu12getIcuLocaleERK11LanguageTagRKN3rtl8OUStringE
+
+
+sudo apt-get remove --purge libreoffice*
+
+sudo rm -fr /usr/lib/libreoffice/program
+
+sudo apt-get autoclean
+
+sudo apt-get autoremove
+
+
+
+Undefined symbol: _ZN11LanguageTagC1ERKS_ - Ask LibreOffice
+https://ask.libreoffice.org/en/question/146116/undefined-symbol-_zn11languagetagc1erks_/
+
+How do I uninstall LibreOffice? - Ask Ubuntu
+https://askubuntu.com/questions/210910/how-do-i-uninstall-libreoffice
+
+

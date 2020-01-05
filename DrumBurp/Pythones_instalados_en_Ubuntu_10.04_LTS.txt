@@ -1,0 +1,5 @@
+
+python-aptdaemon-gtk
+python-avahi
+python-desktopcouch
+python-uno (está instalado, no lo puedo remover me quita libreoffice)

@@ -1,0 +1,24 @@
+
+
+How do I activate Function Keys without pressing the fn button in the mac keyboard? [duplicate]
+https://askubuntu.com/questions/449001/how-do-i-activate-function-keys-without-pressing-the-fn-button-in-the-mac-keyboa
+
+I had to change keyboards at work and they gave me a mac keyboard that wasn't in use. I configured most of it to the point where I can use it, but I noticed that I need to press the fn key to activate the Functions F1~F19 and I was wondering if there is anyway I could flip that. So what I want to do is have the Function keys as default, and need to hit fn whenever I want the other function of the key, such as Volume Up or Eject Disc
+
+
+2014-04-17 answered girardengo
+
+Typing this in terminal:
+
+sudo su -c "echo -n 0x02 > /sys/module/hid_apple/parameters/fnmode"
+
+enables F keys without needing FN.
+
+To restore, change 0x02 with 0x01.
+
+Must be run after each reboot.
+
+
+
+
+     

@@ -1,0 +1,19 @@
+
+brackets-userland/brackets-electron: An open source code editor for the web, written in JavaScript, HTML and CSS.
+https://github.com/brackets-userland/brackets-electron
+
+sudo apt-get install npm
+git clone https://github.com/zaggino/brackets-electron
+cd brackets-electron
+git submodule update --init
+npm install
+npm run dist 
+
+
+Dentro de:
+
+/home/wachin/brackets-electron/dist-build/linux-ia32-unpacked/
+
+quedará el ejecutable 
+
+brackets-electron

@@ -1,0 +1,17 @@
+
+Yo he instalado el administrador de archivos caja en UbuntuStudio pero al querer descomprimir un archivo no aparece la opción "Extraer aquí", esta es la solución
+
+INSTRUCCIONES
+
+Ponga en la terminal este comando e instale:
+
+sudo apt-get install engrampa
+
+Fuente:
+How to get extract/compress option on right clicking?
+http://unix.stackexchange.com/questions/73146/how-to-get-extract-compress-option-on-right-clicking
+
+
+
+
+ 

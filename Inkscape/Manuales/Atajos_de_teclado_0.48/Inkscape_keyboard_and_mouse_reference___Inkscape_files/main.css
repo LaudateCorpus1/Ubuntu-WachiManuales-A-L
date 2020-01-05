@@ -1,0 +1,918 @@
+/*A font by Jos Buivenga (exljbris) -> www.exljbris.com*/
+@font-face {
+  font-family: 'CallunaRegular';
+  src: url("../fonts/calluna-regular-webfont.eot");
+  src: local("☺"),
+       url("../fonts/calluna-regular-webfont.woff") format("woff"),
+       url("../fonts/calluna-regular-webfont.ttf") format("truetype"),
+       url("../fonts/calluna-regular-webfont.svg#webfontV868CxYz") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Ubuntu'), url(../fonts/ubuntu.woff) format('woff');
+}
+.debugwarn a span {
+  color: red !important;
+  animation: warning 1s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+@keyframes warning {
+    0% { opacity: 1.0 }
+    90% { opacity: 1.0 }
+    100% { opacity: 0.0 }
+}
+
+/* generic content styles */
+body {
+  width: 960px;
+  margin: 0 auto !important;
+  background-color: white;
+  background-image: linear-gradient(to bottom, #e6e6e6 0%, #e6e6e6 10px, #ffffff 75px);
+  background-repeat: no-repeat;
+  font-size: 11pt;
+  font-family: 'Ubuntu', 'Liberation Sans', sans-serif;
+  color: #333333;
+}
+#menu{
+  margin-left:50px;
+}
+:link, :visited {
+  text-decoration: none;
+  color: #d55500;
+}
+:link:hover, :link:active, :visited:hover, :visited:active {
+  text-decoration: underline;
+}
+ul, ol {
+  padding: 0 0 0 30px;
+  margin: 0.5ex 0;
+}
+ul.ticks li {
+  list-style: none;
+  background: left center url(../images/bullet-tick.png) no-repeat;
+  background-image: url(../images/bullet-tick.svg);
+  margin-left: -22px;
+  padding: 2px 0 2px 22px;
+}
+pre {
+  background-color: #f5f5f5;
+  padding: 0.5ex 0.5em;
+  margin: 0.5ex 0;
+}
+
+h1, #google-groups-logo {
+  font-family: CallunaRegular, Calluna, "Trebuchet MS", Ubuntu, "Liberation Sans", FreeSans, sans-serif;
+}
+h1 {
+  font-size: 240%;
+  line-height: 35px;
+  font-weight: normal;
+  margin: 0.5ex 0 0.5ex;
+}
+h2 {
+  color: #000000;
+  font-size: 140%;
+  font-weight: normal;
+  margin: 1.5ex 0 0.5ex;
+  border-bottom: 1px solid #ddd;
+}
+h3 {
+  color: #000000;
+  font-size: 115%;
+  font-weight: normal;
+  margin: 1.5ex 0 0.5ex;
+}
+
+video {
+  margin-bottom: 30px;
+}
+
+th[scope="row"] { text-align: right; }
+
+th[scope="col"] { text-align: center; }
+
+/* styles for cms picture plugin */
+span.align-right img {
+    display: block;
+    float: right;
+    margin: 1ex 0 1ex 1.5em;
+}
+span.align-left img {
+    display: block;
+    float: left;
+    margin: 1ex 1.5em 1ex 0;
+}
+span.align-center img {
+    display: block;
+    margin: 1ex auto;
+}
+
+/* for IE */
+a img {
+  border: 0px;
+}
+
+/* for Tables of Contents on long pages */
+div.toc {
+  float: right;
+  margin: 1em 0 1em 1em;
+  padding: 1ex;
+  background-color: white;
+  border: 1px solid #ddd;
+  width: 25%;
+}
+div.toc h2 {
+  font-size: 120%;
+  text-align: center;
+  margin: 0 0 0.5ex 0;
+  border: 0;
+  padding: 0;
+}
+div.toc ul {
+  margin: 0;
+  padding: 0 0 0 2em;
+}
+/* specific styles for layout */
+#content {
+  padding: 20px 20px 50px;
+  background-color: white;
+  background-image: linear-gradient(to bottom, #eeeeee 0%, #ffffff 100px);
+  line-height: 150%;
+  min-height: 500px;
+}
+#content .summary {
+  font-size: 12pt;
+  line-height: 160%;
+  margin-bottom: 10px;
+}
+#content > div.wrapper {
+  margin: -20px;
+  padding: 20px;
+  min-height: 500px;
+}
+.readmore {
+  margin-top: -10px;
+  text-align: right;
+  font-size: 11px;
+  line-height: 11px;
+}
+.postdate {
+  margin-top: 0;
+  font-size: 80%;
+  color: #666666;
+}
+
+.reginfo {
+  border: 1px solid #284c69;
+  box-shadow: 0 0 5px #284c69;
+  background-color: #dbe7f1;
+  color: #221100;
+  overflow:hidden;
+  border-radius: 8px;
+}
+
+div.reginfo {
+    width: 400px;
+    padding: 0 14px 0 14px;
+    float: right;
+    margin: 0 30px;
+}
+
+
+/* social styling */
+#social {
+  clear: both;
+  float: right;
+}
+
+#social p {
+  display: inline-block;
+  font-style: italic;
+  font-size: 16px;
+  vertical-align: middle;
+  padding-right: 0.5em;
+}
+
+#social nav {
+  display: inline-block;
+}
+
+#social nav a {
+  height: 30px;
+  width: 30px;
+  -moz-transition: background-color 0.3s linear;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#social nav a:hover {
+    background-color: #dddddd;
+}
+
+#google-groups-logo {
+  /* Use simple G */
+  font-size: 30px;
+  text-align: center;
+}
+
+#topsearch {
+  margin: 2px 0px 5px 0px;
+  clear: both;
+  float: right;
+}
+
+#topsearch * {
+  margin: 0;
+  vertical-align: top;
+}
+#topsearch #q {
+  width: 140px;
+  height: 20px;
+  background-color: white;
+  background-image: none;
+  box-shadow: inset 0 0 1px #999999;
+  border-radius: 6px 0px 0px 6px;
+  border-width: 1px 0px 1px 1px;
+  border-color: #666;
+  border-style: solid;
+  padding: 4px;
+  margin-right: -3px;
+  font-size: 12px;
+  text-indent: 6px;
+}
+#topsearch button {
+  background: url(../images/search.png);
+  background-repeat: no-repeat;
+  background-color: #4d4d4d;
+  background-image: linear-gradient(to bottom, #f8f8f8 0%, #b4b4b4 100%);
+  width: 33px;
+  height: 30px;
+  border: 1px solid #666;
+  border-radius: 0px 6px 6px 0px;
+}
+/* logo styling */
+#logo {
+  float: left;
+  margin-top: 28px;
+  cursor: default;
+  color: #000000;
+}
+#logo img {
+  float: left;
+  margin: 0;
+  border: 0;
+}
+#logo :link, #logo :visited {
+  color: #000000;
+}
+#logo :link:hover, #logo :link:active, #logo :visited:hover, #logo :visited:active {
+  text-decoration: none;
+}
+#logo h1 {
+  font-family: CallunaRegular, Calluna, "Trebuchet MS", Ubuntu, "Liberation Sans", FreeSans, sans-serif;
+  margin: 0 0 0 64px;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  line-height: 41px;
+  text-transform: uppercase;
+  font-size: 34px;
+}
+#logo h1 a {
+  padding-left: 17px;
+  display: block;
+}
+#logo h2 {
+  margin: 0 0 0 64px;
+  padding: 0;
+  border: 0;
+  font-size: 17px;
+  font-weight: normal;
+}
+#logo h2 a {
+  padding-left: 17px;
+  display: block;
+  text-align: center;
+}
+/* dropdowns on the right */
+.header #topdrops {
+  float: right;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: white;
+}
+.header .topdrop {
+  background-color: #333333;
+  padding: 10px;
+  border-radius: 6px;
+  display: none;
+  position: absolute;
+  z-index: 10;
+}
+.header .topdrop img.userphoto {
+  width: 64px;
+  height: 64px;
+  background-size: 64px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  float: left;
+  margin-right: 8px;
+  font-size: 0px;
+}
+.header #topdrops {
+  font-size: 10pt;
+}
+.header #topdrops > li {
+  float: left;
+}
+.header #topdrops > li:hover > .topdrop,
+.header #topdrops > li.focused > .topdrop {
+  display: block;
+  box-shadow: 0px 9px 7px #111;
+}
+.header #topdrops > li:hover > p,
+.header #topdrops > li.focused > p {
+  padding-bottom: 14px;
+  margin-bottom: 0px;
+  border-radius: 0;
+}
+.header #topdrops #languages {
+  margin-right: 10px;
+}
+.header #topdrops #languages .topdrop {
+  width: 130px;
+  padding: 0px;
+  margin: 0px;
+  border-radius: 0 0 5px 5px;
+}
+#topmessages {
+  margin-left: 10px;
+}
+#topmessages .topdrop {
+  margin-left: -104px;
+  width: 120px;
+  border-radius: 5px 0 5px 5px;
+}
+#topmessages > p > a {
+  display: block;
+  width: 16px;
+  height: 12px;
+  background: url(../images/message.svg) 0 50% no-repeat;
+  text-decoration: none;
+  margin: 2px 0px;
+}
+#topmessages > p > a.alert {
+  background-position: -16px;
+  animation: pulse 0.8s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+@keyframes pulse {
+    0% { transform: rotate(-2deg); box-shadow: 0px 0px 0px 0px #bacef9; opacity: 1.0 }
+    20% { opacity: 0.4 }
+    30% { opacity: 1.0 }
+    40% { opacity: 0.4 }
+    100% { transform: rotate(2deg); box-shadow: 0px 0px 2px 0px #bacef9; opacity: 0.4 }
+} 
+#languages a {
+  background-repeat: no-repeat;
+  background-position: 8px 10px;
+  display: block;
+  padding: 10px 10px 10px 30px;
+  color: white;
+  font-size: 11px;
+  line-height: 11px;
+}
+#languages li.selected a {
+  background-color: #464646;
+}
+#languages a:hover {
+  background-color: #4d4d4d;
+  text-decoration: none;
+}
+#languages li:last-child a:hover {
+  border-radius: 0 0 5px 5px;
+}
+.header #languages .topdrop {
+  list-style-type: none;
+}
+.header #topdrops > li > p {
+  display: block;
+  border-radius: 0 0 5px 5px;
+  background: #333333 right 6px center;
+  margin: 0;
+  padding: 5px 10px 7px 10px;
+  margin-bottom:7px;
+}
+.header #topdrops p {
+  cursor: default;
+  margin: 1px 0px;
+  font-family: "Trebuchet MS", Ubuntu, "Liberation Sans", FreeSans, sans-serif;
+}
+.header #toplogin p {
+  margin: 1px 0px 3px 72px;
+}
+#toplogin .topdrop {
+  width: 220px;
+  border-radius: 5px 0px 5px 5px;
+  margin-left: -20px;
+}
+#toplogin-alternate {
+  display: inline-block;
+  padding: 10px 10px 0px;
+}
+#toplogin p {
+  margin-top: 0;
+  font-size: 14px;
+}
+#toplogin label {
+  margin-top: 12px;
+  margin-bottom: 3px;
+  display: block;
+}
+#toplogin input {
+  display: inline-block;
+}
+#toplogin form {
+  display: inline;
+}
+#topdrops p a {
+  color: white;
+  font-size: 90%;
+}
+.topdrop p {
+  font-size: 15px !important;
+}
+.topdrop .button {
+  font-size: 14px;
+  margin-top: 12px;
+  width: 100px;
+  padding: 3px;
+  float: left;
+}
+.topdrop .button:first-child {
+  float: right;
+}
+#toplogin-username, #toplogin-password {
+  width: 208px;
+  font-size: 14px;
+  padding: 3px;
+}
+#toplogin-alternate span {
+  display: block;
+  float: left;
+  margin: 10px 0;
+  font-size: 12px;
+}
+#toplogin-alternate a {
+  display: block;
+  float: left;
+  width: 24px;
+  height: 24px;
+  margin-left: 15px;
+  background-image: url(../images/login-sprite.png);
+}
+#toplogin-alternate #toplogin-google {
+  clear: left;
+  margin-left: 0;
+}
+#toplogin-alternate #toplogin-facebook {
+  background-position: -24px;
+}
+#toplogin-alternate #toplogin-twitter {
+  background-position: -48px;
+}
+#toplogin-alternate #toplogin-yahoo {
+  background-position: -72px;
+}
+#toplogin-alternate #toplogin-live {
+  background-position: -96px;
+}
+#toplogin-alternate #toplogin-wordpress {
+  background-position: -120px;
+}
+#cleartop {
+  height: 110px;
+}
+#header-right {
+  float: right;
+}
+/* navigation */
+.header .nav {
+  background-color: #4d4d4d;
+  background-image: linear-gradient(to bottom, #4d4d4d 0%, #1a1a1a 100%);
+  border-radius: 10px 10px 0 0;
+  border-bottom: 1px solid #262626;
+  height: 52px;
+  clear: both;
+  text-align: right;
+  z-index: 5;
+  position: relative;
+}
+.header .nav > ul {
+  margin: 0;
+  padding: 0;
+  border-left: 1px solid #333333;
+}
+.header .nav :link, .header .nav :link:hover, .header .nav :link:active, .header .nav :visited, .header .nav :visited:hover, .header .nav :visited:active {
+  color: white;
+  text-decoration: none;
+}
+.header .nav li {
+  margin: 0;
+  padding: 0;
+  float: left;
+  position: relative;
+  list-style: none;
+  text-align: left;
+}
+.header .nav a {
+  text-decoration: none;
+  display: block;
+  padding: 8px 10px;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0;
+}
+.header .nav > ul > li > a {
+  text-transform: uppercase;
+  border-right: 1px solid #333333;
+  border-left: 1px solid #5a5a5a;
+  padding: 17px 23px;
+  outline: 0;
+}
+.header .nav > ul > li.selected > a,
+.header .nav > ul > li.ancestor > a,
+.header .nav > ul > li:hover > a,
+.header .nav > ul > li > a:focus {
+  background: #333333;
+  background-image: linear-gradient(to bottom, #333333 0%, #4d4d4d 100%);
+}
+.header .nav > ul li.selected > a {
+  background: #333333;
+}
+.header .nav > ul ul a:hover, .header .nav > ul ul a:focus {
+  background: #333333;
+}
+.header .nav > ul ul a {
+  outline: 0;
+}
+.header .nav li ul {
+  background: #4d4d4d;
+  display: none;
+  margin: 0;
+  padding: 0;
+  width: 155px;
+  position: absolute;
+  top: 52px;
+  left: 0;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.7);
+  border-top: 1px solid #141414;
+}
+.header .nav li ul a {
+  font-size: 13px;
+}
+.header .nav li:hover ul {
+  display: block;
+}
+.header .nav li li {
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+.header .nav > ul {
+  display: inline-block;
+}
+.header .nav > ul:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.header .nav > ul > li:last-child a {
+  color: #ff7e28;
+  border-right: 0 none;
+  border-radius: 0 10px 0 0;
+}
+body > .footer {
+  clear: both;
+  border-top: 4px solid #0d0d0d;
+  background-color: #333333;
+  background-image: radial-gradient(circle farthest-corner at center 20px, #4d4d4d 0%, #333333 300px);
+  border-radius: 0 0 10px 10px;
+  padding: 20px;
+  color: white;
+  font-size: 12px;
+  margin-bottom: 20px;
+  line-height: 16px;
+}
+body > .footer a:link, .footer a:visited {
+  color: white;
+  text-decoration: none;
+}
+body > .footer a:link:hover,
+body > .footer a:link:active {
+  color: white;
+  text-decoration: underline;
+}
+body > .footer p {
+  clear: left;
+  text-align: center;
+  font-size: 11px;
+  position: relative;
+  margin: 0px 60px 0px 60px;
+  top: -6px;
+}
+body > .footer .nav ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+a.button {
+  padding: 12px;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+  background: #eeeeee;
+  background-image: linear-gradient(to bottom, #ffffff, #b4b4b4);
+  border: 1px solid #999999;
+  border-radius: 7px;
+  color: #333333;
+  outline: 0;
+}
+a.button:hover, a.button:focus, a.button:active {
+  text-decoration: none;
+  background: white;
+  background-image: linear-gradient(to bottom, white, #c6c6c6);
+}
+#final-footer {
+  text-align: center;
+  color: #999999;
+  margin-bottom: 20px;
+}
+#final-footer :link,
+#final-footer :link:hover,
+#final-footer :link:active {
+  color: #ff7e28;
+}
+#left-column {
+  float: left;
+  width: 680px;
+  padding: 0 20px 0 0;
+}
+hr {
+  margin: 30px 0;
+  color: #d2d2d2;
+  background-color: #d2d2d2;
+  border: 0;
+  height: 1px;
+}
+#right-sidebar {
+  float: right;
+  width: 200px;
+  padding: 0 0 20px 20px;
+}
+#right-sidebar th{
+  font-size:14px;
+  font-weight:normal;
+  text-align:right;
+  padding-left:4px;
+}
+#right-sidebar td{
+  font-size:14px;
+  font-weight:bold;
+}
+#right-sidebar ul {
+  padding-left: 20px;
+}
+#right-sidebar .download-box {
+  margin: 20px 0 40px;
+}
+#right-sidebar h2, #right-sidebar h2 :link, #right-sidebar h2 :visited {
+  color: #333333;
+  font-size: 16px;
+}
+#right-sidebar > h2:first-child {
+  margin-top: 18px;
+}
+#right-sidebar hr {
+  margin: 30px 0;
+  color: #e6e6e6;
+  background-color: #e6e6e6;
+  border: 0;
+  height: 1px;
+  width: 100%;
+}
+
+ol.checklist > li.done {
+    font-weight: bold;
+}
+
+ol.checklist ul {
+    list-style: none;
+    padding: 0px;
+}
+ol.checklist ul li
+{
+    background: left center url(../images/bullet-pass.png) no-repeat;
+    background-image: url(../images/bullet-pass.svg);
+    margin-left: 12px;
+    padding: 2px 0 2px 22px;
+}
+ol.checklist ul li.done
+{
+    background: left center url(../images/bullet-tick.png) no-repeat;
+    background-image: url(../images/bullet-tick.svg);
+}
+
+a.roundel {
+  float: right;
+}
+a.roundel img {
+  padding: 3px;
+}
+
+#messages {
+  margin-bottom: 12px;
+}
+#messages li {
+  border: 2px solid #888;
+  border-radius: 8px;
+  color: white;
+  padding: 12px 52px;
+  margin: 4px 30px;
+  background: 9px center url(../images/messages/none.svg) no-repeat;
+}
+#messages .info {
+  background-image: url(../images/messages/info.svg);
+  background-color: #3465a4;
+  border-color: #204a87;
+}
+#messages .success {
+  background-image: url(../images/messages/success.svg);
+  background-color: #73d216;
+  border-color: #4e9a06;
+}
+#messages .warning {
+  background-image: url(../images/messages/warning.svg);
+  background-color: #f57900;
+  border-color: #ce5c00;
+}
+#messages .error {
+  background-image: url(../images/messages/error.svg);
+  background-color: #cc0000;
+  border-color: #a40000;
+}
+#messages a {
+  color: white;
+  font-weight: bold;
+}
+
+/* popup provider */
+#blanket {
+  background-color:#111;
+  opacity: 0.65;
+  position: fixed;
+  z-index: 9001;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+}
+#popup {
+  background-color: white;
+  border: 1px solid #ddd;
+  opacity: 1.0 !important;
+  padding: 15px;
+  position: fixed;
+  z-index: 9002;
+  min-height: 130px;
+  min-width: 400px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+#columns {
+  background-image: linear-gradient(to bottom, #eeeeee 0%, #ffffff 132px);
+  padding-top: 60px;
+  padding-left: 8px;
+  min-height: 0;
+  background-color: white;
+  background-image: linear-gradient(to bottom, #eeeeee 0%, #ffffff 100px);
+  line-height: 140%;
+}
+#columns > .column {
+  height: 100%;
+  padding: 0 12px;
+  width: 260px;
+  border-right: 1px solid #b3b3b3;
+  display: table-cell;
+}
+#columns > .column:last-child {
+  padding: 0 0 0 12px;
+  width: 350px;
+  border: 0px solid;
+}
+#columns h1 {
+  font-family: "Trebuchet MS", Ubuntu, "Liberation Sans", FreeSans, sans-serif;
+  background-color: #e6e6e6;
+  border-radius: 4px;
+  font-size: 18px;
+  line-height: 18px;
+  padding: 11px 12px;
+  color: #333333;
+  margin-top: 0;
+}
+#columns h1 a {
+  display: block;
+  margin: -11px -12px;
+  padding: 11px 12px;
+  color: inherit;
+}
+#columns h2 {
+  color: #d55500;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* Hackfest donation page css */
+div.donationpicparagraph img {
+  float: right;
+  margin: 20px;
+}
+
+div.donationlogo {
+  position: relative;
+  margin-top: -45px;
+  margin-left: 30px;
+  margin-bottom: -30px;
+}
+
+.donationheadline {
+  font-size: 240%;
+  font-weight: normal;
+  line-height: 35px;
+/*  margin: 20px;*/
+/*  float: left;*/
+  font-family: CallunaRegular, Calluna, "Trebuchet MS", Ubuntu, "Liberation Sans", FreeSans, sans-serif;
+}
+
+p.pclear {
+  clear: both;
+}
+
+/*-- From doc html files --*/
+
+.keys {
+    text-align: right;
+    line-height: 1.5em;
+    width: 45%;
+    padding-top: 2px;
+}
+
+.shortcut {
+    font-weight: bold;
+}
+
+.keypad {
+    background-color: #eeeee6;
+    padding: 1px 5px;
+    border: 1px solid #999999;
+    margin: 0 -2px;
+    -moz-border-radius: 0.3em;
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+}
+
+.plussign {
+  margin: 0 2px;
+}
+
+.action {
+    line-height: 1.5em;
+    padding-left: 10px;
+}
+
+.note {
+    padding-left: 80px;
+    padding-right: 40px;
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.note span {
+    display: block;
+    font-size: 70%;
+    font-family: sans-serif;
+    color: #333333;
+    border-left: 1px solid #999999;
+    padding-left: 5px;
+}

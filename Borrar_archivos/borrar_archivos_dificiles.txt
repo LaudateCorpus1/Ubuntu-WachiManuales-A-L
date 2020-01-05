@@ -1,0 +1,25 @@
+
+
+Unable to delete file - no such file or directory - Ask Ubuntu
+http://askubuntu.com/questions/164026/unable-to-delete-file-no-such-file-or-directory
+
+primero poner en ese lugar
+
+cd "/media/wachin/ToshibaHD/07-PROGRAMAS/PROGRAMAS-A/Sistema/Framework .NET 4.0 (WinXP)/"
+
+ls -li
+
+
+
+filesystems - Can't delete corrupt files on Linux - Server Fault
+http://serverfault.com/questions/487113/cant-delete-corrupt-files-on-linux
+
+Luego salir con cd y poner así:
+
+chmod -t "/media/wachin/ToshibaHD/07-PROGRAMAS/PROGRAMAS-A/Sistema/Framework .NET 4.0 (WinXP)/"
+
+
+
+chmod -t "/media/wachin/ToshibaHD/07-PROGRAMAS/PROGRAMAS-A/"
+
+chmod -Rf 777 "/media/wachin/ToshibaHD/07-PROGRAMAS/PROGRAMAS-A/Sistema/Framework .NET 4.0 (WinXP)"

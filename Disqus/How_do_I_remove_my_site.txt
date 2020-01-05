@@ -1,0 +1,24 @@
+
+
+
+
+How do I remove my site?
+https://help.disqus.com/installation/how-do-i-remove-my-site
+
+
+Saeed Oday avatar
+Written by Saeed Oday
+Updated over a week ago
+
+    (Optional) Export your site's comments.
+    At the Disqus admin > Settings > Advanced page, near the bottom, click the 'Delete site and comments' button. If you own more than one site, make sure you're deleting the appropriate site.
+    Remove the appropriate Disqus widget, plugin, or universal code from your site.
+
+Important:
+
+    Deleting a site also deletes all its comments.
+    We cannot un-delete your site.
+
+
+
+

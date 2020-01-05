@@ -1,0 +1,35 @@
+KDE dolphin change default terminal - Technical Issues and Assistance / Applications - Manjaro Linux Forum
+https://forum.manjaro.org/t/kde-dolphin-change-default-terminal/48043
+
+That service menu is part of konsole, to be specific in this file:
+/usr/share/kservices5/ServiceMenus/konsolehere.desktop
+
+Thanks!
+Created my own ~/.local/share/kservices5/ServiceMenus/ and the custom actions for Terminator. Works like a charm!
+
+
+
+lo que he hecho yo:
+
+cp /usr/share/kservices5/ServiceMenus/konsolehere.desktop ~/.kde/share/kde4/services/ServiceMenus/konsolehere.desktop
+
+gedit ~/.kde/share/kde4/services/ServiceMenus/konsolehere.desktop
+
+y allí cambiar 
+
+Exec=konsole --workdir %f
+
+por esto:
+
+Exec=xfce4-terminal --workdir %f
+
+reiniciar dolphin (salir y volver a abrirlo)
+
+
+o si no:
+
+sudo cp /usr/share/kservices5/ServiceMenus/konsolehere.desktop /usr/share/kservices5/ServiceMenus/konsolehere.desktop.back
+
+sudo gedit /usr/share/kservices5/ServiceMenus/konsolehere.desktop
+
+

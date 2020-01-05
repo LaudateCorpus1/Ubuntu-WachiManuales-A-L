@@ -1,0 +1,11 @@
+
+sudo apt-get install gnome-disk-utility
+
+Este paquete gestiona y configura discos y medios, para lanzarlo poner en la terminal:
+
+sudo gnome-disks
+
+también
+
+gnome-disk-image-mounter
+

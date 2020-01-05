@@ -1,0 +1,273 @@
+
+Manual de git
+
+Este manual consiste en tres partes:
+
+1.- INTRODUCCIÓN
+2.- INSTALACIÓN DE GIT EN ANDROID
+3.- ENVIAR(PUSH) CAMBIOS DE ANDROID A GITHUB
+3.- ENVIAR(PUSH) CAMBIOS DE LINUX O WINDOWS O "MAC OS X" A GITHUB
+4.- RECIBIR(FETCH) CAMBIOS DE GITHUB A ANDROID
+5.- RECIBIR(FETCH) CAMBIOS DE GITHUB A LINUX O WINDOWS O "MAC OS X"
+
+
+1.- INTRODUCCIÓN
+Hice este tutorial para alguien que no sepa usar GIT y no tenga muchos conocimientos de informática, sin embargo es necesario saber usar la terminal sea de Windows, Linux o en MAC OS X y eso a mí al principio se me hizo medio complicado así que espero puedan con ella, les deseo lo mejor.
+
+En estos días con el avance de la tecnología y la aparición de los teléfonos inteligentes ya no es necesario pasar tanto tiempo en frente de un ordenador, inmóvil, sentado por mucho tiempo(a veces puede causar dolor de espalda) sino que también podemos instalar aplicaciones que cumplen la misma función como ejemplo WPS Office que nos permitirá editar documentos o ver PDF. Así mismo es el caso con GIT siempre y cuando se pueda instalar en Android los programas necesarios para editar los archivos
+
+
+2.- INSTALACIÓN DE GIT EN ANDROID
+En Android busque en Google Play a:
+
+Termux
+
+instalelo y abralo y escriba:
+
+apt-get upgrade
+
+y acepte con "y" y luego escriba:
+
+pkg install git
+
+También escriba "y" y espere hasta que se haya instalado
+
+Instalado más programas.- Si quiere instalar por ejemplo el editor de consola vim escriba:
+
+pkg install vim
+
+Nota: Hay un tutorial importante de VIM aquí:
+https://blog.desdelinux.net/usando-vim-tutorial-basico/amp/
+
+Si quiere ver todo lo que se puede instalar en Termux escriba:
+
+pkg list-all
+
+Si quiere desinstalar un programa escriba por ejemplo:
+
+pkg uninstall vim
+
+Todos estos comandos están para los estudie si pone en Termux:
+
+pkg help
+
+Configuración de GIT en Termux.- Para este tutorial necesitamos tener creado un repositorio en www.github.com el cual lo hayamos creado con anterioridad desde un ordenador sea en Windows, Linux, MAC OS X
+
+Para revisar su repositorio desde un navegador web en Android deberá hacer login entrando aquí:
+
+https://github.com/login
+
+En mi caso el repositorio que usaré en este tutorial es en el que estoy trabajando:
+
+https://github.com/wachin/Cancionero-Cristiano-con-acordes
+
+Acceso a memoria interna.- Asumiendo que tienen creado un repositorio en GitHub escriban en su celular en Termux lo siguiente:
+
+termux-setup-storage
+
+o también pueden copiarlo presionando y seleccionandolo y luego en Termux presionen allí donde se ponen los comandos en la terminal y peguenlo y den Enter para que se ejecute y acepten darle permiso
+
+Nota: Este comando lo tomé de la ayuda mencionada en la terminal de Termux:
+https://wiki.termux.com/wiki
+y la dirección secundaria que allí encontré es esta:
+https://wiki.termux.com/wiki/FAQ#I.27m_a_beginner._For_what_I_can_use_Termux_.3F
+
+Este comando "termux-setup-storage" lo que hará es permitir que el programa GIT que hemos instalado en Termux tenga acceso a la memoria interna de nuestro celular para poder allí editar nuestros proyectos de GitHub
+Nota: No es posible acceder a una memoria externa del celular (si nuestro celular tuviera como ponerle una) pues si leen allí en ese link de arriba allí dice en inglés que las memorias externas están formateadas en FAT32 o exFAT y no ofrece soporte para los permisos de Unix.
+
+Ahora escriban en Termux:
+
+ls
+
+den Enter y verán una carpeta llamada "storage" y deberán escribir:
+
+cd storage
+
+den Enter y escriban:
+
+ls
+
+Este comando "ls" muestra las carpetas a las que se tiene acceso, en mi caso a mí me muestra:
+
+dcim        music                  downloads   pictures
+external-1  shared
+movies
+
+es decir que tengo acceso a todas esas carpetas que están en la memoria interna (aunque no muestra a todas en realidad sino solo esas pero esas son a las que tiene acceso)
+
+Ahora, yo entraré en el directorio (o carpeta):
+
+downloads
+
+Nota: Yo quise elegir la carpeta "external-1" pero dentro no hay nada.
+
+entonces para entrar en la carpeta "downloads" escribiremos así:
+
+cd downloads
+
+y pongo luego:
+
+ls
+
+y me aparecen varias carpetas y archivos los cuales no los pongo aquí porque a ustedes les aparecerá lo que ustedes tengan. Ahora bien yo he elegido esa carpeta y allí debo crear la siguiente carpeta con el nombre "github". Para hacerlo escriban:
+
+mkdir github
+
+luego escriban ls para que la puedan observar. Ahora entren en esa carpeta escribiendo:
+
+cd github
+
+y alli clonen el repositorio que ustedes tengan. En mi caso el mío:
+
+git clone https://github.com/wachin/Cancionero-Cristiano-con-acordes
+
+Nota: Recomiendo copiar el enlace del repositorio de ustedes desde el navegador web de su Android (pues como más arriba les explicaba deberán haber hecho login) y allí una vez que estén en su repositorio copiar la dirección presionando en la barra de direcciones y copiar el enlace para poder pegarlo en Termux
+
+Ahora, deben entrar en esa carpeta de su repositorio que descargó github, escribo:
+
+ls
+
+y me aparece
+
+Cancionero-Cristiano-con-acordes
+
+en mi caso debo escribir así:
+
+cd Cancionero-Cristiano-con-acordes
+
+y luego escribo:
+
+ls
+
+y veo que allí están todos los archivos de mi proyecto.
+
+El siguiente paso es allí mismo en Termux poner nuestros datos de GIT, ponga así (deben poner su usuario y su correo):
+
+git config --global user.name "tuusuario"
+
+Dar Enter luego escribir: 
+
+git config --global user.email tucorreo@gmail.com
+
+Nota: Esto solo hay que hacerlo una vez. 
+
+Ahora le pido que añada algún archivo (también puede borrar pero si es que necesita borrar alguno), hágalo desde el administrador de archivos favorito suyo, yo usare:
+
+ES Administrador de Archivos
+
+Lo buscan con ese nombre en Google Play y lo instalan, yo copiaré un archivo .docx de una canción con acordes de guitarra el cual tengo en la carpeta Documentos (en mi celular) el cual se llama: "Adorar al cordero Santo.docx" a una carpeta que tengo en mi proyecto la cual se llama "Cancionero" y que está dentro de la carpeta "Cancionero-Cristiano-con-acordes" la cual está dentro de la carpeta "github" dentro de "downloads" (la cual vista desde el administrador de archivos "ES Administrador de Archivos" tiene el nombre "Download" pero en Termux se muestra el nombre "downloads" -es necesario explicar así para evitar alguna mala comprensión de lo que estamos haciendo-), una vez puesto ese archivo allí, en Termux escribo:
+
+git status
+
+y me aparece:
+
+Cancionero/Adorar al cordero Santo.docx
+
+esto me aparece de color rojo
+
+3.- ENVIAR(PUSH) CAMBIOS DE ANDROID A GITHUB
+El siguiente comando es para añadir el o los nuevos archivos que hayamos añadido o los que hayamos borrado o los que hayamos editado al indice:
+
+git add
+
+Bueno es necesario para mí pegar aquí una explicación excelente:
+
+"git add Es una pieza fundamental del flujo básico de git ya que es el comando que mueve al índice las modificaciones que hayamos realizado. El índice es un snapshot del contenido del área de trabajo en un momento dado. Este snapshot es el que posteriormente se convertirá en un commit" http://aprendegit.com/opciones-del-comando-git-add/
+
+Ahora yo estoy guardando todos los cambios que haya hecho sea editar un archivo, añadir o borrar uno o varios archivos. Estos cambios todos los guardo en el indice al mismo tiempo por eso yo escribiré:
+
+git add .
+
+Y si vuelvo a poner "git status" me aparecerá el cambio de color verde.
+
+Si desean mas información (como añadir un solo archivo con git add) revisen el vídeo: 
+
+Tutorial de Git - 3. Creando tu primer Commit
+https://youtu.be/UJGKWMHX038
+
+Les recomiendo ese canal de Youtube de makigas pues allí aprendí a usar Git
+
+Vea toda la lista de reproducción de makigas del "Tutorial de Git" en:
+https://www.youtube.com/playlist?list=PLTd5ehIj0goMCnj6V5NdzSIHBgrIXckGU
+
+Ahora ya que estoy seguro de todos los cambios que he hecho voy a guardar los cambios en mi repositorio local (es decir el que está en el celular en la memoria interna), para ello escribiré en Termux:
+
+git commit -m "Añadí la canción Adorar al cordero Santo.docx"
+
+donde lo que está entre paréntesis es un breve resumen del cambio que hice y al dar Enter se guardarán los cambios en el repositorio local. Y así sucesivamente iré añadiendo varios commits los cuales son los cambios que vaya haciendo.
+
+Si lo que queremos luego es ver todos los commits que hemos hecho ponemos en Termux:
+
+git log
+
+y se verán todos los commits con sus datos y al final aparecerán dos puntos ":" y para salirse escribiremos:
+
+q
+
+y damos "Enter". Si no no podremos salir excepto que salga a la fuerza con:
+
+CTRL + z
+
+Nota: Esta característica se parece a la del editor de consola VIM solo que en VIM hay que escribir ":wq" para guardar y salir, o primero ":w" para guardar y luego ":q" para salir, pero acá al poner "git log" ya aparece escrito ":"
+
+
+Conectar repositorio local a repositorio en github.- Para hacer esto debemos poner en Termux así(reemplace mi url con la suya):
+
+git remote add origin https://github.com/wachin/Cancionero-Cristiano-con-acordes
+
+Para observar que ya está añadido escribir:
+
+git remote -v
+
+a mi me aparece así:
+
+$ git remote -v
+origin  https://github.com/wachin/Cancionero-Cristiano-con-acordes (fetch)
+origin  https://github.com/wachin/Cancionero-Cristiano-con-acordes (push)
+
+ahora sí, como usted ya había hecho un commit (el cual es indispensable para poder realizar el siguiente paso, pues si no hay un commit no se puede hacer Push) pongo en la terminal
+
+git push origin master
+
+Donde
+origin.- Es el nombre del remoto
+master.- Es el nombre de la rama 
+
+Nota: Si hay varias ramas o necesiten saber algo más vean los tutoriales de makigas sobre este tema:
+
+Tutorial de Git - 19. Cómo hacer Push
+https://youtu.be/jgeLj45G0tk
+
+Sigamos. Al dar Enter me preguntará por mi usuario y contraseña, los pongo, y allí subirá todo al repositorio en GitHub, y si quiero ver los cambios que se hicieron abro el navegador web de Android y lo veo en mi url(usted en la dirección de su repositorio), el mío es:
+
+https://github.com/wachin/Cancionero-Cristiano-con-acordes/
+
+y allí doy clic en:
+
+view code
+
+y alli donde usted tenga sus archivos que ha añadido aparecerán los cambios, o si ha borrado archivos verá que ya no están.
+
+Nota: Si necesita volver a un estado anterior (para tener acceso a archivos que haya borrado u otros) revise los tutoriales de makigas.
+
+Cómo cerrar Termux.- Para cerrar Termux puede escribir:
+
+exit
+
+se da Enter y see escribe la vez y saldrá, o también:
+
+logout
+
+Como volver a entrar a mí repositorio desde Termux.- Para habilitar esta operación y no hacer tantos pasos es necesario usar "ES Administrador de Archivos", allí hay que buscar el lugar donde está la carpeta "github" (que creamos anteriormente) y entrar en ella y darle clic con el dedo a nuestro repertorio que y retener el dedo encima hasta que se marque y luego aplastar con el dedo el botón a la derecha abajo que tiene tres puntitos "..." (verticales) y presionar "Propiedades" y dar clic en el botón "COPIAR RUTA COMPLETA" e ir a Termux y allí escribir:
+
+cd 
+
+y dejar un espacio y allí presione con el dedo y pegar, y así debe de quedar en mi caso:
+
+cd /storage/emulated/0/Download/github/Cancionero-Cristiano-con-acordes
+
+y dar Enter y estará de manera rápida en el directorio de su repositorio.
+
+
+
+Dios le bendiga

@@ -1,0 +1,4 @@
+
+
+
+Antes de activar Jack con Patchbay para que envie la entrada del micrófono a los parlantes, asegurarse de bajar el volumen de micrófono(hay dos micrófonos en pavucontrol, el de la laptop si es laptop y el externo que se activa cuando uno conecta uno externo), sino al encenderlo se va a escuchar un ruido muy grande y feo que haría que usted quiera apagar a la fuerza a tu laptop o PC 

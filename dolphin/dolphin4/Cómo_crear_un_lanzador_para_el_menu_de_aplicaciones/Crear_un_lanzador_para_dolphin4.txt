@@ -1,0 +1,34 @@
+
+
+[KDE] Dolphin - Video & Pdf Files Preview
+https://www.kubuntuforums.net/showthread.php/69160-Dolphin-Video-amp-Pdf-Files-Preview
+
+
+1) Making ~/.local/share/applications/dolphin4.desktop
+Code:
+
+
+[Desktop Entry]
+Name=Dolphin4
+Name[x-test]=xxDolphin4xx
+Exec=dolphin4 %u
+Icon=system-file-manager
+Type=Application
+X-DocPath=dolphin/index.html
+Categories=Qt;KDE;System;FileTools;FileManager;
+GenericName=KDE4 File Manager
+GenericName[x-test]=xxKDE4 File Managerxx
+Terminal=false
+MimeType=inode/directory;
+InitialPreference=10
+
+
+
+2) Rebuilding the KDE system configuration cache:
+Code:
+kbuildsycoca5 --noincremental
+3) Choosing the default file manager.
+
+=> Working at here.
+
+ 

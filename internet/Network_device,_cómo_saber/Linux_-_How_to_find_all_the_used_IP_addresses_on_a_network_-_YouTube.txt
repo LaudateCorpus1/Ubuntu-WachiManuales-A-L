@@ -1,0 +1,19 @@
+[Desktop Entry]
+Type=Link
+URL=https://www.youtube.com/watch?v=j8u8N3b9gDQ
+
+
+Linux : How to find all the used IP addresses on a network
+In this tutorial, I'll show you How to find all the used IP addresses on a network.
+Generally, nmap is useful to quickly scan networks.
+To install nmap, enter
+sudo apt-get install nmap
+Once it is installed, enter
+nmap -sP 192.168.1.0/24
+This will show you which hosts responded to ping requests on the network between 192.168.1.0 and 192.168.1.255.
+Netdiscover can also be used
+To install via terminal:
+sudo apt-get install netdiscover
+example usage :
+sudo netdiscover -r 192.168.1.0/24
+An IP with MAC Addreses will show on your terminal

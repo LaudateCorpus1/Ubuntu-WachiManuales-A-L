@@ -1,0 +1,3 @@
+
+
+/home/wachin/.wine/dosdevices/c:/windows/Fonts 

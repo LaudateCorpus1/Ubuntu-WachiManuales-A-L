@@ -1,0 +1,9 @@
+
+
+
+- Desinstalar todas las extensiones
+- borrar todo el historial etc, menos las contraseñas
+  busca en la configuracion de chromium estas palabras "borrar datos de navegación" y allí borralas
+- borra el cache y configuración con este comando:
+  rm -r -v ~/.mozilla && rm -r -v ~/.cache/mozilla 
+

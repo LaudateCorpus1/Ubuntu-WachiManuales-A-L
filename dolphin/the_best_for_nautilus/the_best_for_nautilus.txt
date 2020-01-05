@@ -1,0 +1,81 @@
+
+
+to work with list- or detail-view in nautilus so you need to install:
+
+sudo apt-get install dconf-editor
+
+launch it from terminal, or with the launcher Alt+F2, with:
+
+dconf-editor
+
+Go to:
+
+org/gnome/nautilus/preferences/default-folder-viewer
+
+see:
+
+http://storage7.static.itmages.com/i/16/0421/h_1461249276_7582161_e59392d954.png
+
+double clic in "default-folder-viewer" and chose that you want, example list_view:
+
+http://storage8.static.itmages.com/i/16/0421/h_1461249538_8654939_4b9c8192b5.png
+
+it is important that you recorded in your memory the name of that package "dconf-editor" for you easy use in next times
+
+Oh, I said you a new. In the repositories of 15.10 there is a package called dolphin4, this software I use to my main file manager, this is the same that dolphin but working the search option. I know is necessary to install dome services, but is very fantanstic. If you try to use it, I made some tutorials for the most necessary config:
+
+Extraer aquí - Comprimir (File-Roller) para dolphin
+http://facilitarelsoftwarelibre.blogspot.com/2014/11/extraer-aqui-comprimir-file-roller-para.html
+
+Añadir enqueue (a la cola de reproducción) al menu contextual del administrador de archivos dolphin
+http://facilitarelsoftwarelibre.blogspot.com/2016/02/anadir-enqueue-al-menu-contextual-del.html
+
+other importantly:
+
+kubuntu - Enabling PDF preview in Dolphin - Ask Ubuntu
+http://askubuntu.com/questions/86338/enabling-pdf-preview-in-dolphin
+from this I install:  kdegraphics-thumbnailers
+
+
+See also:
+Preview video files with Dolphin file manager
+inside the:
+http://ubuntuguide.org/wiki/Kubuntu_Saucy_File_Managers
+from this I install:   mplayerthumbs
+
+Sorry my english I am spanish parlant
+
+God Bless,
+Washington Indacochea Delgado
+
+El 21/04/16 a las 07:30, Thomas Pfundt escribió:
+> work for setting the default file manager, that is a bug for sure.
+>
+> Oh no, maybe I've not clearly described the issue with this. I am able
+> to install Nautilus and set it as the default file manager. The problem
+> is that I have not been able to access its preferences, because the
+> Xfce-menu links still open the Thunar settings and I have not been able
+> to access the Nautilus menu bar with Alt+F10 or by any other means.
+>
+> Because of this, Nautilus always resets itself to icon-view upon
+> closing, which is a bit unfortunate, because I tend to work with list-
+> or detail-views in the folders mostly and I basically have to set this
+> every time when launching the file manager. Accessing any other settings
+> is not possible either at this point. It's really a matter of
+> convenience for me, but not being able to access an alternative file
+> manager's preferences might be an issue. Like I mentioned, I also can't
+> find a terminal command for it, such as "nautilus-preferences/-settings"
+> or anything similar.
+>
+> I also just realised that Nautilus is not really popular among the
+> community apparently, I just haven't used any other file manager in the
+> past and I've never experienced any particular problems with it
+> personally, so this was my first choice after Thunar became too
+> impractical to use for me. If there is another favourite file manager
+> for someone here, maybe I could try that one instead and see if it works
+> better in terms of integration and stability.
+>
+>
+> Kind regards,
+> Thomas
+ 

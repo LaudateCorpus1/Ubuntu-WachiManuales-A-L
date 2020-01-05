@@ -1,0 +1,9 @@
+
+
+----------------------------------------------------------------------
+Problems During Program Startup
+----------------------------------------------------------------------
+
+Difficulties starting LibreOffice (e.g. applications hang) as well as problems with the screen display are often caused by the graphics card driver. If these problems occur, please update your graphics card driver or try using the graphics driver delivered with your operating system. Difficulties displaying 3D objects can often be solved by deactivating the option "Use OpenGL" under 'Tools - Options - LibreOffice - View - 3D view'.
+
+Visto en el README que viene en el deb que uno se descarga de la pagina de ellos

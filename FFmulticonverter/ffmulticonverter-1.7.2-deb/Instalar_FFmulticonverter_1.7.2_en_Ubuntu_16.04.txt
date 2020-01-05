@@ -1,0 +1,30 @@
+
+Instalar FFmulticonverter 1.7.2 en Ubuntu 16.04
+https://facilitarelsoftwarelibre.blogspot.com/2016/07/ffmulticonverter-172-en-ubuntu-1604.html
+
+RESUMEN:
+El unico programa que yo uso para convertir videos a diferentes formatos en Linux es FFmulticonverter (antes cuando usaba Windows yo usaba Format Factory). He visto en internet en dos paginas como instalar FFmulticonverter 1.7.2 el cual es la versión que funciona bien en UbuntuStudio 16.04 (uno de los derivados oficiales de Ubuntu) desde PPA, pero pasa que yo uso varios PPA
+
+http://facilitarelsoftwarelibre.blogspot.com/2016/07/programas-y-ppa-que-wachin-usa-en.html
+
+y me entra en conflicto con los que yo tengo pues hay varios programas repetidos. Entonces mejor opto por usar el DEB de Deepin Linux (además que en la página oficial de ellos no hay a esta fecha 2017-02-05 para ubuntu, están buscando alguien que haga el paquete)
+
+ 
+
+APLICABLE A:
+Ubuntu 16.04 y derivados
+
+INSTRUCCIONES:
+Descargue el paquete DEB de aquí (es tanto para 32 como 64bits):
+
+http://packages.deepin.com/deepin/pool/main/f/ffmulticonverter-dmo/ffmulticonverter_1.7.2-dmo2_all.deb
+
+ 
+
+lo descargas e instalas con el programa de instalación de software dándole clic derecho e instalar con gdebi, mira aquí un tutorial de cómo hacerlo
+
+https://facilitarelsoftwarelibre.blogspot.com/2016/09/instalar-paquetes-deb-con-gdebi.html
+
+y puedes revisar en el futuro si hay alguna actualización:
+
+http://packages.deepin.com/deepin/pool/main/f/ffmulticonverter-dmo/

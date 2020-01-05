@@ -1,0 +1,14 @@
+
+
+
+KDE Connect.- Sirve para integrar mi celular Android con Ubuntu, puedo copiar y pegar texto, y puedo enviar archivos o recibirlos (pero que no sean tan grandes)
+http://www.webupd8.org/2017/04/new-kde-connect-indicator-ubuntu-linux.html
+sudo add-apt-repository ppa:webupd8team/indicator-kdeconnect
+sudo apt-get update
+sudo apt-get install indicator-kdeconnect
+
+Para emparejarlo con el celular habría que reiniciarlo para que se cargue, pero lo puede hacer allí mismo poniendo en la terminal:
+
+indicator-kdeconnect
+
+Le aparecerá una ventana, siga las instrucciones

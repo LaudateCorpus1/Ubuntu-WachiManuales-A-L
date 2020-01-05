@@ -1,0 +1,5 @@
+
+
+Wachín abre una terminal aquí y pon esto
+
+sudo cp gimp-splash.png /usr/share/gimp/2.0/images/gimp-splash.png 

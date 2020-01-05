@@ -1,0 +1,5 @@
+
+Audacious presets: 
+https://gist.github.com/kra3/9781800
+
+Audacious presets: ~/.config/audacious/eq.preset 

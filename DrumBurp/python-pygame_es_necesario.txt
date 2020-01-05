@@ -1,0 +1,28 @@
+en la página oficial dice que es necesario para este funcionar . En UbuntuStudio 16.04 este paquete se llama así:
+
+python-pygame
+
+Probando en la terminal así:
+
+wachin@wachin:~/Dropbox/UbuntuManuales/DrumBurp/source/DrumBurp-v1.0-source/src$ python Drumburp.py
+
+ y me aparece esto:
+
+wachin@wachin:~/Dropbox/UbuntuManuales/DrumBurp/source/DrumBurp-v1.0-source/src$ python DrumBurp.py
+fluidsynth: error: Unable to open file "/usr/share/sounds/sf2/TimGM6mb.sf2"
+fluidsynth: error: Couldn't load soundfont file
+fluidsynth: error: Failed to load SoundFont "/usr/share/sounds/sf2/TimGM6mb.sf2"
+
+así que en synaptic pongo esta palabra:
+
+TimGM6mb
+
+y aparecen dos paquetes, instalo después de leer bien este:
+
+timgm6mb-soundfont
+
+porque allí dice que este instalará esa fuente de sonido allí en sf2. 
+
+Y correcto así fue lo instaló aquí: /usr/share/sounds/sf2/TimGM6mb.sf2
+
+Listo ahora si en la terminal no dice nada

@@ -1,0 +1,14 @@
+
+
+Working with GMail - KDE UserBase Wiki
+https://userbase.kde.org/Working_with_GMail
+
+
+sudo apt-get install kmail kwalletmanager
+
+
+el gestor de carteras que se instala se llama kwallet se lanza con
+
+kwalletmanager5
+
+una vez lanzado hay que crear una nueva cartera

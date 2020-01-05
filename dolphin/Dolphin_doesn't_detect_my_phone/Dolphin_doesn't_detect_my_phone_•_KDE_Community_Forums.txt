@@ -1,0 +1,23 @@
+
+
+https://forum.kde.org/viewtopic.php?f=224&t=120941
+
+Re: Dolphin doesn't detect my phone
+Fri May 02, 2014 1:31 pm
+Which version of KDE are you using, and do you have the MTP KIOSlave installed?
+
+Wachín found 
+
+kio-mtp 
+
+synaptic
+
+access to MTP devices for applications using the KDE Platform
+  
+This package includes the MTP KIO plugin. It allows applications using
+the KDE Platform to access files stored on devices that provide access to
+them via the MTP protocol.
+
+The Media Transfer Protocol (commonly referred to as MTP) is a devised set
+of custom extensions to support the transfer of music files on USB digital
+audio players and movie files on USB portable media players.

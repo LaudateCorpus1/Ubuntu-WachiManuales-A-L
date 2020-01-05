@@ -1,0 +1,25 @@
+
+Descargar de aquí:
+
+http://kde-apps.org/content/show.php/Dolphin+Folder+Color?content=164008
+
+Es necesario en Ubuntu 14.04 tener instalado el paquete "kdebase-bin" (o kde-baseapps), para instalarlo poner en la terminal:
+
+sudo apt-get install kdebase-bin
+
+esto porque en la pagina del creador dice que depende de kdialog, y este lo da kdebase-bin según:
+http://manpages.ubuntu.com/manpages/hardy/man1/kdialog.1.html
+
+INSTALACIÓN:
+Corra el script dandole doble clic al archivo: 
+
+install.sh
+
+Allí debe de escoger la instalación para KDE 5 o 4
+
+luego reinicie Dolphin
+
+ayuda vista aquí:
+
+How to Change Folder Colors in Dolphin (KDE File Manager) - Make Tech Easier
+https://www.maketecheasier.com/change-folder-colors-kde-dolphin/ 

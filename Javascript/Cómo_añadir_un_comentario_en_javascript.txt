@@ -1,0 +1,23 @@
+
+Cómo poner comentarios en javascript – CybMeta
+https://cybmeta.com/como-poner-comentarios-en-javascript
+
+Hay una costumbre bastante extendida que consiste en añadir * (asterístico) en cada línea del bloque comentado para mejorar la lectura e identificación del bloque comentado:
+
+<script>
+    /*
+    * Y este texto puede decir lo que yo quiera
+    * para acordarme de algo
+    */
+</script>
+
+
+Pero en realidad el asterístico no hace nada ahí desde un punto de vista de programación y podría ser sustituido por cualquier otro carácter con el mismo propósito:
+
+<script>
+    /*
+    # Y este texto puede decir lo que yo quiera
+    # para acordarme de algo
+    */
+</script>
+Algunas consideraciones

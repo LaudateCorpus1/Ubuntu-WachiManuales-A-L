@@ -1,0 +1,8 @@
+
+
+
+<SlidingHorn> wachin: kdenlive is a KDE application, and IIRC, Studio uses XFCE.  You'll have to download a bunch of KDE libs, etc.   First:     
+
+sudo apt-get install kdenlive frei0r-plugins dvgrab recordmydesktop dvdauthor 
+
+           Once finished, then:    sudo apt-get install kde-runtime   (this will install a LOT of libs) 

@@ -1,0 +1,24 @@
+
+
+wachin@Dell-Inspiron-1750:~$ sudo apt-get install linux-image-liquorix-686 linux-headers-liquorix-686
+Leyendo lista de paquetes... Hecho
+Creando árbol de dependencias       
+Leyendo la información de estado... Hecho
+Los paquetes indicados a continuación se instalaron de forma automática y ya no son necesarios.
+  cpp-6 cpp-8 gcc-6-base libasan3 libasan5 libgcc-6-dev libgcc-8-dev
+  libubsan1
+Utilice «sudo apt autoremove» para eliminarlos.
+Se instalarán los siguientes paquetes adicionales:
+  linux-headers-4.19.0-13.1-liquorix-686 linux-image-4.19.0-13.1-liquorix-686
+Paquetes sugeridos:
+  linux-doc-4.19
+Paquetes recomendados:
+  firmware-linux-free
+Se instalarán los siguientes paquetes NUEVOS:
+  linux-headers-4.19.0-13.1-liquorix-686 linux-headers-liquorix-686
+  linux-image-4.19.0-13.1-liquorix-686 linux-image-liquorix-686
+0 actualizados, 4 nuevos se instalarán, 0 para eliminar y 0 no actualizados.
+Se necesita descargar 57,5 MB de archivos.
+Se utilizarán 285 MB de espacio de disco adicional después de esta operación.
+¿Desea continuar? [S/n] s
+

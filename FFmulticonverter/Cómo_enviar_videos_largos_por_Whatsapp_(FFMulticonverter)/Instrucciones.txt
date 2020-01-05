@@ -1,0 +1,124 @@
+
+Cómo compartir videos largos en whatsapp
+
+Menos de 16 MB acepta WhatsApp en un video
+
+ffmulticonverter video para WhatsApp a 800kbps, 480x360
+Nota: Estaba convirtiendo un video de 10,20min y pesa 1,4GB, pero el tamaño que dió fue 70MB y al tratar de enviarlo en WhatsApp me dejaba seleccionar 1/4 partes del video
+
+********************
+Dos canales de audio
+********************
+
+video 250kbps, 512x288, fps15
+audio 128kbps, 44.1kHz, 2 chnnels, AAC
+-vf "scale=512:288" -b:v 250k -r 15 -ac 2 -b:a 128k -ar 44100
+
+*****************
+Un canal de audio
+*****************
+
+video 300kbps, 512x288, fps15
+audio 96kbps, 44.1kHz, 1 chnnels, AAC
+-vf "scale=512:288" -b:v 300k -r 15 -ac 1 -b:a 96k -ar 44100
+
+video 256kbps, 512x288, fps15
+audio 96kbps, 44.1kHz, 1 chnnels, AAC
+-vf "scale=512:288" -b:v 256k -r 15 -ac 1 -b:a 96k -ar 44100
+
+video 180kbps, 512x288, fps15
+audio 96kbps, 44.1kHz, 1 chnnels, AAC
+-vf "scale=512:288" -b:v 180k -r 15 -ac 1 -b:a 96k -ar 44100
+
+video 145kbps, 512x288, fps15
+audio 96kbps, 44.1kHz, 1 chnnels, AAC
+-vf "scale=512:288" -b:v 145k -r 15 -ac 1 -b:a 96k -ar 44100
+
+video 220kbps, 512x288, fps15. Audio 30k, 44.1kHz (Ej: Video 1280x720 SAMSUNG J5:  8:22min a 15.2MB)
+-vf "scale=512:288" -b:v 220k -r 15 -ac 1 -b:a 30k -ar 44100
+                                                  buena calidad
+
+
+video 200kbps, 512x288, fps15. Audio 30k, 44.1kHz (Ejemplo: Video 1280x720 SAMSUNG J5: 9:17min a 11,9MB)
+-vf "scale=512:288" -b:v 200k -r 15 -ac 1 -b:a 30k -ar 44100
+
+
+video 180kbps, 512x288, fps15. Audio 30k, 44.1kHz (Ejemplo: Video 1280x720 SAMSUNG J5: 9:17min a 14,4MB)
+-vf "scale=512:288" -b:v 180k -r 15 -ac 1 -b:a 30k -ar 44100
+
+video 170kbps, 512x288, fps15. Audio 30k, 44.1kHz (Ejemplo: Video 1280x720 SAMSUNG J5: 10:14min a 15,2MB)
+-vf "scale=512:288" -b:v 170k -r 15 -ac 1 -b:a 30k -ar 44100
+
+
+video 160kbps, 512x288, fps15. Audio 30k, 44.1kHz (Ej.: Video 1280x720 SAMSUNG J5:  9:34min a 14.1MB)
+                                                  (Ej.: Video 1280x720 SAMSUNG J5:  9:17min a 13.1MB)
+                                                  (Ej.: Video 1280x720 SAMSUNG J5: 10:45min a 12.8MB)
+-vf "scale=512:288" -b:v 160k -r 15 -ac 1 -b:a 30k -ar 44100
+
+  
+video 150k, 512x288, fps15. Audio 30k, 44.1kHz (Ejemplo: Video 1280x720 SAMSUNG J5:  7:07min a 9,8MB)
+                                               (Ejemplo: Video 1280x720 SAMSUNG J5: 12:07min a 15,05MB)
+-vf "scale=512:288" -b:v 150k -r 15 -ac 1 -b:a 30k -ar 44100
+
+
+video 145k, 512x288, fps15. Audio 30k, 44.1kHz
+-vf "scale=512:288" -b:v 145k -r 15 -ac 1 -b:a 30k -ar 44100
+
+
+video 140k, 512x288, fps15. Audio 30k, 44.1kHz
+-vf "scale=512:288" -b:v 140k -r 15 -ac 1 -b:a 30k -ar 44100
+
+
+video 130k, 512x288, fps15, Audio 30k, 44.1kHz (Convirtió un video 1280x720 de 11:54 min a 14.13MB)
+                                               (Convirtió un video 1280x720 de 12:30 min a 15.50MB)
+                                               (Convirtió un video 1280x720 de 11:41 min a 13.8MB)
+-vf "scale=512:288" -b:v 130k -r 15 -ac 1 -b:a 30k -ar 44100
+
+
+
+video 120k, 512x288, fps15, Audio 30k, 44100   (Convirtió un video 1280x720 de 14:23 min de 1.2GB a 15.8MB)
+
+-vf "scale=512:288" -b:v 120k -r 15 -ac 1 -b:a 30k -ar 44100
+
+
+Nota: la resolución correcta la encontré en kdenlive, en:
+"Proyecto/Preferencias del proyecto/Personalizado/512x288 16:9 PAL"
+
+
+UN CANAL VERTICAL
+
+video 220kbps, 288x512, fps15,  Audio 30k, 44.1kHz 
+-vf "scale=288:512" -b:v 220k -r 15 -ac 1 -b:a 30k -ar 44100
+
+
+video 180kbps, 288x512, fps15,  Audio 30k, 44.1kHz 
+-vf "scale=288:512" -b:v 180k -r 15 -ac 1 -b:a 30k -ar 44100
+
+
+
+
+
+320x240
+
+video 115kbps, 320x240, fps15
+audio 96kbps, 44.1kHz, 2 chnnels, AAC
+-vf "scale=320:240" -b:v 115k -r 15 -ac 2 -b:a 96k -ar 44100
+
+
+-vf "scale=320:240" -b:v 115k -r 15 -ac 2 -b:a 80k -ar 44100
+                                               (Convirtió un video SD de 10:54 min a 15.6MB)
+
+-vf "scale=320:240" -b:v 115k -r 15 -ac 2 -b:a 65k -ar 44100
+
+
+-vf "scale=320:240" -b:v 115k -r 15 -ac 2 -b:a 40k -ar 44100
+                                               (Convirtió un video SD de 13:52 min a 15.8MB)
+
+video 115kbps, 320x240, fps15
+audio 32kbps, 44.1kHz, 1 chnnels, AAC
+-vf "scale=320:240" -b:v 115k -r 15 -ac 1 -b:a 32k -ar 44100
+
+vídeo 95kbps, 320x240, fps15, audio 32kbps, 1 chnnel
+-vf "scale=320:240" -b:v 95k -r 15 -ac 1 -b:a 30k -ar 44100
+
+

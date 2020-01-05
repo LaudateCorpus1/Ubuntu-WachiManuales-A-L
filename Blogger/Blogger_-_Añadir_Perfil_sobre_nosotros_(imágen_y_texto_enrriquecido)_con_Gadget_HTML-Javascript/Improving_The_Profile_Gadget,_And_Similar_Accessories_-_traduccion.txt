@@ -1,0 +1,51 @@
+Improving The Profile Gadget, And Similar Accessories
+http://blogging.nitecruzr.net/2010/05/improving-profile-gadget.html
+
+any bloggers want something better than the standard Blogger provided gadgets, like "Profile" / "About Us", on their blogs. For some, even a custom HTML / Rich Text gadget still doesn't provide enough choices.
+Rich text is too confusing.
+The HTML Gadget toolbar lacks features.
+There's no way to upload a picture.
+
+If you want something more interesting than straight HTML / JavaScript / Rich Text for your Profile gadget, use Post Editor to compose the content.
+Make a new post.
+Compose the post, in Compose mode. Preview and make sure that you like what you have.
+When you have what you like for your new gadget, switch to "Edit HTML" mode.
+Copy the HTML content.
+Make a new HTML / JavaScript gadget.
+Paste the HTML from your new post, into the HTML gadget.
+Save your new gadget.
+Position your new gadget.
+If you combine photos and text, know how to include both smoothly. 
+
+Once installed, if you feel the need to tweak the new gadget, you will have to know HTML / JavaScript / Rich Text (and note the oddities of the Html / Rich Text personality). Use the post editor for as much composition as possible, before creating the new gadget. 
+
+You can, as noted separately, conditionally display your HTML / JavaScript gadget, to make it appear as part of a given specific page or URL in the blog.
+
+Since your improved gadget is being composed in Pages / Post Editor, you can, alternately, simply publish a Page or Post containing the gadget - instead of copying the code to an HTML / JavaScript gadget. This blog uses a custom Followers display, published as a static page.
+LABELS: "ABOUT ME" "ADD A GADGET" "CONFIGURE PAGE LIST" BLOGGER PROFILE DASHBOARD - LAYOUT GADGETS HTML GADGET LAYOUT NITECRUZR.NET PAGE ELEMENTS POST EDITOR PROFILE GADGET RBS IMPROVEMENTS TEXT GADGET
+
+
+cualquier blogger desea algo mejor que los gadgets estándar proporcionados por Blogger, como "Perfil" / "Sobre nosotros", en sus blogs. Para algunos, incluso un gadget HTML / Rich Text personalizado aún no ofrece suficientes opciones.
+El texto enriquecido es muy confuso.
+La barra de herramientas del gadget HTML carece de funciones.
+No hay forma de cargar una imagen.
+
+Si desea algo más interesante que HTML / JavaScript / texto enriquecido para su gadget Perfil, use el Editor de entradas para componer el contenido.
+
+Hacer una nueva publicación
+Componga la publicación, en modo Redactar. Vista previa y asegúrese de que le guste lo que tiene.
+Cuando tengas lo que te gusta para tu nuevo gadget, cambia al modo "Editar HTML".
+Copie el contenido HTML.
+Crea un nuevo gadget HTML / JavaScript.
+Pegue el HTML de su nueva publicación en el gadget HTML.
+Guarde su nuevo gadget.
+Posiciona tu nuevo gadget.
+Si combina fotos y texto, sepa cómo incluir ambos sin problemas.
+
+Una vez instalado, si sientes la necesidad de modificar el nuevo gadget, deberás conocer HTML / JavaScript / Rich Text (y notar las rarezas de la personalidad Html / Rich Text). Utilice el editor de publicaciones para obtener la mayor cantidad de composición posible antes de crear el nuevo gadget.
+
+Puede, como se indica por separado, mostrar condicionalmente su gadget HTML / JavaScript para que aparezca como parte de una página o URL específica en el blog.
+
+Como su gadget mejorado se está compilando en Pages / Post Editor, puede, alternativamente, simplemente publicar una Página o Publicación que contenga el gadget, en lugar de copiar el código en un gadget HTML / JavaScript. Este blog usa una pantalla de Seguidores personalizada, publicada como una página estática.
+ETIQUETAS: "ACERCA DE MÍ" "AGREGAR UN GADGET" "CONFIGURAR LA LISTA DE PÁGINAS" PERFIL DE BLOGGER TABLERO DE INSTRUMENTOS - DISPOSITIVOS DE DISTRIBUCIÓN DISEÑO DE GADGET HTML NITECRUZR.NET ELEMENTOS DE PÁGINA POST PERFIL DE EDITOR GADGET MEJORAS DE RBS TEXT GADGET
+

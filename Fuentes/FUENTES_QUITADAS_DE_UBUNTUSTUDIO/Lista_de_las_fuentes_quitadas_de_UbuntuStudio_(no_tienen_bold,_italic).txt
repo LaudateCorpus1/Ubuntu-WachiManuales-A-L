@@ -1,0 +1,55 @@
+
+
+
+Quitó completamente los siguientes paquetes:
+fonts-alee
+fonts-ancient-scripts
+fonts-breip
+fonts-ecolier-court
+fonts-ecolier-lignes-court
+fonts-f500
+fonts-guru-extra
+fonts-horai-umefont
+fonts-inconsolata
+fonts-isabella
+fonts-jsmath
+fonts-kacst
+fonts-kacst-one
+fonts-khmeros-core
+fonts-lao
+fonts-larabie-deco
+fonts-larabie-straight
+fonts-larabie-uncommon
+fonts-lklug-sinhala
+ttf-aenigma
+
+Quitó los paquetes siguientes:
+fonts-guru
+ttf-alee
+ttf-ancient-fonts
+ttf-isabella
+ttf-jsmath
+
+Hasta aquí salió que se quitaba el espacio de 160MB. Luego
+
+
+Quitó completamente los siguientes paquetes:
+fonts-tomsontalks
+fonts-wqy-microhei
+ttf-ancient-fonts-symbola
+ttf-lyx
+ttf-radisnoir
+ttf-sjfonts
+ttf-staypuft
+ttf-unifont
+
+Quitó los paquetes siguientes:
+ttf-tomsontalks
+ttf-wqy-microhei
+
+
+*************************************************
+INSTALAR OTRA VEZ LOS PAQUETES DE FUENTES
+*************************************************
+
+sudo apt-get install fonts-alee fonts-ancient-scripts fonts-breip fonts-ecolier-court fonts-ecolier-lignes-court fonts-f500 fonts-guru-extra fonts-horai-umefont fonts-inconsolata fonts-isabella fonts-jsmath fonts-kacst fonts-kacst-one fonts-khmeros-core fonts-lao fonts-larabie-deco fonts-larabie-straight fonts-larabie-uncommon fonts-lklug-sinhala ttf-aenigma fonts-guru ttf-alee ttf-ancient-fonts ttf-isabella ttf-jsmath fonts-tomsontalks fonts-wqy-microhei ttf-ancient-fonts-symbola ttf-lyx ttf-radisnoir ttf-sjfonts ttf-staypuft ttf-unifont ttf-tomsontalks ttf-wqy-microhei

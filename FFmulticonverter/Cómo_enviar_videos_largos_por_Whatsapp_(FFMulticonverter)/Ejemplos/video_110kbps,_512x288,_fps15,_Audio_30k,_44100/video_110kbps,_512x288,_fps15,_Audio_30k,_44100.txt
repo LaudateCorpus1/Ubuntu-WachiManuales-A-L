@@ -1,0 +1,8 @@
+
+
+
+video 110kbps, 512x288, fps15, Audio 30k, 44100
+audio 30kbps, 44.1kHz, 1 chnnels, AAC
+-vf "scale=512:288" -b:v 110k -r 15 -ac 1 -b:a 30k -ar 44100
+
+No se ve del todo claro, creo que lo mejor es no usar

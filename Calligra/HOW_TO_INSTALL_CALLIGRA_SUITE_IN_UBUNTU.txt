@@ -1,0 +1,64 @@
+
+
+HOW TO INSTALL CALLIGRA SUITE IN UBUNTU
+http://www.ubuntubuzz.com/2016/05/how-to-install-calligra-suite-in-ubuntu.html
+
+Calligra Suite is a free office suite for GNU/Linux. Calligra is available in Ubuntu repository. This article introduce steps to install the whole Calligra Suite and to install one by one main component (such as Words or Krita) of it.
+  
+
+
+Install Complete Calligra Suite
+
+It is the all in one solution but it is very huge. It needs about 180 MB to download and 500 MB to install in Ubuntu 16.04 32 bit. To install the whole packages of Calligra Suite, perform this command:
+sudo apt-get install calligra
+
+Install Partial Calligra Suite
+
+It is the specific solution, it needs less size of packages, but it is still about 100 MB to install in every main component of Calligra. For example, to install only Calligra Words, you will need to download about 100 MB and its installed-size is 300 MB. Similar sizes occurs with Calligra Flow, Sheets, Krita, etc. But if you install them all, you will get the same size as installing complete Calligra Suite.
+
+To install Calligra Author:
+sudo apt-get install calligraauthor
+
+To install Calligra Braindump:
+sudo apt-get install braindump
+
+To install Calligra Words:
+sudo apt-get install calligrawords
+
+To install Calligra Sheets:
+sudo apt-get install calligrasheets
+
+To instal Calligra Stage:
+sudo apt-get install calligrastage
+
+To install Calligra Plan:
+sudo apt-get install calligraplan
+
+To install Calligra Flow:
+sudo apt-get install calligraflow
+
+To install Calligra Krita:
+sudo apt-get install krita
+
+To install Calligra Karbon:
+sudo apt-get install karbon
+
+
+Para lanzar desde la terminal:
+
+calligraauthor
+
+braindump
+
+calligrawords
+
+calligrasheets
+
+calligrastage
+
+calligraplan
+
+calligraflow
+
+
+

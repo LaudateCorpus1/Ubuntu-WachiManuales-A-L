@@ -1,0 +1,438 @@
+
+######################################
+Instalación de Fluxbox y dependencias
+######################################
+
+Este tutorial ha sido testeado en Ubuntu 16.04, es posible que funcione en 18.04 u otro Linux(pero en otro Linux puede que los nombres de las aplicaciones a instalar cambien o los comandos)
+
+Ponga en la terminal esta linea y ejecútela:
+
+sudo apt-get install bash lxrandr lxtask lxappearance pluma gedit pnmixer numlockx xfce4-appfinder xfce4-notes xfce4-terminal thunar nautilus dolphin4 kdebase-bin gnome-terminal konsole thunar caja engrampa ffmpegthumbnailer speedcrunch orage gnome-exe-thumbnailer menu menu-l10n gnome-icon-theme ubuntu-restricted-extras doublecmd-gtk gnome-disk-utility hardinfo ksysguard kdf mate-power-manager pcmanfm alarm-clock-applet
+
+###################################
+Creación de los archivos de usuario
+###################################
+
+Después de que hemos instalado fluxbox y las dependencias(dependencias para tener todo lo necesario para tener un escritorio decente), cierre sesión y entre en la sesión de Fluxbox pero salga inmediatamente dando clic en el escritorio y en Exit, y luego vuelva a entrar su sistema operativo en el administrador de ventanas que estaba usando y siga las siguientes instrucciones:
+
+
+######################################
+qt5ct utilidad de configuración de Qt5
+######################################
+
+Añadir el siguiente PPA
+
+sudo add-apt-repository ppa:nilarimogard/webupd8
+sudo apt-get update
+sudo apt-get install qt5ct
+
+luego ponga los siguientes dos comandos en una terminal, uno por uno:
+
+touch ~/.profile
+echo "export QT_QPA_PLATFORMTHEME="qt5ct"" >> ~/.profile
+
+Con esto hemos añadido esa última línea al archivo, esto es necesario.
+
+Este programa sirve para ajustar algunas cosas de las aplicaciones que han sido escritas en Qt. Como por ejemplo los iconos y temas
+
+
+########################################################################################
+Los iconos de aplicaciones KDE no se muestran en la barra de tareas, solución qt5ct 
+########################################################################################
+
+Ciertos programas como Konsole no muestran sus iconos en la barra de tareas, es necesario cambiar el tema de iconos en QT5CT en la pestaña "Icon Theme" y escoger por ejemplo: Oxygen o Brisa
+
+##############################################
+Control de brillo para evitar cansancio ocular
+##############################################
+
+Comandos de instalación 
+
+sudo add-apt-repository ppa:apandada1/brightness-controller
+sudo apt-get update 
+sudo apt-get install brightness-controller brightness-controller-simple
+
+Nota: Instalará las dos versiones, la completa y la simple la cual es necesaria porque contiene el icono que usaremos en el menú de Fluxbox, si es curioso, en synaptic una vez instalada brightness-controller-simple puede ver con clic derecho en archivos instalados:
+
+/usr/share/icons/hicolor/16x16/apps/brightness-controller-simple.png
+
+Vea mi post para más información:
+https://facilitarelsoftwarelibre.blogspot.com/2017/06/control-de-brillo-para-pantallas-en.html
+
+
+################################################
+Menu de aplicaciones con iconos con xdgmenumaker
+################################################
+
+Necesita instalarlo con los siguientes comandos; Ponga una por una estas siete lineas de comandos en una terminal:
+
+sudo apt-get install git txt2tags python-xdg python-gtk2 gobject-introspection python-gobject
+git clone https://github.com/gapan/xdgmenumaker
+cd xdgmenumaker
+make
+sudo su
+make install
+exit
+
+Sin esto no tendrá iconos de todas las aplicaciones en fluxbox, por eso debe instalarlo.
+
+Dependencias vistas en:
+https://github.com/gapan/xdgmenumaker
+
+
+############################################
+Creando el Menu de fluxbox, con xdgmenumaker
+############################################
+
+Para crear el menu ponga en la terminal:
+
+xdgmenumaker -i -s16 -f fluxbox > ~/.fluxbox/xdg_menu
+
+para incluir este menu en el clic derecho de fluxbox ponga en la terminal para editar el siguiente archivo:
+
+gedit ~/.fluxbox/menu
+
+allí borre todo lo que aparezca y ponga esto:
+
+[begin] (fluxbox)
+[include] (~/.fluxbox/xdg_menu)
+ [submenu] (Herramientas) </usr/share/icons/gnome/16x16/categories/preferences-system.png>
+   [exec] (Ajustes del Monitor) {lxrandr} </usr/share/icons/gnome/16x16/devices/video-display.png>
+   [exec] (Personalizar apariencia y comportamiento) {lxappearance} </usr/share/icons/gnome/16x16/apps/preferences-desktop-theme.png>
+   [exec] (Ajustes QT4) {/usr/bin/qtconfig-qt4} </usr/share/pixmaps/qtconfig-qt4.png>
+   [exec] (Ajustes QT5) {qt5ct} </usr/share/icons/gnome/16x16/apps/preferences-desktop-theme.png>
+   [exec] (Gestor de paquetes Synaptic) {synaptic-pkexec} </usr/share/icons/gnome/16x16/categories/applications-other.png>
+   [exec] (Monitor de Disco KDiskFree) {kdf -qwindowtitle } </usr/share/icons/hicolor/16x16/apps/kdf.png> 
+   [exec] (Monitor del sistema KSysGuard) {ksysguard} </usr/share/icons/hicolor/16x16/apps/kwikdisk.png>
+   [exec] (Monitor del sistema LXTask) {lxtask} </usr/share/icons/gnome/16x16/apps/utilities-system-monitor.png>
+   [exec] (Control de Brillo) {/usr/share/brightness-controller/init.py} </usr/share/icons/hicolor/16x16/apps/brightness-controller-simple.png>
+   [exec] (Alarma y Temporizador) {alarm-clock-applet} </usr/share/icons/hicolor/16x16/apps/alarm-clock.png>
+   [exec] (Administrador de archivos Nemo) {nemo --no-desktop} </usr/share/icons/gnome/16x16/places/folder.png>
+   [exec] (Administrador de archivos Nautilus) {nautilus --no-desktop } </usr/share/icons/hicolor/16x16/apps/org.gnome.Nautilus.png>
+   [exec] (Administrador de archivos Caja) {caja --no-desktop} </usr/share/icons/hicolor/16x16/apps/Thunar.png>
+   [exec] (Administrador de archivos Thunar) {thunar --no-desktop} </usr/share/icons/hicolor/16x16/apps/Thunar.png>
+   [exec] (Proyecto Facilitar el Software Libre en el Ecuador) {xdg-open http://facilitarelsoftwarelibre.blogspot.com} </usr/share/icons/gnome/16x16/emblems/emblem-web.png>
+ [end] # (Herramientas para Fluxbox)
+   [config] (Configuración) </usr/share/icons/gnome/16x16/categories/preferences-desktop.png>
+   [workspaces] (Workspaces) </usr/share/icons/gnome/16x16/apps/xfwm4.png>
+   [reconfig] (Reconfigure) </usr/share/icons/gnome/16x16/status/media-playlist-repeat.png>
+   [restart] (Reiniciar Fluxbox) </usr/share/icons/gnome/16x16/actions/reload.png>
+   [exec] (Buscador de Aplicaciones)  {xfce4-appfinder} </usr/share/icons/gnome/16x16/actions/system-search.png>
+   [exec] (Actualizar menu) {xdgmenumaker -i -s16 -f fluxbox > ~/.fluxbox/xdg_menu} </usr/share/icons/gnome/16x16/actions/gtk-redo-ltr.png>
+   [submenu] (Estilos) {} </usr/share/icons/gnome/16x16/apps/xfwm4.png>
+      [stylesdir] (/usr/share/fluxbox/styles)
+      [stylesdir] (~/.fluxbox/styles)
+   [end]
+ [submenu] (Salir)  </usr/share/icons/gnome/16x16/actions/stop.png>
+   [exec] (Reiniciar) {systemctl reboot} </usr/share/icons/gnome/16x16/actions/reload.png>
+   [exec] (Apagar) {systemctl poweroff} </usr/share/icons/gnome/16x16/actions/system-shutdown.png>
+   [exec] (Suspender) {systemctl suspend} </usr/share/icons/gnome/16x16/actions/player_pause.png>
+   [exit] (Cerrar Sesión) </usr/share/icons/gnome/16x16/actions/system-log-out.png>
+ [end] # (Salir)
+[end]
+
+
+guarde el archivo y cierre
+
+Reiniciar Fluxbox, para hacer esto de clic derecho en el escritorio y clic en "Reiniciar fluxbox"
+
+
+
+
+FORMATEAR fluxbox
+Si después de reiniciarlo y al usar la caracteristica de poner cambiar estilos, no queda más que formatear la configuración de fluxbox y dejarlo como estaba al principio, para eso ponga en la terminal:
+
+rm -fr ~/.fluxbox
+
+Con eso se borrará la carpeta de fluxbox y todas sus configuraciones y cierre sesión y vuelva a entrar en el administrador de ventanas fluxbox y vuelva a cerrar sesión (eso para que se creen los archivos) y entre en el administrador de ventanas que tenga su sistema operativo y vuelva a comenzar desde arriba.
+
+########################################################################
+Configuraciones importanes para hacer a Fluxbox manejable, editar "init"
+########################################################################
+
+Abra este archivo:
+
+gedit ~/.fluxbox/init
+
+Maximice a gedit para que todas las lineas de texto que están allí se vean bien.
+
+Nota: Si es la primera vez que instala fluxbox aparecerán en ese archivo pocas líneas de código, pero si ya lo ha estado usando y si trató de configurarlo le aparecerán bastantes líneas
+
+------------------------------------------------
+Ahorrar espacio en la barra de tareas de fluxbox
+------------------------------------------------
+
+busque esta linea(puede hacerlo con Ctrl + f):
+
+session.screen0.toolbar.tools:
+
+y al encontrarla borre manualmente toda esa linea (recuerde tiene que tener maximizado a gedit para poder borrar toda la linea correctamente) con el resto de su contenido que está a la derecha y en vez ponga esta linea:
+
+session.screen0.toolbar.tools:	prevworkspace, workspacename, nextworkspace, iconbar, systemtray, clock
+
+
+------------------------------------------------
+Formato de la hora reducido para ahorrar espacio
+------------------------------------------------
+
+busque esta linea(puede hacerlo con Ctrl + f):
+
+session.screen0.strftimeFormat:
+
+y al encontrarla borre manualmente toda esa linea con el resto de su contenido que está a la derecha y en vez ponga esta linea:
+
+session.screen0.strftimeFormat:	%d %B %k:%M
+
+
+-------------------------------------------------------------------
+Lugar en que se coloca la barra de herramientas, abajo a la derecha
+-------------------------------------------------------------------
+
+busque la siguiente linea(puede hacerlo con Ctrl + f):
+
+session.screen0.toolbar.placement:
+
+Nota: Es posible que esta linea no la encuentre, si fuera así copie la siguiente linea:
+
+session.screen0.toolbar.placement: BottomRight
+
+y peguela allí
+
+
+---------------------------------------------------------------------
+Porcentaje del tamaño de la barra de herramientas, abajo a la derecha
+---------------------------------------------------------------------
+
+Esto para que quede un pequeño espacio vacío a la izquierda de la barra de herramientas para allí dar clic izquierdo y que aparezca el menu de las aplicaciones
+
+busque esta linea(puede hacerlo con Ctrl + f):
+
+session.screen0.toolbar.widthPercent:
+
+y al encontrarla borre manualmente toda esa linea con el resto de su contenido que está a la derecha y en vez ponga esta linea:
+
+session.screen0.toolbar.widthPercent:	98
+
+
+--------------------------------------------------------
+Ningún nombre de espacio de trabajo para ahorrar espacio 
+--------------------------------------------------------
+
+Esto es para tener más espacio para las aplicaciones abiertas
+
+busque la siguiente linea(puede hacerlo con Ctrl + f):
+
+session.screen0.workspaceNames:
+
+Nota: Es posible que esta linea no la encuentre, si fuera así copie la siguiente linea:
+
+session.screen0.workspaceNames:	1, 2, 3, 4,
+
+y peguela allí
+
+GUARDE Y CIERRE EL ARCHIVO.
+
+-----------------------------------------------------
+
+
+############################################
+Añadir programas indispensables en "startup"
+############################################
+
+Abrir este archivo:
+
+gedit ~/.fluxbox/startup
+
+y añadir esto antes de "exec fluxbox":
+
+
+
+/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+# Sirve para que en Synaptic, Gdebi, Language Support, aparezca una ventana para poner la contraseña y poder instalar cosas.
+
+setxkbmap -layout latam &
+# Sirve para elegir la distribución de teclado, en mi caso Español Latinoamericano "latam"
+# Revise los demás idiomas en: http://facilitarelsoftwarelibre.blogspot.com/2016/07/cambiar-la-distribucion-del-teclado-con.html
+
+pnmixer &
+# Es el icono de volumen, dele clic derecho en "Preferences" y en la pestaña "Behavior" 
+# en "Volume Control Command" verifique que esté "pavucontrol" y si no está escríbalo y clic en "Aplicar"
+
+numlockx on &
+# Este programa activa la tecla de números en los teclados externos
+# Si tienes una laptop con teclado numerico es imprescindible 
+
+nm-applet &
+# Administrador de redes disponibles de internet
+
+#update-notifier  &
+# Informa cuando hay actualizaciones para el sistema operativo
+# Se pude desabilitar y manualmente actualizar los repositorios
+# con "sudo apt-get update"
+# y para luego actualizar poner: "sudo apt-get upgrade"
+
+#pcmanfm --desktop &
+# Este es necesario para cargar el wallpaper del escritorio
+
+blueman-applet &
+# Si su computadora no viene con bluetooth y nunca va a usar uno Bluetooth USB puede desabilitarlo
+
+#mate-power-manager &
+# (opcional) Es un Power Manager applet (administrador de poder),
+# te mostrará el estado de la batería de la laptop, el estado de la
+# batería de tu teclado externo (si lo tienes), y otros estados, depende
+
+#system-config-printer-applet  &
+# Applet de cola de impresión, este programa viene por defecto configurado al inicio de los sistema operativos Ubuntu, por eso
+# debe estar en el arranque automático. Lo puede revisar ustedes mismos en: /etc/xdg/autostart/print-applet.desktop
+
+orage &
+# Calendario, es necesario configurarlo
+
+sleep 5; xfce4-notes &
+# Para tomar notas rapidas, imprescindible, 
+
+pluma &
+# Editor de Texto
+
+goldendict &
+# Diccionario off-line, es importante cuando porque cuando uno no tiene internet puede consultar en estos diccionarios: 
+# https://facilitarelsoftwarelibre.blogspot.com/2016/03/goldendict-el-mejor-diccionario-offline.html
+# https://facilitarelsoftwarelibre.blogspot.com/2016/05/diccionario-espanol-clave-para.html
+
+brightness-controller &
+# Control de brillo para evitar cansancio ocular, vea mi post:
+# https://facilitarelsoftwarelibre.blogspot.com/2017/06/control-de-brillo-para-pantallas-en.html
+
+#hp-systray -x &
+# Si alguien usa una impresora HP este comando hará que se iconice HPLIP. Para instalarlo: sudo apt-get install hplip-gui
+
+indicator-kdeconnect &
+# para que funcione KDE Connect Indicator, lo uso para compartir archivos entre mi celular con Android  y Ubuntu
+
+chromium-browser &
+# Navegador Web con soporte para 32 bits hecho en base a Google Chrome que sólo es de 64 bits y no puedo usarlo en mi laptop de 32 bits
+
+#google-chrome-stable &
+# Navegador Web sólo de 64 bits
+
+#firefox &
+# Navegador Web casi no lo uso
+
+alarm-clock-applet --hidden &
+# Una bonita alarma ligera
+
+gnome-terminal &
+# La terminal de gnome, aparece blanca pero se la puede configurar para dejarla negra
+
+sleep 7; shutter --min_at_startup &
+# Para hacer capturas de pantalla
+
+#solaar &
+# Administrador de periféricos para Linux de Logitech Unifying Receiver, yo tengo un teclado externo Logitech k400 y es necesario 
+# para mi instalar este paquete y que esté activo e iconizado, yo lo uso para invertir la tecla Fn
+# Vea mi entrada: https://facilitarelsoftwarelibre.blogspot.com/2018/06/activar-o-desactivar-invertir-o.html
+
+dropbox start &
+# Para usar Dropbox
+# Vea mi entrada: https://facilitarelsoftwarelibre.blogspot.com/2018/09/como-instalar-dropbox-en-ubuntu-1604.html
+
+sleep 7; dolphin4 ~/ ~/Dropbox/UbuntuManuales/ ~/ ~/Dropbox/ &
+# El administrador de archivos que yo más uso. El comando es para que se abran cuatro pestañas con esas rutas
+
+
+
+
+GUARDE EL ARCHIVO Y CIERRELO.
+
+Nota: Los primeros tres programas son totalmente indispensables, pues son para: elegir el idioma español latinoamericano, subir o bajar el volumen, y para el internet. Los demás programas son muy importantes para mi
+
+
+######################
+Cambiar de wallpaper
+######################
+
+Dado que he desactivado la opción de cambiar de estilos, habrá que reemplazar el wallpaper que tiene el estilo por defecto. 
+
+Necesita una imágen preferible del tamaño del monitor que usted esté usando, yo usaré una imágen de 2560x1440
+
+El nombre de la imágen es:
+
+ubuntu-light.png
+
+y este es el lugar donde está:
+
+/usr/share/images/fluxbox/ubuntu-light.png
+
+para reemplazarlo, es mejor hacerlo manualmente, abra su administrador de archivo como puede ser "nautilus" o "caja" o el que yo uso siempre "dolphin4", abralo como root, ejemplo así:
+
+sudo caja /usr/share/images/fluxbox/
+
+Cambiele el nombre a la imágen
+
+ubuntu-light.png
+
+pongale así:
+
+ubuntu-light.png.back
+
+y allí abra otra pestaña "Ctrl + T" y busque la imagen que usted quiere usar y renombrela con el nombre "ubuntu-light.png" y copiela y peguela en la primer pestaña para así poder reemplazarla. 
+
+Cierre el administrador de archivos.
+
+
+
+###############################################################
+Aumentar el tamaño de letra del menú de aplicaciones de Fluxbox
+###############################################################
+
+En Fluxbox la única manera que sepa de aumentar el tamaño de las letras en el menú es editando el estilo. En Ubuntu 16.04 y 18.04 está por defecto en Fluxbox el estilo ubuntu-light así que hay que editarlo
+
+La hubicación de todos los estilos está en:
+
+/usr/share/fluxbox/styles/
+
+Digo esto pues que en otros sistemas operativos Linux podría estar otro estilo y tendrán que editarlo.
+
+
+Bueno para Ubuntu ponger en la terminal (debe tener instalado gedit):
+
+sudo gedit /usr/share/fluxbox/styles/ubuntu-light
+
+allí a la línea que usted tenga, ejemplo yo tengo esta:
+
+menu.frame.font:				Ubuntu-10:bold
+
+editarla y dejarla así:
+
+menu.frame.font:				Varela Round-11
+
+Así para mi, usted puede ponerle si quiere 12, bueno depende del tamaño de su ordenador
+
+guardar y cerrar y luego reiniciar Fluxbox (clic derecho en el escritorio y clic en Reiniciar Fluxbox)
+
+
+Que Dios les bendiga
+
+
+###########
+CONSULTAS: 
+###########
+
+fluxbox-wiki.org/category/howtos/en/Editing_the_init_file.html
+http://fluxbox-wiki.org/category/howtos/en/Editing_the_init_file.html
+
+How to place the toolbar to the top in fluxbox? - Unix & Linux Stack Exchange
+https://unix.stackexchange.com/questions/146277/how-to-place-the-toolbar-to-the-top-in-fluxbox
+
+Fluxbox Documentation
+http://fluxbox.sourceforge.net/docbook/en/html/
+
+DSL Tips and Tricks :: Changing Fluxbox time display to 24 hour format
+http://www.damnsmalllinux.org/f/topic-3-26-12332-0.html
+
+IceWM install and setup guide
+http://forums.fedoraforum.org/showthread.php?t=282433
+
+
+

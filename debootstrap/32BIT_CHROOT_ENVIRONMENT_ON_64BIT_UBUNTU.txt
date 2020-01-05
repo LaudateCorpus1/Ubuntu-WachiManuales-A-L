@@ -1,0 +1,103 @@
+32BIT CHROOT ENVIRONMENT ON 64BIT UBUNTU
+
+http://blog.northfield.ws/32bit-chroot-environment-on-64bit-ubuntu/
+
+SEPTEMBER 18, 2015 MRSCOTTM	1 COMMENT
+Recently, I wanted to setup a chroot environment to build a 32bit library on 64bit host platform. After failing several times trying different things, reading man pages and scouring the web for a solution, I did not find what I was looking for. So, I decided to make this post. Here is what I came up with.
+
+Components:
+
+debootstrap
+schroot
+
+Assumptions:
+
+Ubuntu Trusty 64bit host
+Ubuntu Trusty 32bit target
+
+Target directory /opt/chroot/xenial-i386/
+
+Crear ese directorio:
+
+cd /opt
+sudo mkdir chroot
+cd /chroot
+sudo mkdir xenial-i386
+
+
+You know what you’re doing
+
+TLDR:
+
+Install debootstrap and schroot:
+
+
+# sudo apt-get install debootstrap schroot
+
+Replace your-user-name with the name of your user in the following and put it in /etc/schroot/schroot.conf:
+
+sudo gedit /etc/schroot/schroot.conf:
+
+[xenial]
+description=Xenial Xerus (i386)
+directory=/opt/chroot/xenial-i386
+users=wachin
+root-groups=root
+preserve-environment=true
+personality=linux32
+
+
+Run these commands (once) to setup the environment:
+
+
+# export target_dir="/opt/chroot/xenial-i386"
+# apt-get install debootstrap schroot
+# debootstrap --include=apt,apt-utils,sudo,dialog --variant=build --foreign --arch i386 xenial "$target_dir" http://archive.ubuntu.com/ubuntu/
+# chroot "$target_dir" debootstrap/debootstrap --second-stage
+# bash -c "echo \"chroot\" > \"$target_dir\"/etc/debian_chroot"
+# bash -c "echo \"deb http://us.archive.ubuntu.com/ubuntu/ xenial main restricted universe multiverse\" >> \"$target_dir\"/etc/apt/sources.list"
+# bash -c "echo \"deb-src http://us.archive.ubuntu.com/ubuntu/ xenial main restricted universe multiverse\" >> \"$target_dir\"/etc/apt/sources.list"
+# chroot "$target_dir" apt-get update
+# chroot "$target_dir" locale-gen $LANG
+
+
+Use this script to enter the chroot (run as user):
+
+
+#!/bin/bash
+
+target_dir="/opt/chroot/trusty-i386"
+
+sudo mount -o bind /proc "$target_dir"/proc/
+sudo mount -o bind /sys "$target_dir"/sys
+sudo mount -o bind /dev "$target_dir"/dev
+sudo mount -o bind /dev/pts "$target_dir"/dev/pts
+sudo mount -o bind /home "$target_dir"/home
+
+sudo cp /etc/resolv.conf "$target_dir"/etc/resolv.conf
+sudo cp /etc/hosts "$target_dir"/etc/hosts
+sudo cp /etc/passwd "$target_dir"/etc/passwd
+sudo cp /etc/shadow "$target_dir"/etc/shadow
+sudo cp /etc/group "$target_dir"/etc/group
+sudo cp /etc/services "$target_dir"/etc/services
+sudo cp /etc/protocols "$target_dir"/etc/protocols
+sudo cp /etc/networks "$target_dir"/etc/networks
+
+schroot -c trusty
+
+sudo umount "$target_dir"/proc/ "$target_dir"/sys/ "$target_dir"/dev/pts "$target_dir"/dev/ "$target_dir"/home
+
+To remove the chroot environment completely:
+
+
+rm -rf /opt/chroot/trusty-i386/*
+
+
+Using schroot is optional, you should be able use the environment ‘normally’ with chroot. I’m not sure why the files in /etc/schroot/default/ are seemingly unused, possibly something to do with a missing schroot config script. The debootstrap program completes leaving /etc/apt/sources.list* empty, perhaps something to do with debian bug #736995, so we populate the sources.list file manually. You may add additional packages you want installed to the –include line. Running debootstrap with –second-stage in the chroot installs these additional packages amongst other things. We also create /etc/debian_chroot with the contents “chroot” so the command prompt is prefixed with “(chroot)”, making it clear that it’s not running the host shell. Installing apt-utils and running locale-gen isn’t particularly necessary but at least it gets rid of some annoying messages when running certain dpkg related commands. The script shown mounts the important directories and copies relevant files needed to chroot into a working environment. One caveat is that it might ask for password after exit for umount. Optionally, corresponding fstab entries could be made and copy the relevant files once, so only the schroot command would be needed. This should be enough to login as your user with access to $HOME and to build and run applications, including X11 apps. Cheers.
+
+
+Compiz Release Announcement – 0.8.12
+ONE THOUGHT ON “32BIT CHROOT ENVIRONMENT ON 64BIT UBUNTU”
+Archi
+JANUARY 4, 2018 AT 4:20 PM
+Thanks for the post. I am installing Gentoo 32 bit on my 64-bit Linux. What more changes needed to chroot on 32 bit Gentoo?

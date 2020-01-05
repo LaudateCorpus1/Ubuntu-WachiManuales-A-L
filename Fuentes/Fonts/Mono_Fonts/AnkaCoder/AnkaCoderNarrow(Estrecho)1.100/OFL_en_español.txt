@@ -1,0 +1,43 @@
+
+
+https://www.moo.com/es/about/fonts/sil-licence.html
+
+ 
+Licencia de fuente abierta de SIL
+ 
+Versión 1.1 - 26 de febrero de 2007
+
+PREÁMBULO
+Los objetivos de la Licencia de fuente abierta (OFL) son estimular a nivel mundial el desarrollo de proyectos de colaboración para respaldar la creación de fuentes los esfuerzos de las comunidades académica y lingüística, y proporcionar un marco de trabajo libre y abierto en el que se puedan compartir y mejorar las fuentes en colaboración con otros.
+
+La OFL permite usar, estudiar, modificar y redistribuir libremente las fuentes con licencia siempre y cuando no se vendan solas. Las fuentes, incluida cualquier obra derivativa, pueden agruparse, incrustarse, redistribuirse y/o venderse con cualquier software siempre y cuando las obras derivativas no utilicen nombres reservados. No obstante, las fuentes y sus derivadas, no podrán distribuirse bajo ningún otro tipo de licencia. El requisito para que la licencia de las fuentes siga siendo válida no se aplica a documentos creados mediante el uso de las fuentes o sus derivadas.
+
+DEFINICIONES
+"Software de fuentes" hace referencia al conjunto de archivos distribuidos por el titular o los titulares de los derechos de autor bajo esta licencia, y señalados claramente como tales. Puede incluir archivos originales, scripts y documentación.
+
+"Nombre de fuente reservado" hace referencia a cualquier nombre especificado como tal tras la declaración o las declaraciones de derechos de autor.
+
+"Versión original" hace referencia al grupo de componentes del Software de fuentes tal y como han sido distribuidos por el titular o los titulares de los derechos de autor.
+
+"Versión modificada" hace referencia a cualquier obra derivativa creada mediante la adición, eliminación o sustitución, parcial o total, de cualquiera de los componentes de laVersión original, ya sea mediante cambios de formato o el traslado del Software de fuentes a un nuevo entorno.
+
+"Autor" hace referencia a cualquier diseñador, ingeniero, programador, redactor técnico u otra persona que haya contribuido al desarrollo del Software de fuentes.
+
+PERMISO Y CONDICIONES
+Por la presente se autoriza, de forma gratuita, a cualquier persona que obtenga una copia del Software de fuentes, a usar, estudiar, copiar, fusionar, incrustar, modificar, redistribuir y vender copias modificadas y sin modificar del Software de fuentes, de conformidad con las condiciones siguientes:
+
+1) El Software de fuentes y sus componentes individuales no pueden venderse solos, tanto en la Versión original como modificada.
+
+2) Las Versiones original o modificadas del Software de fuentes pueden agruparse, redistribuirse y/o venderse con cualquier software, siempre y cuando cada copia incluya esta licencia y el aviso de derechos de autor anterior, ya sea como archivos de texto independientes, encabezados interpretables por seres humanos o en campos de metadatos interpretables por máquinas dentro de archivos de texto o binarios, siempre y cuando estos campos puedan ser vistos fácilmente por el usuario.
+
+3) Las Versiones modificadas del Software de fuentes no pueden usar los Nombres de fuente reservados salvo que el Titular de los derechos de autor otorgue expreso consentimiento por escrito. Esta restricción se aplica exclusivamente al nombre de fuente principal tal como se presenta a los usuarios.
+
+4) No se debe utilizar el nombre o los nombres del Titular o los Titulares de los derechos de autor del Software de fuentes para promover, respaldar o promocionar las Versiones modificadas, salvo para agradecer la colaboración del Titular o los Titulares de los derechos de autor y el Autor o los Autores, o con su expreso consentimiento por escrito.
+
+5) El Software de fuentes, modificado o sin modificar, parcial o íntegramente, debe distribuirse única y exclusivamente bajo esta licencia. El requisito para que la licencia de las fuentes siga siendo válida no se aplica a ningún documento creado con el Software de fuentes.
+
+FINALIZACIÓN
+Esta licencia no tendrá validez si no se cumple alguna de las condiciones anteriores.
+
+EXENCIÓN DE RESPONSABILIDAD
+EL SOFTWARE DE FUENTES SE ENTREGA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO,  YA SEA EXPRESA O IMPLÍCITA, INCLUYENDO A MODO ENUNCIATIVO, CUALQUIER GARANTÍA DE COMERCIABILIDAD, IDONEIDAD PARA UN FIN PARTICULAR Y NO INFRACCIÓN DE DERECHOS DE AUTOR, PATENTE, MARCA COMERCIAL U OTRO DERECHO. EN NINGÚN CASO EL TITULAR DE LOS DERECHOS DE AUTOR SERÁ RESPONSABLE DE NINGUNA RECLAMACIÓN, DAÑOS U OTRAS RESPONSABILIDADES, INCLUIDO CUALQUIER DAÑO GENERAL, ESPECIAL, INDIRECTO, INCIDENTAL O CONSECUENCIAL YA SEA EN UN LITIGIO, AGRAVIO O DE OTRO MODO, QUE PUEDAN DERIVARSE O SURGIR DEL USO O LA IMPOSIBILIDAD DE USAR EL SOFTWARE DE FUENTES O DEOTRAS ACCIONES EN EL SOFTWARE DE FUENTES. 

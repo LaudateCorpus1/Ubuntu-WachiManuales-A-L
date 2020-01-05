@@ -1,0 +1,13 @@
+
+
+Dropbox en antiX 17.4.1 a veces se cuelga, y sólo dice la solución si uno pone en la terminal:
+
+
+dropbox start
+
+y allí me aparece:
+
+Unable to monitor entire Dropbox folder hierarchy. Please run "echo fs.inotify.max_user_watches=100000 | sudo tee -a /etc/sysctl.conf; sudo sysctl -p" and restart Dropbox to fix the problem.
+
+
+ 

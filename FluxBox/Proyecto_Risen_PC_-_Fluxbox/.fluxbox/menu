@@ -1,0 +1,36 @@
+[begin] (fluxbox)
+[include] (~/.fluxbox/xdg_menu)
+ [submenu] (Herramientas) </usr/share/icons/gnome/16x16/categories/preferences-system.png>
+   [exec] (Ajustes del Monitor) {lxrandr} </usr/share/icons/gnome/16x16/devices/video-display.png>
+   [exec] (Personalizar apariencia y comportamiento) {lxappearance} </usr/share/icons/gnome/16x16/apps/preferences-desktop-theme.png>
+   [exec] (Ajustes QT4) {/usr/bin/qtconfig-qt4} </usr/share/pixmaps/qtconfig-qt4.png>
+   [exec] (Ajustes QT5) {qt5ct} </usr/share/icons/gnome/16x16/apps/preferences-desktop-theme.png>
+   [exec] (Gestor de paquetes Synaptic) {synaptic-pkexec} </usr/share/icons/gnome/16x16/categories/applications-other.png>
+   [exec] (Monitor de Disco KDiskFree) {kdf -qwindowtitle } </usr/share/icons/hicolor/16x16/apps/kdf.png> 
+   [exec] (Monitor del sistema KSysGuard) {ksysguard} </usr/share/icons/hicolor/16x16/apps/kwikdisk.png>
+   [exec] (Monitor del sistema LXTask) {lxtask} </usr/share/icons/gnome/16x16/apps/utilities-system-monitor.png>
+   [exec] (Control de Brillo) {/usr/share/brightness-controller/init.py} </usr/share/icons/hicolor/16x16/apps/brightness-controller-simple.png>
+   [exec] (Alarma y Temporizador) {alarm-clock-applet} </usr/share/icons/hicolor/16x16/apps/alarm-clock.png>
+   [exec] (Administrador de archivos Nemo) {nemo --no-desktop} </usr/share/icons/gnome/16x16/places/folder.png>
+   [exec] (Administrador de archivos Nautilus) {nautilus --no-desktop } </usr/share/icons/hicolor/16x16/apps/org.gnome.Nautilus.png>
+   [exec] (Administrador de archivos Caja) {caja --no-desktop} </usr/share/icons/hicolor/16x16/apps/Thunar.png>
+   [exec] (Administrador de archivos Thunar) {thunar --no-desktop} </usr/share/icons/hicolor/16x16/apps/Thunar.png>
+   [exec] (Proyecto Facilitar el Software Libre en el Ecuador) {xdg-open http://facilitarelsoftwarelibre.blogspot.com} </usr/share/icons/gnome/16x16/emblems/emblem-web.png>
+ [end] # (Herramientas para Fluxbox)
+   [config] (Configuración) </usr/share/icons/gnome/16x16/categories/preferences-desktop.png>
+   [workspaces] (Workspaces) </usr/share/icons/gnome/16x16/apps/xfwm4.png>
+   [reconfig] (Reconfigure) </usr/share/icons/gnome/16x16/status/media-playlist-repeat.png>
+   [restart] (Reiniciar Fluxbox) </usr/share/icons/gnome/16x16/actions/reload.png>
+   [exec] (Buscador de Aplicaciones)  {xfce4-appfinder} </usr/share/icons/gnome/16x16/actions/system-search.png>
+   [exec] (Actualizar menu) {xdgmenumaker -i -s16 -f fluxbox > ~/.fluxbox/xdg_menu} </usr/share/icons/gnome/16x16/actions/gtk-redo-ltr.png>
+   [submenu] (Estilos) {} </usr/share/icons/gnome/16x16/apps/xfwm4.png>
+      [stylesdir] (/usr/share/fluxbox/styles)
+      [stylesdir] (~/.fluxbox/styles)
+   [end]
+ [submenu] (Salir)  </usr/share/icons/gnome/16x16/actions/stop.png>
+   [exec] (Reiniciar) {systemctl reboot} </usr/share/icons/gnome/16x16/actions/reload.png>
+   [exec] (Apagar) {systemctl poweroff} </usr/share/icons/gnome/16x16/actions/system-shutdown.png>
+   [exec] (Suspender) {systemctl suspend} </usr/share/icons/gnome/16x16/actions/player_pause.png>
+   [exit] (Cerrar Sesión) </usr/share/icons/gnome/16x16/actions/system-log-out.png>
+ [end] # (Salir)
+[end]

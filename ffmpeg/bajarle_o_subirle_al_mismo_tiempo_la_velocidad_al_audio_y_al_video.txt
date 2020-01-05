@@ -1,0 +1,18 @@
+
+A un video bajarle o subirle al mismo tiempo la velocidad al audio y video
+
+ubuntu - How can I speed up a video without pitch distortion in Linux? - Super User - http://superuser.com/questions/611324/how-can-i-speed-up-a-video-without-pitch-distortion-in-linux
+
+ffmpeg -i input -filter_complex "setpts=PTS/1.7;atempo=1.7" output
+
+Note that the atempo range must be 0.5-2.0.
+
+
+Este comando es el que necesitaba para bajarle o subirle al mismo tiempo la velocidad al audio y al video, creo que 1.0 es para la velocidad normal, porque ya probé con 1.7 y es muy rapida, y probé con 0.5 y es muy lenta.
+Hice más pruebas, yo lo que quiero es aumentar sólo un poquito el tiempo, creo que 1.1 está bien:
+
+ffmpeg -i "Video a modificar.mp4" -filter_complex "setpts=PTS/1.1;atempo=1.1" "Video modificado.mp4"
+
+Si quisiera reducirle el tiempo sería:
+
+ffmpeg -i "Video a modificar.mp4" -filter_complex "setpts=PTS/0.9;atempo=0.9" "Video modificado.mp4"

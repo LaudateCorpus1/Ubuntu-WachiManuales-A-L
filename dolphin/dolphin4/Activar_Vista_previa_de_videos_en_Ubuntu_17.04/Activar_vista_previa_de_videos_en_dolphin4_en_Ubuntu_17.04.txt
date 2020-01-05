@@ -1,0 +1,16 @@
+
+
+Activar vista previa de videos en dolphin4 en Ubuntu 17.04
+
+Me he cambiado de UbuntuStudio 16.04 a UbuntuStudio 17.04 y al instalar dolhin4 no tiene como activar las vistas previas de videos, esta es la solución:
+
+Instalar
+
+sudo apt-get install kffmpegthumbnailer
+
+Clic en 
+
+Configuración de Dolphin, luego en "General" clic en la pestaña "Preview" y marcar la casilla:
+
+Video Files (kffmpegthumbnailer)
+

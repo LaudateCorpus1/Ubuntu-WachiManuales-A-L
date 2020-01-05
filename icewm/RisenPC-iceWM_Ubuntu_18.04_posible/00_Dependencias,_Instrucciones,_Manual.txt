@@ -1,0 +1,187 @@
+Proyecto RisenPC
+Proyecto Facilitar el Software Libre en el Ecuador
+http://facilitarelsoftwarelibre.blogspot.com/ 
+por: Washington Indacochea Delgado
+
+▒▒▒▒▒▒▒▒▒▒▒▒
+Dependencias
+▒▒▒▒▒▒▒▒▒▒▒▒
+
+sudo apt-get install icewm wmctrl xdotool lxrandr lxappearance pluma xscreensaver pnmixer orage numlockx mate-power-manager alarm-clock-applet gnome-icon-theme txt2tags convertall soundconverter goldendict xfce4-appfinder xfce4-notes xfce4-terminal chromium-browser doublecmd-gtk nautilus nemo pcmanfm thunar caja speedcrunch shutter gnome-web-photo
+
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+Aquí vienen archivos escondidos, COLOCAR
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+
+Vienen aquí en la carpeta dos archivos ocultos, aplaste "Ctrl + H" para que los pueda ver
+
+.Xresources
+
+Estos dos debe usted copiarlos a su HOME
+
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+Instalación del generador de menú xdgmenumaker
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+
+Ponga en la terminal uno por uno y ejecute:
+
+sudo apt-get install git 
+git clone https://github.com/gapan/xdgmenumaker
+sudo su
+cd xdgmenumaker
+make
+make install
+exit
+
+
+y se instalará el programa y con exit saldrá (debe salir de ley).
+
+Luego para poder actualizar el menú  usted debe abrir el archivo:
+
+gedit .icewm/menu
+
+y allí al final hay una linea que dice:
+
+
+
+prog "Actualizar menu iceWM" /usr/share/icons/hicolor/32x32/apps/icewm.xpm /home/wachin/RisenPC-iceWM/script-actualizar-menu-icewm.sh
+
+
+
+allí usted debe cambiar wachin por su nombre de usuario, y ahora funcionará la actualización del menu cuando en iceWM uste le de clic en: 
+
+Inicio/Actualizar menu de iceWM
+
+(esto se hace cada vez que uno instala algo nuevo)
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+TAMAÑO DE LAS FUENTES GLOBAL
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+
+Si el tamaño de las letras es muy pequeño, usted en HOME aplaste "Ctrl + H" para ver los archivos ocultos, y allí busque y abra el archivo .Xresources y cambie el valor, puede poner desde el 81 al 120 o hacer sus propias pruebas.
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+TAMAÑO DE LAS FUENTES EN APLICACIONES QT5 COMO KDENLIVE
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+qt5ct utilidad de configuración de Qt5, instalar desde PPA
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+
+Sirve para ajustar algunas cosas de las aplicaciones que han sido escritas en Qt5. Como por ejemplo los iconos y el tema.
+
+En la terminal:
+
+sudo add-apt-repository ppa:nilarimogard/webupd8
+sudo apt-get update
+sudo apt-get install qt5ct
+
+Nota: Aquí en este proyecto en la carpeta viene un archivo escondido que se llama
+
+.profile
+
+este debe usted copiado en su home junto con todo el contenido, en el video le explico.
+
+También le explico que creé una entrada en el menú para que cargue esta opción:
+
+"Inicio/RisenPC JWM Herramientas/Temas de Aplicaciones Qt5"
+
+Visto en:
+Configure Qt5 Application Style, Icons, Fonts And More With Qt5ct ~ Web Upd8: Ubuntu / Linux blog
+http://www.webupd8.org/2015/11/configure-qt5-application-style-icons.html
+
+
+Si usted como yo usa kdenlive, puede que tenga que ajustar el tamaño de las fuentes del programa. En mi caso yo tengo que hacerlas más pequeñas, para cambiar el tamaño de clic en:
+
+Inicio/OPCIONES iceWM/Temas de Aplicaciones QT5
+
+se abrirá una ventana, allí en la pestaña "Fonts" en General subale o bájele el tamaño
+
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+Mixer de volumen, escribir comando para ejecutar
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+
+Como he desarrollado este proyecto en UbuntuStudio 16.04 no se cual será el comando para otra distribución, ejemplo: Ubuntu, Kubuntu, lubuntu. Pero aquí es:
+
+pnmixer
+
+Aquí en Ubuntu Studio 16.04 de 32 bits aparece el siguiente comando para que abra los controles extras, haga así:
+
+Clic derecho en el icono del programa, clic "Preferencias", clic "Behavior", allí donde dice "Volume Control Command" asegurarse de que dice:
+
+pavucontrol
+
+Aplicar y Aceptar.
+
+En caso de que no esté nada escrito allí, usted escribalo.
+
+Entonces al darle clic izquierdo al icono de pnmixer y clic en "Mixer", aparecerá el control de volumen con muchas más opciones
+
+
+▒▒▒▒▒▒▒▒▒
+Bluetooth
+▒▒▒▒▒▒▒▒▒
+
+Blueman.- Es el paquete que administra el Bluetooth si está instalado por defecto en su Laptop o PC o si usted usa uno externo (esos de tipo pendrive que se conectan como pendrive)
+
+Nota: Yo uso el Sistema Operativo UbuntuStudio 16.04 y este paquete ya está instalado por defecto. El nombre para lanzarlo desde la terminal: "blueman-applet" y lo he añadido al inicio en el archivo "startup". Si usted usa otro Sistema Operativo en el que no está instalado Blueman sino otro, usted debe usar ese otro e investigar cómo cambiarlo (me escribe si no lo logra)
+
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+OPTIONAL: indicator-kdeconnect
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+
+Lo uso para compartir archivos entre mi celular con Android 6.0.1 y UbuntuStudio 16.04
+# http://www.webupd8.org/2017/04/new-kde-connect-indicator-ubuntu-linux.html
+
+sudo add-apt-repository ppa:webupd8team/indicator-kdeconnect
+sudo apt update
+sudo apt install indicator-kdeconnect
+
+Nota: He añadido al archivo startup el comando para que este programa se cargue al inicio is usted desea usarlo
+
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+OPTIONAL: brightness-controller
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+
+Control de Brillo (también lúz azúl) para pantallas en Ubuntu con brightness-controller
+https://facilitarelsoftwarelibre.blogspot.com/2017/06/control-de-brillo-para-pantallas-en.html
+
+sudo add-apt-repository ppa:apandada1/brightness-controller
+sudo apt-get update 
+sudo apt-get install brightness-controller
+
+Nota: He añadido al archivo startup el comando para que este programa se cargue al inicio is usted desea usarlo
+
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+OPTIONAL:Shutter
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+
+Para tomar captura de pantallas, este es el comando para que se. En el archivo startup de RisenPC he puesto la entrada para que se abra automáticamente al iniciar el sistema
+
+Shutter - Feature-rich Screenshot Tool
+http://shutter-project.org/downloads/
+
+sudo add-apt-repository ppa:shutter/ppa
+sudo apt-get update 
+sudo apt-get install shutter gnome-web-photo
+
+Nota: He añadido al archivo startup el comando para que este programa se cargue al inicio is usted desea usarlo
+
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+Instalar FFmulticonverter
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+
+
+2018
+Proyecto RisenPC
+Por: Washington Indacochea Delgado (Wachín)
+
+
+

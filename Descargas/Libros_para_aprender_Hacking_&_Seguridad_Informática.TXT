@@ -1,0 +1,10 @@
+
+Un informático en el lado del mal: Libros para aprender Hacking & Seguridad Informática
+http://www.elladodelmal.com/2015/01/0xword-abre-para-las-compras-de-ultima.html
+
+- Para aprender a programar: Si es para alguien que le gusta la seguridad, pero quiere aprender a programar y hacerse sus propias herramientas, mi elección sería 
+
+Python para Pentesters Daniel Echevarri Montoya 
+
+
+Desarrollo Android Seguro Miguel Ángel Moreno Álvarez

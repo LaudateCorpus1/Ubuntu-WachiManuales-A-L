@@ -1,0 +1,32 @@
+
+
+
+Se instalarán los siguientes paquetes adicionales:
+  breeze breeze-cursor-theme fonts-noto-hinted frameworkintegration
+  kactivitymanagerd kde-style-breeze kwin-style-breeze libcln6 libfakekey0
+  libgps22 libkdecorations2-5v5 libkdecorations2private5v5
+  libkf5calendarevents5 libkf5globalaccel-bin libkf5globalaccelprivate5
+  libkf5holidays-data libkf5holidays5 libkf5itemmodels5 libkf5jsembed-data
+  libkf5jsembed5 libkf5networkmanagerqt6 libkf5plasma5 libkf5plasmaquick5
+  libkf5runner5 libkf5style5 libkf5sysguard-data libkf5threadweaver5
+  libkf5waylandclient5 libkf5waylandserver5 libkf5xmlrpcclient-data
+  libkf5xmlrpcclient5 libkscreenlocker5 libksgrd7 libkworkspace5-5
+  libplasma-geolocation-interface5 libprocesscore7 libprocessui7
+  libqalculate5-data libqalculate5v5 libqca-qt5-2 libqca-qt5-2-plugins
+  libqt5designercomponents5 libqt5sql5-sqlite libtaskmanager6 libweather-ion7
+  libxcb-composite0 libxcb-damage0 milou plasma-framework plasma-integration
+  plasma-workspace qdbus-qt5 qml-module-org-kde-activities
+  qml-module-org-kde-draganddrop qml-module-org-kde-extensionplugin
+  qml-module-org-kde-kcoreaddons qml-module-org-kde-kholidays
+  qml-module-org-kde-kquickcontrols qml-module-org-kde-kquickcontrolsaddons
+  qml-module-org-kde-kwindowsystem qml-module-org-kde-solid
+  qml-module-qt-labs-folderlistmodel qml-module-qtqml-models2
+  qml-module-qtquick-controls-styles-breeze qml-module-qtquick-dialogs
+  qml-module-qtquick-privatewidgets qttools5-dev-tools
+Paquetes sugeridos:
+  orion-gtk-theme pi gpsd
+Paquetes recomendados:
+  kde-style-breeze-qt4 kde-style-qtcurve qml-module-org-kde-runnermodel
+  kde-config-screenlocker fonts-hack-ttf libpam-kwallet5 powerdevil
+Se instalarán los siguientes paquetes NUEVOS:
+  breeze breeze-cursor-theme fonts-noto-hinted frameworkintegration kactivitymanagerd kde-style-breeze kdeconnect kwin-style-breeze libcln6 libfakekey0 libgps22 libkdecorations2-5v5 libkdecorations2private5v5 libkf5calendarevents5 libkf5globalaccel-bin libkf5globalaccelprivate5 libkf5holidays-data libkf5holidays5 libkf5itemmodels5 libkf5jsembed-data libkf5jsembed5 libkf5networkmanagerqt6 libkf5plasma5 libkf5plasmaquick5 libkf5runner5 libkf5style5 libkf5sysguard-data libkf5threadweaver5 libkf5waylandclient5 libkf5waylandserver5 libkf5xmlrpcclient-data libkf5xmlrpcclient5 libkscreenlocker5 libksgrd7 libkworkspace5-5 libplasma-geolocation-interface5 libprocesscore7 libprocessui7 libqalculate5-data libqalculate5v5 libqca-qt5-2 libqca-qt5-2-plugins libqt5designercomponents5 libqt5sql5-sqlite libtaskmanager6 libweather-ion7 libxcb-composite0 libxcb-damage0 milou plasma-framework plasma-integration plasma-workspace qdbus-qt5 qml-module-org-kde-activities qml-module-org-kde-draganddrop qml-module-org-kde-extensionplugin qml-module-org-kde-kcoreaddons qml-module-org-kde-kholidays qml-module-org-kde-kquickcontrols qml-module-org-kde-kquickcontrolsaddons qml-module-org-kde-kwindowsystem qml-module-org-kde-solid qml-module-qt-labs-folderlistmodel qml-module-qtqml-models2 qml-module-qtquick-controls-styles-breeze qml-module-qtquick-dialogs qml-module-qtquick-privatewidgets qttools5-dev-tools

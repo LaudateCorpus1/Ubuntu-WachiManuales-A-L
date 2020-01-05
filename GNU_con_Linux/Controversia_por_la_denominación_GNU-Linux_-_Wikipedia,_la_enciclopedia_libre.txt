@@ -1,0 +1,3 @@
+[Desktop Entry]
+Type=Link
+URL=https://es.wikipedia.org/wiki/Controversia_por_la_denominaci%C3%B3n_GNU/Linux

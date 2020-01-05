@@ -1,0 +1,32 @@
+
+
+
+Activar un explorador en Ubuntu de Linux
+https://www.java.com/es/download/help/enable_browser_ubuntu.xml
+
+¿Cómo puedo activar Java en un explorador web en Ubuntu de Linux?
+Este artículo se aplica a:
+Exploradores: Chrome, Firefox
+Versiones de Java: 7.0, 8.0
+Siga estas instrucciones para activar Java en el explorador web en Ubuntu de Linux.
+
+Google Chrome
+Para convertirse en el usuario root, ejecute el comando su e introduzca la contraseña de superusuario. Escriba: 
+sudo -s
+Cree un directorio denominado plugins si aún no existe. Escriba: 
+mkdir -p /opt/google/chrome/plugins
+Vaya al directorio plugins de Google Chrome antes de crear el enlace simbólico. Escriba: 
+cd /opt/google/chrome/plugins
+Cree un enlace simbólico. Escriba: 
+ln -s /usr/local/java/jre1.7.0/lib/amd64/libnpjp2.so
+Reinicie el explorador y pruebe Java
+Mozilla Firefox
+Para convertirse en el usuario root, ejecute el comando su e introduzca la contraseña de superusuario. Escriba: 
+sudo -s
+Cree un directorio denominado plugins si aún no existe. Escriba: 
+mkdir -p /usr/lib/firefox-addons/plugins
+Vaya al directorio de plugins de Mozilla antes de crear el enlace simbólico. Escriba: 
+cd /usr/lib/firefox-addons/plugins
+Cree un enlace simbólico. Escriba: 
+ln -s /usr/local/java/jre1.7.0/lib/amd64/libnpjp2.so
+Reinicie el explorador y pruebe Java

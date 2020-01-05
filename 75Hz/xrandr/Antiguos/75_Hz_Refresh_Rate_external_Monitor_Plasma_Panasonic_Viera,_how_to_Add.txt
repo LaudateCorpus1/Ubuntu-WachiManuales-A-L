@@ -1,0 +1,91 @@
+
+
+Monitor Externo: ViewSonic VA1931wa-LED
+Laptop: Dell Inspiron 1750 
+
+follwing this:
+
+http://www.arunviswanathan.com/node/53
+
+I do that
+
+wachin@wachin-Inspiron-1750:~$ gtf 1280 768 75
+
+I obtain:
+
+  # 1280x768 @ 75.00 Hz (GTF) hsync: 60.15 kHz; pclk: 102.98 MHz
+  Modeline "1280x768_75.00"  102.98  1280 1360 1496 1712  768 769 772 802  -HSync +Vsync
+  
+See this: http://i.imgur.com/YyGTFHf.png
+  
+Now, with this: "1280x768_75.00" 
+
+and this: 102.98  1280 1360 1496 1712  768 769 772 802  -HSync +Vsync
+
+I put in the terminal:
+
+wachin@wachin-Inspiron-1750:~$ xrandr --newmode "1280x768_75.00"  102.98  1280 1360 1496 1712  768 769 772 802  -HSync +Vsync
+
+and next: 
+
+wachin@wachin-Inspiron-1750:~$ xrandr --addmode VGA1 1280x768_75.00
+
+and next: 
+
+wachin@wachin-Inspiron-1750:~$ xrandr --output VGA1 --mode 1280x768_75.00
+wachin@wachin-Inspiron-1750:~$ 
+
+Now I have my script working:
+
+
+#! /bin/bash
+xrandr --newmode "1024x768_75.00"  81.80  1024 1080 1192 1360  768 769 772 802  -HSync +Vsync
+xrandr --addmode VGA1 1024x768_75.00
+xrandr --output VGA1 --mode 1024x768_75.00
+
+
+EXPLICATIONS:
+
+The output displayed for the external monitor when connecting the laptop is VGA1, it can be seen putting on the terminal:
+
+wachin@wachin-Inspiron-1750:~$ xrandr
+Screen 0: minimum 320 x 200, current 1024 x 768, maximum 8192 x 8192
+LVDS1 connected 800x600+0+0 (normal left inverted right x axis y axis) 382mm x 215mm
+   1600x900       60.1 +
+   1440x900       59.9  
+   1360x768       59.8     60.0  
+   1152x864       60.0  
+   1024x768       60.0  
+   800x600        60.3*    56.2  
+   640x480        59.9  
+VGA1 connected 1024x768+0+0 (normal left inverted right x axis y axis) 410mm x 230mm
+   1366x768       59.8 +
+   1280x1024      75.0     60.0  
+   1280x960       60.0  
+   1280x800       74.9     59.8  
+   1152x864       75.0  
+   1024x768       75.1*    70.1     60.0  
+   832x624        74.6  
+   800x600        72.2     75.0     60.3     56.2  
+   640x480        72.8     75.0     66.7     60.0  
+   720x400        70.1  
+DP1 disconnected (normal left inverted right x axis y axis)
+  1280x768_75.00 (0x112)  103.0MHz
+        h: width  1280 start 1360 end 1496 total 1712 skew    0 clock   60.2KHz
+        v: height  768 start  769 end  772 total  802           clock   75.0Hz
+ 
+ 
+
+This indicates that the monitor of the laptop is: LVDS1
+This indicates that the external monitor is ViewSonic: VGA1
+
+
+The asterisk * means that this mode is working in the monitor
+                   
+
+
+
+
+
+
+

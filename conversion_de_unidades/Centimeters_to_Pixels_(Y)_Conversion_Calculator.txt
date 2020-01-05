@@ -1,0 +1,9 @@
+
+
+Centimeters to Pixels (Y) Conversion Calculator
+http://www.unitconversion.org/typography/centimeters-to-pixels-y-conversion.html
+
+Ejemplo: Tamaño de pantalla de una presentación LibreOffice Impress en 4:3 = 28x21cm
+
+28 cm  = 1058 px
+21 cm = 793 px

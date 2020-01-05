@@ -1,0 +1,8 @@
+
+lookup
+
+interactive utility to search text files quickly
+ 
+It provides: Romaji-to-Kana Converter, Fuzzy Searching,
+Search with Regular Expressions, Filtering, Automatic Modifications,
+Smart Word-Preference Mode.

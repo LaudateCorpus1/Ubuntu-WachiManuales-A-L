@@ -1,0 +1,181 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Metric Equivalent Fonts and Font Substitution</title>
+  </head>
+  <body>
+    <h1>
+      <a
+href="http://www.oooninja.com/2008/02/metrical-equivalent-fonts-and-font.html"
+        rel="bookmark">Metric Equivalent Fonts and Font Substitution</a></h1>
+    <p><a
+href="http://www.oooninja.com/2008/02/metrical-equivalent-fonts-and-font.html">http://www.oooninja.com/2008/02/metrical-equivalent-fonts-and-font.html</a><br>
+      <br>
+      Posted by
+      Andrew Z
+      at
+      Friday, February 1, 2008 | <a
+href="http://www.oooninja.com/2008/02/metrical-equivalent-fonts-and-font.html"
+        rel="bookmark" title="permanent link">Permalink</a></p>
+    <div style="margin-top: 10px;">
+    </div>
+    <p>In May of 2007, Red Hat <a
+        href="http://www.press.redhat.com/2007/05/09/liberation-fonts/">announced
+        its Liberation Fonts</a> in response to "proprietary fonts
+      present[ing] a barrier to truly open documents in that Microsoft
+      will not license others to redistribute [their popular] fonts."
+      These fonts are metric equivalents: "the fonts assume the
+      identical horizontal spacing as the Microsoft fonts such that,
+      when substituted for the Microsoft fonts, a line of text is
+      identically displayed."</p>
+    <p><a
+href="http://www.oooninja.com/2008/02/metrical-equivalent-fonts-and-font.html#why">Why</a>
+      does it matter, are there <a
+href="http://www.oooninja.com/2008/02/metrical-equivalent-fonts-and-font.html#alternatives">alternatives
+        fonts</a> that really work, and <a
+href="http://www.oooninja.com/2008/02/metrical-equivalent-fonts-and-font.html#how">how</a>
+      do you use them?</p>
+    <h3>Why<a name="why"></a></h3>
+    <p>The college class assignment is to type 10 pages. You type 10 and
+      turn it in. A week later, the teacher returns your paper marked
+      down for not following directions. The teacher says it was only 8
+      pages. The problem: you used Bitstream Vera Serif which has large
+      leading (vertical space). The teacher didn't have Bitstream Vera
+      Serif and the word processor substituted Times New Roman. The
+      dimensions of each letter vary between fonts and can cause
+      dramatic differences in layout.</p>
+    <p>Also, when your employer asks for an application in Microsoft
+      Word .doc format, it isn't the time for gambling with document
+      formats and fonts.</p>
+    <a
+href="http://openofficeorgninja.googlepages.com/metric_equivalent_fonts_test.pdf"><img
+        alt="Times New Roman vs. Bitstream Vera Serif"
+src="http://lh5.google.com/OOoNinja/R6PXCURcAOI/AAAAAAAAAR4/-Q0HshvJo4c/s640/font_replacement_BitstreamVeraSerif.png"></a>
+    <p>Recently there have been many debates about open document
+      standards. Steven J. Vaughan-Nichols <a
+        href="http://www.desktoplinux.com/news/NS7975322673.html">points
+        out the problem is bigger than OOXML vs. OpenDocument</a>.
+      Within documents of any format, standards fonts are still
+      necessary to reproduce the document faithfully.</p>
+    <h3>Finding real metric equivalents<a name="alternatives"></a></h3>
+    <p>To find the best metric equivalent fonts for the ubiquitous Times
+      New Roman and Arial, I ran some tests.</p>
+    <p>Against Times New Roman (a <a
+        href="http://en.wikipedia.org/wiki/Serif">serif</a> font) I
+      tested Liberation Serif, Nimbus Roman No9 L, FreeSerif, Bitstream
+      Vera Serif, and Linux Libertine, and the results were mixed. In
+      the horizontal test, FreeSerif better matched Times New Roman than
+      Liberation Serif by a small amount, but Liberation Serif did very
+      well overall.</p>
+    <a
+href="http://openofficeorgninja.googlepages.com/metric_equivalent_fonts_test.pdf"><img
+        alt="Times New Roman vs. Liberation Serif"
+src="http://lh4.google.com/OOoNinja/R6PV1ERcAMI/AAAAAAAAARo/S4Oh1d5H9t8/s640/font_replacement_LiberationSerif.png"></a>
+    <p>In the sans-serif fonts tests, Liberation Sans did an excellent
+      job and was the only close match to Arial. See for yourself: the
+      results are available as a <a
+href="http://openofficeorgninja.googlepages.com/metric_equivalent_fonts_test.pdf">PDF</a>
+      and, if you have the fonts installed, as an <a
+href="http://openofficeorgninja.googlepages.com/metric_equivalent_fonts_test.odt">OpenDocument
+        text .odt file</a>.</p>
+    <a
+href="http://openofficeorgninja.googlepages.com/metric_equivalent_fonts_test.pdf"><img
+        alt="Arial vs. Liberation Sans"
+src="http://lh4.google.com/OOoNinja/R6PV1ERcALI/AAAAAAAAARg/sF2bqVCov6s/s640/font_replacement_LiberationSans.png"></a>
+    <h3>Hinting</h3>
+    <p>The Liberation Serif font behavior different according to font
+      hinting. If you use Gnome and want a precise replacement with the
+      Liberation fonts, disable font hinting. The problem is fixed in
+      OpenOffice.org 2.4 (<a
+        href="http://qa.openoffice.org/issues/show_bug.cgi?id=77698">issue
+        77968</a>).</p>
+    <h3>To replace or to not replace</h3>
+    <p>Should you use the Microsoft TrueType Core fonts or
+      slightly-more-open-source alternatives? It depends.</p>
+    <p>When your documents are either distributed by PDF, internally
+      within a company that uses the same fonts, or not at all, it's
+      simply your preference.</p>
+    <p>When documents may be distributed, consider using open source
+      fonts—surprise—by Microsoft. The Core Web fonts are Andale Mono,
+      Arial, Comic Sans MS, Courier New, Georgia, Impact, Times New
+      Roman, Trebuchet MS, Verdana, and Webdings. These de-facto
+      standard fonts are available under an irrevocable open source
+      license and <a href="http://corefonts.sourceforge.net/">hosted on
+        SourceForge.net</a> (which has strict policies on licenses).</p>
+    <p>The new Microsoft ClearType Font Collection (standard in Vista
+      and Office 2007) is a different beast. Because of the restrictive
+      license, I suggest not using these fonts for new documents.
+      However, you will encounter them, so you must choose between <a
+href="http://www.oooninja.com/2008/01/calibri-linux-vista-fonts-download.html"
+        title="Install Microsoft Office 2007 / Vista fonts on Linux or
+        XP">installing them</a> and <a
+href="http://www.oooninja.com/2008/02/metrical-equivalent-fonts-and-font.html#font_replacement">font
+        replacement</a>.</p>
+    <h3>Replacement method #1: Fully automatic font substitution <a
+        name="how"></a></h3>
+    <p>If a font is used in a document but does not exist on the system,
+      the system will guess a substitute. Sometimes it works well and <a
+        href="http://qa.openoffice.org/issues/show_bug.cgi?id=15687">other</a>
+      <a href="http://qa.openoffice.org/issues/show_bug.cgi?id=71958">times</a>
+      <a href="http://qa.openoffice.org/issues/show_bug.cgi?id=79586">not</a>.</p>
+    <p>OpenOffice.org since version 2.3.0 has automatic substitution
+      rules for the Red Hat Liberation fonts (<a
+        href="http://qa.openoffice.org/issues/show_bug.cgi?id=77470">issue
+        77470</a>).</p>
+    <p>Some information is stored in the document. The OpenDocument
+      Specification <a
+href="http://www.oasis-open.org/committees/download.php/12572/OpenDocument-v1.0-os.pdf">section
+        15.4.15</a> defines 6 generic font families: Roman, Swiss,
+      Modern, Decorative, Script, and System. The Word .doc format may
+      do the same. This font family system does not allow much
+      granularity, so the results are not so good.</p>
+    <p>I tested this feature with Word 2007. In OpenOffice.org 2.3.1 I
+      created a document with Liberation Sans and Liberation Serif
+      fonts. When transferred via .doc to an XP system with Word 2007,
+      it successfully guessed the family of font (serif vs. non-serif).
+      However, the actual typeface was different, so the number of pages
+      changed significantly.</p>
+    <p>Basically, don't rely on automatic replacement.</p>
+    <h3>Replacement Method #2: Font fallback within a document</h3>
+    <p>For any range of text, you can specify multiple fonts by typing
+      them in the font selection bar separated by a semicolon. If you
+      work with HTML and CSS, this will feel familiar to you.</p>
+    <img alt="Multiple fonts listed in OpenOffice.org 2.3.1"
+src="http://lh4.google.com/OOoNinja/R6PV1ERcANI/AAAAAAAAARw/BzJ_4gJgzzI/s800/font_substitution_document.png">
+    <p>OpenOffice.org picks the first listed font. Though OpenOffice.org
+      can store and retrieve this information in both OpenDocument Text
+      and Microsoft Word .doc formats, Microsoft Word 2007 does not
+      support this feature and only uses the first font.</p>
+    <h3>Replacement method #3: Font replacement in OpenOffice.org <a
+        name="font_replacement"></a></h3>
+    <p>At the OpenOffice.org level, you can specify font replacement
+      rules. That means whenever OpenOffice.org encounters font X, it
+      will use font Y instead.</p>
+    <ol>
+      <li>Open any OpenOffice.org application.</li>
+      <li>Click <b>Tools &gt; Options</b>.</li>
+      <li>In the tree menu under <b>OpenOffice.org</b>, choose <b>Fonts</b>.</li>
+      <li>Check the box <b>Apply replacement table</b>.</li>
+      <li>Type the name of the Microsoft font in <b>Font</b>.</li>
+      <li>In <b>Replace with</b>, type the name of the non-Microsoft
+        font.</li>
+      <li>Click the green checkmark.</li>
+      <li>Repeat steps 5-7 as needed
+        <br>
+        <a
+href="http://picasaweb.google.com/OOoNinja/OOoNinja200802/photo#5162216409339265266"><img
+            alt="Font replacement table for OpenOffice.org 2.3.1 to use
+            Liberation fonts instead of Microsoft Core fonts"
+src="http://lh5.google.com/OOoNinja/R6PgeURcAPI/AAAAAAAAASA/8MCNYKbabPU/s640/OOo231_font_replacement_table.png"></a></li>
+    </ol>
+    <h3>Related articles</h3>
+    <ul>
+      <li><a
+href="http://www.oooninja.com/2008/01/calibri-linux-vista-fonts-download.html">Install
+          free Office 2007 fonts for Linux and XP</a>
+      </li>
+    </ul>
+  </body>
+</html>

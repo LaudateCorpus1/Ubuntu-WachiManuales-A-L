@@ -1,0 +1,12 @@
+
+kdenlive debs
+https://launchpad.net/~sunab/+archive/ubuntu/kdenlive-release/+sourcepub/4457186/+listing-archive-extra
+
+kdenlive-release : Olivier Banus
+https://launchpad.net/~sunab/+archive/ubuntu/kdenlive-release
+ppa:sunab/kdenlive-release
+
+kdenlive-git (unstable).Testing only! : Olivier Banus
+https://launchpad.net/~sunab/+archive/ubuntu/kdenlive-svn
+ppa:sunab/kdenlive-svn
+

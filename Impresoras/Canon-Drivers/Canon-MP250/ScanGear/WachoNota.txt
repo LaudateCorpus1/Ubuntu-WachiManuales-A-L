@@ -1,0 +1,1 @@
+Si no se instala con ./install.sh, instalarlos manualmente, uno por uno, desde el common, y cerciorarse que la impresora no este con algún botón parpadeando por alguna configuración que haya que hacerlo de mantenimiento

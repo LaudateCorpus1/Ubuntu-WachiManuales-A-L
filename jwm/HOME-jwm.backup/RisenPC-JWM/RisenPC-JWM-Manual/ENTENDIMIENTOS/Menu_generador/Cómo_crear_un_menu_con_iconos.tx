@@ -1,0 +1,19 @@
+
+Automatic menu in JWM Community Edition
+https://forum.manjaro.org/t/automatic-menu-in-jwm-community-edition/2017
+
+That would write the terminal output to a file.
+For integratin the file into the menu I will take a look at my antiX install and report back.
+PS: I moved the menu discussion to a new topic. Thanks @viking60 for bringing it up again!
+
+Update: It is easy. On antiX I have ~/.jwm/menu and ~/.jwm/my_applications_menu
+In ~/.jwm/menu I have the following structure
+
+    <Program label="Run" icon="/usr/share/icons/Masalla/apps/48x48/system-run.png">gexec</Program>
+    <Program label="Terminal" icon="/usr/share/icons/Masalla/apps/48x48/roxterm.png">desktop-defaults-run -t</Program>
+    <Program label="File Manager" icon="/usr/share/icons/Masalla/apps/48x48/spacefm.png">spacefm</Program>
+    <Program label="Synaptic" icon="/usr/share/icons/Masalla/apps/48x48/synaptic.png">gksu synaptic</Program>
+    <Program label="Web Browser" icon="/usr/share/icons/Masalla/apps/48x48/web-browser.png">desktop-defaults-run -b</Program>
+    <Separator/>
+    <Include>$HOME/.jwm/my_applications_menu</Include>
+...

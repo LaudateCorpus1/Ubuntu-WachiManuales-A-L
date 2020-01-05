@@ -1,0 +1,126 @@
+#	│▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+#	│ Proyecto Resucitar PC de bajos recursos con iceWM          │
+#	│                          RisenPC                               │
+#	│ script por Washington Indacochea Delgado (Wachín)          │
+#	│      E-Mail: wachin.id@gmail.com en Ecuador                 │
+#	│   http://facilitarelsoftwarelibre.blogspot.com/              │
+#	│    Licencia Pública General de GNU version 2                │    
+#	│ En español: http://es.tldp.org/Otros/gples/gples.html        │
+#	│  en inglés: https://www.gnu.org/licenses/gpl-2.0.html         │
+#	│▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+#
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 
+# MENU DE LAS APLICACIONES EN ICEWM
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+
+# Este es el archivo de configuración del menu que he modificado, para mi
+# está super bien así lo cree copiando y pegando las lineas de menu que
+# me creó el programa xdgmenumaker en el archivo "appmenu" y modificando 
+# el archivo de ejemplo istalado por icewm en /usr/share/icewm/menu
+# también borré algunas entradas y añadí otras
+# 2016-07-18 Adaptado por Wachín para el Proyecto Facilitar el Software
+# Libre en el Ecuador
+
+prog "Terminal de Xfce" /usr/share/icons/gnome/16x16/apps/utilities-terminal.png xfce4-terminal
+
+separator
+
+prog "Reproductor multimedia VLC" /usr/share/icons/hicolor/16x16/apps/vlc.png /usr/bin/vlc --started-from-file 
+prog "Audacious" /usr/share/icons/hicolor/48x48/apps/audacious.png audacious
+
+separator
+
+prog "Conversor de audio" /usr/share/icons/hicolor/48x48/apps/soundconverter.png soundconverter 
+prog "FF Multi Converter" /usr/share/pixmaps/ffmulticonverter.png ffmulticonverter
+prog "Kdenlive" /usr/share/icons/hicolor/64x64/apps/kdenlive.png kdenlive
+#este icono estaba dificil de saber cual era, lo busqué con synaptic
+
+separator
+
+prog "Calculadora" /usr/share/pixmaps/speedcrunch.png speedcrunch
+prog "ConvertAll" /usr/share/pixmaps/convertall/convertall_lg.png convertall
+#este icono estaba dificil de saber cual era, lo busqué con synaptic
+
+separator
+
+menu "Administradores de Archivos" /usr/share/icons/gnome/32x32/places/folder.png {
+    prog "Dolphin4" /usr/share/icons/gnome/32x32/places/folder.png dolphin4
+    prog "Caja" /usr/share/icons/gnome/32x32/places/folder.png caja
+    prog "PCmanFM" /usr/share/icons/gnome/32x32/places/folder.png pcmanfm 
+    prog "Nemo" /usr/share/icons/gnome/32x32/places/folder.png nemo 
+    prog "Nautilus" /usr/share/icons/gnome/32x32/places/folder.png nautilus --no-desktop
+    prog "Thunar" /usr/share/icons/gnome/32x32/places/folder.png thunar
+}
+
+
+separator
+
+menu "Internet" /usr/share/icons/hicolor/48x48/categories/applications-internet.png {
+    prog "YouTube DL GUI" /usr/share/icons/hicolor/16x16/apps/youtube-dl-gui.png youtube-dl-gui
+    prog "Navegador web Chromium" /usr/share/icons/hicolor/22x22/apps/chromium-browser.png chromium-browser 
+    prog "Navegador web Firefox" /usr/share/icons/hicolor/128x128/apps/firefox.png firefox 
+    prog "Google Chrome" /usr/share/icons/hicolor/16x16/apps/google-chrome.png /usr/bin/google-chrome-stable
+}
+
+separator
+
+prog Inkscape inkscape inkscape
+prog Gimp gimp gimp
+
+separator
+
+prog "PlayOnLinux" /usr/share/pixmaps/playonlinux.png playonlinux
+
+separator
+
+menu "OPCIONES iceWM" /usr/share/icons/hicolor/32x32/apps/icewm.xpm {
+    prog "Cambiar Fondo de pantalla" /usr/share/xscreensaver/glade/screensaver-cmndln.png pcmanfm --desktop-pref
+    prog "Opciones del Monitor" /usr/share/icons/gnome/16x16/devices/video-display.png lxrandr
+    prog "Impresoras" /usr/share/icons/gnome/16x16/devices/printer.png system-config-printer
+    prog "Bloquear Pantalla" /usr/share/xscreensaver/glade/screensaver-locking.png xscreensaver-command -lock
+    prog "Configurar Salvapantallas" /usr/share/xscreensaver/glade/screensaver-cmndln.png  /usr/bin/xscreensaver-demo
+    prog "Temas de Aplicaciones GTK" /usr/share/icons/gnome/16x16/categories/applications-system.png lxappearance
+    prog "Temas de Aplicaciones Qt 4" /usr/share/pixmaps/qtconfig-qt4.png /usr/bin/qtconfig-qt4
+    prog "Proyecto Facilitar el Software Libre en el Ecuador" /usr/share/icewm/icons/communicator-discussion_32x32.xpm xdg-open http://facilitarelsoftwarelibre.blogspot.com/
+}
+
+separator
+
+menu "LibreOffice Suite" /usr/share/icons/hicolor/16x16/apps/libreoffice-startcenter.png {
+    prog "LibreOffice" /usr/share/icons/hicolor/16x16/apps/libreoffice-startcenter.png libreoffice 
+    prog "LibreOffice Base" /usr/share/icons/hicolor/16x16/apps/libreoffice-base.png libreoffice --base 
+    prog "LibreOffice Calc" /usr/share/icons/hicolor/16x16/apps/libreoffice-calc.png libreoffice --calc 
+    prog "LibreOffice Impress" /usr/share/icons/hicolor/16x16/apps/libreoffice-impress.png libreoffice --impress 
+    prog "LibreOffice Writer" /usr/share/icons/hicolor/16x16/apps/libreoffice-writer.png libreoffice --writer
+    prog "LibreOffice Draw" /usr/share/icons/hicolor/16x16/apps/libreoffice-draw.png libreoffice --draw
+    prog "LibreOffice Math" /usr/share/icons/hicolor/16x16/apps/libreoffice-math.png libreoffice --math
+}
+
+separator
+
+prog "WPS Escritor" /usr/share/icons/hicolor/48x48/apps/wps-office-wpsmain.png /usr/bin/wps
+prog "WPS Presentación" /usr/share/icons/hicolor/48x48/apps/wps-office-wppmain.png /usr/bin/wpp 
+prog "WPS Hoja de Cálculo" /usr/share/icons/hicolor/48x48/apps/wps-office-etmain.png /usr/bin/et 
+
+separator
+prog "Actualizar menu iceWM" /usr/share/icons/hicolor/32x32/apps/icewm.xpm ~/script-actualizar-menu-icewm.sh
+
+# prog "Actualizar menu iceWM" /usr/share/icons/hicolor/32x32/apps/icewm.xpm /home/wachin/script-actualizar-menu-icewm.sh
+# ejemplo de lanzadores encerrados en comilla:
+#     prog "Simplenote" /usr/share/icons/hicolor/16x16/apps/simplenote.png "/opt/Simplenote/simplenote" 
+#     prog "FontBase" _none_ "/home/wachin/Aplicaciones-Linux/AppImage/FontBase-2.4.1-x86_64.AppImage"
+# por esto también debo probar:
+prog "Actualizar menu iceWM" /usr/share/icons/hicolor/32x32/apps/icewm.xpm "xdgmenumaker -i -s16 -f icewm > ~/.icewm/appmenu"
+
+
+separator
+
+include appmenu
+# include appmenu es el sub menú que aparece en Inicio con todas las aplicaciones
+# que crea xdgmenumaker
+
+
+
+
+
+

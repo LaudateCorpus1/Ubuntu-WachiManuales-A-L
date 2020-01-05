@@ -1,0 +1,186 @@
+Howto: Install devel version beside stable version on Linux
+
+
+How to install the development version of Inkscape beside the stable version on Linux
+=====================================================================================
+Instructions for Ubuntu/Linux Mint chroot environments, tested with Linux Mint 17.2 as main system. Meant for people using Linux and wanting to test the development version without overwriting their own, stable Inkscape version and its configuration files (for example, translators who need to see what the thing they are translating actually does).
+Creation and first start
+========================
+1. Open a terminal and allow other users to access your display:
+
+xhost +
+
+2. Become root on the terminal:
+
+sudo bash
+
+3. Create a directory for the chroot environment (on a disk which is not mounted with noexec or nodev flags):
+
+mkdir ./ubuntu-16.04
+
+4. Install debootstrap if not yet installed, for Ubuntu/Linux Mint:
+
+apt-get install debootstrap
+
+5. Enter the new directory you created:
+
+cd ./ubuntu-16.04
+
+6. Create the new environment (in this case, for Ubuntu Xenial (16.04)):
+
+debootstrap xenial .
+
+7. Wait...
+8. Become root of the nested system:
+
+chroot .
+
+9. Add missing package sources to the sources list in the chroot environment:
+
+echo "deb http://ppa.launchpad.net/inkscape.dev/trunk/ubuntu xenial main" >> /etc/apt/sources.list
+
+problema apareció:
+
+W: GPG error: http://ppa.launchpad.net/inkscape.dev/trunk/ubuntu xenial InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 9DA4BD18B9A06DE3
+W: The repository 'http://ppa.launchpad.net/inkscape.dev/trunk/ubuntu xenial InRelease' is not signed.
+N: Data from such a repository can't be authenticated and is therefore potentially dangerous to use.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+W: There is no public key available for the following key IDs:
+9DA4BD18B9A06DE3  
+
+solución:
+
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 9DA4BD18B9A06DE3
+
+10.Update the package index:
+
+apt-get update
+
+11.Generate the locales, so you can use the languages:
+
+locale-gen en_US.UTF-8; locale-gen es_EC.UTF-8
+
+12. Install vim to know the state of sources.list
+
+apt install vim
+
+vim /etc/apt/sources.list
+
+appear:
+
+deb http://archive.ubuntu.com/ubuntu xenial main
+deb http://ppa.launchpad.net/inkscape.dev/trunk/ubuntu xenial main
+
+CLOSE vim with ESC :q
+
+13. Add to sources.list missing repositories, add this to the terminal:
+
+
+
+echo "deb http://us.archive.ubuntu.com/ubuntu/ xenial main restricted" >> /etc/apt/sources.list
+echo "deb http://us.archive.ubuntu.com/ubuntu/ xenial-updates main restricted" >> /etc/apt/sources.list
+echo "deb http://us.archive.ubuntu.com/ubuntu/ xenial universe" >> /etc/apt/sources.list
+echo "deb http://us.archive.ubuntu.com/ubuntu/ xenial-updates universe" >> /etc/apt/sources.list
+echo "deb http://us.archive.ubuntu.com/ubuntu/ xenial multiverse" >> /etc/apt/sources.list
+echo "deb http://us.archive.ubuntu.com/ubuntu/ xenial-updates multiverse" >> /etc/apt/sources.list
+echo "deb http://us.archive.ubuntu.com/ubuntu/ xenial-backports main restricted universe multiverse" >> /etc/apt/sources.list
+echo "deb http://security.ubuntu.com/ubuntu xenial-security universe" >> /etc/apt/sources.list
+echo "deb http://security.ubuntu.com/ubuntu xenial-security multiverse" >> /etc/apt/sources.list
+
+Nota: Esta lista la vi aquí
+
+Ubuntu 16.04 Xenial default /etc/apt/sources.list
+https://gist.github.com/rohitrawat/60a04e6ebe4a9ec1203eac3a11d4afc1
+
+sudo gedit /etc/apt/sources.list
+
+deb http://us.archive.ubuntu.com/ubuntu/ xenial main restricted
+deb http://us.archive.ubuntu.com/ubuntu/ xenial-updates main restricted
+deb http://us.archive.ubuntu.com/ubuntu/ xenial universe
+deb http://us.archive.ubuntu.com/ubuntu/ xenial-updates universe
+deb http://us.archive.ubuntu.com/ubuntu/ xenial multiverse
+deb http://us.archive.ubuntu.com/ubuntu/ xenial-updates multiverse
+deb http://us.archive.ubuntu.com/ubuntu/ xenial-backports main restricted universe multiverse
+deb http://security.ubuntu.com/ubuntu xenial-security universe
+deb http://security.ubuntu.com/ubuntu xenial-security multiverse
+
+14. Actualizar el sistema (totalmente necesario):
+
+apt update
+apt upgrade
+
+15. Instalo synaptic para de allí ver que es lo que está pasando porque no puedo instalar inskcape-trunk
+
+apt install synaptic
+
+Si se instala, está descargando 72 MB y ocupará 415 MB de espacio
+
+14.Install Inkscape and some language packages, so you have more than just English available for Inkscape 
+
+apt-get install inkscape-trunk language-pack-es language-pack-en 
+
+12.Answer the questions with 'y'
+
+14.Mount the /proc file system, ignore the warning:
+
+mount /proc
+
+mount /dev/pts
+
+15.(optional) Create another user and become that user inside the chroot environment:
+
+adduser <name>
+
+(enter password, answer questions)
+
+su <name>
+
+15.Start Inkscape:
+
+inkscape
+
+16.When finished, leave chroot with:
+
+exit
+
+(do this twice if you changed to normal user in step 15)
+Everytime you want to use it
+============================
+1. Open a terminal and allow other users to access your display:
+
+xhost +
+
+2. Become root on the terminal:
+
+sudo bash
+
+3. Enter the directory you created for this:
+
+cd ./ubuntu-16.04
+
+4. Become root of the nested system:
+
+chroot .
+
+5. (optional) Become a normal user inside the chroot environment (if you created one in 15. above):
+
+su <name>
+
+6. Start Inkscape:
+
+inkscape
+
+7. When finished, leave chroot with:
+
+exit
+
+(do this twice if you changed to normal user in step 6)
+
+
+BASADO EN:
+
+Howto: Install devel version beside stable version on Linux
+
+https://inkscape.org/es/gallery/item/6641/view/
+
+

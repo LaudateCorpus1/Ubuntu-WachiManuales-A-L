@@ -1,0 +1,26 @@
+
+Siguiendo los siguientes pasos:
+
+How to Find Your IP Address in Linux
+https://vitux.com/how-to-find-your-ip-address-in-linux/
+
+pongo en la terminal:
+
+hostname -I 
+
+
+y me aparece:
+
+192.168.1.5 
+
+y verifico en la aplicación de Android Fing y si es la misma, entonces esa es
+
+También dice allí en el tutorial que en Linux en la herramienta donde uno pone la contraseña del Wi-Fi para conectarse, allí en IPv4 (buscar que allí debe de estar) allí dice, ejemplo para mi dice:
+
+IPv4
+IP Address Acquisition: DHCP
+IP Address: 192.168.1.5
+IP Netmask: 255.255,255.192
+IP Gateway: 192.168.1.1
+
+y si es así, confirmado.

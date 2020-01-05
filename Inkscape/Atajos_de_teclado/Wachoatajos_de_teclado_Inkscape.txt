@@ -1,0 +1,6 @@
+
+
+INKSCAPE
+Relleno y borde Shift+Ctrl+F
+Capas Shift+Ctrl+L
+Alinear y distribuir Shift+Ctrl+A 

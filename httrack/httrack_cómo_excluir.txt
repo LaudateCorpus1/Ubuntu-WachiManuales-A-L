@@ -1,0 +1,119 @@
+
+Re: How can I exclude a folder? - HTTrack Website Copier Forum
+https://forum.httrack.com/readmsg/14639/14630/index.html
+
+
+/www.gotquestions.org
+
+
+
+Quiero descargar de una página sólo la sección en español:
+
+
+https://www.gotquestions.org/Espanol/
+
+con httrack si sólo dejo sin configurar ningún filtro me descargará varias carpetas incluida la que yo quiero, pues buscando entre ellas encontré la que tenía lo que yo necesitaba:
+
+/cdn.ampproject.org
+/hts-cache
+/lh3.googleusercontent.com
+/plus.google.com
+/plus.url.google.com
+/ssl.gstatic.com
+/www.gotquestions.org
+/www.gstatic.com
+/backblue.gif
+/fade.gif
+/hts-in_progress.lock
+/hts-log.txt
+/index.html
+
+la que necesitaba yo se llama
+
+www.gotquestions.org
+
+dentro de ella también hay una carpeta y otras sub carpetas:
+
+/www.gotquestions.org/Espanol/audio
+/www.gotquestions.org/Espanol/img
+/www.gotquestions.org/Espanol/Printer
+/www.gotquestions.org/Espanol/scommon
+
+la que contiene todo lo que yo quiero es
+
+/Printer
+
+Así que primero para resolver este problema, debo decirle a httrack que no quiero que descargue nada, esto se lo hace con "-*" y luego decirle que descargue esa carpeta y todos los archivos "+*.html", y queda así:
+
+
+-*
++www.gotquestions.org/Espanol/www.gotquestions.org/Espanol/Printer/*
++*.html
+
+
+
+Funciona.
+
+Aprendido de:
+
+
+
+
+HTTrack Help: Filters
+http://httrack.kauler.com/help/Filters
+
+Syntax
+To include certain kind of things use a plus sign (+). To exclude anything you don't need, use a minus sign (-). Asterisks (*) work like wildcards to match any number of characters.
+
+Example:
+
++www.all.net/i_want_this/*
+-www.all.net/i_dont_want_that/*
++*.edu.au/*.jpg
+
+Priorities
+A list of filters works from least important to most important (latter filters take precedence over previous filters).
+
+In the following example, even though a restriction has been added with the minus filter, all GIF files found will be downloaded because the second filter is overriding the first filter (more specifically, the first filter is not even applied due to the second filter):
+
+-*/images/*.gif
++*.gif
+
+However in this example, the two filters work together nicely. The first filter is initially allowing GIF files from any domain/server, but the second filter restricts that to deny any GIF files that are inside an "images" directory. Another way to think of what these filters are doing is: if a GIF file (on any domain) is not in an "images" directory then permit it to be downloaded
+
++*.gif
+-*/images/*.gif
+
+Examples of filter types
+File extension filters
+These filters will control certain files depending on their extension (e.g. zip, gif, tgz, pdf, mpeg).
+
++www.example.com/*	Will download everything inside the website, wherever they are found
+
++*.com/*	Will download everything inside any website with a .com as top level domain
+
+-www.example.com/ads/*	Will not download any file inside a folder called "ads"
+
++www.example.com/images/*.jpeg	Will download just "jpeg" files inside a folder called "images" (note "jpg" inside that folder will not be downloaded at all)
+
+
+
++www.example.com/images/*.jpeg
++www.example.com/images/*.jpg
++www.example.com/images/*.gif
++www.example.com/images/*.png
++www.example.com/images/*.bmp	
+
+Collection of filters that will hopefully download every image (at least the most common ones) inside a folder called "images"
+
+-*.html	This is a good way to exclude all pages, because without "html" files there are no links, and therefore there are no page downloads
+
++*.html	On the other hand, if you add this filter you will lead to an capture of every "html" file of almost every website on the web
+
++*.html*[]	Just similar to the previous one, but excluding any "html" file with added characters at the end of extension (such as in dynamic links with parameters, as in  www.example.com/index.html?page=10)
+
+-*	Disallow every page and file. Very useful as the first filter, and to then build upon with additional filters
+
+
+
+

@@ -1,0 +1,27 @@
+
+
+jre  tiene Steam for Linux 29 oct. 2014 a las 11:02 
+This should be this Intel graphics driver bug: https://bugs.freedesktop.org/show_bug.cgi?id=84372
+
+Workaround (from comment #7):
+Create a file /etc/X11/xorg.conf.d/20-intel.conf with the following content:
+
+Section "Device"
+    Identifier  "Intel Graphics"
+    Driver      "intel"
+    Option      "AccelMethod"  "sna"
+    Option      "TearFree"    "true"
+EndSection
+
+... then restart X.
+
+some games started crashing on debian sid :: Steam for Linux Discusiones generales
+https://steamcommunity.com/app/221410/discussions/0/616189742970929798/?l=spanish 
+
+
+OTRA POSIBLE SOLUCIÓN:
+
+saintger 2015-08-22 18:49:45 UTC
+Sorry, copy-paste mistake :
+
+On Debian Jessie, I can confirm that upgrading xserver-xorg-video-intel from the version in stable (2.21.15-2+b2) to the version in backports (2.99.917-2~bpo8+1 0) is solving the problem.

@@ -1,0 +1,51 @@
+
+
+
+Creating a Jekyll Blog on Ubuntu 16.04 - Vultr.com
+https://www.vultr.com/docs/creating-a-jekyll-blog-on-ubuntu-16-04
+
+sudo apt-get update
+sudo apt-get install ruby-full make gcc nodejs build-essential patch
+
+gem install jekyll bundler
+
+desinstalando:
+
+sudo apt-get remove ruby-full nodejs patch
+
+Creating your blog for free using Jekyll + Github pages
+https://medium.com/20percentwork/creating-your-blog-for-free-using-jekyll-github-pages-dba37272730a
+
+jekyll -v
+
+me da:
+
+jekyll 4.0.0
+
+
+
+
+
+https://pages.github.com/
+
+Sigiendo los pasos:
+
+Head over to GitHub and create a new repository named username.github.io, where username is your username (or organization name) on GitHub.
+
+así lo hago
+
+wachin.github.io
+
+y en github para terminal:
+
+clono mi repositorio:
+
+git clone https://github.com/wachin/wachin.github.io
+
+cd wachin.github.io
+
+echo "Hello World" > index.html
+
+ahora sigo los pasos de Jekil
+
+https://help.github.com/en/github/working-with-github-pages/setting-up-a-github-pages-site-with-jekyll

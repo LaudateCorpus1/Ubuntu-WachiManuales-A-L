@@ -1,0 +1,4 @@
+How to Convert Karaoke to MIDI | It Still Works
+https://itstillworks.com/12248995/how-to-convert-karaoke-to-midi
+
+Converting a karaoke file to a MIDI file is very easy. For most audio conversions, an audio conversion utility is required. However, because karaoke files with the file extension of .kar are actually midi files, simply renaming the file extension will convert the file from a karaoke to a midi file. Just a few simple steps are required for this quick conversion.

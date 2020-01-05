@@ -1,0 +1,13 @@
+D.3. Installing Debian GNU/Linux from a Unix/Linux System
+https://www.debian.org/releases/stable/amd64/apds03.html.en
+
+D.3.4.6. Configure Locales and Keyboard
+To configure your locale settings to use a language other than English, install the locales support package and configure it. Currently the use of UTF-8 locales is recommended.
+
+# apt install locales
+# dpkg-reconfigure locales
+To configure your keyboard (if needed):
+
+# apt install console-setup
+# dpkg-reconfigure keyboard-configuration 
+Note that the keyboard cannot be set while in the chroot, but will be configured for the next reboot.

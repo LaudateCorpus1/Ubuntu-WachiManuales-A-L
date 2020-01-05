@@ -1,0 +1,51 @@
+
+
+Dir de la página web
+
+http://askubuntu.com/questions/56104/how-can-i-install-sun-oracles-proprietary-java-6-7-jre-or-jdk
+
+En algún caso de que en la página (con el paso del tiempo) borren ese tutorial, aquí coloco un resumen:
+
+1.- Descargue Oracle Java JRE de la página www.java.com
+2.- Descomprima el paquete que tiene extensión .tar.gz
+3.- Copio lo extraido como root(uso sudo nautilus en Ubuntu), a:
+
+/usr/lib/jvm/
+
+Allí note el nombre del archivo que copió, ejemplo el mio es en esta fecha 2013-11-27:
+
+jre1.7.0_45
+
+Note el direcotio en el que queda:
+
+/usr/lib/jvm/jre1.7.0_45/
+
+4.- Instale en el sistema operativo la Maquina Virtual Java que usted puso allí, de esta manera(pero poniendo el nombre exacto de la capeta que usted copió, ejemplo: 
+
+sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/nombre-de-la-java-descargada/bin/java 3
+
+debe quedar así según este caso:
+
+sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jre1.7.0_45/bin/java 3
+
+colocar esto en la terminal
+
+y luego poner:
+
+sudo update-alternatives --config java
+
+y escoger en el número de la izquierda, el numero al que corresponde.
+
+Ahora para serciorarnos poner:
+
+java -version
+
+
+
+Nota: Este es un ejemplo. Vea el Video pa	ra info completa.
+
+5.- Verifique las alternativas de Java con:
+
+sudo update-alternatives --config java
+
+Consultado por: Ing. Washington Indacochea Delgado

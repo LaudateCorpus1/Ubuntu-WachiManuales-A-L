@@ -1,0 +1,73 @@
+
+For version 1.1.1 and later
+Please refer to the manpage fluxbox-keys(5), as it is more up-to-date than this wiki page. Some of the sections below may serve as a useful supplement to the man page.
+
+How to use the keys file
+The keys file is usually ~/.fluxbox/keys. It can be edited with an editor of your choice. When you're done editing, select "Reload config" from the menu for your changes to take effect. As an alternative, you can bind a key to Reconfigure as described below. The following is basically stolen from akira's keyfile. Take a look at it since it's the most complete one.
+
+The syntax for a keybinding is quite easy:
+
+   [ ] key [key key] :command 
+
+is what we call a "modifier" and you can use 'xmodmap -pm' from the command-line to see what modifiers are available. Typical modifiers to be use in the keys file are:
+
+  Mod1    == Alt
+  Mod4    == Windows key
+  Control == Ctrl
+  Shift   == Shift
+
+
+
+Cómo usar el archivo de atajos de teclado
+El archivo de claves suele ser 
+
+~/.fluxbox/keys 
+
+Se puede editar con un editor de su elección. Cuando haya terminado de editar, seleccione "Recargar configuración" en el menú para que los cambios surtan efecto. Como alternativa, puede enlazar a la clave para reconfigurar como se describe a continuación. Lo siguiente es básicamente robado del archivo de claves de akira http://darkshed.net/files/rcs/fluxbox/keys.html
+
+. Échale un vistazo ya que es el más completo.
+
+La sintaxis para un enlace de teclas es bastante fácil:
+
+[] tecla [tecla clave]: comando
+
+es lo que llamamos "modificador" y usted puede usar 'xmodmap -pm' desde la línea de comandos para ver qué modificadores están disponibles, a mi me devuelve esto:
+
+wachin@Dell-Inspiron-1750:~$ xmodmap -pm
+xmodmap:  up to 4 keys per modifier, (keycodes in parentheses):
+shift       Shift_L (0x32),  Shift_R (0x3e)
+lock        Caps_Lock (0x42)
+control     Control_L (0x25),  Control_R (0x69)
+mod1        Alt_L (0x40),  Meta_L (0xcd)
+mod2        Num_Lock (0x4d)
+mod3      
+mod4        Super_L (0x85),  Super_R (0x86),  Super_L (0xce),  Hyper_L (0xcf)
+mod5        ISO_Level3_Shift (0x5c),  Mode_switch (0xcb)
+
+Los modificadores típicos a usar en el archivo de claves son:
+
+Mod1 == Alt
+Mod4 == tecla de Windows
+Control == Ctrl
+Shift == Shift
+
+
+Los siguientes son los atajos de teclado que Wachín va a usar. Colocar lo siguiente en ~/.fluxbox/keys:
+
+# Abrir AppFinder con atajo de teclado
+# Esto significa que la Tecla de Windows (Mod4) y la tecla A activarán a xfce4-appfinder
+Mod4 a :Exec xfce4-appfinder
+
+# Abrir el menu de aplicaciones con atajo de teclado (en el lugar donde esté el cursor)
+# Esto significa que la tecla de Windows (Mod4) y la tecla M abrirán el menú de las aplicaciones
+Mod4 m :RootMenu
+
+# Cómo poner una ventana siempre encima en Fluxbox
+# Esto significa que la tecla Alt (Mod1) y la tecla A harán que la ventana que esté primero abiera se quedará allí
+# https://linux.byexamples.com/archives/306/makes-your-windows-stay-on-top-toggle-it/
+Mod1 a :ToggleCmd {MacroCmd {RaiseLayer} {RaiseLayer}} {MacroCmd {LowerLayer} {LowerLayer}}
+
+
+
+
+

@@ -1,0 +1,11 @@
+
+
+install flash player | Firefox Support Forum | Mozilla Support 
+https://support.mozilla.org/en-US/questions/1063568
+
+Hello!
+
+Open Terminal in Ubuntu which can be done by Ctrl + Alt + T
+
+sudo apt-get install flashplugin-installer  in Terminal. When done close the terminal window and your browser.
+ 

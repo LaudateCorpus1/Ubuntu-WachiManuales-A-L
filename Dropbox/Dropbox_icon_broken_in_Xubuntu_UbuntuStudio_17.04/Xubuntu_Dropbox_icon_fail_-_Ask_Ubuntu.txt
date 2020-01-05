@@ -1,0 +1,14 @@
+
+Xubuntu Dropbox icon fail - Ask Ubuntu
+https://askubuntu.com/questions/732816/xubuntu-dropbox-icon-fail
+
+Make sure that Notification Area is an item in Panel Preferences; the icon will be shown in Notification Area.
+
+Run the following in terminal:
+
+dropbox stop && dropbox dbus-launch start
+
+answered Oct 4 '16 at 12:26
+
+jarno
+1,19231433

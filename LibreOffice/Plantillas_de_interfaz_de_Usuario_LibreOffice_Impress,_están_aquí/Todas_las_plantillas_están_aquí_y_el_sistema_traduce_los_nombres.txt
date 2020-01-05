@@ -1,0 +1,3 @@
+
+
+/usr/lib/libreoffice/share/template/common/presnt/ 

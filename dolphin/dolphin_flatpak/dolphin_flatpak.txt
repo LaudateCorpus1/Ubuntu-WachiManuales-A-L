@@ -1,0 +1,13 @@
+
+18.04 - How can I have latest Dolphin file manager on Ubuntu - Ask Ubuntu
+https://askubuntu.com/questions/1075924/how-can-i-have-latest-dolphin-file-manager-on-ubuntu
+
+
+Newer Dolphin may be obtained from KDE FlatPak repository:
+
+
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists kdeapps --from https://distribute.kde.org/kdeapps.flatpakrepo
+flatpak install kdeapps org.kde.dolphin
+
+pero no hay para 32 bits

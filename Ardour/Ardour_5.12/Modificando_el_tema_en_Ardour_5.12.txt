@@ -1,0 +1,14 @@
+
+
+
+Personalizando Ardour 5
+Clic en "Editar / Preferencias ", allí en "En Preferencias / Theme" lo cambio al tema "Clear Gray" y en "En Preferencias / Color" le pongo a los siguientes así:
+
+arrange base =  gris muy claro
+audio bus base = gris oscuro
+audio track base = gris muy claro
+selected region base = negro (esto es lo que cubre a la onda a la que uno le da clic)
+selected waveform  fill = amarillo (esta es la onda a la que uno le da clic)
+waveform fill = amarillo bajo
+wave form  outline = gris oscuro
+ 

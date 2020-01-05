@@ -1,0 +1,15 @@
+archivo
+archivo
+De un archivo a otro:
+***************************
+ffmpeg -i input.mp4 out.mkv
+***************************
+
+
+
+Para comprimir al mismo archivo(cambiar el nombre de salida):
+***************************
+ffmpeg -i input.mp4 out.mp4
+***************************
+
+

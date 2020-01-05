@@ -1,0 +1,17 @@
+
+Configuración para UbuntuStudio 16.04
+
+pnmixer
+
+Es necesario ponerle el comando para que abra lo controles extras.
+
+Clic derecho en el icono del programa, clic "Preferencias", clic "Behavior", allí donde dice "Volume Control Command" poner:
+
+pavucontrol
+
+Aplicar y Aceptar.
+
+Nota: Para otro sistema operativo basado en Ubuntu pruebe así, no se si funcionará en todos. Pero en Kubuntu estoy seguro ese no es el comando, no se cual será.
+
+
+Velicidad del cursor

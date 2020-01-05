@@ -1,0 +1,78 @@
+
+
+
+sudo apt-get install pulseaudio-module-jack qjackctl jack-tools a2jmidid jackeq linux-lowlatency qsynth patchage calf-plugins ladish fluid-soundfont-gs fluidsynth timidity meterbridge jamin
+
+
+Paquetes sugeridos:
+  gladish pulseaudio-esound-compat pmidi
+
+
+
+
+sudo apt install ubuntustudio-audio linux-lowlatency ubuntustudio-fonts
+
+
+
+Nota: cuando se instale jackd dirá esto en la tereminal:
+
+"Si quiere ejecutar jackd con prioridades en tiempo real, el usuario que ejecute jackd necesita tener permisos para dicha prioridad. Acepte esta opción para crear el archivo  «/etc/security/limits.d/audio.conf», para permitir la prioridad en tiempo real y los privilegios de «memlock» al grupo audio. Ejecutar jackd con la prioridad en tiempo real reduce la latencia, pero puede llevar a un bloqueo completo del sistema al pedir toda la memoria física disponible del sistema, lo que es inaceptable en entornos multiusuario. ¿Desea habilitar la prioridad en tiempo real del proceso?"
+
+Ponerle que si
+
+
+AÑADIR EL GRUPO AUDIO
+Currently, you will be prompted to setup the needed parameters when installing the jackd package. Don't forget to add your username to the "audio" group.
+More information about that at https://wiki.ubuntu.com/Audio/TheAudioGroup
+
+sudo adduser nombredeusuario audio
+
+para mi es así:
+
+sudo adduser wachin audio
+
+Se puede verificar en la terminal si se añadió el grupo audio pero eso sólo es después de reiniciar la PC
+
+
+
+
+LIMITES, verificar 95
+Poner en la termina:
+
+sudo gedit /etc/security/limits.d/audio.conf
+
+debe decir esto:
+
+@audio   -  rtprio     95
+@audio   -  memlock    unlimited
+
+si es así salga nomás de gedit
+
+
+
+sudo update-grub
+
+
+
+Reiniciar
+
+verificar el grupo audio, ponga en la terminal:
+
+groups
+
+A si me aparece en la lista
+
+
+
+
+
+Configuring the real-time access for "audio" group users and applications
+https://help.ubuntu.com/community/UbuntuStudioPreparation
+
+Ubuntu Studio PackageList
+https://wiki.ubuntu.com/UbuntuStudio/PackageList
+Nota: rosegarden instaló qjackctl 
+
+Ubuntu Studio low latency kernel
+https://askubuntu.com/questions/758106/ubuntu-studio-low-latency-kernel
+Nota: Este paquete linux-lowlatency instala todos los paquetes que necesita el kernel

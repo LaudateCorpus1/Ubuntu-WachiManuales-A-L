@@ -1,0 +1,23 @@
+
+
+
+http://marksnotebook.com/ubuntu/how-add-built-search-thunar-using-catfish
+
+
+Clic en: "Crear nuevo botón" y añadir estas opciones
+
+Para que busque en una carpeta
+
+Ayuda: Buscar
+Comando: catfish
+parametros: --fileman=doublecmd --path=%f
+
+
+
+
+
+Y para que solo busque donde estoy(como sifuera nautilus o dolphin):
+
+Ayuda: Buscar
+Comando: catfish
+parametros: --fileman=doublecmd --path=

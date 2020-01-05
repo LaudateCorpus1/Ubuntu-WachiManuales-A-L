@@ -1,0 +1,12 @@
+
+La busqueda en Dolphin no funciona a esta fecha 2014-06-01 no se luego lo arreglen, pero mientras tanto, hacer esto. Clic derecho a cualquier carpeta, en propiedades añadir como nuevo programa para abrir:
+
+catfish --fileman=thunar --path=%f
+
+ponerle así:
+
+catfish --fileman=dolphin --path=%f
+
+
+Att:
+Washington Indacochea D.

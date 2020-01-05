@@ -1,0 +1,10 @@
+
+
+Paquetes sugeridos:
+  fil-plugins mcp-plugins omins freepats
+Paquetes recomendados:
+  calf-ladspa lmms-vst-server:i386 zynaddsubfx
+ 
+
+ 
+sudo apt install calf-ladspa lmms-vst-server:i386 zynaddsubfx

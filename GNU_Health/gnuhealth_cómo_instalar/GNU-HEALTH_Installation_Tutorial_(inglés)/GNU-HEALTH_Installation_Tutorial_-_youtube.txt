@@ -1,0 +1,205 @@
+
+
+
+GNU-HEALTH Installation Tutorial
+https://youtu.be/dbl_7YmP_qI
+
+http://pasted.co/b12a7b1b
+
+
+Hello, this tutorial1 is to show you how to install GNUHEALTH on Ubuntu.
+
+I am using Ubuntu-GNOME-15.10
+
+The commands should be the same for any other flavor of Ubuntu, so do not worry.
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+First, open up your terminal, and get root previlages (sudo -s)
+
+To do so, Press Ctrl+Alt+T
+
+Now after you gained root, type in the following command, to install the required packages:
+
+apt-get install build-essential python-dev python-pip \
+    libxml2-dev libxslt1-dev libldap2-dev libsasl2-dev python-ldap bsdtar \
+    python-imaging python2.7-cracklib postgresql postgresql-server-dev-all libjpeg-dev
+
+PS: Don't worry about typing the command, you can find it in the description below!
+
+I have already installed the packages,
+
+So the next step would be adding a new user (the GNUHEALTH user)
+
+I will call it, tutorial1, but feel free to name it as you wish.
+
+To do so type in the following command:
+
+adduser tutorial1
+
+PLEASE DO NOT FORGET THE PASSWORD YOU SET FOR THIS USER!
+
+Now the user is added!
+
+Next step is to ensure the PSQL authentication is set to "trust"
+
+To do so, first of all, we have to find the "hba" file.
+
+Type in this command to get its path:
+
+su - postgres -c "psql -t -P format=unaligned -c 'show hba_file'"
+
+The path where my "hba" file is: /etc/postgresql/9.4/main/pg_hba.conf
+Please note that you might get a different, yet similar path.
+
+Now we need to access that file
+
+gedit /etc/postgresql/9.4/main/pg_hba.conf
+
+Please make sure that you have a matching configuration with "TRUST" methods as I will show you! (Change your file accordingly)
+
+
+
+Now, we need to add a database user with certain previlages.
+
+Type in this command:
+
+su - postgres -c "createuser --createdb --no-createrole --no-superuser tutorial1"
+
+Keep in mind that you might have a different username than "tutorial1"
+
+
+
+Next, we need to download GNUHEALTH as the user we just created, and NOT AS ROOT!
+
+su - tutorial1
+
+Now go to its HOME directory
+
+Here, we need to download the latest version of GNUHEALTH
+
+Type in this command:
+
+wget http://ftp.gnu.org/gnu/health/gnuhealth-latest.tar.gz
+
+Now we have to extract the contents of the tarball using this command:
+
+tar xzf gnuhealth-latest.tar.gz
+
+Notice that now we have a folder named gnuhealth-***-**
+
+
+Enter that folder:
+
+cd gnuhealth-*
+
+Here there are a lot of files which make up our GNUHEALTH version.
+
+WE need to start the installer using this command:
+
+./gnuhealth-setup install
+
+THis installation will take a few minutes depending on your bandwidth and machine...
+
+This is a part of the installation, towards the end....
+It is installing the server (Tryton)
+
+Now use the same password you put for your user! Do not forget it!!
+
+
+
+Now we have installed GNUHEALTH successfully
+
+WE're not done yet!!!
+
+Now we need to enable the BASH environment for your created user:
+
+source "$HOME"/.gnuhealthrc
+
+
+
+Now, we can run files from the deep directories of Tryton without always accessing folders and stuff.
+
+For example, we are going to edit the configuration file of Tryton.
+
+Type in the same terminal, editconf
+
+This will open a vi editor (old version of vim)
+
+And we need to edit this to enable several machines to request data from the server.
+
+If you're not comfortable with vim, you may use gedit or nano.
+
+We will add the following segment to the config file.
+
+[jsonrpc]
+listen = *:8000
+
+After that, we are almost done to launch our first GNUHEALTH session!
+
+WE need to create a db that will save our records, or else GNUHealth will not work!
+
+createdb --encoding=unicode tutorial1database
+
+You may name your db whatever you like, I am using the name tutorial1database, And this must be executed as the database user we created!
+
+Now we will start the server
+
+Type in: cdexe
+
+Now, type in: ./trytond --verbose
+
+You may wish to ommit the verbose part, but I recommend it as you will see what is going on in the sever...
+
+You will see something like this: 
+4188 -1220032768 [2016-03-05 08:24:31,956] INFO trytond.server using /home/tutorial1/gnuhealth/tryton/server/config/trytond.conf as configuration file
+4188 -1220032768 [2016-03-05 08:24:31,957] INFO trytond.server initialising distributed objects services
+4188 -1220032768 [2016-03-05 08:24:32,119] INFO trytond.server starting JSON-RPC protocol on *:8000
+
+Which means you're server is up and running!!! COngratulations!
+
+Now the last step, we will download the Tryton CLient...
+
+Open a new Terminal (the first one now is the running server)
+
+apt-get install tryton-client
+
+This will install your tryton client.
+
+Now we will run the client! And try to connect it to the server!
+
+Type in: tryton-client on your terminal and you will see it pop-up
+
+
+Now you will go to manage profiles, and create your own!
+
+
+
+
+Add a new profile, give it a name, your host will be  localhost:8000 as you specified in the configuration file
+
+A "Create" will popup if you followed the steps.
+
+CLick on create!
+
+Use the SAME PASSWORD you've been using throughout the tutorial1!
+
+Give the DB a name of your choice and USE THE SAME PASSWORD FOR THE ADMIN PASSWORD!
+
+Click create!
+
+That was the server, it takes a few minutes, its the first launch...
+
+
+Now login with your newly created credentials, and WELCOME TO GNUHEALTH!!
+
+
+As seen in the video, you can add users and configure their roles, and add modules and disable modules!
+
+Watch the next video to learn how to use GNUHEALTH!!
+
+
+Thank you for watching, I hope WE HELPED!
+
+AUB - E-health

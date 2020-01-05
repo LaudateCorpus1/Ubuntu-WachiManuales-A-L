@@ -1,0 +1,2 @@
+title=How to change User Agent in your desktop browser
+location=https://deviceatlas.com/blog/how-to-change-user-agent-in-desktop-browser

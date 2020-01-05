@@ -1,0 +1,10 @@
+
+configurar bios de hp mini para arrancar desde usb
+
+https://www.youtube.com/watch?v=NVVxE8Ka5uI
+
+Para arrancar desde el USB en una laptop HP Mini hay que entrar en la BIOS con F10 y allí ir a la pestaña "Configuración del Sistema"y allí bajar hasta Inicio, y de allí cambiar el orden con F5 y F6 para que quede primero 
+
+USB diskette on key/usb hard disk (esto en español)
+
+reiniciar y listo

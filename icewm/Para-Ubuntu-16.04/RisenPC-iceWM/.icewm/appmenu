@@ -1,0 +1,272 @@
+menu "Aplicaciones" /usr/share/icons/hicolor/48x48/categories/applications-other.png {
+  menu "Accesorios" /usr/share/icons/gnome/16x16/categories/applications-accessories.png {
+    prog "Alarm Clock" /usr/share/icons/hicolor/16x16/apps/alarm-clock.png alarm-clock-applet
+    prog "Archivos" /usr/share/icons/gnome/16x16/apps/system-file-manager.png nautilus --new-window 
+    prog "Archivos" /usr/share/icons/gnome/16x16/places/folder.png nemo 
+    prog "Brightness Controller" _none_ /usr/share/brightness-controller/init.py
+    prog "Buscador de aplicaciones" /usr/share/icons/gnome/16x16/actions/edit-find.png xfce4-appfinder
+    prog "Buscador de archivos Catfish" _none_ /usr/bin/catfish
+    prog "Calculadora" /usr/share/icons/gnome/16x16/apps/accessories-calculator.png gnome-calculator
+    prog "Captura de pantalla" /usr/share/icons/hicolor/48x48/apps/applets-screenshooter.png xfce4-screenshooter
+    prog "ConvertAll" /usr/share/pixmaps/convertall.xpm convertall
+    prog "Discos" /usr/share/icons/hicolor/16x16/apps/gnome-disks.png gnome-disks
+    prog "Double Commander" /usr/share/pixmaps/doublecmd.png doublecmd 
+    prog "Furius ISO Mount" /usr/share/pixmaps/furiusisomount.png furiusisomount
+    prog "Gestor de archivadores" /usr/share/icons/hicolor/16x16/apps/file-roller.png file-roller 
+    prog "Gestor de archivadores Engrampa" /usr/share/icons/hicolor/16x16/apps/engrampa.png engrampa 
+    prog "KRename" /usr/share/icons/hicolor/32x32/apps/krename.png krename  --icon /usr/share/icons/hicolor/32x32/apps/krename.png 
+    prog "Mapa de caracteres" /usr/share/icons/gnome/16x16/apps/accessories-character-map.png gucharmap
+    prog "Mousepad" /usr/share/icons/gnome/16x16/apps/accessories-text-editor.png mousepad 
+    prog "Onboard" /usr/share/icons/hicolor/22x22/apps/onboard.png onboard
+    prog "Pluma" /usr/share/icons/gnome/16x16/apps/accessories-text-editor.png pluma 
+    prog "Shutter" /usr/share/icons/hicolor/16x16/apps/shutter.png shutter 
+    prog "Simplenote" /usr/share/icons/hicolor/16x16/apps/simplenote.png "/opt/Simplenote/simplenote" 
+    prog "SpeedCrunch" /usr/share/pixmaps/speedcrunch.png speedcrunch
+    prog "Vim" /usr/share/icons/hicolor/48x48/apps/gvim.png /usr/bin/x-terminal-emulator -e vim 
+    prog "Visor de tipografías" /usr/share/icons/gnome/16x16/apps/preferences-desktop-font.png gnome-font-viewer 
+    prog "gedit" /usr/share/icons/gnome/16x16/apps/accessories-text-editor.png gedit 
+  }
+  menu "Configuración" /usr/share/icons/gnome/16x16/categories/preferences-desktop.png {
+    prog "ARandR" /usr/share/icons/gnome/16x16/devices/display.png arandr
+    prog "Acerca de mí" _none_ /usr/bin/mugshot
+    prog "Administrador Bluetooth" /usr/share/icons/hicolor/16x16/apps/blueman.png blueman-manager
+    prog "Administrador de archivos" /usr/share/icons/gnome/16x16/apps/system-file-manager.png thunar-settings
+    prog "Administrador de energía" /usr/share/icons/hicolor/16x16/status/xfpm-ac-adapter.png xfce4-power-manager-settings
+    prog "Adobe Flash Player" /usr/share/icons/hicolor/16x16/apps/flash-player-properties.png flash-player-properties
+    prog "Ajustes de KDE Connect" /usr/share/icons/hicolor/16x16/apps/kdeconnect.png kcmshell5 kcm_kdeconnect
+    prog "Ajustes del monitor" /usr/share/icons/hicolor/32x32/status/video-display.png lxrandr
+    prog "Centro de control de LADI" /usr/share/icons/gnome/16x16/categories/preferences-system.png ladi-control-center
+    prog "CompizConfig Settings Manager" /usr/share/icons/hicolor/16x16/apps/ccsm.png ccsm
+    prog "Conexiones de red" /usr/share/icons/gnome/16x16/categories/preferences-system-network.png nm-connection-editor
+    prog "Configuración de Onboard" /usr/share/icons/hicolor/22x22/apps/onboard.png onboard-settings
+    prog "Configuración de la interfaz GTK+ de LightDM" /usr/share/icons/hicolor/16x16/apps/lightdm-gtk-greeter-settings.png lightdm-gtk-greeter-settings-pkexec
+    prog "Configuración del tema" _none_ gtk-theme-config
+    prog "Controladores adicionales" _none_ /usr/bin/software-properties-gtk --open-tab=4
+    prog "Dispositivos y soportes extraíbles" /usr/share/icons/gnome/16x16/devices/drive-removable-media.png thunar-volman-settings
+    prog "Editor de menús" /usr/share/pixmaps/menulibre.png /usr/bin/menulibre
+    prog "Impresoras" /usr/share/icons/gnome/16x16/devices/printer.png system-config-printer
+    prog "LADI Log File Viewer" /usr/share/icons/hicolor/16x16/apps/ladi-system-log.png ladi-system-log
+    prog "OpenJDK Java 8 Policy Tool" /usr/share/icons/hicolor/16x16/apps/openjdk-8.png /usr/bin/policytool
+    prog "Personalizar apariencia y comportamiento" /usr/share/icons/gnome/16x16/apps/preferences-desktop-theme.png lxappearance
+    prog "Preferencias del escritorio" /usr/share/icons/gnome/16x16/places/user-desktop.png pcmanfm --desktop-pref
+    prog "Qt 4 Settings" /usr/share/pixmaps/qtconfig-qt4.png /usr/bin/qtconfig-qt4
+    prog "Salvapantallas" /usr/share/icons/gnome/16x16/apps/xscreensaver.png xscreensaver-demo
+    prog "Software y actualizaciones" /usr/share/icons/hicolor/16x16/apps/software-properties.png software-properties-gtk
+    prog "Soporte de idiomas" /usr/share/icons/gnome/16x16/apps/preferences-desktop-locale.png /usr/bin/gnome-language-selector
+    prog "Teclado y ratón" /usr/share/icons/hicolor/32x32/status/input-keyboard.png lxinput
+  }
+  menu "Desarrollo" /usr/share/icons/gnome/16x16/categories/applications-development.png {
+    prog "Geany" /usr/share/icons/hicolor/16x16/apps/geany.png geany 
+  }
+  menu "Gráficos" /usr/share/icons/gnome/16x16/categories/applications-graphics.png {
+    prog "Agave" /usr/share/icons/hicolor/16x16/apps/agave.png agave
+    prog "Blender" /usr/share/icons/hicolor/16x16/apps/blender.png blender 
+    prog "Converseen" /usr/share/pixmaps/converseen.png converseen
+    prog "Darktable" /usr/share/icons/hicolor/16x16/apps/darktable.png darktable 
+    prog "Editor de imágenes GIMP" /usr/share/icons/hicolor/16x16/apps/gimp.png gimp-2.8 
+    prog "Entangle" /usr/share/icons/hicolor/16x16/apps/entangle.png entangle
+    prog "Font Manager" /usr/share/icons/gnome/16x16/apps/preferences-desktop-font.png font-manager
+    prog "FontBase" _none_ "/home/wachin/Aplicaciones-Linux/AppImage/FontBase-2.4.1-x86_64.AppImage" 
+    prog "FontForge" /usr/share/icons/hicolor/16x16/apps/fontforge.png fontforge 
+    prog "Fontmatrix" /usr/share/pixmaps/fontmatrix.png fontmatrix
+    prog "Geeqie" /usr/share/pixmaps/geeqie.png geeqie -r 
+    prog "Gwenview" /usr/share/icons/hicolor/16x16/apps/gwenview.png gwenview 
+    prog "Hugin Batch Processor" /usr/share/pixmaps/ptbatcher.png PTBatcherGUI 
+    prog "Hugin Calibrate Lens" /usr/share/pixmaps/hugin.png calibrate_lens_gui
+    prog "Hugin Panorama Creator" /usr/share/pixmaps/hugin.png hugin 
+    prog "ImageMagick (display Q16)" /usr/share/icons/hicolor/16x16/apps/display-im6.q16.png /usr/bin/display-im6 
+    prog "ImageMagick (display Q16)" /usr/share/icons/hicolor/16x16/apps/display-im6.q16.png /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display 
+    prog "Inkscape" /usr/share/icons/hicolor/16x16/apps/inkscape.png inkscape 
+    prog "KRuler" /usr/share/icons/hicolor/16x16/apps/kruler.png kruler
+    prog "KeyMon" /usr/share/pixmaps/key-mon.xpm key-mon
+    prog "Krita" /usr/share/icons/hicolor/16x16/apps/calligrakrita.png krita 
+    prog "LRF Viewer" _none_ lrfviewer 
+    prog "MyPaint" /usr/share/icons/hicolor/16x16/apps/mypaint.png mypaint 
+    prog "Okular" /usr/share/icons/hicolor/16x16/apps/okular.png okular 
+    prog "Phatch Image Inspector" /usr/share/icons/hicolor/16x16/apps/phatch-inspector.png phatch -n 
+    prog "Phatch Procesador de fotografías por lotes" /usr/share/icons/hicolor/16x16/apps/phatch.png phatch 
+    prog "PhotoPrint" /usr/share/icons/hicolor/48x48/apps/fotoprint.png photoprint 
+    prog "Phototonic" /usr/share/icons/hicolor/16x16/apps/phototonic.png phototonic 
+    prog "Rapid Photo Downloader" /usr/share/icons/hicolor/16x16/apps/rapid-photo-downloader.png rapid-photo-downloader
+    prog "RawTherapee" /usr/share/icons/hicolor/16x16/apps/rawtherapee.png rawtherapee 
+    prog "Scribus" /usr/share/icons/hicolor/16x16/apps/scribus.png scribus 
+    prog "Shotwell" _none_ shotwell 
+    prog "Silentcast" silentcast silentcast
+    prog "Simple Scan" /usr/share/icons/gnome/16x16/devices/scanner.png simple-scan
+    prog "Synfig Studio" /usr/share/icons/hicolor/16x16/apps/synfig_icon.png synfigstudio 
+    prog "Viewnior" /usr/share/icons/hicolor/16x16/apps/viewnior.png viewnior 
+    prog "Visor de Imágenes Ristretto" /usr/share/icons/hicolor/16x16/apps/ristretto.png ristretto 
+  }
+  menu "Juegos" /usr/share/icons/gnome/16x16/categories/applications-games.png {
+    prog "Minas" /usr/share/icons/hicolor/16x16/apps/gnome-mines.png gnome-mines
+    prog "PlayOnLinux" /usr/share/pixmaps/playonlinux.png playonlinux
+    prog "Sudoku" /usr/share/icons/hicolor/16x16/apps/gnome-sudoku.png gnome-sudoku
+  }
+  menu "Multimedia" /usr/share/icons/gnome/16x16/categories/applications-multimedia.png {
+    prog "AT1" /usr/share/pixmaps/zita-at1.xpm zita-at1
+    prog "Aeolus" /usr/share/icons/gnome/16x16/mimetypes/audio-x-generic.png /usr/bin/aeolus
+    prog "Ardour4" _none_ /usr/bin/ardour4
+    prog "Audacious" /usr/share/icons/hicolor/48x48/apps/audacious.png audacious 
+    prog "Audacious Qt Interface" /usr/share/icons/hicolor/48x48/apps/audacious.png audacious --qt 
+    prog "Audacity" /usr/share/icons/hicolor/16x16/apps/audacity.png env UBUNTU_MENUPROXY=0 audacity 
+    prog "Avidemux 2.6 (Qt 5)" /usr/share/icons/hicolor/64x64/apps/avidemux_icon.png avidemux2.6_qt5 
+    prog "Brasero" /usr/share/icons/hicolor/16x16/apps/brasero.png brasero 
+    prog "Calf Plugin Pack for JACK" /usr/share/icons/hicolor/16x16/apps/calf.png calfjackhost
+    prog "Clementine" /usr/share/icons/hicolor/64x64/apps/clementine.png clementine 
+    prog "Control de Volumen de PulseAudio" /usr/share/icons/gnome/16x16/apps/multimedia-volume-control.png pavucontrol
+    prog "Conversor de audio" /usr/share/icons/hicolor/48x48/apps/soundconverter.png soundconverter 
+    prog "DevedeNG" /usr/share/pixmaps/devedeng.xpm /usr/bin/devede
+    prog "Echomixer" /usr/share/pixmaps/alsa-tools.xpm echomixer
+    prog "Editor de Subtítulos" /usr/share/icons/hicolor/16x16/apps/subtitleeditor.png subtitleeditor 
+    prog "Envy24 control" /usr/share/pixmaps/alsa-tools.xpm envy24control
+    prog "FF Multi Converter" /usr/share/pixmaps/ffmulticonverter.png ffmulticonverter
+    prog "FFADO Mixer" /usr/share/pixmaps/ffado.xpm ffado-mixer
+    prog "Foo YC20" /usr/share/foo-yc20/graphics/icon.png foo-yc20
+    prog "Gmidimonitor (with ALSA support)" /usr/share/pixmaps/gmidimonitor_32x32.xpm gmidimonitor --alsa
+    prog "Gmidimonitor (with JACK support)" /usr/share/pixmaps/gmidimonitor_32x32.xpm gmidimonitor --jack
+    prog "HDAJackRetask" /usr/share/pixmaps/alsa-tools.xpm hdajackretask
+    prog "HDSPConf" /usr/share/pixmaps/alsa-tools.xpm hdspconf
+    prog "HDSPMixer" /usr/share/pixmaps/alsa-tools.xpm hdspmixer
+    prog "Hexter" _none_ jack-dssi-host hexter.so
+    prog "Hydrogen" /usr/share/pixmaps/h2-icon.xpm hydrogen 
+    prog "ISO Master" /usr/share/isomaster/icons/isomaster.png isomaster 
+    prog "JACK Keyboard" /usr/share/pixmaps/jack-keyboard.png jack-keyboard
+    prog "JACK Rack" /usr/share/pixmaps/jack-rack-icon.png jack-rack
+    prog "JAMin" _none_ jamin
+    prog "Jack Mixer" /usr/share/icons/hicolor/16x16/apps/jack_mixer.png jack_mixer
+    prog "Kdenlive" kdenlive kdenlive 
+    prog "Kid3-qt" /usr/share/icons/hicolor/16x16/apps/kid3-qt.png kid3-qt 
+    prog "LADI System Tray" /usr/share/icons/hicolor/16x16/apps/laditools.png ladi-system-tray
+    prog "LMMS" /usr/share/icons/lmms.png env QT_X11_NO_NATIVE_MENUBAR=1 lmms 
+    prog "Lightworks" /usr/share/lightworks/Icons/App.png /usr/bin/lightworks
+    prog "Lv2rack" /usr/share/pixmaps/lv2rack32x32.xpm lv2rack
+    prog "MKVToolNix GUI" /usr/share/icons/hicolor/16x16/apps/mkvtoolnix-gui.png mkvtoolnix-gui 
+    prog "MediaInfo" /usr/share/icons/hicolor/256x256/apps/mediainfo.png mediainfo-gui 
+    prog "Meterbridge" /usr/share/pixmaps/meterbridge32x32.xpm /usr/bin/meterbridge -t vu alsa_pcm:playback_1 alsa_pcm:playback_2
+    prog "Mudita24" /usr/share/pixmaps/mudita24.xpm mudita24
+    prog "MuseScore" /usr/share/icons/hicolor/64x64/apps/mscore.png mscore 
+    prog "OpenLP" /usr/share/icons/hicolor/16x16/apps/openlp.png openlp 
+    prog "OpenShot Video Editor" _none_ openshot 
+    prog "PHASEX" /usr/share/pixmaps/phasex.xpm phasex
+    prog "PNMixer" /usr/share/icons/hicolor/128x128/apps/pnmixer.png pnmixer
+    prog "Patchage" /usr/share/icons/hicolor/16x16/apps/patchage.png /usr/bin/patchage
+    prog "Petri-Foo" /usr/share/pixmaps/petri-foo.png petri-foo
+    prog "Pitivi" /usr/share/icons/hicolor/16x16/apps/pitivi.png pitivi 
+    prog "Pure Data" /usr/share/pixmaps/puredata.xpm /usr/lib/puredata/tcl/pd-gui.tcl 
+    prog "QMidiArp" _none_ qmidiarp 
+    prog "QasConfig" /usr/share/icons/hicolor/16x16/apps/qasconfig.png qasconfig
+    prog "QasHctl" /usr/share/icons/hicolor/16x16/apps/qashctl.png qashctl
+    prog "QasMixer" /usr/share/icons/hicolor/16x16/apps/qasmixer.png qasmixer
+    prog "QjackCtl" /usr/share/icons/hicolor/32x32/apps/qjackctl.png /usr/bin/qjackctl
+    prog "QmidiNet" /usr/share/icons/hicolor/32x32/apps/qmidinet.png /usr/bin/qmidinet
+    prog "Qmidiroute" /usr/share/pixmaps/qmidiroute_32x32.xpm qmidiroute
+    prog "Qsynth" /usr/share/icons/hicolor/32x32/apps/qsynth.png /usr/bin/qsynth
+    prog "Qtractor" /usr/share/icons/hicolor/32x32/apps/qtractor.png /usr/bin/qtractor 
+    prog "Rakarrack" /usr/share/pixmaps/icono_rakarrack_128x128.png rakarrack
+    prog "RecordMyDesktop" /usr/share/pixmaps/gtk-recordmydesktop.png gtk-recordmydesktop
+    prog "Reproductor de LADI" /usr/share/icons/hicolor/16x16/apps/ladi-player.png ladi-player
+    prog "Reproductor multimedia Parole" /usr/share/icons/hicolor/16x16/apps/parole.png parole 
+    prog "Reproductor multimedia VLC" /usr/share/icons/hicolor/16x16/apps/vlc.png /usr/bin/vlc --started-from-file 
+    prog "Rmedigicontrol" /usr/share/pixmaps/alsa-tools.xpm rmedigicontrol
+    prog "Rosegarden" rosegarden rosegarden 
+    prog "SimpleScreenRecorder" /usr/share/icons/hicolor/16x16/apps/simplescreenrecorder.png simplescreenrecorder --logfile
+    prog "SooperLooper" /usr/share/pixmaps/sooperlooper.xpm /usr/bin/slgui
+    prog "Virtual MIDI Keyboard" /usr/share/pixmaps/vkeybd.xpm vkeybd
+    prog "Xfburn" /usr/share/icons/gnome/16x16/devices/media-cdrom.png xfburn
+    prog "Xjadeo" _none_ /usr/bin/xjadeo
+    prog "Yoshimi" /usr/share/pixmaps/yoshimi.png yoshimi
+    prog "Zita-Rev1" /usr/share/pixmaps/zita-rev1.xpm zita-rev1
+    prog "Zita-mu1" /usr/share/pixmaps/zita-mu1.xpm zita-mu1
+    prog "Zynjacku" /usr/share/pixmaps/zynjacku32x32.xpm zynjacku
+    prog "drumkv1" /usr/share/icons/hicolor/32x32/apps/drumkv1.png /usr/bin/drumkv1_jack
+    prog "gladish" /usr/share/icons/hicolor/16x16/apps/gladish.png gladish
+    prog "guitarix" /usr/share/pixmaps/gx_head.png guitarix
+    prog "mkvinfo" /usr/share/icons/hicolor/16x16/apps/mkvinfo.png mkvinfo -g 
+    prog "puddletag" /usr/share/pixmaps/puddletag.png puddletag 
+    prog "samplv1" /usr/share/icons/hicolor/32x32/apps/samplv1.png /usr/bin/samplv1_jack
+    prog "synthv1" /usr/share/icons/hicolor/32x32/apps/synthv1.png /usr/bin/synthv1_jack
+  }
+  menu "Oficina" /usr/share/icons/gnome/16x16/categories/applications-office.png {
+    prog "Calendario Orage" /usr/share/icons/hicolor/48x48/apps/xfcalendar.png orage 
+    prog "Diccionario" _none_ xfce4-dict
+    prog "E-Book Viewer" _none_ ebook-viewer 
+    prog "Foxit Reader" _none_ /home/wachin/Aplicaciones-Linux/Foxit-Reader-Linux/foxitsoftware/foxitreader/FoxitReader.sh 
+    prog "GoldenDict" /usr/share/pixmaps/goldendict.png goldendict
+    prog "Hora global de Orage" /usr/share/icons/hicolor/48x48/apps/orage_globaltime.png globaltime
+    prog "LibreOffice Base" /usr/share/icons/hicolor/16x16/apps/libreoffice-base.png libreoffice --base 
+    prog "LibreOffice Calc" /usr/share/icons/hicolor/16x16/apps/libreoffice-calc.png libreoffice --calc 
+    prog "LibreOffice Draw" /usr/share/icons/hicolor/16x16/apps/libreoffice-draw.png libreoffice --draw 
+    prog "LibreOffice Impress" /usr/share/icons/hicolor/16x16/apps/libreoffice-impress.png libreoffice --impress 
+    prog "LibreOffice Math" /usr/share/icons/hicolor/16x16/apps/libreoffice-math.png libreoffice --math 
+    prog "LibreOffice Writer" /usr/share/icons/hicolor/16x16/apps/libreoffice-writer.png libreoffice --writer 
+    prog "PDF-Shuffler" /usr/share/pixmaps/pdfshuffler.png pdfshuffler
+    prog "Visor de documentos" /usr/share/icons/hicolor/16x16/apps/evince.png evince 
+    prog "WPS Presentation" /usr/share/icons/hicolor/48x48/apps/wps-office-wppmain.png /usr/bin/wpp 
+    prog "WPS Spreadsheets" /usr/share/icons/hicolor/48x48/apps/wps-office-etmain.png /usr/bin/et 
+    prog "WPS Writer" /usr/share/icons/hicolor/48x48/apps/wps-office-wpsmain.png /usr/bin/wps 
+    prog "calibre" /usr/share/pixmaps/calibre-gui.png calibre 
+  }
+  menu "Otras" /usr/share/icons/hicolor/48x48/categories/applications-other.png {
+    prog "4K Slideshow Maker" /usr/share/icons/4kslideshowmaker.png 4kslideshowmaker
+    prog "Bloc de Notas" /usr/share/icons/hicolor/16x16/apps/wine-notepad.png notepad
+    prog "Configurar Wine" /usr/share/icons/hicolor/16x16/apps/wine-winecfg.png winecfg
+    prog "Desinstala software de Wine" /usr/share/icons/hicolor/16x16/apps/wine-uninstaller.png wine uninstaller
+    prog "Explorar la unidad C:" /usr/share/icons/hicolor/16x16/places/folder-wine.png xdg-open .wine/dosdevices/c:
+    prog "Florence Virtual Keyboard" _none_ florence
+    prog "GreenAddress" _none_ /opt/google/chrome/google-chrome --profile-directory=Default --app-id=dgbimgjoijjemhdamicmljbncacfndmp
+    prog "Qtcam" /usr/share/qml/qtcam/icon/images/icon.jpg /usr/bin/x-terminal-emulator -e sudo /usr/bin/qtcam
+    prog "Winetricks" _none_ winetricks
+  }
+  menu "Red" /usr/share/icons/hicolor/48x48/categories/applications-internet.png {
+    prog "Cliente de correo Thunderbird" /usr/share/pixmaps/thunderbird.png thunderbird 
+    prog "Cliente de mensajería de Internet Pidgin" /usr/share/icons/hicolor/16x16/apps/pidgin.png pidgin
+    prog "Dropbox" /usr/share/icons/hicolor/16x16/apps/dropbox.png dropbox start -i
+    prog "Google Chrome" /usr/share/icons/hicolor/16x16/apps/google-chrome.png /usr/bin/google-chrome-stable 
+    prog "Google Earth" /usr/share/icons/hicolor/16x16/apps/google-earth-pro.png /opt/google/earth/pro/google-earth-pro 
+    prog "Internet DJ Console" /usr/share/pixmaps/idjc.png /usr/bin/idjc
+    prog "KDE Connect Indicator Settings" /usr/share/icons/hicolor/16x16/apps/kdeconnect.png indicator-kdeconnect-settings
+    prog "Monitor de KDE Connect" /usr/share/icons/hicolor/16x16/apps/kdeconnect.png plasmawindowed org.kde.kdeconnect --statusnotifier
+    prog "Navegador web Chromium" /usr/share/icons/hicolor/22x22/apps/chromium-browser.png chromium-browser 
+    prog "Navegador web Firefox" /usr/share/icons/hicolor/128x128/apps/firefox.png firefox 
+    prog "Opera" /usr/share/icons/hicolor/16x16/apps/opera.png opera 
+    prog "Transmission" /usr/share/icons/hicolor/16x16/apps/transmission.png transmission-gtk 
+    prog "YouTube DL GUI" /usr/share/icons/hicolor/16x16/apps/youtube-dl-gui.png youtube-dl-gui
+    prog "uGet" /usr/share/icons/hicolor/16x16/apps/uget-icon.png uget-gtk 
+  }
+  menu "Sistema" /usr/share/icons/gnome/16x16/categories/applications-system.png {
+    prog "Actualización de software" /usr/share/icons/gnome/16x16/apps/system-software-update.png /usr/bin/update-manager
+    prog "Ayuda de Ubuntu Studio" /usr/share/icons/gnome/16x16/categories/system-help.png xdg-open https://help.ubuntu.com/community/UbuntuStudio
+    prog "BleachBit" /usr/share/pixmaps/bleachbit.png bleachbit
+    prog "BleachBit (as root)" /usr/share/pixmaps/bleachbit.png su-to-root -X -c bleachbit
+    prog "Cambio de nombre en masa de Thunar" /usr/share/icons/hicolor/16x16/apps/Thunar.png /usr/lib/x86_64-linux-gnu/Thunar/ThunarBulkRename 
+    prog "Colaborar con Ubuntu Studio" /usr/share/icons/hicolor/48x48/places/ubuntustudio-logo.png xdg-open http://ubuntustudio.org/contribute/
+    prog "Editor de dconf" /usr/share/icons/hicolor/16x16/apps/dconf-editor.png dconf-editor
+    prog "Gestor de archivos PCManFM" /usr/share/icons/gnome/16x16/apps/system-file-manager.png pcmanfm 
+    prog "Gestor de archivos Thunar" /usr/share/icons/hicolor/16x16/apps/Thunar.png thunar 
+    prog "Gestor de paquetes Synaptic" /usr/share/pixmaps/synaptic.png synaptic-pkexec
+    prog "Gestor de tareas" /usr/share/icons/gnome/16x16/apps/utilities-system-monitor.png xfce4-taskmanager
+    prog "Gigolo" /usr/share/icons/gnome/16x16/places/gtk-network.png gigolo
+    prog "Grub Customizer" /usr/share/icons/hicolor/16x16/apps/grub-customizer.png grub-customizer
+    prog "Hora y fecha" /usr/share/icons/hicolor/16x16/apps/time-admin.png time-admin
+    prog "I-Nex" /usr/share/pixmaps/i-nex-128.png /usr/bin/i-nex.gambas
+    prog "I-Nex Library" /usr/share/pixmaps/i-nex-128.png /usr/bin/i-nex.gambas --library
+    prog "Instalador de paquetes GDebi" /usr/share/icons/gnome/16x16/mimetypes/gnome-mime-application-x-deb.png gdebi-gtk 
+    prog "KDE Connect Indicator" /usr/share/icons/hicolor/16x16/apps/kdeconnect.png indicator-kdeconnect
+    prog "Konsole" /usr/share/icons/gnome/16x16/apps/utilities-terminal.png konsole
+    prog "Monitor del sistema" /usr/share/icons/gnome/16x16/apps/utilities-system-monitor.png gnome-system-monitor
+    prog "Psensor" /usr/share/icons/hicolor/16x16/apps/psensor.png psensor
+    prog "Red" /usr/share/icons/gnome/16x16/categories/preferences-system-network.png network-admin
+    prog "Sitio web de Ubuntu Studio" /usr/share/icons/hicolor/48x48/places/ubuntustudio-logo.png xdg-open http://ubuntustudio.org/
+    prog "Software" /usr/share/icons/hicolor/16x16/apps/org.gnome.Software.png gnome-software 
+    prog "Terminal de Xfce" /usr/share/icons/gnome/16x16/apps/utilities-terminal.png xfce4-terminal
+    prog "UXTerm" /usr/share/icons/hicolor/48x48/apps/xterm-color.png uxterm
+    prog "Ubuntu Studio Controls" /usr/share/icons/hicolor/16x16/apps/ubuntustudio-controls.png ubuntustudio-controls-pkexec
+    prog "Ubuntu Studio Forum" /usr/share/icons/gnome/16x16/apps/system-users.png xdg-open http://ubuntuforums.org/forumdisplay.php?f=335
+    prog "Ubuntu Studio IRC" _none_ xdg-open http://webchat.freenode.net/?channels=ubuntustudio\&nick=studio-user...\&prompt=1
+    prog "Ubuntu Studio Mailing List" _none_ xdg-open https://lists.ubuntu.com/mailman/listinfo/ubuntu-studio-users
+    prog "Ubuntu Studio Meta Installer" /usr/share/icons/hicolor/22x22/apps/ubuntustudio-installer.png ubuntustudio-installer ubuntustudio-audio ubuntustudio-menu linux-lowlatency ubuntustudio-graphics ubuntustudio-photography ubuntustudio-publishing ubuntustudio-video
+    prog "Usuarios y grupos" /usr/share/icons/gnome/16x16/apps/config-users.png users-admin
+    prog "Visor de perfiles de color" /usr/share/icons/hicolor/16x16/apps/gnome-color-manager.png gcm-viewer
+    prog "XTerm" /usr/share/icons/hicolor/48x48/apps/xterm-color.png xterm
+  }
+}

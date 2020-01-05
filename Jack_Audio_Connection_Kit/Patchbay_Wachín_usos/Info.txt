@@ -1,0 +1,6 @@
+
+
+
+system capture a system playback.- Sirve para escuchar el retorno de mi voz
+
+qsynth, PulseAudio JACK Sink, audacious a SimpleScreenRecorder.- sirve para que estos tres se envien a SimpleScreenRecorder (PulseAudio JACK Sink son todas las aplicaciones que no son nativas de JACK y conectando así si se envia el sonido a SimpreScreenRecorder. Ejemplo Chromium)

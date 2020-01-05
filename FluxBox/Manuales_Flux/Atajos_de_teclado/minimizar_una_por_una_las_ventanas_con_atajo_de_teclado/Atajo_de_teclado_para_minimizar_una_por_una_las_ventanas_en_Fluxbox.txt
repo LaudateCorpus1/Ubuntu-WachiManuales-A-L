@@ -1,0 +1,23 @@
+
+Atajo de teclado para minimizar todas las ventanas en Fluxbox 
+https://facilitarelsoftwarelibre.blogspot.com/2018/10/atajo-de-teclado-para-minimizar-todas.html
+
+
+Minimizar todas las ventanas en Fluxbox con un solo atajo de teclado que yo sepa no se puede, pero se puede minimizar una por una y rápido con el atajo de teclado:
+
+
+Alt + F9
+
+
+Esto en Ubuntu 16.04 y debe funcionar en otros Linux
+
+
+Lo aprendí viendo el archivo de los atajos de teclado de fluxbox que están en la carpeta oculta:
+
+
+.fluxbox/keys
+
+
+Mod1 = Alt
+
+Dios les bendiga

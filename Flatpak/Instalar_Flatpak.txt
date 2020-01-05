@@ -1,0 +1,31 @@
+
+
+
+https://flathub.org/home
+
+instalar flatpak para ubuntu
+
+https://flatpak.org/setup/Ubuntu/
+
+
+sudo add-apt-repository ppa:alexlarsson/flatpak
+sudo apt update
+sudo apt install flatpak
+
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+Restart
+
+
+https://flathub.org/apps/details/org.gimp.GIMP
+
+Command line instructions
+Install:
+Make sure to follow the setup guide before installing
+
+$ flatpak install flathub org.gimp.GIMP
+Run:
+
+$ flatpak run org.gimp.GIMP
+
+

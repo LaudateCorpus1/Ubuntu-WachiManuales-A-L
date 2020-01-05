@@ -1,0 +1,32 @@
+
+
+Primer paso:
+
+balooctl enable
+
+Con este comando se crea la base de datos en ".local/share/baloo/", así:
+
+file:///home/wachin/.local/share/baloo/index
+file:///home/wachin/.local/share/baloo/index-lock
+
+segundo paso:
+
+balooctl check
+
+esto me devuelve_
+
+wachin@Dell-Inspiron-1750:~$ balooctl check
+Started search for unindexed files
+
+Nota: No es necesario poner balooctl start porque ya está iniciado.
+
+
+
+Archivos:
+file:///home/wachin/.config/baloorc
+file:///home/wachin/.config/baloofilerc
+
+
+
+
+balooctl status /home/wachin/Dropbox/ 

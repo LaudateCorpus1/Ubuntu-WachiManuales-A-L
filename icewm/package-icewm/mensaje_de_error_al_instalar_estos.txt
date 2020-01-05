@@ -1,0 +1,65 @@
+
+
+
+wachin@Dell-Inspiron-1750:~/Dropbox/UbuntuManuales/icewm/package-icewm/bionic$ sudo dpkg -i *.deb
+[sudo] contraseña para wachin: 
+Seleccionando el paquete icewm previamente no seleccionado.
+(Leyendo la base de datos ... 333891 ficheros o directorios instalados actualmente.)
+Preparando para desempaquetar icewm_1.4.3.0_pre-20180217-4_i386.deb ...
+Desempaquetando icewm (1.4.3.0~pre-20180217-4) ...
+Seleccionando el paquete icewm-common previamente no seleccionado.
+Preparando para desempaquetar icewm-common_1.4.3.0_pre-20180217-4_i386.deb ...
+Desempaquetando icewm-common (1.4.3.0~pre-20180217-4) ...
+Configurando icewm-common (1.4.3.0~pre-20180217-4) ...
+Procesando disparadores para menu (2.1.47ubuntu2) ...
+En el fichero «/etc/menu-methods/icewm», en (o en la defición que termina en) la línea 10:
+x11=    "  prog \"" translate(lang(), title())    ifnempty($genericname, " ("translate(lang(),$genericname)")") "\" \"" findicon($icon, "-") "\" " $command"\n"
+                              ^
+Función desconocida: «lang»
+install-menu: /etc/menu-methods/icewm: abortando
+update-menus[5901]: El guión /etc/menu-methods/icewm devolvío un estado de error 1.
+Configurando icewm (1.4.3.0~pre-20180217-4) ...
+Procesando disparadores para man-db (2.8.3-2) ...
+Procesando disparadores para doc-base (0.10.8) ...
+Procesando 2 archivos doc-base añadidos...
+Registrando documentos con scrollkeeper...
+Procesando disparadores para hicolor-icon-theme (0.17-2) ...
+Procesando disparadores para menu (2.1.47ubuntu2) ...
+En el fichero «/etc/menu-methods/icewm», en (o en la defición que termina en) la línea 10:
+x11=    "  prog \"" translate(lang(), title())    ifnempty($genericname, " ("translate(lang(),$genericname)")") "\" \"" findicon($icon, "-") "\" " $command"\n"
+                              ^
+Función desconocida: «lang»
+install-menu: /etc/menu-methods/icewm: abortando
+update-menus[6705]: El guión /etc/menu-methods/icewm devolvío un estado de error 1.
+wachin@Dell-Inspiron-1750:~/Dropbox/UbuntuManuales/icewm/package-icewm/bionic$ sudo apt install jwm
+Leyendo lista de paquetes... Hecho
+Creando árbol de dependencias       
+Leyendo la información de estado... Hecho
+Se instalarán los siguientes paquetes NUEVOS:
+  jwm
+0 actualizados, 1 nuevos se instalarán, 0 para eliminar y 1 no actualizados.
+Se necesita descargar 146 kB de archivos.
+Se utilizarán 440 kB de espacio de disco adicional después de esta operación.
+0% [Conectando a mirror.cc.columbia.edu]s
+Des:1 http://mirror.cc.columbia.edu/pub/linux/ubuntu/archive bionic/universe i386 jwm i386 2.3.7-1 [146 kB]
+Descargados 146 kB en 6s (24,1 kB/s)                                                                                              
+Seleccionando el paquete jwm previamente no seleccionado.
+(Leyendo la base de datos ... 334567 ficheros o directorios instalados actualmente.)
+Preparando para desempaquetar .../archives/jwm_2.3.7-1_i386.deb ...
+Desempaquetando jwm (2.3.7-1) ...
+Procesando disparadores para menu (2.1.47ubuntu2) ...
+En el fichero «/etc/menu-methods/icewm», en (o en la defición que termina en) la línea 10:
+x11=    "  prog \"" translate(lang(), title())    ifnempty($genericname, " ("translate(lang(),$genericname)")") "\" \"" findicon($icon, "-") "\" " $command"\n"
+                              ^
+Función desconocida: «lang»
+install-menu: /etc/menu-methods/icewm: abortando
+update-menus[6759]: El guión /etc/menu-methods/icewm devolvío un estado
+Procesando disparadores para man-db (2.8.3-2) ...
+Configurando jwm (2.3.7-1) ...
+Procesando disparadores para menu (2.1.47ubuntu2) ...
+En el fichero «/etc/menu-methods/icewm», en (o en la defición que termina en) la línea 10:
+x11=    "  prog \"" translate(lang(), title())    ifnempty($genericname, " ("translate(lang(),$genericname)")") "\" \"" findicon($icon, "-") "\" " $command"\n"
+                              ^
+Función desconocida: «lang»
+install-menu: /etc/menu-methods/icewm: abortando
+update-menus[7389]: El guión /etc/menu-methods/icewm devolvío un estado de error 

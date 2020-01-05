@@ -1,0 +1,15 @@
+
+
+
+Plugins
+
+P.E.Op.S./Pete's MesaGL Linux PSX GPU
+* Ah, yeah :) My Linux hw/accel. GPU port... it will be running fine at least on nVidias xfree4 glx, but all other cards with hw acceleration could also work. The Linux ports of P©SX and ePSXe are supporting this plugin, and I've also done a small test application for the plugin. You can get the source code of the test app from my plugin development page.
+
+http://www.pbernert.com/gpupeopsmesagl178.tar.gz
+
+
+
+P.E.Op.S. Linux OSS/ALSA PSX SPU
+http://www.pbernert.com/spupeopsoss109.tar.gz
+ 

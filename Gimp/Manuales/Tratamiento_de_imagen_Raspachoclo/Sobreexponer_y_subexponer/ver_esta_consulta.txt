@@ -1,0 +1,27 @@
+
+
+http://forogimp.com/modules/newbb/viewtopic.php?topic_id=4204
+
+Técnica Pincel en modo Sobreexponer color
+Con este método nos olvidamos de la herramienta Sobreexponer y utilizamos en su lugar el Pincel.
+
+1.- Duplicamos la capa.
+2.- Seleccionar la herramienta Pincel.
+3.- En las propiedades de la herramienta elegimos el modo "Sobreexponer color" (En caso de estar trabajando con la herramienta subexponer, se elegirá la opción "Subexponer color")
+4.- Pintamos con un gris claro como color frontal.
+5.- Bajamos la opacidad de la capa a nuestro gusto.
+
+Asimismo, del portal de Paulo Porta obtenemos las diferentes denominaciones del metodo Subexponer en distintos programas; para el caso de Gimp es "ennegrecer".
+
+Adicionalmente, sugiero darte una leida a los documentos de ayuda y guia que te dejo: Manual de Fotografia B&N (Pag. 40 y siguientes).
+
+Espero que esto te sea de utilidad.  
+
+
+
+Re: Subexponer color
+
+#Flash:
+
+Para lo que quieres hacer puedes crear una capa en color gris 808080. La pones en modo solapar. A partir de aquí puedes ir pintando con blanco (luces) y negro (sombras) con opacidades bajas del pincel; también con la herramienta de quemar ennegrecer y opacidades bajas.
+En un momento dado, según las características de la imagen, podrías aplicar, esta capa gris, como mapa, en el filtro mapa de relieve.

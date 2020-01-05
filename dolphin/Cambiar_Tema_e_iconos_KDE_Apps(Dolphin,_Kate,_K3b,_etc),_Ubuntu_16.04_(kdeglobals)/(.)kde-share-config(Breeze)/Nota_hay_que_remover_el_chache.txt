@@ -1,0 +1,5 @@
+
+
+ver cómo poner en la terminal o hacer algún script
+
+Removing cache at "/home/wachin/.cache/icon-cache.kcache" 

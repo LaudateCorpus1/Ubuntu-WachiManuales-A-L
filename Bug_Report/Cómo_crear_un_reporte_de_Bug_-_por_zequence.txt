@@ -1,0 +1,15 @@
+
+
+
+zequence> wachin: Development release?
+<zequence> Ah, no 15.10, you said
+<zequence> wachin: Have you reported a bug?
+<zequence> If not, use the terminal, and do: ubuntu-bug kdenlive
+<wachin> Hi zequence 
+
+
+Esto es así:
+
+sudo ubuntu-bug kdenlive
+
+Nota: Me pediran ciertos datos de acceso qeu yo ya tengo

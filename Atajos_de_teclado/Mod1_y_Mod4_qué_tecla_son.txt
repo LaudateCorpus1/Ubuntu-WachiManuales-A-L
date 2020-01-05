@@ -1,0 +1,17 @@
+
+
+http://fluxbox.org/help/man-fluxbox-keys.php
+
+where 
+Mod1 is the Alt key on the PC keyboard and 
+Mod4 is usually a key branded with a familiar company logo. 
+
+donde 
+Mod1 es la tecla Alt en el teclado de la PC y 
+Mod4 es generalmente una tecla de marca con un logotipo familiar familiar.
+
+
+keyboard shortcut to minimize all windows?
+https://ubuntuforums.org/showthread.php?t=796885
+
+Mod4+D, which means Windows Key plus D. 

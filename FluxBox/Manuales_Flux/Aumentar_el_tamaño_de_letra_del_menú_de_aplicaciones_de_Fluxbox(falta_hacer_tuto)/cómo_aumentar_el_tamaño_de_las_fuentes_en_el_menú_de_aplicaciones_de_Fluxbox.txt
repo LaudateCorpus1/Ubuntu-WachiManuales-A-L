@@ -1,0 +1,28 @@
+Aumentar el tamaño de letra del menú de aplicaciones de Fluxbox
+
+En Fluxbox la única manera que sepa de aumentar el tamaño de las letras en el menú es editando el estilo. En Ubuntu 16.04 y 18.04 está por defecto en Fluxbox el estilo ubuntu-light así que hay que editarlo
+
+La hubicación de todos los estilos está en:
+
+/usr/share/fluxbox/styles/
+
+Digo esto pues que en otros sistemas operativos Linux podría estar otro estilo y tendrán que editarlo.
+
+
+Bueno para Ubuntu ponger en la terminal (debe tener instalado gedit):
+
+sudo gedit /usr/share/fluxbox/styles/ubuntu-light
+
+allí a la línea:
+
+menu.frame.font:				Ubuntu-10:bold
+
+editarla y dejarla así:
+
+menu.frame.font:				Ubuntu-12
+
+Así para mi, usted puede ponerle 11.
+
+guardar y cerrar
+
+

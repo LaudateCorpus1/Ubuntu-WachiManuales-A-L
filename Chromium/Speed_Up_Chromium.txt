@@ -1,0 +1,10 @@
+
+- Desinstalar todas las extensiones
+
+
+- borrar todo el historial etc, menos las contraseñas, busca en la configuracion de chromium estas palabras "eliminar datos de navegación" y allí borralas
+
+
+- borra el cache con este comando:
+  rm -r -v ~/.cache/chromium 
+

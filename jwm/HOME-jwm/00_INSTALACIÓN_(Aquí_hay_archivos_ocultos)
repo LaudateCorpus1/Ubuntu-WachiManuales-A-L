@@ -1,0 +1,35 @@
+
+INSTALACIÓN
+Instale primero jwm
+
+sudo apt install jwm
+
+Luego cuando haya descargado esta carpeta, para ver los archivos ocultos aplaste:
+
+Ctrl + H
+
+o si usa dolphin aplaste:
+
+Alt + . 
+
+Tendrá por todo 3 archivos, son los siguientes:
+
+/RisenPC-JWM
+.jwmrc
+.Xresources
+
+Estos 3 copielos a su HOME
+
+Explicación:
+
+/RisenPC-JWM.- Contiene archivos de configuración
+.jwmrc.- Aquí están todas las configuraciones de JWM, tu puedes abrirlo y modificarlo con gedit por ejemplo
+.Xresources.- Es para el tamaño de las fuentes del sistema, tu puedes abrirlo y modificarlo con gedit por ejemplo
+
+Reinicie y listo funcionará
+
+
+Dios les bendiga
+
+Dios te bendiga
+Att: Wachín

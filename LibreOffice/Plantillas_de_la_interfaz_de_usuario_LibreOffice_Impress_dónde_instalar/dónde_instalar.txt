@@ -1,0 +1,18 @@
+
+
+llegar hasta aquí:
+
+/home/wachin/.config/libreoffice/4/user/
+
+y allí crear la carpeta "template" y dentro "presnt", debe quedar así:
+
+/home/wachin/.config/libreoffice/4/user/template/presnt/ 
+
+allí se pueden pegar los archivos odt
+
+ejemplo de:
+
+https://facilitarelsoftwarelibre.blogspot.com/2019/02/279-plantillas-para-libreoffice-impress.html
+
+
+ese archivo deb se lo puede descomprimir y de allí pegarlos 

@@ -1,0 +1,17 @@
+
+Estas fuentes son especiales para usar en títulos pues son gruesas y en inkscape o kdenlive se le pueden poner el grosor de linea bien
+
+En su administrador de archivos ver los archivos ocultos con "Ctlr + H" y crear una carpeta con el nombre:
+
+.fonts
+
+allí pegar las dos carpetas:
+
+1001freefonts.com
+dafont.com
+
+(si ya estaba creada la carpeta no la cree solo pegue allí las carpetas)
+
+
+
+ 

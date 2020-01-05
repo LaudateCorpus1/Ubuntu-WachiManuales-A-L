@@ -1,0 +1,105 @@
+
+
+[all variants] How to convert *.bgl (babylon) to stardict *.ifo
+https://ubuntuforums.org/showthread.php?t=1044452
+
+
+How to convert *.bgl (babylon) to stardict *.ifo
+I have been trying to convert a bgl file from babylon to use with my stardict for three weeks ...
+Most of the how-to's on the Internet doesn't work anymore with the new encrypted *.bgl files !
+I have tried stardict-editor, dictconv, and several others ...
+None of them worked !
+
+But, after three weeks of searching I figured out a way to convert ...
+I saw some unanswered threads about this, and post it here as somebody might wanna know this ...
+
+This is a step-by-step how-to ...
+
+(1) First, download the UnpackBGL.exe here. ( Originally, from a reverse-engineering forum )
+(2) Then, run it with wine or in Windows
+(3) Open your bgl file and blah blah ...
+(4) Then, you will have *.bgl.txt in the same directory ...
+(5) You cannnot convert it directly to stardict with stardict-editor
+(6) So, you have to convert it to tab dictionary file then to stardict's ifo format ...
+
+What is tab file 
+----------------
+Here is a example dict.tab file:
+============
+a	1\n2\n3
+b	4\\5\n6
+c	789
+============
+It means: write the search word first, then a Tab character, and the definition. If the definition contains new line, just write \n, if contains \ character, just write \\. ( quoted from official site )
+
+How to convert
+--------------
+Well, by-hand is not possible if your dictionary is large ...
+You can use sed, python, perl or anyth to convert your txt file to tab format ....
+
+Here is an example of python script I used to convert my file ... 
+You cannot use this for your case, as different dictionaries can give different output ...
+I am not an experienced programmer, still learning python ...
+For regular expressions, I first tested with kiki, a must-have software if you are planning to learn regular expression ...
+
+**********************************************************************************
+Code:
+#!  /usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import re
+
+inputFile  = " "	#input file ( *.bgl.txt converted with file
+outputFile = " "	#output file
+
+#Read File
+try:
+    inFile = open(inputFile,"r")
+except IOError:
+    print "Cannot open the input file!"
+    sys.exit(1)
+content = inFile.read()
+inFile.close()
+
+#==========
+#Conversion
+#==========
+removeCSS  = re.compile("[.#].+\s*{[^}]*?}")                        #pattern to remove CSS
+removeHTML = re.compile("<[^>]*>",re.M)                             #pattern to remove HTML
+removeEmptyLines = re.compile("\s+\n\n", re.M)                      #pattern to remove Empty Lines
+replaceTabs      = re.compile("^\t",re.M)                           #pattern to replace lines starting with tabs
+removeBC         = re.compile("\s●\s+")                             #pattern to remove ●
+newlinestr = re.escape("\\n")
+
+content = removeCSS.sub("",content)             #remove CSS
+content = removeHTML.sub("",content)            #remove HTML
+content = replaceTabs.sub(newlinestr,content)   #replace lines starting with Tabs
+content = removeEmptyLines.sub("\t",content)    #remove Empty Lines
+content = content.replace("\n\\n","")           #replace new lines before "\n" string
+content = removeBC.sub(newlinestr,content)      #replace ● with "\n"
+inFile.close()
+
+#Write File
+try:
+    outFile = open(outputFile,"w")
+except IOError:
+    print "Cannot open the output file"
+outFile.write(content)
+outFile.close()
+
+print "Fin"
+
+
+**********************************************************************************
+(7) If all goes well, now you have a tab dictionary file, install "stardict-tools",then run -> stardict-editor -> load your file -> build 
+
+(8) Now, you will have three files in that directory ... *.dict.dz *.ifo *.idx
+
+(9) Make a new folder in /usr/share/stardict/dict/, then put those three files in that folder ....
+
+Now, you are finished .... 
+But, believe me it wasn't that easy for me , it took me three weeks to figure that out .. ;(
+Last edited by Thura; March 3rd, 2009 at 03:18 AM.
+The world itself is a program, a very complicated one, and we, humans, are trying to get the source code ...
+Advanced reply Adv Reply  
+March 2nd, 2009 #2

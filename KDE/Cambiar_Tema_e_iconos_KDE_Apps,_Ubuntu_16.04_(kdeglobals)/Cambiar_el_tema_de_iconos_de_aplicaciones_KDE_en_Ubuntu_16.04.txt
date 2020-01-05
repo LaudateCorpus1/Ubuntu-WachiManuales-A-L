@@ -1,0 +1,40 @@
+
+Cambiar el tema de iconos de aplicaciones KDE en Ubuntu 16.04
+
+edita el archivo:
+
+gedit .kde/share/config/kdeglobals
+
+busque la siguiente linea, por defecto estará:
+
+[Icons]
+Theme=Breeze
+
+cambiala por
+
+[Icons]
+Theme=oxygen
+
+o 
+
+[Icons]
+Theme=nuvola-xfceorange-dark
+
+Borrar el cache del tema de iconos para que se cree el nuevo con el tema elegido
+
+poner en la terminal:
+
+rm .kde/cache*/icon-cache.kcache
+
+y
+
+rm .cache/icon-cache.kcache
+
+Nota: "wachin" es el nombre del mi usuario de mi HOME, usted debe buscar en el suyo
+
+cierre la aplicación KDE que esté usando y vuelvala a abrir (ejemplo dolphin4) y verá que se cambia el tema
+
+
+Adaptado de:
+https://solydxk.com/evolvere-icon-theme-update/
+https://bbs.archlinux.org/viewtopic.php?id=121653

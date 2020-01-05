@@ -1,0 +1,35 @@
+Panel, Barra de tareas, Swicht, Iconos
+http://www.estrellateyarde.org/el-entorno-grafico-x-window-system/icewm
+
+
+Las aplicaciones abiertas aparecen en el panel. Podemos acceder también a la lista de tareas desde el menú y mediante el Botón 3 del ratón.
+Tiene swicht (<Alt+Tab>) para las aplicaciones abiertas.
+Para configurar los accesos rápidos que aparecen en el panel editaremos el archivo:
+~/.icwem/toolbar
+
+La sintaxis es la misma que la del archivo ~/.icwem/menu:
+
+prog <titulo> <icono> <ejecutable>
+Por ejemplo:
+
+prog WTerm xterm wterm -fg gray -bg black -fn 7x13 -sr -g 80x25
+prog KWrite kwrite kwrite
+prog Mutt kmail wterm -e mutt
+prog Netscape netscape netscape
+prog XChat commandl xchat
+Si IceWM no puede encontrar el ejecutable correspondiente a una entrada del panel no mostrará ese icono.
+
+
+También podemos configurar gráficamente los accesos rápidos con IceMe.
+
+El panel tiene algunos iconos propios de IceWM que podemos configurarlos editando el archivo ~/.icewm/preferences:
+mostrar el icono Escritorio (el botón que minimiza todas las ventanas):
+
+# Show 'show desktop' button on taskbar
+TaskBarShowShowDesktopButton=1 # 0/1
+
+no mostrar el icono Lista de ventanas (window list):
+
+# Show 'window list' menu on task bar
+TaskBarShowWindowListMenu=0 # 0/1
+

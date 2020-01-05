@@ -1,0 +1,14 @@
+
+
+Permanently rotate an image 90 degrees
+https://www.linuxquestions.org/questions/linux-software-2/permanently-rotate-an-image-90-degrees-4175614550/
+
+I'm using Geeqie version 1.3 (the version used in Debian Stable). But I think the menues have not really changed in many years.
+
+Go to Edit -> Preferences -> Preferences. This pops up the preferences window.
+
+Then go to the Image tab. Near the bottom, you will see "Convenience". This is where you will see a couple checkboxes about autorotation using Exif information.
+
+Sorry for not being specific enough earlier...there are a lot of menus and tabs!
+ 	
+

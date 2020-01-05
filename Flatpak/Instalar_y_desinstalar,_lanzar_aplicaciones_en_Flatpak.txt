@@ -1,0 +1,54 @@
+
+
+
+
+Para Instalar 
+
+flatpak install flathub com.spotify.Client
+flatpak install flathub org.zotero.Zotero
+flatpak install flathub org.libreoffice.LibreOffice
+flatpak install flathub org.videolan.VLC
+flatpak install flathub org.kde.kdenlive
+flatpak install flathub org.gimp
+flatpak install flathub org.inkscape.Inkscape
+
+Feos:
+Scans to PDF (horrible)
+flatpak install flathub com.github.unrud.djpdf
+
+
+
+para Desinstalar
+
+flatpak uninstall com.spotify.Client
+flatpak uninstall org.zotero.Zotero
+flatpak uninstall org.libreoffice.LibreOffice
+flatpak uninstall org.videolan.VLC
+flatpak uninstall org.kde.kdenlive
+flatpak uninstall org.gimp.GIMP
+flatpak uninstall org.inkscape.Inkscape
+flatpak uninstall com.wps.Office
+
+
+PARA LANZAR
+
+flatpak run com.spotify.Client
+flatpak run org.gimp.GIMP
+flatpak run org.inkscape.Inkscape      
+flatpak run org.kde.kdenlive        
+flatpak run org.libreoffice.LibreOffice
+flatpak run org.libreoffice.LibreOffice --writer
+flatpak run org.libreoffice.LibreOffice --calc
+flatpak run org.libreoffice.LibreOffice --impress
+flatpak run org.libreoffice.LibreOffice --base
+flatpak run org.libreoffice.LibreOffice --draw
+
+
+alias inkscape="flatpak run org.inkscape.Inkscape"
+
+
+
+
+
+
+

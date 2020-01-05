@@ -1,0 +1,72 @@
+
+sudo fing -n cómo hacer funcionar
+
+wachin@Dell-Inspiron-1750:~$ sudo fing
+10:44:22 > Discovery profile: Default discovery profile
+10:44:22 > Discovery class:   data-link (data-link layer)
+10:44:22 > Discovery on:      192.168.1.0/26
+
+10:44:22 > Discovery round starting.
+10:44:23 > Discovery progress 25%
+10:44:22 > Host is up:   192.168.1.6
+           HW Address:   70:F1:A1:07:F6:78 (Liteon Technology)
+           Hostname:     Dell-Inspiron-1750
+
+10:44:23 > Host is up:   192.168.1.1
+           HW Address:   88:94:7E:F7:CD:C8
+
+10:44:23 > Host is up:   192.168.1.2
+           HW Address:   E8:3A:12:80:98:59
+
+10:44:23 > Host is up:   192.168.1.3
+           HW Address:   78:C3:E9:74:D4:6A
+
+10:44:23 > Discovery progress 50%
+10:44:24 > Discovery progress 75%
+-------------------------------------------------------------------------------
+| State | Host                              | MAC Address       | Last change |
+|-----------------------------------------------------------------------------|
+|  UP   | 192.168.1.1                       | 88:94:7E:F7:CD:C8 |             |
+|  UP   | 192.168.1.2                       | E8:3A:12:80:98:59 |             |
+|  UP   | 192.168.1.3                       | 78:C3:E9:74:D4:6A |             |
+|  UP   | 192.168.1.6                       | 70:F1:A1:07:F6:78 |             |
+-------------------------------------------------------------------------------
+
+10:44:25 > Discovery round completed in 2.904 seconds.
+10:44:25 > Network 192.168.1.0/26 has 4/4 hosts up.
+
+Nota Wachín: Ese valor 192.168.1.0/26 es el que hay que poner en -n
+
+10:44:25 > Next round starting at 10:45:22. Press Ctrl^C to exit.
+
+^C10:44:32 > Discovery stopped
+
+ASí si:
+
+ sudo fing -n 192.168.1.0/26
+
+
+
+sudo nmap -F 192.168.0.1-100 | grep MAC
+
+sudo nmap -F 192.168.1.0/26 | grep MAC
+
+sudo nmap -sP 192.168.1.0/26 | grep MAC
+
+visto en:
+Alain Kelder | Script to update nmap-mac-prefixes with latest entries from the IEEE OUI database
+http://giantdorks.org/alain/script-to-update-nmap-mac-prefixes-with-latest-entries-from-the-ieee-oui-database/
+
+
+sudo nmap -sP 192.168.1.0/26 | grep -v "Host" | tail -n +3 | tr '\n' ' ' | sed 's|Nmap|\nNmap|g' | grep "MAC Address" | cut -d " " -f5,8-15
+
+visto en
+nmap scan hosts for IP, MAC Address and device Vendor/Manufacturer | commandlinefu.com
+http://www.commandlinefu.com/commands/view/13935/nmap-scan-hosts-for-ip-mac-address-and-device-vendormanufacturer
+
+sudo nmap -F 192.168.1.0/26 | grep MAC | grep -v "Host"
+
+
+
+
+

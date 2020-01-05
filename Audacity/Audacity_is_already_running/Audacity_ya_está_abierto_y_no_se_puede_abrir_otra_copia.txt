@@ -1,0 +1,13 @@
+
+
+Audacity ya está abierto y no se puede abrir otra copia
+
+Si le aparece que Audacity ya está abiertoy no se puede abrir otra copia del programa, usted debe de borrar la carpeta:
+
+/var/tmp/audacity-<username/>
+
+
+donde "username" es el nombre de usuario de su PC
+
+Fuente: 
+http://vpswp.blogspot.com/2015/02/mengatasi-error-audacity-is-already-running.html

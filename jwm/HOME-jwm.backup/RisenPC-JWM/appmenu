@@ -1,0 +1,256 @@
+<?xml version="1.0"?>
+<JWM>
+<Menu icon="/usr/share/icons/nuvola-xfce-dark/16x16/categories/applications-accessories.png" label="Accesorios">
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/alarm-clock.png" label="Alarm Clock">alarm-clock-applet</Program>
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/16x16/apps/org.gnome.Nautilus.png" label="Archivos">nautilus --new-window </Program>
+  <Program icon="/usr/share/icons/elementary-xfce/apps/16/atom.png" label="Atom">/opt/atom/atom </Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/brightness-controller.svg" label="Brightness Controller">/usr/share/brightness-controller/init.py</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/brightness-controller-simple.png" label="Brightness Controller Simple">/usr/bin/brightness-controller-simple</Program>
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/16x16/actions/edit-find.png" label="Buscador de aplicaciones">xfce4-appfinder</Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/byobu.svg" label="Byobu Terminal">/usr/bin/x-terminal-emulator -e env TERM=xterm-256color byobu</Program>
+  <Program icon="/usr/share/icons/elementary-xfce/apps/16/catfish.png" label="Búsqueda de archivos Catfish">/usr/bin/catfish</Program>
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/16x16/apps/accessories-calculator.png" label="Calculadora de MATE">mate-calc</Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/dde-calendar.svg" label="Calendario Deepin">dde-calendar</Program>
+  <Program icon="/usr/share/icons/elementary-xfce/apps/16/applets-screenshooter.png" label="Captura de pantalla">xfce4-screenshooter</Program>
+  <Program icon="/usr/share/pixmaps/convertall/convertall.svg" label="ConvertAll">convertall</Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/deepin-calculator.svg" label="Deepin Calculator">deepin-calculator</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/gnome-disks.png" label="Discos">gnome-disks</Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/doublecmd.svg" label="Double Commander">doublecmd </Program>
+  <Program icon="/usr/share/icons/elementary-xfce/apps/16/gedit.png" label="Editor de textos">gedit </Program>
+  <Program icon="/usr/share/icons/elementary-xfce/apps/16/file-roller.png" label="Gestor de archivadores">file-roller </Program>
+  <Program icon="/usr/share/icons/elementary-xfce/apps/16/engrampa.png" label="Gestor de archivadores Engrampa">engrampa </Program>
+  <Program icon="/usr/share/icons/hicolor/32x32/apps/krename.png" label="KRename">krename -qwindowtitle "</Program>
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/16x16/apps/klipper.png" label="Klipper">klipper</Program>
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/16x16/apps/accessories-character-map.png" label="Mapa de caracteres">gucharmap</Program>
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/16x16/apps/accessories-text-editor.png" label="Mousepad">mousepad </Program>
+  <Program icon="/usr/share/icons/elementary-xfce/apps/16/onboard.png" label="Onboard">onboard</Program>
+  <Program icon="/usr/local/share/icons/peazip.png" label="PeaZip">peazip </Program>
+  <Program icon="/usr/share/pixmaps/playonlinux-script-creator.png" label="PlayOnLinux">playonlinux-script-creator</Program>
+  <Program icon="/usr/share/pixmaps/playonlinux.png" label="PlayOnLinux">playonlinux </Program>
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/16x16/apps/accessories-text-editor.png" label="Pluma">pluma </Program>
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/16x16/apps/shutter.png" label="Shutter">shutter </Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/solaar.svg" label="Solaar">solaar</Program>
+  <Program icon="/usr/share/pixmaps/speedcrunch.png" label="SpeedCrunch">speedcrunch</Program>
+  <Program icon="/usr/share/icons/spotlighter.svg" label="Spotlighter">spotlighter </Program>
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/16x16/apps/preferences-desktop-font.png" label="Tipografías">gnome-font-viewer </Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/typecatcher.svg" label="TypeCatcher">/usr/bin/typecatcher</Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/gvim.svg" label="Vim">/usr/bin/x-terminal-emulator -e vim </Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/winetricks.svg" label="Winetricks">winetricks --gui</Program>
+</Menu>
+<Menu icon="/usr/share/icons/nuvola-xfce-dark/16x16/categories/preferences-desktop.png" label="Configuración">
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/mugshot.svg" label="Acerca de mí">/usr/bin/mugshot</Program>
+  <Program icon="/usr/share/icons/elementary-xfce-dark/panel/22/blueman.png" label="Administrador Bluetooth">blueman-manager</Program>
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/16x16/apps/system-file-manager.png" label="Administrador de archivos">thunar-settings</Program>
+  <Program icon="/usr/share/icons/elementary-xfce/apps/16/xfce4-power-manager-settings.png" label="Administrador de energía">xfce4-power-manager-settings</Program>
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/16x16/apps/preferences-desktop-theme.png" label="Ajustes QT5">qt5ct</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/kdeconnect.png" label="Ajustes de KDE Connect">kcmshell5 kcm_kdeconnect</Program>
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/16x16/devices/video-display.png" label="Ajustes del monitor">lxrandr</Program>
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/16x16/categories/preferences-system.png" label="Centro de control de LADI">ladi-control-center</Program>
+  <Program icon="/usr/share/icons/elementary-xfce/apps/16/ccsm.png" label="CompizConfig Settings Manager">ccsm</Program>
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/16x16/categories/preferences-system-network.png" label="Conexiones de red">nm-connection-editor</Program>
+  <Program icon="/usr/share/icons/elementary-xfce/apps/16/onboard.png" label="Configuración de Onboard">onboard-settings</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/lightdm-gtk-greeter-settings.png" label="Configuración de la interfaz GTK+ de LightDM">lightdm-gtk-greeter-settings-pkexec</Program>
+  <Program icon="/usr/share/icons/elementary-xfce/apps/16/jockey.png" label="Controladores adicionales">/usr/bin/software-properties-gtk --open-tab=4</Program>
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/16x16/devices/drive-removable-media.png" label="Dispositivos y soportes extraíbles">thunar-volman-settings</Program>
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/16x16/devices/printer.png" label="Impresoras">system-config-printer</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/ladi-system-log.png" label="LADI Log File Viewer">ladi-system-log</Program>
+  <Program icon="/usr/share/pixmaps/nautilus-scripts-manager.svg" label="Nautilus scripts manager">nautilus-scripts-manager</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/openjdk-11.png" label="OpenJDK Java 11 Policy Tool">/usr/bin/policytool</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/openjdk-8.png" label="OpenJDK Java 8 Policy Tool">/usr/bin/policytool</Program>
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/16x16/apps/preferences-desktop-theme.png" label="Personalizar apariencia y comportamiento">lxappearance</Program>
+  <Program icon="/usr/share/pixmaps/qtconfig-qt4.png" label="Qt 4 Settings">/usr/bin/qtconfig-qt4</Program>
+  <Program icon="/usr/share/icons/elementary-xfce/apps/16/xscreensaver.png" label="Salvapantallas">xscreensaver-demo</Program>
+  <Program icon="/usr/share/icons/elementary-xfce/apps/16/software-properties.png" label="Software y actualizaciones">software-properties-gtk</Program>
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/16x16/apps/preferences-desktop-locale.png" label="Soporte de idiomas">/usr/bin/gnome-language-selector</Program>
+  <Program label="TeXdoctk">texdoctk</Program>
+</Menu>
+<Menu icon="/usr/share/icons/nuvola-xfce-dark/16x16/categories/applications-development.png" label="Desarrollo">
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/git-cola.svg" label="Git Cola">git-cola --prompt</Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/git-cola.svg" label="Git DAG">git-dag --prompt</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/meld.png" label="Meld">meld </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/gitg.png" label="gitg">gitg --no-wd </Program>
+  <Program icon="/usr/share/icons/hicolor/48x48/apps/qgit.png" label="qgit">qgit</Program>
+</Menu>
+<Menu icon="/usr/share/icons/nuvola-xfce-dark/16x16/categories/applications-graphics.png" label="Gráficos">
+  <Program icon="/usr/share/pixmaps/converseen.png" label="Converseen">converseen</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/calibre-viewer.png" label="E-book Viewer">ebook-viewer </Program>
+  <Program icon="/usr/share/pixmaps/geeqie.png" label="Geeqie">geeqie -r </Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/gromit-mpx.svg" label="Gromit-MPX">gromit-mpx --key F11 --undo-key F12</Program>
+  <Program icon="/usr/share/pixmaps/ptbatcher.png" label="Hugin Batch Processor">PTBatcherGUI </Program>
+  <Program icon="/usr/share/pixmaps/hugin.png" label="Hugin Calibrate Lens">calibrate_lens_gui</Program>
+  <Program icon="/usr/share/pixmaps/hugin.png" label="Hugin Panorama Creator">hugin </Program>
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/16x16/apps/inkscape.png" label="Inkscape">inkscape </Program>
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/16x16/apps/kruler.png" label="KRuler">kruler</Program>
+  <Program icon="/usr/share/pixmaps/key-mon.xpm" label="KeyMon">key-mon</Program>
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/16x16/apps/calligrakrita.png" label="Krita">krita </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/calibre-viewer.png" label="LRF Viewer">lrfviewer </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/lightzone.png" label="LightZone">lightzone </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/mypaint.png" label="MyPaint">mypaint </Program>
+  <Program icon="/usr/share/icons/hicolor/48x48/apps/fotoprint.png" label="PhotoPrint">photoprint </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/phototonic.png" label="Phototonic">phototonic </Program>
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/16x16/apps/gimp.png" label="Programa de manipulación de imágenes de GNU">gimp-2.10 </Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/deepin-picker.svg" label="Selector Deepin">deepin-picker</Program>
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/16x16/devices/scanner.png" label="Simple Scan">simple-scan</Program>
+  <Program icon="/usr/share/icons/elementary-xfce/apps/16/ristretto.png" label="Visor de imágenes Ristretto">ristretto </Program>
+  <Program icon="/opt/XnView/xnview.png" label="XnView Multi Platform">xnview </Program>
+</Menu>
+<Menu icon="/usr/share/icons/nuvola-xfce-dark/16x16/categories/applications-games.png" label="Juegos">
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/sgt-launcher.svg" label="Colección de puzles SGT">/usr/games/sgt-launcher</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/gnome-mines.png" label="Minas">gnome-mines</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/gnome-sudoku.png" label="Sudoku">gnome-sudoku</Program>
+</Menu>
+<Menu icon="/usr/share/icons/nuvola-xfce-dark/16x16/categories/applications-multimedia.png" label="Multimedia">
+  <Program icon="/usr/share/pixmaps/zita-at1.xpm" label="AT1">zita-at1</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/aegisub.png" label="Aegisub">aegisub </Program>
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/16x16/mimetypes/audio-x-generic.png" label="Aeolus">/usr/bin/aeolus</Program>
+  <Program icon="/usr/share/pixmaps/ardour.svg" label="Ardour5">/usr/bin/ardour5</Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/audacious.svg" label="Audacious">audacious </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/audacity.png" label="Audacity">audacity </Program>
+  <Program icon="/usr/share/pixmaps/avidemux2.6-jobs.xpm" label="Avidemux 2.6 (Jobs)">avidemux3_jobs_qt5</Program>
+  <Program icon="/usr/share/pixmaps/avidemux2.6-qt.xpm" label="Avidemux 2.6 (Qt)">avidemux3_qt5</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/brasero.png" label="Brasero">brasero </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/calf.png" label="Calf Plugin Pack for JACK">calfjackhost</Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/clementine.svg" label="Clementine">clementine </Program>
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/16x16/apps/multimedia-volume-control.png" label="Control de Volumen de PulseAudio">pavucontrol</Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/soundconverter.svg" label="Conversor de sonido">soundconverter </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/curlew.png" label="Curlew">curlew </Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/dgedit.svg" label="DGEdit">/usr/bin/dgedit</Program>
+  <Program label="Echomixer">echomixer</Program>
+  <Program label="Envy24 control">envy24control</Program>
+  <Program icon="/usr/share/pixmaps/ffmulticonverter.png" label="FF Multi Converter">ffmulticonverter</Program>
+  <Program label="FFADO Mixer">ffado-mixer</Program>
+  <Program icon="/usr/share/foo-yc20/graphics/icon.png" label="Foo YC20">foo-yc20</Program>
+  <Program icon="/usr/share/pixmaps/gmidimonitor_32x32.xpm" label="Gmidimonitor (with ALSA support)">gmidimonitor --alsa</Program>
+  <Program icon="/usr/share/pixmaps/gmidimonitor_32x32.xpm" label="Gmidimonitor (with JACK support)">gmidimonitor --jack</Program>
+  <Program label="HDAJackRetask">hdajackretask</Program>
+  <Program label="HDSPConf">hdspconf</Program>
+  <Program label="HDSPMixer">hdspmixer</Program>
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/apps/48/hexter.png" label="Hexter">jack-dssi-host hexter.so</Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/h2-icon.svg" label="Hydrogen">hydrogen </Program>
+  <Program icon="/usr/share/pixmaps/jack-keyboard.png" label="JACK Keyboard">jack-keyboard</Program>
+  <Program icon="/usr/share/pixmaps/jack-rack-icon.png" label="JACK Rack">jack-rack</Program>
+  <Program icon="/usr/share/icons/jamin.svg" label="JAMin">/usr/share/jamin/jamin-wrapper </Program>
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/16x16/apps/k3b.png" label="K3b">k3b </Program>
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/16x16/apps/kmid.png" label="KMid">kmid </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/kazam.png" label="Kazam">kazam</Program>
+  <Program icon="kdenlive" label="Kdenlive">kdenlive </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/kid3-qt.png" label="Kid3-qt">env UBUNTU_MENUPROXY=0 kid3-qt </Program>
+  <Program icon="/usr/share/pixmaps/kylin-video.png" label="Kylin Video">kylin-video </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/laditools.png" label="LADI System Tray">ladi-system-tray</Program>
+  <Program icon="/usr/share/icons/hicolor/512x512/apps/lmms.png" label="LMMS">env QT_X11_NO_NATIVE_MENUBAR=1 lmms </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/mkvtoolnix-gui.png" label="MKVToolNix GUI">mkvtoolnix-gui </Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/mediainfo.svg" label="MediaInfo">mediainfo-gui </Program>
+  <Program icon="/usr/share/pixmaps/meterbridge32x32.xpm" label="Meterbridge">/usr/bin/meterbridge -t vu alsa_pcm:playback_1 alsa_pcm:playback_2</Program>
+  <Program icon="/usr/share/pixmaps/mudita24.xpm" label="Mudita24">mudita24</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/mscore.png" label="MuseScore 2">mscore </Program>
+  <Program icon="/usr/share/pixmaps/okjicon.svg" label="OpenKJ">/usr/bin/OpenKJ</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/openlp.png" label="OpenLP">openlp </Program>
+  <Program icon="/usr/share/pixmaps/phasex.xpm" label="PHASEX">phasex</Program>
+  <Program icon="/usr/share/icons/hicolor/128x128/apps/pnmixer.png" label="PNMixer">pnmixer</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/patchage.png" label="Patchage">/usr/bin/patchage</Program>
+  <Program icon="/usr/share/icons/hicolor/48x48/apps/petri-foo.png" label="Petri-Foo">petri-foo </Program>
+  <Program icon="/usr/share/pixmaps/puredata.xpm" label="Pure Data">/usr/lib/puredata/tcl/pd-gui.tcl </Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/qmidiarp.svg" label="QMidiArp">qmidiarp </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/qasconfig.png" label="QasConfig">qasconfig</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/qashctl.png" label="QasHctl">qashctl</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/qasmixer.png" label="QasMixer">qasmixer</Program>
+  <Program icon="/usr/share/icons/hicolor/32x32/apps/qjackctl.png" label="QjackCtl">/usr/bin/qjackctl</Program>
+  <Program icon="/usr/share/icons/hicolor/32x32/apps/qmidinet.png" label="QmidiNet">qmidinet</Program>
+  <Program icon="/usr/share/pixmaps/qmidiroute_32x32.xpm" label="Qmidiroute">qmidiroute</Program>
+  <Program icon="/usr/share/icons/hicolor/32x32/apps/qsynth.png" label="Qsynth">qsynth</Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/qtractor.svg" label="Qtractor">qtractor </Program>
+  <Program icon="/usr/share/pixmaps/icono_rakarrack_128x128.png" label="Rakarrack">rakarrack</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/ladi-player.png" label="Reproductor de LADI">ladi-player</Program>
+  <Program icon="/usr/share/icons/elementary-xfce/apps/16/parole.png" label="Reproductor multimedia Parole">parole </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/vlc.png" label="Reproductor multimedia VLC">/usr/bin/vlc --started-from-file </Program>
+  <Program label="Rmedigicontrol">rmedigicontrol</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/rosegarden.png" label="Rosegarden">rosegarden </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/simplescreenrecorder.png" label="SimpleScreenRecorder">simplescreenrecorder --logfile</Program>
+  <Program icon="/usr/share/pixmaps/sooperlooper.xpm" label="SooperLooper">/usr/bin/slgui</Program>
+  <Program icon="/usr/share/pixmaps/vkeybd.xpm" label="Virtual MIDI Keyboard">vkeybd</Program>
+  <Program icon="/usr/share/pixmaps/xvidcap.png" label="XVidCap Screen Capture">xvidcap</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/stock/media/stock_xfburn.png" label="Xfburn">xfburn</Program>
+  <Program icon="/usr/share/icons/hicolor/128x128/apps/qjadeo.png" label="Xjadeo">/usr/bin/xjadeo</Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/yoshimi.svg" label="Yoshimi">yoshimi</Program>
+  <Program icon="/usr/share/pixmaps/zita-rev1.xpm" label="Zita-Rev1">zita-rev1</Program>
+  <Program icon="/usr/share/pixmaps/zita-mu1.xpm" label="Zita-mu1">zita-mu1</Program>
+  <Program icon="/usr/share/pixmaps/zynaddsubfx.svg" label="ZynAddSubFX - Alsa">zynaddsubfx -I alsa -O alsa</Program>
+  <Program icon="/usr/share/pixmaps/zynaddsubfx.svg" label="ZynAddSubFX - Jack">zynaddsubfx -I jack -O jack</Program>
+  <Program icon="/usr/share/pixmaps/zynaddsubfx.svg" label="ZynAddSubFX - OSS">zynaddsubfx -I OSS -O OSS</Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/drumkv1.svg" label="drumkv1">drumkv1_jack</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/gladish.png" label="gladish">gladish</Program>
+  <Program icon="/usr/share/pixmaps/gx_head.png" label="guitarix">guitarix</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/mkvinfo.png" label="mkvinfo">mkvinfo -g </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/mpv.png" label="mpv Media Player">mpv --player-operation-mode=pseudo-gui -- </Program>
+  <Program icon="/usr/share/pixmaps/puddletag.png" label="puddletag">puddletag </Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/samplv1.svg" label="samplv1">samplv1_jack</Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/synthv1.svg" label="synthv1">synthv1_jack</Program>
+</Menu>
+<Menu icon="/usr/share/icons/nuvola-xfce-dark/16x16/categories/applications-office.png" label="Oficina">
+  <Program icon="/usr/share/icons/gnome/16x16/apps/openoffice4-printeradmin.png" label="Administración de la impresora de OpenOffice 4.1.5">openoffice4-printeradmin</Program>
+  <Program icon="/usr/share/icons/elementary-xfce/apps/16/xfcalendar.png" label="Calendario Orage">orage </Program>
+  <Program icon="/usr/share/icons/elementary-xfce/apps/16/xfce4-dict.png" label="Diccionario">xfce4-dict</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/calibre-ebook-edit.png" label="E-book Editor">ebook-edit </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/FoxitReader.png" label="Foxit Reader">/home/wachin/opt/foxitsoftware/foxitreader/FoxitReader.sh </Program>
+  <Program icon="/usr/share/pixmaps/goldendict.png" label="GoldenDict">goldendict</Program>
+  <Program icon="/usr/share/icons/elementary-xfce/apps/16/orage_globaltime.png" label="Hora global de Orage">globaltime</Program>
+  <Program icon="/usr/share/icons/gnome/16x16/apps/openoffice4-startcenter.png" label="OpenOffice 4.1.5">openoffice4 </Program>
+  <Program icon="/usr/share/icons/gnome/16x16/apps/openoffice4-base.png" label="OpenOffice 4.1.5 Base">openoffice4 -base </Program>
+  <Program icon="/usr/share/icons/gnome/16x16/apps/openoffice4-calc.png" label="OpenOffice 4.1.5 Calc">openoffice4 -calc </Program>
+  <Program icon="/usr/share/icons/gnome/16x16/apps/openoffice4-draw.png" label="OpenOffice 4.1.5 Draw">openoffice4 -draw </Program>
+  <Program icon="/usr/share/icons/gnome/16x16/apps/openoffice4-impress.png" label="OpenOffice 4.1.5 Impress">openoffice4 -impress </Program>
+  <Program icon="/usr/share/icons/gnome/16x16/apps/openoffice4-math.png" label="OpenOffice 4.1.5 Math">openoffice4 -math </Program>
+  <Program icon="/usr/share/icons/gnome/16x16/apps/openoffice4-writer.png" label="OpenOffice 4.1.5 Writer">openoffice4 -writer </Program>
+  <Program icon="/usr/share/icons/elementary-xfce/apps/16/pdfshuffler.png" label="PDF-Shuffler">pdfshuffler </Program>
+  <Program icon="/usr/share/icons/elementary-xfce/apps/16/evince.png" label="Visor de documentos">evince </Program>
+  <Program icon="/usr/share/icons/elementary-xfce/apps/16/atril.png" label="Visor de documentos Atril">atril </Program>
+  <Program icon="/usr/share/icons/hicolor/48x48/apps/wps-office-wppmain.png" label="WPS Presentation">/usr/bin/wpp </Program>
+  <Program icon="/usr/share/icons/hicolor/48x48/apps/wps-office-etmain.png" label="WPS Spreadsheets">/usr/bin/et </Program>
+  <Program icon="/usr/share/icons/hicolor/48x48/apps/wps-office-wpsmain.png" label="WPS Writer">/usr/bin/wps </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/calibre-gui.png" label="calibre">calibre </Program>
+</Menu>
+<Menu icon="/usr/share/icons/nuvola-xfce-dark/16x16/categories/applications-other.png" label="Otras">
+  <Program label="AP Guitar Tuner 1.02">cd /home/wachin/.wine/dosdevices/c:/Program Files/Audio Phonics, Inc/AP Guitar Tuner 1.02 ; env WINEPREFIX="/home/wachin/.wine" wine-stable C:\\\\windows\\\\command\\\\start.exe /Unix /home/wachin/.wine/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/Audio\\ Phonics,\\ Inc/AP\\ Guitar\\ Tuner\\ 1.02.lnk</Program>
+  <Program icon="/usr/share/pixmaps/florence.svg" label="Florence Virtual Keyboard">florence</Program>
+</Menu>
+<Menu icon="/usr/share/icons/nuvola-xfce-dark/16x16/categories/applications-internet.png" label="Red">
+  <Program icon="/usr/share/icons/elementary-xfce/apps/16/thunderbird.png" label="Cliente de correo Thunderbird">thunderbird </Program>
+  <Program icon="/usr/share/icons/elementary-xfce/apps/16/pidgin.png" label="Cliente de mensajería de Internet Pidgin">pidgin</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/dropbox.png" label="Dropbox">dropbox start -i</Program>
+  <Program label="Hv3 Web Browser">hv3 </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/kdeconnect.png" label="Indicador de KDE Connect">kdeconnect-indicator</Program>
+  <Program icon="/usr/share/pixmaps/idjc.png" label="Internet DJ Console">/usr/bin/idjc</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/kdeconnect.png" label="KDE Connect Indicator Settings">indicator-kdeconnect-settings</Program>
+  <Program icon="/usr/share/icons/elementary-xfce/apps/16/chromium-browser.png" label="Navegador web Chromium">chromium-browser </Program>
+  <Program icon="/usr/share/icons/elementary-xfce/apps/16/firefox.png" label="Navegador web Firefox">firefox </Program>
+  <Program label="Telegram Desktop">/home/wachin/Aplicaciones-Linux/Telegram/Telegram/Telegram -- </Program>
+  <Program icon="/usr/share/icons/elementary-xfce/apps/16/transmission.png" label="Transmission">transmission-gtk </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/vivaldi.png" label="Vivaldi">/usr/bin/vivaldi-stable </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/org.gnome.Epiphany.png" label="Web">epiphany </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/youtube-dl-gui.png" label="YouTube DL GUI">youtube-dl-gui</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/uget-icon.png" label="uGet">env GDK_BACKEND=x11 uget-gtk </Program>
+</Menu>
+<Menu icon="/usr/share/icons/nuvola-xfce-dark/16x16/categories/applications-system.png" label="Sistema">
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/16x16/apps/system-software-update.png" label="Actualización de software">/usr/bin/update-manager</Program>
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/128x128/apps/Thunar.png" label="Cambio de nombre en masa de Thunar">/usr/lib/i386-linux-gnu/Thunar/ThunarBulkRename </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/ca.desrt.dconf-editor.png" label="Editor de dconf">dconf-editor</Program>
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/128x128/apps/Thunar.png" label="Gestor de archivos Thunar">thunar </Program>
+  <Program icon="/usr/share/icons/elementary-xfce/apps/16/synaptic.png" label="Gestor de paquetes Synaptic">synaptic-pkexec</Program>
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/16x16/apps/utilities-system-monitor.png" label="Gestor de tareas">xfce4-taskmanager</Program>
+  <Program icon="/usr/share/icons/elementary-xfce/places/16/gtk-network.png" label="Gigolo">gigolo</Program>
+  <Program icon="/usr/share/icons/elementary-xfce/apps/16/time-admin.png" label="Hora y fecha">time-admin</Program>
+  <Program icon="/usr/share/icons/elementary-xfce/mimes/16/gnome-mime-application-x-deb.png" label="Instalador de paquetes GDebi">gdebi-gtk </Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/kdeconnect.png" label="KDE Connect Indicator">indicator-kdeconnect</Program>
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/16x16/apps/kwalletmanager.png" label="KWalletManager">kwalletmanager5 </Program>
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/16x16/apps/utilities-terminal.png" label="Konsole">konsole</Program>
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/16x16/apps/utilities-system-monitor.png" label="Monitor del sistema">gnome-system-monitor</Program>
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/16x16/categories/preferences-system-network.png" label="Red">network-admin</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/org.gnome.Software.png" label="Software">gnome-software </Program>
+  <Program icon="/usr/share/icons/nuvola-xfce-dark/16x16/apps/utilities-terminal.png" label="Terminal de Xfce">xfce4-terminal</Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/xterm-color.svg" label="UXTerm">uxterm</Program>
+  <Program icon="/usr/share/icons/hicolor/16x16/apps/ubuntustudio-controls.png" label="Ubuntu Studio Controls">ubuntustudio-controls-pkexec</Program>
+  <Program icon="/usr/share/icons/elementary-xfce/apps/16/config-users.png" label="Usuarios y grupos">users-admin</Program>
+  <Program icon="/usr/share/icons/elementary-xfce/apps/16/virtualbox.png" label="VirtualBox">VirtualBox </Program>
+  <Program icon="/usr/share/icons/hicolor/scalable/apps/xterm-color.svg" label="XTerm">xterm</Program>
+</Menu>
+</JWM>

@@ -1,0 +1,20 @@
+
+Para compilar la biblioteca FreeType en Ubuntu 18.04 - Base de datos y artículos de Blog Sql
+https://ywnz.com/linuxjc/2365.html
+
+https://download.savannah.gnu.org/releases/freetype/freetype-2.9.1.tar.gz
+./configure
+make
+sudo su
+make install
+
+
+
+freetype-config --help
+
+Para ver qué versión tengo instalada:
+
+freetype-config --ftversion
+
+
+

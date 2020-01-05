@@ -1,0 +1,15 @@
+
+
+proyectos
+/home/wachin/.var/app/org.kde.kdenlive/cache/kdenlive/sin nombre.mp4
+
+scripts
+/home/wachin/.var/app/org.kde.kdenlive/cache/kdenlive/scripts/Fenix Vs Atletico.sh
+
+En estos lugares hay que guardarlos, no en documentos
+
+y cuando uno procesa los archivos aquí se guardan:
+
+/home/wachin/.var/app/org.kde.kdenlive/cache/kdenlive
+
+

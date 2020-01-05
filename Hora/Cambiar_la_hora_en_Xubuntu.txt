@@ -1,0 +1,11 @@
+
+Cambiar la hora en UbuntuStudio, Xubuntu
+
+poner en la terminal:
+
+time-admin 
+
+y seguir los pasos, al final dar clic en el botón actualizar
+
+[SOLVED] how can i change the time on xubuntu
+http://ubuntuforums.org/showthread.php?t=1858354

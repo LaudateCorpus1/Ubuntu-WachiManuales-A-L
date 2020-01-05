@@ -1,0 +1,6 @@
+
+
+copie el archivo icons.svg a:
+
+
+.config/inkscape/icons/

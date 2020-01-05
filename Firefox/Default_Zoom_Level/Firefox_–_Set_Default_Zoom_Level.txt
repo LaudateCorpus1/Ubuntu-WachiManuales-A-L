@@ -1,0 +1,23 @@
+
+
+
+Firefox – Set Default Zoom Level
+https://situsnya.wordpress.com/2014/11/14/firefox-set-default-zoom-level/
+
+Posted on November 14, 2014 by Remo	
+ 
+
+In 
+
+about:config 
+
+set the value of 
+
+layout.css.devPixelsPerPx
+
+to your prefered value, the default value is -1 (I use 1.25 )
+
+******
+Wachín
+******
+yo uso 1.10

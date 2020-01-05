@@ -1,0 +1,23 @@
+
+
+
+1ro le bajé -1,5 semitono a todo
+
+parto en dos el audio (corto y pego allí mismo la mitad)
+
+a la 1er parte  cambio de escala de tiempo/tono en cambio de tono inicial -1 y final 2
+
+a la 2da. parte  cambio de escala de tiempo/tono en cambio de tono inicial 2 y final -1
+
+luego a la 1ra. parte:
+
+a la 1er parte  cambio de escala de tiempo/tono en "Cambio de ritmo inicial": -13 y final 5
+
+aplico el efecto
+
+luego a la 2da. parte:
+
+a la 2da. parte  cambio de escala de tiempo/tono en "Cambio de ritmo inicial": 5 y final -13
+
+
+ 

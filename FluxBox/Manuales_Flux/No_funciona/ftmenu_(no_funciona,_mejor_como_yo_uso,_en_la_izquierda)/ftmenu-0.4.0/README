@@ -1,0 +1,17 @@
+Fluxbox Tray Menu
+
+If you want a fast way to reach your Fluxbox menus when you're using all your screen, your problems are over.
+Now you can use the Fluxbox Tray Menu to put a icon on your toolbar, and when clicking with the left button, your Fluxbox menus will appear!
+It's very simple to use.
+
+Download the sources, install it with
+
+    ./configure
+    make
+    make install
+
+insert the icon reference to it, using your Fluxbox menu file, as
+
+    [begin] (TaQ's box) </home/taq/icons/fb.xpm> 
+
+execute the ftmenu file or put it in your .xinitrc file, and it's done. :-) 

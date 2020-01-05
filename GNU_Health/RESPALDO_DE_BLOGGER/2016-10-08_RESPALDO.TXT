@@ -1,0 +1,153 @@
+<span style="color: red; font-size: x-large;">EN CONSTRUCCIÓN</span><br />
+<b style="color: #252525; font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif; font-size: 14px; line-height: 22.4px;"><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span></b>
+<b style="color: #252525; font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif; font-size: 14px; line-height: 22.4px;"><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">TURORIAL HECHO EN UBUNTU STUDIO 16.04&nbsp;</span></b><br />
+<div style="background-color: white; color: #252525; font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif; font-size: 14px; line-height: 22.4px; margin-bottom: 0.5em; margin-top: 0.5em;">
+<div style="text-align: justify;">
+<b style="line-height: 22.4px;"><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><span style="font-weight: normal; line-height: 22.4px;"><a href="http://ubuntustudio.org/" style="color: #c82000; text-decoration: none;" target="_blank">UbuntuStudio</a>&nbsp;usa los&nbsp;<a href="https://es.wikipedia.org/wiki/Sistema_de_gesti%C3%B3n_de_paquetes" style="color: #c82000; text-decoration: none;" target="_blank">Paquetes</a>&nbsp;de&nbsp;<a href="http://www.ubuntu.com/" style="color: #c82000; text-decoration: none;" target="_blank">Ubuntu</a>&nbsp;para poder existir (</span><span style="font-size: x-small; font-weight: normal; line-height: normal;"><span style="font-size: 14px; line-height: 22.4px;"><a href="http://packages.ubuntu.com/" style="color: #c82000; text-decoration: none;">http://packages.ubuntu.com/</a></span></span><span style="font-weight: normal; line-height: 22.4px;">), por lo tanto este tutorial debe funcionar para todos los&nbsp;<a href="http://www.ubuntu.com/about/about-ubuntu/flavours" style="color: #c82000; text-decoration: none;">derivados oficiales de Ubuntu</a>.</span><span style="font-weight: normal; line-height: 22.4px;">&nbsp;Así que aquí en este tutorial mencionaré en termino general la instalación para Ubuntu 16.04 porque es en el que lo he testeado y me ha funcionado (debería funcionar para otras versiones pues el <a href="https://en.wikibooks.org/wiki/GNU_Health/Installation#Installing_GNU_Health_on_GNU.2FLinux_and_FreeBSD" target="_blank">tutorial</a> no especifica ninguna versión en especial)</span></span></b></div>
+</div>
+<div style="background-color: white; color: #252525; font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif; font-size: 14px; line-height: 22.4px; margin-bottom: 0.5em; margin-top: 0.5em;">
+<div style="text-align: justify;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">Este tutorial además está hecho para que usted pueda adaptar la instalación a otra&nbsp;<a href="https://es.wikipedia.org/wiki/Categor%C3%ADa:Distribuciones_basadas_en_Ubuntu" style="color: #c82000; text-decoration: none;" target="_blank">Distribución basada en Ubuntu</a>&nbsp;como puede ser LinuxMint, pero no se si pueda funcionar bien, tal vez funcione tal vez no porque no he podido testearla. (Vea la lista de las otras distribuciones <a href="https://en.wikibooks.org/wiki/GNU_Health/Installation#Operating_System_requirements" target="_blank">aquí</a>)</span></div>
+</div>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><b><br /></b></span><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><b>1.- INSTALANDO DEPENDENCIAS DE GNU HEALTH&nbsp;<span style="color: red;">[1]</span></b></span><br />
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><b><br /></b></span>
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><b>Nota: </b>Esta instalación tiene una modalidad especial, primero tiene que convertirse en root.</span><br />
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">Abra una la terminal y ponga este comando:</span><br />
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><span style="font-family: &quot;verdana&quot; , sans-serif;">
+</span>
+</span><br />
+<pre class="linux-code" style="background: url(&quot;https://lh3.googleusercontent.com/-E2WZ-k5ArbU/VnnAeX-_qmI/AAAAAAAABDU/i1aaUUYLZh8/s540-Ic42/lincodewachin.gif&quot;) 0px 0px no-repeat scroll rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; color: #616161; font-size: 14.85px; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 28px 10px 10px; z-index: 10000;"><code><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">sudo -s</span></code></pre>
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">ponga su contraseña y deberá quedar como root, mire esta imagen:</span><br />
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><a href="http://2.bp.blogspot.com/-sWb7r9yXQPs/V_cGdvoGeSI/AAAAAAAAEkk/CEKFZFcpjbUUpTTd6d8a-dNXf4t0CpJkACK4B/s1600/01%2Bhacerse%2Broot.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-sWb7r9yXQPs/V_cGdvoGeSI/AAAAAAAAEkk/CEKFZFcpjbUUpTTd6d8a-dNXf4t0CpJkACK4B/s1600/01%2Bhacerse%2Broot.png" /></a></span>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"></span></span><br />
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">Los siguientes son los paquetes necesarios para la instalación en Ubuntu. Copie todo este comando y peguelo allí mismo</span><br />
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><span style="font-family: &quot;verdana&quot; , sans-serif;">
+</span>
+</span><br />
+<pre class="linux-code" style="background: url(&quot;https://lh3.googleusercontent.com/-E2WZ-k5ArbU/VnnAeX-_qmI/AAAAAAAABDU/i1aaUUYLZh8/s540-Ic42/lincodewachin.gif&quot;) 0px 0px no-repeat scroll rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; color: #616161; font-size: 14.85px; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 28px 10px 10px; z-index: 10000;"><code><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">apt-get install build-essential python-dev python-pip \
+    libxml2-dev libxslt1-dev libldap2-dev libsasl2-dev python-ldap bsdtar \
+    python-imaging python2.7-cracklib postgresql postgresql-server-dev-all libjpeg-dev</span></code></pre>
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><b>Nota: </b>Este comando tiene un formato especial, sugiero no tenerlo en un bloque de notas porque después no le va a funcionar (si lo copia y lo pega de ahí a la terminal)</span><br />
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span>
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<br /></div>
+<div style="text-align: left;">
+<iframe allowfullscreen="" class="YOUTUBE-iframe-video" data-thumbnail-src="https://i.ytimg.com/vi/Ep-Kp1p0M5U/0.jpg" frameborder="0" height="266" src="https://www.youtube.com/embed/Ep-Kp1p0M5U?feature=player_embedded" width="320"></iframe></div>
+<br />
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span>
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span>
+<br />
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span>
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><b>2.- CREAR UN USUARIO DEDICADO PARA GNU HEALTH <span style="color: red;">[2]</span></b></span><br />
+<div style="text-align: justify;">
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">En los tutoriales que he consultado está la manera de crear los usuarios desde la terminal, pero yo quiero que usted cree un usuario desde la interfaz de usuario porque tiene sus ventajas. También le comento que el usuario creado puede tener cualquier nombre <b><span style="color: red;">[3]</span></b>, lo que importa es que usted debe tener en cuenta el nombre exacto porque hay que hacer unos cambios con ese nombre en algunos lados. Entonces debes saber esto:</span><br />
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span>
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">- El usuario a crear puede tener cualquier nombre</span><br />
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">- Ponle una contraseña minimo 8 digitos, anota la contraseña</span><br />
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">- El tipo de cuenta debes ponerla como <b>Administrador </b>(no te olvides)</span><br />
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">- Si fallaste la instalación y ese usuario ya no sirve, puedes crear otro e intentar otra vez</span><br />
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span>
+<br />
+<div class="separator" style="clear: both; text-align: left;">
+<iframe allowfullscreen="" class="YOUTUBE-iframe-video" data-thumbnail-src="https://i.ytimg.com/vi/0SV_VVViCOM/0.jpg" frameborder="0" height="266" src="https://www.youtube.com/embed/0SV_VVViCOM?feature=player_embedded" width="320"></iframe></div>
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span></div>
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span>
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><b>3.-&nbsp;VERIFICANDO EL MÉTODO DE AUTENTIFICACIÓN DE POSTGRESQL&nbsp;</b><b><span style="color: red;">[4]</span></b></span>
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">Según su página web <a href="https://www.postgresql.org/" target="_blank">PostgreSQL</a> es la más avanzada base de datos open source. En el sistema operativo Ubuntu el método de autentificación no es el adecuado según el tuturial en inglés por eso hay que cambiarlo al correcto. Para hacerlo hay que buscar el archivo: "</span><b style="background-color: white; color: #252525; font-family: sans-serif; font-size: 14px;"><tt style="font-family: monospace, Courier;">pg_hba.conf"&nbsp;</tt></b><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">en el sistema. Para hacerlo poner en la terminal este comando estando como root (en la misma terminal de enantes, y si la cerró ponga otra vez "sudo -s"):</span><br />
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span>
+<br />
+<div class="separator" style="clear: both; text-align: left;">
+<iframe allowfullscreen="" class="YOUTUBE-iframe-video" data-thumbnail-src="https://i.ytimg.com/vi/IhYqmhfr-7k/0.jpg" frameborder="0" height="266" src="https://www.youtube.com/embed/IhYqmhfr-7k?feature=player_embedded" width="320"></iframe></div>
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span>
+<br />
+<pre class="linux-code" style="background: url(&quot;https://lh3.googleusercontent.com/-E2WZ-k5ArbU/VnnAeX-_qmI/AAAAAAAABDU/i1aaUUYLZh8/s540-Ic42/lincodewachin.gif&quot;) 0px 0px no-repeat scroll rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; color: #616161; font-family: &quot;UbuntuBeta Mono&quot;, &quot;Ubuntu Mono&quot;, &quot;Courier New&quot;, Courier, monospace; font-size: 14.85px; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 28px 10px 10px; z-index: 10000;"><code>su - postgres -c "psql -t -P format=unaligned -c 'show hba_file'"</code></pre>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">A mi el resultado me da:</span><br />
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><a href="http://4.bp.blogspot.com/-6BT9-ynj-C0/V_hZYPVB0TI/AAAAAAAAElQ/2aUqL186ePcEL3vjibpz48lT6iWSW6J8QCK4B/s1600/02%2Bmetodo%2Bde%2Bautentificaci%25C3%25B3n%2Bpara%2BPostgreSQL.png" imageanchor="1"><img border="0" height="182" src="https://4.bp.blogspot.com/-6BT9-ynj-C0/V_hZYPVB0TI/AAAAAAAAElQ/2aUqL186ePcEL3vjibpz48lT6iWSW6J8QCK4B/s640/02%2Bmetodo%2Bde%2Bautentificaci%25C3%25B3n%2Bpara%2BPostgreSQL.png" width="640" /></a></span><br />
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">Aquí copio el resultado:</span><br />
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"></span><br />
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">/etc/postgresql/9.5/main/pg_hba.conf</span><br />
+<div>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span></div>
+<div>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">A esto ahora debo añadirle "gedit" (debe tenerlo instalado, o sino otro editor de texto), debe quedar así y eso pegarlo en la terminal:</span></div>
+<div>
+<pre class="linux-code" style="background: url(&quot;https://lh3.googleusercontent.com/-E2WZ-k5ArbU/VnnAeX-_qmI/AAAAAAAABDU/i1aaUUYLZh8/s540-Ic42/lincodewachin.gif&quot;) 0px 0px no-repeat scroll rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 28px 10px 10px; z-index: 10000;"><span style="color: #616161;"><span style="font-size: 14.85px;">gedit /etc/postgresql/9.5/main/pg_hba.conf</span></span></pre>
+</div>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">al ejecutarlo aparecerá gedit con el siguiente archivo, ahora debe dirigirse hasta el final y allí hay que reemplazar lo que le muestro en la siguiente imagen, reemplazarlo con la palabra "trust</span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">":</span><br />
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><a href="http://3.bp.blogspot.com/-LWvNLUw2rkw/V_hbRm1KpyI/AAAAAAAAElc/ze-vRHwECRYjMZBnlgiK_yLpsRU1xesIwCK4B/s1600/1_001.png" imageanchor="1"><img border="0" height="428" src="https://3.bp.blogspot.com/-LWvNLUw2rkw/V_hbRm1KpyI/AAAAAAAAElc/ze-vRHwECRYjMZBnlgiK_yLpsRU1xesIwCK4B/s640/1_001.png" width="640" /></a></span><br />
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">Debe quedarle así:</span><br />
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><a href="http://4.bp.blogspot.com/-f1NBg-9XBEE/V_hd6hgz6LI/AAAAAAAAEl0/asojMypGY3sD-MCWwGe5mEbWoJSRl5FYACK4B/s1600/03%2Bmetodo%2Bde%2Bautentificaci%25C3%25B3n%2Bpara%2Btrust.png" imageanchor="1"><img border="0" height="414" src="https://4.bp.blogspot.com/-f1NBg-9XBEE/V_hd6hgz6LI/AAAAAAAAEl0/asojMypGY3sD-MCWwGe5mEbWoJSRl5FYACK4B/s640/03%2Bmetodo%2Bde%2Bautentificaci%25C3%25B3n%2Bpara%2Btrust.png" width="640" /></a></span><br />
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">Listo, ahora guárdelo.</span><br />
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">(Por un caso se pregunte. Esto sirve para todos los usuarios)</span><br />
+<br />
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><b>3.2 CREANDO LA BASE DE DATOS PARA EL NUEVO USUARIO CREADO</b></span><b style="font-family: arial, helvetica, sans-serif;"><span style="color: red;">[3.2]</span></b><br />
+<span style="color: red; font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><i>Lo siento, me estaba pasando por alto este paso (es es el problema, son tantos pasos que uno se puede equivocar y si uno no pone uno en la secuencia que es luego no funciona, ojo), pero aquí lo añado, no hay ningún problema.</i></span><br />
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">El siguiente comando cambia el usuario de administración postgres y da permisos a tu nuevo administrador de gnuhealth (en el nuevo usuario creado, ojo)</span><br />
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">Si esta en la misma terminal abierta como root bien, y sino abra una terminal y hagase usuario root con "sudo -s"</span><br />
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span>
+<br />
+<div class="separator" style="clear: both; text-align: left;">
+<iframe allowfullscreen="" class="YOUTUBE-iframe-video" data-thumbnail-src="https://i.ytimg.com/vi/QFWdK5F2-7o/0.jpg" frameborder="0" height="266" src="https://www.youtube.com/embed/QFWdK5F2-7o?feature=player_embedded" width="320"></iframe></div>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span>
+<br />
+<pre class="linux-code" style="background: url(&quot;https://lh3.googleusercontent.com/-E2WZ-k5ArbU/VnnAeX-_qmI/AAAAAAAABDU/i1aaUUYLZh8/s540-Ic42/lincodewachin.gif&quot;) 0px 0px no-repeat scroll rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; color: #616161; font-family: &quot;UbuntuBeta Mono&quot;, &quot;Ubuntu Mono&quot;, &quot;Courier New&quot;, Courier, monospace; font-size: 14.85px; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 28px 10px 10px; z-index: 10000;"><code>su - postgres -c "createuser --createdb --no-createrole --no-superuser gnuehalth4"</code></pre>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"></span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><b>Nota: </b>Como se podrán dar cuenta al momento de crear el nuevo usuario no le puse el nombre como era, sino "gnuehalth4" y así fue creado, habrá que poner así ese usuario para que funcione. A la final mejor que me equivoqué ya que habrá mucho más atención para este punto tan importante pues como explicaba si la instalación no les funciona por algun error podrán crear otro usuario y aquí deberán ponerle el nombre de ese usuario.</span><br />
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span>
+<b><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">4.- CERRAR SESIÓN Y ENTRAR EN LA SESIÓN DEL NUEVO USUARIO CREADO</span></b><br />
+<br />
+<div class="separator" style="clear: both; text-align: left;">
+<iframe allowfullscreen="" class="YOUTUBE-iframe-video" data-thumbnail-src="https://i.ytimg.com/vi/JacwZx0nLhQ/0.jpg" frameborder="0" height="266" src="https://www.youtube.com/embed/JacwZx0nLhQ?feature=player_embedded" width="320"></iframe></div>
+<br />
+<br />
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><b>5.- INSTALANDO GNUHEALTH EN EL NUEVO USUARIO CREADO&nbsp;</b></span><b style="font-family: arial, helvetica, sans-serif;"><span style="color: red;">[3]</span></b><br />
+<b style="font-family: arial, helvetica, sans-serif;"><span style="color: red;"><br /></span></b>
+<b style="font-family: arial, helvetica, sans-serif;"><span style="color: red;">ADVERTENCIA, PARA ESTE PASO NO DEBE USAR EL USUARIO ROOT SINO EL NORMAL, SINO SE DAÑA LA INSTALACIÓN</span></b><br />
+<b style="font-family: arial, helvetica, sans-serif;"><span style="color: red;"><br /></span></b>
+<div class="separator" style="clear: both; text-align: left;">
+<iframe width="320" height="266" class="YOUTUBE-iframe-video" data-thumbnail-src="https://i.ytimg.com/vi/f0t0EkhGl3U/0.jpg" src="https://www.youtube.com/embed/f0t0EkhGl3U?feature=player_embedded" frameborder="0" allowfullscreen></iframe></div>
+<b style="font-family: arial, helvetica, sans-serif;"><span style="color: red;"><br /></span></b>
+<b style="font-family: arial, helvetica, sans-serif;"><span style="color: red;"><br /></span></b>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">Copie uno por uno estos cuatro comandos y peguelos en una terminal:</span><br />
+<pre class="linux-code" style="background: url(&quot;https://lh3.googleusercontent.com/-E2WZ-k5ArbU/VnnAeX-_qmI/AAAAAAAABDU/i1aaUUYLZh8/s540-Ic42/lincodewachin.gif&quot;) 0px 0px no-repeat scroll rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; color: #616161; font-family: &quot;UbuntuBeta Mono&quot;, &quot;Ubuntu Mono&quot;, &quot;Courier New&quot;, Courier, monospace; font-size: 14.85px; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 28px 10px 10px; z-index: 10000;"><code>wget http://ftp.gnu.org/gnu/health/gnuhealth-latest.tar.gz
+tar xzf gnuhealth-latest.tar.gz
+cd gnuhealth-*
+./gnuhealth-setup install</code></pre>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">Al finalizar la instalación el comando descargará Tryton y cuando esté completa su instalación le pedirá ponerle <b>contraseña</b>, póngale la misma que le puso a su usuario creado (que fue minima de 8 caracteres -esto porque después no la acepta)</span><br />
+<br />
+<span style="background-color: white; color: #252525; font-family: sans-serif; font-size: 14px;">Ahora según los manuales hay que habilitar el entorno BASH para el usuario gnuhealth</span><br />
+<span style="background-color: white; color: #252525; font-family: sans-serif; font-size: 14px;"><br /></span>
+<br />
+<pre class="linux-code" style="background: url(&quot;https://lh3.googleusercontent.com/-E2WZ-k5ArbU/VnnAeX-_qmI/AAAAAAAABDU/i1aaUUYLZh8/s540-Ic42/lincodewachin.gif&quot;) 0px 0px no-repeat scroll rgb(231, 232, 233); border-color: rgb(214, 73, 55); border-style: solid; border-width: 1px 1px 1px 20px; color: #616161; font-family: &quot;UbuntuBeta Mono&quot;, &quot;Ubuntu Mono&quot;, &quot;Courier New&quot;, Courier, monospace; font-size: 14.85px; line-height: 22.4px; margin: 10px; max-height: 500px; min-height: 16px; overflow: auto; padding: 28px 10px 10px; z-index: 10000;"><code>source $HOME/.gnuhealthrc</code></pre>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">Listo por este lado</span><br />
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><br /></span>
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">6.-&nbsp;</span><br />
+<br />
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><span style="font-family: &quot;verdana&quot; , sans-serif;"><br /></span>
+<span style="font-family: &quot;verdana&quot; , sans-serif;"><b>CONSULTAS:</b></span></span><br />
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><b><br /></b></span><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><span style="color: red;"><b>[1]</b></span> Dependencias para Ubuntu</span></span><br />
+<a href="https://en.wikibooks.org/wiki/GNU_Health/Operating_System-Specific_Notes#Ubuntu"><span style="color: black; font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">https://en.wikibooks.org/wiki/GNU_Health/Operating_System-Specific_Notes#Ubuntu</span></a><br />
+<br />
+<span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><span style="color: red;"><b>[2]</b></span> Creating the Operating System User</span><br />
+<a href="https://en.wikibooks.org/wiki/GNU_Health/Installation#Creating_the_Operating_System_User">https://en.wikibooks.org/wiki/GNU_Health/Installation#Creating_the_Operating_System_User</a><br />
+<br />
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><b><span style="color: red;">[3]</span></b>&nbsp;</span><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">GNU-HEALTH Installation Tutorial</span><br />
+<span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;"><a href="https://www.youtube.com/watch?v=dbl_7YmP_qI">https://www.youtube.com/watch?v=dbl_7YmP_qI</a></span><br />
+<br />
+<b style="font-family: arial, helvetica, sans-serif;"><span style="color: red;">[3.2]&nbsp;</span></b><span style="font-family: &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">Creating the Database User</span><br />
+<a href="https://en.wikibooks.org/wiki/GNU_Health/Installation#Creating_the_Database_User"><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">https://en.wikibooks.org/wiki/GNU_Health/Installation#Creating_the_Database_User</span></a><br />
+<br />
+<b style="font-family: arial, helvetica, sans-serif;"><span style="color: red;">[4]&nbsp;</span></b><span style="font-family: &quot;helvetica neue&quot; , &quot;arial&quot; , &quot;helvetica&quot; , sans-serif;">Verify PostgreSQL authentication method</span><br />
+<a href="https://en.wikibooks.org/wiki/GNU_Health/Installation#Verify_PostgreSQL_authentication_method">https://en.wikibooks.org/wiki/GNU_Health/Installation#Verify_PostgreSQL_authentication_method</a><br />
+<br />

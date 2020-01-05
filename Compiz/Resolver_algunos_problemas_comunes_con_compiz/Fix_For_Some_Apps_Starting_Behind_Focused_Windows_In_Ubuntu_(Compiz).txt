@@ -1,0 +1,7 @@
+
+
+Fix For Some Apps Starting Behind Focused Windows In Ubuntu (Compiz)
+http://www.webupd8.org/2015/11/fix-for-some-apps-starting-behind.html
+
+
+pulsando el botón "Abrir la carpeta que contiene" en el menú de descargas de Firefox, el gestor de archivos aparece detrás de la ventana enfocada; la activación de aplicaciones a través de los indicadores no siempre trae a primer plano, por ejemplo las ventanas de chat Pidgin, el gestor de archivos abre a través de la "Abrir la carpeta de Dropbox" elemento de menú Dropbox AppIndicator, Rhythmbox desde el menú de sonido de Ubuntu, etc .; si ya hay una ventana de rodillos archivo abierto (Gestor de archivos, un trabajo de compresión / extracción, etc.), la segunda ventana se abre no está enfocado.

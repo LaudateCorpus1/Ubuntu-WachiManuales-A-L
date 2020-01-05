@@ -1,0 +1,13 @@
+http://linuxdeepin.hostingxtreme.com/pool/main/k/kde-thumbnailer-msoole/ 
+
+visto en:
+KDE MS Office OLE Document Thumbnailer KDE-Apps.org
+http://kde-apps.org/content/show.php/KDE+MS+Office+OLE+Document+Thumbnailer?content=148781
+
+Previsualizador de documentos MS Office OLE en KDE - KDE Blog
+http://www.kdeblog.com/kde-ms-office-ole-document-thumbnailer.html
+
+informacion importante:
+
+Word 2010: Save Documents to Display with Thumbnail Picture | a Tech-Recipes Tutorial
+http://www.tech-recipes.com/rx/7425/word-2010-save-documents-to-display-with-thumbnail-picture/

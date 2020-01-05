@@ -1,0 +1,10 @@
+
+
+Atajos de teclado Inkscape
+
+Seleccionar atajo por defecto F1
+
+está en:
+Edicion/Preferencias/Contexto/Seleccionar
+
+le puse el atajo Atl+1

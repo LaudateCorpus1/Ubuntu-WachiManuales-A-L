@@ -1,0 +1,17 @@
+
+
+/usr/share/fluxbox/styles/
+
+/usr/share/fluxbox/styles/ubuntu-light
+
+sudo gedit /usr/share/fluxbox/styles/ubuntu-light
+
+allí a la línea:
+
+menu.frame.font:				Ubuntu-10:bold
+
+editarla y dejarla así:
+
+menu.frame.font:				Ubuntu-12
+
+guardar y cerrar

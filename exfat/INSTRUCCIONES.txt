@@ -1,0 +1,3 @@
+Abre un terminal y escribe:
+
+sudo apt-get install exfat-fuse exfat-utils 

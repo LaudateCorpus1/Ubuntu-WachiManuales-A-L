@@ -1,0 +1,3 @@
+
+
+- Desde Android se puede dar clic en el navegador web del celular y compartir la página a KDE Connect y se abrirá en el navegador web que uno esté usando en el linux 

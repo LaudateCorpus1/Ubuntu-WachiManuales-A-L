@@ -1,0 +1,4 @@
+
+
+1 en Android verficar que kdeconnect tiene permisos de usar el Almacenamiento
+2 en Android si es la segunda o tercera o más veces que lo instalamos o si hemos formateado el teléfono y lo tenemos configurado para que Android retenga todas nuestras configuraciones lo más recomendable es borrar los Datos de la aplicación KDEconnect en Aplicaciones de Android allí buscar esa opción

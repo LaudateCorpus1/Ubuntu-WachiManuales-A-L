@@ -1,0 +1,20 @@
+Pasale la escoba a Ubuntu ( y otras distros también) - Taringa!
+http://www.taringa.net/posts/info/1137895/Pasale-la-escoba-a-Ubuntu-y-otras-distros-tambien.html
+
+Pasale la escoba a Ubuntu ( y otras distros también)
+
+
+Siempre viene bien limpiar toda la basura que vá quedando de tanto instalar/desinstalar 
+
+Pasale la escoba a Ubuntu ( y otras distros también)
+
+
+Acciones: 
+1- Terminal 
+
+* Limpiar cache de aplicaciones instaladas: sudo apt-get clean 
+* Limpiar aplicaciones no instaladas: sudo apt-get autoclean 
+* Limpiar posibles dependencias de aplicaciones desinstaladas: sudo apt-get autoremove
+
+Ubuntu
+

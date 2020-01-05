@@ -1,0 +1,17 @@
+
+En los siguientes administradores de archivos:
+
+nautilus
+thunar
+caja
+nemo
+pcman-fm
+
+se puede ver los archivos ocultos aplastando la combinación de teclas "Ctrl + H"
+
+pero si usted usa dolphin4 debe aplastar la combinación de teclas "Alt + ."
+
+
+Proyecto Risen iceWM
+Att: Washington Indacochea Delgado (Wachín) 
+2018

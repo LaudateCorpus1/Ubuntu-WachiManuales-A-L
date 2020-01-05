@@ -1,0 +1,18 @@
+
+
+https://ftp.mozilla.org/pub/firefox/releases/
+
+Ejemplo Firefox 51
+https://ftp.mozilla.org/pub/firefox/releases/51.0/linux-i686/es-ES/
+
+
+Extensiones:
+
+http://legacycollector.org/firefox-addons/
+
+
+Hide Navigation Bar
+https://legacycollector.org/firefox-addons/8769/index.html
+
+
+

@@ -1,0 +1,9 @@
+
+ Hide Navigation Bar 1.42 Requires Restart
+by Jay Baldwin
+
+Hide Navigation Bar
+https://legacycollector.org/firefox-addons/8769/index.html
+
+En los complementos de Firefox buscar esta aplicación y en sus opciones poner un atajo de teclado (yo le puse la tecla a la izquierda del 1), para ello dar clic en el botón "Choose key code" y allí dar clic en el botón Aceptar y de allí aplastar la tecla que uno quiera
+

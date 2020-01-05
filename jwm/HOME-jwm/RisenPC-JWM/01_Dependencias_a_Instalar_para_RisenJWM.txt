@@ -1,0 +1,163 @@
+ 
+	│▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+	│Proyecto Resucitar PC de bajos recursos con JWM          │
+	│                  "RisenPC JWM"                          │
+	│  script por Washington Indacochea Delgado (Wachín)      │
+	│       E-Mail: wachin.id@gmail.com en Ecuador            │
+	│   http://facilitarelsoftwarelibre.blogspot.com/         │
+	│     Licencia Pública General de GNU version 2           │    
+	│  En español: http://es.tldp.org/Otros/gples/gples.html  │
+	│  en inglés: https://www.gnu.org/licenses/gpl-2.0.html   │
+	│▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+
+Probado en UbuntuStudio 16.04, 17.04
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+Instalación de todas las dependencias para RisenJWM
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+
+Ponga en la terminal este comando e instale todo:
+
+sudo apt-get install bash lxrandr lxtask lxappearance pluma gedit pnmixer numlockx xfce4-appfinder xfce4-notes xfce4-terminal thunar nautilus dolphin4 kdebase-bin file-roller konsole caja engrampa speedcrunch orage gnome-exe-thumbnailer qt4-qtconfig qt5ct menu menu-l10n gnome-icon-theme ubuntu-restricted-extras doublecmd-gtk ltpanel gnome-disk-utility mate-system-monitor hardinfo
+
+
+INSTALAR OPCIONALES
+sudo apt-get install convertall mate-power-manager soundconverter goldendict breeze-gtk-theme gnome-wine-icon-theme gnome-human-icon-theme gnome-brave-icon-theme gnome-brave-icon-theme gnome-colors-common xubuntu-icon-theme suru-icon-theme
+
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+Instalación del generador de menú xdgmenumaker
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+
+Ponga en la terminal uno por uno y ejecute:
+
+sudo apt-get install git txt2tags
+git clone https://github.com/gapan/xdgmenumaker
+cd xdgmenumaker
+make
+sudo su
+make install
+exit
+
+y se instalará el programa. Aquí en este Proyecto cuando copie todos los archivos a su HOME se añadirá este programa a la entrada del menú para que lo pueda usar. Estará en:
+
+"Inicio/Recargar Menu y JWM"
+
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+qt5ct utilidad de configuración de Qt5, para Ubuntu 16.04
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+
+
+Este programa sirve para ajustar algunas cosas de las aplicaciones que han sido escritas en Qt5. Como por ejemplo los iconos y el tema.
+
+Ponga los siguientes dos comandos en una terminal, uno por uno:
+
+touch ~/.profile
+echo "export QT_QPA_PLATFORMTHEME="qt5ct"" >> ~/.profile
+
+También le explico que creé una entrada en el menú para que cargue esta opción:
+
+"Inicio/RisenPC JWM Herramientas/Temas de Aplicaciones Qt5"
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+Notas sobre el programa Dropbox 
+para Nautilus o para Caja
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+
+Viene aquí allá arriba ya incluido para instalar Dropbox para Nautilus: "nautilus-dropbox" 
+
+Pero si a usted no le gusta ese programa como administrador de archivos puede usar Caja, si fuera ese el caso usted debe hacer esto:
+
+sudo apt remove nautilus-dropbox
+sudo apt install caja-dropbox
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+Notas sobre el programa blueman 
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+
+Blueman sirva para conectarse por Bluetooth con otros dispositivos como celulares, etc.
+
+Por defecto lo he desactivado porque me he dado cuenta que hay muchas computadoras como la mía que no tienen bluetooth.
+
+Si su computadora tiene Bleutooth revise el script:
+
+/RisenPC-JWM/Script-StartUpApps.sh
+
+allí busque la palabra: "blueman-applet" y encontrará:
+
+#blueman-applet &
+
+y quitele el numeral para activarlo, debe quedarle así:
+
+blueman-applet &
+
+al reinicio ya estará activo.
+
+Nota: Este paquete ya está por defecto instalado en UbuntuStudio 16.04, en Ubuntu 16.04 y creo en todos los derivados de Ubuntu. Eso debe usted tener en cuenta por si quiere usar RisenJWM en otra distribución que no sea Ubuntu, como puede ser Fedora, Mageia, Red Hat, etc, esto porque puede ser que haya otra distribución de linux que no use blueman, eso usted debe investigar y usar el que use esa distribución, porque puede cambiarlo por otro programa que maneje el bluetooth
+
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+"KDEConnect Indicator" para compartir archivos entre Ubuntu y Android, instalar desde PPA
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+
+En la terminal:
+
+sudo add-apt-repository ppa:webupd8team/indicator-kdeconnect
+sudo apt update
+sudo apt install indicator-kdeconnect
+
+Nota: Para que se vea el icono debe estar abierto en tu celular el programa KDE Connect sino no se cargará el icono
+
+Visto en:
+New KDE Connect Indicator Ubuntu / Linux Mint PPA ~ Web Upd8: Ubuntu / Linux blog
+http://www.webupd8.org/2017/04/new-kde-connect-indicator-ubuntu-linux.html
+
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+Para controlar el brillo de la pantalla en la laptop y monitor externo, instalar desde PPA
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+
+En la terminal:
+
+sudo add-apt-repository ppa:apandada1/brightness-controller
+sudo apt-get update 
+sudo apt-get install brightness-controller
+
+También recomiendo leer mi publicación:
+Control de brillo, instalado desde PPA
+https://facilitarelsoftwarelibre.blogspot.com/2017/06/control-de-brillo-para-pantallas-en.html
+
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+Para las capturas de pantalla, instalar desde PPA
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+
+En la terminal:
+
+sudo add-apt-repository ppa:shutter/ppa
+sudo apt-get update 
+sudo apt-get install shutter
+
+Visto en:
+http://shutter-project.org/downloads/
+
+Nota: A veces no funciona bien
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+Kdenlive 18.04..- La nueva generacion de Video Editor para Linux, instalar desde PPA
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+
+En la terminal:
+
+sudo add-apt-repository ppa:kdenlive/kdenlive-stable 
+sudo apt-get update 
+sudo apt-get install kdenlive
+
+Visto en:
+Download | Kdenlive
+https://kdenlive.org/download/
+
+
+
+

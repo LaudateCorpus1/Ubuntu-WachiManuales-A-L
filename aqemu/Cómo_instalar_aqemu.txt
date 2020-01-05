@@ -1,0 +1,5 @@
+
+
+
+
+sudo apt install aqemu qemu-utils qemu-kvm

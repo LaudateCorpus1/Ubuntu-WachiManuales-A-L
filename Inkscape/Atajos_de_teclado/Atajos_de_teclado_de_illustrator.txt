@@ -1,0 +1,5 @@
+http://wiki.inkscape.org/wiki/index.php/Customizing_Inkscape
+
+adobe-illustrator-cs2.xml for Adobe Illustrator CS2;
+
+http://bazaar.launchpad.net/~inkscape.dev/inkscape/trunk/view/head:/share/keys/adobe-illustrator-cs2.xml 

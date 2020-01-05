@@ -1,0 +1,32 @@
+
+
+<iframe src='https://onedrive.live.com/embed?cid=72C983D7E00E4EA3&resid=72C983D7E00E4EA3%21529&authkey=ALHAC_Yw6QzFtFs&em=2&wdStartOn=1' width='476px' height='288px' frameborder='0'>Esto es un documento de <a target='_blank' href='https://office.com'>Microsoft Office</a> incrustado con tecnología de <a target='_blank' href='https://office.com/webapps'>Office Online</a>.</iframe>
+
+
+esta es la que hace google drive
+
+<iframe src="https://docs.google.com/document/d/1_eEz86_6TISZtfnbImq3SioyCokbOGvr9GIRKMZnEVc/pub?embedded=true"></iframe>
+
+
+la mejoraré así:
+
+<iframe src="https://docs.google.com/document/d/1_eEz86_6TISZtfnbImq3SioyCokbOGvr9GIRKMZnEVc/pub?embedded=true" width='476px' height='288px'></iframe>
+
+lo pegue en el modo HTML y pasó que lo convirtió en esto:
+
+<iframe height="288px" src="https://docs.google.com/document/d/1_eEz86_6TISZtfnbImq3SioyCokbOGvr9GIRKMZnEVc/pub?embedded=true" width="476px"></iframe>
+
+será mejor mejorarlo este, así (prueba y error):
+
+<iframe height="780px" src="https://docs.google.com/document/d/1_eEz86_6TISZtfnbImq3SioyCokbOGvr9GIRKMZnEVc/pub?embedded=true" width="670px"></iframe>
+
+
+Tomada la idea de:
+http://www.mybloggerlab.com/2013/03/how-to-embed-pdf-and-other-documents-in-blogger-posts.html
+
+
+
+
+
+
+ 

@@ -1,0 +1,111 @@
+
+Manual de git
+
+Este manual consiste en tres partes:
+
+1.- INTRODUCCIÓN
+2.- INSTALACIÓN DE GIT EN ANDROID
+3.- ENVIAR(PUSH) CAMBIOS DE ANDROID A GITHUB
+3.- ENVIAR(PUSH) CAMBIOS DE LINUX O WINDOWS O "MAC OS X" A GITHUB
+4.- RECIBIR(FETCH) CAMBIOS DE GITHUB A ANDROID
+5.- RECIBIR(FETCH) CAMBIOS DE GITHUB A LINUX O WINDOWS O "MAC OS X"
+
+
+
+Para revisar su repositorio desde un navegador web en Android deberá hacer login entrando aquí:
+
+https://github.com/login
+
+cd github
+
+y alli clonen el repositorio que ustedes tengan. En mi caso el mío:
+
+git clone https://github.com/wachin/Cancionero-Cristiano-con-acordes
+
+
+git config --global user.name "tuusuario"
+git config --global user.email tucorreo@gmail.com
+
+mis datos:
+
+git config --global user.name "wachin"
+git config --global user.email wachin.id@gmail.com
+
+
+git status
+
+3.- ENVIAR(PUSH) CAMBIOS DE ANDROID A GITHUB
+
+git add .
+
+git commit -m "Añadí la canción Adorar al cordero Santo.docx"
+
+otro ejemplo:
+
+git commit -m "Añadí más canciones"
+
+git log
+
+Conectar repositorio local a repositorio en github.- Para hacer esto debemos poner en Termux así(reemplace mi url con la suya):
+
+git remote add origin https://github.com/wachin/Cancionero-Cristiano-con-acordes
+
+Para observar que ya está añadido escribir:
+
+git remote -v
+
+a mi me aparece así:
+
+$ git remote -v
+origin  https://github.com/wachin/Cancionero-Cristiano-con-acordes (fetch)
+origin  https://github.com/wachin/Cancionero-Cristiano-con-acordes (push)
+
+ahora sí, como usted ya había hecho un commit (el cual es indispensable para poder realizar el siguiente paso, pues si no hay un commit no se puede hacer Push) pongo en la terminal
+
+git push origin master
+
+Donde
+origin.- Es el nombre del remoto
+master.- Es el nombre de la rama 
+
+-----------------------------------------------------------------
+Nota: Si hay varias ramas o necesiten saber algo más vean los tutoriales de makigas sobre este tema:
+Tutorial de Git - 19. Cómo hacer Push
+https://youtu.be/jgeLj45G0tk
+-----------------------------------------------------------------
+
+Sigamos. Al dar Enter me preguntará por mi usuario y contraseña, los pongo, y allí subirá todo al repositorio en GitHub
+
+Nota: Si quiero ver los cambios que se hicieron abro el navegador web de Android y lo veo en mi url(usted en la dirección de su repositorio), el mío es:
+
+https://github.com/wachin/Cancionero-Cristiano-con-acordes/
+
+y allí doy clic en:
+
+view code
+
+y alli donde usted tenga sus archivos que ha añadido aparecerán los cambios, o si ha borrado archivos verá que ya no están.
+
+Nota: Si necesita volver a un estado anterior (para tener acceso a archivos que haya borrado u otros) revise los tutoriales de makigas.
+
+Cómo cerrar Termux.- Para cerrar Termux puede escribir:
+
+exit
+
+se da Enter y see escribe la vez y saldrá, o también:
+
+logout
+
+Como volver a entrar a mí repositorio desde Termux.- Para habilitar esta operación y no hacer tantos pasos es necesario usar "ES Administrador de Archivos", allí hay que buscar el lugar donde está la carpeta "github" (que creamos anteriormente) y entrar en ella y darle clic con el dedo a nuestro repertorio que y retener el dedo encima hasta que se marque y luego aplastar con el dedo el botón a la derecha abajo que tiene tres puntitos "..." (verticales) y presionar "Propiedades" y dar clic en el botón "COPIAR RUTA COMPLETA" e ir a Termux y allí escribir:
+
+cd 
+
+y dejar un espacio y allí presione con el dedo y pegar, y así debe de quedar en mi caso:
+
+cd /storage/emulated/0/Download/github/Cancionero-Cristiano-con-acordes
+
+y dar Enter y estará de manera rápida en el directorio de su repositorio.
+
+
+
+Dios le bendiga

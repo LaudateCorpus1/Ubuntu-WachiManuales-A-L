@@ -1,0 +1,13 @@
+
+Se me estaba colgando Chromium Browser en Enlightenment, así que lo abrí desde la terminal a ver que pasaba, puse en la terminal:
+
+chromium-browser
+
+y aparece ese mensaje de error
+
+Solución
+
+14.04 - Fontconfig error: cannot load default config file - Ask Ubuntu
+http://askubuntu.com/questions/492033/fontconfig-error-cannot-load-default-config-file
+
+export FONTCONFIG_PATH=/etc/fonts

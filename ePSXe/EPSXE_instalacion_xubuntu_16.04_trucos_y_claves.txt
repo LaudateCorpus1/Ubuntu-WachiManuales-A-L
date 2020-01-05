@@ -1,0 +1,53 @@
+
+
+Cómo instalar emulador de PlayStation 1 ePSXe en Ubuntu 16.04, 18.04
+
+descargar la versión para linux:
+
+http://www.epsxe.com/download.php
+
+Para lanzar el programa deben navegar desde la terminal hasta donde está el ejecutable y poner en la terminal:
+
+./ePSXe
+
+Instalar dependencias para Ubuntu 16.04 y 18.04
+
+sudo apt-get install libsdl-ttf2.0-0 libcurl3
+
+
+Para Debian 10 Buster
+
+sudo apt-get install libsdl-ttf2.0-0 libcurl4
+
+
+Descargar BIOS:
+
+http://uploaded.net/file/v0v1x6k0
+
+Allí hay muchas bios recomiendo elegir esta:
+
+SCPH1001.bin
+
+Descomprimirla y deben elegirla en:
+
+Config/BIOS
+
+dar clic en OPEN y buscarla
+
+
+
+CONSULTAS:
+
+EPSXE instalacion xubuntu 16.04 trucos y claves - YouTube
+https://www.youtube.com/watch?v=9cZiru4uAaA
+
+PSX - Playstation BIOS (usan SCPH1001.bin)
+https://romsmania.cc/bios/psx-playstation-bios-scph1001-bin-1
+
+ePSXe Tutorial | Video Game Emulation for Newbies (aquí también usan Scph1001.bin)
+https://www.fantasyanime.com/emuhelp/epsxe
+
+Which is the best Bios | Next Generation Emulation Forum
+https://www.ngemu.com/threads/which-is-the-best-bios.35935/
+
+

@@ -1,0 +1,15 @@
+
+
+autostart - Which startup applications can I safely disable? - Ask Ubuntu
+https://askubuntu.com/questions/310337/which-startup-applications-can-i-safely-disable
+
+
+cd /etc/xdg/autostart
+sudo sed --in-place 's/NoDisplay=true/NoDisplay=false/g' *.desktop
+
+
+Reverting the changes
+Before starting to disable startup applications, keep in mind that all changes can be easily reverted by deleting the files in ~/.config/autostart:
+
+rm ~/.config/autostart/*
+ 

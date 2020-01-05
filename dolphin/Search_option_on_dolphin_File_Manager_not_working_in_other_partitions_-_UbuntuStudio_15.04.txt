@@ -1,0 +1,48 @@
+
+Search option on dolphin File Manager not working in other partitions - UbuntuStudio 15.04
+
+
+I use the file manager Dolphin UbuntuStudio from version 12.04 and then 14.04 and to activate the search option I have to install: 'systemsettings' via synaptic next configured in the search options and worked (the option was created there in the Configuration Manager), but now in the release 15.04 I found a way to make working (only not work in other partitions):
+
+
+
+Install this via synaptic: 
+
+dolphin
+baloo-utils 
+kde-config-baloo-advanced 
+
+Ok, now the dolphin file search is already enabled only in HOME.
+
+
+I thy to enable to search in other partitions but not working
+
+I put this command in a terminal: 
+
+kcmshell4 kcm_baloofileadv 
+
+will open a window and there you will see a "Folders" tab, HOME is already added by default, to add the other partitions, see my example:
+
+http://3.bp.blogspot.com/-A2xD3oEgYxE/VU-Bt7bnyVI/AAAAAAAAAt8/tm8WsyFJjgs/s640/01%2Bconfigurar%2Bkcmshell4%2Bkcm_baloofileadv.png
+
+Now I add my other two partitions:
+
+http://4.bp.blogspot.com/-WJniCvmDf_w/VU-Bt4wElqI/AAAAAAAAAt4/asQCksPjClA/s640/02%2Bconfigurar%2Bkcmshell4%2Bkcm_baloofileadv%2B(2).png
+
+But not working.
+
+I know this command to disable the search in other partitions or folders:
+
+kcmshell4 kcm_baloofile 
+
+Well, for instance here I put a picture of the list of packages that I have installed:
+
+http://1.bp.blogspot.com/-QIscRh1tCYE/VU-EXubUrnI/AAAAAAAAAuU/dMNyEfoIYus/s640/05%2Bbaloo%2Bpaquetes%2B05stalados.png
+
+The search on HOME working fine but in other partitions not working. 
+
+I am spanish parlant sorry my english
+
+
+
+--

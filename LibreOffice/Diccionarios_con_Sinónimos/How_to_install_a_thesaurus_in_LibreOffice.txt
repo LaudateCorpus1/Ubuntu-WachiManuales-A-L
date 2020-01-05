@@ -1,0 +1,12 @@
+
+El diccionario de sinónimos para inglés ya está instalado en mi sistema, el paquete visto en synaptic tiene el nombre de:
+
+mythes-en-us
+
+Este es el "English Thesaurus for LibreOffice". Encontré una manera de activarlo, hay que seguir estos pasos:
+
+Click on Tools -> Language -> For All Text -> Select English (USA).
+
+Fuente:
+How to install a thesaurus in LibreOffice? - Ask Ubuntu
+http://askubuntu.com/questions/85752/how-to-install-a-thesaurus-in-libreoffice

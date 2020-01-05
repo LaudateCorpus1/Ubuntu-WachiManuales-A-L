@@ -1,0 +1,10 @@
+
+
+Full HD 1080
+1920x1080
+las miniaturas de reemplazo en kdenlive para videos de 1000px son con este tamaño 
+640x480
+Si resto 1080-480=600 esto quiere decir que puedo quitarle ese valor a 1920-600=1320
+esto quiere decir que yo puedo añadir un clip de reemplazo con ese tamaño
+1320x600
+para que se vea bien la miniatura en la vista previa de kdenlive 

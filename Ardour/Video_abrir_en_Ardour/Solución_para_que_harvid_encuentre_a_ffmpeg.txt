@@ -1,0 +1,13 @@
+
+Video Timeline Setup
+http://manual.ardour.org/video-timeline/setup/
+
+Nota: Yo tengo instalado ffmpeg en UbuntuStudio 16.04 pero harvid no lo encuentra (al abrir un video), esta es la solución
+
+The Ardour development team is in control of the first two applications. ffmpeg however can be a bit of a problem. To avoid conflicts with distribution packages, Ardour looks for ffmpeg_harvid and ffprobe_harvid.
+
+All four applications need to be found in $PATH (e.g. $HOME/bin or /usr/local/bin). For convenience the binary releases of harvid include ffmpeg_harvid and ffprobe_harvid, but if your distribution provides suitable ffmpeg commands you can also just create symbolic links:
+
+sudo ln -s /usr/bin/ffmpeg /usr/bin/ffmpeg_harvid
+sudo ln -s /usr/bin/ffprobe /usr/bin/ffprobe_harvid
+

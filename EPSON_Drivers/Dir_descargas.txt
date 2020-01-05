@@ -1,0 +1,1 @@
+http://download.ebz.epson.net/dsc/op/stable/debian/dists/lsb3.2/main/binary-i386/ 

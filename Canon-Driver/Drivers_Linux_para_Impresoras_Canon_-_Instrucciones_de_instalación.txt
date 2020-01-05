@@ -1,0 +1,22 @@
+ 
+
+
+https://launchpad.net/~thierry-f/+archive/ubuntu/fork-michael-gruz/+packages 
+ 
+ 
+Orden de instalación:
+
+libcanon-proprio-bin_0.2+3.50-1804_i386.deb
+scangearmp2_3.70.3-1804+2_i386.deb
+scangearmp-common_2.30.1-1804+2ubuntu4_i386.deb
+scangearmp-mg2500series_2.30.1-1804+2ubuntu4_i386.deb
+
+
+cnijfilter2_5.70-1804+1_i386.deb
+
+
+
+Basado en:
+
+Canon IJ Printer, ScanGear MP Drivers for Ubuntu 18.04, 18.10
+http://ubuntuhandbook.org/index.php/2018/10/canon-ij-printer-scangear-mp-drivers-ubuntu-18-04-18-10/

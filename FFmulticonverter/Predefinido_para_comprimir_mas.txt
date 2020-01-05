@@ -1,0 +1,14 @@
+
+
+Por defecto:
+-ab 320k -ar 48000 -ac 2
+
+
+este le puse yo:
+-ac 2 -ar 44100 -ab 128k 
+
+en la opción:
+
+Editar/Preferencias/Audio-Video(Comando por defecto)
+
+Con eso cada vez que lo abra aparecerá el comando que yo le puse (el cual hace que ocupe menos espacio el archivo)

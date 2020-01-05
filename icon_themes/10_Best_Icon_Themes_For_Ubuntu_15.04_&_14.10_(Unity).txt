@@ -1,0 +1,22 @@
+
+
+10 Best Icon Themes For Ubuntu 15.04 & 14.10 (Unity)
+http://www.upubuntu.com/2015/09/10-best-icon-themes-for-ubuntu-1504.html
+
+1. Uniform Icon Theme
+
+sudo add-apt-repository ppa:upubuntu-com/icons 
+sudo apt-get update 
+sudo apt-get install uniform-icon-theme
+
+Moka Icon Theme
+
+sudo add-apt-repository ppa:moka/stable 
+sudo apt-get update 
+sudo apt-get install moka-icon-theme
+
+3. Numix Icon Theme
+
+sudo add-apt-repository ppa:numix/ppa 
+sudo apt-get update 
+sudo apt-get install numix-icon-theme numix-icon-theme-circle

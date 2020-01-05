@@ -1,0 +1,97 @@
+
+
+As suggested by user26687 the solution mentioned in the bug report seems to solve the problem:
+
+install the needed thumbnailers
+make a symbolic link to the installed thumbnailers in the qt5 plugins folder, run:
+
+sudo ln -s /usr/lib/x86_64-linux-gnu/plugins/* /usr/lib/x86_64-linux-gnu/qt5/plugins/
+Replace x86_64-linux-gnu with i386-linux-gnu for 32bit.
+
+Note: the problem still exists in Ubuntu 16.04.1 LTS xenial xerus.
+
+The bug is also known in Launchpad.
+
+
+En Ubuntu 18.04 kdegraphics-thumbnailers instala las librerías .so en:
+
+Ubuntu – File list of package kdegraphics-thumbnailers/bionic/i386
+https://packages.ubuntu.com/bionic/i386/kdegraphics-thumbnailers/filelist
+
+/usr/lib/i386-linux-gnu/qt5/plugins/gsthumbnail.so
+/usr/lib/i386-linux-gnu/qt5/plugins/rawthumbnail.so
+/usr/share/doc/kdegraphics-thumbnailers/changelog.Debian.gz
+/usr/share/doc/kdegraphics-thumbnailers/copyright
+/usr/share/kservices5/gsthumbnail.desktop
+/usr/share/kservices5/rawthumbnail.desktop
+
+
+
+pero hacer lo siguiente lo probé y no funciona
+
+sudo ln -s /usr/lib/i386-linux-gnu/qt5/plugins/gsthumbnail.so /usr/lib/i386-linux-gnu/qt4/plugins/
+sudo ln -s /usr/lib/i386-linux-gnu/qt5/plugins/rawthumbnail.so /usr/lib/i386-linux-gnu/qt4/plugins/
+
+
+INTENTO 2
+Ejemplo
+
+kffmpegthumbnailer si funciona para dolphin4 en Xbuntu 18.04, sus archivos son estos:
+
+Ubuntu – File list of package kffmpegthumbnailer/bionic/i386
+https://packages.ubuntu.com/bionic/i386/kffmpegthumbnailer/filelist
+
+/usr/lib/kde4/kffmpegthumbnailer.so
+/usr/share/doc/kffmpegthumbnailer/changelog.Debian.gz
+/usr/share/doc/kffmpegthumbnailer/copyright
+/usr/share/kde4/services/kffmpegthumbnailer.desktop
+
+
+Entonces este es:
+
+/usr/lib/kde4/
+
+ el lugar donde yo debo poner el enlace a las librerías
+
+sudo ln -s /usr/lib/i386-linux-gnu/qt5/plugins/gsthumbnail.so /usr/lib/kde4/
+sudo ln -s /usr/lib/i386-linux-gnu/qt5/plugins/rawthumbnail.so /usr/lib/kde4/
+
+pero no funcionó.
+
+allí también hay esta carpeta:
+
+/usr/lib/kde4/plugins/
+
+voy a probar así:
+
+sudo ln -s /usr/lib/i386-linux-gnu/qt5/plugins/gsthumbnail.so /usr/lib/kde4/plugins/
+sudo ln -s /usr/lib/i386-linux-gnu/qt5/plugins/rawthumbnail.so /usr/lib/kde4/plugins/
+
+pero no funcionó.
+
+CONSULTAS:
+
+Ubuntu – File list of package dolphin/bionic/i386
+https://packages.ubuntu.com/bionic/i386/dolphin/filelist
+
+Ubuntu – File list of package kdegraphics-thumbnailers/xenial/i386
+https://packages.ubuntu.com/xenial/i386/kdegraphics-thumbnailers/filelist
+
+Ubuntu – File list of package kdegraphics-thumbnailers/bionic/i386
+https://packages.ubuntu.com/bionic/i386/kdegraphics-thumbnailers/filelist
+
+Ubuntu – File list of package dolphin4/bionic/i386
+https://packages.ubuntu.com/bionic/i386/dolphin4/filelist
+
+Ubuntu – File list of package dolphin4/xenial/i386
+https://packages.ubuntu.com/xenial/i386/dolphin4/filelist
+
+Ubuntu – File list of package kffmpegthumbnailer/xenial/i386
+https://packages.ubuntu.com/xenial/i386/kffmpegthumbnailer/filelist
+
+Ubuntu – File list of package kffmpegthumbnailer/bionic/i386
+https://packages.ubuntu.com/bionic/i386/kffmpegthumbnailer/filelist
+
+
+
+

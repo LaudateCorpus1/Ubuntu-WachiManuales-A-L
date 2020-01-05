@@ -1,0 +1,17 @@
+
+software installation - How to install pmTrans - Ask Ubuntu
+https://askubuntu.com/questions/769887/how-to-install-pmtrans
+
+You can just start this from terminal by typing:
+
+java -jar pmTransALLOS.jar
+You can make afterwards a shortcut by nano ~/Desktop/pmTrans.desktop and adding the following lines into it:
+
+[Desktop Entry]
+Name=pmTrans
+Comment=pmTrans
+Exec=java -jar /path-to/pmTransALLOS.jar
+Icon=
+Terminal=false
+Type=Application
+Categories=Reader;

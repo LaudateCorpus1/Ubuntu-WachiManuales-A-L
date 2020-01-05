@@ -1,0 +1,16 @@
+
+
+How To Set Up Compiz In Xubuntu 14.10, 14.04 Or 12.04 ~ Web Upd8: Ubuntu / Linux blog
+http://www.webupd8.org/2012/11/how-to-set-up-compiz-in-xubuntu-1210-or.html 	
+
+
+How To Create Window Rules Using CompizConfig Settings Manager On Ubuntu - YouTube
+https://www.youtube.com/watch?v=SgqtrrrJOJk
+
+
+unity - How to set a specific window size for all windows that open to default - Ask Ubuntu
+http://askubuntu.com/questions/107951/how-to-set-a-specific-window-size-for-all-windows-that-open-to-default#1354
+
+
+desktop - how to determine in what viewport (compiz/unity) a window is placed? - Unix & Linux Stack Exchange
+http://unix.stackexchange.com/questions/168731/how-to-determine-in-what-viewport-compiz-unity-a-window-is-placed

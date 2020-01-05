@@ -1,0 +1,5 @@
+
+How to invert fn keys on Dell Laptop?
+https://askubuntu.com/questions/88063/how-to-invert-fn-keys-on-dell-laptop?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+
+I am not sure if it works for all models, but on mine if you press Fn+Esc it changes the Fn lock so that F1+F12 work as normal and when you hold Fn+(lets say F11) it will change the brightness or whatever that keys secondary function is. Pressing Fn+Esc again reverts it back to default. Hope this helps.

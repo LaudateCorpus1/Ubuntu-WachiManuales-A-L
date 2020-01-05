@@ -1,0 +1,13 @@
+ca02c74cad17f808525dc164b54794fb  bin/ksnip
+d0d16311acbe4b850299dd579e21d9a7  usr/share/applications/ksnip.desktop
+b8cf44e494bf20db6d7420c0f1e10ad3  usr/share/doc/ksnip/changelog.gz
+2785d126c795cef4b3e9b231c2a9afb6  usr/share/doc/ksnip/copyright
+3365af721a0c96e2ed7bba0315556b7f  usr/share/ksnip/translations/ksnip_de.qm
+92e92a2446ec737316b391e43499c889  usr/share/ksnip/translations/ksnip_es.qm
+1eb3a684a171e1fb0b29d1048c07620e  usr/share/ksnip/translations/ksnip_fr.qm
+7d9a676d350b86d36a88018aba50262b  usr/share/ksnip/translations/ksnip_nl.qm
+6eb7b4ad46e333ffd044d88077c7b5e6  usr/share/ksnip/translations/ksnip_no.qm
+2f4e59eae882152dbe1697b37ca143e2  usr/share/ksnip/translations/ksnip_pl.qm
+ce529c029250563602eacc8773c7f66c  usr/share/ksnip/translations/ksnip_ru.qm
+f5affed69a85d9a821ee2b5bcdb9701d  usr/share/metainfo/ksnip.appdata.xml
+a6d0305e732cd018a1c6476540c52776  usr/share/pixmaps/ksnip.svg

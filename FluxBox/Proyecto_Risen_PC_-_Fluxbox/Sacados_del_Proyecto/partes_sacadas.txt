@@ -1,0 +1,37 @@
+
+--------------------------------------------
+He borrado unas lineas para evitar problemas
+--------------------------------------------
+
+Nota: He borrado del menú la opción para cambiar de estilos, ésto hice porque los temas que vienen son obsoletos. Lo siguiente es lo que he quitado:
+
+   [submenu] (Styles) {}
+      [stylesdir] (/usr/share/fluxbox/styles)
+      [stylesdir] (~/.fluxbox/styles)
+   [end]
+
+lo dejo por si acaso quieren volverlo a ponerprobar, para eso deben pegarlo arriba antes del primer "[submenu]"  y reiniciar fluxbox. Para reiniciarlo den clic derecho en el escritorio y clic en "Reiniciar fluxbox"
+
+Nota: Lo saqué aquí porque los temas de antiX son bonitos
+
+
+#########################################
+.Xresources para el tamaño de las fuentes
+#########################################
+
+ponga en la terminal uno por uno estos dos comandos:
+
+touch ~/.Xresources
+gedit ~/.Xresources
+
+y allí copie esto:
+
+Xft.dpi: 100
+
+Guarde el archivo, y cuando cierre sesión y entre en la sesión de fluxbox y vuelva a entrar y vea si le gusta el tamaño de las fuentes, yo le he puesto 100 en los dpi pero si usted quiere puede cambiar el valor para que se adapte a sus necesidades, ejemplo puede ponerle:
+Xft.dpi: 81 
+o:
+Xft.dpi: 100 
+o:
+Xft.dpi: 110
+o el que usted quiera.

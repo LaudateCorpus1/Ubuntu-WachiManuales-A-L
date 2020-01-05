@@ -1,0 +1,123 @@
+
+
+
+RESUMEN
+
+Para revivir una PC con muy pero muy bajos recursos le voy a instalar el Administrador de Ventanas icewm a una PC con UbuntuStudio 16.04 x386, pero hay que configurarlo
+
+
+INSTRUCCIONES:
+
+Instalar icewm
+
+sudo apt-get install icewm
+
+
+
+AUTO INICIAR APLICACIONES (1)
+
+Para que a lo que uno enciende la PC también arranquen algunos programas que uno quiera, hay que crear un archivo con el nombre "startup" y ponerle los comandos, para hacerlo facilmente ponga en una terminal una por una estas dos lineas:
+
+
+touch ~/.icewm/startup
+chmod +x ~/.icewm/startup
+
+ Luego usted busque ese archivo aplastando el atajo de teclado "Ctrl + H" en su Administrador de Archivos (nautilus, caja  , thunar, etc) y entre en la carpeta
+
+
+.icewm
+
+
+Allí arrastre al archivo "startup" a algún editor de texto como mousepad, gedit, para que lo edite y póngale lo siguiente(copie y pegue):
+
+ 
+
+#!/bin/bash
+
+sleep 2 &
+# Requerido para dar algo de tiempo a la barra de tareas de icewm para iniciar antes que el resto
+
+caja &
+# Es el administrador de archivos que uso ultimamente, muy bueno, debe estar abierto de ley
+
+shutter &
+# Para tomar captura de pantallas (en comportamiento se lo puede configurar para que cargue iconizado)
+
+geany &
+# Editor de Textos, siempre lo uso, que mejor ya esté abierto
+
+xfce4-notes &
+# Para tomar notas rapidas, imprescindible
+
+xfce4-terminal &
+# La terminal, como siempre la uso ya que mejor esté abierta (aquí en icewm, synaptic hay que abrirlo con sudo synaptic)
+
+goldendict &
+# El Diccionario, todos los días lo uso en algún momento (se lo puede configurar para que se cargue iconizado)
+
+nm-applet &
+# Para administrar las redes disponibles de internet (se carga iconizado)
+
+# pasystray &
+# (opcional) para ver un icono para lanzar el control de volumen de pulseaudio que viene en UbuntuStudio (pavucontrol)
+
+# alarm-clock-applet &
+# (opcional) Tiene un temporizador y un despertador, para mi es el mejor
+
+orage &
+# Para ver la fecha, es un calendario también (se carga iconizado y abierto, no se como hacer para que solo se cargue iconizado)
+
+setxkbmap -layout latam &
+# Para que siempre se cargue al inicio mi distribución de teclado, yo soy Español Latinoamericano por eso es latam
+
+mate-power-manager 
+
+feh --bg-scale /home/wachin/Dropbox/UbuntuManuales/x-windows-managers/icewm/wallpaper/rule-of-attraction.jpg &
+# Para ponerle un wallpaper al escritorio (es es un ejemplo, el comando que yo uso)
+ 
+
+
+
+ y guardelo, listo, al siguiente inicio se cargaran esos programas.
+
+
+Nota: Este es un ejemplo, esos son los comandos para las aplicaciones que yo uso (ya las tengo instaladas).
+
+
+
+PONIENDO IMAGEN DE FONDO AL ESCRITORIO (WALLPAPER)(2)
+
+Debes instalar feh :
+
+sudo apt-get install feh
+
+ y luego añadirlo al archivo antes creado "startup"
+
+feh --bg-scale /directorio/a/tu/wallpaper.png &
+
+Como se dará cuenta arriba ya lo había añadido.
+
+
+Nota: Allí usted le cambia a .jpg o .png de acuerdo al formato de su imagen
+
+
+Luego haré el de cómo poner los iconos en el escritorio, por el momento se ve así:
+
+
+
+REFERENCIAS:
+
+
+(1)IceWM
+
+https://wiki.archlinux.org/index.php/IceWM#Autostarting
+
+
+(2) IceWM Guide
+
+https://celettu.wordpress.com/icewm-guide/ 
+
+
+
+
+ 

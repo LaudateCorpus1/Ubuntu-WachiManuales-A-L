@@ -1,0 +1,12 @@
+
+New Method to Permanently disable Chrome PDF Viewer (2017)
+
+https://malwaretips.com/threads/new-method-to-permanently-disable-chrome-pdf-viewer-2017.68014/
+
+Try New Method
+
+Open the Advanced Settings and found under Privacy (Content Settings) users can now manage how PDF documents are opened.
+Enter URL chrome://settings/content
+Scroll down to PDF Documents > Enable "Open PDF files in the default PDF viewer application"
+Finished to save changes
+I believe this is Google's correct way for Chrome users to disable built-in PDF viewer, and to confirm, Chrome PDF Viewer will be disabled by Enterprise Policy (greyed out) under Chrome Plugins.

@@ -1,0 +1,21 @@
+
+
+
+xenlism wildfire : miminal icon theme for *nix
+https://xenlism.github.io/wildfire/
+sudo apt-key adv --keyserver keys.gnupg.net --recv-keys 90127F5B
+echo "deb http://downloads.sourceforge.net/project/xenlism-wildfire/repo deb/" | sudo tee -a /etc/apt/sources.list
+sudo apt-get update
+sudo apt-get install xenlism-wildfire-icon-theme
+sudo apt-get install xenlism-artwork-wallpapers
+
+Se puede instalar el tema de iconos pero los demás no, pues sale un mensaje:
+
+Está a punto de instalar software que no puede autenticarse. Esto podría premitir que un individuo malicioso dañe o tome el control de su sistema
+
+y hay dos paquetes más, mejor creo un script de descarga desde el synaptic:
+
+#!/bin/sh
+wget -c http://downloads.sourceforge.net/project/xenlism-wildfire/repo/deb/xenlism-artwork-wallpapers.1.0.2.any.deb
+wget -c http://downloads.sourceforge.net/project/xenlism-wildfire/repo/deb/xenlism-minimalism-theme.2.0.3.any.deb
+wget -c http://downloads.sourceforge.net/project/xenlism-wildfire/repo/deb/xenlism-wildfire-icon-theme.2.0.2.any.deb

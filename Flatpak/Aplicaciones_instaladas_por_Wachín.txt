@@ -1,0 +1,21 @@
+
+
+wachin@Dell-Inspiron-1750:~$ flatpak list
+Referencia                                    Opciones      
+org.gimp.GIMP/i386/stable                     system,current
+org.inkscape.Inkscape/i386/stable             system,current
+org.kde.kdenlive/i386/stable                  system,current
+org.libreoffice.LibreOffice/i386/stable       system,current
+org.videolan.VLC/i386/stable                  system,current
+org.zotero.Zotero/i386/stable                 system,current
+org.freedesktop.Platform.VAAPI.Intel/i386/1.6 system,runtime
+org.freedesktop.Platform.ffmpeg/i386/1.6      system,runtime
+org.freedesktop.Platform/i386/1.6             system,runtime
+org.gnome.Platform/i386/3.26                  system,runtime
+org.gnome.Platform/i386/3.28                  system,runtime
+org.gtk.Gtk3theme.Greybird/i386/3.22          system,runtime
+org.kde.Platform/i386/5.11                    system,runtime
+
+
+
+

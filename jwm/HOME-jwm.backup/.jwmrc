@@ -1,0 +1,297 @@
+<?xml version="1.0"?>
+<JWM>
+
+    <!-- 
+	│▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+	│Proyecto Resucitar PC de bajos recursos con JWM          │
+	│                  "RisenPC JWM"                          │
+	│  script por Washington Indacochea Delgado (Wachín)      │
+	│       E-Mail: wachin.id@gmail.com en Ecuador            │
+	│   http://facilitarelsoftwarelibre.blogspot.com/         │
+	│     Licencia Pública General de GNU version 2           │    
+	│  En español: http://es.tldp.org/Otros/gples/gples.html  │
+	│  en inglés: https://www.gnu.org/licenses/gpl-2.0.html   │
+	│▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+
+        Proyecto Resucitar PC de bajos recursos con JWM -->
+
+    <!-- The root menu. -->
+    <RootMenu onroot="12">
+        <Include>$HOME/RisenPC-JWM/appmenu</Include>
+        <!-- <Include>$HOME/.cache/jwm-menu.cache</Include>  -->
+        <!-- se podría incluir otro menu generado  -->
+        <Separator/>
+        <!-- He utilizado para el siguiente menú los de hicolor-icon-theme, gnome-icon-theme y human-icon-theme -->
+        <!--  /usr/share/icons/gnome/16x16/  -->
+	<Menu label="Administradores de Archivos" icon="/usr/share/icons/gnome/16x16/places/folder_home.png" height="0">
+		<Program label="Dolphin4" icon="folder">dolphin4</Program>
+		<Program label="Caja" icon="/usr/share/icons/hicolor/16x16/apps/caja.png">caja</Program>
+		<Program label="PCmanFM" icon="system&#45;file&#45;manager">pcmanfm</Program>
+		<Program label="Nautilus" icon="/usr/share/icons/hicolor/16x16/apps/org.gnome.Nautilus.png">nautilus --no-desktop</Program>
+		<Program label="Double Commander" icon="doublecmd">caja</Program>
+		<Program label="Thunar" icon="Thunar">thunar</Program>
+	</Menu>
+        <Separator/>
+	<Menu label="JACK AUDIO Apps" icon="/usr/share/icons/gnome/16x16/actions/add.png" height="0">
+		<Program label="QjackCtl (cambia el servicio de Pulseaudio a Jack)" icon="/usr/share/icons/hicolor/32x32/apps/qjackctl.png">/usr/bin/qjackctl</Program>
+		<Program label="Qsynth (Para usar las Fuentes de Sonido sf2)" icon="/usr/share/icons/hicolor/32x32/apps/qsynth.png">/usr/bin/qsynth</Program>
+		<Program label="Ardour (Estación de Trabajo de Audio Digital)" icon="/usr/share/icons/gnome-colors-common/16x16/apps/ardour.png">ardour</Program>
+		<Program label="a2jmidid (Puente entre Puertos ASLA MIDI y Jack. Se ejecuta en segundo plano)" icon="/usr/share/icons/gnome/16x16/apps/gnome-terminal.png">a2jmidid</Program>
+		<Program label="Virtual MIDI Keyboard (necesitas a2jmidid para conectarlo, en la pestaña MIDI de QjackCtl)" icon="vkeybd">vkeybd</Program>
+		<Program label="Rosegarden (Entorno de edición y composición de música)" icon="rosegarden">rosegarden</Program>
+		<Program label="kmid (Reproductor MIDI)" icon="/usr/share/icons/hicolor/16x16/apps/kmid.png">kmid</Program>
+	</Menu>
+        <Separator/>
+	<Menu label="Wachín Apps" icon="/usr/share/icons/gnome/16x16/mimetypes/application-x-addon.png" height="0">
+		<Program label="Audacity (Editor de Audio)" icon="/usr/share/icons/hicolor/16x16/apps/audacity.png">env UBUNTU_MENUPROXY=0 audacity</Program>
+		<Program label="Clementine (Reproductor de Audio)" icon="/usr/share/icons/hicolor/64x64/apps/clementine.png">clementine</Program>
+		<Program label="FF Multi Converter (Convertidor de Video, Audio, Documentos)" icon="ffmulticonverter">ffmulticonverter</Program>
+		<Program label="SimpleScreenRecorder" icon="simplescreenrecorder">simplescreenrecorder &#45;&#45;logfile</Program>
+		<Program label="Kdenlive (Editor de Video)" icon="kdenlive">kdenlive</Program>
+		<Program label="Sound Converter (Convertidor de Audio)" icon="soundconverter">soundconverter</Program>
+		<Program label="Brasero (Quemador de CD/DVD)" icon="/usr/share/icons/hicolor/16x16/apps/brasero.png">brasero</Program>
+		<Program label="Discos (Entre otras cosas sirve para cambiar de nombre a los Pendrives)" icon="/usr/share/icons/hicolor/16x16/apps/gnome-disks.png">gnome-disks</Program>
+	</Menu>
+        <Separator/>
+	<Menu label="RisenPC JWM Herramientas" icon="/usr/share/icons/gnome/16x16/categories/preferences-desktop.png" height="0">
+		<Program label="Opciones del Monitor" icon="/usr/share/icons/gnome/16x16/devices/video-display.png">lxrandr</Program>
+		<Program label="Bloquear Pantalla" icon="/usr/share/xscreensaver/glade/screensaver-locking.png">xscreensaver-command -lock</Program>
+                <Program label="Configurar Salvapantallas" icon="/usr/share/xscreensaver/glade/screensaver-cmndln.png">/usr/bin/xscreensaver-demo</Program>
+                <Program label="Cambiar Imagen del Escritorio" icon="/usr/share/xscreensaver/glade/screensaver-cmndln.png">pcmanfm --desktop-pref</Program>
+		<Program label="Brightness Controller (Controle el brillo de su pantalla)" icon="brightness&#45;controller">&#47;usr&#47;share&#47;brightness&#45;controller&#47;init&#46;py</Program>
+		<Program label="Temas de Aplicaciones GTK" icon="/usr/share/icons/gnome/16x16/categories/applications-system.png">lxappearance</Program>
+		<Program label="Temas de Aplicaciones Qt4" icon="/usr/share/icons/gnome/16x16/categories/applications-system.png">qtconfig-qt4</Program>
+		<Program label="Temas de Aplicaciones Qt5" icon="/usr/share/icons/gnome/16x16/categories/applications-system.png">qt5ct</Program>
+		<Program label="Synaptic Administrador de Paquetes" icon="synaptic">synaptic&#45;pkexec</Program>
+		<Program label="Monitor del Sistema (gnome-system-monitor)" icon="utilities-system-monitor">gnome-system-monitor</Program>
+		<Program label="i-Nex (Información del Sistema)" icon="/usr/share/pixmaps/i-nex-16.png">i-nex</Program>
+		<Program label="Proyecto Facilitar el Software Libre en el Ecuador" icon="/usr/share/icons/gnome/16x16/emblems/emblem-web.png">xdg-open http://facilitarelsoftwarelibre.blogspot.com/</Program>
+	</Menu>
+        <Separator/>
+        <Program icon="terminal.png" label="Terminal">konsole</Program>
+        <Separator/>
+        <Program icon="/usr/share/icons/gnome/16x16/actions/system-search.png" label="App Finder">
+            xfce4-appfinder
+        </Program>
+        <Separator/>
+        <Program icon="/usr/share/icons/gnome/16x16/actions/reload.png" label="Recargar Menu y JWM">bash $HOME/RisenPC-JWM/Script-GenerarMenu-y-ReiniciarJWM.sh</Program>
+	<Menu label="Salir" icon="/usr/share/icons/gnome/16x16/actions/stop.png" height="0">
+    <!-- Vi el comando de Reiniciar(Restart) y Poweroff(Apagar) en: JWM - ArchWiki -->
+    <!-- https://wiki.archlinux.org/index.php/JWM -->
+               <Program icon="/usr/share/icons/gnome/16x16/actions/reload.png" label="Reiniciar">systemctl reboot</Program>
+               <Program icon="/usr/share/icons/gnome/16x16/actions/reload.png" label="Suspender">systemctl suspend</Program>
+               <Program icon="/usr/share/icons/Human/16x16/stock/generic/stock_exit.png" label="Apagar">systemctl poweroff</Program>
+        <Exit label="Cerrar sesion" confirm="true" icon="/usr/share/icons/gnome/16x16/actions/system-log-out.png"/>
+	</Menu>
+    </RootMenu>
+
+    <!-- Options for program groups. -->
+    <Group>
+        <Class>xclock</Class>
+        <Option>sticky</Option>
+    </Group>
+    <Group>
+        <Name>xterm</Name>
+        <Option>tiled</Option>
+    </Group>
+    <Group>
+        <Name>pidgin</Name>
+        <Option>drag</Option>
+        <Option>notitle</Option>
+    </Group>
+
+    <!-- Tray at the bottom. -->
+    <Tray x="0" y="-1" height="25" autohide="off">
+
+        <TrayButton icon="/usr/share/jwm/jwm-red.svg">root:1</TrayButton>
+        <Spacer width="2"/>
+        <TrayButton label="_">showdesktop</TrayButton>
+        <Spacer width="2"/>
+
+        <Pager labeled="true"/>
+
+        <TaskList maxwidth="256"/>
+
+        <Dock/>
+        <Clock format="%H:%M"><Button mask="123">exec:orage</Button></Clock>
+
+    </Tray>
+
+    <!-- Visual Styles -->
+    <WindowStyle>
+        <Font>Sans-9:bold</Font>
+        <Width>4</Width>
+        <Height>21</Height>
+        <Corner>3</Corner>
+        <Foreground>#FFFFFF</Foreground>
+        <Background>#555555</Background>
+        <Outline>#000000</Outline>
+        <Opacity>0.5</Opacity>
+        <Active>
+            <Foreground>#FFFFFF</Foreground>
+            <Background>#0077CC</Background>
+            <Outline>#000000</Outline>
+            <Opacity>1.0</Opacity>
+        </Active>
+    </WindowStyle>
+    <TrayStyle group="true" list="all">
+        <Font>Sans-9</Font>
+        <Background>#333333</Background>
+        <Foreground>#FFFFFF</Foreground>
+        <Outline>#000000</Outline>
+        <Opacity>0.75</Opacity>
+    </TrayStyle>
+    <PagerStyle>
+        <Outline>#000000</Outline>
+        <Foreground>#555555</Foreground>
+        <Background>#333333</Background>
+        <Text>#FFFFFF</Text>
+        <Active>
+            <Foreground>#0077CC</Foreground>
+            <Background>#004488</Background>
+        </Active>
+    </PagerStyle>
+    <MenuStyle>
+        <Font>Sans-9</Font>
+        <Foreground>#FFFFFF</Foreground>
+        <Background>#333333</Background>
+        <Outline>#000000</Outline>
+        <Active>
+            <Foreground>#FFFFFF</Foreground>
+            <Background>#0077CC</Background>
+        </Active>
+        <Opacity>0.85</Opacity>
+    </MenuStyle>
+    <PopupStyle>
+        <Font>Sans-9</Font>
+        <Foreground>#000000</Foreground>
+        <Background>#999999</Background>
+    </PopupStyle>
+
+
+    <!-- Path where icons can be found.
+         IconPath can be listed multiple times to allow searching
+         for icons in multiple paths.
+      -->
+    <IconPath>/usr/share/icons/gnome/256x256/actions</IconPath>
+    <IconPath>/usr/share/icons/gnome/256x256/apps</IconPath>
+    <IconPath>/usr/share/icons/gnome/256x256/categories</IconPath>
+    <IconPath>/usr/share/icons/gnome/256x256/devices</IconPath>
+    <IconPath>/usr/share/icons/gnome/256x256/emblems</IconPath>
+    <IconPath>/usr/share/icons/gnome/256x256/mimetypes</IconPath>
+    <IconPath>/usr/share/icons/gnome/256x256/places</IconPath>
+    <IconPath>/usr/share/icons/gnome/256x256/status</IconPath>
+    <IconPath>/usr/share/icons/gnome/32x32/actions</IconPath>
+    <IconPath>/usr/share/icons/gnome/32x32/animations</IconPath>
+    <IconPath>/usr/share/icons/gnome/32x32/apps</IconPath>
+    <IconPath>/usr/share/icons/gnome/32x32/categories</IconPath>
+    <IconPath>/usr/share/icons/gnome/32x32/devices</IconPath>
+    <IconPath>/usr/share/icons/gnome/32x32/emblems</IconPath>
+    <IconPath>/usr/share/icons/gnome/32x32/mimetypes</IconPath>
+    <IconPath>/usr/share/icons/gnome/32x32/places</IconPath>
+    <IconPath>/usr/share/icons/gnome/32x32/status</IconPath>
+    <IconPath>/usr/share/icons/gnome/scalable/actions</IconPath>
+    <IconPath>/usr/share/icons/gnome/scalable/apps</IconPath>
+    <IconPath>/usr/share/icons/gnome/scalable/categories</IconPath>
+    <IconPath>/usr/share/icons/gnome/scalable/devices</IconPath>
+    <IconPath>/usr/share/icons/gnome/scalable/emblems</IconPath>
+    <IconPath>/usr/share/icons/gnome/scalable/mimetypes</IconPath>
+    <IconPath>/usr/share/icons/gnome/scalable/places</IconPath>
+    <IconPath>/usr/share/icons/gnome/scalable/status</IconPath>
+    <IconPath>/usr/share/icons/hicolor/256x256/apps</IconPath>
+    <IconPath>/usr/share/icons/hicolor/256x256/mimetypes</IconPath>
+    <IconPath>/usr/share/icons/hicolor/32x32/actions</IconPath>
+    <IconPath>/usr/share/icons/hicolor/32x32/apps</IconPath>
+    <IconPath>/usr/share/icons/hicolor/32x32/categories</IconPath>
+    <IconPath>/usr/share/icons/hicolor/32x32/devices</IconPath>
+    <IconPath>/usr/share/icons/hicolor/32x32/emblems</IconPath>
+    <IconPath>/usr/share/icons/hicolor/32x32/mimetypes</IconPath>
+    <IconPath>/usr/share/icons/hicolor/32x32/status</IconPath>
+    <IconPath>/usr/share/icons/hicolor/512x512/apps</IconPath>
+    <IconPath>/usr/share/icons/hicolor/512x512/mimetypes</IconPath>
+    <IconPath>/usr/share/icons/hicolor/scalable/actions</IconPath>
+    <IconPath>/usr/share/icons/hicolor/scalable/apps</IconPath>
+    <IconPath>/usr/share/icons/hicolor/scalable/categories</IconPath>
+    <IconPath>/usr/share/icons/hicolor/scalable/devices</IconPath>
+    <IconPath>/usr/share/icons/hicolor/scalable/emblems</IconPath>
+    <IconPath>/usr/share/icons/hicolor/scalable/mimetypes</IconPath>
+    <IconPath>/usr/share/icons/hicolor/scalable/places</IconPath>
+    <IconPath>/usr/share/icons/hicolor/scalable/status</IconPath>
+    <IconPath>/usr/share/icons</IconPath>
+    <IconPath>/usr/share/pixmaps</IconPath>
+    <IconPath>
+        /usr/local/share/jwm
+    </IconPath>
+    
+
+    <!-- Virtual Desktops -->
+    <!-- Desktop tags can be contained within Desktops for desktop names. -->
+    <Desktops width="2" height="1">
+        <!-- Default background. Note that a Background tag can be
+              contained within a Desktop tag to give a specific background
+              for that desktop.
+         -->
+        <Background type="solid">#111111</Background>
+    </Desktops>
+
+    <!-- Double click speed (in milliseconds) -->
+    <DoubleClickSpeed>400</DoubleClickSpeed>
+
+    <!-- Double click delta (in pixels) -->
+    <DoubleClickDelta>2</DoubleClickDelta>
+
+    <!-- The focus model (sloppy or click) -->
+    <FocusModel>click</FocusModel>
+    <!-- le puse click, me mareaba con el otro, 
+    movian mucho las ventanas -->
+
+    <!-- The snap mode (none, screen, or border) -->
+    <SnapMode distance="10">border</SnapMode>
+
+    <!-- The move mode (outline or opaque) -->
+    <MoveMode>opaque</MoveMode>
+
+    <!-- The resize mode (outline or opaque) -->
+    <ResizeMode>opaque</ResizeMode>
+
+    <!-- Key bindings -->
+    <Key key="Up">up</Key>
+    <Key key="Down">down</Key>
+    <Key key="Right">right</Key>
+    <Key key="Left">left</Key>
+    <Key key="h">left</Key>
+    <Key key="j">down</Key>
+    <Key key="k">up</Key>
+    <Key key="l">right</Key>
+    <Key key="Return">select</Key>
+    <Key key="Escape">escape</Key>
+
+    <Key mask="A" key="Tab">nextstacked</Key>
+    <Key mask="A" key="F4">close</Key>
+    <Key mask="A" key="#">desktop#</Key>
+    <Key mask="A" key="F1">root:1</Key>
+    <Key mask="A" key="F2">window</Key>
+    <Key mask="A" key="F10">maximize</Key>
+
+<!--<Key mask="A" key="Right">rdesktop</Key>
+    <Key mask="A" key="Left">ldesktop</Key> 
+    Estos atajos de teclado los he desabilitado porque me dan conflicto con otras aplicaciones, 
+    ejemplo no me deja ir para atrás en los administradores de archivos-->
+
+    <Key mask="A" key="Up">udesktop</Key>
+    <Key mask="A" key="Down">ddesktop</Key>
+    <Key mask="" key="Print">exec:shutter -s -c</Key>
+    <Key mask="4" key="e">exec:dolphin4</Key>
+    <Key mask="4" key="space">exec:xfce4-appfinder</Key>
+    <!-- Este comando "mask="4" key="e">exec:caja" es para lanzar el administrador de archivos
+    así como se lo hacía en Windows ("mask="4" es igual a la tecla de Windows o Super, y 
+    y key="e" es igual a "E"). 
+    En este ejemplo está "caja" pero usted lo pude cambiar por
+    el administrador de archivos que use, ejemplo: "mask="4" key="e">exec:nautilus" -->
+
+    <!-- Autoarranque de aplicaciones -->
+    <StartupCommand>bash $HOME/RisenPC-JWM/Script-StartUpApps.sh</StartupCommand>
+    <!-- El comando de autoarranque lo aprendí de (pero es una adaptación para este proyecto): -->
+    <!-- http://forum.tinycorelinux.net/index.php?topic=218.0 -->
+
+</JWM>

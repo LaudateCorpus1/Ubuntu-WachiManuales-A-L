@@ -1,0 +1,12 @@
+
+
+Dar Formato al Texto
+tavmjong.free.fr/INKSCAPE/MANUAL_v15/html_es/Text-Formatting.html
+
+Espaciado entre líneas: Los siguientes comandos afectan a todo el objeto de texto seleccionado. Los ajustes del
+espaciado están especificados en Píxeles de pantalla y por lo tanto, dependen del nivel de zoom utilizado en ese
+momento.
+Ctrl+Alt+>: La altura del objeto de texto seleccionado aumenta un Píxel de pantalla
+Ctrl+Alt+<: La altura del objeto de texto seleccionado disminuye un Píxel de pantalla
+Mayús.+Ctrl+Alt+>: La altura del objeto de texto seleccionado aumenta diez Píxeles de pantalla
+Mayús.+Ctrl+Alt+<: La altura del objeto de texto seleccionado disminuye diez Píxeles de pantalla 

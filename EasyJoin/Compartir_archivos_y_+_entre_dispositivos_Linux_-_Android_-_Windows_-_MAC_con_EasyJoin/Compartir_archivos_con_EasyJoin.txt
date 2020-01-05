@@ -1,0 +1,78 @@
+
+
+Compartir/Enviar/Recibir/Pasar/Transferir/Intercambiar archivos y carpetas (sin cable) entre dispositivos Linux/Android con EasyJoin (y también funciona en Windows, MAC OS X)
+
+
+Este tutorial es facil de aplicarlo en Ubuntu, Debian, Deepin, Linux Mint porque usan la administración de paquetes deb, pero para otros Sistemas Operativos Linux como como lo son Raspbian, CentOS, RedHat, Fedora, ustedes deben de buscar los comandos de instalación. Con todo pueden usar este tutorial como una guía (también se puede instalar en Windows, MAC OSX pero para esos sería otro tutorial)
+
+Este programa me parece a mi que es mejor que KDE Connect, bueno en realidad lo unico que me preocupa a mi es que no falle como me ha fallado algunas veces KDE Connect, y hasta la vez va bien, se llama EasyJoin
+
+INSTRUCCIONES:
+
+Entrar en esta dirección:
+
+https://easyjoin.net/linux.html
+
+Allí dice que uno debe instalar el mono, hagalo, allí dan este enlace:
+
+http://www.mono-project.com/download/stable/
+
+Allí vea la opción para su Sistema operativo. En mi caso es Linux, voy a instalarlo en la Distribución antiX 9 que está basa en Debian 10 Buster así que yo debo poner en la terminal:
+
+sudo apt-get install mono-complete
+
+Explicación.- En realidad en los repositorios de las distribuciones Linux si esta, ejemplo:
+
+https://packages.ubuntu.com/mono-complete
+https://packages.debian.org/buster/mono-complete
+http://packages.deepin.com/deepin/pool/main/m/mono/
+https://apps.fedoraproject.org/packages/s/mono-complete
+https://software.opensuse.org/package/mono-complete
+
+pero es necesaria la última versión para evitar errores de ejecución.
+
+Bueno, luego que está instalado debemos instalar el siguiente paquete llamado "gtk-sharp2", pongo en la terminal el siguiente comando:
+
+sudo apt install gtk-sharp2
+
+Ahora hay que descargar el ejecutable, deben hacerlo desde la página de ellos, el archivo que yo descargué se llama a esta fecha así:
+
+easyjoin-linux-v2_0.zip
+
+a este hay que descomprimirlo, hacerlo ejecutable y luego ejecutarlo. En la pagina de ellos hacen un resumen muy grande de esos pasos, lo pondré aquí como ejemplo para los sistemas operativos Linux que usan la administración de paquetes deb. Para el siguiente ejemplo supongamos que está en la carpeta "Descargas", abran la terminal y pongan (copien y peguen):
+
+cd ~
+mkdir EasyJoin
+unzip Descargas/easyjoin-linux-v*.zip -d EasyJoin
+cd ~/EasyJoin
+chmod +x EasyJoin.exe
+
+y para ejecutarlo poner:
+
+mono EasyJoin.exe
+
+Aunque mi me parece que lo más fácil es hacerlo desde algún administrador de archivos con clic derecho y "Extraer aquí" y entrar en esa carpeta y allí darle clic derecho al archivo "EasyJoin.exe" y en la pestaña permisos ponerlo como ejecutable y luego si entrar en ese lugar en una terminal y poner allí: "mono EasyJoin.exe"
+
+Y bueno hay algunas maneras de hacerlo, como sea al final se lo ejecuta desde la terminal para abrirlo.
+
+Ahora si ya podemos enviar archivos desde el celugar con android hasta un ordenador con Linux y viceversa desde un ordenador con Linux a un celular con Android o incluso desde ese mismo celular a un ordenador con Windows(debe instalarlo allí) y viceversa desde ese ordenador con Windows al celular Android, pero deben siempre estar en el mismo internet. Ah, y me olvidaba, también se puede instalar en MAC OSX.
+
+Es facil de usar, hay que abrir el programa en el celular y en el ordenador y allí aparecerá disponible en ambos y se pueden enviar o recivir archivos y viceversa. 
+
+Bueno creo que debería hacer un video sobre el momento de que uno ya está pasando los archivos pues las opciones son medias raras pero no difíciles de entender.
+
+Dios les bendiga
+
+CONSULTAS:
+
+[APP] EasyJoin - Connect your devices - Pg. 6 | Android Development and Hacking
+https://forum.xda-developers.com/android/apps-games/app-easyjoin-v1-0-connects-network-t3638988/page6
+
+Linux - EasyJoin
+https://easyjoin.net/linux.html
+
+[APP] EasyJoin - Connect your devices | Android Development and Hacking
+https://forum.xda-developers.com/android/apps-games/app-easyjoin-v1-0-connects-network-t3638988
+
+EasyJoin - Send Files Between Your Phone and PC Without Internet
+https://www.fossmint.com/easyjoin-send-files-between-your-phone-and-pc-without-internet/

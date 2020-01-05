@@ -1,0 +1,71 @@
+
+EDITAR EL ARCHIVO .jwmrc PARA AÑADIR EL MENU DE LAS APLICACIONES
+
+Edite el archivo de ejemplo que el programa instala en:
+
+/usr/share/doc/jwm/examples/example.jwmrc.gz
+
+Este debe descomprimirlo con el arministrador (por ejemplo) de archivos "Nautilus", con clic derecho y "Extraer aquí". Le quedará este archivo
+
+example.jwmrc
+
+Pongalo en su HOME y renombrelo a:
+
+.jwmrc
+
+Desde ese momento se ocultará, aplaste "Ctrl+H" para mostrar los archivos ocultos. Y debe editarlo, abralo con clic derecho abrir con gedit. Allí en esta entrada:
+
+
+<!-- The root menu. -->
+    <RootMenu onroot="12">
+        <Include>/etc/jwm/debian-menu</Include>
+        <Program icon="terminal.png" label="Terminal">xterm</Program>
+
+
+Cambie donde dice "/etc/jwm/debian-menu" por la ruta 
+
+
+<!-- The root menu. -->
+    <RootMenu onroot="12">
+        <Include>/home/wachin/.cache/jwm-menu.cache</Include>
+        <Program icon="terminal.png" label="Terminal">xterm</Program>
+
+
+USO DEL PROGRAMA
+
+Para generar el menú en HOME debes poner:
+
+xdgmenumaker -n -i -f jwm > ~/appmenu
+
+para genrarlo en mi carpeta de mi proyecto "/RisenPC-JWM":
+
+xdgmenumaker -n -i -f jwm > $HOME/RisenPC-JWM/appmenu
+
+
+CREAR UN SCRIPT:
+
+#!/bin/bash
+xdgmenumaker -n -i -f jwm > $HOME/RisenPC-JWM/appmenu && jwm -restart
+
+
+Este script añadirlo al menú de jwm
+
+editar .jwmrc y añadir:
+
+    <!-- The root menu. -->
+    <RootMenu onroot="12">
+        <Include>$HOME/RisenPC-JWM/appmenu</Include>
+
+
+Att:
+
+Washington Indacochea Delgado
+Dios les bendiga
+
+
+
+
+
+ 
+
+

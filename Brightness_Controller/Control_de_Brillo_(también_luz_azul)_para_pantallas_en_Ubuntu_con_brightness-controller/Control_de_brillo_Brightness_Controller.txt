@@ -1,0 +1,74 @@
+
+Control de Brillo (también luz azul) para pantallas en Ubuntu con brightness-controller
+https://facilitarelsoftwarelibre.blogspot.com/2017/06/control-de-brillo-para-pantallas-en.html
+Publicado por Washington Indacochea Delgado
+
+RESUMEN:
+Tengo un monitor externo al cual yo cuando lo uso siembre manualmente le ando regulando el brillo para ajustarlo de acuerdo si es de día o de noche o depende de las circunstancias. También para controlar la luz azul. En Windows se menciona el siguiente programa flux para controlar el brillo:
+
+Como reducir el brillo de tu pantalla
+https://www.youtube.com/watch?v=gOBTxXImddk
+
+ 
+
+Sin embargo ese programa es para hacerlo de manera automática lo cual no me gusta porque las condiciones para mi pueden variar ejemplo de un cuarto a otro donde tenga la laptop con el monitor externo: 
+
+ 
+
+
+
+
+así que aunque está disponible para Linux el programa mencionado:
+
+How to Install f.lux in Ubuntu 16.04, Ubuntu 15.10 | UbuntuHandbook
+http://ubuntuhandbook.org/index.php/2016/03/install-f-lux-in-ubuntu-16-04/
+
+prefiero hacerlo de manera manual con el programa Brightness Controller:
+
+ 
+Nota: Como vera en la imágen estoy ajustando el brillo del monitor secundario, es decir el externo (yo uso un ViewSonic conectado a mi laptop Dell), esto de acuerdo a la luz de mi cuarto y depende de si el día está soleado o hay nubes o si estoy en un cuarto o en otro o en otro lugar. Por eso lo hago manualmente, me parece a mí lo mejor, sólo que hay que saber más
+
+Visto en la página:
+https://www.fossmint.com/brightness-controller-for-ubuntu/
+
+
+INSTALACIÓN:
+Ponga en la terminal linea por linea lo siguiente:
+sudo add-apt-repository ppa:apandada1/brightness-controller
+sudo apt-get update 
+sudo apt-get install brightness-controller
+ luego busquelo entre los programas instalados y úselo de acuerdo a sus necesidades.
+
+También me parece un buen video el siguiente:
+
+Cualquier pantalla puede dañar tu visión, cuidado.
+https://www.youtube.com/watch?v=f8g1O8Gk5Dw
+
+ 
+
+
+Otros usos, ejemplo controla la lúz azúl
+En el siguiente link les dejo información sobre la lúz azúl, espero puedan ver todo el contendido y sacar sus propias conclusiones:
+
+https://www.youtube.com/playlist?list=PLnLd9ezaWbnxUPaPwwVRpaDbjG8w35-Wc
+
+Me he dado cuenta de que este programa también puede controlar la luz azul, ejemplo para mi laptop hice un video:
+
+
+
+
+
+ 
+
+Red = Rojo
+Gren =  Verde
+Blue = Azul
+
+
+Nota: Si ustedes ven los videos de la lista, esto se debe aplicar en la noche, para poder dormir bien.
+
+Mi experiencia de uso
+Me he dado cuenta de lo siguiente, este programa no controla directamente la luz del monitor así como lo hace el control que hizo el fabricante, si lo usas te podrás dar cuenta en una laptop, la diferencia que hay en controlar el brillo con el programa y con los botones que hizo el fabricante. Por esta razón yo uso ambos. Saben, el monitor externo que yo uso tiene control de los tres colores, rojo, verde, azul, allí yo controlo la luz azul, pero aquí esta Laptop no tiene, uso el programa. También les pongo otro ejemplo, mi laptop en el control de brillo que hizo el fabricante tiene un minimo, pero si yo quiero ir más abajo de ese mínimo no puedo con los botones, pero con el programa si puedo.
+
+Dios les bendiga
+

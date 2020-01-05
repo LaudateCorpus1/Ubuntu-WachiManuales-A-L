@@ -1,0 +1,9 @@
+http://linuxers.org/tutorial/how-compress-audio-files-using-ffmpeg
+
+ffmpeg -i inputfile.mp3 -ab 128 outputfile.mp3
+
+
+Entonces sería así de poner en la ventana del FFmultivoncerter:
+
+
+-ab 128k -ar 44100 -ac 2

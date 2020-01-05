@@ -1,0 +1,20 @@
+
+To install fontmatrix in Ubuntu 16.04 
+
+First download libicu52 from (chose 32 or 64 bits):
+
+http://packages.ubuntu.com/trusty/libicu52
+
+install it with gdebi
+
+Next download fontmatrix from (chose 32 or 64 bits):
+
+http://packages.ubuntu.com/trusty/fontmatrix
+
+install it with gdebi
+
+OK
+
+
+From:
+https://www.taringa.net/posts/linux/19092452/Fontmatrix-en-Ubuntu-Wily-15-10.html

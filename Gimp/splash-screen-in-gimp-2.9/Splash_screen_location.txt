@@ -1,0 +1,22 @@
+
+
+Gimp 2.9 viene con una imágen fea de splash screen:
+
+Lo encontré en synaptic:
+
+/usr/share/gimp/2.0/images/gimp-splash.png
+
+en esta versión de desarrollo no puedo solo borrarlo y añadir otra imagen en:
+
+.gimp-2.8/splashes/
+
+sino que debo reemplazarla con la que yo quiero, con el mismo formato png y el mismo nombre que tenía la otra.
+
+****
+Así:
+****
+
+sudo cp gimp-splash.png /usr/share/gimp/2.0/images/gimp-splash.png 
+
+
+

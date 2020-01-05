@@ -1,0 +1,24 @@
+Cambiar el lugar de HOME en Ubuntu (Mis Documentos en Windows)
+Publicado por Washington Indacochea Delgado
+Lo siguiente lo copio desde:
+
+How To Harmonize Your Dual-Boot Setup for Windows and Ubuntu
+http://www.howtogeek.com/howto/35807/how-to-harmonize-your-dual-boot-setup-for-windows-and-ubuntu/
+
+
+"Configure Your Subfolders (Linux)
+Open up terminal and enter the following command:
+
+gedit .config/user-dirs.dirs
+
+This is the file where your “special” folders in your home directory are defined.
+
+user-dirs before
+
+You can edit this to your liking.  In place of where you see “$HOME/Downloads” you would put in an absolute folder location, like “/media/storage/Downloads”.  Go ahead and create those folders, or whatever folders you’d like to call them, and put the path down for each of these.  Here’s what the finished edit should look like:
+
+user-dirs after
+
+Click save, and we’re done the crux of the configuration.  You may need to reboot for these changes to take effect, but you can just boot into Windows to finish out the process in the next section.
+
+Basically, now when you browse and put files in your “Downloads” folder, they’ll actually go to your storage drive’s “Downloads” folder.  Anything in your home folder itself will stay in /home/yourusername/, not on your storage drive.  A few of the folders, like “Desktop” and “Templates,” probably won’t benefit from this treatment, either.  Templates are rarely used, the desktop usually gets cluttered with shortcuts and the like, and the Windows desktop isn’t elegantly redirected, unfortunately"

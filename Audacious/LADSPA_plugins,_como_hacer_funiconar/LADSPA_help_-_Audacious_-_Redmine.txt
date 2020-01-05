@@ -1,0 +1,8 @@
+
+
+http://redmine.audacious-media-player.org/boards/1/topics/462
+
+
+1) Did you type "/usr/lib/ladspa" exactly (without the quotation marks) and press enter?
+
+2) Do you have LADSPA plugins installed under /usr/lib/ladspa, does your user account have read permission for them, and are they the correct architecture for your machine?

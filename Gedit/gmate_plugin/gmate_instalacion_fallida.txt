@@ -1,0 +1,14 @@
+software recommendation - True column-mode (block-selection and editing) text editor solution? - Ask Ubuntu
+https://askubuntu.com/questions/6451/true-column-mode-block-selection-and-editing-text-editor-solution
+
+down vote
+Use a gEdit with gmate and plugins. You'll get the TextMate of Linux.
+
+sudo apt-get install gedit gedit-plugins
+cd ~/Downloads
+git clone http://github.com/gmate/gmate.git
+cd gmate
+sh ./install.sh
+With this "slight" modification gEdit really rocks.
+
+

@@ -1,0 +1,7 @@
+
+
+Applet = Componente de software pequeño que se ejecuta bajo el control de una aplicación más grande que lo contiene (como un navegador web)
+
+
+
+

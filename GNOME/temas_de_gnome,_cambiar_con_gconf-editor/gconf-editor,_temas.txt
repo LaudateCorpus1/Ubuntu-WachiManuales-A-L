@@ -1,0 +1,19 @@
+
+Gnome3 eng — База знаний проекта Russian Fedora
+https://wiki.russianfedora.pro/index.php?title=Gnome3_eng
+
+Gconf-editor or gconftool-2
+
+
+gconf-editor
+In fallback-mode the metacity window manager is used. You can find its settings in gconf.
+
+To change metacity theme run
+
+$ gconf-editor
+
+find the key /desktop/gnome/interface/gtk_theme and type in the theme name.
+
+The name of the theme is equal to the name of its folder in /usr/share/themes/.
+
+Additional metacity themes can be installed from official repos. Check the list yum list \*theme\*

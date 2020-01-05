@@ -1,0 +1,39 @@
+
+****************************************************
+Cómo instalar los temas de antiX para Fluxbox Ubuntu
+****************************************************
+
+Ponga en la terminal uno por uno estas ocho líneas ejecutandolas:
+
+
+sudo cp /usr/share/fluxbox/styles/ubuntu-light /tmp
+sudo rm -fr /usr/share/fluxbox/styles/*
+cd /tmp
+wget -c http://repo.antixlinux.com/stretch/pool/main/f/fluxbox-themes-antix/fluxbox-themes-antix_0.2.0_all.deb
+sudo dpkg -i fluxbox-themes-antix_*.deb
+cd
+sudo cp /tmp/ubuntu-light /usr/share/fluxbox/styles/
+clear
+
+
+Nota: Con frecuentica actualizan los archivos deb así que hay que revisar la siguiente dirección:
+
+http://repo.antixlinux.com/stretch/pool/main/f/fluxbox-themes-antix/
+
+para ver si han actualizado los archivos, no sea que hayan cambiado los nombres y ya no se pueda descargar con wget. Si fuera así se debe actualizar el nombre del archivo allí en la linea cuatro.
+
+EXPLICACIONES:
+"sudo cp /usr/share/fluxbox/styles/ubuntu-light /tmp" .- Esto es para copiar el archivo "ubuntu-light" a la carpeta temporal y dejarlo allí por un momento hasta mientras borro todos los temas originales
+"sudo rm -fr /usr/share/fluxbox/styles/*" .- Para borrar todos los temas originales
+"cd /tmp" .- Para ir al directorio temporal
+"wget -c http://repo.antixlinux.com/stretch/pool/main/f/fluxbox-themes-antix/fluxbox-themes-antix_0.2.0_all.deb" .- Para descargar los temas para fluxbox de los repositorios de antiX
+"sudo dpkg -i fluxbox-themes-antix_*.deb" .- Para instalar los temas de fluxbox
+"cd" para salir de la carpeta temporal y volver al inicio
+"sudo cp /tmp/ubuntu-light /usr/share/fluxbox/styles/" .- Para copiar el respaldo que habíamos hecho del tema principal a la carpeta de los estilos.
+
+Fuente:
+Instalé synaptic en antiX(Virtualizado en VirtualBox) y allí me di cuenta que estaba ese paquete al lado de Fluxbox
+
+
+
+

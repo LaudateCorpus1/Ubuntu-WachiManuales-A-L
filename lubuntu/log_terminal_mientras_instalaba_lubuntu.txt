@@ -1,0 +1,93 @@
+wachin@wachin:~$ sudo synaptic
+[sudo] password for wachin: 
+wachin@wachin:~$ sudo apt-get install --no-install-recommends lubuntu-desktop
+Leyendo lista de paquetes... Hecho
+Creando árbol de dependencias       
+Leyendo la información de estado... Hecho
+Los paquetes indicados a continuación se instalaron de forma automática y ya no son necesarios.
+  libc-ares2 ofono
+Utilice «sudo apt autoremove» para eliminarlos.
+Se instalarán los siguientes paquetes adicionales:
+  abiword abiword-common adwaita-icon-theme-full fcitx fcitx-bin
+  fcitx-config-common fcitx-config-gtk2 fcitx-data fcitx-frontend-gtk2
+  fcitx-module-dbus fcitx-module-x11 fcitx-modules fcitx-ui-classic gnumeric
+  gnumeric-common gtk3-engines-unico guvcview hardinfo
+  indicator-application-gtk2 libabiword-3.0 libchamplain-0.12-0
+  libchamplain-gtk-0.12-0 libcompfaceg1 libfcitx-config4 libfcitx-core0
+  libfcitx-gclient0 libfcitx-utils0 libgoffice-0.10-10
+  libgoffice-0.10-10-common libgsf-1-114 libgsf-1-common libguvcview-1.1-1
+  libloudmouth1-0 libonig2 libopts25 libots0 libpisock9 libpresage-data
+  libpresage1v5 libsdl2-2.0-0 libsndio6.1 libtelepathy-glib0 libtidy-0.99-0
+  libuniconf4.6 libwv-1.2-4 libwvstreams4.6-base libwvstreams4.6-extras
+  light-locker light-locker-settings lubuntu-artwork lubuntu-artwork-16-04
+  lubuntu-core lubuntu-default-session lubuntu-default-settings
+  lubuntu-icon-theme lubuntu-lxpanel-icons lubuntu-software-center
+  lxpanel-indicator-applet-plugin lxsession lxsession-default-apps
+  lxsession-logout lxshortcut lxtask mtpaint ntp plymouth-theme-lubuntu-logo
+  plymouth-theme-lubuntu-text python-aptdaemon python-aptdaemon.gtk3widgets
+  python-debian python-defer python-psutil python-pysqlite2 sylpheed
+  sylpheed-doc sylpheed-i18n sylpheed-plugins transmission wvdial xbacklight
+  xpad
+Paquetes sugeridos:
+  fcitx-m17n fcitx-tools gnumeric-plugins-extra jpilot pilot-link kpilot
+  gnome-pilot evolution claws-mail sndiod amixer indicator-messages-gtk2
+  indicator-sound-gtk2 ntp-doc python-psutil-doc python-pysqlite2-doc
+  python-pysqlite2-dbg claws-mail-tools bogofilter bsfilter
+Paquetes recomendados:
+  abiword-plugin-grammar fcitx-config-gtk | kde-config-fcitx
+  fcitx-frontend-all | fcitx-frontend-fbterm fcitx-frontend-gtk3
+  fcitx-module-kimpanel fcitx-module-lua gnumeric-doc uvcdynctrl presage
+  lxde-common xfonts-100dpi | xfonts-75dpi | xfonts-100dpi-transcoded
+  | xfonts-75dpi-transcoded
+Los siguientes paquetes se ELIMINARÁN:
+  lxqt-common
+Se instalarán los siguientes paquetes NUEVOS:
+  abiword abiword-common adwaita-icon-theme-full fcitx fcitx-bin
+  fcitx-config-common fcitx-config-gtk2 fcitx-data fcitx-frontend-gtk2
+  fcitx-module-dbus fcitx-module-x11 fcitx-modules fcitx-ui-classic gnumeric
+  gnumeric-common gtk3-engines-unico guvcview hardinfo
+  indicator-application-gtk2 libabiword-3.0 libchamplain-0.12-0
+  libchamplain-gtk-0.12-0 libcompfaceg1 libfcitx-config4 libfcitx-core0
+  libfcitx-gclient0 libfcitx-utils0 libgoffice-0.10-10
+  libgoffice-0.10-10-common libgsf-1-114 libgsf-1-common libguvcview-1.1-1
+  libloudmouth1-0 libonig2 libopts25 libots0 libpisock9 libpresage-data
+  libpresage1v5 libsdl2-2.0-0 libsndio6.1 libtelepathy-glib0 libtidy-0.99-0
+  libuniconf4.6 libwv-1.2-4 libwvstreams4.6-base libwvstreams4.6-extras
+  light-locker light-locker-settings lubuntu-artwork lubuntu-artwork-16-04
+  lubuntu-core lubuntu-default-session lubuntu-default-settings
+  lubuntu-desktop lubuntu-icon-theme lubuntu-lxpanel-icons
+  lubuntu-software-center lxpanel-indicator-applet-plugin lxsession
+  lxsession-default-apps lxsession-logout lxshortcut lxtask mtpaint ntp
+  plymouth-theme-lubuntu-logo plymouth-theme-lubuntu-text python-aptdaemon
+  python-aptdaemon.gtk3widgets python-debian python-defer python-psutil
+  python-pysqlite2 sylpheed sylpheed-doc sylpheed-i18n sylpheed-plugins
+  transmission wvdial xbacklight xpad
+0 actualizados, 82 nuevos se instalarán, 1 para eliminar y 11 no actualizados.
+Se necesita descargar 36,1 MB de archivos.
+Se utilizarán 155 MB de espacio de disco adicional después de esta operación.
+¿Desea continuar? [S/n] s
+Des:1 http://ec.archive.ubuntu.com/ubuntu xenial/universe i386 lxsession i386 0.5.2-0ubuntu3 [101 kB]
+Des:2 http://ec.archive.ubuntu.com/ubuntu xenial/universe i386 gtk3-engines-unico i386 1.0.3+14.04.20140109-0ubuntu1 [8.550 B]
+Des:3 http://ec.archive.ubuntu.com/ubuntu xenial-updates/universe i386 lubuntu-artwork-16-04 all 0.61.1 [901 kB]
+Des:4 http://ec.archive.ubuntu.com/ubuntu xenial-updates/universe i386 lubuntu-lxpanel-icons all 0.61.1 [53,4 kB]
+Des:5 http://ec.archive.ubuntu.com/ubuntu xenial-updates/universe i386 lubuntu-artwork all 0.61.1 [852 kB]
+Des:6 http://ec.archive.ubuntu.com/ubuntu xenial-updates/universe i386 adwaita-icon-theme-full all 3.18.0-2ubuntu3.1 [8.020 kB]                             
+Des:7 http://ec.archive.ubuntu.com/ubuntu xenial-updates/universe i386 lubuntu-icon-theme all 0.61.1 [1.102 kB]                                             
+Des:8 http://ec.archive.ubuntu.com/ubuntu xenial/universe i386 lxsession-logout i386 0.5.2-0ubuntu3 [14,3 kB]                                               
+Des:9 http://ec.archive.ubuntu.com/ubuntu xenial/universe i386 xbacklight i386 1.2.1-1build1 [8.086 B]                                                      
+Des:10 http://ec.archive.ubuntu.com/ubuntu xenial/universe i386 lubuntu-default-settings all 0.46 [20,8 kB]                                                 
+Des:11 http://ec.archive.ubuntu.com/ubuntu xenial/universe i386 gnumeric-common all 1.12.28-1 [2.582 kB]                                                    
+Des:12 http://ec.archive.ubuntu.com/ubuntu xenial/universe i386 libgsf-1-common all 1.14.36-1 [96,1 kB]                                                     
+Des:13 http://ec.archive.ubuntu.com/ubuntu xenial/universe i386 libgsf-1-114 i386 1.14.36-1 [109 kB]                                                        
+Des:14 http://ec.archive.ubuntu.com/ubuntu xenial/universe i386 libgoffice-0.10-10-common all 0.10.28-1 [651 kB]                                            
+Des:15 http://ec.archive.ubuntu.com/ubuntu xenial/universe i386 libgoffice-0.10-10 i386 0.10.28-1 [1.446 kB]                                                
+Des:16 http://ec.archive.ubuntu.com/ubuntu xenial/universe i386 gnumeric i386 1.12.28-1 [2.449 kB]                                                          
+Des:17 http://ec.archive.ubuntu.com/ubuntu xenial/universe i386 libonig2 i386 5.9.6-1 [91,2 kB]                                                             
+Des:18 http://ec.archive.ubuntu.com/ubuntu xenial/main i386 libopts25 i386 1:5.18.7-3 [61,0 kB]                                                             
+Des:19 http://ec.archive.ubuntu.com/ubuntu xenial/main i386 ntp i386 1:4.2.8p4+dfsg-3ubuntu5 [525 kB]                                                       
+Des:20 http://ec.archive.ubuntu.com/ubuntu xenial/universe i386 libchamplain-0.12-0 i386 0.12.13-1 [102 kB]                                                 
+Des:21 http://ec.archive.ubuntu.com/ubuntu xenial/universe i386 libchamplain-gtk-0.12-0 i386 0.12.13-1 [6.740 B]                                            
+Des:22 http://ec.archive.ubuntu.com/ubuntu xenial/universe i386 libwv-1.2-4 i386 1.2.9-4.2 [124 kB]                                                         
+Des:23 http://ec.archive.ubuntu.com/ubuntu xenial-updates/universe i386 libabiword-3.0 i386 3.0.1-6ubuntu0.16.04.1 [2.105 kB]                               
+52% [23 libabiword-3.0 1.686 kB/2.105 kB 80%]                                                                                                   281 kB/s 53s^C
+wachin@wachin:~$ 

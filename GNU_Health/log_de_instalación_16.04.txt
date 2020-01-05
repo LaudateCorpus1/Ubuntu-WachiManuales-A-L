@@ -1,0 +1,31 @@
+
+sudo su
+
+apt-get install build-essential python-dev python-pip \
+    libxml2-dev libxslt1-dev libldap2-dev libsasl2-dev python-ldap bsdtar \
+    python-imaging python2.7-cracklib postgresql postgresql-server-dev-all libjpeg-dev
+
+
+Leyendo lista de paquetes... Hecho
+Creando árbol de dependencias       
+Leyendo la información de estado... Hecho
+Nota, seleccionando «python-cracklib» en lugar de «python2.7-cracklib»
+build-essential ya está en su versión más reciente (12.1ubuntu2).
+postgresql ya está en su versión más reciente (9.5+173).
+fijado postgresql como instalado manualmente.
+python-dev ya está en su versión más reciente (2.7.11-1).
+fijado python-dev como instalado manualmente.
+python-imaging ya está en su versión más reciente (3.1.2-0ubuntu1).
+python-pip ya está en su versión más reciente (8.1.1-2ubuntu0.2).
+fijado python-pip como instalado manualmente.
+
+
+Se instalarán los siguientes paquetes NUEVOS:
+  bsdtar comerr-dev dctrl-tools icu-devtools krb5-multidev libgssrpc4
+  libicu-dev libjpeg-dev libjpeg-turbo8-dev libjpeg8-dev libkadm5clnt-mit9
+  libkadm5srv-mit9 libkdb5-8 libldap2-dev libpq-dev libsasl2-dev libssl-dev
+  libssl-doc libxml2-dev libxslt1-dev postgresql-server-dev-9.5
+  postgresql-server-dev-all python-cracklib python-ldap zlib1g-dev
+ 
+ 
+

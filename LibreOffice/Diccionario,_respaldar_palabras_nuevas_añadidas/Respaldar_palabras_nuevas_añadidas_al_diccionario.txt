@@ -1,0 +1,9 @@
+
+
+Cuando añades una nueva palabra al diccionario en libreoffice éste crea la carpeta wordbook y crea un archivo standard.dic:
+
+.config/libreoffice/4/user/wordbook/standard.dic 
+
+en este archivo se añadirán una por una las palabras nuevas que vayamos añadiendo, éste archivo hay que respaldarlo
+
+Nota: Si alguna vez agregaste mal una palabra o quierer borrar alguna, ese archivo se lo puede editar con algún editor de texto como gedit, pluma, mousepad, kate, etc

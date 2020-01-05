@@ -1,0 +1,19 @@
+caja (administrador de archivos), mensaje de alerta: .local/share/gvfs-metadata/home: open: Permiso denegado
+
+wachin@Dell-Inspiron-1750:~$ caja
+Initializing caja-dropbox 1.12.0
+
+(caja:3552): GVFS-WARNING **: can't init metadata tree /home/wachin/.local/share/gvfs-metadata/home: open: Permiso denegado
+
+
+SOLUCIÓN:
+
+sudo chown user.user /home/user/.local/share/gvfs-metadata/home
+
+ponerle el usuario de uno:
+
+sudo chown wachin.wachin /home/wachin/.local/share/gvfs-metadata/home
+
+
+
+

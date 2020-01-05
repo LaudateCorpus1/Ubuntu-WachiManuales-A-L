@@ -1,0 +1,6 @@
+
+
+Krita 3 si hay para Ubuntu 17.04 (zesty) de 32 y 64 bits 
+(además incluido con el plugin visor de imagen para nautilus
+que se llama krita-nautilus-thumbnailer)
+en https://launchpad.net/~kritalime/+archive/ubuntu/ppa

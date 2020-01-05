@@ -1,0 +1,39 @@
+
+
+Lo copié de aquí:
+
+http://cybergodfy.blogspot.com/
+
+lo puse en mi blogger para sacar el código:
+
+
+<br />
+<br />
+<h3 class="post-title entry-title" itemprop="name" style="background-color: #a8d6f6; color: #1a222a; font-family: 'Coming Soon'; font-size: 18px; font-stretch: normal; font-weight: normal; margin: 0px; position: relative;">
+<a href="http://cybergodfy.blogspot.com/2013/07/bienvenidos.html" style="color: #eb1111; text-decoration: none;">Bienvenidos</a></h3>
+<div class="post-header" style="background-color: #a8d6f6; color: #999999; font-family: 'Cherry Cream Soda'; font-size: 10.8px; line-height: 1.6; margin: 0px 0px 1.5em;">
+<div class="post-header-line-1">
+</div>
+</div>
+<div class="post-body entry-content" id="post-body-5742573601157894538" itemprop="articleBody" style="background-color: #a8d6f6; color: #1a222a; font-family: 'Cherry Cream Soda'; font-size: 11.88px; line-height: 1.4; position: relative; width: 608.4px;">
+<div style="text-align: center;">
+<div style="text-align: left;">
+<div style="text-align: center;">
+<iframe allowfullscreen="" frameborder="0" height="283" src="https://www.youtube.com/embed/1_lvKXdlbmg?autoplay=1" width="504"></iframe><br /><div class="separator" style="clear: both;">
+<br /></div>
+<div class="separator" style="clear: both;">
+Hola, me llamo Godfy.</div>
+<div class="separator" style="clear: both;">
+Soy el nuevo Cantante Infantil Cristiano</div>
+<div class="separator" style="clear: both;">
+Fui Creado el 15 de Abril del 2013 por Fabian Correa Sanguino</div>
+<div class="separator" style="clear: both;">
+Espero que te gusten mucho mis canciones!</div>
+<div class="separator" style="clear: both;">
+Si lo que quieres es Escuchar Música Infantil Cristiana, has llegado al lugar indicado.</div>
+<div class="separator" style="clear: both;">
+Acá podrás escuchar música infantil cristiana .</div>
+</div>
+</div>
+</div>
+</div> 

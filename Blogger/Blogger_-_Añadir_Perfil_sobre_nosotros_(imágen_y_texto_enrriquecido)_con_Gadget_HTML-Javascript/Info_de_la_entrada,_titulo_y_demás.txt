@@ -1,0 +1,7 @@
+
+Blogger - Añadir Perfil sobre nosotros (imágen y texto enrriquecido) con Gadget HTML/Javascript
+
+En algunos blogs que he visto, al final de la entrada el autor a añadido un texto de la descripción de él (Perfil), este tutorial es para hacer eso el con Gadget HTML/Javascript
+
+
+Blogger, Perfil, Profile, about, sobre, nosotros, We, imágen, texto, foto, Gadget, HTML, text, leyenda, 

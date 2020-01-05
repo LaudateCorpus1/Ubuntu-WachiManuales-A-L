@@ -1,0 +1,20 @@
+
+Aplicaciones que sólo hay para Ubuntu 17.04 (Zesty)
+
+RESUMEN:
+
+Hay aplicaciones que sólo hay para Ubuntu 17.04 (Zesty)
+
+El escritorio de Deepin Linux
+
+https://launchpad.net/~leaeasy/+archive/ubuntu/dde
+
+sudo add-apt-repository ppa:leaeasy/dde
+sudo apt-get update
+apt-get install dde
+
+Donde hay aplicaciones como
+
+Deepin File Manager
+Deepin Image Viewer
+Deepin Screenshot

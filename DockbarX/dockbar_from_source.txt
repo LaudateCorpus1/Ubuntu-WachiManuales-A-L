@@ -1,0 +1,16 @@
+DockBarX XFCE - YouTube
+https://www.youtube.com/watch?time_continue=20&v=tJQ0y2XMoMw
+
+########################
+# xfce-dockbarx-plugin #
+########################
+
+sudo apt install python-gconf valac libxfconf-0-2 libxfconf-0-dev xfce4-panel-dev
+
+./waf configure --prefix=/usr
+./waf build
+sudo ./waf install
+
+S U B S C R I B E for weekly Linux video. 
+
+working fine in UbuntuStudio 17.04

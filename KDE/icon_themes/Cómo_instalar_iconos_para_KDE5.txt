@@ -1,0 +1,14 @@
+
+
+Cómo instalar iconos para KDE5
+
+~/.local/share/icons 
+for Plasma 5
+
+~/.local/share/wallpapers/
+
+
+visto en:
+
+Nitrux/luv-icon-theme: Lüv is the spiritual successor to Flattr, a flat but complex icon theme for freedesktop environments.
+https://github.com/Nitrux/luv-icon-theme

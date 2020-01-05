@@ -1,0 +1,44 @@
+
+
+Como crear un lanzador .desktop para una aplicación java en Ubuntu
+
+La siguiente aplicación ChordSmith es para Windows:
+
+http://www.statistics101.net/chordsmith/
+
+ y está escrita en Java, pero se puede usar en Linux Ubuntu sin ningún problema dandole clic derecho al ejecutable .jar, pero para que funcione bien el lanzador que la aplicación crea hay que hacer un lanzador
+
+ahora revise uno de los lanzadores que creó la aplicación en:
+
+.local/share/applications/ChordSmith*.desktop
+
+Ahora ponga en la terminal:
+
+gedit ~/.local/share/applications/ChordSmith.desktop
+
+y cambie en el siguiente contendio con las rutas "Exec, Icon" que creó el instalador con este que estamos creando. Para mi es así (note que he añadido Path= y la ruta de .jar pues es necesario):
+
+[Desktop Entry]
+Name=ChordSmith
+Comment=Double-click to start ChordSmith
+Exec=java -jar /home/wachin/Apps-Linux-Instaladas/ChordSmith/ChordSmith_INTL.jar
+Path=/home/wachin/Apps-Linux-Instaladas/ChordSmith/
+Icon=/home/wachin/Apps-Linux-Instaladas/ChordSmith/help/AboutChordSmith.png
+Terminal=false
+Type=Application
+Categories=Multimedia;Office
+
+
+guarde el archivo
+
+Y además borre manualmente los otros que había creado la aplicación en:
+
+.local/share/applications/
+
+CONSULTAS:
+
+launcher - How do I create a .desktop file for a .jar file? - Ask Ubuntu
+https://askubuntu.com/questions/192477/how-do-i-create-a-desktop-file-for-a-jar-file
+
+[SOLVED] How to set working directory for app locked to launcher?
+https://ubuntuforums.org/showthread.php?t=2253822

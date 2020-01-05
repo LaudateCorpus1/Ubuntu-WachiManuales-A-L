@@ -1,0 +1,18 @@
+
+
+cpu load - apport-gtk 100% CPU usage on startup on Ubuntu 14.04 LTS - Ask Ubuntu
+http://askubuntu.com/questions/454187/apport-gtk-100-cpu-usage-on-startup-on-ubuntu-14-04-lts
+
+
+apport-gtk
+
+
+Take a look and delete all files in /var/crash/:
+
+rm /var/crash/*
+I suddenly had the same problem apport-gtk taking 100% on every restart.
+
+Seemed there was a huge (2GB+) bogus crash file in /var/crash/ that couldn't be parsed. After several minutes of waiting I always ended up with this rather mysterious dialog:
+
+This problem report is damaged and cannot be processed. Error('Incorrect padding',)
+After I deleted the file in /var/crash/ both issues were gone.

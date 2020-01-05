@@ -1,0 +1,13 @@
+
+Saving webpages as mhtml(mht) in Chrome
+by Ilian Sapundshiev published on 11 January 2013
+https://www.tagspaces.org/blog/mhtml-saving-chrome/
+
+Of course, TagSpaces is a great tool for MHTML file organization on many platforms, because it features an integrated MHTML viewer, but the question here is how you can save web pages as handy MHTML files directly out of the Chrome browser. Here you will find the answer of this question for the both browsers - Chrome and Cromium respectively. Please note that after this activation you will not able to save website in HTML anymore.
+
+Start the Chrome/Chromium browser
+Navigate to “chrome://flags”
+Find the entry “Save Page as MHTML”
+Click “enable”
+Restart your browser
+That’s it, now the web pages will be saved by default as MHTML

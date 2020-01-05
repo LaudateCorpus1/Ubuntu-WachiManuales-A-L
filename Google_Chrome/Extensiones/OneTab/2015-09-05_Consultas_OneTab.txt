@@ -1,0 +1,33 @@
+
+
+http://superuser.com/questions/138331/using-ffmpeg-to-cut-up-video | command line - Using ffmpeg to cut up video - Super User
+https://wiki.actiona.tools/doku.php?id=en:actions | en:actions [Actiona Wiki]
+https://wiki.actiona.tools/doku.php?id=fr:actionaz_conditionals | fr:actionaz_conditionals [Actiona Wiki]
+http://www.ubuntugeek.com/actionaz-emulate-human-activity-through-a-powerful-gui-and-javascript.html | Actionaz – Emulate human activity through a powerful GUI and JavaScript | Ubuntu Geek
+http://www.pcworld.com/article/2863497/how-to-install-microsoft-fonts-in-linux-office-suites.html | How to install Microsoft fonts in Linux office suites | PCWorld
+http://guide2office.com/1456/how-to-extract-media-from-powerpoint-files-works-for-both-windows-and-mac/ | How to Extract Media from PowerPoint Files (works for both Windows and Mac) — Guide 2 Office
+http://unix.stackexchange.com/questions/177294/how-to-setup-and-use-yowsup-cli-to-to-get-whatsapp-authentication-code | python - How to setup and use yowsup-cli to to get Whatsapp authentication code? - Unix & Linux Stack Exchange
+http://www.instructables.com/id/WhatsApp-on-Raspberry-Pi/ | WhatsApp on Raspberry Pi
+https://en.wikipedia.org/wiki/Mobile_country_code | Mobile country code - Wikipedia, the free encyclopedia
+http://www.taringa.net/post/linux/17890901/Whatsapp-en-linux-con-Pidgin-Yapa.html | Whatsapp en linux con Pidgin + Yapa - Taringa!
+http://askubuntu.com/questions/633630/installation-problem-with-whats-app-in-ubuntu-14-04 | whatsapp - Installation problem with whats app in ubuntu 14.04 - Ask Ubuntu
+http://askubuntu.com/questions/459012/whatsapp-help-for-ubuntu-14-04 | command line - Whatsapp Help for Ubuntu 14.04! - Ask Ubuntu
+http://askubuntu.com/questions/459012/whatsapp-help-for-ubuntu-14-04 | command line - Whatsapp Help for Ubuntu 14.04! - Ask Ubuntu
+
+http://cofenac.org/bibliografia/Base-de-Datos-Bibliograficos-sobre-cafe-sustentable.pdf | cofenac.org/bibliografia/Base-de-Datos-Bibliograficos-sobre-cafe-sustentable.pdf
+http://www.iniap.gob.ec/nsite/images/documentos/Mejora_Gen%C3%A9tica_caf%C3%A9_experiencias_Ecuador%20(1).pdf | www.iniap.gob.ec/nsite/images/documentos/Mejora_Genética_café_experiencias_Ecuador (1).pdf
+http://forums.steampowered.com/forums/showthread.php?t=1696616 | Do you notice a difference between 60Hz and 75Hz while gaming? - Steam Users' Forums
+http://ccm.net/faq/361-how-to-reduce-eyestrain | How to reduce eyestrain
+http://www.candlepowerforums.com/vb/showthread.php?31742-60Hz-causes-eye-strain-and-headaches | 60Hz causes eye strain and headaches.
+http://forums.anandtech.com/showthread.php?t=1426995 | 60hz or 75hz refresh rate? - AnandTech Forums
+http://ubuntuhandbook.org/index.php/2014/06/install-google-sketchup-ubuntu1404/ | Install Google SketchUp Make 2014 in Ubuntu 14.04 | UbuntuHandbook
+http://www.mag.go.cr/bibliotecavirtual/a00190.pdf | www.mag.go.cr/bibliotecavirtual/a00190.pdf
+http://unix.stackexchange.com/questions/90290/how-to-display-all-the-partitions-in-a-tree-like-format-primary-extended-and-l | command line - How to display all the partitions in a tree-like format (primary, extended and logical)? - Unix & Linux Stack Exchange
+https://help.ubuntu.com/community/HowtoPartition/OperatingSystemsAndPartitions | HowtoPartition/OperatingSystemsAndPartitions - Community Help Wiki
+http://askubuntu.com/questions/121197/ubuntu-installation-partitioning-logical-or-primary | Ubuntu installation partitioning: Logical or primary? - Ask Ubuntu
+https://mail.google.com/mail/u/0/#inbox | Gmail
+http://www.webupd8.org/2014/07/xubuntu-how-to-put-maximized-windows.html | Xubuntu: How To Put Maximized Windows Buttons And Title On The Panel ~ Web Upd8: Ubuntu / Linux blog
+http://www.amazon.com/b?node=3402711 | Amazon.com: Crampons - Mountaineering & Ice Equipment: Sports & Outdoors
+http://blackdiamondequipment.com/en/climbing%2Fcrampons/contact-crampon-BD4000690000ALL1.html | Contact Crampon - Black Diamond Climbing Gear
+http://www.petzl.com/en/Sport/Crampons#.VYNeBdSlyko | Crampons - Petzl | Sport
+ 

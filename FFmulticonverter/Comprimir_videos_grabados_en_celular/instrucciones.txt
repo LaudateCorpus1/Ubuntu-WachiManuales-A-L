@@ -1,0 +1,18 @@
+ 
+Comprimir video grabado en celular, con FFmulticonverter
+
+RESUMEN: 
+Cuando grabo un video en mi celular SAMSUNG GALAXY J5 éste tiene el tamaño bastante grande comparandolo si lo proceso con FFMULTICONVERTER. Por lo tanto si voy a subir a Facebook o Youtube algunos videos así directamente sin editar, es mejor comprimirlos para que no se demoren bastante en subir
+
+INSTRUCCIONES:
+
+- Instale FFmulticonverter:
+https://facilitarelsoftwarelibre.blogspot.com/search/label/FFmulticonverter
+
+- Arrastre el-los videos a FFmulticonverter
+- Elija el formato de salida
+- Elija la carpeta de salida
+- De clic en Convertir
+
+Vea el video
+

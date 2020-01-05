@@ -1,0 +1,1112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>GIT, INSTALACIÓN Y CREACIÓN DE REPOSITORIO</title>
+  </head>
+  <body>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <header class="entry-header single-header" style="box-sizing:
+      inherit; display: block; color: rgb(49, 49, 49); font-family:
+      &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;
+      font-size: 16px; font-style: normal; font-variant-ligatures:
+      normal; font-variant-caps: normal; font-weight: 400;
+      letter-spacing: normal; orphans: 2; text-align: left; text-indent:
+      0px; text-transform: none; white-space: normal; widows: 2;
+      word-spacing: 0px; -webkit-text-stroke-width: 0px;
+      background-color: rgb(255, 255, 255); text-decoration-style:
+      initial; text-decoration-color: initial;">
+      <h1 itemprop="headline" class="entry-title single-title"
+        style="box-sizing: inherit; font-size: 24px; margin: 0px 0px
+        10px; font-family: Cabin, &quot;Helvetica Neue&quot;,
+        sans-serif; font-weight: 400; line-height: 28px; color: rgb(0,
+        0, 0); overflow-wrap: break-word; text-transform: uppercase;"><font
+          size="+1">GIT, INSTALACIÓN Y CREACIÓN DE REPOSITORIO</font></h1>
+      <p><a
+          href="https://juncotic.com/git-instalacion-creacion-repositorio/">https://juncotic.com/git-instalacion-creacion-repositorio/</a><br>
+      </p>
+      <div class="entry-meta single-entry-meta" style="box-sizing:
+        inherit; padding: 10px 0px;"><font size="+1"><span
+            class="author-link" itemprop="author" itemscope=""
+            itemtype="http://schema.org/Person" style="box-sizing:
+            inherit;"><span itemprop="name" class="post-author author
+              vcard" style="box-sizing: inherit; position: relative;
+              margin-right: 10px; padding-left: 16px; font-weight: 600;"><a
+                href="https://juncotic.com/author/andrea/"
+                itemprop="url" rel="author" style="box-sizing: inherit;
+                background-color: transparent; color: rgb(190, 80, 0);
+                text-decoration: none; transition: all 0.25s ease 0s;">Andrea
+                Navarro</a><span>&nbsp;</span></span></span><time
+            class="post-time posted-on published"
+            datetime="2016-07-24T23:08:01+00:00"
+            itemprop="datePublished" style="box-sizing: inherit;
+            position: relative; margin-right: 10px; padding-left: 18px;
+            font-weight: 500;">24 julio, 2016</time></font><font
+          size="+1"><br>
+          <br>
+          En este artículo veremos como instalar Git y configurarlo para
+          tener el repositorio listo para ser trabajado.</font></div>
+    </header>
+    <div itemprop="text" class="entry-content" style="box-sizing:
+      inherit; color: rgb(102, 102, 102); font-size: 16px; font-weight:
+      400; line-height: 26px; padding: 10px 0px; font-family: &quot;Open
+      Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-style:
+      normal; font-variant-ligatures: normal; font-variant-caps: normal;
+      letter-spacing: normal; orphans: 2; text-align: left; text-indent:
+      0px; text-transform: none; white-space: normal; widows: 2;
+      word-spacing: 0px; -webkit-text-stroke-width: 0px;
+      background-color: rgb(255, 255, 255); text-decoration-style:
+      initial; text-decoration-color: initial;">
+      <h2 style="box-sizing: inherit; font-family: Cabin,
+        &quot;Helvetica Neue&quot;, sans-serif; font-weight: 400;
+        line-height: 34px; color: rgb(0, 0, 0); margin-top: 35px;
+        margin-bottom: 20px; font-size: 30px; overflow-wrap:
+        break-word;"><font size="+1">Instalar Git</font></h2>
+      <div id="crayon-5bda736ad88c8078614666" class="crayon-syntax
+        crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes
+        notranslate" data-settings=" minimize scroll-mouseover"
+        style="box-sizing: border-box; text-align: left;
+        text-size-adjust: none; overflow: hidden !important; position:
+        relative !important; direction: ltr !important; width: 730px;
+        padding: 0px; margin: 12px 0px; font-family: Monaco,
+        MonacoRegular, &quot;Courier New&quot;, monospace; font-weight:
+        500; border-width: 1px !important; border-color: rgb(153, 153,
+        153) !important; border-style: solid !important; text-shadow:
+        none !important; background: rgb(253, 253, 253) !important;
+        font-size: 12px !important; line-height: 15px !important;
+        height: auto;">
+        <div class="crayon-plain-wrap" style="box-sizing: inherit;
+          font-family: Monaco, MonacoRegular, &quot;Courier New&quot;,
+          monospace !important; background: 0px center; border: 0px;
+          padding: 0px !important; margin: 0px !important; text-align:
+          left; height: auto !important;"><font size="+1"><textarea class="crayon-plain print-no" data-settings="dblclick" readonly="readonly" style="box-sizing: border-box; color: rgb(0, 0, 0); font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 12px !important; line-height: 15px !important; font-family: Monaco, MonacoRegular, &quot;Courier New&quot;, monospace !important; margin: 0px; overflow: hidden; padding: 0px 5px; border: 0px; border-radius: 0px; width: 728.011px; height: 150px; min-height: 150px; position: absolute; opacity: 0; box-shadow: none; white-space: pre; overflow-wrap: normal; resize: none; background: rgb(255, 255, 255); tab-size: 4; z-index: 0;" wrap="soft"></textarea></font></div>
+        <div class="crayon-main" style="box-sizing: inherit;
+          font-family: Monaco, MonacoRegular, &quot;Courier New&quot;,
+          monospace !important; background: 0px center; border: 0px;
+          padding: 0px; margin: 0px; text-align: left; width: 728.011px;
+          overflow: hidden; position: relative; z-index: 1;">
+          <table class="crayon-table" style="box-sizing: inherit;
+            border-collapse: collapse !important; border-spacing: 0px
+            !important; background: none !important; width: auto
+            !important; margin-top: 0px !important; margin-right: 0px
+            !important; margin-bottom: 0px !important; margin-left: 0px;
+            border: none !important; font-size: 12px; padding: 0px
+            !important; font-family: Monaco, MonacoRegular,
+            &quot;Courier New&quot;, monospace !important; table-layout:
+            auto !important;">
+            <tbody style="box-sizing: inherit; font-family: Monaco,
+              MonacoRegular, &quot;Courier New&quot;, monospace
+              !important;">
+              <tr class="crayon-row" style="box-sizing: inherit;
+                font-family: Monaco, MonacoRegular, &quot;Courier
+                New&quot;, monospace !important; background: 0px center;
+                padding: 0px !important; border: none !important;
+                vertical-align: top !important; margin: 0px !important;">
+                <td class="crayon-nums " data-settings="show"
+                  style="box-sizing: inherit; padding: 0px !important;
+                  border: 0px; font-family: Monaco, MonacoRegular,
+                  &quot;Courier New&quot;, monospace !important;
+                  vertical-align: top !important; margin: 0px
+                  !important; background: rgb(223, 239, 255) !important;
+                  color: rgb(84, 153, 222) !important;">
+                  <div class="crayon-nums-content" style="box-sizing:
+                    inherit; font-family: Monaco, MonacoRegular,
+                    &quot;Courier New&quot;, monospace !important;
+                    background: 0px center; border: 0px; padding: 0px;
+                    margin: 0px; text-align: left; white-space: nowrap;
+                    font-size: 12px !important; line-height: 15px
+                    !important;">
+                    <div class="crayon-num"
+                      data-line="crayon-5bda736ad88c8078614666-1"
+                      style="box-sizing: inherit; font-family: inherit;
+                      background: 0px center; border: 0px; padding: 0px
+                      5px; margin: 0px; text-align: center; height:
+                      inherit; font-size: inherit !important;
+                      line-height: inherit !important; font-weight:
+                      inherit !important;"><font size="+1">1</font></div>
+                  </div>
+                </td>
+                <td class="crayon-code" style="box-sizing: inherit;
+                  padding: 0px !important; border: 0px; font-family:
+                  Monaco, MonacoRegular, &quot;Courier New&quot;,
+                  monospace !important; vertical-align: top !important;
+                  margin: 0px !important; background: 0px center; width:
+                  710px;">
+                  <div class="crayon-pre" style="box-sizing: inherit; font-family: Monaco, MonacoRegular, &quot;Courier New&quot;, monospace !important; background: none !important; border: none !important; padding: 0px; margin: 0px; text-align: left; color: rgb(0, 0, 0); white-space: pre; overflow: visible; tab-size: 4; font-size: 12px !important; line-height: 15px !important;"><div class="crayon-line" id="crayon-5bda736ad88c8078614666-1" style="box-sizing: inherit; font-family: inherit; background: 0px center; border: 0px; padding: 0px 5px; margin: 0px; text-align: left; height: inherit; font-size: inherit !important; line-height: inherit !important; font-weight: inherit !important;"><font size="+1"><span class="crayon-e" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 78, 208) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">sudo </span><span class="crayon-v" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 45, 122) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">apt</span><span class="crayon-o" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 111, 224) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">-</span><span class="crayon-e" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 78, 208) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">get </span><span class="crayon-e" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 78, 208) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">install </span><span class="crayon-v" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 45, 122) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">git</span><span class="crayon-o" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 111, 224) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">-</span><span class="crayon-v" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 45, 122) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">all</span></font></div></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <h2 style="box-sizing: inherit; font-family: Cabin,
+        &quot;Helvetica Neue&quot;, sans-serif; font-weight: 400;
+        line-height: 34px; color: rgb(0, 0, 0); margin-top: 35px;
+        margin-bottom: 20px; font-size: 30px; overflow-wrap:
+        break-word;"><font size="+1"><img
+            src="https://juncotic.com/wp-content/uploads/2016/07/instalargit.png"
+            class="wp-image-1958 size-full aligncenter"
+            alt="Instalacion"
+            srcset="https://juncotic.com/wp-content/uploads/2016/07/instalargit.png
+            539w,
+            https://juncotic.com/wp-content/uploads/2016/07/instalargit-300x201.png
+            300w" sizes="(max-width: 539px) 100vw, 539px"
+            data-lazy-loaded="true" style="box-sizing: inherit; border:
+            0px; vertical-align: middle; max-width: 100%; height: auto;
+            display: block; clear: both; margin: 0px auto;" height="361"
+            width="539"></font></h2>
+      <h2 style="box-sizing: inherit; font-family: Cabin,
+        &quot;Helvetica Neue&quot;, sans-serif; font-weight: 400;
+        line-height: 34px; color: rgb(0, 0, 0); margin-top: 35px;
+        margin-bottom: 20px; font-size: 30px; overflow-wrap:
+        break-word;"><font size="+1">Realizar configuraciones</font></h2>
+      <p style="box-sizing: inherit; margin: 0px 0px 10px; color:
+        rgb(102, 102, 102); font-size: 16px; font-weight: 400;
+        line-height: 26px;"><font size="+1">Las configuraciones que
+          utilizan –global serán las configuraciones por defecto. Luego
+          es posible especificar configuraciones diferentes para cada
+          uno de los repositorios ejecutando los mismos comandos dentro
+          del repositorio sin la opción global.</font></p>
+      <p style="box-sizing: inherit; margin: 0px 0px 10px; color:
+        rgb(102, 102, 102); font-size: 16px; font-weight: 400;
+        line-height: 26px;"><font size="+1"><strong style="box-sizing:
+            inherit; font-weight: 600;">Configurar nombre de usuario</strong></font></p>
+      <div id="crayon-5bda736ad88ce134951103" class="crayon-syntax
+        crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes
+        notranslate" data-settings=" minimize scroll-mouseover"
+        style="box-sizing: border-box; text-align: left;
+        text-size-adjust: none; overflow: hidden !important; position:
+        relative !important; direction: ltr !important; width: 730px;
+        padding: 0px; margin: 12px 0px; font-family: Monaco,
+        MonacoRegular, &quot;Courier New&quot;, monospace; font-weight:
+        500; border-width: 1px !important; border-color: rgb(153, 153,
+        153) !important; border-style: solid !important; text-shadow:
+        none !important; background: rgb(253, 253, 253) !important;
+        font-size: 12px !important; line-height: 15px !important;
+        height: auto;">
+        <div class="crayon-plain-wrap" style="box-sizing: inherit;
+          font-family: Monaco, MonacoRegular, &quot;Courier New&quot;,
+          monospace !important; background: 0px center; border: 0px;
+          padding: 0px !important; margin: 0px !important; text-align:
+          left; height: auto !important;"><font size="+1"><textarea class="crayon-plain print-no" data-settings="dblclick" readonly="readonly" style="box-sizing: border-box; color: rgb(0, 0, 0); font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 12px !important; line-height: 15px !important; font-family: Monaco, MonacoRegular, &quot;Courier New&quot;, monospace !important; margin: 0px; overflow: hidden; padding: 0px 5px; border: 0px; border-radius: 0px; width: 728.011px; height: 150px; min-height: 150px; position: absolute; opacity: 0; box-shadow: none; white-space: pre; overflow-wrap: normal; resize: none; background: rgb(255, 255, 255); tab-size: 4; z-index: 0;" wrap="soft"></textarea></font></div>
+        <div class="crayon-main" style="box-sizing: inherit;
+          font-family: Monaco, MonacoRegular, &quot;Courier New&quot;,
+          monospace !important; background: 0px center; border: 0px;
+          padding: 0px; margin: 0px; text-align: left; width: 728.011px;
+          overflow: hidden; position: relative; z-index: 1;">
+          <table class="crayon-table" style="box-sizing: inherit;
+            border-collapse: collapse !important; border-spacing: 0px
+            !important; background: none !important; width: auto
+            !important; margin-top: 0px !important; margin-right: 0px
+            !important; margin-bottom: 0px !important; margin-left: 0px;
+            border: none !important; font-size: 12px; padding: 0px
+            !important; font-family: Monaco, MonacoRegular,
+            &quot;Courier New&quot;, monospace !important; table-layout:
+            auto !important;">
+            <tbody style="box-sizing: inherit; font-family: Monaco,
+              MonacoRegular, &quot;Courier New&quot;, monospace
+              !important;">
+              <tr class="crayon-row" style="box-sizing: inherit;
+                font-family: Monaco, MonacoRegular, &quot;Courier
+                New&quot;, monospace !important; background: 0px center;
+                padding: 0px !important; border: none !important;
+                vertical-align: top !important; margin: 0px !important;">
+                <td class="crayon-nums " data-settings="show"
+                  style="box-sizing: inherit; padding: 0px !important;
+                  border: 0px; font-family: Monaco, MonacoRegular,
+                  &quot;Courier New&quot;, monospace !important;
+                  vertical-align: top !important; margin: 0px
+                  !important; background: rgb(223, 239, 255) !important;
+                  color: rgb(84, 153, 222) !important;">
+                  <div class="crayon-nums-content" style="box-sizing:
+                    inherit; font-family: Monaco, MonacoRegular,
+                    &quot;Courier New&quot;, monospace !important;
+                    background: 0px center; border: 0px; padding: 0px;
+                    margin: 0px; text-align: left; white-space: nowrap;
+                    font-size: 12px !important; line-height: 15px
+                    !important;">
+                    <div class="crayon-num"
+                      data-line="crayon-5bda736ad88ce134951103-1"
+                      style="box-sizing: inherit; font-family: inherit;
+                      background: 0px center; border: 0px; padding: 0px
+                      5px; margin: 0px; text-align: center; height:
+                      inherit; font-size: inherit !important;
+                      line-height: inherit !important; font-weight:
+                      inherit !important;"><font size="+1">1</font></div>
+                  </div>
+                </td>
+                <td class="crayon-code" style="box-sizing: inherit;
+                  padding: 0px !important; border: 0px; font-family:
+                  Monaco, MonacoRegular, &quot;Courier New&quot;,
+                  monospace !important; vertical-align: top !important;
+                  margin: 0px !important; background: 0px center; width:
+                  710px;">
+                  <div class="crayon-pre" style="box-sizing: inherit; font-family: Monaco, MonacoRegular, &quot;Courier New&quot;, monospace !important; background: none !important; border: none !important; padding: 0px; margin: 0px; text-align: left; color: rgb(0, 0, 0); white-space: pre; overflow: visible; tab-size: 4; font-size: 12px !important; line-height: 15px !important;"><div class="crayon-line" id="crayon-5bda736ad88ce134951103-1" style="box-sizing: inherit; font-family: inherit; background: 0px center; border: 0px; padding: 0px 5px; margin: 0px; text-align: left; height: inherit; font-size: inherit !important; line-height: inherit !important; font-weight: inherit !important;"><font size="+1"><span class="crayon-e" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 78, 208) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">git </span><span class="crayon-v" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 45, 122) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">config</span><span class="crayon-h" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 111, 224) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;"> </span><span class="crayon-o" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 111, 224) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">--</span><span class="crayon-m" style="box-sizing: inherit; font-family: inherit; color: rgb(128, 0, 128) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">global</span><span class="crayon-h" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 111, 224) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;"> </span><span class="crayon-v" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 45, 122) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">user</span><span class="crayon-sy" style="box-sizing: inherit; font-family: inherit; color: rgb(51, 51, 51) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">.</span><span class="crayon-i" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 0, 0) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">name</span><span class="crayon-h" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 111, 224) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;"> </span><span class="crayon-s" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 128, 0) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">"wachin"</span></font></div></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p style="box-sizing: inherit; margin: 0px 0px 10px; color:
+        rgb(102, 102, 102); font-size: 16px; font-weight: 400;
+        line-height: 26px;"><font size="+1"><strong style="box-sizing:
+            inherit; font-weight: 600;">Configurar &nbsp;e-mail</strong></font></p>
+      <div id="crayon-5bda736ad88d0542824095" class="crayon-syntax
+        crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes
+        notranslate" data-settings=" minimize scroll-mouseover"
+        style="box-sizing: border-box; text-align: left;
+        text-size-adjust: none; overflow: hidden !important; position:
+        relative !important; direction: ltr !important; width: 730px;
+        padding: 0px; margin: 12px 0px; font-family: Monaco,
+        MonacoRegular, &quot;Courier New&quot;, monospace; font-weight:
+        500; border-width: 1px !important; border-color: rgb(153, 153,
+        153) !important; border-style: solid !important; text-shadow:
+        none !important; background: rgb(253, 253, 253) !important;
+        font-size: 12px !important; line-height: 15px !important;
+        height: auto;">
+        <div class="crayon-plain-wrap" style="box-sizing: inherit;
+          font-family: Monaco, MonacoRegular, &quot;Courier New&quot;,
+          monospace !important; background: 0px center; border: 0px;
+          padding: 0px !important; margin: 0px !important; text-align:
+          left; height: auto !important;"><font size="+1"><textarea class="crayon-plain print-no" data-settings="dblclick" readonly="readonly" style="box-sizing: border-box; color: rgb(0, 0, 0); font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 12px !important; line-height: 15px !important; font-family: Monaco, MonacoRegular, &quot;Courier New&quot;, monospace !important; margin: 0px; overflow: hidden; padding: 0px 5px; border: 0px; border-radius: 0px; width: 728.011px; height: 150px; min-height: 150px; position: absolute; opacity: 0; box-shadow: none; white-space: pre; overflow-wrap: normal; resize: none; background: rgb(255, 255, 255); tab-size: 4; z-index: 0;" wrap="soft"></textarea></font></div>
+        <div class="crayon-main" style="box-sizing: inherit;
+          font-family: Monaco, MonacoRegular, &quot;Courier New&quot;,
+          monospace !important; background: 0px center; border: 0px;
+          padding: 0px; margin: 0px; text-align: left; width: 728.011px;
+          overflow: hidden; position: relative; z-index: 1;">
+          <table class="crayon-table" style="box-sizing: inherit;
+            border-collapse: collapse !important; border-spacing: 0px
+            !important; background: none !important; width: auto
+            !important; margin-top: 0px !important; margin-right: 0px
+            !important; margin-bottom: 0px !important; margin-left: 0px;
+            border: none !important; font-size: 12px; padding: 0px
+            !important; font-family: Monaco, MonacoRegular,
+            &quot;Courier New&quot;, monospace !important; table-layout:
+            auto !important;">
+            <tbody style="box-sizing: inherit; font-family: Monaco,
+              MonacoRegular, &quot;Courier New&quot;, monospace
+              !important;">
+              <tr class="crayon-row" style="box-sizing: inherit;
+                font-family: Monaco, MonacoRegular, &quot;Courier
+                New&quot;, monospace !important; background: 0px center;
+                padding: 0px !important; border: none !important;
+                vertical-align: top !important; margin: 0px !important;">
+                <td class="crayon-nums " data-settings="show"
+                  style="box-sizing: inherit; padding: 0px !important;
+                  border: 0px; font-family: Monaco, MonacoRegular,
+                  &quot;Courier New&quot;, monospace !important;
+                  vertical-align: top !important; margin: 0px
+                  !important; background: rgb(223, 239, 255) !important;
+                  color: rgb(84, 153, 222) !important;">
+                  <div class="crayon-nums-content" style="box-sizing:
+                    inherit; font-family: Monaco, MonacoRegular,
+                    &quot;Courier New&quot;, monospace !important;
+                    background: 0px center; border: 0px; padding: 0px;
+                    margin: 0px; text-align: left; white-space: nowrap;
+                    font-size: 12px !important; line-height: 15px
+                    !important;">
+                    <div class="crayon-num"
+                      data-line="crayon-5bda736ad88d0542824095-1"
+                      style="box-sizing: inherit; font-family: inherit;
+                      background: 0px center; border: 0px; padding: 0px
+                      5px; margin: 0px; text-align: center; height:
+                      inherit; font-size: inherit !important;
+                      line-height: inherit !important; font-weight:
+                      inherit !important;"><font size="+1">1</font></div>
+                  </div>
+                </td>
+                <td class="crayon-code" style="box-sizing: inherit;
+                  padding: 0px !important; border: 0px; font-family:
+                  Monaco, MonacoRegular, &quot;Courier New&quot;,
+                  monospace !important; vertical-align: top !important;
+                  margin: 0px !important; background: 0px center; width:
+                  710px;">
+                  <div class="crayon-pre" style="box-sizing: inherit; font-family: Monaco, MonacoRegular, &quot;Courier New&quot;, monospace !important; background: none !important; border: none !important; padding: 0px; margin: 0px; text-align: left; color: rgb(0, 0, 0); white-space: pre; overflow: visible; tab-size: 4; font-size: 12px !important; line-height: 15px !important;"><div class="crayon-line" id="crayon-5bda736ad88d0542824095-1" style="box-sizing: inherit; font-family: inherit; background: 0px center; border: 0px; padding: 0px 5px; margin: 0px; text-align: left; height: inherit; font-size: inherit !important; line-height: inherit !important; font-weight: inherit !important;"><font size="+1"><span class="crayon-e" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 78, 208) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">git </span><span class="crayon-v" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 45, 122) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">config</span><span class="crayon-h" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 111, 224) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;"> </span><span class="crayon-o" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 111, 224) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">--</span><span class="crayon-m" style="box-sizing: inherit; font-family: inherit; color: rgb(128, 0, 128) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">global</span><span class="crayon-h" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 111, 224) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;"> </span><span class="crayon-v" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 45, 122) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">user</span><span class="crayon-sy" style="box-sizing: inherit; font-family: inherit; color: rgb(51, 51, 51) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">.</span><span class="crayon-e" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 78, 208) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">email </span><span class="crayon-v" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 45, 122) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">wachin.id@gmail.com</span><span class="crayon-v" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 45, 122) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;"></span></font></div></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p style="box-sizing: inherit; margin: 0px 0px 10px; color:
+        rgb(102, 102, 102); font-size: 16px; font-weight: 400;
+        line-height: 26px;"><font size="+1">Existen muchas otras
+          configuraciones como por ejemplo activar o desactivas la
+          ayuda, setear el editor por defecto y configurar la muestra de
+          códigos de colores. Estas se guardaran en el archivo config
+          dentro de el directorio .git. También es posible listar el
+          contenido de este archivo utilizando</font></p>
+      <div id="crayon-5bda736ad88d2292049760" class="crayon-syntax
+        crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes
+        notranslate" data-settings=" minimize scroll-mouseover"
+        style="box-sizing: border-box; text-align: left;
+        text-size-adjust: none; overflow: hidden !important; position:
+        relative !important; direction: ltr !important; width: 730px;
+        padding: 0px; margin: 12px 0px; font-family: Monaco,
+        MonacoRegular, &quot;Courier New&quot;, monospace; font-weight:
+        500; border-width: 1px !important; border-color: rgb(153, 153,
+        153) !important; border-style: solid !important; text-shadow:
+        none !important; background: rgb(253, 253, 253) !important;
+        font-size: 12px !important; line-height: 15px !important;
+        height: auto;">
+        <div class="crayon-plain-wrap" style="box-sizing: inherit;
+          font-family: Monaco, MonacoRegular, &quot;Courier New&quot;,
+          monospace !important; background: 0px center; border: 0px;
+          padding: 0px !important; margin: 0px !important; text-align:
+          left; height: auto !important;"><font size="+1"><textarea class="crayon-plain print-no" data-settings="dblclick" readonly="readonly" style="box-sizing: border-box; color: rgb(0, 0, 0); font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 12px !important; line-height: 15px !important; font-family: Monaco, MonacoRegular, &quot;Courier New&quot;, monospace !important; margin: 0px; overflow: hidden; padding: 0px 5px; border: 0px; border-radius: 0px; width: 728.011px; height: 150px; min-height: 150px; position: absolute; opacity: 0; box-shadow: none; white-space: pre; overflow-wrap: normal; resize: none; background: rgb(255, 255, 255); tab-size: 4; z-index: 0;" wrap="soft"></textarea></font></div>
+        <div class="crayon-main" style="box-sizing: inherit;
+          font-family: Monaco, MonacoRegular, &quot;Courier New&quot;,
+          monospace !important; background: 0px center; border: 0px;
+          padding: 0px; margin: 0px; text-align: left; width: 728.011px;
+          overflow: hidden; position: relative; z-index: 1;">
+          <table class="crayon-table" style="box-sizing: inherit;
+            border-collapse: collapse !important; border-spacing: 0px
+            !important; background: none !important; width: auto
+            !important; margin-top: 0px !important; margin-right: 0px
+            !important; margin-bottom: 0px !important; margin-left: 0px;
+            border: none !important; font-size: 12px; padding: 0px
+            !important; font-family: Monaco, MonacoRegular,
+            &quot;Courier New&quot;, monospace !important; table-layout:
+            auto !important;">
+            <tbody style="box-sizing: inherit; font-family: Monaco,
+              MonacoRegular, &quot;Courier New&quot;, monospace
+              !important;">
+              <tr class="crayon-row" style="box-sizing: inherit;
+                font-family: Monaco, MonacoRegular, &quot;Courier
+                New&quot;, monospace !important; background: 0px center;
+                padding: 0px !important; border: none !important;
+                vertical-align: top !important; margin: 0px !important;">
+                <td class="crayon-nums " data-settings="show"
+                  style="box-sizing: inherit; padding: 0px !important;
+                  border: 0px; font-family: Monaco, MonacoRegular,
+                  &quot;Courier New&quot;, monospace !important;
+                  vertical-align: top !important; margin: 0px
+                  !important; background: rgb(223, 239, 255) !important;
+                  color: rgb(84, 153, 222) !important;">
+                  <div class="crayon-nums-content" style="box-sizing:
+                    inherit; font-family: Monaco, MonacoRegular,
+                    &quot;Courier New&quot;, monospace !important;
+                    background: 0px center; border: 0px; padding: 0px;
+                    margin: 0px; text-align: left; white-space: nowrap;
+                    font-size: 12px !important; line-height: 15px
+                    !important;">
+                    <div class="crayon-num"
+                      data-line="crayon-5bda736ad88d2292049760-1"
+                      style="box-sizing: inherit; font-family: inherit;
+                      background: 0px center; border: 0px; padding: 0px
+                      5px; margin: 0px; text-align: center; height:
+                      inherit; font-size: inherit !important;
+                      line-height: inherit !important; font-weight:
+                      inherit !important;"><font size="+1">1</font></div>
+                  </div>
+                </td>
+                <td class="crayon-code" style="box-sizing: inherit;
+                  padding: 0px !important; border: 0px; font-family:
+                  Monaco, MonacoRegular, &quot;Courier New&quot;,
+                  monospace !important; vertical-align: top !important;
+                  margin: 0px !important; background: 0px center; width:
+                  710px;">
+                  <div class="crayon-pre" style="box-sizing: inherit; font-family: Monaco, MonacoRegular, &quot;Courier New&quot;, monospace !important; background: none !important; border: none !important; padding: 0px; margin: 0px; text-align: left; color: rgb(0, 0, 0); white-space: pre; overflow: visible; tab-size: 4; font-size: 12px !important; line-height: 15px !important;"><div class="crayon-line" id="crayon-5bda736ad88d2292049760-1" style="box-sizing: inherit; font-family: inherit; background: 0px center; border: 0px; padding: 0px 5px; margin: 0px; text-align: left; height: inherit; font-size: inherit !important; line-height: inherit !important; font-weight: inherit !important;"><font size="+1"><span class="crayon-e" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 78, 208) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">git </span><span class="crayon-v" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 45, 122) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">config</span><span class="crayon-h" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 111, 224) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;"> </span><span class="crayon-o" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 111, 224) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">-</span><span class="crayon-v" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 45, 122) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">l</span></font></div></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <h2 style="box-sizing: inherit; font-family: Cabin,
+        &quot;Helvetica Neue&quot;, sans-serif; font-weight: 400;
+        line-height: 34px; color: rgb(0, 0, 0); margin-top: 35px;
+        margin-bottom: 20px; font-size: 30px; overflow-wrap:
+        break-word;"><font size="+1"><img
+            src="https://juncotic.com/wp-content/uploads/2016/07/configuracion.png"
+            class="wp-image-1964 size-full aligncenter"
+            alt="configuracion"
+            srcset="https://juncotic.com/wp-content/uploads/2016/07/configuracion.png
+            607w,
+            https://juncotic.com/wp-content/uploads/2016/07/configuracion-300x209.png
+            300w" sizes="(max-width: 607px) 100vw, 607px"
+            data-lazy-loaded="true" style="box-sizing: inherit; border:
+            0px; vertical-align: middle; max-width: 100%; height: auto;
+            display: block; clear: both; margin: 0px auto;" height="422"
+            width="607"></font></h2>
+      <h2 style="box-sizing: inherit; font-family: Cabin,
+        &quot;Helvetica Neue&quot;, sans-serif; font-weight: 400;
+        line-height: 34px; color: rgb(0, 0, 0); margin-top: 35px;
+        margin-bottom: 20px; font-size: 30px; overflow-wrap:
+        break-word;"><font size="+1">Crear un repositorio</font></h2>
+      <p style="box-sizing: inherit; margin: 0px 0px 10px; color:
+        rgb(102, 102, 102); font-size: 16px; font-weight: 400;
+        line-height: 26px;"><font size="+1">Al crear un repositorio
+          &nbsp;se creará en la carpeta del proyecto un directorio
+          llamado .git que contendrá los archivos necesarios para
+          controlar y manejar las versiones de los archivos.</font></p>
+      <h3 style="box-sizing: inherit; font-family: inherit; font-weight:
+        500; line-height: 28px; color: rgb(0, 0, 0); margin-top: 35px;
+        margin-bottom: 20px; font-size: 24px; overflow-wrap:
+        break-word;"><font size="+1">Crear un repositorio de un proyecto
+          existente</font></h3>
+      <p style="box-sizing: inherit; margin: 0px 0px 10px; color:
+        rgb(102, 102, 102); font-size: 16px; font-weight: 400;
+        line-height: 26px;"><font size="+1">Para hacerlo ingresamos en
+          la carpeta del proyecto y ejecutamos</font></p>
+      <div id="crayon-5bda736ad88d3732332377" class="crayon-syntax
+        crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes
+        notranslate" data-settings=" minimize scroll-mouseover"
+        style="box-sizing: border-box; text-align: left;
+        text-size-adjust: none; overflow: hidden !important; position:
+        relative !important; direction: ltr !important; width: 730px;
+        padding: 0px; margin: 12px 0px; font-family: Monaco,
+        MonacoRegular, &quot;Courier New&quot;, monospace; font-weight:
+        500; border-width: 1px !important; border-color: rgb(153, 153,
+        153) !important; border-style: solid !important; text-shadow:
+        none !important; background: rgb(253, 253, 253) !important;
+        font-size: 12px !important; line-height: 15px !important;
+        height: auto;">
+        <div class="crayon-plain-wrap" style="box-sizing: inherit;
+          font-family: Monaco, MonacoRegular, &quot;Courier New&quot;,
+          monospace !important; background: 0px center; border: 0px;
+          padding: 0px !important; margin: 0px !important; text-align:
+          left; height: auto !important;"><font size="+1"><textarea class="crayon-plain print-no" data-settings="dblclick" readonly="readonly" style="box-sizing: border-box; color: rgb(0, 0, 0); font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 12px !important; line-height: 15px !important; font-family: Monaco, MonacoRegular, &quot;Courier New&quot;, monospace !important; margin: 0px; overflow: hidden; padding: 0px 5px; border: 0px; border-radius: 0px; width: 728.011px; height: 150px; min-height: 150px; position: absolute; opacity: 0; box-shadow: none; white-space: pre; overflow-wrap: normal; resize: none; background: rgb(255, 255, 255); tab-size: 4; z-index: 0;" wrap="soft"></textarea></font></div>
+        <div class="crayon-main" style="box-sizing: inherit;
+          font-family: Monaco, MonacoRegular, &quot;Courier New&quot;,
+          monospace !important; background: 0px center; border: 0px;
+          padding: 0px; margin: 0px; text-align: left; width: 728.011px;
+          overflow: hidden; position: relative; z-index: 1;">
+          <table class="crayon-table" style="box-sizing: inherit;
+            border-collapse: collapse !important; border-spacing: 0px
+            !important; background: none !important; width: auto
+            !important; margin-top: 0px !important; margin-right: 0px
+            !important; margin-bottom: 0px !important; margin-left: 0px;
+            border: none !important; font-size: 12px; padding: 0px
+            !important; font-family: Monaco, MonacoRegular,
+            &quot;Courier New&quot;, monospace !important; table-layout:
+            auto !important;">
+            <tbody style="box-sizing: inherit; font-family: Monaco,
+              MonacoRegular, &quot;Courier New&quot;, monospace
+              !important;">
+              <tr class="crayon-row" style="box-sizing: inherit;
+                font-family: Monaco, MonacoRegular, &quot;Courier
+                New&quot;, monospace !important; background: 0px center;
+                padding: 0px !important; border: none !important;
+                vertical-align: top !important; margin: 0px !important;">
+                <td class="crayon-nums " data-settings="show"
+                  style="box-sizing: inherit; padding: 0px !important;
+                  border: 0px; font-family: Monaco, MonacoRegular,
+                  &quot;Courier New&quot;, monospace !important;
+                  vertical-align: top !important; margin: 0px
+                  !important; background: rgb(223, 239, 255) !important;
+                  color: rgb(84, 153, 222) !important;">
+                  <div class="crayon-nums-content" style="box-sizing:
+                    inherit; font-family: Monaco, MonacoRegular,
+                    &quot;Courier New&quot;, monospace !important;
+                    background: 0px center; border: 0px; padding: 0px;
+                    margin: 0px; text-align: left; white-space: nowrap;
+                    font-size: 12px !important; line-height: 15px
+                    !important;">
+                    <div class="crayon-num"
+                      data-line="crayon-5bda736ad88d3732332377-1"
+                      style="box-sizing: inherit; font-family: inherit;
+                      background: 0px center; border: 0px; padding: 0px
+                      5px; margin: 0px; text-align: center; height:
+                      inherit; font-size: inherit !important;
+                      line-height: inherit !important; font-weight:
+                      inherit !important;"><font size="+1">1</font></div>
+                  </div>
+                </td>
+                <td class="crayon-code" style="box-sizing: inherit;
+                  padding: 0px !important; border: 0px; font-family:
+                  Monaco, MonacoRegular, &quot;Courier New&quot;,
+                  monospace !important; vertical-align: top !important;
+                  margin: 0px !important; background: 0px center; width:
+                  710px;">
+                  <div class="crayon-pre" style="box-sizing: inherit; font-family: Monaco, MonacoRegular, &quot;Courier New&quot;, monospace !important; background: none !important; border: none !important; padding: 0px; margin: 0px; text-align: left; color: rgb(0, 0, 0); white-space: pre; overflow: visible; tab-size: 4; font-size: 12px !important; line-height: 15px !important;"><div class="crayon-line" id="crayon-5bda736ad88d3732332377-1" style="box-sizing: inherit; font-family: inherit; background: 0px center; border: 0px; padding: 0px 5px; margin: 0px; text-align: left; height: inherit; font-size: inherit !important; line-height: inherit !important; font-weight: inherit !important;"><font size="+1"><span class="crayon-e" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 78, 208) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">git </span><span class="crayon-v" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 45, 122) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">init</span></font></div></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p style="box-sizing: inherit; margin: 0px 0px 10px; color:
+        rgb(102, 102, 102); font-size: 16px; font-weight: 400;
+        line-height: 26px;"><font size="+1">&nbsp;</font></p>
+      <p style="box-sizing: inherit; margin: 0px 0px 10px; color:
+        rgb(102, 102, 102); font-size: 16px; font-weight: 400;
+        line-height: 26px;"><font size="+1">Una vez creado agregamos los
+          archivos que formarán parte del repositorio.</font></p>
+      <p style="box-sizing: inherit; margin: 0px 0px 10px; color:
+        rgb(102, 102, 102); font-size: 16px; font-weight: 400;
+        line-height: 26px;"><font size="+1">Si deseamos agregar todos
+          los archivos existentes:</font></p>
+      <div id="crayon-5bda736ad88d5572171971" class="crayon-syntax
+        crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes
+        notranslate" data-settings=" minimize scroll-mouseover"
+        style="box-sizing: border-box; text-align: left;
+        text-size-adjust: none; overflow: hidden !important; position:
+        relative !important; direction: ltr !important; width: 730px;
+        padding: 0px; margin: 12px 0px; font-family: Monaco,
+        MonacoRegular, &quot;Courier New&quot;, monospace; font-weight:
+        500; border-width: 1px !important; border-color: rgb(153, 153,
+        153) !important; border-style: solid !important; text-shadow:
+        none !important; background: rgb(253, 253, 253) !important;
+        font-size: 12px !important; line-height: 15px !important;
+        height: auto;">
+        <div class="crayon-plain-wrap" style="box-sizing: inherit;
+          font-family: Monaco, MonacoRegular, &quot;Courier New&quot;,
+          monospace !important; background: 0px center; border: 0px;
+          padding: 0px !important; margin: 0px !important; text-align:
+          left; height: auto !important;"><font size="+1"><textarea class="crayon-plain print-no" data-settings="dblclick" readonly="readonly" style="box-sizing: border-box; color: rgb(0, 0, 0); font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 12px !important; line-height: 15px !important; font-family: Monaco, MonacoRegular, &quot;Courier New&quot;, monospace !important; margin: 0px; overflow: hidden; padding: 0px 5px; border: 0px; border-radius: 0px; width: 728.011px; height: 150px; min-height: 150px; position: absolute; opacity: 0; box-shadow: none; white-space: pre; overflow-wrap: normal; resize: none; background: rgb(255, 255, 255); tab-size: 4; z-index: 0;" wrap="soft"></textarea></font></div>
+        <div class="crayon-main" style="box-sizing: inherit;
+          font-family: Monaco, MonacoRegular, &quot;Courier New&quot;,
+          monospace !important; background: 0px center; border: 0px;
+          padding: 0px; margin: 0px; text-align: left; width: 728.011px;
+          overflow: hidden; position: relative; z-index: 1;">
+          <table class="crayon-table" style="box-sizing: inherit;
+            border-collapse: collapse !important; border-spacing: 0px
+            !important; background: none !important; width: auto
+            !important; margin-top: 0px !important; margin-right: 0px
+            !important; margin-bottom: 0px !important; margin-left: 0px;
+            border: none !important; font-size: 12px; padding: 0px
+            !important; font-family: Monaco, MonacoRegular,
+            &quot;Courier New&quot;, monospace !important; table-layout:
+            auto !important;">
+            <tbody style="box-sizing: inherit; font-family: Monaco,
+              MonacoRegular, &quot;Courier New&quot;, monospace
+              !important;">
+              <tr class="crayon-row" style="box-sizing: inherit;
+                font-family: Monaco, MonacoRegular, &quot;Courier
+                New&quot;, monospace !important; background: 0px center;
+                padding: 0px !important; border: none !important;
+                vertical-align: top !important; margin: 0px !important;">
+                <td class="crayon-nums " data-settings="show"
+                  style="box-sizing: inherit; padding: 0px !important;
+                  border: 0px; font-family: Monaco, MonacoRegular,
+                  &quot;Courier New&quot;, monospace !important;
+                  vertical-align: top !important; margin: 0px
+                  !important; background: rgb(223, 239, 255) !important;
+                  color: rgb(84, 153, 222) !important;">
+                  <div class="crayon-nums-content" style="box-sizing:
+                    inherit; font-family: Monaco, MonacoRegular,
+                    &quot;Courier New&quot;, monospace !important;
+                    background: 0px center; border: 0px; padding: 0px;
+                    margin: 0px; text-align: left; white-space: nowrap;
+                    font-size: 12px !important; line-height: 15px
+                    !important;">
+                    <div class="crayon-num"
+                      data-line="crayon-5bda736ad88d5572171971-1"
+                      style="box-sizing: inherit; font-family: inherit;
+                      background: 0px center; border: 0px; padding: 0px
+                      5px; margin: 0px; text-align: center; height:
+                      inherit; font-size: inherit !important;
+                      line-height: inherit !important; font-weight:
+                      inherit !important;"><font size="+1">1</font></div>
+                  </div>
+                </td>
+                <td class="crayon-code" style="box-sizing: inherit;
+                  padding: 0px !important; border: 0px; font-family:
+                  Monaco, MonacoRegular, &quot;Courier New&quot;,
+                  monospace !important; vertical-align: top !important;
+                  margin: 0px !important; background: 0px center; width:
+                  710px;">
+                  <div class="crayon-pre" style="box-sizing: inherit; font-family: Monaco, MonacoRegular, &quot;Courier New&quot;, monospace !important; background: none !important; border: none !important; padding: 0px; margin: 0px; text-align: left; color: rgb(0, 0, 0); white-space: pre; overflow: visible; tab-size: 4; font-size: 12px !important; line-height: 15px !important;"><div class="crayon-line" id="crayon-5bda736ad88d5572171971-1" style="box-sizing: inherit; font-family: inherit; background: 0px center; border: 0px; padding: 0px 5px; margin: 0px; text-align: left; height: inherit; font-size: inherit !important; line-height: inherit !important; font-weight: inherit !important;"><font size="+1"><span class="crayon-e" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 78, 208) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">git </span><span class="crayon-i" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 0, 0) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">add</span>&nbsp;<span class="crayon-sy" style="box-sizing: inherit; font-family: inherit; color: rgb(51, 51, 51) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">.</span></font></div></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p style="box-sizing: inherit; margin: 0px 0px 10px; color:
+        rgb(102, 102, 102); font-size: 16px; font-weight: 400;
+        line-height: 26px;"><font size="+1"><span style="box-sizing:
+            inherit; color: rgb(102, 102, 102); font-size: 16px;
+            font-weight: 400; line-height: 1.5;">Si deseamos agregar los
+            archivos con cierta extensión</span></font></p>
+      <div id="crayon-5bda736ad88d6097977404" class="crayon-syntax
+        crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes
+        notranslate" data-settings=" minimize scroll-mouseover"
+        style="box-sizing: border-box; text-align: left;
+        text-size-adjust: none; overflow: hidden !important; position:
+        relative !important; direction: ltr !important; width: 730px;
+        padding: 0px; margin: 12px 0px; font-family: Monaco,
+        MonacoRegular, &quot;Courier New&quot;, monospace; font-weight:
+        500; border-width: 1px !important; border-color: rgb(153, 153,
+        153) !important; border-style: solid !important; text-shadow:
+        none !important; background: rgb(253, 253, 253) !important;
+        font-size: 12px !important; line-height: 15px !important;
+        height: auto;">
+        <div class="crayon-plain-wrap" style="box-sizing: inherit;
+          font-family: Monaco, MonacoRegular, &quot;Courier New&quot;,
+          monospace !important; background: 0px center; border: 0px;
+          padding: 0px !important; margin: 0px !important; text-align:
+          left; height: auto !important;"><font size="+1"><textarea class="crayon-plain print-no" data-settings="dblclick" readonly="readonly" style="box-sizing: border-box; color: rgb(0, 0, 0); font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 12px !important; line-height: 15px !important; font-family: Monaco, MonacoRegular, &quot;Courier New&quot;, monospace !important; margin: 0px; overflow: hidden; padding: 0px 5px; border: 0px; border-radius: 0px; width: 728.011px; height: 150px; min-height: 150px; position: absolute; opacity: 0; box-shadow: none; white-space: pre; overflow-wrap: normal; resize: none; background: rgb(255, 255, 255); tab-size: 4; z-index: 0;" wrap="soft"></textarea></font></div>
+        <div class="crayon-main" style="box-sizing: inherit;
+          font-family: Monaco, MonacoRegular, &quot;Courier New&quot;,
+          monospace !important; background: 0px center; border: 0px;
+          padding: 0px; margin: 0px; text-align: left; width: 728.011px;
+          overflow: hidden; position: relative; z-index: 1;">
+          <table class="crayon-table" style="box-sizing: inherit;
+            border-collapse: collapse !important; border-spacing: 0px
+            !important; background: none !important; width: auto
+            !important; margin-top: 0px !important; margin-right: 0px
+            !important; margin-bottom: 0px !important; margin-left: 0px;
+            border: none !important; font-size: 12px; padding: 0px
+            !important; font-family: Monaco, MonacoRegular,
+            &quot;Courier New&quot;, monospace !important; table-layout:
+            auto !important;">
+            <tbody style="box-sizing: inherit; font-family: Monaco,
+              MonacoRegular, &quot;Courier New&quot;, monospace
+              !important;">
+              <tr class="crayon-row" style="box-sizing: inherit;
+                font-family: Monaco, MonacoRegular, &quot;Courier
+                New&quot;, monospace !important; background: 0px center;
+                padding: 0px !important; border: none !important;
+                vertical-align: top !important; margin: 0px !important;">
+                <td class="crayon-nums " data-settings="show"
+                  style="box-sizing: inherit; padding: 0px !important;
+                  border: 0px; font-family: Monaco, MonacoRegular,
+                  &quot;Courier New&quot;, monospace !important;
+                  vertical-align: top !important; margin: 0px
+                  !important; background: rgb(223, 239, 255) !important;
+                  color: rgb(84, 153, 222) !important;">
+                  <div class="crayon-nums-content" style="box-sizing:
+                    inherit; font-family: Monaco, MonacoRegular,
+                    &quot;Courier New&quot;, monospace !important;
+                    background: 0px center; border: 0px; padding: 0px;
+                    margin: 0px; text-align: left; white-space: nowrap;
+                    font-size: 12px !important; line-height: 15px
+                    !important;">
+                    <div class="crayon-num"
+                      data-line="crayon-5bda736ad88d6097977404-1"
+                      style="box-sizing: inherit; font-family: inherit;
+                      background: 0px center; border: 0px; padding: 0px
+                      5px; margin: 0px; text-align: center; height:
+                      inherit; font-size: inherit !important;
+                      line-height: inherit !important; font-weight:
+                      inherit !important;"><font size="+1">1</font></div>
+                  </div>
+                </td>
+                <td class="crayon-code" style="box-sizing: inherit;
+                  padding: 0px !important; border: 0px; font-family:
+                  Monaco, MonacoRegular, &quot;Courier New&quot;,
+                  monospace !important; vertical-align: top !important;
+                  margin: 0px !important; background: 0px center; width:
+                  710px;">
+                  <div class="crayon-pre" style="box-sizing: inherit; font-family: Monaco, MonacoRegular, &quot;Courier New&quot;, monospace !important; background: none !important; border: none !important; padding: 0px; margin: 0px; text-align: left; color: rgb(0, 0, 0); white-space: pre; overflow: visible; tab-size: 4; font-size: 12px !important; line-height: 15px !important;"><div class="crayon-line" id="crayon-5bda736ad88d6097977404-1" style="box-sizing: inherit; font-family: inherit; background: 0px center; border: 0px; padding: 0px 5px; margin: 0px; text-align: left; height: inherit; font-size: inherit !important; line-height: inherit !important; font-weight: inherit !important;"><font size="+1"><span class="crayon-e" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 78, 208) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">git </span><span class="crayon-e " style="box-sizing: inherit; font-family: inherit; color: rgb(0, 78, 208) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">add *</span><span class="crayon-sy" style="box-sizing: inherit; font-family: inherit; color: rgb(51, 51, 51) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">.</span><span class="crayon-v" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 45, 122) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">php</span></font></div></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p style="box-sizing: inherit; margin: 0px 0px 10px; color:
+        rgb(102, 102, 102); font-size: 16px; font-weight: 400;
+        line-height: 26px;"><font size="+1">Si deseamos agregar algunos
+          archivos expecíficos</font></p>
+      <div id="crayon-5bda736ad88d7066982461" class="crayon-syntax
+        crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes
+        notranslate" data-settings=" minimize scroll-mouseover"
+        style="box-sizing: border-box; text-align: left;
+        text-size-adjust: none; overflow: hidden !important; position:
+        relative !important; direction: ltr !important; width: 730px;
+        padding: 0px; margin: 12px 0px; font-family: Monaco,
+        MonacoRegular, &quot;Courier New&quot;, monospace; font-weight:
+        500; border-width: 1px !important; border-color: rgb(153, 153,
+        153) !important; border-style: solid !important; text-shadow:
+        none !important; background: rgb(253, 253, 253) !important;
+        font-size: 12px !important; line-height: 15px !important;
+        height: auto;">
+        <div class="crayon-plain-wrap" style="box-sizing: inherit;
+          font-family: Monaco, MonacoRegular, &quot;Courier New&quot;,
+          monospace !important; background: 0px center; border: 0px;
+          padding: 0px !important; margin: 0px !important; text-align:
+          left; height: auto !important;"><font size="+1"><textarea class="crayon-plain print-no" data-settings="dblclick" readonly="readonly" style="box-sizing: border-box; color: rgb(0, 0, 0); font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 12px !important; line-height: 15px !important; font-family: Monaco, MonacoRegular, &quot;Courier New&quot;, monospace !important; margin: 0px; overflow: hidden; padding: 0px 5px; border: 0px; border-radius: 0px; width: 728.011px; height: 150px; min-height: 150px; position: absolute; opacity: 0; box-shadow: none; white-space: pre; overflow-wrap: normal; resize: none; background: rgb(255, 255, 255); tab-size: 4; z-index: 0;" wrap="soft"></textarea></font></div>
+        <div class="crayon-main" style="box-sizing: inherit;
+          font-family: Monaco, MonacoRegular, &quot;Courier New&quot;,
+          monospace !important; background: 0px center; border: 0px;
+          padding: 0px; margin: 0px; text-align: left; width: 728.011px;
+          overflow: hidden; position: relative; z-index: 1;">
+          <table class="crayon-table" style="box-sizing: inherit;
+            border-collapse: collapse !important; border-spacing: 0px
+            !important; background: none !important; width: auto
+            !important; margin-top: 0px !important; margin-right: 0px
+            !important; margin-bottom: 0px !important; margin-left: 0px;
+            border: none !important; font-size: 12px; padding: 0px
+            !important; font-family: Monaco, MonacoRegular,
+            &quot;Courier New&quot;, monospace !important; table-layout:
+            auto !important;">
+            <tbody style="box-sizing: inherit; font-family: Monaco,
+              MonacoRegular, &quot;Courier New&quot;, monospace
+              !important;">
+              <tr class="crayon-row" style="box-sizing: inherit;
+                font-family: Monaco, MonacoRegular, &quot;Courier
+                New&quot;, monospace !important; background: 0px center;
+                padding: 0px !important; border: none !important;
+                vertical-align: top !important; margin: 0px !important;">
+                <td class="crayon-nums " data-settings="show"
+                  style="box-sizing: inherit; padding: 0px !important;
+                  border: 0px; font-family: Monaco, MonacoRegular,
+                  &quot;Courier New&quot;, monospace !important;
+                  vertical-align: top !important; margin: 0px
+                  !important; background: rgb(223, 239, 255) !important;
+                  color: rgb(84, 153, 222) !important;">
+                  <div class="crayon-nums-content" style="box-sizing:
+                    inherit; font-family: Monaco, MonacoRegular,
+                    &quot;Courier New&quot;, monospace !important;
+                    background: 0px center; border: 0px; padding: 0px;
+                    margin: 0px; text-align: left; white-space: nowrap;
+                    font-size: 12px !important; line-height: 15px
+                    !important;">
+                    <div class="crayon-num"
+                      data-line="crayon-5bda736ad88d7066982461-1"
+                      style="box-sizing: inherit; font-family: inherit;
+                      background: 0px center; border: 0px; padding: 0px
+                      5px; margin: 0px; text-align: center; height:
+                      inherit; font-size: inherit !important;
+                      line-height: inherit !important; font-weight:
+                      inherit !important;"><font size="+1">1</font></div>
+                  </div>
+                </td>
+                <td class="crayon-code" style="box-sizing: inherit;
+                  padding: 0px !important; border: 0px; font-family:
+                  Monaco, MonacoRegular, &quot;Courier New&quot;,
+                  monospace !important; vertical-align: top !important;
+                  margin: 0px !important; background: 0px center; width:
+                  710px;">
+                  <div class="crayon-pre" style="box-sizing: inherit; font-family: Monaco, MonacoRegular, &quot;Courier New&quot;, monospace !important; background: none !important; border: none !important; padding: 0px; margin: 0px; text-align: left; color: rgb(0, 0, 0); white-space: pre; overflow: visible; tab-size: 4; font-size: 12px !important; line-height: 15px !important;"><div class="crayon-line" id="crayon-5bda736ad88d7066982461-1" style="box-sizing: inherit; font-family: inherit; background: 0px center; border: 0px; padding: 0px 5px; margin: 0px; text-align: left; height: inherit; font-size: inherit !important; line-height: inherit !important; font-weight: inherit !important;"><font size="+1"><span class="crayon-e" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 78, 208) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">git </span><span class="crayon-e" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 78, 208) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">add </span><span class="crayon-v" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 45, 122) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">archivoA</span><span class="crayon-sy" style="box-sizing: inherit; font-family: inherit; color: rgb(51, 51, 51) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">.</span><span class="crayon-e" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 78, 208) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">php </span><span class="crayon-v" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 45, 122) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">archivoB</span><span class="crayon-sy" style="box-sizing: inherit; font-family: inherit; color: rgb(51, 51, 51) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">.</span><span class="crayon-e" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 78, 208) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">php </span><span class="crayon-v" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 45, 122) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">archivoC</span><span class="crayon-sy" style="box-sizing: inherit; font-family: inherit; color: rgb(51, 51, 51) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">.</span><span class="crayon-v" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 45, 122) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">php</span></font></div></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p style="box-sizing: inherit; margin: 0px 0px 10px; color:
+        rgb(102, 102, 102); font-size: 16px; font-weight: 400;
+        line-height: 26px;"><font size="+1"><img
+            src="https://juncotic.com/wp-content/uploads/2016/07/inicial.png"
+            class="wp-image-1966 size-full aligncenter" alt="Iniciar
+            proyecto"
+            srcset="https://juncotic.com/wp-content/uploads/2016/07/inicial.png
+            728w,
+            https://juncotic.com/wp-content/uploads/2016/07/inicial-300x190.png
+            300w" sizes="(max-width: 728px) 100vw, 728px"
+            data-lazy-loaded="true" style="box-sizing: inherit; border:
+            0px; vertical-align: middle; max-width: 100%; height: auto;
+            display: block; clear: both; margin: 0px auto;" height="460"
+            width="728"></font></p>
+      <h3 style="box-sizing: inherit; font-family: inherit; font-weight:
+        500; line-height: 28px; color: rgb(0, 0, 0); margin-top: 35px;
+        margin-bottom: 20px; font-size: 24px; overflow-wrap:
+        break-word;"><font size="+1">Realizar commit inicial</font></h3>
+      <p style="box-sizing: inherit; margin: 0px 0px 10px; color:
+        rgb(102, 102, 102); font-size: 16px; font-weight: 400;
+        line-height: 26px;"><font size="+1">La opción -m permite
+          ingresar un mensaje de manera de distinguir facilmente el
+          motivo del commit realizado</font></p>
+      <div id="crayon-5bda736ad88d9033664261" class="crayon-syntax
+        crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes
+        notranslate" data-settings=" minimize scroll-mouseover"
+        style="box-sizing: border-box; text-align: left;
+        text-size-adjust: none; overflow: hidden !important; position:
+        relative !important; direction: ltr !important; width: 730px;
+        padding: 0px; margin: 12px 0px; font-family: Monaco,
+        MonacoRegular, &quot;Courier New&quot;, monospace; font-weight:
+        500; border-width: 1px !important; border-color: rgb(153, 153,
+        153) !important; border-style: solid !important; text-shadow:
+        none !important; background: rgb(253, 253, 253) !important;
+        font-size: 12px !important; line-height: 15px !important;
+        height: auto;">
+        <div class="crayon-plain-wrap" style="box-sizing: inherit;
+          font-family: Monaco, MonacoRegular, &quot;Courier New&quot;,
+          monospace !important; background: 0px center; border: 0px;
+          padding: 0px !important; margin: 0px !important; text-align:
+          left; height: auto !important;"><font size="+1"><textarea class="crayon-plain print-no" data-settings="dblclick" readonly="readonly" style="box-sizing: border-box; color: rgb(0, 0, 0); font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 12px !important; line-height: 15px !important; font-family: Monaco, MonacoRegular, &quot;Courier New&quot;, monospace !important; margin: 0px; overflow: hidden; padding: 0px 5px; border: 0px; border-radius: 0px; width: 728.011px; height: 150px; min-height: 150px; position: absolute; opacity: 0; box-shadow: none; white-space: pre; overflow-wrap: normal; resize: none; background: rgb(255, 255, 255); tab-size: 4; z-index: 0;" wrap="soft"></textarea></font></div>
+        <div class="crayon-main" style="box-sizing: inherit;
+          font-family: Monaco, MonacoRegular, &quot;Courier New&quot;,
+          monospace !important; background: 0px center; border: 0px;
+          padding: 0px; margin: 0px; text-align: left; width: 728.011px;
+          overflow: hidden; position: relative; z-index: 1;">
+          <table class="crayon-table" style="box-sizing: inherit;
+            border-collapse: collapse !important; border-spacing: 0px
+            !important; background: none !important; width: auto
+            !important; margin-top: 0px !important; margin-right: 0px
+            !important; margin-bottom: 0px !important; margin-left: 0px;
+            border: none !important; font-size: 12px; padding: 0px
+            !important; font-family: Monaco, MonacoRegular,
+            &quot;Courier New&quot;, monospace !important; table-layout:
+            auto !important;">
+            <tbody style="box-sizing: inherit; font-family: Monaco,
+              MonacoRegular, &quot;Courier New&quot;, monospace
+              !important;">
+              <tr class="crayon-row" style="box-sizing: inherit;
+                font-family: Monaco, MonacoRegular, &quot;Courier
+                New&quot;, monospace !important; background: 0px center;
+                padding: 0px !important; border: none !important;
+                vertical-align: top !important; margin: 0px !important;">
+                <td class="crayon-nums " data-settings="show"
+                  style="box-sizing: inherit; padding: 0px !important;
+                  border: 0px; font-family: Monaco, MonacoRegular,
+                  &quot;Courier New&quot;, monospace !important;
+                  vertical-align: top !important; margin: 0px
+                  !important; background: rgb(223, 239, 255) !important;
+                  color: rgb(84, 153, 222) !important;">
+                  <div class="crayon-nums-content" style="box-sizing:
+                    inherit; font-family: Monaco, MonacoRegular,
+                    &quot;Courier New&quot;, monospace !important;
+                    background: 0px center; border: 0px; padding: 0px;
+                    margin: 0px; text-align: left; white-space: nowrap;
+                    font-size: 12px !important; line-height: 15px
+                    !important;">
+                    <div class="crayon-num"
+                      data-line="crayon-5bda736ad88d9033664261-1"
+                      style="box-sizing: inherit; font-family: inherit;
+                      background: 0px center; border: 0px; padding: 0px
+                      5px; margin: 0px; text-align: center; height:
+                      inherit; font-size: inherit !important;
+                      line-height: inherit !important; font-weight:
+                      inherit !important;"><font size="+1">1</font></div>
+                  </div>
+                </td>
+                <td class="crayon-code" style="box-sizing: inherit;
+                  padding: 0px !important; border: 0px; font-family:
+                  Monaco, MonacoRegular, &quot;Courier New&quot;,
+                  monospace !important; vertical-align: top !important;
+                  margin: 0px !important; background: 0px center; width:
+                  710px;">
+                  <div class="crayon-pre" style="box-sizing: inherit; font-family: Monaco, MonacoRegular, &quot;Courier New&quot;, monospace !important; background: none !important; border: none !important; padding: 0px; margin: 0px; text-align: left; color: rgb(0, 0, 0); white-space: pre; overflow: visible; tab-size: 4; font-size: 12px !important; line-height: 15px !important;"><div class="crayon-line" id="crayon-5bda736ad88d9033664261-1" style="box-sizing: inherit; font-family: inherit; background: 0px center; border: 0px; padding: 0px 5px; margin: 0px; text-align: left; height: inherit; font-size: inherit !important; line-height: inherit !important; font-weight: inherit !important;"><font size="+1"><span class="crayon-e" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 78, 208) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">git </span><span class="crayon-v" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 45, 122) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">commit</span><span class="crayon-h" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 111, 224) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;"> </span><span class="crayon-o" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 111, 224) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">-</span><span class="crayon-i" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 0, 0) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">m</span><span class="crayon-h" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 111, 224) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;"> </span><span class="crayon-s" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 128, 0) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">'Commit Inicial'</span></font></div></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <h3 style="box-sizing: inherit; font-family: inherit; font-weight:
+        500; line-height: 28px; color: rgb(0, 0, 0); margin-top: 35px;
+        margin-bottom: 20px; font-size: 24px; overflow-wrap:
+        break-word;"><font size="+1"><img
+            src="https://juncotic.com/wp-content/uploads/2016/07/commit.png"
+            class="aligncenter wp-image-1973 size-full" alt="commit"
+            srcset="https://juncotic.com/wp-content/uploads/2016/07/commit.png
+            721w,
+            https://juncotic.com/wp-content/uploads/2016/07/commit-300x189.png
+            300w" sizes="(max-width: 721px) 100vw, 721px"
+            data-lazy-loaded="true" style="box-sizing: inherit; border:
+            0px; vertical-align: middle; max-width: 100%; height: auto;
+            display: block; clear: both; margin: 0px auto;" height="455"
+            width="721"></font></h3>
+      <h3 style="box-sizing: inherit; font-family: inherit; font-weight:
+        500; line-height: 28px; color: rgb(0, 0, 0); margin-top: 35px;
+        margin-bottom: 20px; font-size: 24px; overflow-wrap:
+        break-word;"><font size="+1">Descargar un repositorio existente</font></h3>
+      <p style="box-sizing: inherit; margin: 0px 0px 10px; color:
+        rgb(102, 102, 102); font-size: 16px; font-weight: 400;
+        line-height: 26px;"><font size="+1">Si queremos trabajar a
+          partir de un proyecto ya creado y subido a alguna plataforma
+          de proyectos Git como<span>&nbsp;</span><a
+            href="https://github.com/" target="_blank"
+            style="box-sizing: inherit; background-color: transparent;
+            color: rgb(190, 80, 0); text-decoration: none; transition:
+            all 0.25s ease 0s;">Github</a><span>&nbsp;</span>utilizamos
+          clone.</font></p>
+      <p style="box-sizing: inherit; margin: 0px 0px 10px; color:
+        rgb(102, 102, 102); font-size: 16px; font-weight: 400;
+        line-height: 26px;"><font size="+1">Esto creará la carpeta con
+          los archivos adentro</font></p>
+      <div id="crayon-5bda736ad88da240533327" class="crayon-syntax
+        crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes
+        notranslate" data-settings=" minimize scroll-mouseover"
+        style="box-sizing: border-box; text-align: left;
+        text-size-adjust: none; overflow: hidden !important; position:
+        relative !important; direction: ltr !important; width: 730px;
+        padding: 0px; margin: 12px 0px; font-family: Monaco,
+        MonacoRegular, &quot;Courier New&quot;, monospace; font-weight:
+        500; border-width: 1px !important; border-color: rgb(153, 153,
+        153) !important; border-style: solid !important; text-shadow:
+        none !important; background: rgb(253, 253, 253) !important;
+        font-size: 12px !important; line-height: 15px !important;
+        height: auto;">
+        <div class="crayon-plain-wrap" style="box-sizing: inherit;
+          font-family: Monaco, MonacoRegular, &quot;Courier New&quot;,
+          monospace !important; background: 0px center; border: 0px;
+          padding: 0px !important; margin: 0px !important; text-align:
+          left; height: auto !important;"><font size="+1"><textarea class="crayon-plain print-no" data-settings="dblclick" readonly="readonly" style="box-sizing: border-box; color: rgb(0, 0, 0); font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 12px !important; line-height: 15px !important; font-family: Monaco, MonacoRegular, &quot;Courier New&quot;, monospace !important; margin: 0px; overflow: hidden; padding: 0px 5px; border: 0px; border-radius: 0px; width: 728.011px; height: 150px; min-height: 150px; position: absolute; opacity: 0; box-shadow: none; white-space: pre; overflow-wrap: normal; resize: none; background: rgb(255, 255, 255); tab-size: 4; z-index: 0;" wrap="soft"></textarea></font></div>
+        <div class="crayon-main" style="box-sizing: inherit;
+          font-family: Monaco, MonacoRegular, &quot;Courier New&quot;,
+          monospace !important; background: 0px center; border: 0px;
+          padding: 0px; margin: 0px; text-align: left; width: 728.011px;
+          overflow: hidden; position: relative; z-index: 1;">
+          <table class="crayon-table" style="box-sizing: inherit;
+            border-collapse: collapse !important; border-spacing: 0px
+            !important; background: none !important; width: auto
+            !important; margin-top: 0px !important; margin-right: 0px
+            !important; margin-bottom: 0px !important; margin-left: 0px;
+            border: none !important; font-size: 12px; padding: 0px
+            !important; font-family: Monaco, MonacoRegular,
+            &quot;Courier New&quot;, monospace !important; table-layout:
+            auto !important;">
+            <tbody style="box-sizing: inherit; font-family: Monaco,
+              MonacoRegular, &quot;Courier New&quot;, monospace
+              !important;">
+              <tr class="crayon-row" style="box-sizing: inherit;
+                font-family: Monaco, MonacoRegular, &quot;Courier
+                New&quot;, monospace !important; background: 0px center;
+                padding: 0px !important; border: none !important;
+                vertical-align: top !important; margin: 0px !important;">
+                <td class="crayon-nums " data-settings="show"
+                  style="box-sizing: inherit; padding: 0px !important;
+                  border: 0px; font-family: Monaco, MonacoRegular,
+                  &quot;Courier New&quot;, monospace !important;
+                  vertical-align: top !important; margin: 0px
+                  !important; background: rgb(223, 239, 255) !important;
+                  color: rgb(84, 153, 222) !important;">
+                  <div class="crayon-nums-content" style="box-sizing:
+                    inherit; font-family: Monaco, MonacoRegular,
+                    &quot;Courier New&quot;, monospace !important;
+                    background: 0px center; border: 0px; padding: 0px;
+                    margin: 0px; text-align: left; white-space: nowrap;
+                    font-size: 12px !important; line-height: 15px
+                    !important;">
+                    <div class="crayon-num"
+                      data-line="crayon-5bda736ad88da240533327-1"
+                      style="box-sizing: inherit; font-family: inherit;
+                      background: 0px center; border: 0px; padding: 0px
+                      5px; margin: 0px; text-align: center; height:
+                      inherit; font-size: inherit !important;
+                      line-height: inherit !important; font-weight:
+                      inherit !important;"><font size="+1">1</font></div>
+                  </div>
+                </td>
+                <td class="crayon-code" style="box-sizing: inherit;
+                  padding: 0px !important; border: 0px; font-family:
+                  Monaco, MonacoRegular, &quot;Courier New&quot;,
+                  monospace !important; vertical-align: top !important;
+                  margin: 0px !important; background: 0px center; width:
+                  710px;">
+                  <div class="crayon-pre" style="box-sizing: inherit; font-family: Monaco, MonacoRegular, &quot;Courier New&quot;, monospace !important; background: none !important; border: none !important; padding: 0px; margin: 0px; text-align: left; color: rgb(0, 0, 0); white-space: pre; overflow: visible; tab-size: 4; font-size: 12px !important; line-height: 15px !important;"><div class="crayon-line" id="crayon-5bda736ad88da240533327-1" style="box-sizing: inherit; font-family: inherit; background: 0px center; border: 0px; padding: 0px 5px; margin: 0px; text-align: left; height: inherit; font-size: inherit !important; line-height: inherit !important; font-weight: inherit !important;"><font size="+1"><span class="crayon-e" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 78, 208) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">git </span><span class="crayon-r" style="box-sizing: inherit; font-family: inherit; color: rgb(128, 0, 128) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">clone</span><span class="crayon-h" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 111, 224) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;"> </span><span class="crayon-sy" style="box-sizing: inherit; font-family: inherit; color: rgb(51, 51, 51) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">[</span><span class="crayon-v" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 45, 122) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">url_proyecto</span><span class="crayon-sy" style="box-sizing: inherit; font-family: inherit; color: rgb(51, 51, 51) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">]</span></font></div></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p style="box-sizing: inherit; margin: 0px 0px 10px; color:
+        rgb(102, 102, 102); font-size: 16px; font-weight: 400;
+        line-height: 26px;"><font size="+1"><img
+            src="https://juncotic.com/wp-content/uploads/2016/07/clonar.png"
+            class="aligncenter wp-image-1974 size-full" alt="clonar"
+            srcset="https://juncotic.com/wp-content/uploads/2016/07/clonar.png
+            729w,
+            https://juncotic.com/wp-content/uploads/2016/07/clonar-300x190.png
+            300w" sizes="(max-width: 729px) 100vw, 729px"
+            data-lazy-loaded="true" style="box-sizing: inherit; border:
+            0px; vertical-align: middle; max-width: 100%; height: auto;
+            display: block; clear: both; margin: 0px auto;" height="462"
+            width="729"></font></p>
+      <p style="box-sizing: inherit; margin: 0px 0px 10px; color:
+        rgb(102, 102, 102); font-size: 16px; font-weight: 400;
+        line-height: 26px;"><font size="+1">Si queremos crear el
+          repositorio dentro de una carpeta con otro nombre</font></p>
+      <div id="crayon-5bda736ad88db643620970" class="crayon-syntax
+        crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes
+        notranslate" data-settings=" minimize scroll-mouseover"
+        style="box-sizing: border-box; text-align: left;
+        text-size-adjust: none; overflow: hidden !important; position:
+        relative !important; direction: ltr !important; width: 730px;
+        padding: 0px; margin: 12px 0px; font-family: Monaco,
+        MonacoRegular, &quot;Courier New&quot;, monospace; font-weight:
+        500; border-width: 1px !important; border-color: rgb(153, 153,
+        153) !important; border-style: solid !important; text-shadow:
+        none !important; background: rgb(253, 253, 253) !important;
+        font-size: 12px !important; line-height: 15px !important;
+        height: auto;">
+        <div class="crayon-plain-wrap" style="box-sizing: inherit;
+          font-family: Monaco, MonacoRegular, &quot;Courier New&quot;,
+          monospace !important; background: 0px center; border: 0px;
+          padding: 0px !important; margin: 0px !important; text-align:
+          left; height: auto !important;"><font size="+1"><textarea class="crayon-plain print-no" data-settings="dblclick" readonly="readonly" style="box-sizing: border-box; color: rgb(0, 0, 0); font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 12px !important; line-height: 15px !important; font-family: Monaco, MonacoRegular, &quot;Courier New&quot;, monospace !important; margin: 0px; overflow: hidden; padding: 0px 5px; border: 0px; border-radius: 0px; width: 728.011px; height: 150px; min-height: 150px; position: absolute; opacity: 0; box-shadow: none; white-space: pre; overflow-wrap: normal; resize: none; background: rgb(255, 255, 255); tab-size: 4; z-index: 0;" wrap="soft"></textarea></font></div>
+        <div class="crayon-main" style="box-sizing: inherit;
+          font-family: Monaco, MonacoRegular, &quot;Courier New&quot;,
+          monospace !important; background: 0px center; border: 0px;
+          padding: 0px; margin: 0px; text-align: left; width: 728.011px;
+          overflow: hidden; position: relative; z-index: 1;">
+          <table class="crayon-table" style="box-sizing: inherit;
+            border-collapse: collapse !important; border-spacing: 0px
+            !important; background: none !important; width: auto
+            !important; margin-top: 0px !important; margin-right: 0px
+            !important; margin-bottom: 0px !important; margin-left: 0px;
+            border: none !important; font-size: 12px; padding: 0px
+            !important; font-family: Monaco, MonacoRegular,
+            &quot;Courier New&quot;, monospace !important; table-layout:
+            auto !important;">
+            <tbody style="box-sizing: inherit; font-family: Monaco,
+              MonacoRegular, &quot;Courier New&quot;, monospace
+              !important;">
+              <tr class="crayon-row" style="box-sizing: inherit;
+                font-family: Monaco, MonacoRegular, &quot;Courier
+                New&quot;, monospace !important; background: 0px center;
+                padding: 0px !important; border: none !important;
+                vertical-align: top !important; margin: 0px !important;">
+                <td class="crayon-nums " data-settings="show"
+                  style="box-sizing: inherit; padding: 0px !important;
+                  border: 0px; font-family: Monaco, MonacoRegular,
+                  &quot;Courier New&quot;, monospace !important;
+                  vertical-align: top !important; margin: 0px
+                  !important; background: rgb(223, 239, 255) !important;
+                  color: rgb(84, 153, 222) !important;">
+                  <div class="crayon-nums-content" style="box-sizing:
+                    inherit; font-family: Monaco, MonacoRegular,
+                    &quot;Courier New&quot;, monospace !important;
+                    background: 0px center; border: 0px; padding: 0px;
+                    margin: 0px; text-align: left; white-space: nowrap;
+                    font-size: 12px !important; line-height: 15px
+                    !important;">
+                    <div class="crayon-num"
+                      data-line="crayon-5bda736ad88db643620970-1"
+                      style="box-sizing: inherit; font-family: inherit;
+                      background: 0px center; border: 0px; padding: 0px
+                      5px; margin: 0px; text-align: center; height:
+                      inherit; font-size: inherit !important;
+                      line-height: inherit !important; font-weight:
+                      inherit !important;"><font size="+1">1</font></div>
+                  </div>
+                </td>
+                <td class="crayon-code" style="box-sizing: inherit;
+                  padding: 0px !important; border: 0px; font-family:
+                  Monaco, MonacoRegular, &quot;Courier New&quot;,
+                  monospace !important; vertical-align: top !important;
+                  margin: 0px !important; background: 0px center; width:
+                  710px;">
+                  <div class="crayon-pre" style="box-sizing: inherit; font-family: Monaco, MonacoRegular, &quot;Courier New&quot;, monospace !important; background: none !important; border: none !important; padding: 0px; margin: 0px; text-align: left; color: rgb(0, 0, 0); white-space: pre; overflow: visible; tab-size: 4; font-size: 12px !important; line-height: 15px !important;"><div class="crayon-line" id="crayon-5bda736ad88db643620970-1" style="box-sizing: inherit; font-family: inherit; background: 0px center; border: 0px; padding: 0px 5px; margin: 0px; text-align: left; height: inherit; font-size: inherit !important; line-height: inherit !important; font-weight: inherit !important;"><font size="+1"><span class="crayon-e" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 78, 208) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">git </span><span class="crayon-r" style="box-sizing: inherit; font-family: inherit; color: rgb(128, 0, 128) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">clone</span><span class="crayon-h" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 111, 224) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;"> </span><span class="crayon-v" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 45, 122) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">url_proyecto</span><span class="crayon-sy" style="box-sizing: inherit; font-family: inherit; color: rgb(51, 51, 51) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">]</span>&nbsp;<span class="crayon-v" style="box-sizing: inherit; font-family: inherit; color: rgb(0, 45, 122) !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; height: inherit;">nombre_carpeta</span></font></div></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p style="box-sizing: inherit; margin: 0px 0px 10px; color:
+        rgb(102, 102, 102); font-size: 16px; font-weight: 400;
+        line-height: 26px;"><font size="+1">En muchos casos durante el
+          proceso de clonado nos pedirá nombre de usuario y contraseña
+          de la plataforma para permitir su descarga.</font></p>
+      <p style="box-sizing: inherit; margin: 0px 0px 10px; color:
+        rgb(102, 102, 102); font-size: 16px; font-weight: 400;
+        line-height: 26px;"><font size="+1"><img
+            src="https://juncotic.com/wp-content/uploads/2016/07/clonarcarpeta.png"
+            class="size-full wp-image-1975 aligncenter"
+            alt="clonarcarpeta"
+            srcset="https://juncotic.com/wp-content/uploads/2016/07/clonarcarpeta.png
+            724w,
+            https://juncotic.com/wp-content/uploads/2016/07/clonarcarpeta-300x189.png
+            300w" sizes="(max-width: 724px) 100vw, 724px"
+            data-lazy-loaded="true" style="box-sizing: inherit; border:
+            0px; vertical-align: middle; max-width: 100%; height: auto;
+            display: block; clear: both; margin: 0px auto;" height="457"
+            width="724"></font></p>
+      <p style="box-sizing: inherit; margin: 0px 0px 10px; color:
+        rgb(102, 102, 102); font-size: 16px; font-weight: 400;
+        line-height: 26px;"><font size="+1">Con estas pocas lineas de
+          comando ya tendremos un repositorio listo para trabajar en el.
+          Espero que les sirva!</font></p>
+    </div>
+  </body>
+</html>

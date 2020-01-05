@@ -1,0 +1,5 @@
+
+
+/usr/lib/i386-linux-gnu/libexec/kdeconnectd
+
+visto en synaptic 

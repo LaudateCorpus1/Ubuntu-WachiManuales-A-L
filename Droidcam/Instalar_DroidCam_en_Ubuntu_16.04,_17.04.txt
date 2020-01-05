@@ -1,0 +1,83 @@
+
+
+
+sudo apt-get install build-essential linux-headers-$(uname -r)
+
+
+
+64 bits
+https://www.dev47apps.com/files/600/droidcam-64bit.tar.bz2
+
+32 bits
+https://www.dev47apps.com/files/600/droidcam-32bit.tar.bz2
+
+
+Instalar Droidcam en laptop/PC y ADB(Android Debug Bridge), este último es necesario para la aplicación ya que usa algunas de sus librerías:
+
+Droidcam
+--------------
+
+
+Instalación: 
+1. Instala Droidcam en tu télefono Android https://play.google.com/store/apps/de...
+
+2. Descarga el instalador de Droidcam para Ubuntu dependiendo de la versión de sistema operativo:
+64 bits: https://www.dev47apps.com/files/600/d...
+
+32 bits: https://www.dev47apps.com/files/600/d...
+
+3. Luego extraemos el contenido de la carpeta y desde la terminal entramos a la carpeta de Descargas y allí ejecutamos el comando "sudo chmod -R 777 droidcam-64bit" para dar permisos completos a esa carpeta y los archivos que están dentro, luego entramos a la carpeta droidcam-64bit con el comando "cd droidcam-64bit" y ejecutamos el comando "sudo ./install" 
+NOTA: en la ejecución de los comandos no se escriben las comillas
+
+4. Ahora vamos a crear el lanzador para que podamos ejecutar Droidcam buscandolo por su nombre en el dash de Unity y no tener que ejecutarlo en la terminal. para ello vamos a escribir en la terminal "sudo gedit ~/.local/share/applications/droidcam.desktop" y agregamos lo siguiente: 
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Name=DroidCam
+Exec=droidcam
+Comment=Use your Android phone as a wireless webcam or an IP Cam!
+Icon=droidcam
+Categories=GNOME;GTK;Video;
+Name[it]=droidcam
+
+5. Para finalizar vamos a actualizar la resolución de la cámara (según corresponda) se debe editar el siguiente archivo sudo apt install gksu && gksudo gedit /etc/modprobe.d/droidcam.conf y modificamos la resolución que soporte la cámara de su celular
+
+
+
+
+droidcam
+
+Para mas información ver el apartado Linux en la pagina del desarrollador:http://www.dev47apps.com/droidcam/linuxx/
+
+ADB(Android Debug Bridge)
+----------------------------------------
+
+sudo apt-get install android-tools-adb
+
+
+ANDROID DEVICE
+-------------------------
+Descargar Droidcam de Google Play, versión gratuita, https://play.google.com/store/apps/details?id=com.dev47apps.droidcam
+
+|Paso 1| Conectar cable USB al laptop/PC y al dispositivo Android, habilitar Modo Cámara
+
+|Paso 2| Habilitar Modo Depuración USB el dispositivo Android(Ajustes del dispositivo. Deben estar habilitadas las Opciones de Desarrollo para poder activar este modo)
+
+|Paso 3| Ejecutar aplicación en Droidcam en dispositivo Android. Por defecto la aplicación usa la cámara trasera. No hace falta modificar nada en la aplicación. La aplicación debe estar en primer plano, si no se cortará la comunicación.
+
+|Paso 4| Ejecutar estos comandos en la terminal
+
+Con estos comandos, se arranca el servidor ADB y se debe listar el dispositivo Android conectado, primer comando, con el segundo se hace un forward del stream de video al laptop/PC. Estos puertos deben estar libres:
+
+adb devices
+adb forward tcp:4747 tcp:4747
+
+|Paso 5| Ejecutar el Droidcam en laptop/PC (desde la terminal o ejecutable), marcar USB(Over ADB), y conectar
+
+Depues de todos estos pasos, Webcam ya debería estar lista. NO APARECE NINGUNA INTERFAZ, SE VE REFLEJADO EN LA APLICACION(DISPOSITIVO ANDROID) QUE LA CAMARA ESTA CORRIENDO. EN OTRO CASO ESTARÁ APAGADA
+Para comprobar el correcto funcionamiento, arrancad la aplicación que requiera la Webcam en el laptop/PC
+
+
+
+

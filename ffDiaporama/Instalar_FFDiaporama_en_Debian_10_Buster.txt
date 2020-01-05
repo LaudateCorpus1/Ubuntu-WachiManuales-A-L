@@ -1,0 +1,111 @@
+
+
+For Debian 10 Buster
+
+sudo apt-get install git libqt5multimedia5-plugins libtag1-dev libssh-dev libssl-dev libcurl4-openssl-dev
+libcurlpp-dev libcurlpp0 libqgsttools-p1 libqt5multimediaquick-p5 qtmultimedia5-dev build-essential
+libavcodec-dev libavdevice-dev libavfilter-dev libavformat-dev libavresample-dev libexiv2-dev libflac-
+dev libswscale-dev qt5-image-formats-plugins qt5-qmake libqt5quickwidgets5 libsdl-image1.2-dev
+libsdl-mixer1.2-dev qttools5-dev-tools qttools5-dev libqt5svg5-dev libqt5help5 libqt5sql5-
+sqlite libqt5svg5-dev libswscale-dev libavfilter-dev qtmultimedia5-dev libavdevice-dev libexiv2-dev
+
+Los siguientes paquetes hay que instalarlos por separado:
+
+sudo apt-get install libavformat-dev
+
+luego el siguiente:
+
+sudo apt-get install qt5-default
+
+Este ultimo es importantes pues hay otro paquete que se llama qt4-default el cual sirve para poner a qt4 por defecto en el sistema operativo Linux y lo que vamos a usar el qt5
+
+Luego poner una por una estas lineas en la terminal:
+
+
+git clone https://github.com/JonasCz/ffdiaporama-1604-builds
+cd ffdiaporama-1604-builds/ffDiaporama-source/ffDiaporama/
+qmake ffDiaporama.pro /PREFIX=/usr
+make
+sudo make install
+cd ..
+cd ffDiaporama_rsc
+qmake ffDiaporama_rsc.pro /PREFIX=/usr
+sudo make install
+
+
+aparece este error:
+
+In file included from ./engine/cApplicationConfig.h:42,
+                 from ./engine/_Transition.h:80,
+                 from ./engine/_Diaporama.h:26,
+                 from MainWindow/cCustomSlideTable.h:26,
+                 from MainWindow/cCustomSlideTable.cpp:21:
+./engine/cDeviceModelDef.h:63:10: fatal error: libavfilter/avfiltergraph.h: No existe el fichero o el directorio
+ #include "libavfilter/avfiltergraph.h"
+
+Buscando encuentro la siguiente explicación.
+
+AUR (en) - ffdiaporama
+https://aur.archlinux.org/packages/ffdiaporama/
+
+EgLe commented on 2018-10-17 16:39
+Hello,
+
+today I installed ffmpeg3.4 3.4.4-3 from AUR. Then I tried to install the ffdiaporama again, but it still aborts with the following message;
+
+/engine/cDeviceModelDef.h:63:10: serious error: libavfilter/avfiltergraph.h: File or directory not found
+
+include "libavfilter/avfiltergraph.h"
+This is now available but is now located in /usr/include/ffmpeg3.4/libavfilter/ Could you possibly design the ffdiaporama so that it can be compiled with ffmpeg3.4 3.4.4-3 installed?
+
+EgLe commented on 2018-09-23 10:54
+Hello, this package is "out of date", is not compiling and working with new ffmpeg4. i hope there comes new patch for ffmpeg4. this is still the best program for slideshows
+
+
+
+Mi solución:
+
+en el blog en ruso encuentro:
+
+
+Ошибки при сборке Bomi Player - Программирование - Русскоязычное сообщество Debian GNU/Linux
+https://debianforum.ru/index.php?topic=13784.0
+
+/usr/include/x86_64-linux-gnu/libavfilter/avfiltergraph.h
+
+y yo como estoy usando 32 bits encuentro:
+
+
+/usr/include/i386-linux-gnu/libavfilter/avfilter.h
+
+lo que voy a hacer es crear un enlace simbólico:
+
+sudo ln -s /usr/include/i386-linux-gnu/libavfilter/avfilter.h /usr/include/i386-linux-gnu/libavfilter/avfiltergraph.h
+
+
+
+
+
+Para desinstalar:
+
+sudo apt-get remove libqt5multimedia5-plugins libtag1-dev libssh-dev libssl-dev libcurl4-openssl-dev qtmultimedia5-dev build-essential libavcodec-dev libavdevice-dev libavfilter-dev libavformat-dev libavresample-dev libexiv2-dev libflac-dev libswscale-dev qt5-image-formats-plugins libqt5quickwidgets5 libsdl-image1.2-dev libsdl-mixer1.2-dev qttools5-dev-tools qttools5-dev libqt5svg5-dev libqt5help5 libqt5sql5-sqlite libqt5svg5-dev libswscale-dev libavfilter-dev qtmultimedia5-dev libavdevice-dev libexiv2-dev
+
+
+libqt5multimediaquick-p5 libqgsttools-p1 libcurlpp0 
+
+libcurlpp-dev
+E: No se ha podido localizar el paquete libcurlpp0
+E: No se ha podido localizar el paquete libqgsttools-p1
+E: No se ha podido localizar el paquete libqt5multimediaquick-p5
+
+
+sudo apt-get install g++ g++-8 k3b-data dolphin goldendict k3b k3b-extrathemes k3b-i18n kde-baseapps kde-cli-tools konqueror krita openshot
+
+Los siguientes paquetes hay que instalarlos por separado:
+
+sudo apt-get install libavformat-dev
+
+luego el siguiente:
+
+sudo apt-get install qt5-default
+

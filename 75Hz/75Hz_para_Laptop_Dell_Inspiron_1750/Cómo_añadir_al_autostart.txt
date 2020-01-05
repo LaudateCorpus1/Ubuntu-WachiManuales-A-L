@@ -1,0 +1,20 @@
+
+
+
+Poner en la terminal:
+
+gedit ~/.profile
+
+y allí al final añadir:
+
+xrandr --newmode "1360x768_75.00"  108.75  1360 1440 1584 1808  768 769 772 802  -HSync +Vsync
+xrandr --addmode LVDS-1 1360x768_75.00
+xrandr --output LVDS-1 --mode 1360x768_75.00
+
+Guardar y cerrar.
+
+
+Basado en:
+
+Easy way to add custom screen resolution in linux and permanently store them (ubuntu) - YouTube
+https://www.youtube.com/watch?v=-ABHN8BtWh8 

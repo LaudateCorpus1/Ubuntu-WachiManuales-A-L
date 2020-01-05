@@ -1,0 +1,136 @@
+ 
+
+I install ksnip on Linux from source in antiX 9 (this are based inDebian 10 Buster) 32 bit version
+
+I install this dependences:
+
+sudo apt-get install cmake build-essential libqt5x11extras5-dev qt5-qmake qt5-default qtbase5-dev-tools extra-cmake-modules qtdeclarative5-dev-tools qtdeclarative5-dev qtcreator qttools5-dev qttools5-dev-tools
+
+Next Install in this order:
+
+kColorPicker
+
+    Put in the terminal:
+    $ git clone https://github.com/DamirPorobic/kColorPicker
+    Change to repo directory:
+    $ cd kColorPicker
+    Make new build directory and enter it:
+    $ mkdir build && cd build
+    Create the makefile and build the project:
+    $ cmake .. && make
+    Install shared library (not required when only using the example):
+    $ sudo make install
+    Run the example application:
+    $ ./example/kColorPicker-example
+
+Working fine
+
+
+kImageAnnotator
+
+    Put in the terminal:
+    $ git clone https://github.com/DamirPorobic/kImageAnnotator
+    Change to repo directory:
+    $ cd kImageAnnotator
+    Make new build directory and enter it:
+    $ mkdir build && cd build
+    Create the makefile and build the project:
+    $ cmake .. && make
+    Install shared library (not required when only using the example):
+    $ sudo make install
+    Run the example application:
+    $ ./example/kImageAnnotator-example
+
+Working fine
+
+ksnip
+
+    Put in the terminal:
+    $ git clone https://github.com/DamirPorobic/ksnip
+    Change to repo directory:
+    $ cd ksnip
+    Make new build directory and enter it:
+    $ mkdir build && cd build
+    Create the makefile and build the project:
+    $ cmake .. && make
+    Now install the application, eventually you need to run it with sudo:
+    $ sudo make install
+    Run the application:
+    $ ksnip
+ 
+Working fine when I take snapshots, but when I open wherever picture file from ksnip, this freeze
+
+
+Now I think to prove other version and I manually uninstall deleting manually with sudo thunar this:
+
+/usr/local/bin/ksnip
+/usr/local/share/ksnip/
+/usr/local/share/applications/ksnip.desktop
+/usr/local/share/pixmaps/ksnip.svg
+/usr/local/share/metainfo/ksnip.appdata.xml
+
+
+Then I install ksnip from this source:
+
+https://github.com/DamirPorobic/ksnip/archive/v1.5.0.tar.gz
+
+I extract this and go to this path:
+
+/home/wachin/github/ksnip-1.5.0/
+
+then I build:
+
+    $ mkdir build && cd build
+    $ cmake .. && make
+    $ sudo make install
+    
+Install fine, but when I launch it:
+
+    $ ksnip
+    
+The program start but is the 1.6 alpha version, then I said to me, this are not possible and go to delete all program manually:
+
+manually with sudo thunar I delete this:
+
+/usr/local/bin/ksnip
+/usr/local/share/ksnip/
+/usr/local/share/applications/ksnip.desktop
+/usr/local/share/pixmaps/ksnip.svg
+/usr/local/share/metainfo/ksnip.appdata.xml
+
+And now I put in terminal:
+
+    $ ksnip
+    
+And Ksnip open, but this are not possible because I uninstall it from /bin/ksnip
+
+What happen here I don't know
+
+Here I made a video to try explain the problem
+https://youtu.be/KXFNMErSd60
+
+God Bless
+    
+
+
+Based in:
+
+“CMAKE_CXX_COMPILER broken” while compiling with CMake
+https://stackoverflow.com/questions/31421327/cmake-cxx-compiler-broken-while-compiling-with-cmake
+
+Could not find a configuration file for package “ECM” that is compatible with requested version 1.5.0
+https://superuser.com/questions/850029/could-not-find-a-configuration-file-for-package-ecm-that-is-compatible-with-re
+
+Could not find a package configuration file provided by "kImageAnnotator" (requested version 0.2.0) with any of the following names: kImageAnnotatorConfig.cmake kimageannotator-config.cmake
+
+How to Install Qt 5 Development Tools in Linux
+https://prognotes.net/2016/11/install-qt-5-development-tools-linux/
+
+How to install Qt Creator on Ubuntu 18.04
+https://www.lucidar.me/en/dev-c-cpp/how-to-install-qt-creator-on-ubuntu-18-04/
+
+CMake cannot find Qt5LinguistTools in Docker / Ubuntu 18.04
+https://stackoverflow.com/questions/51698075/cmake-cannot-find-qt5linguisttools-in-docker-ubuntu-18-04
+
+
+

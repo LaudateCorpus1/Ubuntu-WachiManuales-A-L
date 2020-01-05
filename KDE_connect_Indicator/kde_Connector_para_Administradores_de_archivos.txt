@@ -1,0 +1,30 @@
+
+
+en synaptic está esto en los archivos instalados:
+
+/usr/share/Thunar
+/usr/share/Thunar/sendto
+/usr/share/Thunar/sendto/kdeconnect-send-thunar.desktop
+/usr/share/nautilus-python
+/usr/share/nautilus-python/extensions
+/usr/share/nautilus-python/extensions/kdeconnect-send-nautilus.py
+/usr/share/nemo-python
+/usr/share/nemo-python/extensions
+/usr/share/nemo-python/extensions/kdeconnect-send-nemo.py
+/usr/share/caja-python
+/usr/share/caja-python/extensions
+/usr/share/caja-python/extensions/kdeconnect-send-caja.py
+
+el de Thunar funciona totalmente bien 
+
+
+En nemo también funciona bien
+
+
+nautilus funciona bien, hay que darle clic en "Abrir con otra aplicación"
+
+
+dolphin funciona bien pero hay que instalarlo externamente
+
+En caja no funciona bien pues en video aparece la opción pero en otros archivos hay que andarlo buscando a kde-connect
+

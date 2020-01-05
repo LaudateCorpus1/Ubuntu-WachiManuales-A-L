@@ -1,0 +1,13 @@
+
+How to convert .docx to .odt with Libreoffice on Ubuntu bash - Stack Overflow
+https://stackoverflow.com/questions/21845789/how-to-convert-docx-to-odt-with-libreoffice-on-ubuntu-bash
+Then you can use this command directly from command line
+
+.docx to .odt
+libreoffice --headless --convert-to odt *.docx
+
+.doc to .odt
+libreoffice --headless --convert-to odt *.doc
+
+.doc to .txt
+libreoffice --headless --convert-to txt *.doc

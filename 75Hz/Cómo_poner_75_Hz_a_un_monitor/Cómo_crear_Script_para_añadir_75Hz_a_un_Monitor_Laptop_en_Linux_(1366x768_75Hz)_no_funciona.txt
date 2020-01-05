@@ -1,0 +1,48 @@
+
+
+Cómo crear Script para añadir 75Hz en Monitor Externo en Linux
+Por: Wachín
+Este tutorial es sólo para monitores externos conectados a una laptop, o para una computadora de escritorio (nunca para la pantalla de una laptop, exepto que sea una AlienWare o que sepa que acepta 75 o más Hz)
+
+INSTRUCCIONES PARA UNA LAPTOP CONECTADA A UN MONITOR EXTERNO
+Primero necesito saber el nombre del monitor externo, coloco en la terminal
+
+
+Esto significa que el monitor de la laptop es "LVDS-1"
+
+Ahora, ingrese los siguientes datos a la terminal:
+
+wachin@Dell-Inspiron-1750:~$ gtf 1366 768 75
+
+como resultado aparece así:
+
+# 1368x768 @ 75.00 Hz (GTF) hsync: 60.15 kHz; pclk: 110.19 MHz
+  Modeline "1368x768_75.00"  110.19  1368 1456 1600 1832  768 769 772 802  -HSync +Vsync
+
+Copie la segunda linea desde el: "1368x768_75.00"  110.19  1368 1456 1600 1832  768 769 772 802  -HSync +Vsync
+
+ y la pongala con xrandr --newmode al principio, así:
+
+wachin@Dell-Inspiron-1750:~$ xrandr --newmode "1368x768_75.00"  110.19  1368 1456 1600 1832  768 769 772 802  -HSync +Vsync
+
+luego añada las siguientes lineas con los datos 1368x768_75.00, así
+
+wachin@Dell-Inspiron-1750:~$ xrandr --addmode LVDS-1 1368x768_75.00
+wachin@Dell-Inspiron-1750:~$ xrandr --output LVDS-1 --mode 1368x768_75.00
+wachin@Dell-Inspiron-1750:~$
+
+Entonces esto es lo que pondré en el script que debo hacer para ejecutarlo en un archivo y no tener que siempre andar teniendo que poner esas tres lineas:
+
+
+---------------------------------------------------------
+xrandr --newmode "1280x768_75.00"  102.98  1280 1360 1496 1712  768 769 772 802  -HSync +Vsync
+xrandr --addmode LVDS-1 1280x768_75.00
+xrandr --output LVDS-1 --mode 1280x768_75.00
+-------------------------------------------------------------
+
+
+Adaptado para Ubuntu de:
+http://www.arunviswanathan.com/node/53
+
+
+                   

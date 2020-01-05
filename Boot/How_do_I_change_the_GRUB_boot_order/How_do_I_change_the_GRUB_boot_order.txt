@@ -1,0 +1,8 @@
+
+How do I change the GRUB boot order?
+https://askubuntu.com/questions/100232/how-do-i-change-the-grub-boot-order?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+
+
+sudo add-apt-repository ppa:danielrichter2007/grub-customizer
+sudo apt-get update
+sudo apt-get install grub-customizer

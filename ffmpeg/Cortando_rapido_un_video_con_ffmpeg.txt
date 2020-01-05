@@ -1,0 +1,38 @@
+
+Whao, si funciona y rapidisimo lo corta. 
+
+Tengo un video que dura 13:14 minutos, lo que yo quería hacer es cortarlo desde donde empieza hasta 10:29 minutos, así según las explicaciones le puse así:
+
+ffmpeg -i video.mkv -ss 00:00:00.0 -c copy -t 00:10:29.0 output.mkv
+
+y funciona bien.
+
+
+ffmpeg -i "20150821_La peña de Oreb.mp4" -ss 00:00:10.0 -c copy -t 00:01:05.0 output.mkv
+
+
+
+
+http://superuser.com/questions/138331/using-ffmpeg-to-cut-up-video
+
+You can use the -ss option to specify a start timestamp, and the -t option to specify the encoding duration. The timestamps need to be in HH:MM:SS.xxx format or in seconds.
+  
+The following would clip the first 30 seconds, and then clip everything that is 10 seconds after that:
+  
+ffmpeg -i input.wmv -ss 00:00:30.0 -c copy -t 00:00:10.0 output.wmv ffmpeg -i input.wmv -ss 30 -c copy -t 10 output.wmv 
+    
+
+Note that -t is an output option and always needs to be specified after -i.
+ 
+Some tips:
+      
+If you use -ss after -i, you get more accurate seeking at the expense of a slower execution altogether. You can also put -ss before -i. See also: Seeking with FFmpeg – FFmpeg
+ 
+ 
+You can use -to instead of -t to specify the timestamp to which you want to cut. So, instead of -i <input> -ss 30 -t 10 you could also do -i <input> -ss 30 -to 40 to achieve the same thing.
+         
+If your ffmpeg does not support -c, or -to, it is likely very outdated. Compile a new version yourself or download a static build from their homepage. It's really not complicated.
+        
+        
+
+

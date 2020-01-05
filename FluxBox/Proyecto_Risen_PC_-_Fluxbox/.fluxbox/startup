@@ -1,0 +1,131 @@
+#! /bin/sh
+#
+# fluxbox startup-script:
+#
+# Lines starting with a '#' are ignored.
+
+# Change your keymap:
+xmodmap "/home/wachin/.Xmodmap"
+
+# Applications you want to run with fluxbox.
+# MAKE SURE THAT APPS THAT KEEP RUNNING HAVE AN ''&'' AT THE END.
+#
+# unclutter -idle 2 &
+# wmnd &
+# wmsmixer -w &
+# idesk &
+#
+# Debian-local change:
+#   - fbautostart has been added with a quick hack to check to see if it
+#     exists. If it does, we'll start it up by default.
+which fbautostart > /dev/null
+if [ $? -eq 0 ]; then
+    fbautostart
+fi
+
+# And last but not least we start fluxbox.
+# Because it is the last app you have to run it with ''exec'' before it.
+
+
+
+/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+# Sirve para que en Synaptic, Gdebi, Language Support, aparezca una ventana para poner la contraseña y poder instalar cosas
+# esta aplicación pertenece al paquete policykit-1-gnome
+# ese paquete viene instalado por defecto en todos los Ubuntu exepto en antiX donde se puede instalar instando network-manager-gnome pues es una dependencia de este
+
+setxkbmap -layout latam &
+# Sirve para elegir la distribución de teclado, en mi caso Español Latinoamericano "latam"
+# Revise los demás idiomas en: http://facilitarelsoftwarelibre.blogspot.com/2016/07/cambiar-la-distribucion-del-teclado-con.html
+
+pnmixer &
+# Es el icono de volumen, dele clic derecho en "Preferences" y en la pestaña "Behavior" 
+# en "Volume Control Command" verifique que esté "pavucontrol" y si no está escríbalo y clic en "Aplicar"
+
+numlockx on &
+# Este programa activa la tecla de números en los teclados externos
+# Si tienes una laptop con teclado numerico es imprescindible 
+
+nm-applet &
+# Administrador de redes disponibles de internet
+
+update-notifier  &
+# Informa cuando hay actualizaciones para el sistema operativo
+# Se pude desabilitar y manualmente actualizar los repositorios
+# con "sudo apt-get update"
+# y para luego actualizar poner: "sudo apt-get upgrade"
+
+#pcmanfm --desktop &
+# Este es necesario para cargar el wallpaper del escritorio
+
+#blueman-applet &
+# Si su computadora no viene con bluetooth y nunca va a usar uno Bluetooth USB puede desabilitarlo
+
+#mate-power-manager &
+# (opcional) Es un Power Manager applet (administrador de poder),
+# te mostrará el estado de la batería de la laptop, el estado de la
+# batería de tu teclado externo (si lo tienes), y otros estados, depende
+
+#system-config-printer-applet  &
+# Applet de cola de impresión, este programa viene por defecto configurado al inicio de los sistema operativos Ubuntu, por eso
+# debe estar en el arranque automático. Lo puede revisar ustedes mismos en: /etc/xdg/autostart/print-applet.desktop
+
+orage &
+# Calendario, es necesario configurarlo
+
+sleep 5; xfce4-notes &
+# Para tomar notas rapidas, imprescindible, 
+
+pluma &
+# Editor de Texto
+
+goldendict &
+# Diccionario off-line, es importante cuando porque cuando uno no tiene internet puede consultar en estos diccionarios: 
+# https://facilitarelsoftwarelibre.blogspot.com/2016/03/goldendict-el-mejor-diccionario-offline.html
+# https://facilitarelsoftwarelibre.blogspot.com/2016/05/diccionario-espanol-clave-para.html
+
+brightness-controller &
+# Control de brillo para evitar cansancio ocular, vea mi post:
+# https://facilitarelsoftwarelibre.blogspot.com/2017/06/control-de-brillo-para-pantallas-en.html
+
+#hp-systray -x &
+# Si alguien usa una impresora HP este comando hará que se iconice HPLIP. Para instalarlo: sudo apt-get install hplip-gui
+
+chromium-browser &
+# Navegador Web con soporte para 32 bits hecho en base a Google Chrome que sólo es de 64 bits y no puedo usarlo en mi laptop de 32 bits
+
+#google-chrome-stable &
+# Navegador Web sólo de 64 bits
+
+#firefox &
+# Navegador Web casi no lo uso
+
+alarm-clock-applet --hidden &
+# Una bonita alarma ligera
+
+konsole &
+# La terminal de gnome, aparece blanca pero se la puede configurar para dejarla negra
+
+sleep 7; shutter --min_at_startup &
+# Para hacer capturas de pantalla
+
+#solaar &
+# Administrador de periféricos para Linux de Logitech Unifying Receiver, yo tengo un teclado externo Logitech k400 y es necesario 
+# para mi instalar este paquete y que esté activo e iconizado, yo lo uso para invertir la tecla Fn
+# Vea mi entrada: https://facilitarelsoftwarelibre.blogspot.com/2018/06/activar-o-desactivar-invertir-o.html
+
+dropbox start &
+# Para usar Dropbox
+# Vea mi entrada: https://facilitarelsoftwarelibre.blogspot.com/2018/09/como-instalar-dropbox-en-ubuntu-1604.html
+
+sleep 7; dolphin4 ~/ ~/Dropbox/UbuntuManuales/ ~/ ~/Dropbox/ &
+# El administrador de archivos que yo más uso. El comando es para que se abran cuatro pestañas con esas rutas
+
+pulseaudio --start &
+# Añado esto por un problema con Pulseaudio cuado purgé el PPA de Mickail Utils
+
+indicator-kdeconnect &
+# para que funcione KDE Connect Indicator, lo uso para compartir archivos entre mi celular con Android  y Ubuntu
+
+exec fluxbox
+# or if you want to keep a log:
+# exec fluxbox -log "/home/wachin/.fluxbox/log"

@@ -1,0 +1,19 @@
+
+
+Cómo saber el nombre lal Chipset del WiFi de la laptop
+
+sudo apt-get install aircrack-ng
+
+
+wachin@Dell-Inspiron-1750:~$ sudo airmon-ng
+[sudo] password for wachin: 
+
+PHY	Interface	Driver		Chipset
+
+phy0	wlp12s0		wl		Broadcom Limited BCM4312 802.11b/g LP-PHY (rev 01)
+
+wachin@Dell-Inspiron-1750:~$ 
+
+
+airmon-ng [Aircrack-ng]
+https://www.aircrack-ng.org/doku.php?id=airmon-ng

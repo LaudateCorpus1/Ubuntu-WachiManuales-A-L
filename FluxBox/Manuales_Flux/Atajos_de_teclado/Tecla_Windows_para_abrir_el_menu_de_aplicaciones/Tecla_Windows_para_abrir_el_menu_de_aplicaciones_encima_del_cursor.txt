@@ -1,0 +1,24 @@
+
+
+En la terminal ponga (debe tener instalado gedit)
+
+gedit ~/.fluxbox/keys
+
+y cuando se abra el archivo de texto pegue allí las siguiente linea:
+
+# Esto significa que la tecla de Windows (Mod4) y la tecla M abrirán el menú de las aplicaciones
+Mod4 m :RootMenu
+
+
+MODO DE USO
+Aplaste el atajo de teclado:
+
+Tecla de Windows + M
+
+y donde usted tenga el cursor allí aparecerá el menú de las aplicaciones
+
+
+BASADO EN:
+
+Fluxbox: Toggle RootMenu using Mouse1 - Unix & Linux Stack Exchange
+https://unix.stackexchange.com/questions/233423/fluxbox-toggle-rootmenu-using-mouse1

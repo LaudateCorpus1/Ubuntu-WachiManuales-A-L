@@ -1,0 +1,14 @@
+
+http://www.unitconversion.org/typography/pixels-x-to-centimeters-conversion.html
+
+1280 px = 33.86 cm
+720 px= 19.05 cm
+
+or
+
+1 cm	37.795275590551 pixel (X)
+
+        720 px
+
+
+(1280px 33.86cm y 720px 19.05cm)

@@ -1,0 +1,5 @@
+
+Como instalar ffmpeg en JDownloader 2 para Youtube
+http://www.identi.li/index.php?topic=301666
+
+Ahora vamos a ejecutar JDownloader 2 e iremos a "Configuración avanzada" donde buscaremos la llave FFmpegSetup: Binary Path que seguramente tendrá valor "null"; haremos doble clic sobre ése valor y ahí pegaremos el path completo al archivo ffmpeg.exe que habíamos guardado en el archivo de texto provisorio y damos [Enter] para fijar el nuevo valor.

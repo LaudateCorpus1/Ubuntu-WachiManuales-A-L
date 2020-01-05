@@ -1,0 +1,46 @@
+
+
+************************************
+Diccionarios Universidad de Granada
+************************************
+
+http://eubd1.ugr.es/
+
+Link directo:
+http://eubd1.ugr.es/babylonupdate.htm
+
+Visto en:
+
+http://sinerxia.blogspot.com/2011/12/gestor-de-diccionarios-goldedict.html
+
+****************************************
+Diccionario de la Real Academia Española
+****************************************
+
+https://code.google.com/p/tokland/wiki/DiccionarioRAE
+
+https://code.google.com/p/tokland/downloads/list
+
+Nombre del archivo que descargué:
+
+drae-dict-201205-2.tgz
+
+Allí dice en la página "Instrucciones para sistemas operativos UNIX" que se utiliza el archivo ".tgz", y allí hay una lista de instrucciones que son para linea de comandos, pero yo para hacerlo más sencillo lo que hago es simplemente extraer los archivos y ponerlos en una carpeta aparte. Los archivos que funcionan son:
+
+drae.dict.dz
+drae.index
+
+*******************
+Diccionario WordNet
+*******************
+
+http://en.sourceforge.jp/projects/sfnet_goldendict/downloads/dictionaries/WordNet3.0_1.0.zip/
+
+Visto en:
+http://askubuntu.com/questions/183570/where-can-i-find-dictionaries-for-opendict-and-goldendict
+
+
+Descargados por:
+Washington Indacochea Delgado
+
+

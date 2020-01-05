@@ -1,0 +1,16 @@
+
+
+
+Unlike the solution proposed by kk78, the following method solves the problem once and for all:
+Close dropbox
+
+Open /usr/bin/dropbox file with a text editor (as an admin). For example, in the terminal run
+
+sudo gedit /usr/bin/dropbox
+
+Create a new line after import os and add the following: 
+
+os.environ['DBUS_SESSION_BUS_ADDRESS'] = ""
+
+    Save
+

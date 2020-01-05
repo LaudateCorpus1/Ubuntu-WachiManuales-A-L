@@ -1,0 +1,22 @@
+
+
+Cuando uno instala inkscape
+
+sudo apt-get install inkscape aspell aspell-en aspell-es pstoedit libsvg-perl
+
+Estos se pueden instalar
+
+pstoedit.- PostScript and PDF files to editable vector graphics converter
+libsvg-perl.- perl module to generate SVG images
+
+
+aparece esto:
+
+Suggested packages:
+  dia inkscape-tutorials libsvg-perl libxml-xql-perl
+  pstoedit python-uniconvertor
+Recommended packages:
+  aspell fig2dev libimage-magick-perl libwmf-bin
+  python-scour
+ 
+Nota: python-uniconvertor esta deprecado

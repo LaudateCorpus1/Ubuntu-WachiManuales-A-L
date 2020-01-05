@@ -1,0 +1,106 @@
+Howto: Install devel version beside stable version on Linux
+How to install the development version of Inkscape beside the stable version on Linux
+=====================================================================================
+Instructions for Ubuntu/Linux Mint chroot environments, tested with Linux Mint 17.2 as main system. Meant for people using Linux and wanting to test the development version without overwriting their own, stable Inkscape version and its configuration files (for example, translators who need to see what the thing they are translating actually does).
+Creation and first start
+========================
+1. Open a terminal and allow other users to access your display:
+xhost +
+2. Become root on the terminal:
+sudo bash
+3. Create a directory for the chroot environment (on a disk which is not mounted with noexec or nodev flags):
+mkdir ./inkscape-devel-chroot
+4. Install debootstrap if not yet installed, for Ubuntu/Linux Mint:
+
+apt-get install debootstrap
+
+5. Enter the new directory you created:
+
+cd ./inkscape-devel-chroot
+
+6. Create the new environment (in this case, for Ubuntu Bionic (18.04)):
+
+debootstrap bionic .
+
+7. Wait...
+8. Become root of the nested system:
+
+chroot .
+
+9. Add missing package sources to the sources list in the chroot environment:
+
+echo "deb http://ppa.launchpad.net/inkscape.dev/trunk/ubuntu bionic main" >> /etc/apt/sources.list
+
+10.Update the package index:
+
+apt-get update
+
+11.Install Inkscape and some language packages, so you have more than just English available for Inkscape (here for English and German):
+
+apt-get install inkscape-trunk language-pack-en language-pack-de
+
+candidatos:
+
+language-pack-es-base language-pack-es
+language-pack-en-base language-pack-en
+
+12.Answer the questions with 'y'
+
+13.Generate the locales, so you can use the languages (for English and German):
+
+locale-gen en_US.UTF-8; locale-gen de_DE.UTF-8
+
+14.Mount the /proc file system, ignore the warning:
+
+mount /proc
+
+15.(optional) Create another user and become that user inside the chroot environment:
+
+adduser <name>
+
+(enter password, answer questions)
+
+su <name>
+
+15.Start Inkscape:
+
+inkscape
+
+16.When finished, leave chroot with:
+
+exit
+
+(do this twice if you changed to normal user in step 15)
+Everytime you want to use it
+============================
+1. Open a terminal and allow other users to access your display:
+
+xhost +
+
+2. Become root on the terminal:
+
+sudo bash
+
+3. Enter the directory you created for this:
+
+cd <path_to_directory>/inkscape-devel-chroot
+
+4. Become root of the nested system:
+
+chroot .
+
+5. (optional) Become a normal user inside the chroot environment (if you created one in 15. above):
+
+su <name>
+
+6. Start Inkscape:
+
+inkscape
+
+7. When finished, leave chroot with:
+
+exit
+
+(do this twice if you changed to normal user in step 6)
+
+

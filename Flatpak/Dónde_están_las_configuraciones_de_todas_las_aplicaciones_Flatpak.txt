@@ -1,0 +1,11 @@
+
+Están aquí:
+
+/home/wachin/.var/app/
+
+visto en:
+
+/home/wachin/.var/app/org.kde.kdenlive/cache/kdenlive/sin nombre.mp4
+
+
+

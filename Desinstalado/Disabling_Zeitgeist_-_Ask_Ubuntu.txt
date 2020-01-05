@@ -1,0 +1,23 @@
+
+Disabling Zeitgeist - Ask Ubuntu
+https://askubuntu.com/questions/45548/disabling-zeitgeist
+
+
+I found hints about renaming of /etc/xdg/autostart/zeitgeist-datahub.desktop, but it isn't enough. It prevents Zeitgeist from running at startup, but in my case (Ubuntu 12.04.4 LTS) it started later somehow (perhaps as a result of some DBus activity).
+If you'd like to keep Zeitgeist installed, but prevent it from running, try renaming its executables:
+
+zeitgeist-daemon --quit
+cd /usr/bin/
+sudo mv zeitgeist-daemon zeitgeist-daemon.bak
+sudo mv zeitgeist-datahub zeitgeist-datahub.bak
+Now Zeitgeist daemon won't start. You can check this later with ps aux | grep [z]eitgeist. You can also purge the database which was collected by Zeitgeist by deleting ~/.local/share/zeitgeist/ folder with its contents, if you like to save some space.
+To secure these files from updating you can also lock packages zeitgeist-core and zeitgeist-datahub in Synaptic or Aptitude.
+
+To revert the changes simply rename these executables back:
+
+cd /usr/bin/
+sudo mv zeitgeist-daemon.bak zeitgeist-daemon
+sudo mv zeitgeist-datahub.bak zeitgeist-datahub
+If you altered .desktop file in /etc/xdg/autostart/, you should also return it back.
+
+

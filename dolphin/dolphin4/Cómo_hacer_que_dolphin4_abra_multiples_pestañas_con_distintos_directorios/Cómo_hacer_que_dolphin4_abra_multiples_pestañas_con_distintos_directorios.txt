@@ -1,0 +1,6 @@
+
+Cómo hacer que dolphin4 abra multiples pestañas con distintos directorios:
+
+dolphin4 /home/wachin/Dropbox/UbuntuManuales/
+
+dolphin4 /home/wachin/Dropbox/UbuntuManuales/ /home/wachin/ /home/wachin/ /home/wachin/Descargas/

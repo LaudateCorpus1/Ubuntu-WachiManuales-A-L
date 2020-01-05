@@ -1,0 +1,52 @@
+
+Cómo instalar Ubuntu juntamente con Windows
+
+
+INSTRUCCIONES
+Tengo disponible para esta instalación un Disco Duro de 2 TB (2000 GB), no hay nada instalado en el disco duro
+
+Primero se debe instalar Windows, 
+para eso pongo el DVD de Windows 7 (en mi caso) y aplasto la tecla (según el ordenador) que es para arrancar desde el CD o DVD y luego a lo que aparece la herramienta de particion. . . . 
+
+Consejo.- Como voy a instalar Windows al lado de Windows creo que lo más recomendable es iniciar desde cero en la PC y formatear todo, así que se borrará absolutamente todo por lo cual debe respaldar todo lo que esté en su ordenador
+
+Particion Primaria
+Le daré  200 GB (200000 MB) por lo menos para Windows esto porque en esta PC se van a instalar programas enormes de diseño y Autocad y estará bien así, pero sino se va a instalar programas inmensos pongale 100 GB (100000 MB) y no tiene tanto espacio en el disco duro.
+
+Nota: Windows automáticamente creará una partición para el sistema (hay que tenerlo en cuenta)
+
+
+Particion Extendida UBUNTU 
+Esta partición la dejaré vacía para luego después que haya instalado Windows crear una partición extendida con lo siguiente:
+
+2. 70 GB para el Sistema /
+3. 80 GB para /home
+Nota: le pongo  70 y 80 para que se diferencie y pueda saber de que particion se trata
+
+ext4 total 115 GB (115000 MB) debe tener
+
+- 2GB para el fichero de Intercambios swap (hasta Ubuntu 16.04 es necesaria, de 18.04 ya no usa)
+
+
+ESPACIO COMPARTIDO
+
+5. 100 GB o más hasta que se acabe el espacio) como partición NTFS que sirva de espacio para comparir entre los dos sistemas operativos
+
+
+
+
+
+ENTENDIMIENTO
+Como no es posible tener más de 4 particiones en Windows en este caso es necesario crear una partición extendida 
+
+
+CONSULTAS
+extended partition (partición extendida)
+https://www.symantec.com/es/es/security_response/glossary/define.jsp?letter=e&word=extended-partition
+
+Linux paso a paso: Instalar Ubuntu junto a Windows 7
+https://www.genbeta.com/paso-a-paso/linux-paso-a-paso-instalar-ubuntu-junto-a-windows-7
+
+
+
+

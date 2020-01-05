@@ -1,0 +1,8 @@
+
+
+solaar &
+# Logitech Unifying Receiver, administrador de periféricos para Linux
+# yo tengo un teclado externo Logitech k400 y es necesario para mi instalar este paquete
+# y que esté activo e iconizado, para configurarlo a mi teclado según necesite
+# yo lo uso para invertir la tecla Fn
+# https://unix.stackexchange.com/questions/41647/switch-fn-key-state
