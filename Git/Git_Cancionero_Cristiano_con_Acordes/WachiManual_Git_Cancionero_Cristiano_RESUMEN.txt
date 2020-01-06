@@ -22,15 +22,8 @@ y alli clonen el repositorio que ustedes tengan. En mi caso el mío:
 
 git clone https://github.com/wachin/Cancionero-Cristiano-con-acordes
 
-
 git config --global user.name "tuusuario"
 git config --global user.email tucorreo@gmail.com
-
-mis datos:
-
-git config --global user.name "wachin"
-git config --global user.email wachin.id@gmail.com
-
 
 git status
 

@@ -16,11 +16,6 @@ pongan sus datos:
 git config --global user.name "tuusuario"
 git config --global user.email tucorreo@gmail.com
 
-mis datos:
-
-git config --global user.name "wachin"
-git config --global user.email wachin.id@gmail.com
-
 para ver como está:
 
 git status

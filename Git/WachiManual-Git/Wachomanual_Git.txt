@@ -39,8 +39,8 @@ Para iniciar sesión desde mi repositorio local (esto quiere decir desde mi Orde
 
 poner en la terminal (en Linux, Windows o Android)
 
-git config --global user.name "wachin"
-git config --global user.email wachin.id@gmail.com
+git config --global user.name "su-nombre-de-usuario"
+git config --global user.email su-correod@gmail.com
 
 PARA CONTINUAR EDITANDO UN REPOSITORIO YA EXISTENTE EN GITHUB
 En este caso pondré como ejemplo el repositorio https://github.com/wachin/Cancionero-Cristiano-con-acordes el cual yo he creado y donde tengo varios archivos, y quiero seguir añadiendo archivos desde mi celular o desde otra computadora
