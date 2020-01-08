@@ -35,6 +35,32 @@ dpkg -b tmpdir 02_libgnome2-perl_1.046-3build2~0ppa1~cosmic_wachin_i386.deb
 
 
 
+otro caso:
+
+dpkg-deb -x simplescreenrecorder_0.3.9+2_ppa1_zesty1_i386.deb tmpdir
+dpkg-deb --control simplescreenrecorder_0.3.9+2_ppa1_zesty1_i386.deb tmpdir/DEBIAN
+gedit tmpdir/DEBIAN/control
+dpkg -b tmpdir simplescreenrecorder_0.3.9+2_ppa1_zesty1_i386_ok.deb
+
+y este tiene una dependencia
+
+ADVERTENCIA.- Es necesario borrar la carpeta tmpdir que se creó anteriormente puesto que alli están todavía los archivos del paquete anterior, y si no se borrar se empaquetarán con el siguiente y cuando usted los instale le saldrá que no se puede instalar porque no se puede escribir porque ya está en el otro.
+
+dpkg-deb -x libswscale4_3.2.14-1_deb9u1_i386.deb tmpdir
+dpkg-deb --control libswscale4_3.2.14-1_deb9u1_i386.deb tmpdir/DEBIAN
+gedit tmpdir/DEBIAN/control
+dpkg -b tmpdir libswscale4_3.2.14-1_deb9u1_i386_ok.deb
+
+
+OTRO CASO
+
+dpkg-deb -x simplescreenrecorder_0.3.11-1+b2_i386.deb tmpdir
+dpkg-deb --control simplescreenrecorder_0.3.11-1+b2_i386.deb tmpdir/DEBIAN
+gedit tmpdir/DEBIAN/control
+dpkg -b tmpdir simplescreenrecorder_0.3.11-1+b2_i386_ok.deb
+
+
+
 
 
 
