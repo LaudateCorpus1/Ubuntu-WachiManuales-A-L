@@ -14,8 +14,8 @@
    viewBox="0 0 210 297"
    version="1.1"
    id="svg829"
-   inkscape:version="0.92.3 (unknown)"
-   sodipodi:docname="Flechas y rectangulos.svg">
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="Flechas_y_rectangulos.svg">
   <defs
      id="defs823">
     <marker
@@ -189,16 +189,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.95220588"
-     inkscape:cx="275.75095"
-     inkscape:cy="956.84942"
+     inkscape:zoom="1.0228774"
+     inkscape:cx="303.52338"
+     inkscape:cy="888.47079"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1280"
-     inkscape:window-height="721"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-width="1360"
+     inkscape:window-height="708"
+     inkscape:window-x="-1"
+     inkscape:window-y="-1"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata826">
@@ -346,8 +346,8 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path
-       style="display:inline;fill:#ff0000;stroke:#ff0000;stroke-width:1.39140022;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend-5-7-1)"
-       d="M 28.001816,62.568903 V 96.166811"
+       style="display:inline;fill:#ff0000;stroke:#ff0000;stroke-width:1.37077689;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend-5-7-1)"
+       d="M 28.002014,62.833486 V 95.933407"
        id="path1374-7-5-3-0"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />

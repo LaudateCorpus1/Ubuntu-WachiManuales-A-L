@@ -62,6 +62,11 @@ dpkg -b tmpdir simplescreenrecorder_0.3.11-1+b2_i386_ok.deb
 
 
 
+dpkg-deb -x libreoffice-gtk_6.3.2-0ubuntu2_all.deb tmpdir
+dpkg-deb --control libreoffice-gtk_6.3.2-0ubuntu2_all.deb tmpdir/DEBIAN
+gedit tmpdir/DEBIAN/control
+dpkg -b tmpdir libreoffice-gtk_6.3.2-0ubuntu2_all_ok.deb
+
 
 
 
