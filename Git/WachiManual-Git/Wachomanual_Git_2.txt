@@ -125,7 +125,7 @@ git checkout
 Para viajar en el tiempo
 
 
-PARA VER CAMBIOS HECHOS DESDE OTRA COMPUTADORA
+PARA VER CAMBIOS HECHOS DESDE OTRA COMPUTADORA Y DESCARGARLOS:
 Hay que entrar en la terminal en la carpeta donde tenemos el repositorio y allí poner:
 
 git fetch
