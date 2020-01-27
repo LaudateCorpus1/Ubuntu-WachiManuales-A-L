@@ -1,0 +1,18 @@
+
+
+
+
+
+#!/bin/bash
+grep -h -s --color=never '^URL=' "$@" | cut -d'=' -f2- | xargs chromium &
+
+
+
+
+#!/bin/bash
+grep -h -s --color=never '^URL=' "$@" | cut -d'=' -f2- | xargs firefox &
+
+
+
+[SOLVED] Opening old .url windows internetshortcuts in Linux the easy way - Linux Mint Forums
+https://forums.linuxmint.com/viewtopic.php?t=284064
