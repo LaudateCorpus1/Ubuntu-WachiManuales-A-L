@@ -1,0 +1,20 @@
+
+
+
+Yo lo instalé así:
+
+sudo apt install git
+
+luego
+
+
+git clone https://github.com/markus-perl/ffmpeg-build-script.git
+cd ffmpeg-build-script
+./build-ffmpeg --help
+
+
+Usage
+./build-ffmpeg --help       Display usage information
+./build-ffmpeg --build      Starts the build process
+./build-ffmpeg --cleanup    Remove all working dirs
+Contact 
