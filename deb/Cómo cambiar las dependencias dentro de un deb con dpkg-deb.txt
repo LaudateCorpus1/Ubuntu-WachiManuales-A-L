@@ -68,5 +68,13 @@ gedit tmpdir/DEBIAN/control
 dpkg -b tmpdir libreoffice-gtk_6.3.2-0ubuntu2_all_ok.deb
 
 
+otro
+
+dpkg-deb -x xvidcap_1.1.7-13_amd64.deb tmpdir
+dpkg-deb --control xvidcap_1.1.7-13_amd64.deb tmpdir/DEBIAN
+gedit tmpdir/DEBIAN/control
+dpkg -b tmpdir xvidcap_1.1.7-13_amd64_ok.deb
+
+
 
 
