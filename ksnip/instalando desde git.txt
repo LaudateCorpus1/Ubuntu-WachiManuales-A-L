@@ -120,6 +120,11 @@ $
 
 
 
+Se lo puede lanzar así:
+
+/home/wachin/github/ksnip-releases/ksnip-1.5.0/build/src/ksnip &
+
+
 consultas:
 
 “CMAKE_CXX_COMPILER broken” while compiling with CMake
