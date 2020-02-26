@@ -63,6 +63,17 @@ Para compilarlo desde código fuente: https://github.com/DamirPorobic/ksnip
     $ ksnip
  
  
+ Para desinstalar:
+ 
+ sudo make uninstall
+ 
+ 
+ Para converitr en Debian (es necesario antes instalar checkinstall. En Debian hay que activar deb-multimedia)
+ 
+ sudo checkinstall
+ 
+ Aquí hay una serie de preguntas, poner que se desea construir el DEB, y luego poner "n" en las que dice "n"
+ 
  
  
  y fueron instalados los siguientes archivos en el sistema:
