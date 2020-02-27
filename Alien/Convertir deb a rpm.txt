@@ -1,0 +1,12 @@
+
+
+
+
+Convertir DEB a RPM.
+
+sudo alien -r -c archivo.deb 
+
+
+
+Convertir DEB a RPM con ALIEN (y viceversa) – La mirada del replicante
+https://lamiradadelreplicante.com/2011/10/20/convertir-deb-a-rpm-con-alien-y-viceversa/

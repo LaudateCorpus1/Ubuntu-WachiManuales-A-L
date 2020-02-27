@@ -15,19 +15,21 @@ Nota: allí cuando vaya en el comando tercero puede cambiar la dependencia que u
 
 
 
-En funcionamiento:
+ejemplo:
 
-wachin@Dell-Inspiron-1750:~/Apps-Linux-Instaladores/PhotoFilmStrip$ 
-
-
-dpkg-deb -x ksnip-1.5.0_amd64.deb tmpdir
-
-Aquí en este paso Wachín debes cambiar el ejecutable ksnip y poner el tuyo de 32 bits que construiste
-file:///home/wachin/Dropbox/UbuntuManuales/ksnip/ksnip-1.5.0/Cambiando-de-amd64-a-i386/tmpdir/bin/ksnip
+file:///home/wachin/github-2/Ubuntu-WachiManuales-A-L/ksnip/ksnip-1.5.0/ksnip-1.5.0_i386.deb
 
 
-dpkg-deb --control ksnip-1.5.0_amd64.deb tmpdir/DEBIAN
-gedit tmpdir/DEBIAN/control
-dpkg -b tmpdir ksnip-1.5.0_i386.deb
+dpkg-deb -x ksnip-1.5.0_i386.deb tmpdiri386
+dpkg-deb --control ksnip-1.5.0_i386.deb tmpdiri386/DEBIAN
+gedit tmpdiri386/DEBIAN/control
+dpkg -b tmpdiri386 ksnip-1.5.0_i386_ok.deb
+
+
+
+
+
+
+
 
 
