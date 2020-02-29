@@ -1,0 +1,13 @@
+
+
+Si tiene el archivo de la imagen con algún nombre diferente renómbrelo a recovery.img y hubiquese en la terminal en el lugar donde están los archivos y ponga en la terminal 
+
+tar -H ustar -c recovery.img > recovery.tar
+
+mv recovery.tar recovery.tar.md5
+
+md5sum -t recovery.tar >> recovery.tar
+
+
+Convert IMG recovery to TAR.md5 Odin flashable file (Cygwin converter)
+http://www.droidthunder.com/convert-img-to-tar-using-cygwin/
