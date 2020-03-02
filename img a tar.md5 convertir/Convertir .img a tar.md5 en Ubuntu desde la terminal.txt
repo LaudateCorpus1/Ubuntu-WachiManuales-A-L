@@ -1,13 +1,18 @@
 
 
-Si tiene el archivo de la imagen con algún nombre diferente renómbrelo a recovery.img y hubiquese en la terminal en el lugar donde están los archivos y ponga en la terminal 
+Si tiene el archivo de la imagen con algún nombre diferente renombrelo a recovery.img y ubiquese en la terminal en el lugar donde están los archivos y ponga en la terminal 
 
 tar -H ustar -c recovery.img > recovery.tar
 
-mv recovery.tar recovery.tar.md5
-
 md5sum -t recovery.tar >> recovery.tar
 
+mv recovery.tar recovery.tar.md5
+
+
+CONSULTAS:
+
+How to make an Odin flashable .tar from .img | AT&T Samsung Galaxy S II Skyrocket SGH-I727
+https://forum.xda-developers.com/showthread.php?t=1484304
 
 Convert IMG recovery to TAR.md5 Odin flashable file (Cygwin converter)
 http://www.droidthunder.com/convert-img-to-tar-using-cygwin/

@@ -18,6 +18,8 @@ INSTRUCCIONES PARA DOLPHIN
 1.- Para Dolphin ponga estos comandos en la terminal:
 
 sudo apt-get install dolphin kde-baseapps kde-l10n-es konsole kde-cli-tools kio-extras kde-runtime
+
+
 Una vez instalado este programa, pondrá un icono entre todas sus aplicaciones, ejemplo en antiX Linux:
 
 
@@ -35,17 +37,7 @@ cp *.desktop ~/.local/share/kservices5/ServiceMenus
 sudo ./install.sh
 echo "Dios les bendiga"
 
-y aparecerá la siguiente ventana:
-
-
-
-allí como se ve hay que dar clic en OK, luego le aparecerá esta ventana:
-
-
-
-de clic en OK, de Enter en la terminal y Reinicie Dolphin(cierrelo si lo tenía abierto y vuelvalo a abrri) y al dar clic derecho en una carpeta le aparecerán las opciones:
-
-
+y aparecerá una ventana que tiene una opción "Plasma 5", de clic en Ok, luego le aparecerá otra ventana, de clic en OK, de Enter en la terminal y Reinicie Dolphin(cierrelo si lo tenía abierto y vuelvalo a abrri) y al dar clic derecho en una carpeta le aparecerán las opciones:
 
 
 

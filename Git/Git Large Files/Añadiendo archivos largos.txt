@@ -1,0 +1,25 @@
+
+
+
+https://github.com/wachin/WPS-Office-2019-v11.1.0.8392-RPM
+
+
+sudo apt install git-lfs
+
+cd /github/WPS-Office-2019-v11.1.0.8392-RPM
+
+git lfs track "*.rpm"
+
+git add DESCARGA/wps-office-2019-11.1.0.8392.i386.rpm
+
+git add DESCARGA/wps-office-2019-11.1.0.8392.x86_64.rpm
+
+
+git commit -m "Add large files"
+
+git push origin master
+
+y listo, notese que dice en la terminal:
+
+
+uploading LFS objects
