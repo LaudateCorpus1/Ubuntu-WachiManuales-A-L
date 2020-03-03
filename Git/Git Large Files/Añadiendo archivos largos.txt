@@ -1,25 +1,64 @@
 
 
+Voy a añadir unos archivos de más de 100MB al siguiente repositorio:
 
 https://github.com/wachin/WPS-Office-2019-v11.1.0.8392-RPM
 
+Para hacerlo debo instalar:
 
 sudo apt install git-lfs
 
+ahora debo entrar desde la terminal a mi repositorio(lo tengo dentro de una carpeta a la que le he puesto el nombre de github):
+
 cd /github/WPS-Office-2019-v11.1.0.8392-RPM
 
+Por defecto git-lfs no hace nada con ningún archivo, por eso debo hacer que git-lfs rastree los archvios que voy a subir que son estos dos:
+
+wps-office-2019-11.1.0.8392.i386.rpm
+wps-office-2019-11.1.0.8392.x86_64.rpm
+
+
+estos pesan poco más de 300 MB, así que pongo en la terminal:
+
 git lfs track "*.rpm"
+
+ahora para ver una lista de los patrones que van a ser rastreados pongo:
+
+git lfs track
+
+Y aparecerá en la terminal la información.
+
+Ahora hay que añadir el archivo .gitattributes a su repositorio. "git lfs track" almacena los patrones de archivos rastreados en .gitattributes. De esta manera cuando se clona el repositorio, se conservan los patrones de archivos rastreados:
+
+git add .gitattributes 
+
+ahora voy a añadir los archivos así:
 
 git add DESCARGA/wps-office-2019-11.1.0.8392.i386.rpm
 
 git add DESCARGA/wps-office-2019-11.1.0.8392.x86_64.rpm
 
+aunque también se pueden añadir todos de un solo así:
 
-git commit -m "Add large files"
+git add "*.rpm"
+
+ahora quiero ver los archivos que git-lfs a añadido, y pongo:
+
+git lfs ls-files
+
+ahora solo me falta hacer el commit:
+
+git commit -m "Add large files ok"
+
+y enivar los cambios:
 
 git push origin master
 
-y listo, notese que dice en la terminal:
 
+CONSULTAS:
 
-uploading LFS objects
+Tutorial · git-lfs/git-lfs Wiki
+https://github.com/git-lfs/git-lfs/wiki/Tutorial
+
+Git Large File Storage | Git Large File Storage (LFS) replaces large files such as audio samples, videos, datasets, and graphics with text pointers inside Git, while storing the file contents on a remote server like GitHub.com or GitHub Enterprise.
+https://git-lfs.github.com/
