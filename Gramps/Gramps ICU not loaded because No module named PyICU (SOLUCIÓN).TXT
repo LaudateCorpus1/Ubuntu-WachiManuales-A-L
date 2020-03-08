@@ -1,0 +1,18 @@
+
+
+
+gramps.gen.utils.grampslocale.WARNING: ICU not loaded because No module named 'PyICU'. Localization will be impaired. Use your package manager to install PyICU
+
+
+
+
+sudo apt-get install python3-bsddb3 python3-icu
+
+
+
+
+
+GRAMPS - User - Gramps install problem on clean Ubuntu 15.04
+
+
+http://gramps.1791082.n4.nabble.com/Gramps-install-problem-on-clean-Ubuntu-15-04-td4670970.html

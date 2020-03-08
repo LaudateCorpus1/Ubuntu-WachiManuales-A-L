@@ -1,0 +1,13 @@
+
+
+Gramps da error al abrir: "osmGpsMap module not loaded, Geography functionality will not be available"
+
+Esto me pasó en antiX 19 el cual es basado en Debian 10 Buster, la solución es instalar:
+
+sudo apt install gir1.2-osmgpsmap-1.0
+
+
+CONSULTA:
+
+[solved] Gramps two modules not loaded - SolydXK Community Forums
+https://forums.solydxk.com/viewtopic.php?t=3648

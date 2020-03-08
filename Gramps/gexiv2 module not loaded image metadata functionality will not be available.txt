@@ -1,0 +1,13 @@
+
+
+Gramps da error al abrir: "gexiv2 module not loaded image metadata functionality will not be available" SOLUCIÓN
+
+Esto me pasó en antiX 19 el cual es basado en Debian 10 Buster, la solución es instalar:
+
+sudo apt install gir1.2-gexiv2-0.10
+
+
+CONSULTA:
+
+Gramps "GExiv2 Module Not Loaded" Error Fix - Linux - YouTube
+https://www.youtube.com/watch?v=MJ_gPWE6Iis
