@@ -2,3 +2,12 @@
 
 
 https://kernel.ubuntu.com/~kernel-ppa/mainline/
+
+
+2020-03-10 le envio este a Paco
+https://kernel.ubuntu.com/~kernel-ppa/mainline/v4.9.200/
+
+
+https://kernel.ubuntu.com/~kernel-ppa/mainline/v4.9.200/linux-headers-4.9.200-0409200-generic_4.9.200-0409200.201911100657_i386.deb
+https://kernel.ubuntu.com/~kernel-ppa/mainline/v4.9.200/linux-headers-4.9.200-0409200_4.9.200-0409200.201911100657_all.deb
+https://kernel.ubuntu.com/~kernel-ppa/mainline/v4.9.200/linux-image-4.9.200-0409200-generic_4.9.200-0409200.201911100657_i386.deb
