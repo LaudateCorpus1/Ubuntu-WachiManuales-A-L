@@ -8,7 +8,7 @@ sudo alien -r -c archivo.deb
 
 Convertir RPM a DEB.
 
-alien -d -c archivo.rpm
+sudo alien -d -c archivo.rpm
 
 
 
