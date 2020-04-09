@@ -1,0 +1,5 @@
+
+How do I show apt-get package management history via command line?
+https://askubuntu.com/questions/21657/how-do-i-show-apt-get-package-management-history-via-command-line
+
+gedit /var/log/apt/history.log 
