@@ -1,14 +1,21 @@
 Package: ffmulticonverter
 Source: ffmulticonverter-dmo
-Version: 1.7.2-dmo2
+Version: 1.7.2
 Architecture: all
 Bugs: mailto:marillat@deb-multimedia.org
-Maintainer: Christian Marillat <marillat@deb-multimedia.org>
+Maintainer: Washington Indacochea Delgado <wachin.id@gmail.com>
 Installed-Size: 1452
 Depends: python3:any (>= 3.5~), python3-pyqt4, ffmpeg, imagemagick
 Section: utils
 Priority: optional
 Homepage: https://sites.google.com/site/ffmulticonverter/home
+Descripción: Convertidor de formato de archivo (audio, video, imagen y documentos)
+  FF Multi Converter es una aplicación gráfica simple que le permite
+  convertir archivos de audio, video, imagen y documentos entre todos los formatos populares,
+  usando y combinando otros programas.
+  Esta es la versión sin la dependencia unoconv, para que pueda instalar 
+  LibreOffice desde DEB en: https://es.libreoffice.org/descarga/libreoffice/
+  
 Description: File format converter (audio, video, image and documents)
  FF Multi Converter is a simple graphical application that enables you to
  convert audio, video, image and document files between all popular formats,
