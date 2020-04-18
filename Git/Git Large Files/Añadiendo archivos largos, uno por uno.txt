@@ -1,0 +1,61 @@
+
+Nota: GitHub no permite archivos más grandes que 50MB
+
+Voy a añadir unos archivos de más de 100MB al siguiente repositorio:
+
+https://github.com/wachin/WPS-Office-2019-v11.1.0.8392-RPM
+
+Para hacerlo debo instalar:
+
+sudo apt install git-lfs
+
+ahora debo entrar desde la terminal a mi repositorio(lo tengo dentro de una carpeta a la que le he puesto el nombre de github):
+
+cd /home/wachin/github-2/LibreOffice/LibreOffice-6.4-32bits-deb/
+
+Por defecto git-lfs no hace nada con ningún archivo, por eso debo hacer que git-lfs rastree los archvios
+
+git lfs track /DEB/libobasis6.4-core_6.4.1.2-2_i386.deb
+
+o así:
+
+git lfs track DEB/libobasis6.4-core_6.4.1.2-2_i386.deb
+
+aparece un mensaje que dice:
+
+Tracking "/DEB/libobasis6.4-core_6.4.1.2-2_i386.deb"
+
+ahora para ver una lista de los patrones que van a ser rastreados pongo:
+
+git lfs track
+
+Y aparecerá en la terminal la información.
+
+Ahora hay que añadir (así como se añadiría cualquier otro archivo con add) el archivo .gitattributes a su repositorio. ("git lfs track" almacena los patrones de archivos rastreados en .gitattributes. De esta manera cuando se clona el repositorio, se conservan los patrones de archivos rastreados):
+
+git add .gitattributes 
+
+ahora voy a añadir el o los archivos así:
+
+git add DEB/libobasis6.4-core_6.4.1.2-2_i386.deb
+
+ahora quiero ver los archivos que git-lfs a añadido, y pongo:
+
+git lfs ls-files
+
+ahora solo me falta hacer el commit:
+
+git commit -m "Add large files ok"
+
+y enivar los cambios:
+
+git push origin master
+
+
+CONSULTAS:
+
+Tutorial · git-lfs/git-lfs Wiki
+https://github.com/git-lfs/git-lfs/wiki/Tutorial
+
+Git Large File Storage | Git Large File Storage (LFS) replaces large files such as audio samples, videos, datasets, and graphics with text pointers inside Git, while storing the file contents on a remote server like GitHub.com or GitHub Enterprise.
+https://git-lfs.github.com/
