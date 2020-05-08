@@ -11,7 +11,7 @@ sudo apt install git-lfs
 
 ahora debo entrar desde la terminal a mi repositorio(lo tengo dentro de una carpeta a la que le he puesto el nombre de github):
 
-cd /home/wachin/github-2/LibreOffice/LibreOffice-6.4-32bits-deb/
+cd /home/wachin/github/LibreOffice/LibreOffice-6.4-32bits-deb/
 
 Por defecto git-lfs no hace nada con ningún archivo, por eso debo hacer que git-lfs rastree los archvios
 

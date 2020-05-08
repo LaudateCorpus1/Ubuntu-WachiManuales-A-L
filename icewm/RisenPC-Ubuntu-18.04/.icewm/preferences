@@ -40,28 +40,53 @@ WorkspaceNames="1", "2"
 
 
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 
-# Que el relo abra orage y no xclock
+# Esconder el estado de las redes
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+# En la barra de tareas para que no se muestren los resultados del analisis de las redes
+# porque en Ubuntu 18.04 esta una version de iceWM nueva (1.4.3) que trae por defecto activadas
+# la red de Wi-Fi y la WLAN
+# Network device to show status for
+# NetworkStatusDevice="eth0 wlan0"
+NetworkStatusDevice=0
+# Esto lo deduje de revisar el archivo:
+# file:///usr/share/doc/icewm-common/FAQ/IceWM-FAQ-5.html
+# 5.6 Can the taskbar applet monitor more devices?
+# In the preferences file just change the option NetworkStatusDevice to read
+#     NetworkStatusDevice="eth0"
+# Replace "eth0" by "eth0 ppp0" to monitor eth0 and ppp0.
+
+
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 
+# Que el reloj abra orage y no xclock
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 # Si se daba clic en el reloj por defecto abría xclock, aquí lo cambio
 # original:
-# Command to run on clock
+#  Command to run on clock
 # ClockCommand="xclock -name icewm -title Clock"
 # El que estoy suando
 ClockCommand="orage -name icewm -title Clock"
+
 
 # 2016-07-18 Adaptado por Wachín para el Proyecto Facilitar el 
 # Software Libre en el Ecuador
 
 
 #  Command to shutdown the system
+# Este es el comando para que desde iceWM se pueda apagar el sistema Linux
 ShutdownCommand="systemctl poweroff"
 
 #  Command to reboot the system
+# Este es el comando para que desde iceWM se pueda reiniciar el sistema Linux
 RebootCommand="systemctl reboot"
 
-# el comando de Reiniciar(Restart) y Poweroff(Apagar) en: 
+# el comando de Reiniciar(Restart) y Poweroff(Apagar) 
+# lo encontré en: 
 # JWM - ArchWiki
 #  https://wiki.archlinux.org/index.php/JWM
+
+
+
+
 
 #  Focus windows by clicking
 # ClickToFocus=1 # 0/1
@@ -650,6 +675,7 @@ RebootCommand="systemctl reboot"
 
 #  Network device to show status for
 # NetworkStatusDevice="eth0 wlan0"
+
 
 #  Clock Time format (strftime format string)
 # TimeFormat="%X"

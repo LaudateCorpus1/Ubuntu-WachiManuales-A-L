@@ -7,11 +7,26 @@ por: Washington Indacochea Delgado
 Dependencias
 ▒▒▒▒▒▒▒▒▒▒▒▒
 
-sudo apt-get install icewm wmctrl xdotool lxrandr lxappearance pluma pnmixer numlockx gnome-icon-theme txt2tags convertall soundconverter goldendict xfce4-appfinder xfce4-notes xfce4-terminal pcmanfm thunar speedcrunch shutter
+sudo apt-get install icewm lxrandr lxappearance gedit pnmixer numlockx xfce4-appfinder xfce4-notes thunar dolphin konsole nautilus orage mate-power-manager xscreensaver qt4-qtconfig breeze-icon-theme caja engrampa menu menu-l10n 
 
-sólo instalaré los de arriba por el momento
+gnome-icon-theme gnome-human-icon-theme xubuntu-icon-theme xubuntu-restricted-extras thunar  doublecmd-gtk
 
-xscreensaver orage mate-power-manager doublecmd-gtk
+sudo apt-get --fix-broken install
+
+qt5ct
+
+
+Explicaciones acerca de los paquetes a instalar:
+
+kdebase-bin.- Necesario poder activar la función cambiar colores de carpetas en dolphin4 https://facilitarelsoftwarelibre.blogspot.com/2016/08/colores-en-las-carpetas-folder-color-de.html
+xubuntu-restricted-extras.- Sirve para instalar codecs de video y otros restringidos por copyright
+menu menu-l10n.- Es para generar los menus
+qt5ct.- Es para configurar los temas de aplicaciones Qt5
+qt4-qtconfig.- Es para configurar los temas de aplicaciones Qt4
+exe-thumbnailer.- Es para ver miniaturas de los ejecutables .exe de windows
+file-roller.- Es necesario para "Extraer aquí" con clic derecho: https://facilitarelsoftwarelibre.blogspot.com/2014/11/extraer-aqui-comprimir-file-roller-para.html
+pcmanfm es una dependencia pues con el se cargan los iconos del escritorio
+
 
 
 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
@@ -24,53 +39,65 @@ Viene aquí en la carpeta una carpeta oculta y un archivo oculto, aplaste "Ctrl 
 
 .Xresources
 
+.xsession
+
 script-actualizar-menu-icewm.sh
 
-debe usted copiarlos los tres a su HOME para que funcione este proyecto
+debe usted copiarlos los tres a su HOME para que funcione este proyecto, y a este ultimo script hagalo ejecutable poniendo en la terminal: 
+
+chmod a+x script-actualizar-menu-icewm.sh
+
+Nota: Si quiere también lo puede hacer ejecutable dandole clic derecho y en la pestaña Permisos marcar esa opción.
 
 
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+Elegir un tema de apariencia correcto para iceWM
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 
-▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
-Instalación del generador de menú xdgmenumaker
-▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+Clic en:
 
-Ponga en la terminal uno por uno y ejecute:
+Inicio/OPCIONES iceWM/Tema de Aplicaciones GTK
 
-sudo apt-get install git 
-git clone https://github.com/gapan/xdgmenumaker
-cd xdgmenumaker
-make
-sudo su
-make install
-exit
+Por defecto aparecerá en la pestaña: "Control"
 
+elija el tema: Greybird
 
-y se instalará el programa y con exit saldrá (debe salir de ley).
+Nota: Podría usar usted otro pero debe de ver si en todas las ventanas de otras aplicaciones aparecen todos los menu
 
-Luego para poder actualizar el menú (esto se hace cada vez que uno instala algo nuevo) usted debe abrir el archivo:
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+Elegir un tema de iconos correcto para iceWM
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 
-pluma .icewm/menu
+Clic en:
 
-y allí al final hay una linea que dice:
+Inicio/OPCIONES iceWM/Tema de Aplicaciones GTK
 
+Allí en la pestaña: "Tema de iconos"
 
-
-prog "Actualizar menu iceWM" /usr/share/icons/hicolor/32x32/apps/icewm.xpm /home/wachin/script-actualizar-menu-icewm.sh
-
-
-
-allí usted debe cambiar "wachin" por su nombre de usuario (Cómo saber cuál es mi nombre de usuario: Cuando usted abre una terminal hay una arroba, el nombre que está a la izquierda de la arroba ese es su nombre de usuario). También debe verificar que el script está marcado como ejecutable pues debe estar para que funcione.
-
-y bien, ahora funcionará la actualización del menu cuando en iceWM uste le de clic en: 
-
-Inicio/Actualizar menu de iceWM
-
+elija el tema de iconos: "elementary Xfce"
 
 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 TAMAÑO DE LAS FUENTES GLOBAL
 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 
 Si el tamaño de las letras es muy pequeño, usted en HOME aplaste "Ctrl + H" para ver los archivos ocultos, y allí busque y abra el archivo .Xresources y cambie el valor, puede poner desde el 81 al 120 o hacer sus propias pruebas.
+
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+Aplicaciones de KDE
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+
+Aplicaciones como: Kate, Kdenlive, K3b, Krita, Gwenview, utilizan temas de iconos y temas de apariencia diferentes a las demás aplicaciones, y para que se vean bien sin errores debes de configurar la aplicación "qt5ct" que la instalamos arriba. Para hacer esto debes poner en la terminal
+
+gedit .profile
+
+y allí ponga al final esta línea:
+
+export QT_QPA_PLATFORMTHEME="qt5ct" 
+
+Copiela y péguela y guarde y cierre 
+
+Nota: En Ubuntu 18.04 ya viene en los repositorios la aplicación qt5ct (para 16.04 sólo hay desde el PPA de Webupd8)
 
 
 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
@@ -182,7 +209,14 @@ Contras:
 
 
 
-2018
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+ADVERTENCIA
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+Nunca ponga en el archivo startup que está dentro de .icewm para que arranque thunar, pues si lo hace le dañará el idioma. 
+
+
+
+2018-05
 Proyecto RisenPC
 Por: Washington Indacochea Delgado (Wachín)
 

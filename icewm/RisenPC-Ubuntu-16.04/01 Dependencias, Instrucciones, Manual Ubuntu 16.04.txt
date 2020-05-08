@@ -1,0 +1,234 @@
+Proyecto RisenPC
+Proyecto Facilitar el Software Libre en el Ecuador
+http://facilitarelsoftwarelibre.blogspot.com/ 
+por: Washington Indacochea Delgado
+
+▒▒▒▒▒▒▒▒▒▒▒▒
+Dependencias
+▒▒▒▒▒▒▒▒▒▒▒▒
+
+sudo apt-get install icewm menu-l10n dolphin kdebase-bin lxrandr lxappearance pluma pnmixer numlockx gnome-icon-theme txt2tags convertall soundconverter goldendict xfce4-appfinder xfce4-notes xfce4-terminal pcmanfm thunar orage mate-power-manager exe-thumbnailer
+
+
+Explicaciones acerca de los paquetes a instalar:
+
+kdebase-bin.- Necesario poder activar la función cambiar colores de carpetas en dolphin
+menu-l10n.- Al instalar icewm este instala menu así que también instalo los idiomas
+qt5ct.- Es para configurar los temas de aplicaciones Qt5
+qt4-qtconfig.- Es para configurar los temas de aplicaciones Qt4
+exe-thumbnailer.- Es para ver miniaturas de los ejecutables .exe de windows
+pcmanfm.- es una dependencia pues con el se cargan los iconos del escritorio
+
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+Aquí vienen archivos escondidos, COLOCAR
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+
+Viene aquí en la carpeta una carpeta oculta y un archivo oculto, aplaste "Ctrl + H" para que los pueda ver, también viene una script:
+
+.icewm
+
+.Xresources
+
+.xsession
+
+script-actualizar-menu-icewm.sh
+
+debe usted copiarlos los tres a su HOME para que funcione este proyecto, y a este ultimo script hagalo ejecutable poniendo en la terminal: 
+
+chmod a+x script-actualizar-menu-icewm.sh
+
+Nota: Si quiere también lo puede hacer ejecutable dandole clic derecho y en la pestaña Permisos marcar esa opción.
+
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+Instalación del generador de menú xdgmenumaker
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
+
+Ponga en la terminal uno por uno y ejecute:
+
+sudo apt-get install git 
+git clone https://github.com/gapan/xdgmenumaker
+cd xdgmenumaker
+make
+sudo su
+make install
+exit
+
+
+y se instalará el programa y con exit saldrá (debe salir de ley).
+
+Luego para poder actualizar el menú (esto se hace cada vez que uno instala algo nuevo) usted editar el archivo menu de icewm, ponga en la terminal:
+
+gedit .icewm/menu
+
+y allí al final hay una linea que dice:
+
+
+prog "Actualizar menu iceWM" /usr/share/icons/hicolor/32x32/apps/icewm.xpm /home/wachin/script-actualizar-menu-icewm.sh
+
+
+allí usted debe cambiar "wachin" por su nombre de usuario (
+
+Si no sabe cuál es su nombre de usuario: Cuando usted abre una terminal allí hay una arroba, el nombre que está a la izquierda de la arroba ese es su nombre de usuario.
+
+También debe verificar que el script está marcado como ejecutable pues debe estar para que funcione.
+
+y bien, ahora funcionará la actualización del menu cuando en iceWM uste le de clic en: 
+
+Inicio/Actualizar menu de iceWM
+
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+Aplicaciones de KDE
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+
+Aplicaciones como: Kate, Kdenlive, K3b, Krita, Gwenview, utilizan temas de iconos y temas de apariencia diferentes a las demás aplicaciones, y para que se vean bien sin errores debes de configurar la aplicación "qt5ct" 
+
+
+En Ubuntu 16,04 no está en los repositorios, y para instalarla ponga en la terminal:
+
+sudo add-apt-repository ppa:nilarimogard/webupd8
+sudo apt-get update
+sudo apt-get install qt5ct
+
+Ahora debe de poner en la terminal
+
+gedit .profile
+
+y allí ponga al final esta línea:
+
+export QT_QPA_PLATFORMTHEME="qt5ct" 
+
+Copiela y péguela allí, guarde y cierre 
+
+Nota: En Ubuntu 18.04 ya viene en los repositorios la aplicación qt5ct.
+
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+TAMAÑO DE LAS FUENTES GLOBAL
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+
+Si el tamaño de las letras es muy pequeño, usted en HOME aplaste "Ctrl + H" para ver los archivos ocultos, y allí busque y abra el archivo:
+
+.Xresources 
+
+y cambie el valor, puede poner desde el 81 al 120 o hacer sus propias pruebas.
+
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+Mixer de volumen, escribir comando para ejecutar
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+
+Para configurar el sonido, el comando para abrir el mixer es:
+
+pnmixer
+
+para que abra los controles extras, haga así:
+
+Clic derecho en el icono del programa, clic "Preferencias", clic "Behavior", allí donde dice "Volume Control Command" asegurese de que dice:
+
+pavucontrol
+
+de no decir la palabra “pavucontrol” escribala usted y clic en Aplicar y Aceptar.
+
+Entonces al darle clic izquierdo al icono de pnmixer y clic en "Mixer", aparecerá el control de volumen con muchas más opciones
+
+Nota: He añadido al archivo startup el comando para que este programa se cargue al inicio is usted desea usarlo
+
+
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+Elegir un tema de apariencia correcto para iceWM
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+
+Clic en:
+
+Inicio/OPCIONES iceWM/Tema de Aplicaciones GTK
+
+Por defecto aparecerá en la pestaña: "Control"
+
+elija el tema: Greybird
+
+Nota: Podría usar usted otro pero debe de ver si en todas las ventanas de otras aplicaciones aparecen todos los menu
+
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+Elegir un tema de iconos correcto para iceWM
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+
+Clic en:
+
+Inicio/OPCIONES iceWM/Tema de Aplicaciones GTK
+
+Allí en la pestaña: "Tema de iconos"
+
+elija alguno de los temas de iconos
+
+
+▒▒▒▒▒▒▒▒▒
+Bluetooth
+▒▒▒▒▒▒▒▒▒
+
+Blueman.- Es el paquete que administra el Bluetooth si está instalado por defecto en su Laptop o PC o si usted usa uno externo (esos de tipo pendrive que se conectan como pendrive)
+
+Nota: Yo uso el Sistema Operativo UbuntuStudio 16.04 y este paquete ya está instalado por defecto. El nombre para lanzarlo desde la terminal: "blueman-applet" y lo he añadido al inicio en el archivo "startup". Si usted usa otro Sistema Operativo en el que no está instalado Blueman sino otro, usted debe usar ese otro e investigar cómo cambiarlo (me escribe si no lo logra)
+
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+OPTIONAL: indicator-kdeconnect
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+
+Lo uso para compartir archivos entre mi celular con Android y Ubuntu
+
+sudo add-apt-repository ppa:webupd8team/indicator-kdeconnect
+sudo apt update
+sudo apt install indicator-kdeconnect
+
+Nota: He añadido al archivo startup el comando para que este programa se cargue al inicio is usted desea usarlo
+
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+OPTIONAL: brightness-controller
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+
+Control de Brillo (también lúz azúl) para pantallas en Ubuntu con brightness-controller
+https://facilitarelsoftwarelibre.blogspot.com/2017/06/control-de-brillo-para-pantallas-en.html
+
+sudo add-apt-repository ppa:apandada1/brightness-controller
+sudo apt-get update 
+sudo apt-get install brightness-controller
+
+Nota: He añadido al archivo startup el comando para que este programa se cargue al inicio is usted desea usarlo
+
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+OPTIONAL:Shutter
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+
+Para tomar captura de pantallas, este es el comando para que se. En el archivo startup de RisenPC he puesto la entrada para que se abra automáticamente al iniciar el sistema
+
+Shutter - Feature-rich Screenshot Tool
+http://shutter-project.org/downloads/
+
+sudo add-apt-repository ppa:shutter/ppa
+sudo apt-get update 
+sudo apt-get install shutter
+
+Nota: He añadido al archivo startup el comando para que este programa se cargue al inicio is usted desea usarlo
+
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+Instalar FFmulticonverter
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+
+Sugiero que use ffmulticonverter para convertir videos, audios o documentos a distintos formatos. Para que vea cómo instalarlo vea este link:
+
+Instalar FFmulticonverter 1.7.2 en Ubuntu 16.04,17.04
+https://facilitarelsoftwarelibre.blogspot.com/2016/07/ffmulticonverter-172-en-ubuntu-1604.html
+
+
+2020
+Proyecto RisenPC
+Por: Washington Indacochea Delgado (Wachín)
+

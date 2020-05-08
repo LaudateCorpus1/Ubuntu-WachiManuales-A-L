@@ -231,7 +231,10 @@ TaskBarShowWindowIcons=1 # 0/1
 #SupportSemitransparency=1 # 0/1
 #DesktopBackgroundScaled=1 # 0/1
 #DesktopBackgroundColor="midnightBlue"
-#DesktopBackgroundImage="/usr/share/wallpapers/qblue.png"
+DesktopBackgroundColor="#4fb4eb"
+DesktopBackgroundCenter=1 # 0 / 1
+DesktopBackgroundScaled=1 # 0 / 1
+DesktopBackgroundImage="wallpaper.jpg"
 #DesktopTransparencyColor=""
 #DesktopTransparencyImage=""
 
