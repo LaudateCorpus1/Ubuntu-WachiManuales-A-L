@@ -35,11 +35,13 @@ audio 96kbps, 44.1kHz, 1 chnnels, AAC
 -vf "scale=512:288" -b:v 145k -r 15 -ac 1 -b:a 96k -ar 44100
 
 video 220kbps, 512x288, fps15. Audio 30k, 44.1kHz (Ej: Video 1280x720 SAMSUNG J5:  8:22min a 15.2MB)
+                                                  (Ej: Video 1280x720 SAMSUNG J5:  9:35min a 16.8MB, se pasó)
 -vf "scale=512:288" -b:v 220k -r 15 -ac 1 -b:a 30k -ar 44100
                                                   buena calidad
 
 
 video 200kbps, 512x288, fps15. Audio 30k, 44.1kHz (Ejemplo: Video 1280x720 SAMSUNG J5: 9:17min a 11,9MB)
+                                                      (Ej: Video 1280x720 SAMSUNG J5:  9:35min a 15.5MB bien)
 -vf "scale=512:288" -b:v 200k -r 15 -ac 1 -b:a 30k -ar 44100
 
 
@@ -47,6 +49,7 @@ video 180kbps, 512x288, fps15. Audio 30k, 44.1kHz (Ejemplo: Video 1280x720 SAMSU
 -vf "scale=512:288" -b:v 180k -r 15 -ac 1 -b:a 30k -ar 44100
 
 video 170kbps, 512x288, fps15. Audio 30k, 44.1kHz (Ejemplo: Video 1280x720 SAMSUNG J5: 10:14min a 15,2MB)
+                                                  (Ej: Video 1280x720 SAMSUNG J5:       9:35min a 13.5MB)
 -vf "scale=512:288" -b:v 170k -r 15 -ac 1 -b:a 30k -ar 44100
 
 
