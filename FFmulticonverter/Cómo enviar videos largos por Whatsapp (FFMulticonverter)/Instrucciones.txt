@@ -82,9 +82,6 @@ video 120k, 512x288, fps15, Audio 30k, 44100   (Convirtió un video 1280x720 de 
 -vf "scale=512:288" -b:v 120k -r 15 -ac 1 -b:a 30k -ar 44100
 
 
-Nota: la resolución correcta la encontré en kdenlive, en:
-"Proyecto/Preferencias del proyecto/Personalizado/512x288 16:9 PAL"
-
 
 UN CANAL VERTICAL
 
