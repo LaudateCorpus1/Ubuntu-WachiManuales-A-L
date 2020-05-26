@@ -9,7 +9,7 @@ gramps.gen.utils.grampslocale.WARNING: ICU not loaded because No module named 'P
 sudo apt-get install python3-bsddb3 python3-icu
 
 
-
+sudo apt-get remove python3-bsddb3 python3-icu
 
 
 GRAMPS - User - Gramps install problem on clean Ubuntu 15.04
