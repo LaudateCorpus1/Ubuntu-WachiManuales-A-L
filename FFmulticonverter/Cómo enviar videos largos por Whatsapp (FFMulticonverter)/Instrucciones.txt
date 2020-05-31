@@ -49,8 +49,13 @@ video 180kbps, 512x288, fps15. Audio 30k, 44.1kHz (Ejemplo: Video 1280x720 SAMSU
 -vf "scale=512:288" -b:v 180k -r 15 -ac 1 -b:a 30k -ar 44100
 
 video 170kbps, 512x288, fps15. Audio 30k, 44.1kHz (Ejemplo: Video 1280x720 SAMSUNG J5: 10:14min a 15,2MB)
+                                                  (Ej: Video Telegram                  10:55min a 16.5MB se pasó)
                                                   (Ej: Video 1280x720 SAMSUNG J5:       9:35min a 13.5MB)
 -vf "scale=512:288" -b:v 170k -r 15 -ac 1 -b:a 30k -ar 44100
+
+
+video 165kbps, 512x288, fps15. Audio 30k, 44.1kHz (Ej.: Video Telegram                 10:55min a 16.2MB se pasó)
+-vf "scale=512:288" -b:v 165k -r 15 -ac 1 -b:a 30k -ar 44100
 
 
 video 160kbps, 512x288, fps15. Audio 30k, 44.1kHz (Ej.: Video 1280x720 SAMSUNG J5:  9:34min a 14.1MB)
