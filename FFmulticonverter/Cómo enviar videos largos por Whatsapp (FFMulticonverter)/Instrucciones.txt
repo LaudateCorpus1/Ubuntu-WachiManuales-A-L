@@ -80,14 +80,17 @@ video 140k, 512x288, fps15. Audio 30k, 44.1kHz
 video 130k, 512x288, fps15, Audio 30k, 44.1kHz (Convirtió un video 1280x720 de 11:54 min a 14.13MB)
                                                (Convirtió un video 1280x720 de 12:30 min a 15.50MB)
                                                (Convirtió un video 1280x720 de 11:41 min a 13.8MB)
--vf "scale=512:288" -b:v 130k -r 15 -ac 1 -b:a 30k -ar 44100
                                                (Convirtió un video 1280x720 de 13:36 min a 15.9MB de Kalcker sobre Corona)
+-vf "scale=512:288" -b:v 130k -r 15 -ac 1 -b:a 30k -ar 44100
 
 
 
-video 120k, 512x288, fps15, Audio 30k, 44100   (Convirtió un video 1280x720 de 14:23 min de 1.2GB a 15.8MB)
-
+video 120k, 512x288, fps15, Audio 30k, 44100   (Convirtió un video 1280x720 de 14:23min de 1.2GB a 15.8MB)
 -vf "scale=512:288" -b:v 120k -r 15 -ac 1 -b:a 30k -ar 44100
+
+
+video 110k, 512x288, fps15, Audio 24k, 44100   (Convirtió un video 1280x720 de 15:14min a 15.2MB)
+-vf "scale=512:288" -b:v 110k -r 15 -ac 1 -b:a 24k -ar 44100 
 
 
 
