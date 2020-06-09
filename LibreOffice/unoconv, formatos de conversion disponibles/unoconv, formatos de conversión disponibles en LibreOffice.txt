@@ -146,3 +146,13 @@ The following list of spreadsheet formats are currently available:
   xlt95    - Microsoft Excel 95 Template [.xlt]
   xlsx     - Microsoft Excel 2007/2010 XML [.xlsx]
  
+Con esto queda añadido el poder convertir en FFmulticonverter
+
+docx a odt
+docx a pdf
+docx a txt (probado)
+odp a pptx
+odt a docx
+pptx a odp 
+xlsx a ods
+xml a docx
