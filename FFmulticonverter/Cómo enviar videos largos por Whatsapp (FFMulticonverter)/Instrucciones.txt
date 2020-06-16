@@ -34,14 +34,18 @@ video 145kbps, 512x288, fps15
 audio 96kbps, 44.1kHz, 1 chnnels, AAC
 -vf "scale=512:288" -b:v 145k -r 15 -ac 1 -b:a 96k -ar 44100
 
-video 220kbps, 512x288, fps15. Audio 30k, 44.1kHz (Convirtió un video de 8:22min a 15.2MB)
-                                                  (Convirtió un video de 9:35min a 16.8MB, se pasó)
+video 220kbps, 512x288, fps15. Audio 30k, 44.1kHz (Convirtió un video de 7:58min a 15.5MB)
+                                                  (Convirtió un video de 8:22min a 15.2MB)
+                                                  (Convirtió un video de 8:42min a 16.7MB se pasó)
+                                                  (Convirtió un video de 9:35min a 16.8MB se pasó)
 -vf "scale=512:288" -b:v 220k -r 15 -ac 1 -b:a 30k -ar 44100
                                                   buena calidad
 
 
-video 200kbps, 512x288, fps15. Audio 30k, 44.1kHz (Convirtió un video de 9:17min a 11,9MB)
-                                                      (Convirtió un video de 9:35min a 15.5MB bien)
+video 200kbps, 512x288, fps15. Audio 30k, 44.1kHz 
+                                                  (Convirtió un video de 8:42min a 15,3MB)
+                                                  (Convirtió un video de 9:17min a 11,9MB)
+                                                  (Convirtió un video de 9:35min a 15.5MB bien)
 -vf "scale=512:288" -b:v 200k -r 15 -ac 1 -b:a 30k -ar 44100
 
 
