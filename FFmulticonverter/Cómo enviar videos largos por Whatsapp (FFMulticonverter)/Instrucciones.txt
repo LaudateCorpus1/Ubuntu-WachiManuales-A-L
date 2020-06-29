@@ -98,11 +98,17 @@ video 110k, 512x288, fps15, Audio 24k, 44100   (Convirtió un video de 15:14min 
 -vf "scale=512:288" -b:v 110k -r 15 -ac 1 -b:a 24k -ar 44100 
 
 
-video 90k, 512x288, fps15, Audio 18k, 44100   (Convirtió un video de 19:23 a 15.6MB)
+video 90k, 512x288, fps15, Audio 18k, 44100   (Convirtió un video de 19:23min a 15.6MB)
 -vf "scale=512:288" -b:v 90k -r 15 -ac 1 -b:a 18k -ar 44100
 
-video 70k, 512x288, fps14, Audio 12k, 44100   (Convirtió un video de 19:23 a 15.6MB)
+
+video 70k, 512x288, fps15, Audio 16k, 44100   (Convirtió un video de 20:50min a 14.5MB)
+-vf "scale=512:288" -b:v 70k -r 15 -ac 1 -b:a 16k -ar 44100
+
+
+video 70k, 512x288, fps14, Audio 12k, 44100   (Convirtió un video de 21.56 a 14.5MB pero video se apagaba y prendia y audio se escuchaba feo)
 -vf "scale=512:288" -b:v 70k -r 14 -ac 1 -b:a 12k -ar 44100
+
 
 
 ************
@@ -112,6 +118,11 @@ https://es.wikipedia.org/wiki/Resoluci%C3%B3n_de_pantalla
 
 video 90k, 320×240, fps15, Audio 18k, 44100   (Convirtió un video de  a MB)
 -vf "scale=320:240" -b:v 90k -r 15 -ac 1 -b:a 18k -ar 44100
+
+
+Experimento
+video 70k, 320×240, fps15, Audio 17k, 44100   (Convirtió un video de  a MB)
+-vf "scale=320:240" -b:v 70k -r 15 -ac 1 -b:a 17k -ar 44100
 
 
 
