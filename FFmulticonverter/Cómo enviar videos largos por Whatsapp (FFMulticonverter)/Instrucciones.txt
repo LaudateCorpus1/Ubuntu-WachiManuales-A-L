@@ -101,6 +101,9 @@ video 110k, 512x288, fps15, Audio 24k, 44100   (Convirtió un video de 15:14min 
 video 90k, 512x288, fps15, Audio 18k, 44100   (Convirtió un video de 19:23 a 15.6MB)
 -vf "scale=512:288" -b:v 90k -r 15 -ac 1 -b:a 18k -ar 44100
 
+video 70k, 512x288, fps14, Audio 12k, 44100   (Convirtió un video de 19:23 a 15.6MB)
+-vf "scale=512:288" -b:v 70k -r 14 -ac 1 -b:a 12k -ar 44100
+
 
 ************
 QVGA 320×240
