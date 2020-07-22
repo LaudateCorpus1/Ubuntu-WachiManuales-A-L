@@ -36,8 +36,6 @@ audio 96kbps, 44.1kHz, 1 chnnels, AAC
 
 video 220kbps, 512x288, fps15. Audio 30k, 44.1kHz (Convirtió un video de 7:58min a 15.5MB)
                                                   (Convirtió un video de 8:22min a 15.2MB)
-                                                  (Convirtió un video de 8:42min a 16.7MB se pasó)
-                                                  (Convirtió un video de 9:35min a 16.8MB se pasó)
 -vf "scale=512:288" -b:v 220k -r 15 -ac 1 -b:a 30k -ar 44100
                                                   buena calidad
 
@@ -58,52 +56,60 @@ video 170kbps, 512x288, fps15. Audio 30k, 44.1kHz (Convirtió un video de 10:14m
 -vf "scale=512:288" -b:v 170k -r 15 -ac 1 -b:a 30k -ar 44100
 
 
-video 165kbps, 512x288, fps15. Audio 30k, 44.1kHz (Ej.: Video Telegram                 10:55min a 16.2MB se pasó)
+video 165kbps, 512x288, fps15. Audio 30k, 44.1kHz (Ej.: Video Telegram 10:55min a 16.2MB se pasó)
 -vf "scale=512:288" -b:v 165k -r 15 -ac 1 -b:a 30k -ar 44100
 
 
-video 160kbps, 512x288, fps15. Audio 30k, 44.1kHz (Convirtió un video de 9:34min a 14.1MB)
-                                                  (Convirtió un video de 9:17min a 13.1MB)
-                                                  (Convirtió un video de 10:45min a 12.8MB)
+video 160kbps, 512x288, fps15. Audio 30k, 44.1kHz (Convirtió un video de 10:45min a 12.8MB)
 -vf "scale=512:288" -b:v 160k -r 15 -ac 1 -b:a 30k -ar 44100
 
   
-video 150k, 512x288, fps15. Audio 30k, 44.1kHz (Convirtió un video de  7:07min a 9,8MB)
-                                               (Convirtió un video de 12:07min a 15,05MB)
+video 150k, 512x288, fps15. Audio 30k, 44.1kHz  (Convirtió un video de 11:07min a 15,05MB)
 -vf "scale=512:288" -b:v 150k -r 15 -ac 1 -b:a 30k -ar 44100
 
 
-video 145k, 512x288, fps15. Audio 30k, 44.1kHz
+video 145k, 512x288, fps15. Audio 30k, 44.1kHz  (Convirtió un video de 12:29min a 15,70MB)
 -vf "scale=512:288" -b:v 145k -r 15 -ac 1 -b:a 30k -ar 44100
 
 
 video 140k, 512x288, fps15. Audio 30k, 44.1kHz
+
 -vf "scale=512:288" -b:v 140k -r 15 -ac 1 -b:a 30k -ar 44100
 
 
-video 130k, 512x288, fps15, Audio 30k, 44.1kHz (Convirtió un video de 11:54 min a 14.13MB)
-                                               (Convirtió un video de 12:30 min a 15.50MB)
-                                               (Convirtió un video de 11:41 min a 13.8MB)
-                                               (Convirtió un video de 13:36 min a 15.9MB de Kalcker sobre Corona)
+video 130k, 512x288, fps15, Audio 30k, 44.1kHz  (Convirtió un video de 13:36 min a 15.9MB)
 -vf "scale=512:288" -b:v 130k -r 15 -ac 1 -b:a 30k -ar 44100
 
 
 
-video 120k, 512x288, fps15, Audio 30k, 44100   (Convirtió un video de 14:23min a 15.8MB)
+video 120k, 512x288, fps15, Audio 27k, 44100   (Convirtió un video de 14:23min a 15.8MB)
                                                (Convirtió un video de 14:05min a 15.7MB)
--vf "scale=512:288" -b:v 120k -r 15 -ac 1 -b:a 30k -ar 44100
+-vf "scale=512:288" -b:v 120k -r 15 -ac 1 -b:a 27k -ar 44100
 
 
 video 110k, 512x288, fps15, Audio 24k, 44100   (Convirtió un video de 15:14min a 15.2MB)
 -vf "scale=512:288" -b:v 110k -r 15 -ac 1 -b:a 24k -ar 44100 
 
 
+video 100k, 512x288, fps15, Audio 19k, 44100   (Convirtió un video de min a MB)
+-vf "scale=512:288" -b:v 100k -r 15 -ac 1 -b:a 19k -ar 44100 
+
+
 video 90k, 512x288, fps15, Audio 18k, 44100   (Convirtió un video de 19:23min a 15.6MB)
+                                              (Convirtió un video de 18:18min a 14.68MB)
 -vf "scale=512:288" -b:v 90k -r 15 -ac 1 -b:a 18k -ar 44100
 
+video 80k, 512x288, fps15, Audio 18k, 44100   (Convirtió un video de 20:33min a 14.4MB)
+-vf "scale=512:288" -b:v 80k -r 15 -ac 1 -b:a 18k -ar 44100
 
-video 70k, 512x288, fps15, Audio 16k, 44100   (Convirtió un video de 20:50min a 14.5MB)
+video 70k, 512x288, fps15, Audio 18k, 44100   (Convirtió un video de 20:33min a 14.4MB)
+                                              (Convirtió un video de 22:07min a 15.1MB)
+-vf "scale=512:288" -b:v 70k -r 15 -ac 1 -b:a 18k -ar 44100
+
+
+video 70k, 512x288, fps15, Audio 16k, 44100   (Convirtió un video de 20:50min a 14.5MB pero la calidad del audio es baja)
 -vf "scale=512:288" -b:v 70k -r 15 -ac 1 -b:a 16k -ar 44100
+
 
 
 video 70k, 512x288, fps14, Audio 12k, 44100   (Convirtió un video de 21.56 a 14.5MB pero video se apagaba y prendia y audio se escuchaba feo)
