@@ -14,8 +14,8 @@
    viewBox="0 0 210 297"
    version="1.1"
    id="svg829"
-   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-   sodipodi:docname="Flechas_y_rectangulos.svg">
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   sodipodi:docname="Flechas y rectangulos.svg">
   <defs
      id="defs823">
     <marker
@@ -189,16 +189,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.0228774"
-     inkscape:cx="303.52338"
-     inkscape:cy="888.47079"
+     inkscape:zoom="1.4465671"
+     inkscape:cx="442.62355"
+     inkscape:cy="773.16322"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g931-3"
      showgrid="false"
      inkscape:window-width="1360"
-     inkscape:window-height="708"
-     inkscape:window-x="-1"
-     inkscape:window-y="-1"
+     inkscape:window-height="725"
+     inkscape:window-x="-4"
+     inkscape:window-y="-2"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata826">
@@ -351,5 +351,31 @@
        id="path1374-7-5-3-0"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
+    <g
+       transform="translate(2.2047062,27.346176)"
+       id="g931-3">
+      <rect
+         ry="3.2773428"
+         y="77.548584"
+         x="96.696526"
+         height="18.278189"
+         width="60.574257"
+         id="rect2920-6"
+         style="opacity:1;fill:#666666;fill-opacity:1;stroke:#1a1a1a;stroke-width:1.91177452;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers" />
+      <flowRoot
+         transform="matrix(0.26458333,0,0,0.26458333,68.516959,77.820724)"
+         style="font-style:normal;font-weight:normal;font-size:18.66666603px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="flowRoot2959-3-2-7"
+         xml:space="preserve"><flowRegion
+           style="fill:#ffffff;fill-opacity:1"
+           id="flowRegion2961-6-6-5"><rect
+             style="fill:#ffffff;fill-opacity:1"
+             y="7.2146659"
+             x="118.67181"
+             height="64.061775"
+             width="221.59071"
+             id="rect2963-0-1-3" /></flowRegion><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu Bold';fill:#ffffff"
+           id="flowPara2965-6-8-5">Hola texto 14, escribe aquí nomás</flowPara></flowRoot>    </g>
   </g>
 </svg>
