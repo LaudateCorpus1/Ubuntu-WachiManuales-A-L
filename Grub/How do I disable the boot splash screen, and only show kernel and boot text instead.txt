@@ -28,3 +28,6 @@ sudo update-grub2
 Also from the GRUB menu, if you want to do this temporarily, you can hit E on a line to edit it, then Ctrl+X to boot the kernel line.
 
 Make sure you don't have plymouth-theme-ubuntu-text package installed.
+
+
+O con grub-customizer borrar "quiet splash" y guardar

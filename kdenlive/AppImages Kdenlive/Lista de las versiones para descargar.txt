@@ -1,0 +1,14 @@
+https://files.kde.org/kdenlive/release/Kdenlive-16.12.2-x86_64.AppImage
+https://files.kde.org/kdenlive/release/Kdenlive-17.04.3-w64.7z
+https://files.kde.org/kdenlive/release/Kdenlive-17.08.2-2-w64.7z
+https://files.kde.org/kdenlive/release/Kdenlive-17.12.0-w64.7z
+https://files.kde.org/kdenlive/release/Kdenlive-17.12.0d-x86_64.AppImage
+https://files.kde.org/kdenlive/release/Kdenlive-18.04.1d-w64.zip
+https://files.kde.org/kdenlive/release/Kdenlive-18.08.2-w64.7z
+https://files.kde.org/kdenlive/release/kdenlive-17.08.3-x86_64.AppImage
+https://files.kde.org/kdenlive/release/kdenlive-17.12.0c-x86_64.AppImage
+https://files.kde.org/kdenlive/release/kdenlive-18.08.3-x86_64.AppImage
+https://files.kde.org/kdenlive/release/kdenlive-18.12.1-x86_64.appimage
+https://files.kde.org/kdenlive/release/kdenlive-20.08.1-x86_64.appimage
+https://files.kde.org/kdenlive/release/kdenlive-20.04.2-x86_64.appimage
+https://files.kde.org/kdenlive/release/kdenlive-20.04.2c-x86_64.appimage

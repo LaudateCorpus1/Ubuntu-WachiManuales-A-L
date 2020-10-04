@@ -1,0 +1,21 @@
+
+Falló el push de algunas referencias a "repositorio git" Actualizaciones fueron rechazadas porque la punta de tu rama actual está detrás de su contraparte remota
+https://facilitarelsoftwarelibre.blogspot.com/2020/10/fallo-el-push-de-algunas-referencias.html
+
+
+ Me apareció este error:
+
+
+    Falló el push de algunas referencias a "repositorio git" Actualizaciones fueron rechazadas porque la punta de tu rama actual está detrás de su contraparte remota.  Integra los cambios remotos (es decir 'git pull ...') antes de hacer push de nuevo. Mira 'Note about fast-forwards' en 'git push --help' para mas detalles
+
+ 
+
+La solución fue poner en la terminal:
+
+git push -f
+
+
+Fuente:
+
+git rechazado push non-fast-forward
+https://stackoverrun.com/es/q/4597574#21126526

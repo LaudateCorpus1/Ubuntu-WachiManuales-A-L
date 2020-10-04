@@ -116,6 +116,18 @@ video 70k, 512x288, fps14, Audio 12k, 44100   (Convirtió un video de 21.56 a 14
 -vf "scale=512:288" -b:v 70k -r 14 -ac 1 -b:a 12k -ar 44100
 
 
+UN CANAL VERTICAL
+
+video 220kbps, 288x512, fps15,  Audio 30k, 44.1kHz 
+-vf "scale=288:512" -b:v 220k -r 15 -ac 1 -b:a 30k -ar 44100
+
+
+video 180kbps, 288x512, fps15,  Audio 30k, 44.1kHz 
+-vf "scale=288:512" -b:v 180k -r 15 -ac 1 -b:a 30k -ar 44100
+
+
+
+
 
 ************
 QVGA 320×240
@@ -132,14 +144,7 @@ video 70k, 320×240, fps15, Audio 17k, 44100   (Convirtió un video de  a MB)
 
 
 
-UN CANAL VERTICAL
 
-video 220kbps, 288x512, fps15,  Audio 30k, 44.1kHz 
--vf "scale=288:512" -b:v 220k -r 15 -ac 1 -b:a 30k -ar 44100
-
-
-video 180kbps, 288x512, fps15,  Audio 30k, 44.1kHz 
--vf "scale=288:512" -b:v 180k -r 15 -ac 1 -b:a 30k -ar 44100
 
 
 CUADRADO
