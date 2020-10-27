@@ -1,0 +1,30 @@
+
+https://manualinux.eu/ffmulticonverter.html
+
+sudo apt-get install cmake build-essential libqt5x11extras5-dev qt5-qmake qt5-default qtbase5-dev-tools extra-cmake-modules qtdeclarative5-dev-tools qtdeclarative5-dev qtcreator qttools5-dev qttools5-dev-tools
+
+
+Extracción e Instalación como root 
+
+$ tar zxvf ffmulticonverter-1.8.0.tar.gz
+$ cd ffmulticonverter-1.8.0
+$ sed -e "65s/'Video codec:'/self.tr('Video codec:')"/ \
+-e "68s/'Audio codec:'/self.tr('Audio codec:')/" -i ffmulticonverter/audiovideotab.py
+$ convert -size 256x256 canvas:none -alpha transparent fondo.png
+$ composite -gravity center share/ffmulticonverter.png fondo.png share/ffmulticonverter.png
+$ su
+# python3 setup.py install
+# for i in /usr/share/icons/hicolor ; do \
+install -dm755 $i/{16x16,24x24,32x32,48x48,64x64,128x128,256x256}/apps ; \
+mv /usr/share/pixmaps/ffmulticonverter.png $i/256x256/apps ; \
+convert -resize 128 share/ffmulticonverter.png $i/128x128/apps/ffmulticonverter.png ; \
+convert -resize 64 share/ffmulticonverter.png $i/64x64/apps/ffmulticonverter.png ; \
+convert -resize 48 share/ffmulticonverter.png $i/48x48/apps/ffmulticonverter.png ; \
+convert -resize 32 share/ffmulticonverter.png $i/32x32/apps/ffmulticonverter.png ; \
+convert -resize 24 share/ffmulticonverter.png $i/24x24/apps/ffmulticonverter.png ; \
+convert -resize 16 share/ffmulticonverter.png $i/16x16/apps/ffmulticonverter.png ; \
+gtk-update-icon-cache -tf $i &> /dev/null ; \
+done
+
+
+ 

@@ -1,0 +1,10 @@
+
+
+Requiere la instalación de los siguientes paquetes: 
+
+
+libboost-atomic1.67.0 libboost-chrono1.67.0 libboost-date-time1.67.0 libboost-locale1.67.0 libboost-thread1.67.0 libclucene-contribs1v5 libclucene-core1v5 libcmis-0.5-5v5 libeot0 libexttextcat-2.0-0 libexttextcat-data libmhash2 libmythes-1.2-0 libnumbertext-1.0-0 libnumbertext-data libodfgen-0.1-1 liborcus-0.14-0 librasqal3 librdf0 libreoffice-common libreoffice-core libreoffice-style-colibre libreoffice-style-tango libxmlsec1 libxmlsec1-nss python3-uno unoconv 
+
+
+
+ 

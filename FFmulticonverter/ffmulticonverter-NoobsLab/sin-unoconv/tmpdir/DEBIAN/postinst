@@ -1,0 +1,6 @@
+#!/bin/sh
+echo "
+visit on www.NoobsLab.com
+"
+sleep 2
+
