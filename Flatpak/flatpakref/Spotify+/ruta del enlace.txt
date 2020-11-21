@@ -1,0 +1,3 @@
+
+
+https://dl.flathub.org/repo/appstream/com.spotify.Client.flatpakref 

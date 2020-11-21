@@ -1,5 +1,9 @@
 
 
+/var/lib/flatpak/
+
+y 
+
 wachin@Dell-Inspiron-1750:~$ flatpak list
 Referencia                                    Opciones      
 org.gimp.GIMP/i386/stable                     system,current
