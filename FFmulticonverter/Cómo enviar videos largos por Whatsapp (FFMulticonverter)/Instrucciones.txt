@@ -99,6 +99,11 @@ video 90k, 512x288, fps15, Audio 18k, 44100   (Convirtió un video de 19:23min a
                                               (Convirtió un video de 18:18min a 14.68MB)
 -vf "scale=512:288" -b:v 90k -r 15 -ac 1 -b:a 18k -ar 44100
 
+
+video 85k, 512x288, fps15, Audio 18k, 44100   ()
+-vf "scale=512:288" -b:v 85k -r 15 -ac 1 -b:a 18k -ar 44100
+
+
 video 80k, 512x288, fps15, Audio 18k, 44100   (Convirtió un video de 20:33min a 14.4MB)
 -vf "scale=512:288" -b:v 80k -r 15 -ac 1 -b:a 18k -ar 44100
 
