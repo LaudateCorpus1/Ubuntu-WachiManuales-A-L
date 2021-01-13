@@ -10,7 +10,7 @@ Empezamos:
 
 kColorPicker
 
-Para compilarlo desde código fuente: https://github.com/DamirPorobic/kColorPicker
+Para compilarlo desde código fuente: https://github.com/ksnip/kColorPicker
 
     Poner en la terminal:
     $ git clone https://github.com/DamirPorobic/kColorPicker
@@ -29,7 +29,7 @@ Para compilarlo desde código fuente: https://github.com/DamirPorobic/kColorPick
 
 kImageAnnotator
 
-Para compilarlo desde código fuente: https://github.com/DamirPorobic/kImageAnnotator
+Para compilarlo desde código fuente: https://github.com/ksnip/kImageAnnotator
 
     Get latest release from GitHub by cloning the repo:
     $ git clone https://github.com/DamirPorobic/kImageAnnotator
