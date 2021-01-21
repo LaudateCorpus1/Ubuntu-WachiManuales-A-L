@@ -1,0 +1,24 @@
+
+
+Desbloquear Word Protegido
+21 abril, 2019 by Handy Apps 67 comentarios 
+Desbloquear Word Protegido, un Tip sencillo y rapidito (pero muy util)
+
+
+ACTUALIZACIÓN (Diciembre/2020)
+
+ Abre el documento de forma normal, y guárdalo, pero a la hora de guardar elige “Guardar como”… Documento “XML”.
+
+ Cierra Word y localiza el archivo en el Explorador de Archivos (Windows) o en el Finder (Mac). Vamos a abrirlo, pero esta vez lo vamos a abrir como un archivo de texto plano. El porceso es sencillo (no te preocupes) localiza el archivo, clic en boton derecho y elige abrir con… a) Notepad si tienes Windows o b) TextEdit si tienes Mac.
+
+Verás un texto ciertamente ilegible, no te preocupes por eso, nosotros a los nuesto : tenemos que buscar una cadena de texto : “w:enforcement”.
+Cuando la localices verás que su valor está establecido en “1” o en “On”.
+
+Cambia ese valor a “0” u “Off” (depende de lo que te encuentres).
+
+Guarda el documento cuando hayas hecho los cambios, no te preocupes por el formato (si te pregunta la aplicación… guardalo como “.xml”.
+
+Abre el documento “xml” en Word, y seguidamente guárdalo (aunque el documento sea un texto extraño) como “Documento de Word”, es decir como .doc como .docx.
+
+¡Lo tienes!, se ha hecho la magia y cuando lo abras como docuemnto de Word, estará desprotegido y podrás editarlo.
+
