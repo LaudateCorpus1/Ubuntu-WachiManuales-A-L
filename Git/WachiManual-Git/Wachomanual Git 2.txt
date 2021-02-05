@@ -116,7 +116,7 @@ Sigamos. Al dar Enter me preguntará por mi usuario y contraseña, los pongo, y 
 
 POR HACER FUNCIONAR:
 
-Git Log
+git Log
 Mostrar todos los cambios hechos
 
 Nota: el programa gitg es mejor para hacer eso.

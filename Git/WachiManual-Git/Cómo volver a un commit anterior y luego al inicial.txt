@@ -1,0 +1,49 @@
+
+git log
+
+y encuntro este que necesito:
+
+commit 984d969c07d04643d32f0ffba9bf3b29ad68bde1 (HEAD -> main, origin/main, origin/HEAD)
+Author: wachin <wachin.id@gmail.com>
+Date:   Wed Jan 20 22:51:42 2021 -0500
+
+    20210120.22.51
+
+
+
+commit a6857a61e1685acd2e7f2fc7aa588169bded27d7
+Author: wachin <wachin.id@gmail.com>
+Date:   Sun Jan 17 23:01:11 2021 -0500
+
+    20200117.23.01
+
+
+
+git checkout a6857a61e1685acd2e7f2fc7aa588169bded27d7
+
+y me dice:
+
+Nota: actualizando el árbol de trabajo 'a6857a61e1685acd2e7f2fc7aa588169bded27d7'.
+
+Te encuentras en estado 'detached HEAD'. Puedes revisar por aquí, hacer
+cambios experimentales y confirmarlos, y puedes descartar cualquier
+commit que hayas hecho en este estado sin impactar a tu rama realizando
+otro checkout.
+
+Si quieres crear una nueva rama para mantener los commits que has creado,
+puedes hacerlo (ahora o después) usando -b con el comando checkout. Ejemplo:
+
+  git checkout -b <nombre-de-nueva-rama>
+
+HEAD está ahora en a6857a6 20200117.23.01
+
+ahora vuelvo a donde estaba:
+
+git checkout 984d969c07d04643d32f0ffba9bf3b29ad68bde1
+
+pero aquí está dañado el archivo, así que me voy más atrás:
+
+git checkout 
+
+
+
