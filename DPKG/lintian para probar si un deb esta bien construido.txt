@@ -1,0 +1,6 @@
+
+
+
+lintian el_nombre_del.deb
+
+ 

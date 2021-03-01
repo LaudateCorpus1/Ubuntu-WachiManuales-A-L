@@ -1,0 +1,29 @@
+
+
+
+Ubuntu Manpage: jp2a - convert JPEG images to ASCII
+http://manpages.ubuntu.com/manpages/xenial/man1/jp2a.1.html
+
+Ejemplo #1
+
+jp2a --invert "Ubuntu logo a color.jpg" 
+
+Ejemplo #2
+
+jp2a --invert --height=25 "Ubuntu logo a color.jpg"
+
+Ejemplo #3
+
+jp2a --invert --height=30 "Ubuntu logo a color.jpg"
+
+Ejemplo #4
+
+jp2a --invert --height=40 "Ubuntu logo a color.jpg"
+
+Ejemplo #5
+
+jp2a --invert --height=25 --chars=`./\+o-ysdh: "Ubuntu logo a color.jpg"
+
+jp2a --invert --height=30 --chars=./\+o-ysdh:` "Ubuntu logo a color.jpg"
+
+jp2a --invert --height=30 --chars=./\+o-ysdh: "Ubuntu logo a color.jpg"

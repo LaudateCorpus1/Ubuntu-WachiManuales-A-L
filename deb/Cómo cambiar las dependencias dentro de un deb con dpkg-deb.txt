@@ -1,80 +1,33 @@
+Necesita tener instalado fakeroot, esto es para al reconstruir los deb sean de buena calidad y no aparezcan errores de comprobación en gdebi
 
+sudo apt install fakeroot
 
-Howto change dependencies
-https://ubuntuforums.org/showthread.php?t=110458
+ 
 
-
-pongase en una terminal en el lugar donde está su archivo .deb :
+Pongase en una terminal en el lugar donde está su archivo .deb y ponga uno por uno, ejemplo:
 
 dpkg-deb -x tuprograma.deb tmpdir
 dpkg-deb --control tuprograma.deb tmpdir/DEBIAN
 gedit tmpdir/DEBIAN/control
-dpkg -b tmpdir tuhackeadoprograma.deb
+fakeroot dpkg -b tmpdir tuhackeadoprograma.deb
+
 
 Nota: allí cuando vaya en el comando tercero puede cambiar la dependencia que usted quiera o borrarla pero para eso no deje la coma al final, guardar y cerrar el gedit
 
-
-
 ejemplo:
 
-wachin@Dell-Inspiron-1750:~/Apps-Linux-Instaladores/PhotoFilmStrip$ 
-
+wachin@Dell-Inspiron-1750:~/Apps-Linux-Instaladores/PhotoFilmStrip$
 
 dpkg-deb -x photofilmstrip_3.5.1-1_all.deb tmpdir
 dpkg-deb --control photofilmstrip_3.5.1-1_all.deb tmpdir/DEBIAN
 gedit tmpdir/DEBIAN/control
-dpkg -b tmpdir photofilmstrip_3.5.1-1_all-wachin.deb
+fakeroot dpkg -b tmpdir photofilmstrip_3.5.1-1_all-wachin.deb 
 
 
-otro caso:
+BASADO EN:
 
-dpkg-deb -x 02_libgnome2-perl_1.046-3build2_0ppa1_cosmic_i386.deb tmpdir
-dpkg-deb --control 02_libgnome2-perl_1.046-3build2_0ppa1_cosmic_i386.deb tmpdir/DEBIAN
-gedit tmpdir/DEBIAN/control
-dpkg -b tmpdir 02_libgnome2-perl_1.046-3build2~0ppa1~cosmic_wachin_i386.deb
+Howto change dependencies
+https://ubuntuforums.org/showthread.php?t=110458
 
-
-
-otro caso:
-
-dpkg-deb -x simplescreenrecorder_0.3.9+2_ppa1_zesty1_i386.deb tmpdir
-dpkg-deb --control simplescreenrecorder_0.3.9+2_ppa1_zesty1_i386.deb tmpdir/DEBIAN
-gedit tmpdir/DEBIAN/control
-dpkg -b tmpdir simplescreenrecorder_0.3.9+2_ppa1_zesty1_i386_ok.deb
-
-y este tiene una dependencia
-
-ADVERTENCIA.- Es necesario borrar la carpeta tmpdir que se creó anteriormente puesto que alli están todavía los archivos del paquete anterior, y si no se borrar se empaquetarán con el siguiente y cuando usted los instale le saldrá que no se puede instalar porque no se puede escribir porque ya está en el otro.
-
-dpkg-deb -x libswscale4_3.2.14-1_deb9u1_i386.deb tmpdir
-dpkg-deb --control libswscale4_3.2.14-1_deb9u1_i386.deb tmpdir/DEBIAN
-gedit tmpdir/DEBIAN/control
-dpkg -b tmpdir libswscale4_3.2.14-1_deb9u1_i386_ok.deb
-
-
-OTRO CASO
-
-dpkg-deb -x simplescreenrecorder_0.3.11-1+b2_i386.deb tmpdir
-dpkg-deb --control simplescreenrecorder_0.3.11-1+b2_i386.deb tmpdir/DEBIAN
-gedit tmpdir/DEBIAN/control
-dpkg -b tmpdir simplescreenrecorder_0.3.11-1+b2_i386_ok.deb
-
-
-
-
-dpkg-deb -x libreoffice-gtk_6.3.2-0ubuntu2_all.deb tmpdir
-dpkg-deb --control libreoffice-gtk_6.3.2-0ubuntu2_all.deb tmpdir/DEBIAN
-gedit tmpdir/DEBIAN/control
-dpkg -b tmpdir libreoffice-gtk_6.3.2-0ubuntu2_all_ok.deb
-
-
-otro
-
-dpkg-deb -x xvidcap_1.1.7-8_22_stanray_ubuntu17.10.1_amd64.deb tmpdir
-dpkg-deb --control xvidcap_1.1.7-8_22_stanray_ubuntu17.10.1_amd64.deb tmpdir/DEBIAN
-gedit tmpdir/DEBIAN/control
-dpkg -b tmpdir xvidcap_1.1.7-8_22_stanray_ubuntu17.10.1_amd64_ok.deb
-
-
-
-
+Debian: The package is of bad quality: wrong-file-owner-uid-or-gid
+https://www.askingbox.com/question/debian-the-package-is-of-bad-quality-wrong-file-owner-uid-or-gid 

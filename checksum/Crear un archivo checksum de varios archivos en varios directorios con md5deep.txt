@@ -1,0 +1,53 @@
+
+
+Crear un archivo checksum de varios archivos en varios directorios con md5deep
+
+
+sudo apt install md5deep
+
+
+md5deep -r path/to/dir > sums.md5
+
+
+ejemplo:
+
+Deseo editar un deb y he seguido el siguiente manual:
+
+Editar deb con dpkg para ejemplo cambiar o eliminar dependencias, modificar, quitar o añadir archivos 
+https://facilitarelsoftwarelibre.blogspot.com/2021/02/editar-deb-con-dpkg-para-ejemplo.html
+
+y en la carpeta tmpdir hay un archivo checksum llamado
+
+md5sums
+
+este archivo contiene todos los checksum creados dentro de la carpeta:
+
+usr
+
+y para yo poder hacer lo mismo debo poner así:
+
+
+md5deep -r /home/wachin/github-datos-personales/ksnip/ksnip-1.9.0-x64/Ksnip-1.9.0x64-recreacion/tmpdir/usr/ > /home/wachin/github-datos-personales/ksnip/ksnip-1.9.0-x64/Ksnip-1.9.0x64-recreacion/tmpdir/DEBIAN/md5sums
+
+y como dentro del archivo md5sums se han creado así los archivos (pongo como ejemplo cuatro líneas):
+
+
+4faf8c7c3d344bff38ffa712a6f6cfcf  /home/wachin/github-datos-personales/ksnip/ksnip-1.9.0-x64/Ksnip-1.9.0x64-recreacion/tmpdir/usr/bin/ksnip
+a6d0305e732cd018a1c6476540c52776  /home/wachin/github-datos-personales/ksnip/ksnip-1.9.0-x64/Ksnip-1.9.0x64-recreacion/tmpdir/usr/local/share/icons/hicolor/scalable/apps/ksnip.svg
+5bb2a48b28849437f839722a89f96cdb  /home/wachin/github-datos-personales/ksnip/ksnip-1.9.0-x64/Ksnip-1.9.0x64-recreacion/tmpdir/usr/local/share/ksnip/translations/ksnip_gl.qm
+6120617eb28a4c4308ce418d0947c268  /home/wachin/github-datos-personales/ksnip/ksnip-1.9.0-x64/Ksnip-1.9.0x64-recreacion/tmpdir/usr/local/share/ksnip/translations/ksnip_fr.qm
+
+debo reemplazar hasta dejarlas así:
+
+4faf8c7c3d344bff38ffa712a6f6cfcf  usr/bin/ksnip
+a6d0305e732cd018a1c6476540c52776  usr/local/share/icons/hicolor/scalable/apps/ksnip.svg
+5bb2a48b28849437f839722a89f96cdb  usr/local/share/ksnip/translations/ksnip_gl.qm
+6120617eb28a4c4308ce418d0947c268  usr/local/share/ksnip/translations/ksnip_fr.qm
+
+y allí si continuar
+
+
+BASADO EN:
+
+bash - md5 all files in a directory tree - Stack Overflow
+https://stackoverflow.com/a/36924105
