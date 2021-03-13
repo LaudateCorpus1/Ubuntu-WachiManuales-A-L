@@ -1,0 +1,13 @@
+Package: deepin-keyring
+Version: 2020.03.13-1
+Architecture: all
+Maintainer: lilongyu <leaeasy@linuxdeepin.com>
+Installed-Size: 32
+Depends: gnupg
+Recommends: gpgv
+Section: misc
+Priority: important
+Multi-Arch: foreign
+Description: GnuPG keys of the Deepin archive
+ The Deepin project digitally signs its Release files. This package
+ contains the archive keys used for that.

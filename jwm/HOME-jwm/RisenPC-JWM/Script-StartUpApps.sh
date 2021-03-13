@@ -142,7 +142,7 @@ pnmixer &
 # yo lo uso para invertir la tecla Fn
 # https://unix.stackexchange.com/questions/41647/switch-fn-key-state
 
-hp-systray -x &
+#hp-systray -x &
 # Si alguien usa una impresora HP este comando hará que se iconice HPLIP pues tendrá que instalarlo
 # el comando es: sudo apt-get install hplip-gui
 # de allí deberá configurar su impresora
@@ -161,7 +161,7 @@ numlockx on &
 # Visto en "Como configurar el gestor de ventanas IceWM como un campeón"
 # http://www.taringa.net/post/linux/19258241/Como-configurar-el-gestor-de-ventanas-IceWM-como-un-campeon.html
 
-#/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 # NOTA: ESTE PROGRAMA SIRVE PARA CUANDO UNO ABRE SYNAPTIC APAREZCA
 # UNA VENTANA PARA PONER EL PASSWORD, ASÍ QUE PARA LOS USUARIOS
 # NORMALES DEBE ESTAR ACTIVADO, PERO PARA LOS QUE YA TIENEN MAS
@@ -249,7 +249,7 @@ xfce4-notes &
 # Dropbox sirve para sincronizar tus archivos atravéz de computadoras y la web. 
 # Lo instalé con "sudo apt-get install nautilus-dropbox"
 
-dolphin4 ~/ ~/Dropbox/UbuntuManuales/ ~/ ~/Dropbox/ &
+#dolphin4 ~/ ~/Dropbox/UbuntuManuales/ ~/ ~/Dropbox/ &
 # Es un administrador de archivos completo, muy bueno, lo uso
 # porque como con mucha frecuencia trabajo con fotos y en la vista
 # previa se ven grandes las imágenes y así puedo apreciar mejor,
@@ -262,6 +262,8 @@ dolphin4 ~/ ~/Dropbox/UbuntuManuales/ ~/ ~/Dropbox/ &
 # Es un administrador de archivos bastante completo, tiene de bueno
 # que tiene la integración con Dropbox instalando el paquete:
 # sudo apt-get install nautilus-dropbox
+
+thunar &
 
 #caja &
 # Es un administrador de archivos bastante completo, tiene de bueno
@@ -299,7 +301,7 @@ pluma &
 xfce4-terminal &
 # La terminal, como siempre la uso ya que mejor esté abierta
 
-brightness-controller &
+#brightness-controller &
 # Control de brillo, instalado desde PPA:
 # https://facilitarelsoftwarelibre.blogspot.com/2017/06/control-de-brillo-para-pantallas-en.html
 
@@ -318,7 +320,9 @@ brightness-controller &
 # alarm-clock-applet --help
 # allí hay varios comandos
 
-sleep 7; shutter --min_at_startup &
+#ksnip
+
+#sleep 7; shutter --min_at_startup &
 # Para tomar captura de pantallas, este es el comando para que se
 # cargue iconizado y no ocupe espacio 
 # instalado desde PPA

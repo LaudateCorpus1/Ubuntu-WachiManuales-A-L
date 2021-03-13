@@ -1,0 +1,263 @@
+En la siguiente imagen está funcionando el Administrador de archivos de Deepin Linux en MX Linux 19.3 de 32 bits:
+
+ 
+El siguiente tutorial es bastante complicado y me gustaría que lo use algún usuario avanzado y que tenga en cuenta que se le podría dañar el sistema, pienso eso porque son repositorios de Deepin Linux donde se que ellos usan los paquetes de Debian pero no se cuál versión será, pero hasta donde me he dado cuenta si los acepta
+
+
+Advertencia
+
+De aquí en adelante no me responsabilizo de que se le dañe el sistema operativo, si es posible haga pruebas en una máquina virtual
+
+
+Probado en:
+- MX Linux 19 i386 (32 bits)
+
+Debería funcionar en:
+-Linux Mint 4 Debbie
+-Deberían de poderse añadir a otros Sistemas Operativos basados en Debian 10 Buster (tal vez en Testing también u otros)
+
+
+INSTRUCCIONES:
+
+Poner en la terminal (instale gedit o use otro editor de texto -deberá de cambiar el nombre en el comando-):
+
+sudo gedit /etc/apt/sources.list
+
+
+y allí añadir:
+
+deb [by-hash=force] https://mirror.deepines.com/deepin/ apricot main contrib non-free
+deb https://mirror.deepines.com/appstore eagle appstore
+
+debe quedarle así:
+
+
+
+guardar, cerrar y luego abrir synaptic y recargar:
+
+
+y me aparece un mensaje:
+
+Error de GPG: https://mirror.deepines.com/appstore eagle InRelease: Las firmas siguientes no se pudieron verificar porque su clave pública no está disponible: NO_PUBKEY 1C30362C0A53D5BBEl repositorio «https://mirror.deepines.com/appstore eagle InRelease» no está firmado.
+
+cerrar el mensaje y continuar:
+
+
+PETICIÓN:
+
+Les escribí a los de la página de Deepin Linux en español, no se si me respondan, pero debería haber alguna manera de añadir esa clave (para que no aparezca ese mensaje), también recuerdo que hace mucho tiempo atrás alguien había ideado una manera de instalar los repositorios fuera de línea, tal vez allí haya alguna instrucción de cómo hacer eso, bueno toca investigar
+
+
+Posibilidad
+
+Si hubiera alguien o algún equipo que pueda recopilar estos paquetes y crear un sistema operativo Deepin Linux de 32 bits
+
+ 
+CONSEJOS
+
+Si hay que instalar algo que sea lo más mínimo y que influya lo menos posible pues no se si se dañe el sistema, además sacar el nombre exacto de cada cosa instalada para luego si hay algún problema desinstalar tal o cuales paquetes.
+
+ 
+
+Probando el Administrador de archivos de Deepin
+Les cuento que e investigado todo esto porque quería instalar el Administrador de archivos de Deepin Linux el cual es el paquete:
+ 
+dde-file-manager 
+ 
+para instalarlo poner en la terminal:
+ 
+
+sudo apt install dde-file-manager dde-control-center
+
+
+la otra dependencia (sin esa no funciona) la vi en:
+ 
+一次Deepin库问题修复 | 码农家园
+https://www.codenong.com/js4e94b49d121a/
+ 
+ Con eso abría dde-file-manager pero por un caso instalé varias partes del escritorio:
+
+sudo apt install deepin-desktop-base deepin-sync-daemon deepin-notifications dde-dock dde-launcher deepin-menu uos-config dde-printer deepin-notifications dde-disk-mount-plugin dde-dock-onboard-plugin
+
+
+
+
+###############
+problema
+###############
+
+puede ser que tenga que desinstalar esto:
+
+sudo apt remove deepin-sync-daemon deepin-notifications dde-dock dde-launcher deepin-menu uos-config dde-printer deepin-notifications dde-disk-mount-plugin dde-dock-onboard-plugin
+
+
+
+###############
+
+ 
+y aquí una imagen de cuando estaba marcando en Synaptic dde-file-manager:
+
+todos esos paquetes de la lista para terminal los probé así, uno por uno en synaptip para ver que no hayan errores.
+
+ 
+Cómo lanzar dde-file-manager
+ Reiniciar el Ordenador, pero tuve un problema, aquí en MX Linux 19.3 al iniciar el ordenador tuve que elegir otro de los Kernels que hay para elegir porque no podía entrar en el sistema operativo
+
+Posiblemente necesite elegir alguno de los otros kernels que tenga su Sistema Operativo Linux.- Si, es posible, así me ocurrió a mi, aquí le dejo un video:
+ 
+ 
+
+ 
+En mi caso he instalado el Kernel Real Time que viene en los repositorios de MX Linux y como ha pasado bastante tiempo y me han enviado algunas actualizaciones por eso tengo tantos. En su caso si usted recien tenga instalado su sistema operativo ha de tener a lo mínimo 2 kernels disponibles, si, y podría utilizar el uno o el otro si es que no pudiera entrar en su sistema operativo al reiniciar el ordenador
+
+
+
+y para lanzarlo poner:
+
+dde-file-manager
+
+ y al abrirlo funciona
+
+ Algo interesante que tiene es que al darle clic derecho a alguna carpeta se le puede poner etquetas de colores:
+
+
+ y queda marcada la carpeta:
+
+
+y se las puede ver en:
+
+
+Atajos de teclado del Administrador de archivos de Deepin Linux
+
+ Por el momento se de:
+
+Ctrl + 1 = Vista de iconos
+
+Ctrl + 2 = Poner la vista en Detalles
+
+Estos atajos son importantes porque no funciona el icono para hacer eso en dde-file-manager (se cuelga).
+
+
+No instalar los siguientes paquetes
+
+Me dio errores al tratar de instalar los siguientes paquetes por eso no los trate de instalar:
+
+deepin-default-settings
+
+porque dice:
+
+E: /var/cache/apt/archives/deepin-default-settings_2020.12.18-1_all.deb: intentando sobreescribir `/etc/skel/.config/Trolltech.conf', que está también en el paquete desktop-defaults-mx-xfce-desktop 20.12.01
+
+
+No instalar:
+
+uos-config-desktop
+
+porque dice:
+
+E: /var/cache/apt/archives/uos-config-desktop_20.9-1_all.deb: intentando sobreescribir `/etc/X11/Xsession.d/05uos-profile', que está también en el paquete uos-config 20.5-1
+
+ 
+Instalando programas de Deepin Linux
+
+Para instalar los siguientes programas:
+
+
+deepin-voice-recorder
+deepin-image-viewer
+deepin-wallpapers
+deepin-deb-installer
+deepin-movie
+deepin-terminal
+deepin-calculator
+deepin-music
+deepin-font-manager
+deepin-album
+deepin-camera
+deepin-reader
+deepin-system-monitor
+dde-clipboard
+deepin-screensaver
+deepin-voice-recorder
+downloader
+
+ 
+poner en la terminal:
+
+sudo apt install deepin-voice-recorder deepin-image-viewer deepin-wallpapers deepin-deb-installer deepin-movie deepin-terminal deepin-calculator deepin-music deepin-font-manager deepin-album deepin-camera deepin-reader deepin-system-monitor dde-clipboard deepin-screensaver deepin-voice-recorder downloader
+
+
+Toda esa lista la probé una por una en synaptic así
+
+y en la siguiente imagen todos los programas que he instalado de Deepin:
+
+
+Deepin Picker.- No me funciona. Buscando en synaptic no aparece en usr/bin el ejecutable
+
+Deepin voice recorder.- Funciona bien:
+
+
+Deepin Camera.- Si funciona pero a la hora de hacer el tutorial no me podía dejar ver.
+
+Capturadora Deepin.- También funciona:
+
+
+y las herramientas:
+
+
+Reproductor Deepin.- Funciona muy bien:
+
+
+para escuchar una canción se puede reproducir desde cualquier otro Administrador de Archivos como Dolphin, Thunar, Nemo, Nautilus dandole clic derecho y elegir el reproductor de Deepin, o en el Administrador de Archivos Deepin
+
+Administrador de Fuentes Deepin.- Interesante programa:
+
+ 
+
+y esas por el momento, no me da el tiempo para poner más imagenes
+
+
+Escritorio de Deepin Linux
+
+Con todos estos paquetes que instalé también se instaló el escritorio de Deepin Linux, y se lo puede elegir al iniciar la PC
+
+
+y se puede entrar:
+
+pero como les explicaba arriba usé otro de los kernels que tengo instalados
+
+Pero me da problemas, como que
+
+- No lo puedo apagar al sistema operativo
+
+- No le puedo poner el wallpaper (o no se como)
+
+- Algunas cosillas por allí no funcionan bien en resumen.
+
+
+RECOMENDACIÓN
+
+Desabilite los repositorios de Deepin Linux después que haya instalado algo pues no sea que sin querer actualice todo el sistema y se le dañe el sistema operativo:
+
+
+
+
+Otros paquetes probados
+
+estos también los instalé:
+
+deepin-icon-theme
+deepin-sound-theme
+deepin-gtk-theme
+sea-icon-theme
+
+ 
+Palabras finales
+
+Les cuento que Ksnip a veces se me cierra, será porque instalé algunas de las cosas del sistema operativo de Deepin, bueno, debo luego investigar qué puedo desinstalar y dejar lo mínimo, sin pensar en lo furuto en abrir alguna vez el Escritorio de Deepin pues no funciona bien y es posible que alguno de sus paquetes sea el responsable de que se cierre Ksnip
+
+
+CONSULTA:
+
+MEJORE LA VELOCIDAD DE LOS REPOSITORIOS DE DEEPIN
+https://xn--deepinenespaol-1nb.org/velocidad-de-los-repositorios/

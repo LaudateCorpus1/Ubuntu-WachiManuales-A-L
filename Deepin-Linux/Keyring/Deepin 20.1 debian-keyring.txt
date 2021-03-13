@@ -1,0 +1,2 @@
+#!/bin/sh
+wget -c https://community-packages.deepin.com/deepin/pool/main/d/debian-archive-keyring/debian-archive-keyring_2019.1_all.deb

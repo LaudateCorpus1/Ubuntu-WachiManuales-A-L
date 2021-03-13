@@ -1,0 +1,3 @@
+/etc/apt/trusted.gpg.d/deepin-archive-camel-keyring.gpg
+/etc/apt/trusted.gpg.d/deepin-pools-keyring.gpg
+/etc/apt/trusted.gpg.d/uos-archive-keyring.gpg

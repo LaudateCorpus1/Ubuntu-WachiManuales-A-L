@@ -1,0 +1,6 @@
+
+
+https://community-packages.deepin.com/deepin/pool/main/d/debian-keyring/
+
+
+https://proposed-packages.deepin.com/dde-apricot/pool/main/d/deepin-keyring/ 

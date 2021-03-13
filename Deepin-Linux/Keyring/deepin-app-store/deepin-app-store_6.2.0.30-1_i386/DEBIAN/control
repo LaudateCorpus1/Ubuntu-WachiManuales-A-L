@@ -1,0 +1,13 @@
+Package: deepin-app-store
+Version: 6.2.0.30-1
+Architecture: i386
+Maintainer: Xu Shaohua <xushaohua@deepin.com>
+Installed-Size: 1987
+Depends: libc6 (>= 2.3.6-6~), libdframeworkdbus2, libdtkcore5, libdtkgui5, libdtkwidget5, libgcc1 (>= 1:3.0), libqt5core5a (>= 5.11.0~rc1), libqt5dbus5 (>= 5.0.2), libqt5gui5 (>= 5.7.0), libqt5network5 (>= 5.0.2), libqt5sql5 (>= 5.0.2), libqt5svg5 (>= 5.6.0~beta), libqt5webchannel5 (>= 5.6.1), libqt5webenginecore5 (>= 5.7.1), libqt5webenginewidgets5 (>= 5.7.1), libqt5websockets5 (>= 5.6.0), libqt5widgets5 (>= 5.0.2), libstdc++6 (>= 5.2), qtbase-abi-5-11-3, lastore-daemon (>= 0.9.62), libqt5sql5-sqlite, deepin-sync-daemon, deepin-deepinid-client, libqt5webengine-data, apt-transport-https, aptitude, deepin-app-store-data (>= 5.6), gnupg2, patchelf
+Conflicts: deepin-appstore, dstore-client
+Replaces: deepin-appstore, dstore-client
+Section: admin
+Priority: optional
+Homepage: https://www.deepin.com
+Description: Deepin App Store
+ Deepin App Store Client.

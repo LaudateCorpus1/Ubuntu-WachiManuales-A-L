@@ -1,0 +1,1 @@
+post-invoke=if test -x /usr/share/deepin-app-store/dpkg-post-hook; then /usr/share/deepin-app-store/dpkg-post-hook; fi

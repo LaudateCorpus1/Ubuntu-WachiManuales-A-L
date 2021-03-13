@@ -1,0 +1,31 @@
+#!/bin/sh
+
+if [ "$1" = "configure" ] ; then
+  if [ -f /etc/apt/trusted.gpg.d/appstore.gpg ]
+  then
+	rm -f /etc/apt/trusted.gpg.d/appstore.gpg
+  fi
+
+  count=$(ps -ef |grep deepin-app-store-daemon |grep -v grep |wc -l)
+  if [ "$count" -eq "1" ]
+  then
+    ps -ef | grep deepin-app-store-daemon | grep -v grep | awk '{print $2}' | xargs kill -9
+  fi
+
+  /usr/bin/deepin-app-store-pkgcache -c
+  mv /usr/share/deepin-app-store/pkg-config-hook-config /etc/dpkg/dpkg.cfg.d/
+  mv /usr/share/deepin-app-store/99appstore.conf /etc/apt/apt.conf.d/
+  chmod +x /usr/share/deepin-app-store/dpkg-post-hook
+  
+  if [ -f /usr/share/keyrings/appstore-keyring.gpg ]; then
+    apt-key add /usr/share/keyrings/appstore-keyring.gpg
+  fi
+fi
+
+if [ "$1" = "triggered" ]; then
+  echo 'begin triggered appstore'
+  deepin-app-store-tool
+  echo 'end triggered appstore'
+fi
+
+exit 0

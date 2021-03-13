@@ -1,0 +1,2 @@
+#!/bin/sh
+wget -c https://community-packages.deepin.com/deepin/pool/main/d/deepin-keyring/deepin-keyring_2020.03.13-1_all.deb

@@ -1,0 +1,6 @@
+49bae1416b08446ad1b2878a558b3659  usr/share/doc/deepin-keyring/changelog.Debian.gz
+01df8a2b0203f01aa82883fb8f2f8133  usr/share/doc/deepin-keyring/changelog.gz
+2591f5e9d940e34a5bd622e7ce5c55a2  usr/share/doc/deepin-keyring/copyright
+872abce51930a9fcbe6ab7058a29507e  usr/share/keyrings/deepin-archive-camel-keyring.gpg
+ea19be5b982924040132375c4d731f6c  usr/share/keyrings/uos-archive-keyring.gpg
+ea19be5b982924040132375c4d731f6c  var/lib/apt/keyrings/uos-archive-keyring.gpg

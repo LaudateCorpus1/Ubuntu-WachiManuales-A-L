@@ -1,0 +1,6 @@
+
+
+https://www.deepin.org/en/mirrors/packages/
+
+
+https://community-packages.deepin.com/deepin/ 
