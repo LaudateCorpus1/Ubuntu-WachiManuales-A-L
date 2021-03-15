@@ -1,0 +1,89 @@
+
+
+x11grab
+http://underpop.online.fr/f/ffmpeg/help/x11grab.htm.gz
+
+X11 video input device.
+
+To enable this input device during configuration you need libxcb installed on your system. It will be automatically detected during configuration.
+
+This device allows one to capture a region of an X11 display.
+
+The filename passed as input has the syntax:
+
+[hostname]:display_number.screen_number[+x_offset,y_offset]
+
+hostname:display_number.screen_number specifies the X11 display name of the screen to grab from. hostname can be omitted, and defaults to "localhost". The environment variable DISPLAY contains the default display name.
+
+x_offset and y_offset specify the offsets of the grabbed area with respect to the top-left border of the X11 screen. They default to 0.
+
+Check the X11 documentation (e.g. man X) for more detailed information.
+
+Use the xdpyinfo program for getting basic information about the properties of your X11 display (e.g. grep for "name" or "dimensions").
+
+For example to grab from ':0.0' using ffmpeg:
+
+ffmpeg -f x11grab -framerate 25 -video_size cif -i :0.0 out.mpg
+
+Grab at position 10,20:
+
+ffmpeg -f x11grab -framerate 25 -video_size cif -i :0.0+10,20 out.mpg
+
+Options
+
+'draw_mouse'
+
+    Specify whether to draw the mouse pointer. A value of 0 specifies not to draw the pointer. Default value is 1. 
+'follow_mouse'
+
+    Make the grabbed area follow the mouse. The argument can be centered or a number of pixels PIXELS.
+
+    When it is specified with "centered", the grabbing region follows the mouse pointer and keeps the pointer at the center of region; otherwise, the region follows only when the mouse pointer reaches within PIXELS (greater than zero) to the edge of region.
+
+    For example:
+
+    ffmpeg -f x11grab -follow_mouse centered -framerate 25 -video_size cif -i :0.0 out.mpg
+
+    To follow only when the mouse pointer reaches within 100 pixels to edge:
+
+    ffmpeg -f x11grab -follow_mouse 100 -framerate 25 -video_size cif -i :0.0 out.mpg
+
+'framerate'
+
+    Set the grabbing frame rate. Default value is ntsc, corresponding to a frame rate of 30000/1001. 
+'show_region'
+
+    Show grabbed region on screen.
+
+    If show_region is specified with 1, then the grabbing region will be indicated on screen. With this option, it is easy to know what is being grabbed if only a portion of the screen is grabbed. 
+'region_border'
+
+    Set the region border thickness if '-show_region 1' is used. Range is 1 to 128 and default is 3 (XCB-based x11grab only).
+
+    For example:
+
+    ffmpeg -f x11grab -show_region 1 -framerate 25 -video_size cif -i :0.0+10,20 out.mpg
+
+    With follow_mouse:
+
+    ffmpeg -f x11grab -follow_mouse centered -show_region 1 -framerate 25 -video_size cif -i :0.0 out.mpg
+
+'video_size'
+
+    Set the video frame size. Default value is vga. 
+'grab_x'
+'grab_y'
+
+    Set the grabbing region coordinates. They are expressed as offset from the top left corner of the X11 window and correspond to the x_offset and y_offset parameters in the device name. The default value for both options is 0.
+
+Output Devices
+
+Output devices are configured elements in FFmpeg that can write multimedia data to an output device attached to your system.
+
+When you configure your FFmpeg build, all the supported output devices are enabled by default. You can list all available ones using the configure option "-list-outdevs".
+
+You can disable all the output devices using the configure option "-disable-outdevs", and selectively enable an output device using the option "-enable-outdev=OUTDEV", or you can disable a particular input device using the option "-disable-outdev=OUTDEV".
+
+The option "-devices" of the ff* tools will display the list of enabled output devices.
+
+A description of the currently available output devices follows. 

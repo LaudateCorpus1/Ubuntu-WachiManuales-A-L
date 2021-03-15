@@ -1,0 +1,34 @@
+
+
+
+How to make screencast with ffmpeg
+
+https://evilshit.wordpress.com/2014/01/19/how-to-make-screencasts-with-ffmpeg/
+
+
+ffmpeg -y -f x11grab -draw_mouse 1 -framerate 25 -video_size 854x480 -i :0.0 -f alsa -i hw:1,1 -c:v libx264 -pix_fmt yuv420p -b:v 2500k -c:a aac -strict -2 -b:a 192k -movflags +faststart testgrab.mp4
+
+
+
+ffmpeg -y -f x11grab -follow_mouse centered -show_region 1 -draw_mouse 1 -framerate 25 -video_size 854x480 -i :0.0 -f alsa -i default -c:v libx264 -pix_fmt yuv420p -b:v 2500k -c:a aac -strict -2 -b:a 192k -movflags +faststart testgrab.mp4
+
+ESTE ES EL MEJOR PARA GRABAR VIDEO Y AUDIO:
+
+ffmpeg -follow_mouse centered -show_region 1 -video_size 854x480 -framerate 30 -f x11grab -i :0.0 -f alsa -ac 2 -i default -c:v libx264 -qp 0 -preset ultrafast out.mp4
+
+
+
+DE WACHI SCRIPT para QjackCtl
+
+ffmpeg -f alsa -ac 2 -i jackplug -f x11grab -s `xdpyinfo | grep 'dimensions:'|awk '{print $2}'` -r 25 -i :0.0 -preset ultrafast $HOME/screencast_video_$DATE-$TIME.mp4
+
+OTRO QUE SI FUNCIONA
+
+ffmpeg -f alsa -ac 2 -i default -itsoffset 00:00:00.5 -f video4linux2 -s 320x240 -r 25 -i /dev/video0 out.mpg
+
+
+
+
+
+ffmpeg -f x11grab -follow_mouse centered -show_region 1 -framerate 30 -video_size 854x480 -i :0.0 out.mpg
+

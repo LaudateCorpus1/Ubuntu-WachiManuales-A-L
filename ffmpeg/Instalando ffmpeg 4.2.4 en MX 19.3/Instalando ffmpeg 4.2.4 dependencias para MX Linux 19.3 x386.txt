@@ -1,0 +1,207 @@
+
+Descargar ffmpeg desde:
+
+https://github.com/FFmpeg/FFmpeg/releases/tag/n4.2.4
+
+Instalación hecha en
+
+MX Linux 19.3 x386 (Basado en Debian 10)
+
+Dependencias:
+
+
+
+sudo apt install build-essential libmp3lame-dev libvorbis-dev libtheora-dev libspeex-dev yasm pkg-config libfaac-dev libx264-dev libopenjp2-7-dev libfaac-dev
+
+
+
+o 
+
+./configure --prefix=/usr/
+
+make
+
+sudo make install
+
+
+
+**********************************************
+
+Hago esto con la versión que viene instalada en MX Linux 19.3 para saber cuales son los valores que fueron habilitados a fin de que funcione bien la que voy a construir:
+
+wachin@mx-linux:~
+$ ffmpeg --version
+ffmpeg version 4.1.6-1~mx19+2 Copyright (c) 2000-2020 the FFmpeg developers
+  built with gcc 8 (Debian 8.3.0-6)
+  configuration: --prefix=/usr --extra-version='1~mx19+2' --toolchain=hardened --libdir=/usr/lib/i386-linux-gnu --incdir=/usr/include/i386-linux-gnu --arch=i386 --enable-gpl --disable-stripping --enable-avresample --disable-filter=resample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librsvg --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opengl --enable-sdl2 --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --ignore-tests='hapenc-hap-none,hapenc-hapa-none,hapenc-hapq-none' --enable-shared
+  libavutil      56. 22.100 / 56. 22.100
+  libavcodec     58. 35.100 / 58. 35.100
+  libavformat    58. 20.100 / 58. 20.100
+  libavdevice    58.  5.100 / 58.  5.100
+  libavfilter     7. 40.101 /  7. 40.101
+  libavresample   4.  0.  0 /  4.  0.  0
+  libswscale      5.  3.100 /  5.  3.100
+  libswresample   3.  3.100 /  3.  3.100
+  libpostproc    55.  3.100 / 55.  3.100
+Unrecognized option '-version'.
+Error splitting the argument list: Option not found
+
+****************************************************
+
+********
+AHORA SI 
+********
+
+
+./configure --prefix=/usr --extra-version='1~mx19+2' --toolchain=hardened --libdir=/usr/lib/i386-linux-gnu --incdir=/usr/include/i386-linux-gnu --arch=i386 --enable-gpl --disable-stripping --enable-avresample --disable-filter=resample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librsvg --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opengl --enable-sdl2 --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --ignore-tests='hapenc-hap-none,hapenc-hapa-none,hapenc-hapq-none' --enable-shared
+
+Me responde lo siguiente en MX Linux 19.3
+
+ERROR: chromaprint not found
+
+entonces busqué y encontré (https://www.linuxquestions.org/questions/debian-26/compilation-error-while-backporting-ffmpeg-from-sid-to-debian-8-x64-stable-4175600454/) que falta:
+
+libchromaprint-dev
+
+frei0r-plugins-dev
+
+libgnutls28-dev
+
+ladspa-sdk
+
+libaom-dev
+
+liblilv-dev
+
+libiec61883-dev
+
+
+pero me siguie apareciendo el error aśi que decido sacar esa parte: --enable-libiec61883
+
+Y ME QUEDA ASÍ:
+
+./configure --prefix=/usr --extra-version='1~mx19+2' --toolchain=hardened --libdir=/usr/lib/i386-linux-gnu --incdir=/usr/include/i386-linux-gnu --arch=i386 --enable-gpl --disable-stripping --enable-avresample --disable-filter=resample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librsvg --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opengl --enable-sdl2 --enable-libdc1394 --enable-libdrm --enable-chromaprint --enable-frei0r --enable-libx264 --ignore-tests='hapenc-hap-none,hapenc-hapa-none,hapenc-hapq-none' --enable-shared
+
+
+Luego me fueron apareciendo errore  y fui resolviendolos instalando:
+
+libbluray-dev
+
+libbs2b-dev
+
+libdc1394-22-dev
+
+libomxil-bellagio-dev
+
+
+
+
+INSTALACIÓN:
+
+./configure --prefix=/usr --extra-version='1~mx19+2' --toolchain=hardened --libdir=/usr/lib/i386-linux-gnu --incdir=/usr/include/i386-linux-gnu --arch=i386 --enable-gpl --disable-stripping --enable-avresample --disable-filter=resample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librsvg --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opengl --enable-sdl2 --enable-libdc1394 --enable-libdrm --enable-chromaprint --enable-frei0r --enable-libx264 --ignore-tests='hapenc-hap-none,hapenc-hapa-none,hapenc-hapq-none' --enable-shared
+
+
+make
+
+sudo make install
+
+
+ME da error de compilación:
+
+wachin@mx-linux:~/build-from-source/ffmpeg/FFmpeg-n4.2.4
+$ make
+CC	libavfilter/af_sofalizer.o
+libavfilter/af_sofalizer.c: In function ‘preload_sofa’:
+libavfilter/af_sofalizer.c:166:32: error: implicit declaration of function ‘mysofa_neighborhood_init_withstepdefine’; did you mean ‘mysofa_neighborhood_init’? [-Werror=implicit-function-declaration]
+         s->sofa.neighborhood = mysofa_neighborhood_init_withstepdefine(s->sofa.hrtf,
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                mysofa_neighborhood_init
+libavfilter/af_sofalizer.c:166:30: warning: assignment to ‘struct MYSOFA_NEIGHBORHOOD *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+         s->sofa.neighborhood = mysofa_neighborhood_init_withstepdefine(s->sofa.hrtf,
+                              ^
+cc1: some warnings being treated as errors
+make: *** [ffbuild/common.mak:59: libavfilter/af_sofalizer.o] Error 1
+
+BUSCANDO EN GOOGLE:
+
+ffmpeg libavfilter/af_sofalizer.c:166:32: error:
+
+
+no encuentro la solucion
+
+
+
+QUITO 
+
+--enable-libmysofa
+
+ME QUEDA ASÍ:
+
+./configure --prefix=/usr --extra-version='1~mx19+2' --toolchain=hardened --libdir=/usr/lib/i386-linux-gnu --incdir=/usr/include/i386-linux-gnu --arch=i386 --enable-gpl --disable-stripping --enable-avresample --disable-filter=resample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librsvg --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opengl --enable-sdl2 --enable-libdc1394 --enable-libdrm --enable-chromaprint --enable-frei0r --enable-libx264 --ignore-tests='hapenc-hap-none,hapenc-hapa-none,hapenc-hapq-none' --enable-shared
+
+
+make 
+
+después de un buen rato me dió:
+
+cp: no se puede crear el fichero regular 'ffmpeg': Permiso denegado
+
+y le puse 
+
+sudo make y pude seguir
+
+luego le puse
+
+sudo make install
+
+y se instaló, y para revisar que esté andando pongo:
+
+wachin@mx-linux:~/build-from-source/ffmpeg/FFmpeg-n4.2.4
+$ ffmpeg --version
+ffmpeg version 4.2.4-1~mx19+2 Copyright (c) 2000-2020 the FFmpeg developers
+  built with gcc 8 (Debian 8.3.0-6)
+  configuration: --prefix=/usr --extra-version='1~mx19+2' --toolchain=hardened --libdir=/usr/lib/i386-linux-gnu --incdir=/usr/include/i386-linux-gnu --arch=i386 --enable-gpl --disable-stripping --enable-avresample --disable-filter=resample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librsvg --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opengl --enable-sdl2 --enable-libdc1394 --enable-libdrm --enable-chromaprint --enable-frei0r --enable-libx264 --ignore-tests='hapenc-hap-none,hapenc-hapa-none,hapenc-hapq-none' --enable-shared
+  libavutil      56. 31.100 / 56. 31.100
+  libavcodec     58. 54.100 / 58. 54.100
+  libavformat    58. 29.100 / 58. 29.100
+  libavdevice    58.  8.100 / 58.  8.100
+  libavfilter     7. 57.100 /  7. 57.100
+  libavresample   4.  0.  0 /  4.  0.  0
+  libswscale      5.  5.100 /  5.  5.100
+  libswresample   3.  5.100 /  3.  5.100
+  libpostproc    55.  5.100 / 55.  5.100
+Unrecognized option '-version'.
+Error splitting the argument list: Option not found
+
+
+
+
+
+Installing Ffmpeg on Debian GNU/Linux – Asset Bank Help Centre
+https://support.assetbank.co.uk/hc/en-gb/articles/115005343247-Installing-Ffmpeg-on-Debian-GNU-Linux
+
+En el siguiente dijeron como instalar ffmpeg en usr con ./configure --prefix=/usr/
+Configuring install path: prefix=[PREFIX] not fully understood
+https://stackoverflow.com/a/36998743
+
+ffmpeg install error RPi 3 B+ · Issue #26 · legotheboss/YouTube-files · GitHub
+https://github.com/legotheboss/YouTube-files/issues/26
+
+調子に乗ってきたので全部乗せffmpegを目指す話 - ねこにコベイン
+https://nyarinkopv.hatenablog.com/entry/2020/05/11/232455
+
+
+
+
+
+
+
+Installing Ffmpeg on Debian GNU/Linux – Asset Bank Help Centre
+https://support.assetbank.co.uk/hc/en-gb/articles/115005343247-Installing-Ffmpeg-on-Debian-GNU-Linux
+
+En el siguiente dijeron como instalar ffmpeg en usr con ./configure --prefix=/usr/
+Configuring install path: prefix=[PREFIX] not fully understood
+https://stackoverflow.com/a/36998743
+
+ffmpeg install error RPi 3 B+ · Issue #26 · legotheboss/YouTube-files · GitHub
+https://github.com/legotheboss/YouTube-files/issues/26

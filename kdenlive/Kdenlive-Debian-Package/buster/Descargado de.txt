@@ -1,0 +1,2 @@
+https://packages.debian.org/buster/kdenlive
+https://packages.debian.org/buster/kdenlive-data
