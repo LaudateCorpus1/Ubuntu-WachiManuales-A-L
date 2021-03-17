@@ -1,7 +1,5 @@
 
 
-
-
 Cómo crear Script para añadir 75Hz en Monitor Externo en Linux
 Por: Wachín
 
@@ -9,8 +7,6 @@ El programa:
 
 MicroMighty : Screen Mode Switch
 http://micromighty.com/Products/Screen_Mode_Switch.aspx
-
-me muestra en Windows 7 que hay disponible 1360x768 entre una de las tantas disponibles, pero sólo tiene 60Hz. Y he estado probando varias resoluciones a ver en cual el monitor se ve mejor a 75Hz (porque se ve borroso a 75Hz) en Linux en esta Laptop Dell Inspiron 1750. Había probado 1280x720, 1368x768, 1365x768(pero no se puede añadir, así lo dice gtf), y me faltaba por probar con esta, y se ve mejor todo en la pantalla
 
 PASOS:
 Primero necesito saber el nombre del monitor de la laptop, coloco en la terminal

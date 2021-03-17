@@ -35,4 +35,54 @@ PATH="$HOME/bin:$PATH" make -j4 && make install && hash -r
 
 
 
+***************
+voy a ver como me va
+
+*******************
+
+Tengo que desactivar:  
+
+--enable-vulkan
+--enable-libsrt
+
+porque no me reconoce la opción
+
+y saco a:
+
+ --enable-libmysofa 
+
+por este error
+
+ibavfilter/af_sofalizer.c:166:32: error: implicit declaration of function ‘mysofa_neighborhood_init_withstepdefine’; did you mean ‘mysofa_neighborhood_init’? [-Werror=implicit-function-declaration]
+         s->sofa.neighborhood = mysofa_neighborhood_init_withstepdefine(s->sofa.hrtf,
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                mysofa_neighborhood_init
+libavfilter/af_sofalizer.c:166:30: warning: assignment to ‘struct MYSOFA_NEIGHBORHOOD *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+         s->sofa.neighborhood = mysofa_neighborhood_init_withstepdefine(s->sofa.hrtf,
+
+
+
+
+
+PATH="$HOME/bin:$PATH" PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig" ./configure --prefix="$HOME/ffmpeg_build" \
+  --pkg-config-flags="--static" --extra-cflags="-I$HOME/ffmpeg_build/include" --extra-ldflags="-L$HOME/ffmpeg_build/lib" \
+  --extra-libs="-lpthread -lm" --bindir="$HOME/bin" --enable-gpl --enable-nonfree --enable-version3 \
+  --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libaom --enable-libaribb24 --enable-libass --enable-libbs2b \
+  --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdc1394 --enable-libfdk-aac --enable-libflite --enable-libfontconfig \
+  --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-liblensfun --enable-libmodplug \
+  --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libopenmpt \
+  --enable-libopus --enable-libpulse --enable-librsvg --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr \
+  --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvo-amrwbenc \
+  --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid \
+  --enable-libzmq --enable-libzvbi --enable-openal --enable-opengl --enable-openssl
+
+ahí si, y ahora:
+
+PATH="$HOME/bin:$PATH" make -j4 && make install && hash -r
+
+
+y se está construyendo
+
+
+
 
