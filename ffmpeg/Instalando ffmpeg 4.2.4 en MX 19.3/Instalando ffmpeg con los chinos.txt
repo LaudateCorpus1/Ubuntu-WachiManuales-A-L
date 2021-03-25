@@ -63,6 +63,21 @@ libavfilter/af_sofalizer.c:166:30: warning: assignment to ‘struct MYSOFA_NEIGH
 
 
 
+AÑADIR A:
+
+.bashrc
+
+lo siguiente:
+
+
+export PATH=$HOME/bin:$PATH
+export LD_LIBRARY_PATH=$HOME/lib/:$LD_LIBRARY_PATH
+
+
+y guardar y reiniciar
+
+
+
 
 PATH="$HOME/bin:$PATH" PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig" ./configure --prefix="$HOME/ffmpeg_build" \
   --pkg-config-flags="--static" --extra-cflags="-I$HOME/ffmpeg_build/include" --extra-ldflags="-L$HOME/ffmpeg_build/lib" \
