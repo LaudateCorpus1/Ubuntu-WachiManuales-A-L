@@ -1,0 +1,60 @@
+
+
+
+Lo instalé así:
+
+sudo apt install golang golang-go
+
+para ver la ayuda poner:
+
+go
+
+
+para ver si está bien instalado poner
+
+go version
+
+
+para ver todas las configuraciones del entorno poner:
+
+go env
+
+
+Visto go env en:
+
+How To Install Go 1.15 on Ubuntu 18.04 & 16.04 LTS – TecAdmin
+https://tecadmin.net/install-go-on-ubuntu/
+
+
+EJEMPLO DE CODIGO FUNCIONANDO
+
+Hello World
+
+    Create a Hello World program to test your environment.
+
+    $ nano helloworld.go
+
+    Paste the following in helloworld.go.
+
+    package main
+
+    import (
+        "fmt"
+    )
+
+    func main() {
+        fmt.Println("Hello world!")
+    }
+
+    Save the file and exit the Nano editor.
+
+    Run the program.
+
+    $ go run helloworld.go
+    # Hello world!
+
+
+Install the Latest Version of Golang on Ubuntu - Vultr.com
+https://www.vultr.com/docs/install-the-latest-version-of-golang-on-ubuntu
+
+

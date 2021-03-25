@@ -1,0 +1,43 @@
+
+[Screencast] Grabar pantalla con FFmpeg + seguir cursor + mostrar cursor + grabar rectangulo de 480p ~ Proyecto Facilitar el Software Libre en el Ecuador
+https://facilitarelsoftwarelibre.blogspot.com/2021/03/screencast-ffmpeg-follow-mouse-linux.html
+
+Una grabación a 480p significa una resolución de:
+
+854x480 px
+
+la cual se verá bien en Youtube (para eso que lo quiero)
+
+ 
+REQUISITOS
+Para Ubuntu y sabores y basados en Debian:
+
+sudo apt install ffmpeg
+
+Nota: Para otros Linux son otros comandos para instalar FFmpeg
+ 
+INSTRUCCIONES
+Instrucciones para seguir el cursor en medio del recuadro
+
+Ponga en la terminal: 
+
+ffmpeg -follow_mouse centered -show_region 1 -video_size 854x480 -framerate 60 -f x11grab -i :0.0 -f alsa -ac 2 -i default -c:v libx264 -qp 0 -preset ultrafast "$HOME/Rec-$(date '+%Y-%m-%d-%Hh%Mm%Ss').mp4" 
+
+
+Instrucciones para seguir el cursor solo cuando el puntero del mouse llega dentro de los 100 píxeles hasta el borde dentro del recuadro
+Ponga en la terminal:  
+
+ffmpeg -follow_mouse 100 -show_region 1 -video_size 854x480 -framerate 60 -f x11grab -i :0.0 -f alsa -ac 2 -i default -c:v libx264 -qp 0 -preset ultrafast "$HOME/Rec-$(date '+%Y-%m-%d-%Hh%Mm%Ss').mp4" 
+
+Ver Video:
+
+Aquí explico que esta caracteristica funciona bien en Ubuntu 20.04 que tiene la version FFmpeg 4.2.4, pero no funciona bien en antiX 19.3 que tiene FFmpeg 4.1.5
+
+
+BASADO EN:
+
+x11grab
+http://underpop.online.fr/f/ffmpeg/help/x11grab.htm.gz
+
+Screen capture tools to record online tutorials / 2.1.2. Screen recording with FFmpeg / 2.1.2.2. Record screen and audio from your computer
+https://twiki.cern.ch/twiki/pub/ELearning/WebHome/screen_capture_tools.pdf
