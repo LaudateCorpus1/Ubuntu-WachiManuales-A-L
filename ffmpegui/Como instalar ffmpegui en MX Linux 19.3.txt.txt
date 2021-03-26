@@ -1,0 +1,52 @@
+
+
+Cómo instalar ffmpegui
+
+
+ponerse en una carpeta para organizar las carpetas, y dentro de allí abrir una terminal:
+
+
+Para Debian, Ubuntu, etc.: 
+
+sudo apt-get install libgtk-3-dev
+
+
+################################################
+
+andlabs/ui: Platform-native GUI library for Go.
+https://github.com/andlabs/ui
+
+raviraa/ffmpegui: GUI to record screen using ffmpeg
+https://github.com/raviraa/ffmpegui
+
+
+
+Para instalarlos poner en la terminal (en la raíz de la terminal en HOME):
+
+go get github.com/andlabs/ui/...
+
+go get github.com/raviraa/ffmpegui/...
+
+pero debo usar mi fork
+
+go get github.com/wachin/ffmpegui/...
+
+
+Y para lanzar:
+
+/home/wachin/go/bin/ffmpegui
+
+
+
+
+
+
+CÓMO DESINSTALAR PAQUETES GO	
+
+rm -r /home/wachin/go/src/github.com/raviraa/ffmpegui/
+
+Removing packages installed with go get - Stack Overflow
+https://stackoverflow.com/questions/13792254/removing-packages-installed-with-go-get
+
+
+
