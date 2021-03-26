@@ -195,7 +195,7 @@ Searching the web revealed that ffmpeg now has support for capturing from X11, a
 ffmpeg -f x11grab -y -r 25 -s 1920x1080 -i :0.0 -vcodec huffyuv out.avi
 # Capture screen :0 with audio, otherwise the same as above.
 
-ffmpeg -f alsa -ac 2 -i hw:0,0 -f x11grab -y -r 25 -s 1920x1080 -i :0.0 -vcodec huffyuv out.avi
+ffmpeg -f alsa -ac 2 -i hw:0,0 -f x11grab -y -r 25 -s 800x600 -i :0.0 -vcodec huffyuv out.avi
 # DO NOT USE THESE LINES, READ BELOW!
 
 Even in the year 2014 it was not possible to capture the screen in full HD resolution 1920x1080 losslessly in real time. None of the low-overhead lossless codecs huffyuv, ffv1, or lossless x264 were fast enough for a modern desktop to capture and transcode the full HD resolution on-the-fly. Even worse, the output files of the ffmpeg lines above had silent frame drops which yielded in audio desync. This is probably the reason why the front-end Linux screencast tools usually down-scale the resolution while recording! I find this unacceptable.
@@ -212,26 +212,67 @@ Refer to the vncrec-rgb project webpage for vncrec-rgb 0.4.
 
 ffmpeg -f x11grab -y -r 25 -s 800x600 -i :0.0 -vcodec huffyuv out.avi
 
-ffmpeg -f alsa -ac 2 -i default -f x11grab -y -r 25 -s 800x600 -i :0.0 -vcodec huffyuv out.avi
+ffmpeg -f alsa -ac 2 -i hw:0,0 -f x11grab -y -r 25 -s 800x600 -i :0.0 -vcodec huffyuv out.avi
 
 
-EXPERIMENTO:
+EXPERIMENTO (el viedo es gigantesco, un video de 2 minutos pesó 1,3GB):
 
-ffmpeg -f alsa -ac 2 -i default -follow_mouse 100 -show_region 1 -video_size 854x480 -f x11grab -y -r 25 -i :0.0  -vcodec huffyuv out.mp4"  
+
+ffmpeg -f alsa -ac 2 -i hw:0,0 -follow_mouse 100 -show_region 1 -f x11grab -y -r 25 -s 854x480 -i :0.0 -vcodec huffyuv out.avi
 
 
 ffmpeg -follow_mouse 100 -show_region 1 -video_size 854x480 -framerate 60 -f x11grab -i :0.0 \
        -f alsa -ac 2 -i default \
-       -c:v ffvhuff -preset ultrafast -crf 0 \
+       -c:v libx264 -qp 0 -preset ultrafast \
        "$HOME/Rec-$(date '+%Y-%m-%d-%Hh%Mm%Ss').mp4" 
 
--c:v ffvhuff
+
+
+
+######################################################
+
+software recommendation - How can I record my screen? - Ask Ubuntu
+https://askubuntu.com/a/171541/145772
+
+After trying everything, this is the solution I came up with:
+
+Note: The "fake" ffmpeg from Libav has been depreciated (within Libav) and has been replaced by avconv from Libav. The "deprecated" message does not apply to the real ffmpeg from FFmpeg which is unaffected and is still under heavy development.
+
+First install the required codecs:
+
+sudo apt-get install libavcodec-extra-5*
+
+Use the following command to record the screencast:
+
+avconv -f alsa -i pulse -f x11grab -r 30 -s 1280x800 -i :0.0 -vcodec libx264 -acodec libmp3lame myscreencast.mkv
+
+Change -s 1280x800 to whatever resolution you like.
+more examples
+all screen with given resolution and sound
+
+avconv -f alsa -i pulse -f x11grab -r 30 -s 1024x768 -i :0.0 -acodec pcm_s16le -vcodec libx264  -threads 0 output.mkv
+
+all screen with mouse following and sound
+
+avconv -f alsa -i pulse -f x11grab -show_region 1 -follow_mouse 100 -r 10 -s 960x540 -i :0.0+10,200 -acodec pcm_s16le -qscale 0 -threads 0 output.mkv
+
+Detailed options I know are following
+
+    -f: input file format
+    -i: input file name
+    -r: fps (Frame Per Second)
+    -s: frame size (width x height)
+    -i :0.0+10,200: size of squared area to follow
 
 ######################################################
 
 
 
-BASADO EN:
+
+CONSULTAS:
+
+software recommendation - How can I record my screen? - Ask Ubuntu
+https://askubuntu.com/questions/4428/how-can-i-record-my-screen/171541#171541
 
 x11grab
 http://underpop.online.fr/f/ffmpeg/help/x11grab.htm.gz
