@@ -267,6 +267,11 @@ Detailed options I know are following
 ######################################################
 
 
+REVISAR INFORMACIÓN MUY UTIL
+
+How to Record Your Desktop Using FFmpeg on Ubuntu Linux: 10 Steps
+https://www.wikihow.com/Record-Your-Desktop-Using-FFmpeg-on-Ubuntu-Linux
+
 
 
 CONSULTAS:

@@ -1,0 +1,44 @@
+
+2021-03-27 Tengo algunos tutoriales hechos en archivos de texto en mi ordenador, y al crear una nueva entrada en Blogger y pegar allí el texto, al querer editar una linea dando ENTER me enviaba hasta el final del texto, y esto resulta muy molestoso pues es en cada línea, la solución es la siguiente:
+Convertir el texto a html
+
+en:
+
+https://www.textfixer.com/html/convert-text-html.php
+
+la configuración puede ser:
+
+ <p>: Use paragraph tags only
+
+o
+
+<p> & <br>: Use paragraph and line break tags
+
+y de allí pegarlo a una entrada que esté haciendo en Blogger:
+
+
+y dar clic en Convertir y abajo aparecerá, y usted debe copiarlo:
+
+
+ahora en Blogger de clic en el boton de edición:
+
+ 
+
+ y allí elegir HTML:
+
+
+ borrar lo que esté allí:
+
+
+
+ y pegar allí el HTML:
+
+ 
+
+
+y de allí volverlo a dejar en Vista de redacción:
+
+
+ 
+
+Dios les bendiga
