@@ -57,7 +57,7 @@ ibavfilter/af_sofalizer.c:166:32: error: implicit declaration of function ‘mys
          s->sofa.neighborhood = mysofa_neighborhood_init_withstepdefine(s->sofa.hrtf,
                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                                 mysofa_neighborhood_init
-libavfilter/af_sofalizer.c:166:30: warning: assignment to ‘struct MYSOFA_NEIGHBORHOOD *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+libavfilter/af_sofalizer.c:166:30: warning: assignment to ‘struct MYSOFA_NEIGHBORHOOD *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]x
          s->sofa.neighborhood = mysofa_neighborhood_init_withstepdefine(s->sofa.hrtf,
 
 
@@ -65,7 +65,7 @@ libavfilter/af_sofalizer.c:166:30: warning: assignment to ‘struct MYSOFA_NEIGH
 
 AÑADIR A:
 
-.bashrc
+gedit .bashrc
 
 lo siguiente:
 

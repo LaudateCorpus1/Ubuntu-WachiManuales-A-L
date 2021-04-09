@@ -7,11 +7,9 @@ Instalación hecha en
 
 MX Linux 19.3 x386 (Basado en Debian 10)
 
-Dependencias:
+Dependencias que wachi iba encontrando:
 
-
-
-sudo apt install build-essential libmp3lame-dev libvorbis-dev libtheora-dev libspeex-dev yasm pkg-config libfaac-dev libx264-dev libopenjp2-7-dev libfaac-dev
+sudo apt install build-essential libmp3lame-dev libvorbis-dev libtheora-dev libspeex-dev yasm pkg-config libfaac-dev libx264-dev libopenjp2-7-dev libfaac-dev libchromaprint-dev frei0r-plugins-dev libgnutls28-dev ladspa-sdk libaom-dev liblilv-dev libiec61883-dev libbluray-dev libbs2b-dev libdc1394-22-dev libomxil-bellagio-dev
 
 
 

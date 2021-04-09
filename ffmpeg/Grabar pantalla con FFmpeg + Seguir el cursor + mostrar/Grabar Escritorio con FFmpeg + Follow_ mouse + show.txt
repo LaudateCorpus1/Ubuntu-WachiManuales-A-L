@@ -10,7 +10,7 @@ la cual se verá bien en Youtube (para eso que lo quiero)
 
  
 REQUISITOS
-Para Ubuntu y sabores y basados en Debian:
+Para Ubuntu y sabores y basados en Debian como MX Linux, antiX, Linux Mint Debbie, etc, etc:
 
 sudo apt install ffmpeg
 
@@ -21,10 +21,10 @@ Instrucciones para seguir el cursor en medio del recuadro
 
 Ponga en la terminal: 
 
-ffmpeg -follow_mouse centered -show_region 1 -video_size 854x480 -framerate 60 -f x11grab -i :0.0 \
+ffmpeg -follow_mouse centered -show_region 1 -video_size 854x480 -r 60 -f x11grab -i :0.0 \
        -f alsa -ac 2 -i default \
        -c:v libx264 -qp 0 -preset ultrafast \
-       "$HOME/Rec-$(date '+%Y-%m-%d-%Hh%Mm%Ss').mp4" 
+       "$HOME/Rec-$(date '+%Y-%m-%d_%H.%M.%S').mp4" 
 
 
 
@@ -32,11 +32,11 @@ ffmpeg -follow_mouse centered -show_region 1 -video_size 854x480 -framerate 60 -
 Instrucciones para seguir el cursor solo cuando el puntero del mouse llega dentro de los 100 píxeles hasta el borde dentro del recuadro
 Ponga en la terminal:  
 
-ffmpeg -follow_mouse 100 -show_region 1 -video_size 854x480 -framerate 60 -f x11grab -i :0.0 \
+ffmpeg -follow_mouse 100 -show_region 1 -video_size 854x480 -r 60 -f x11grab -i :0.0 \
        -f alsa -ac 2 -i default \
        -c:v libx264 -qp 0 -preset ultrafast \
-       "$HOME/Rec-$(date '+%Y-%m-%d-%Hh%Mm%Ss').mp4" 
-
+       "$HOME/Rec-$(date '+%Y-%m-%d_%H.%M.%S').mp4"
+       
 
 Aquí explico que esta caracteristica funciona bien en Ubuntu 20.04 que tiene la version FFmpeg 4.2.4, pero no funciona bien en antiX 19.3 que tiene FFmpeg 4.1.5
 
@@ -68,14 +68,14 @@ EXPERIMENTO:
 ffmpeg -follow_mouse 100 -show_region 1 -video_size 854x480 -framerate 60 -f x11grab -i :0.0 \
        -f alsa -ac 2 -i default \
        -c:v libx264rgb -crf 0 -preset ultrafast \
-       "$HOME/Rec-$(date '+%Y-%m-%d-%Hh%Mm%Ss').mp4"
+       "$HOME/Rec-$(date '+%Y-%m-%d_%H.%M.%S').mp4" 
 
 A ver como queda este a 30 framerate:
 
 ffmpeg -follow_mouse 100 -show_region 1 -video_size 854x480 -framerate 30 -f x11grab -i :0.0  \
        -f alsa -ac 2 -i default  \
        -c:v libx264rgb -crf 0 -preset ultrafast \
-       "$HOME/Rec-$(date '+%Y-%m-%d-%Hh%Mm%Ss').mp4"
+       "$HOME/Rec-$(date '+%Y-%m-%d_%H.%M.%S').mp4" 
 
 
 
@@ -103,7 +103,7 @@ EXPERIMENTO:
 ffmpeg -follow_mouse 100 -show_region 1 -video_size 854x480 -framerate 60 -f x11grab -i :0.0 \
        -f alsa -ac 2 -i default \
        -vcodec libx264 -preset ultrafast -qp 0 -pix_fmt yuv444p \
-       "$HOME/Rec-$(date '+%Y-%m-%d-%Hh%Mm%Ss').mp4"
+       "$HOME/Rec-$(date '+%Y-%m-%d_%H.%M.%S').mp4" 
 
 
 #############################################
@@ -123,7 +123,7 @@ EXPERIMENTO:
 ffmpeg -follow_mouse 100 -show_region 1 -video_size 854x480 -framerate 60 -f x11grab -i :0.0 \
        -f alsa -ac 2 -i default \
        -c:v libx264 -preset ultrafast -crf 0 \
-       "$HOME/Rec-$(date '+%Y-%m-%d-%Hh%Mm%Ss').mp4" 
+       "$HOME/Rec-$(date '+%Y-%m-%d_%H.%M.%S').mp4" 
 
 
 
@@ -162,14 +162,14 @@ EXPERIMENTO:
 ffmpeg -follow_mouse 100 -show_region 1 -video_size 854x480 -framerate 60 -f x11grab -i :0.0 \
        -f alsa -ac 2 -i default \
        -vcodec libx264 -pix_fmt yuv420p -preset ultrafast -crf 0 -threads 0 \
-       "$HOME/Rec-$(date '+%Y-%m-%d-%Hh%Mm%Ss').mkv" 
+       "$HOME/Rec-$(date '+%Y-%m-%d_%H.%M.%S').mp4" 
 
 EXPERIMENTO + AUDIO CODEC:
 
 ffmpeg -follow_mouse 100 -show_region 1 -video_size 854x480 -framerate 60 -f x11grab -i :0.0 \
        -f alsa -ac 2 -acodec pcm_s16le -i default \
        -vcodec libx264 -pix_fmt yuv420p -preset ultrafast -crf 0 -threads 0 \
-       "$HOME/Rec-$(date '+%Y-%m-%d-%Hh%Mm%Ss').mkv" 
+       "$HOME/Rec-$(date '+%Y-%m-%d_%H.%M.%S').mp4" 
 
 
 
@@ -224,7 +224,7 @@ ffmpeg -f alsa -ac 2 -i hw:0,0 -follow_mouse 100 -show_region 1 -f x11grab -y -r
 ffmpeg -follow_mouse 100 -show_region 1 -video_size 854x480 -framerate 60 -f x11grab -i :0.0 \
        -f alsa -ac 2 -i default \
        -c:v libx264 -qp 0 -preset ultrafast \
-       "$HOME/Rec-$(date '+%Y-%m-%d-%Hh%Mm%Ss').mp4" 
+       "$HOME/Rec-$(date '+%Y-%m-%d_%H.%M.%S').mp4" 
 
 
 

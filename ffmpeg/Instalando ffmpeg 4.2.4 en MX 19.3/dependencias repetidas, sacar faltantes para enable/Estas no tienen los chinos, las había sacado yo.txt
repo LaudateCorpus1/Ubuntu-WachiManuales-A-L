@@ -1,0 +1,9 @@
+
+
+
+sudo apt install build-essential libfaac-dev libgnutls28-dev liblilv-dev libiec61883-dev libbluray-dev libdc1394-22-dev libomxil-bellagio-dev
+
+
+esto habría que añadirlo así a la compilación:
+
+--enable-libfaac --enable-libgnutls28 --enable-liblilv --enable-libiec61883 --enable-libbluray --enable-libdc1394-22 --enable-libomxil-bellagio

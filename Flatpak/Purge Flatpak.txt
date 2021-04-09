@@ -3,8 +3,12 @@ https://askubuntu.com/questions/1051095/how-do-one-uninstall-a-program-installed
 
 Poner uno por uno los siguientes 5 comandos en una terminal ejecutandolos:
 
+xdg-dbus-proxy libostree-1-1
+
+
+
 sudo apt-get remove --auto-remove flatpak xdg-desktop-portal-gtk
-sudo apt-get purge --auto-remove flatpak xdg-desktop-portal-gtk
+sudo apt-get purge --auto-remove flatpak xdg-desktop-portal-gtk 
 sudo rm -r -f /var/lib/flatpak/
 rm -r -f  ~/.local/share/flatpak
 

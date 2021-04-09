@@ -1,0 +1,4 @@
+sudo apt install build-essential libfaac-dev libfaac-dev libgnutls28-dev liblilv-dev libiec61883-dev libbluray-dev libdc1394-22-dev libomxil-bellagio-dev
+
+
+ 
