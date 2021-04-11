@@ -31,7 +31,7 @@ ffmpeg -follow_mouse centered -show_region 1 -video_size 854x480 -r 60 -f x11gra
 
 GRABAR RECTÁNGULO 480p + SEGUIR EL RATÓN (MOVER BORDE A LOS 100px)
 
-Las siguientes son instrucciones grabar en un rectángulo de 854x480 pixeles + seguir el ratón para explicar con más detalle los lugares en la pantalla donde nos estemos moviendo, y el resctángulo solo se moverá siguiendo al ratón cuando el puntero llega dentro de los 100 píxeles hasta el borde dentro del recuadro
+Las siguientes son instrucciones para grabar en un rectángulo de 854x480 pixeles + seguir el ratón para explicar con más detalle los lugares en la pantalla donde nos estemos moviendo, y el rectángulo solo se moverá siguiendo al ratón cuando el puntero llega dentro de los 100 píxeles hasta el borde dentro del recuadro
 
 Ponga en la terminal:  
 
