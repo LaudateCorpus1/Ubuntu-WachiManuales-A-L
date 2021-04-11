@@ -16,7 +16,8 @@ sudo apt install ffmpeg
 
 Nota: Para otros Linux son otros comandos para instalar FFmpeg
  
-INSTRUCCIONES
+
+GRABAR PANTALLA COMPLETA
 Instrucciones para seguir el cursor en medio del recuadro
 
 Ponga en la terminal: 
@@ -28,8 +29,10 @@ ffmpeg -follow_mouse centered -show_region 1 -video_size 854x480 -r 60 -f x11gra
 
 
 
+GRABAR RECTÁNGULO 480p + SEGUIR EL RATÓN (MOVER BORDE A LOS 100px)
 
-Instrucciones para seguir el cursor solo cuando el puntero del mouse llega dentro de los 100 píxeles hasta el borde dentro del recuadro
+Las siguientes son instrucciones grabar en un rectángulo de 854x480 pixeles + seguir el ratón para explicar con más detalle los lugares en la pantalla donde nos estemos moviendo, y el resctángulo solo se moverá siguiendo al ratón cuando el puntero llega dentro de los 100 píxeles hasta el borde dentro del recuadro
+
 Ponga en la terminal:  
 
 ffmpeg -follow_mouse 100 -show_region 1 -video_size 854x480 -r 60 -f x11grab -i :0.0 \
@@ -38,7 +41,22 @@ ffmpeg -follow_mouse 100 -show_region 1 -video_size 854x480 -r 60 -f x11grab -i 
        "$HOME/Rec-$(date '+%Y-%m-%d_%H.%M.%S').mp4"
        
 
-Aquí explico que esta caracteristica funciona bien en Ubuntu 20.04 que tiene la version FFmpeg 4.2.4, pero no funciona bien en antiX 19.3 que tiene FFmpeg 4.1.5
+ACLARACIÓN: Esta caracteristica sólo funciona correctamente en Sistemas Operativos Linux con FFmpeg 4 ejemplo Ubuntu 20.04 Focal que tiene la version FFmpeg 4.2.4 (https://packages.ubuntu.com/focal/ffmpeg), o Debian 11 bullseye que tiene FFmpeg 4.3.2 (https://packages.debian.org/bullseye/ffmpeg), esto o que usted mismo compile desde código fuente una de las versiones 4 de FFmpeg
+
+
+
+GRABAR RECTÁNGULO 480p + SEGUIR EL RATÓN (MOVER BORDE A LOS 50px)
+
+Las siguientes son instrucciones grabar en un rectángulo de 854x480 pixeles + seguir el ratón y el resctángulo solo se moverá siguiendo al ratón cuando el puntero llega dentro de los 100 píxeles hasta el borde dentro del recuadro
+
+Ponga en la terminal:  
+
+ffmpeg -follow_mouse 50 -show_region 1 -video_size 854x480 -r 60 -f x11grab -i :0.0 \
+       -f alsa -ac 2 -i default \
+       -c:v libx264 -qp 0 -preset ultrafast \
+       "$HOME/Rec-$(date '+%Y-%m-%d_%H.%M.%S').mp4"
+
+
 
 
 ##############################################
@@ -265,6 +283,33 @@ Detailed options I know are following
     -i :0.0+10,200: size of squared area to follow
 
 ######################################################
+
+How to Record Your Desktop Video and Audio Using "Avconv" Tool in Ubuntu
+https://www.tecmint.com/record-ubuntu-desktop-screen-using-avconv/
+
+Step 2: Start Video Recording of Desktop
+
+2. You’re ready now, all what you have to do is to record your desktop video by issuing following command.
+
+$ avconv -f x11grab -r 25 -s 1920x1080 -i :0.0 -vcodec libx264 -threads 4 $HOME/output.avi
+
+Now let’s explain the command in short:
+
+    avconv -f x11grab is the default command to capture video from the X server.
+    -r 25 is the frame rate you want, you may change it if you like.
+    -s 1920×1080 is your system’s screen resolution, change it to your current system resolution, it’s very important to do this.
+    -i :0.0 is where we want to set our recording start point, leave it like this.
+    -vcodec libx264 is the video codec that we’re using to record the desktop.
+    -threads 4 is the number of threads, you may change it as well if you like.
+    $HOME/output is the destination path where you want to save the file.
+    .avi is the video format, you may change it to “flv”, “mp4”, “wmv”, “mov”, “mkv”.
+
+3. After you enter the command, the recording will start automatically as a process running from the terminal, in order to stop it, hit “Ctrl + C” keys inside the terminal window.
+
+
+
+
+########################################################
 
 
 REVISAR INFORMACIÓN MUY UTIL

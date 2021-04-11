@@ -1,0 +1,21 @@
+
+
+
+software recommendation - How can I record my screen? - Ask Ubuntu
+https://askubuntu.com/a/257635/145772
+
+
+
+This bash script is based on ffmpeg. It calculates the required resolution and record your desktop in high-definition.
+
+Xaxis=$(xrandr -q | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f1)
+Yaxis=$(xrandr -q | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f2)
+ffmpeg -f x11grab -s $(($Xaxis))x$(($Yaxis)) -r 25 -i :0.0 -sameq ~/Video/output.mkv
+
+Change the filename to your taste. This script can be found on github here.
+
+
+
+https://github.com/dilawar/Scripts/blob/master/record_my_desktop.sh
+
+
