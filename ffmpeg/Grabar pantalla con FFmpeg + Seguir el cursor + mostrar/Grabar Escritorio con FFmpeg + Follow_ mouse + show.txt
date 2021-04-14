@@ -2,11 +2,16 @@
 [Screencast] Grabar pantalla con FFmpeg + seguir cursor + mostrar cursor + grabar rectangulo de 480p ~ Proyecto Facilitar el Software Libre en el Ecuador
 https://facilitarelsoftwarelibre.blogspot.com/2021/03/screencast-ffmpeg-follow-mouse-linux.html
 
-Una grabación a 480p significa una resolución de:
 
-854x480 px
 
-la cual se verá bien en Youtube (para eso que lo quiero)
+Una resolución a 480p significa:
+
+854x480 pixeles
+
+la cual se verá bien en Youtube al subir el video allí:
+
+Resoluciones de vídeo y relaciones de aspecto - Ordenador - Ayuda de YouTube
+https://support.google.com/youtube/answer/6375112?co=GENIE.Platform%3DDesktop&hl=es
 
  
 REQUISITOS
@@ -17,7 +22,7 @@ sudo apt install ffmpeg
 Nota: Para otros Linux son otros comandos para instalar FFmpeg
  
 
-GRABAR PANTALLA COMPLETA
+GRABAR RECTÁNGULO 480p + SEGUIR EL RATÓN (FIJO EN MEDIO)
 Instrucciones para seguir el cursor en medio del recuadro
 
 Ponga en la terminal: 
@@ -57,265 +62,6 @@ ffmpeg -follow_mouse 50 -show_region 1 -video_size 854x480 -r 60 -f x11grab -i :
        "$HOME/Rec-$(date '+%Y-%m-%d_%H.%M.%S').mp4"
 
 
-
-
-##############################################
-
-############################################
-
-Capture/Desktop – FFmpeg
-https://trac.ffmpeg.org/wiki/Capture/Desktop
-
-Lossless Recording
-
-If your CPU is not fast enough, the encoding process might take too long. To speed up the encoding process, you can use lossless encoding and disable advanced encoder options, e.g.:
-
-ffmpeg -video_size 1920x1080 -framerate 30 -f x11grab -i :0.0 -c:v libx264rgb -crf 0 -preset ultrafast output.mkv
-
--crf 0 tells x264 to encode in lossless mode; -preset ultrafast advises it to do so fast. Note the use of libx264rgb rather than libx264; the latter would do a lossy conversion from RGB to yuv444p.
-
-The encoder should be fast enough on most modern hardware to record without any framedrop, and even leave enough CPU headroom for other applications.
-
-If you're going to archive the recording or are concerned about file size, re-encode it losslessly again, but with a slower preset. Note that since the initial recording was lossless, and the re-encode is lossless too, no quality loss is introduced in this process in any way.
-
-ffmpeg -i output.mkv -c:v libx264rgb -crf 0 -preset veryslow output-smaller.mkv
-
-
-EXPERIMENTO:
-
-ffmpeg -follow_mouse 100 -show_region 1 -video_size 854x480 -framerate 60 -f x11grab -i :0.0 \
-       -f alsa -ac 2 -i default \
-       -c:v libx264rgb -crf 0 -preset ultrafast \
-       "$HOME/Rec-$(date '+%Y-%m-%d_%H.%M.%S').mp4" 
-
-A ver como queda este a 30 framerate:
-
-ffmpeg -follow_mouse 100 -show_region 1 -video_size 854x480 -framerate 30 -f x11grab -i :0.0  \
-       -f alsa -ac 2 -i default  \
-       -c:v libx264rgb -crf 0 -preset ultrafast \
-       "$HOME/Rec-$(date '+%Y-%m-%d_%H.%M.%S').mp4" 
-
-
-
-########################################################
-
-########################################################
-
-x11 - How to get near-perfect screen recording quality? - Unix & Linux Stack Exchange
-https://unix.stackexchange.com/a/334148
-
-
-ffmpeg -f x11grab -video_size 1920x1080 -framerate 30 -i :1 \
-       -vcodec libx264 -preset ultrafast -qp 0 -pix_fmt yuv444p \
-       video.mkv
-
-Key points:
-
-    -qp 0: x264 lossless mode
-    -preset ultrafast: smallest cpu usage, large size
-    -pix_fmt yuv444p: the default, but ffmpeg suggests yuv420p, which is lossy
-
-
-EXPERIMENTO:
-
-ffmpeg -follow_mouse 100 -show_region 1 -video_size 854x480 -framerate 60 -f x11grab -i :0.0 \
-       -f alsa -ac 2 -i default \
-       -vcodec libx264 -preset ultrafast -qp 0 -pix_fmt yuv444p \
-       "$HOME/Rec-$(date '+%Y-%m-%d_%H.%M.%S').mp4" 
-
-
-#############################################
-
-#############################################
-
-Screen Casting using ffmpeg (too fast) - Super User
-https://superuser.com/a/487463
-
-ry using a lossless encoder to capture the screen, and then re-encode the output when you are finished to create a smaller file if desired. The advantage of this method is often a less intensive capturing process which can result in a "faster" capture frame rate. Of course results can vary.
-
-ffmpeg -f x11grab -s 1280x800 -i :0.0 -c:v libx264 -preset ultrafast -crf 0 out.mkv
-
-
-EXPERIMENTO:
-
-ffmpeg -follow_mouse 100 -show_region 1 -video_size 854x480 -framerate 60 -f x11grab -i :0.0 \
-       -f alsa -ac 2 -i default \
-       -c:v libx264 -preset ultrafast -crf 0 \
-       "$HOME/Rec-$(date '+%Y-%m-%d_%H.%M.%S').mp4" 
-
-
-
-######################################################
-
-*******************************
-De aquí para abajo el mejorcito
-*******************************
-
-FFmpeg video screen capture, recording, casting A- 2020
-https://www.bogotobogo.com/FFMpeg/ffmpeg_video_screencasting_screen_recording_capture.php
-
-Step 1 - Lossless recording
-
-The resolution is set to 1366x768 with framerate at 25 and the command looks like this:
-
-$ ffmpeg -f alsa -ac 2 -i pulse -f x11grab -r 25 -s 1366x768 -i :0.0 \
--vcodec libx264 -pix_fmt yuv420p -preset ultrafast -crf 0 -threads 0 \
--acodec pcm_s16le -y output.mkv
-
-In the command, -i :0.0 means to capture the primary screen (0.0). We're using libx264 video codec. To support some of the media players that does YUV planar color space with 4:2:0 chroma subsampling for H.264 vide, we can use -pix_fmt yuv420p, if no pixel format is specified, yuv444p for H.264 encoding will be used by default.
-
-To stop recording, make the terminal active and then press q.
-
-Here is a summary what we've done:
-We captured audio from pulseaudio sound server and encode it to lossless raw PCM with 2 audio channels (stereo). Then, we grab a video stream from X11 at a frame rate of 25 and a size of 1366x768 from the display :0.0 (primary screen) and encode it to lossless h264 using libx264. Using -threads 0 means automatic thread detection. The resulting streams will be muxed in a Matroska container (output.mkv).
-
-
-ffmpeg -f alsa -ac 2 -i pulse -f x11grab -r 25 -s 1366x768 -i :0.0 \
--vcodec libx264 -pix_fmt yuv420p -preset ultrafast -crf 0 -threads 0 \
--acodec pcm_s16le -y output.mkv
-
-
-EXPERIMENTO:
-
-ffmpeg -follow_mouse 100 -show_region 1 -video_size 854x480 -framerate 60 -f x11grab -i :0.0 \
-       -f alsa -ac 2 -i default \
-       -vcodec libx264 -pix_fmt yuv420p -preset ultrafast -crf 0 -threads 0 \
-       "$HOME/Rec-$(date '+%Y-%m-%d_%H.%M.%S').mp4" 
-
-EXPERIMENTO + AUDIO CODEC:
-
-ffmpeg -follow_mouse 100 -show_region 1 -video_size 854x480 -framerate 60 -f x11grab -i :0.0 \
-       -f alsa -ac 2 -acodec pcm_s16le -i default \
-       -vcodec libx264 -pix_fmt yuv420p -preset ultrafast -crf 0 -threads 0 \
-       "$HOME/Rec-$(date '+%Y-%m-%d_%H.%M.%S').mp4" 
-
-
-
-######################################################
-
-
-Recording Frame-Perfect, High-Resolution Screencasts on Linux in the Year 2014 - panthema.net
-https://panthema.net/2014/0630-Frame-Perfect-Linux-Screencasts-in-the-Year-2014.html
-
-Recording Frame-Perfect, High-Resolution Screencasts on Linux in the Year 2014
-
-Posted on 2014-06-30 20:35 by Timo Bingmann at Permlink with 2 Comments. Tags: vncrec
-
-Last week I produced a recording of a talk about "STXXL 1.4.0 and Beyond". I thought it would be trivial in the year 2014 to create a frame-perfect high-resolution recording of a PDF presentation slideshow with moving mouse cursor on Linux. I was so wrong.
-
-In the end, I created a patched version of vncrec: now called "vncrec-rgb 0.4", and the tutorial on the vncrec-rgb webpage. But now, why do screen recording with vncrec?
-ffmpeg -f x11grab works, but full-resolution encoding is too slow!
-
-Searching the web revealed that ffmpeg now has support for capturing from X11, and there are many screencasting tools now available on Linux. Most of these are mainly frontends to xvidcap or ffmpeg, and call some variation of the ffmpeg command lines below:
-
-# Capture screen :0 in full HD resoltion, compress with HuffYUV codec and save to out.avi
-
-ffmpeg -f x11grab -y -r 25 -s 1920x1080 -i :0.0 -vcodec huffyuv out.avi
-# Capture screen :0 with audio, otherwise the same as above.
-
-ffmpeg -f alsa -ac 2 -i hw:0,0 -f x11grab -y -r 25 -s 800x600 -i :0.0 -vcodec huffyuv out.avi
-# DO NOT USE THESE LINES, READ BELOW!
-
-Even in the year 2014 it was not possible to capture the screen in full HD resolution 1920x1080 losslessly in real time. None of the low-overhead lossless codecs huffyuv, ffv1, or lossless x264 were fast enough for a modern desktop to capture and transcode the full HD resolution on-the-fly. Even worse, the output files of the ffmpeg lines above had silent frame drops which yielded in audio desync. This is probably the reason why the front-end Linux screencast tools usually down-scale the resolution while recording! I find this unacceptable.
-Problems with YUV colorspace and vncrec-twibright
-
-Well, after much ado, I reverted back to the method I used a long time ago, in 2009, to record a screencast: vncrec. See the corresponding blog post "Experiences Producing a Screencast on Linux for CryptoTE" for some more discussion on why vncrec is a very good solution for producing frame-perfect screencasts.
-
-However, I noticed one problem with the vncrec-twibright edition: bleeding edges and some "washed-out" colors. These artefacts are due to vncrec-twibright's conversion of the frames into the YUV 4:2:0 colorspace, which is nice for videos but of course does not match the RGB colorspace of a screencast.
-
-This is however not a limitation of the vnc recording, the vncrec -movie option could just as well be outputted in the usual RGB colorspace. And this is what I added to vncrec-rgb: outputting the movie frames as raw RGB triples for further processing using ffmpeg or mencoder.
-
-Refer to the vncrec-rgb project webpage for vncrec-rgb 0.4.
-
-
-ffmpeg -f x11grab -y -r 25 -s 800x600 -i :0.0 -vcodec huffyuv out.avi
-
-ffmpeg -f alsa -ac 2 -i hw:0,0 -f x11grab -y -r 25 -s 800x600 -i :0.0 -vcodec huffyuv out.avi
-
-
-EXPERIMENTO (el viedo es gigantesco, un video de 2 minutos pesó 1,3GB):
-
-
-ffmpeg -f alsa -ac 2 -i hw:0,0 -follow_mouse 100 -show_region 1 -f x11grab -y -r 25 -s 854x480 -i :0.0 -vcodec huffyuv out.avi
-
-
-ffmpeg -follow_mouse 100 -show_region 1 -video_size 854x480 -framerate 60 -f x11grab -i :0.0 \
-       -f alsa -ac 2 -i default \
-       -c:v libx264 -qp 0 -preset ultrafast \
-       "$HOME/Rec-$(date '+%Y-%m-%d_%H.%M.%S').mp4" 
-
-
-
-
-######################################################
-
-software recommendation - How can I record my screen? - Ask Ubuntu
-https://askubuntu.com/a/171541/145772
-
-After trying everything, this is the solution I came up with:
-
-Note: The "fake" ffmpeg from Libav has been depreciated (within Libav) and has been replaced by avconv from Libav. The "deprecated" message does not apply to the real ffmpeg from FFmpeg which is unaffected and is still under heavy development.
-
-First install the required codecs:
-
-sudo apt-get install libavcodec-extra-5*
-
-Use the following command to record the screencast:
-
-avconv -f alsa -i pulse -f x11grab -r 30 -s 1280x800 -i :0.0 -vcodec libx264 -acodec libmp3lame myscreencast.mkv
-
-Change -s 1280x800 to whatever resolution you like.
-more examples
-all screen with given resolution and sound
-
-avconv -f alsa -i pulse -f x11grab -r 30 -s 1024x768 -i :0.0 -acodec pcm_s16le -vcodec libx264  -threads 0 output.mkv
-
-all screen with mouse following and sound
-
-avconv -f alsa -i pulse -f x11grab -show_region 1 -follow_mouse 100 -r 10 -s 960x540 -i :0.0+10,200 -acodec pcm_s16le -qscale 0 -threads 0 output.mkv
-
-Detailed options I know are following
-
-    -f: input file format
-    -i: input file name
-    -r: fps (Frame Per Second)
-    -s: frame size (width x height)
-    -i :0.0+10,200: size of squared area to follow
-
-######################################################
-
-How to Record Your Desktop Video and Audio Using "Avconv" Tool in Ubuntu
-https://www.tecmint.com/record-ubuntu-desktop-screen-using-avconv/
-
-Step 2: Start Video Recording of Desktop
-
-2. You’re ready now, all what you have to do is to record your desktop video by issuing following command.
-
-$ avconv -f x11grab -r 25 -s 1920x1080 -i :0.0 -vcodec libx264 -threads 4 $HOME/output.avi
-
-Now let’s explain the command in short:
-
-    avconv -f x11grab is the default command to capture video from the X server.
-    -r 25 is the frame rate you want, you may change it if you like.
-    -s 1920×1080 is your system’s screen resolution, change it to your current system resolution, it’s very important to do this.
-    -i :0.0 is where we want to set our recording start point, leave it like this.
-    -vcodec libx264 is the video codec that we’re using to record the desktop.
-    -threads 4 is the number of threads, you may change it as well if you like.
-    $HOME/output is the destination path where you want to save the file.
-    .avi is the video format, you may change it to “flv”, “mp4”, “wmv”, “mov”, “mkv”.
-
-3. After you enter the command, the recording will start automatically as a process running from the terminal, in order to stop it, hit “Ctrl + C” keys inside the terminal window.
-
-
-
-
-########################################################
-
-
-REVISAR INFORMACIÓN MUY UTIL
-
-How to Record Your Desktop Using FFmpeg on Ubuntu Linux: 10 Steps
-https://www.wikihow.com/Record-Your-Desktop-Using-FFmpeg-on-Ubuntu-Linux
 
 
 

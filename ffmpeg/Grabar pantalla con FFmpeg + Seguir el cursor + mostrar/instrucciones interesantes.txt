@@ -1,0 +1,86 @@
+
+
+How to make a screencast using ffmpeg | From Linux
+https://blog.desdelinux.net/en/how-to-make-a-screencast-using-ffmpeg/
+
+Using 2 tools (ffmpeg to capture the screen and xwininfo to obtain the coordinates and dimensions of the window to be recorded) I managed to make screencasts using minimal resources and obtaining optimal results.
+
+Index [Ocultar]
+
+    1 The script to start the screencast
+    2 The script to end the screencast
+    3 Ffcast
+    4 To end…
+
+The script to start the screencast
+
+#! / Bin / bash
+
+# Get the coordinates and size of the selected window
+# This excludes window decoration.
+  unset xywh
+  eval $ (xwininfo -frame |
+    sed -n -e "s / ^ + Absolute upper-left X: + ([0-9] +). * / x = 1 / p" 
+           -e "s / ^ + Absolute upper-left Y: + ([0-9] +). * / y = 1 / p" 
+           -e "s / ^ + Width: + ([0-9] +). * / w = 1 / p" 
+           -e "s / ^ + Height: + ([0-9] +). * / h = 1 / p")
+$ w = $ w + $ w% 2 # that the width is a multiple of 2, otherwise ffmpeg complains
+WIN_XY = $ x "," $ y # format XY coordinates
+WIN_GEO = $ w "x" $ h # format window size
+# notify-send will display a message indicating the start of the screencast.
+# run ffmpeg with the parameters that suit your configuration.
+notify-send "Starting screencast ..." && ffmpeg -f alsa -i hw: 0 -f x11grab -r 25 -s $ WIN_GEO -i: 0.0 + $ WIN_XY -acodec libmp3lame -async 1 -vcodec libx264 -preset ultrafast - crf 0 -threads 0 save.mp4
+
+You don't need to fully understand everything this script does. Simply following the comments is enough. However, it is very possible that you will have to change some parameters in the line where ffmpeg is executed to adjust them to your machine configuration.
+
+Audio architecture
+
+1) If you use OSS, replace -f alsa -i hw: 0 with -f oss -i / dev / dsp
+
+2) If you use only ALSA, you have to use the parameters that come in the script (-f alsa -i hw: 0). To determine the number after hw: you can run aplay -l and choose the number of the appropriate sound card.
+
+3) If you use Pulse Audio (Ubuntu and derivatives use this), use the parameters -f alsa -ac 1 -i pulse.
+
+FPS
+
+-r 25 indicates the fps (frames per second or frames per second) you want to record at. 25 is a good option.
+
+Audio, video and sync codec
+
+-acodec libmp3lame is the audio codec. I chose to record it in mp3. You can use any other.
+
+-async 1 allows synchronization of audio with video.
+
+-vcodec libx264 -preset ultrafast -crf 0 -threads 0, tells ffmpeg that the video codec to use is x264 and that the preset is ultrafast (there is fast, slow, etc), otherwise it will not record correctly at the desired amount of fps. The -crf 0 parameter indicates the compression level (the lower the compression, the lower the compression). Finally, threads 0 indicates the number of threads to use, when passing 0 ffmpeg calculates it automatically. As with the audio settings, you can choose other options.
+
+All these settings were the ones that gave me the best results: a relatively small file, a good video quality, with synchronized audio and no lags. However, I recommend you dive into the ffmpeg documentation to discover others.
+
+The script to end the screencast
+
+#! / Bin / bash
+notify-send "Ending screencast ..." && killall ffmpeg
+
+For both scripts to work you must have notify-send installed. All Ubuntu-derived distributions should come with this tool installed. In Arch and derivatives: sudo pacman -S libnotify.
+Ffcast
+
+Looking for information to write the scripts, I discovered that someone had an idea very similar to mine. Ffcast is a script that uses the same tools (ffmpeg and xwininfo). I mention it because some may find it more convenient to use this script.
+
+In Arch and derivatives, I opened a terminal and ran:
+
+yaourt -S ffcast
+
+The rest, you can download from here!.
+
+To end…
+
+Once you have created and saved the scripts saved in your HOME folder, you have to grant it execution permissions. Assuming start_screencast and finish_screencast are called, run the following commands in a terminal:
+
+chmod + x start_screencast
+chmox + x terminate_screencast
+
+Finally, it only remains to assign each of the scripts to 2 shortcuts (shortcuts) that are comfortable for you. That way, the scripts will run when you press the selected key combination.
+
+The content of the article adheres to our principles of editorial ethics. To report an error click here!.
+
+Full path to article: From Linux » FileLet's UseLinux » How to make a screencast using ffmpeg
+12 comments, leave yours

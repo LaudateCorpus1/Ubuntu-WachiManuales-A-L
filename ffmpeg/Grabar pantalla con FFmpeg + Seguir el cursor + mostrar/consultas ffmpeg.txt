@@ -1,0 +1,625 @@
+
+
+
+##############################################
+
+############################################
+
+Capture/Desktop – FFmpeg
+https://trac.ffmpeg.org/wiki/Capture/Desktop
+
+Lossless Recording
+
+If your CPU is not fast enough, the encoding process might take too long. To speed up the encoding process, you can use lossless encoding and disable advanced encoder options, e.g.:
+
+ffmpeg -video_size 1920x1080 -framerate 30 -f x11grab -i :0.0 -c:v libx264rgb -crf 0 -preset ultrafast output.mkv
+
+-crf 0 tells x264 to encode in lossless mode; -preset ultrafast advises it to do so fast. Note the use of libx264rgb rather than libx264; the latter would do a lossy conversion from RGB to yuv444p.
+
+The encoder should be fast enough on most modern hardware to record without any framedrop, and even leave enough CPU headroom for other applications.
+
+If you're going to archive the recording or are concerned about file size, re-encode it losslessly again, but with a slower preset. Note that since the initial recording was lossless, and the re-encode is lossless too, no quality loss is introduced in this process in any way.
+
+ffmpeg -i output.mkv -c:v libx264rgb -crf 0 -preset veryslow output-smaller.mkv
+
+
+EXPERIMENTO:
+
+ffmpeg -follow_mouse 100 -show_region 1 -video_size 854x480 -framerate 60 -f x11grab -i :0.0 \
+       -f alsa -ac 2 -i default \
+       -c:v libx264rgb -crf 0 -preset ultrafast \
+       "$HOME/Rec-$(date '+%Y-%m-%d_%H.%M.%S').mp4" 
+
+A ver como queda este a 30 framerate:
+
+ffmpeg -follow_mouse 100 -show_region 1 -video_size 854x480 -framerate 30 -f x11grab -i :0.0  \
+       -f alsa -ac 2 -i default  \
+       -c:v libx264rgb -crf 0 -preset ultrafast \
+       "$HOME/Rec-$(date '+%Y-%m-%d_%H.%M.%S').mp4" 
+
+
+
+########################################################
+
+########################################################
+
+x11 - How to get near-perfect screen recording quality? - Unix & Linux Stack Exchange
+https://unix.stackexchange.com/a/334148
+
+
+ffmpeg -f x11grab -video_size 1920x1080 -framerate 30 -i :1 \
+       -vcodec libx264 -preset ultrafast -qp 0 -pix_fmt yuv444p \
+       video.mkv
+
+Key points:
+
+    -qp 0: x264 lossless mode
+    -preset ultrafast: smallest cpu usage, large size
+    -pix_fmt yuv444p: the default, but ffmpeg suggests yuv420p, which is lossy
+
+
+EXPERIMENTO:
+
+ffmpeg -follow_mouse 100 -show_region 1 -video_size 854x480 -framerate 60 -f x11grab -i :0.0 \
+       -f alsa -ac 2 -i default \
+       -vcodec libx264 -preset ultrafast -qp 0 -pix_fmt yuv444p \
+       "$HOME/Rec-$(date '+%Y-%m-%d_%H.%M.%S').mp4" 
+
+
+#############################################
+
+#############################################
+
+Screen Casting using ffmpeg (too fast) - Super User
+https://superuser.com/a/487463
+
+ry using a lossless encoder to capture the screen, and then re-encode the output when you are finished to create a smaller file if desired. The advantage of this method is often a less intensive capturing process which can result in a "faster" capture frame rate. Of course results can vary.
+
+ffmpeg -f x11grab -s 1280x800 -i :0.0 -c:v libx264 -preset ultrafast -crf 0 out.mkv
+
+
+EXPERIMENTO:
+
+ffmpeg -follow_mouse 100 -show_region 1 -video_size 854x480 -framerate 60 -f x11grab -i :0.0 \
+       -f alsa -ac 2 -i default \
+       -c:v libx264 -preset ultrafast -crf 0 \
+       "$HOME/Rec-$(date '+%Y-%m-%d_%H.%M.%S').mp4" 
+
+
+
+######################################################
+
+*******************************
+De aquí para abajo el mejorcito
+*******************************
+
+FFmpeg video screen capture, recording, casting A- 2020
+https://www.bogotobogo.com/FFMpeg/ffmpeg_video_screencasting_screen_recording_capture.php
+
+Step 1 - Lossless recording
+
+The resolution is set to 1366x768 with framerate at 25 and the command looks like this:
+
+$ ffmpeg -f alsa -ac 2 -i pulse -f x11grab -r 25 -s 1366x768 -i :0.0 \
+-vcodec libx264 -pix_fmt yuv420p -preset ultrafast -crf 0 -threads 0 \
+-acodec pcm_s16le -y output.mkv
+
+In the command, -i :0.0 means to capture the primary screen (0.0). We're using libx264 video codec. To support some of the media players that does YUV planar color space with 4:2:0 chroma subsampling for H.264 vide, we can use -pix_fmt yuv420p, if no pixel format is specified, yuv444p for H.264 encoding will be used by default.
+
+To stop recording, make the terminal active and then press q.
+
+Here is a summary what we've done:
+We captured audio from pulseaudio sound server and encode it to lossless raw PCM with 2 audio channels (stereo). Then, we grab a video stream from X11 at a frame rate of 25 and a size of 1366x768 from the display :0.0 (primary screen) and encode it to lossless h264 using libx264. Using -threads 0 means automatic thread detection. The resulting streams will be muxed in a Matroska container (output.mkv).
+
+
+ffmpeg -f alsa -ac 2 -i pulse -f x11grab -r 25 -s 1366x768 -i :0.0 \
+-vcodec libx264 -pix_fmt yuv420p -preset ultrafast -crf 0 -threads 0 \
+-acodec pcm_s16le -y output.mkv
+
+
+EXPERIMENTO:
+
+ffmpeg -follow_mouse 100 -show_region 1 -video_size 854x480 -framerate 60 -f x11grab -i :0.0 \
+       -f alsa -ac 2 -i default \
+       -vcodec libx264 -pix_fmt yuv420p -preset ultrafast -crf 0 -threads 0 \
+       "$HOME/Rec-$(date '+%Y-%m-%d_%H.%M.%S').mp4" 
+
+EXPERIMENTO + AUDIO CODEC:
+
+ffmpeg -follow_mouse 100 -show_region 1 -video_size 854x480 -framerate 60 -f x11grab -i :0.0 \
+       -f alsa -ac 2 -acodec pcm_s16le -i default \
+       -vcodec libx264 -pix_fmt yuv420p -preset ultrafast -crf 0 -threads 0 \
+       "$HOME/Rec-$(date '+%Y-%m-%d_%H.%M.%S').mp4" 
+
+
+
+######################################################
+
+
+Recording Frame-Perfect, High-Resolution Screencasts on Linux in the Year 2014 - panthema.net
+https://panthema.net/2014/0630-Frame-Perfect-Linux-Screencasts-in-the-Year-2014.html
+
+Recording Frame-Perfect, High-Resolution Screencasts on Linux in the Year 2014
+
+Posted on 2014-06-30 20:35 by Timo Bingmann at Permlink with 2 Comments. Tags: vncrec
+
+Last week I produced a recording of a talk about "STXXL 1.4.0 and Beyond". I thought it would be trivial in the year 2014 to create a frame-perfect high-resolution recording of a PDF presentation slideshow with moving mouse cursor on Linux. I was so wrong.
+
+In the end, I created a patched version of vncrec: now called "vncrec-rgb 0.4", and the tutorial on the vncrec-rgb webpage. But now, why do screen recording with vncrec?
+ffmpeg -f x11grab works, but full-resolution encoding is too slow!
+
+Searching the web revealed that ffmpeg now has support for capturing from X11, and there are many screencasting tools now available on Linux. Most of these are mainly frontends to xvidcap or ffmpeg, and call some variation of the ffmpeg command lines below:
+
+# Capture screen :0 in full HD resoltion, compress with HuffYUV codec and save to out.avi
+
+ffmpeg -f x11grab -y -r 25 -s 1920x1080 -i :0.0 -vcodec huffyuv out.avi
+# Capture screen :0 with audio, otherwise the same as above.
+
+ffmpeg -f alsa -ac 2 -i hw:0,0 -f x11grab -y -r 25 -s 800x600 -i :0.0 -vcodec huffyuv out.avi
+# DO NOT USE THESE LINES, READ BELOW!
+
+Even in the year 2014 it was not possible to capture the screen in full HD resolution 1920x1080 losslessly in real time. None of the low-overhead lossless codecs huffyuv, ffv1, or lossless x264 were fast enough for a modern desktop to capture and transcode the full HD resolution on-the-fly. Even worse, the output files of the ffmpeg lines above had silent frame drops which yielded in audio desync. This is probably the reason why the front-end Linux screencast tools usually down-scale the resolution while recording! I find this unacceptable.
+Problems with YUV colorspace and vncrec-twibright
+
+Well, after much ado, I reverted back to the method I used a long time ago, in 2009, to record a screencast: vncrec. See the corresponding blog post "Experiences Producing a Screencast on Linux for CryptoTE" for some more discussion on why vncrec is a very good solution for producing frame-perfect screencasts.
+
+However, I noticed one problem with the vncrec-twibright edition: bleeding edges and some "washed-out" colors. These artefacts are due to vncrec-twibright's conversion of the frames into the YUV 4:2:0 colorspace, which is nice for videos but of course does not match the RGB colorspace of a screencast.
+
+This is however not a limitation of the vnc recording, the vncrec -movie option could just as well be outputted in the usual RGB colorspace. And this is what I added to vncrec-rgb: outputting the movie frames as raw RGB triples for further processing using ffmpeg or mencoder.
+
+Refer to the vncrec-rgb project webpage for vncrec-rgb 0.4.
+
+
+ffmpeg -f x11grab -y -r 25 -s 800x600 -i :0.0 -vcodec huffyuv out.avi
+
+ffmpeg -f alsa -ac 2 -i hw:0,0 -f x11grab -y -r 25 -s 800x600 -i :0.0 -vcodec huffyuv out.avi
+
+
+EXPERIMENTO (el viedo es gigantesco, un video de 2 minutos pesó 1,3GB):
+
+
+ffmpeg -f alsa -ac 2 -i hw:0,0 -follow_mouse 100 -show_region 1 -f x11grab -y -r 25 -s 854x480 -i :0.0 -vcodec huffyuv out.avi
+
+
+ffmpeg -follow_mouse 100 -show_region 1 -video_size 854x480 -framerate 60 -f x11grab -i :0.0 \
+       -f alsa -ac 2 -i default \
+       -c:v libx264 -qp 0 -preset ultrafast \
+       "$HOME/Rec-$(date '+%Y-%m-%d_%H.%M.%S').mp4" 
+
+
+
+
+######################################################
+
+software recommendation - How can I record my screen? - Ask Ubuntu
+https://askubuntu.com/a/171541/145772
+
+After trying everything, this is the solution I came up with:
+
+Note: The "fake" ffmpeg from Libav has been depreciated (within Libav) and has been replaced by avconv from Libav. The "deprecated" message does not apply to the real ffmpeg from FFmpeg which is unaffected and is still under heavy development.
+
+First install the required codecs:
+
+sudo apt-get install libavcodec-extra-5*
+
+Use the following command to record the screencast:
+
+avconv -f alsa -i pulse -f x11grab -r 30 -s 1280x800 -i :0.0 -vcodec libx264 -acodec libmp3lame myscreencast.mkv
+
+Change -s 1280x800 to whatever resolution you like.
+more examples
+all screen with given resolution and sound
+
+avconv -f alsa -i pulse -f x11grab -r 30 -s 1024x768 -i :0.0 -acodec pcm_s16le -vcodec libx264  -threads 0 output.mkv
+
+all screen with mouse following and sound
+
+avconv -f alsa -i pulse -f x11grab -show_region 1 -follow_mouse 100 -r 10 -s 960x540 -i :0.0+10,200 -acodec pcm_s16le -qscale 0 -threads 0 output.mkv
+
+Detailed options I know are following
+
+    -f: input file format
+    -i: input file name
+    -r: fps (Frame Per Second)
+    -s: frame size (width x height)
+    -i :0.0+10,200: size of squared area to follow
+
+######################################################
+
+How to Record Your Desktop Video and Audio Using "Avconv" Tool in Ubuntu
+https://www.tecmint.com/record-ubuntu-desktop-screen-using-avconv/
+
+Step 2: Start Video Recording of Desktop
+
+2. You’re ready now, all what you have to do is to record your desktop video by issuing following command.
+
+$ avconv -f x11grab -r 25 -s 1920x1080 -i :0.0 -vcodec libx264 -threads 4 $HOME/output.avi
+
+Now let’s explain the command in short:
+
+    avconv -f x11grab is the default command to capture video from the X server.
+    -r 25 is the frame rate you want, you may change it if you like.
+    -s 1920×1080 is your system’s screen resolution, change it to your current system resolution, it’s very important to do this.
+    -i :0.0 is where we want to set our recording start point, leave it like this.
+    -vcodec libx264 is the video codec that we’re using to record the desktop.
+    -threads 4 is the number of threads, you may change it as well if you like.
+    $HOME/output is the destination path where you want to save the file.
+    .avi is the video format, you may change it to “flv”, “mp4”, “wmv”, “mov”, “mkv”.
+
+3. After you enter the command, the recording will start automatically as a process running from the terminal, in order to stop it, hit “Ctrl + C” keys inside the terminal window.
+
+
+
+
+########################################################
+
+
+REVISAR INFORMACIÓN MUY UTIL
+
+How to Record Your Desktop Using FFmpeg on Ubuntu Linux: 10 Steps
+https://www.wikihow.com/Record-Your-Desktop-Using-FFmpeg-on-Ubuntu-Linux
+
+
+How to Record Your Desktop Using FFmpeg on Ubuntu Linux
+Download Article
+Steps
+Steps
+Other Sections
+Tips and Warnings
+Related Articles
+References
+Author Info
+
+Last Updated: October 16, 2020
+
+FFmpeg is a free software project that produces libraries and programs for handling multimedia data. This tutorial will cover the installation and usage of FFmpeg to record your desktop on Ubuntu Linux. Each individuals results may vary depending on your system configuration.
+Steps
+
+    Image titled Record Your Desktop Using FFmpeg on Ubuntu Linux Step 1
+    1
+    Check whether you have FFmpeg installed on your system. If typing ffmpeg -version doesn't give you an error message, it is installed. Otherwise you can install FFmpeg by opening a terminal and using the following commands:
+        Type/Copy/Paste: sudo apt-get update
+            This command updates the package repositories on your system
+        Type/Copy/Paste: sudo apt-get install ffmpeg
+            This command installs FFmpeg on your system. If this gives you an error message stating that you aren't in the sudoers file, you can type su root, enter the root password, and then issue this command. If you don't have the root password either, you'll have to ask your system's administrator to install it for you.
+    Image titled Record Your Desktop Using FFmpeg on Ubuntu Linux Step 2
+    2
+    Change into your "Videos" directory. This is not required, but keeping videos inside of that directory will let you find them easily.
+        Type/Copy/Paste: cd /home/your_user_name/Videos 
+    Image titled Record Your Desktop Using FFmpeg on Ubuntu Linux Step 3
+    3
+    Make sure your microphone is turned on and the volume is turned up. The following commands will record the full desktop video and sound in the video formats provided below.
+    Image titled Record Your Desktop Using FFmpeg on Ubuntu Linux Step 4
+    4
+    Find out your screen size. You'll need it if you want to record your whole screen. To find out your screen size, type: xdpyinfo | grep 'dimensions:'
+    Image titled Record Your Desktop Using FFmpeg on Ubuntu Linux Step 5
+    5
+    To record the screen without audio, use the following command: ffmpeg -video_size 1920x1080 -framerate 30 -f x11grab -i :0.0+0,0 -c:v libx264rgb -crf 0 -preset ultrafast sample.mkv
+        -video_size specifies the size of the recorded area. If you have a different screen size, use that instead of 1920x1080. If you want to record only an area of the screen, specify the area size here.
+        -framerate specifies the frame rate, i. e. how many frames of video are recorded in a second. If you need another frame rate, use another number than 30. The lowest allowed framerate is 20.
+        -f x11grab is what actually tells FFmpeg to record your screen. You shouldn't change that.
+        -i :0.0+0,0 is where you specify the x and y offset of the top left corner of the area that you want to record. For example, use :0.0+100,200 to have an x offset of 100 and an y offset of 200.
+        -c:v libx264rgb -crf 0 -preset ultrafast are encoding options. These specify a fast and lossless recording.
+    Image titled Record Your Desktop Using FFmpeg on Ubuntu Linux Step 6
+    6
+    Use the following command to also record either your microphone or the system sounds: ffmpeg -video_size 1920x1080 -framerate 30 -f x11grab -i :0.0+0,0 -f pulse -ac 2 -i 0 -c:v libx264rgb -crf 0 -preset ultrafast sample.mkv
+        Most options are the same as for recording just the screen, but you also specify some additional options. Note that you can't just append new audio options at the end, since their order affects how FFmpeg interprets them.
+        -f pulse tells FFmpeg to grab the input from PulseAudio, which is your sound server.
+        -ac 2 specifies the number of audio channels. If you receive an error like: "cannot set channel count to 2 (Invalid argument)", you should change that to 1.
+        -i 0 specifies which device to grab the input from. You can see a list of all devices with the command pacmd list-sources. The number behind -i is the index listed there. The other output of the command will give you an explanation of what that audio device is for. A device with a name like "Monitor of Built-in Audio Analog" will most likely record the system audio, while something with "microphone" in the description will most likely be a microphone.
+    Image titled Record Your Desktop Using FFmpeg on Ubuntu Linux Step 7
+    7
+    Use -filter_complex amerge to merge both audio inputs into one. This will let you have your microphone and the system sounds recorded at the same time. For example, your command could look like: ffmpeg -video_size 1920x1080 -framerate 30 -f x11grab -i :0.0+0,0 -f pulse -filter_complex amerge -ac 2 -i 0 -f pulse -ac 2 -i 1 -c:v libx264rgb -crf 0 -preset ultrafast sample.mkv
+    Image titled Record Your Desktop Using FFmpeg on Ubuntu Linux Step 8
+    8
+    Press Ctrl+C to stop the recording. It should exit with a message like: "Exiting normally, received signal 2."
+    Image titled Record Your Desktop Using FFmpeg on Ubuntu Linux Step 9
+    9
+    Re-encode your file, if necessary. If you're concerned about storage space, you can run the following command to get a smaller file without quality loss: ffmpeg -i sample.mkv -c:v libx264rgb -c:a copy -crf 0 -preset veryslow sample-smaller.mkv. Of course, you can do any other conversion, too; see How to Convert Media with FFmpeg for instructions about that.
+    Image titled Record Your Desktop Using FFmpeg on Ubuntu Linux Step 10
+    10
+    Watch the recording. This will let you confirm that it actually was recorded as intended. You can use a media player such as VLC, Totem, or MPV. Opening the file with one of these is as simple as typing vlc samle.mkv, totem sample.mkv, or mpv sample.mkv.
+        You need to have a media player installed. If you don't have any media player at all, you can install one through APT.
+
+
+######################################################
+Record desktop | How To Wiki | Fandom
+https://how-to.fandom.com/wiki/Record_desktop
+######################################################
+ 
+
+
+Record desktop
+Edit
+Share
+
+Make a recording (video file) of what is shown by your computer (PC's) display (video screen output).
+
+This can be done for free, without having to pay for software. And by free, I mean, true free-ware, even open-source software, not trial-ware / freemium (such as Camtasia, e.g.).
+
+Also, VLC, and mplayer (mencoder) can be used for live screen-casting / streaming of any raster/pixel/video data. I bet those use much of the same open-source codebase as ffmpeg does (from that project).
+
+
+Contents
+
+    ffmpeg
+        Windows
+            obtain install
+            gdigrab
+                include audio
+            screen-capture-recorder
+                example of use
+            better synchronization
+            software solution download
+        Linux
+            record
+            offset
+            xwininfo
+                example usage
+            recordMyDesktop
+    related
+
+ffmpeg
+Windows
+
+When using Microsoft's Windows O.S. (NT-based) , as opposed to a Unix or unix-like flavour OS distribution (e.g. BSDs or GNU/Linux) (or even Apple's Mac OS X) ,
+obtain install
+
+Download a free windows build (compiled version that can run under Windows) from Zeranoe
+
+in the form of a 7-zip archive: http://ffmpeg.zeranoe.com/builds/win32/static/ffmpeg-latest-win32-static.7z
+
+- ffmpeg for Windows daily/nightly builds
+
+
+ffmpeg for Windows can access Direct Show multi-media (audio and video) devices.
+
+run ffmpeg -list_devices true -f dshow -i dummy
+
+to (query, and (get a)) list what devices are available to ffmpeg.exe as input and output.
+gdigrab
+
+One possible means of input (doesn't use dshow but instead) is "gdigrab"
+
+which makes use of GDI. G.D.I. is an acronym that stands for "Microsoft Windows graphics device interface"
+
+    official Microsoft MSDN
+    wikipedia: Graphics Device Interface
+
+
+example:
+
+ffmpeg.exe -f gdigrab -i desktop -framerate 15 -video_size 1100x800 -vcodec libx264 -pix_fmt yuv420p -preset ultrafast new-output-video-file.mkv
+
+N.B. "-video_size" doesn't seem to work for me. It captures entire Desktop display output, anyway.
+
+Read about more options provided by ffmpeg.exe using GDIgrab: http://ffmpeg.org/ffmpeg-devices.html#gdigrab
+
+    offset
+        "-offset_x"
+        "-offset_y"
+    window (task) "title" (the text in the Title bar of a window that is running within/on your Desktop)
+
+
+include audio
+
+It is possible to record audio input (stream(s)) simultaneously to accompany the video (raster/pixel data from the display/Desktop):
+
+ffmpeg.exe -f gdigrab -i desktop -framerate 15 -f dshow -i audio="Headset Microphone (Logitech US" -filter_complex amix=inputs=1 -vcodec libx264 -pix_fmt yuv420p -preset ultrafast -vsync vfr -acodec pcm_s16le new-output-video-file.mkv
+
+But, in my experience, this created a lag (latency mis-synchronisation between audio and video content/streams, in which the video lagged behind the audio) (upon playback). (See further below in this article for colon ":" syntax with use of not GDIgrab but "screen-capture-recorder").)
+
+Also, I managed to combine audio from two sources -- make sure the value given/assigned to "amix=inputs=" is not '1' (Particularly, in this case, that value is '2'). Recording from 2 simultaneous audio inputs is possible with : "-filter_complex amix=inputs=2"
+
+The primary thing to add to your ffmpeg command line is another DirectShow input:
+
+-f dshow -i audio="(( input audio device name ))"
+
+example command-line:
+
+c:Downloads\ffmpeg.zeranoe.com__builds\bin\ffmpeg -f gdigrab -i desktop -framerate 15 -f dshow -i audio="Headset Microphone (Logitech US" -f dshow -i audio="virtual-audio-capturer" filter_complex amix=inputs=2 -vcodec libx264 -pix_fmt yuv420p -preset ultrafast -vsync vfr -acodec pcm_s16le muxed-video-file.mkv
+
+screen-capture-recorder
+
+In order to record desktop, the following software (free) (open-source *) needs to be installed to make Desktop recording available as one of the possible input devices: Screen Capture(r) Recorder.
+
+* http://GitHub.com/rdp/screen-capture-recorder-to-video-windows-free
+
+Obtain the installer (".exe") file from:
+
+http://SourceForge.net/projects/screencapturer/files/
+
+Installing that package will provide two additional (virtual, if you will) input devices to DirectShow (for use by ffmpeg.exe) :
+
+"screen-capture-recorder" (for visual/raster/pixel grab)
+
+and
+
+"virtual-audio-capturer" which is a loop-back audio device that takes the digital? output of the sound card (sound device) and allows that to be recorded (as an input stream source).
+example of use
+
+Here is an example command-line to run, that makes use of the new DirectShow input device(s) :
+
+"screen-capture-recorder"
+
+ffmpeg.exe -f dshow -framerate 10 -i video="screen-capture-recorder" -vcodec libx264 -pix_fmt yuv420p -preset ultrafast -vsync vfr ouput-video.mkv
+
+
+Another example -- record simultaneous audio, as well:
+
+C:\Users\Public\Downloads\ffmpeg.zeranoe.com__builds\bin\ffmpeg.exe -f dshow -framerate 10 -i video="screen-capture-recorder" -f dshow -i audio="Headset Microphone (Logitech US" -filter_complex amix=inputs=1 -vcodec libx264 -pix_fmt yuv420p -preset ultrafast -vsync vfr -acodec pcm_s16le ouput-video-filename_produced-by-running-this-command-line.mkv
+
+
+Break that command-line down, to help better understand it (and how to tweak it, for your individual case):
+
+ffmpeg (binary executable)
+
+    next specifies the INPUT
+        video (visual , raster, pixels)
+            -f dshow
+            -i video="screen-capture-recorder"
+            additional options (modifiers), such as to specify the frame-rate (explicitly) by including (adding) -framerate 10. That means 10 frames-per-second. (Do NOT use the "-r" switch for this!)
+        audio
+            -f show (you start off this (the audio) component of the command line with that string of "-f dhow"
+            -i audio="Headset Microphone (Logitech US" (Apparently no closing parenthesis character at end, enclosed with that pair of double-quotation marks ? )
+            an additional option can go here, such as: -audio_device_number 0
+            -filter_complex amix=inputs=1 (set that last integer value to '2' if you specify more than one simultaneous input device.
+    next, OUTPUT (keep in mind that certain options that were specified in the input stage component of the command line invocation of ffmpeg, can be independently controlled for the output. E.g. a given region of the source display can be chosen for input into ffmpeg, but another region (taken from what the input stream provides) can be chosen to be encoded in output/product result file).
+        video
+            -vcodec libx264 (in this case, using the open-source H.264 encoding library, that is linked to the ffmpeg binary executable
+            -pix_fmt yuv240p (I read that this ensures maximum playback compatibility for most systems of the file that ffmpeg will create here.
+            (additional options for the encoding) -preset ultrafast
+            -vsync vfr
+        audio
+            -acodec pcm_s16le
+    The last argument (value that is plugged in(to) the command line is the location within the filesystem hierarchy tree of where to store (save) (spit out) the output that ffmpeg generates. This is usually a file on a mounted filesystem volume. At the minimum, specify a(ny arbitrary combination of characters / text string (given that the filesystem supports it, oh, and the command interpreter supports it and doesn't mangle "expand" interpret it, as well)) filename -- and the filename suffix/extension does matter to ffmpeg. It cannot be arbitrary. It's not like any combination of characters to the right of the right-most period (dot character) in the filename value (string) is okay. FFmpeg cares about it because it will determine which kind of container file format to house the outputting video and audio streams within.
+
+better synchronization
+
+ffmpeg.exe -f dshow -framerate 30 -i video="screen-capture-recorder":audio="Headset Microphone (Logitech US" -f dshow -i audio="virtual-audio-capturer" -filter_complex amix=inputs=2 -vcodec libx264 -pix_fmt yuv420p -preset ultrafast -acodec pcm_s16le "output result file.mkv"
+
+Notice the colon (":") syntax. ... as opposed to a separate "-f dshow -i" for each input device (accessed through Windows's DirectShow layer).
+
+-f dshow -i video="screen-capture-recorder" -f dshow -i audio="Headset Microphone (Logitech US"
+
+may not give as good a video+audio sync as( what was shown, previously, above, which is):
+
+-i video="screen-capture-recorder":audio="Headset Microphone (Logitech US"
+
+
+And, either way (regardless of whether using either of those two possibilities/variations/variants, shown directly above, previously),
+
+an additional (con-current simultaneous audio input device/stream) cannot be daisy-chained using the same ":" syntax.
+
+Instead, it must be separately specified as part of the command line :
+
+-f dshow -i audio="virtual-audio-capturer"
+
+
+Also take careful note of the presence of the integer value of '2' for:
+
+-filter_complex amix=inputs=2
+
+Since ffmpeg will be combining audio from two different input streams/sources.
+
+
+If the following software is not installed, "screen-capture-recorder" and "virtual-audio-capturer" will not be available as input devices for ffmpeg (through the Direct Sound layer) ...
+software solution download
+
+"c:\Program Files\Screen Capturer Recorder\configuration_setup_utility\vendor\ffmpeg\bin\ffmpeg.exe" -f dshow -i audio="VIA HD Audio Input":video="screen-capture-recorder" -s 352x288 -r 20 -t 20 mobile-resolution-screen-capture.mp4
+
+- source: this posting, on this thread.
+
+The software program that offers that is called Screen Capturer Recorder.
+Free binaries (installer packages) : http://SourceForge.net/projects/screencapturer/files/
+
+
+N.B.
+
+The off-set that I successfully used with an X11 X.org GNU/Linux -based system didn't work , as well as "-s" switch for x and y width and height of capture region area (co-ordinates).
+Linux
+
+Or maybe any unix-like Operating System (Unix-flavour) (*nix), including GNU/Linux distros, BSD-based (including OS X ?) -- any graphical environment based upon / powered by the X server (X11, X.org)
+
+ffmpeg (in compiled form) (that can be run) is available in all of the major distros' software repositories.
+
+apt-get
+
+apt-get install ffmpeg
+
+N.B.: Actually, Debian and derviative distros like Ubuntu use a fork of the ffmpeg codebase called libAV wikipedia: Libav. The following command-lines (commands and switches and syntax) , examples, and such in this article
+should work the same as with the official ffmpeg itself.
+
+Another note: ffmpeg is an open-source project. It is often used (compiled) into library form. However, a front-end piece of application software (binary executable) is necessary to make use of the functionality in its libraries. An example is the Windows build "ffmpeg.exe". With ffmpeg installed, simply type "ffmpeg" on the terminal (emulator, command-line interpreter/processor). If the libav fork is installed instead of official ffmpeg, the command "ffmpeg" should be linked to a binary executable file (program) called "avconv"
+record
+
+ffmpeg -f alsa -ac 1 -i pulse -f x11grab -r 10 -s 1024x720 -i :0.0 -acodec pcm_s16le -vcodec libx264 -preset ultrafast -crf 0 -threads 0 output-file1.mkv
+
+-ac audio channels ('1' for mono, '2' for stereo)
+
+-r frame rate of video. 30 is standard US/Japan TV, 25 is European. I recommend 10 or 15 for this purpose.
+
+If "pulse" audio (layer) is not available, try:
+
+-i hw:0
+
+        TIP: Disable your screen saver. That -will- interfere with the video that is captured. This is not semantic, instead it captures pixels (raster).
+
+Another tip is to first use command "sleep" (for *nix GNU/Linux Unix-like OSes) followed by an integer argument/value which specifies how many seconds to wait before executing the next command -- which, in this case, is ffmpeg.
+
+e.g.
+
+sleep 5 && ffmpeg -f alsa -ac 1 -i pulse -f x11grab -r 10 -s 1024x720 -i :0.0 -acodec pcm_s16le -vcodec libx264 -preset ultrafast -crf 0 -threads 0 output-file1.mkv
+
+Once that long compound command line is invoked (with the | Enter | key being pressed),
+the system (command-line interpreter console terminal) will wait 5 seconds and then it will launch ffmpeg, which will be recording (making the video file).
+offset
+
+If the area that you want visually-captured
+
+off-set co-ordinates
+
+-i :0:0
+
+add +(x),(y)
+
+-i :0.0+62,168
+
+ffmpeg -f alsa -ac 1 -i 'hw:1,0' -f x11grab -r 10 -s 1084x704 -i :0.0+62,168 -acodec pcm_s16le -vcodec libx264 -preset ultrafast -crf 0 -threads 0 section1.mkv
+
+will capture a window whose top-left co-ordinates (position) is at 62 pixels (from left edge of display/desktop/screen) and 168 lines (pixels) down from top.
+
+    more examples / source: [1]
+
+
+xwininfo
+
+To choose a region of the X server's (X11) output -- one particular window or box, let's say,
+get the co-ordinates (bounds) (boundaries of pixel range) using a tool called xwininfo
+
+xwininfo ( X Win Info) (or, think of it as (meaning) X.org/X11 Window Information)
+
+It should ship with any X11/Xorg installation (that comes with most GNU/Linux distros, and often other *nix Unix-like Unix flavours OSes)
+
+
+example usage
+
+$ xwininfo
+
+xwininfo: Please select the window about which you
+          would like information by clicking the
+          mouse in that window.
+
+xwininfo: Window id: 0x4600898 "Title of webpage that is in web browser's window"
+
+  Absolute upper-left X:  38
+  Absolute upper-left Y:  43
+  Relative upper-left X:  0
+  Relative upper-left Y:  0
+  Width: 1002
+  Height: 709
+  Depth: 24
+  Visual: 0x21
+  Visual Class: TrueColor
+  Border width: 0
+  Class: InputOutput
+  Colormap: 0x20 (installed)
+  Bit Gravity State: NorthWestGravity
+  Window Gravity State: NorthWestGravity
+  Backing Store State: NotUseful
+  Save Under State: no
+  Map State: IsViewable
+  Override Redirect State: no
+  Corners:  +38+43  -240+43  -240-272  +38-272
+  -geometry 1002x709+35+20
+
+
+recordMyDesktop
+
+Another piece of application software (for GNU/Linux only) is recordMyDesktop which converts output to Theora-format video. Theora can be thought of as the open-source equivalent (on par with) to the original Part 2 of MPEG 4 spec from early 2000s. VP8 is more (or now, VP9) competitive with h.264 and maybe h.265. The codebase for "recordMyDesktop" has not been updated since 2008. But it works!
+
+Use it thusly:
+
+recordmydesktop -width 1024 -height 720 -o $filename.720.1Mbps.ogv -delay $time -freq 44100 -channels 1 -fps 15 -s_quality 10 -v_bitrate 1000000
+
+That -bitrate is high. 
