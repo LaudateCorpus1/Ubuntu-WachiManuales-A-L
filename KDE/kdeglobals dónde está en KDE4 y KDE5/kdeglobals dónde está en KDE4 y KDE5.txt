@@ -19,5 +19,6 @@ Si algunas aplicaciones Qt4 no se integran bien, puede aplicar los ajustes qtcur
 qtconfig
 
 
+
 Cambio a Kf5, KDE 4 eliminado
 https://kaosx.us/news/2015/kf5movefeb/ 

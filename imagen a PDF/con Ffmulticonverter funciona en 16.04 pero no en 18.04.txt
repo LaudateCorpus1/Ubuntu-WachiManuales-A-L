@@ -1,3 +1,20 @@
  
 
-usalo
+Con FFmulticonverter se pueden conver imagenes
+
+jpg a pdf
+png a pdf
+
+todo esto teniendo instalado unoconv
+
+CONVERTIR MUCHAS IMAGENES A PDF
+Nota: Sólo se puede convertir documentos verticales puesto que los orizontales los inserta en una hoja vertical y se pierde la mitad del espacio (en otras palabras no sirve)
+Para esto primero hau que convertir cada una de esas imagenes a un pdf y luego unit todas esas páginas de pdf a una sola
+
+PARA UNIR MUCHOS HOJAS DE PDF A UN SOLO DOCUMENTO
+Usa pdfsam
+
+ 
+
+
+How to Batch Convert Writer Documents to PDF in LibreOffice

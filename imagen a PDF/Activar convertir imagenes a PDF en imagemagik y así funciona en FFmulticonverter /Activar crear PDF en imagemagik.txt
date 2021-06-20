@@ -1,0 +1,17 @@
+
+
+Para ver la versión de Ghostcript ponga en la terminal
+
+
+gs -v
+
+
+
+
+Poner en la terminal:
+
+sudo gedit /etc/ImageMagick-6/policy.xml
+
+
+How to install newer version of ghostscript on server than provided from ubuntu? - Ask Ubuntu
+https://askubuntu.com/a/1097399/145772
