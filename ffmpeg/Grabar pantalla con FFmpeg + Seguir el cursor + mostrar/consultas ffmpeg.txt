@@ -5,6 +5,10 @@
 
 ############################################
 
+*********************************************************************************************
+De aquí para abajo el mejorcito, ocupa el 50% del procesador de la Dell Inspiron 1750
+*********************************************************************************************
+
 Capture/Desktop – FFmpeg
 https://trac.ffmpeg.org/wiki/Capture/Desktop
 
@@ -73,7 +77,7 @@ ffmpeg -follow_mouse 100 -show_region 1 -video_size 854x480 -framerate 60 -f x11
 Screen Casting using ffmpeg (too fast) - Super User
 https://superuser.com/a/487463
 
-ry using a lossless encoder to capture the screen, and then re-encode the output when you are finished to create a smaller file if desired. The advantage of this method is often a less intensive capturing process which can result in a "faster" capture frame rate. Of course results can vary.
+Try using a lossless encoder to capture the screen, and then re-encode the output when you are finished to create a smaller file if desired. The advantage of this method is often a less intensive capturing process which can result in a "faster" capture frame rate. Of course results can vary.
 
 ffmpeg -f x11grab -s 1280x800 -i :0.0 -c:v libx264 -preset ultrafast -crf 0 out.mkv
 
@@ -89,9 +93,7 @@ ffmpeg -follow_mouse 100 -show_region 1 -video_size 854x480 -framerate 60 -f x11
 
 ######################################################
 
-*******************************
-De aquí para abajo el mejorcito
-*******************************
+
 
 FFmpeg video screen capture, recording, casting A- 2020
 https://www.bogotobogo.com/FFMpeg/ffmpeg_video_screencasting_screen_recording_capture.php
@@ -259,17 +261,6 @@ REVISAR INFORMACIÓN MUY UTIL
 How to Record Your Desktop Using FFmpeg on Ubuntu Linux: 10 Steps
 https://www.wikihow.com/Record-Your-Desktop-Using-FFmpeg-on-Ubuntu-Linux
 
-
-How to Record Your Desktop Using FFmpeg on Ubuntu Linux
-Download Article
-Steps
-Steps
-Other Sections
-Tips and Warnings
-Related Articles
-References
-Author Info
-
 Last Updated: October 16, 2020
 
 FFmpeg is a free software project that produces libraries and programs for handling multimedia data. This tutorial will cover the installation and usage of FFmpeg to record your desktop on Ubuntu Linux. Each individuals results may vary depending on your system configuration.
@@ -327,40 +318,11 @@ Record desktop | How To Wiki | Fandom
 https://how-to.fandom.com/wiki/Record_desktop
 ######################################################
  
-
-
-Record desktop
-Edit
-Share
-
 Make a recording (video file) of what is shown by your computer (PC's) display (video screen output).
 
 This can be done for free, without having to pay for software. And by free, I mean, true free-ware, even open-source software, not trial-ware / freemium (such as Camtasia, e.g.).
 
 Also, VLC, and mplayer (mencoder) can be used for live screen-casting / streaming of any raster/pixel/video data. I bet those use much of the same open-source codebase as ffmpeg does (from that project).
-
-
-Contents
-
-    ffmpeg
-        Windows
-            obtain install
-            gdigrab
-                include audio
-            screen-capture-recorder
-                example of use
-            better synchronization
-            software solution download
-        Linux
-            record
-            offset
-            xwininfo
-                example usage
-            recordMyDesktop
-    related
-
-ffmpeg
-Windows
 
 When using Microsoft's Windows O.S. (NT-based) , as opposed to a Unix or unix-like flavour OS distribution (e.g. BSDs or GNU/Linux) (or even Apple's Mac OS X) ,
 obtain install
@@ -370,7 +332,6 @@ Download a free windows build (compiled version that can run under Windows) from
 in the form of a 7-zip archive: http://ffmpeg.zeranoe.com/builds/win32/static/ffmpeg-latest-win32-static.7z
 
 - ffmpeg for Windows daily/nightly builds
-
 
 ffmpeg for Windows can access Direct Show multi-media (audio and video) devices.
 
@@ -382,10 +343,6 @@ gdigrab
 One possible means of input (doesn't use dshow but instead) is "gdigrab"
 
 which makes use of GDI. G.D.I. is an acronym that stands for "Microsoft Windows graphics device interface"
-
-    official Microsoft MSDN
-    wikipedia: Graphics Device Interface
-
 
 example:
 
@@ -612,7 +569,6 @@ xwininfo: Window id: 0x4600898 "Title of webpage that is in web browser's window
   Override Redirect State: no
   Corners:  +38+43  -240+43  -240-272  +38-272
   -geometry 1002x709+35+20
-
 
 recordMyDesktop
 
