@@ -29,14 +29,14 @@ ffmpeg -i output.mkv -c:v libx264rgb -crf 0 -preset veryslow output-smaller.mkv
 
 EXPERIMENTO:
 
-ffmpeg -follow_mouse 100 -show_region 1 -video_size 854x480 -framerate 60 -f x11grab -i :0.0 \
+ffmpeg -follow_mouse 100 -show_region 1 -video_size 854x480 -f 60 -f x11grab -i :0.0 \
        -f alsa -ac 2 -i default \
        -c:v libx264rgb -crf 0 -preset ultrafast \
        "$HOME/Rec-$(date '+%Y-%m-%d_%H.%M.%S').mp4" 
 
 A ver como queda este a 30 framerate:
 
-ffmpeg -follow_mouse 100 -show_region 1 -video_size 854x480 -framerate 30 -f x11grab -i :0.0  \
+ffmpeg -follow_mouse 50 -show_region 1 -video_size 854x480 -f 30 -f x11grab -i :0.0  \
        -f alsa -ac 2 -i default  \
        -c:v libx264rgb -crf 0 -preset ultrafast \
        "$HOME/Rec-$(date '+%Y-%m-%d_%H.%M.%S').mp4" 
