@@ -1,0 +1,83 @@
+
+
+En MX Linux 19 
+
+en el archivo:
+
+etc/apt/sources.list
+
+poner:
+
+deb http://deb.debian.org/debian testing main
+
+actualizar los repositorios y luego instalar:
+
+sudo apt install gcc-9 g++-9
+
+
+Nota: Quité de ese comando: gcc-7 g++-7 gcc-8 g++-8
+
+Nota 2: También quité: gcc-10 g++-10 porque daba conflictos con unos paquetes de kdenlive.
+
+
+Para ver la versión:
+
+gcc --version
+
+
+
+
+PARA CAMBIAR LA VERSIÓN USADA EN EL SISTEMA:
+
+sudo update-alternatives --config gcc
+
+y seleccionar el número de la que uno quiera usar
+
+
+
+
+Check the available C and C++ compilers list on your Ubuntu 20.04 system and select desired version by entering relevant selection number:
+
+$ sudo update-alternatives --config gcc
+There are 3 choices for the alternative gcc (providing /usr/bin/gcc).
+
+  Selection    Path            Priority   Status
+------------------------------------------------------------
+  0            /usr/bin/gcc-9   9         auto mode
+  1            /usr/bin/gcc-7   7         manual mode
+* 2            /usr/bin/gcc-8   8         manual mode
+  3            /usr/bin/gcc-9   9         manual mode
+Press  to keep the current choice[*], or type selection number: 
+
+For C++ compiler execute:
+
+$ sudo update-alternatives --config g++
+There are 3 choices for the alternative g++ (providing /usr/bin/g++).
+
+  Selection    Path            Priority   Status
+------------------------------------------------------------
+* 0            /usr/bin/g++-9   9         auto mode
+  1            /usr/bin/g++-7   7         manual mode
+  2            /usr/bin/g++-8   8         manual mode
+  3            /usr/bin/g++-9   9         manual mode
+
+Press  to keep the current choice[*], or type selection number:
+
+Each time after switch check your currently selected compiler version:
+
+$ gcc --version
+$ g++ --version
+
+
+
+
+CONSULTAS:
+
+c++ - How to install gcc-9 on debian:latest docker - Stack Overflow
+https://stackoverflow.com/a/61591878/10648253
+
+
+How to Install GCC (build-essential) on Ubuntu 20.04 - All Things How
+https://allthings.how/how-to-install-gcc-build-essential-on-ubuntu-20-04/
+
+

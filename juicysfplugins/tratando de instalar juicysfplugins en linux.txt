@@ -1,0 +1,48 @@
+
+
+
+
+
+
+Hola Marcelo, estuve revisando las versiones:
+
+juicysfplugin-1.0.2
+juicysfplugin-1.0.7
+juicysfplugin-2.3.2
+juicysfplugin-2.3.3
+
+que las descargué desde:
+
+https://github.com/Birch-san/juicysfplugin/releases
+
+y sólo las versiones 2.2.3 y 2.3.3 tienen un script para poder instalar en Linux, está en:
+
+/juicysfplugin-2.3.3/Builds/Linux
+
+en mi caso en MX Linux 19.4 de 32 bits sólo tuve que instalar el paquete: libwebkit2gtk-4.0-dev y de allí entré en desde una terminal en:
+
+/juicysfplugin-2.3.3/Builds/Linux/
+
+y escribí:
+
+make
+
+pero me da lo siguiente:
+
+Compiling include_juce_audio_plugin_client_VST2.cpp
+In file included from ../../modules/juce_audio_plugin_client/juce_audio_plugin_client_VST2.cpp:27,
+                 from ../../JuceLibraryCode/include_juce_audio_plugin_client_VST2.cpp:9:
+../../modules/juce_audio_plugin_client/VST/juce_VST_Wrapper.cpp:95:10: fatal error: pluginterfaces/vst2.x/aeffect.h: No existe el fichero o el directorio
+ #include "pluginterfaces/vst2.x/aeffect.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Makefile:161: build/intermediate/Debug/include_juce_audio_plugin_client_VST2_dd551e08.o] Error 1
+
+Bueno no se cuál es la razón de que no se pueda compilar, no entiendo. 
+
+Aquí pongo una captura de pantalla de lo que aparece:
+
+https://i.imgur.com/fG4LuqS.png
+
+o tal vez compile en una version de 64 bits
+

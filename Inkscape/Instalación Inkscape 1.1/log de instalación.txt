@@ -1,0 +1,78 @@
+
+$ cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
+------------------------------
+Building Makefile for Inkscape
+------------------------------
+Source Dir: /home/wachin/build-from-source/Inkscape/1.1/inkscape-1.1
+Binary Dir: /home/wachin/build-from-source/Inkscape/1.1/inkscape-1.1/build
+-- Creating build files in: /home/wachin/build-from-source/Inkscape/1.1/inkscape-1.1/build
+-- Found poppler: /usr/lib/i386-linux-gnu/libpoppler.so
+-- Found poppler-glib: /usr/lib/i386-linux-gnu/libpoppler-glib.so
+-- Found cairo-svg: /usr/lib/i386-linux-gnu/libcairo.so
+-- Found poppler-cairo: /usr/lib/i386-linux-gnu/libcairo.so
+-- Found Potrace: /usr/lib/i386-linux-gnu/libpotrace.so
+-- Checking for modules 'gtkmm-3.0>=3.24;gdkmm-3.0>=3.24;gtk+-3.0>=3.24;gdk-3.0>=3.24'
+--   Found gtkmm-3.0, version 3.24.0
+--   Found gdkmm-3.0, version 3.24.0
+--   Found gtk+-3.0, version 3.24.5
+--   Found gdk-3.0, version 3.24.5
+-- Using gspell
+-- Boost version: 1.67.0
+-- Found the following Boost libraries:
+--   filesystem
+--   system
+-- Checking for module 'readline'
+--   No package 'readline' found
+-- Did not find GNU Readline
+-- Found gettext + msgfmt to convert language files. Translation enabled
+-- Found xgettext. inkscape.pot will be re-created if missing.
+-- Creating build files in: /home/wachin/build-from-source/Inkscape/1.1/inkscape-1.1/build
+-- Generating header and sourcefiles from sp-marshal.list (Glib-Marshal)
+INFO: Reading /home/wachin/build-from-source/Inkscape/1.1/inkscape-1.1/src/helper/sp-marshal.list...
+INFO: Reading /home/wachin/build-from-source/Inkscape/1.1/inkscape-1.1/src/helper/sp-marshal.list...
+-- sp-marshal.h unchanged
+-- Boost version: 1.67.0
+-- cython: FOUND
+-- Checking for module 'gtk+-3.0'
+--   Found gtk+-3.0, version 3.24.5
+-- Found Ragel in /usr/bin/ragel. svg-path-parser.cpp will be recreated from svg-path-parser.rl.
+INKSCAPE_DIST_PREFIX: inkscape-1.1
+------------------------------------------------------------------------
+Configuration Summary
+------------------------------------------------------------------------
+PROJECT_NAME:            inkscape
+INKSCAPE_VERSION:        1.1
+INKSCAPE_DIST_PREFIX:    inkscape-1.1
+
+CMAKE_BINARY_DIR:        /home/wachin/build-from-source/Inkscape/1.1/inkscape-1.1/build
+CMAKE_INSTALL_PREFIX:    /usr
+CMAKE_INSTALL_LIBDIR:    lib/i386-linux-gnu
+PACKAGE_LOCALE_DIR       share/locale
+CMAKE_SYSTEM_NAME:       Linux
+CMAKE_SYSTEM_VERSION:    4.19.0-17-rt-686-pae
+CMAKE_SYSTEM_PROCESSOR:  i686
+CMAKE_C_COMPILER:        /usr/bin/cc
+CMAKE_CXX_COMPILER:      /usr/bin/c++
+CMAKE_BUILD_TYPE:        Release
+
+ENABLE_LCMS:             ON
+ENABLE_POPPLER:          ON
+ENABLE_POPPLER_CAIRO:    ON
+WITH_GNU_READLINE:       OFF
+WITH_DBUS:               OFF
+WITH_GSPELL:             ON
+WITH_IMAGE_MAGICK:       ON
+WITH_GRAPHICS_MAGICK:    OFF
+WITH_LIBCDR:             ON
+WITH_LIBVISIO:           ON
+WITH_LIBWPG:             ON
+WITH_NLS:                ON
+WITH_OPENMP:             ON
+WITH_JEMALLOC:           OFF
+WITH_INTERNAL_2GEOM:     ON
+WITH_PROFILING:          OFF
+BUILD_TESTING:           ON
+------------------------------------------------------------------------
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/wachin/build-from-source/Inkscape/1.1/inkscape-1.1/build 
