@@ -1,0 +1,129 @@
+How to Know the GCC Version Used to Compile Linux kernel on Linux - OSETC TECH
+https://www.osetc.com/en/how-to-know-the-gcc-version-used-to-compile-linux-kernel-on-linux.html
+
+osetc @ November 9, 2018 LINUX
+
+This post will guide you how to know the gcc compiler version that used to compile the current linux kernel on CentOS/Ubuntu Linux system. How to find the Linux kernel version and GCC compiler version on your system. How to identify what version of GCC compiler was used to compile your running Linux kernel.
+
+    Check Linux Kernel Version
+    Check GCC Compiler Version Used to Compile Kernel
+    Install An Older GCC Compiler Version (gcc 4.3.2)
+    Check the Version of GCC Compiler Is Installed
+    Choose the Default GCC Version
+    Video: Check GCC Version Used to Compile running Linux kernel
+
+Check Linux Kernel Version
+
+If you want to get the running Linux kernel version on your system, you can use the following command to get it.
+
+$ uname -a
+
+or
+
+$ cat /proc/version
+
+outputs:
+
+devops@devops-osetc:~$ uname -a
+Linux devops-osetc 4.8.0-36-generic #36~16.04.1-Ubuntu SMP Sun Feb 5 09:39:57 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux
+devops@devops-osetc:~$ cat /proc/version
+Linux version 4.8.0-36-generic (buildd@lgw01-18) (gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) ) #36~16.04.1-Ubuntu SMP Sun Feb 5 09:39:57 UTC 2017
+
+From the above outputs, you can know the current version of running Linux kernel is 4.8.0-36.
+Check GCC Compiler Version Used to Compile Kernel
+
+If you installed multiple versions of GCC compilers in your system, and then you want to check the GCC compiler version that used to compile the running Linux kernel on your system, How to achieve the result. You can get it from /proc/version file. type the following command:
+
+$ cat /proc/version
+
+Outputs:
+
+Linux version 4.8.0-36-generic (buildd@lgw01-18) (gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) ) #36~16.04.1-Ubuntu SMP Sun Feb 5 09:39:57 UTC 2017
+
+So we can see from the above outputs that the gcc version is gcc version 5.4.0 .
+Install An Older GCC Compiler Version (gcc 4.3.2)
+
+If you need to install an older version of GCC Compiler on your Linux system, you can download the GCC Compiler source package from http://mirrors-usa.go-parts.com/gcc/releases/gcc-4.3.2/gcc-4.3.2.tar.gz, and compile and install the source code. just do the following commands:
+
+$ wget http://mirrors-usa.go-parts.com/gcc/releases/gcc-4.3.2/gcc-4.3.2.tar.gz
+$ tar -zxvf gcc-4.3.2.tar.gz
+$ cd gcc-4.3.2
+$ ./configure
+$ make;make install;
+
+Check the Version of GCC Compiler Is Installed
+
+If you want to check the versions of GCC compiler are installed in your Linux system, you can use the following commands:
+
+For Ubuntu/Debian Linux:
+
+Type:
+
+$ dpkg --list | grep -i gcc
+
+Outputs:
+
+devops@devops-osetc:~$ dpkg --list | grep -i gcc
+ii gcc 4:5.3.1-1ubuntu1 amd64 GNU C compiler
+ii gcc-3.4 3.4.6-5 amd64 The GNU C compiler
+ii gcc-3.4-base 3.4.6-5 amd64 The GNU Compiler Collection (base package)
+ii gcc-5 5.4.0-6ubuntu1~16.04.4 amd64 GNU C compiler
+ii gcc-5-base:amd64 5.4.0-6ubuntu1~16.04.4 amd64 GCC, the GNU Compiler Collection (base package)
+ii gcc-6-base:amd64 6.0.1-0ubuntu1 amd64 GCC, the GNU Compiler Collection (base package)
+ii gir1.2-packagekitglib-1.0 0.8.17-4ubuntu6~gcc5.4ubuntu1.1 amd64 GObject introspection data for the PackageKit GLib library
+ii libcaca0:amd64 0.99.beta19-2build2~gcc5.2 amd64 colour ASCII art library
+ii libcc1-0:amd64 5.4.0-6ubuntu1~16.04.4 amd64 GCC cc1 plugin for GDB
+ii libgcc-5-dev:amd64 5.4.0-6ubuntu1~16.04.4 amd64 GCC support library (development files)
+ii libgcc1:amd64 1:6.0.1-0ubuntu1 amd64 GCC support library
+ii libgomp1:amd64 5.4.0-6ubuntu1~16.04.4 amd64 GCC OpenMP (GOMP) support library
+ii libpackagekit-glib2-16:amd64 0.8.17-4ubuntu6~gcc5.4ubuntu1.1 amd64 Library for accessing PackageKit using GLib
+ii libquadmath0:amd64 5.4.0-6ubuntu1~16.04.4 amd64 GCC Quad-Precision Math Library
+ii libunity-action-qt1:amd64 1.1.0+14.04.20140304-0ubuntu2~gcc5.1 amd64 Unity Action Qt API
+ii libwebrtc-audio-processing-0:amd64 0.1-3ubuntu1~gcc5.1 amd64 AudioProcessing module from the WebRTC project.
+ii qtchooser 52-gae5eeef-2build1~gcc5.2 amd64 Wrapper to select between Qt development binary versions
+ii qtdeclarative5-unity-action-plugin:amd64 1.1.0+14.04.20140304-0ubuntu2~gcc5.1 amd64 Unity Action QML Components
+
+For CentOS/RHEL Linux:
+
+Type:
+
+$ yum list intalled | grep -i gcc
+
+outputs:
+
+[root@osetc_test ~]# yum list installed | grep -i gcc
+gcc.x86_64 4.4.7-23.el6 @base
+gcc-c++.x86_64 4.4.7-23.el6 @base
+gcc-gfortran.x86_64 4.4.7-23.el6 @base
+libgcc.x86_64 4.4.7-23.el6 @base
+
+Choose the Default GCC Version
+
+If you want to compile a C program with a specific version of GCC Compiler, then you need to change the default GCC compiler version, for example, you want to choose the GCC compiler 3.4 as the default compiler. just run one of the following command:
+
+$ export gcc=/usr/bin/gcc-3.4
+
+Or
+
+$ sudo rm /usr/bin/gcc
+$ sudo ln -s /usr/bin/gcc-3.4 /usr/bin/gcc
+
+Verify the default GCC Compiler Version
+
+$ gcc --version
+
+Outputs:
+
+devops@devops-osetc:~$ gcc --version
+gcc (GCC) 3.4.6 (Debian 3.4.6-5)
+Copyright (C) 2006 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions. There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Video: Check GCC Version Used to Compile running Linux kernel
+
+See Also:
+
+    Install C and C++ Compiler on Ubuntu/Debian Linux
+    Install C and C++ Compiler on CentOs/RHEL Linux
+    Checking If GCC Compiler Is Installed on Linux

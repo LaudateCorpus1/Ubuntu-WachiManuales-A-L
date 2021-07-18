@@ -24,6 +24,12 @@ y después que se descarguen todos los prerequisitos poner:
 make -j 4
 make install
 
+mejor le pongo sin --disable-multilib
+
+./configure
+make -j 4
+make install
+
 y para ver esta versión que desde ahora se debe estar usando en el sistema:
 
 gcc --version

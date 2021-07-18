@@ -10,35 +10,30 @@ Nota: Estaba convirtiendo un video de 10,20min y pesa 1,4GB, pero el tamaño que
 Dos canales de audio
 ********************
 
-video 250kbps, 512x288, fps15
-audio 128kbps, 44.1kHz, 2 chnnels, AAC
+video 250kbps, 512x288, fps15, audio 128kbps, 44.1kHz, 2 canales, AAC
 -vf "scale=512:288" -b:v 250k -r 15 -ac 2 -b:a 128k -ar 44100
+
 
 *****************
 Un canal de audio
 *****************
 
-video 300kbps, 512x288, fps15
-audio 96kbps, 44.1kHz, 1 chnnels, AAC
+video 300kbps, 512x288, fps15,audio 96kbps, 44.1kHz, 1 chnnels, AAC
 -vf "scale=512:288" -b:v 300k -r 15 -ac 1 -b:a 96k -ar 44100
 
-video 256kbps, 512x288, fps15
-audio 96kbps, 44.1kHz, 1 chnnels, AAC
+video 256kbps, 512x288, fps15, audio 96kbps, 44.1kHz, 1 chnnels, AAC
 -vf "scale=512:288" -b:v 256k -r 15 -ac 1 -b:a 96k -ar 44100
 
-video 180kbps, 512x288, fps15
-audio 96kbps, 44.1kHz, 1 chnnels, AAC
+video 180kbps, 512x288, fps15, audio 96kbps, 44.1kHz, 1 chnnels, AAC
 -vf "scale=512:288" -b:v 180k -r 15 -ac 1 -b:a 96k -ar 44100
 
-video 145kbps, 512x288, fps15
-audio 96kbps, 44.1kHz, 1 chnnels, AAC
+video 145kbps, 512x288, fps15, audio 96kbps, 44.1kHz, 1 chnnels, AAC
 -vf "scale=512:288" -b:v 145k -r 15 -ac 1 -b:a 96k -ar 44100
 
 video 220kbps, 512x288, fps15. Audio 30k, 44.1kHz (Convirtió un video de 7:58min a 15.5MB)
                                                   (Convirtió un video de 8:22min a 15.2MB)
 -vf "scale=512:288" -b:v 220k -r 15 -ac 1 -b:a 30k -ar 44100
                                                   buena calidad
-
 
 video 200kbps, 512x288, fps15. Audio 30k, 44.1kHz 
                                                   (Convirtió un video de 8:42min a 15,3MB)
@@ -63,6 +58,9 @@ video 165kbps, 512x288, fps15. Audio 30k, 44.1kHz (Ej.: Video Telegram 10:55min 
 video 160kbps, 512x288, fps15. Audio 30k, 44.1kHz (Convirtió un video de 10:45min a 12.8MB)
 -vf "scale=512:288" -b:v 160k -r 15 -ac 1 -b:a 30k -ar 44100
 
+************
+El siguiente es un video con baja calidad de video pero alta calidad de sonido
+-vf "scale=512:288" -b:v 155k -r 15 -ac 1 -b:a 80k -ar 44100
   
 video 150k, 512x288, fps15. Audio 30k, 44.1kHz  (Convirtió un video de 11:07min a 15,05MB)
 -vf "scale=512:288" -b:v 150k -r 15 -ac 1 -b:a 30k -ar 44100

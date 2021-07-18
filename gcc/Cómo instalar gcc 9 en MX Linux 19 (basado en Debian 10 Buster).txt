@@ -29,14 +29,16 @@ gcc --version
 
 PARA CAMBIAR LA VERSIÓN USADA EN EL SISTEMA:
 
-sudo update-alternatives --config gcc
 
-y seleccionar el número de la que uno quiera usar
+Then run the update-alternative command which is used to configure the symbolic links to determine default commands. In our case, run it to configure the symbolic link and priority of the gcc and g++ versions.
 
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 100 --slave /usr/bin/g++ g++ /usr/bin/g++-11 --slave /usr/bin/gcov gcov /usr/bin/gcov-11
 
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 90 --slave /usr/bin/g++ g++ /usr/bin/g++-9 --slave /usr/bin/gcov gcov /usr/bin/gcov-9
 
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 80 --slave /usr/bin/g++ g++ /usr/bin/g++-8 --slave /usr/bin/gcov gcov /usr/bin/gcov-8
 
-Check the available C and C++ compilers list on your Ubuntu 20.04 system and select desired version by entering relevant selection number:
+Later if you want to change the default version of GCC to use, run the update-alternative command with the following option:
 
 $ sudo update-alternatives --config gcc
 There are 3 choices for the alternative gcc (providing /usr/bin/gcc).

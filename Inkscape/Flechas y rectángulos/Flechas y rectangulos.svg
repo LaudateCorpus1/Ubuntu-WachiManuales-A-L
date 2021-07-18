@@ -12,7 +12,7 @@
    viewBox="0 0 210 297"
    version="1.1"
    id="svg829"
-   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15)"
    sodipodi:docname="Flechas y rectangulos.svg">
   <defs
      id="defs823">
@@ -412,15 +412,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7395146"
-     inkscape:cx="1079.7404"
-     inkscape:cy="301.09459"
+     inkscape:cx="296.12476"
+     inkscape:cy="342.75998"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1360"
-     inkscape:window-height="720"
-     inkscape:window-x="-4"
-     inkscape:window-y="-2"
+     inkscape:window-height="712"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:document-rotation="0"
      inkscape:snap-global="false" />
@@ -635,46 +635,6 @@
            style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Iosevka;-inkscape-font-specification:'Iosevka Bold';fill:#ffffff"
            id="flowPara2965-6-8-5-6">Hola texto 14, escribe aquí nomás</flowPara></flowRoot>
     </g>
-    <g
-       id="g135-6"
-       transform="translate(63.610195,26.989052)">
-      <rect
-         ry="3.0652905"
-         y="77.517616"
-         x="96.665558"
-         height="12.999467"
-         width="126.16673"
-         id="rect2920-6-7-2"
-         style="opacity:1;fill:#666666;fill-opacity:1;stroke:#ff0000;stroke-width:1.84983;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers" />
-      <flowRoot
-         transform="matrix(0.26458333,0,0,0.26458333,67.987792,76.233223)"
-         style="font-style:normal;font-weight:normal;font-size:18.6667px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
-         id="flowRoot2959-3-2-7-5-9"
-         xml:space="preserve"><flowRegion
-           style="fill:#ffffff;fill-opacity:1"
-           id="flowRegion2961-6-6-5-3-1"><rect
-             style="fill:#ffffff;fill-opacity:1"
-             y="7.2146659"
-             x="118.67181"
-             height="62.743809"
-             width="506.28299"
-             id="rect2963-0-1-3-5-2" /></flowRegion><flowPara
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Iosevka;-inkscape-font-specification:'Iosevka Bold';fill:#ffffff"
-           id="flowPara2965-6-8-5-6-7">28% de Clorito de sodio al 80% equivale a Clorito</flowPara><flowPara
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Iosevka;-inkscape-font-specification:'Iosevka Bold';fill:#ffffff"
-           id="flowPara1063">de sodio real 22,4% en la fórmula de Jim Humble</flowPara></flowRoot>
-    </g>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:5.29167px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="169.13947"
-       y="46.093483"
-       id="text112"><tspan
-         sodipodi:role="line"
-         id="tspan110"
-         x="169.13947"
-         y="46.093483"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;stroke-width:0.264583">Hola cómo están</tspan></text>
     <path
        style="fill:none;stroke:#ff0000;stroke-width:0.694531;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend-3)"
        d="M 51.28396,3.7718164 H 71.047361"
@@ -772,7 +732,7 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <g
-       transform="translate(64.300375,3.8290001)"
+       transform="translate(-3.7396873,47.635835)"
        id="g931-3-3"
        style="stroke:none">
       <rect
@@ -798,66 +758,6 @@
              id="rect2963-0-1-3-3" /></flowRegion><flowPara
            style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Iosevka;-inkscape-font-specification:'Iosevka Bold';fill:#ffffff;stroke:none"
            id="flowPara2965-6-8-5-5">Hola texto 14, escribe aquí nomás</flowPara></flowRoot>
-    </g>
-    <g
-       transform="translate(128.92603,-3.9274131)"
-       id="g931-3-3-3-3-9"
-       style="stroke:none">
-      <rect
-         ry="2.1499743"
-         y="77.517616"
-         x="96.665558"
-         height="12.629708"
-         width="200.68416"
-         id="rect2920-6-6-7-6-4"
-         style="opacity:1;fill:#666666;fill-opacity:1;stroke:none;stroke-width:1.66153;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers" />
-      <flowRoot
-         transform="matrix(0.26458333,0,0,0.26458333,67.986051,76.689862)"
-         style="font-style:normal;font-weight:normal;font-size:15px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
-         id="flowRoot2959-3-2-7-7-5-1-7"
-         xml:space="preserve"><flowRegion
-           style="fill:#ffffff;fill-opacity:1;stroke:none"
-           id="flowRegion2961-6-6-5-5-9-2-8"><rect
-             style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1"
-             y="7.2146659"
-             x="118.6718"
-             height="66.995872"
-             width="793.10822"
-             id="rect2963-0-1-3-3-2-9-4" /></flowRegion><flowPara
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:15px;font-family:Iosevka;-inkscape-font-specification:'Iosevka Bold';fill:#ffffff;stroke:none"
-           id="flowPara1110-9-3-5">Use antes de: Diciembre del 2024 (12.2024) [Esta captura de pantalla fue tomada el 29.01.2021 así</flowPara><flowPara
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:15px;font-family:Iosevka;-inkscape-font-specification:'Iosevka Bold';fill:#ffffff;stroke:none"
-           id="flowPara1108-7-1-0">que para este producto MMS de Biofarmin la vida útil es de 3 años] </flowPara></flowRoot>
-    </g>
-    <g
-       transform="translate(128.48421,11.09068)"
-       id="g931-3-3-3-3-9-6"
-       style="stroke:none">
-      <rect
-         ry="2.1499743"
-         y="77.517616"
-         x="96.665558"
-         height="12.04106"
-         width="100.87806"
-         id="rect2920-6-6-7-6-4-2"
-         style="opacity:1;fill:#666666;fill-opacity:1;stroke:none;stroke-width:1.66153;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers" />
-      <flowRoot
-         transform="matrix(0.26458333,0,0,0.26458333,67.986051,76.689862)"
-         style="font-style:normal;font-weight:normal;font-size:15px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
-         id="flowRoot2959-3-2-7-7-5-1-7-9"
-         xml:space="preserve"><flowRegion
-           style="fill:#ffffff;fill-opacity:1;stroke:none"
-           id="flowRegion2961-6-6-5-5-9-2-8-1"><rect
-             style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1"
-             y="7.2146659"
-             x="118.6718"
-             height="66.995872"
-             width="793.10822"
-             id="rect2963-0-1-3-3-2-9-4-2" /></flowRegion><flowPara
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:15px;font-family:Iosevka;-inkscape-font-specification:'Iosevka Bold';fill:#ffffff;stroke:none"
-           id="flowPara1108-7-1-0-0">Use antes de: Diciembre del 2024 (12.2024) [Esta</flowPara><flowPara
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:15px;font-family:Iosevka;-inkscape-font-specification:'Iosevka Bold';fill:#ffffff;stroke:none"
-           id="flowPara264">captura de pantalla fue </flowPara></flowRoot>
     </g>
   </g>
 </svg>

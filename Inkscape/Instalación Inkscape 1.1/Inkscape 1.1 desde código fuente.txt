@@ -1,10 +1,21 @@
 
 
 
+Dependencias extras para Inkscape 1.1
 
-libgsl-dev libgc-dev liblcms2-dev libpoppler-glib-dev libwpg-dev libvisio-dev libcdr-dev libpotrace-dev libgtkmm-3.0-dev libgspell-1-dev libmagick++-dev cython libgtest-dev
+sudo apt-get install libgsl-dev libgc-dev liblcms2-dev libpoppler-glib-dev libwpg-dev libvisio-dev libcdr-dev libpotrace-dev libgtkmm-3.0-dev libgspell-1-dev libmagick++-dev cython libgtest-dev
 
 
+
+mkdir build
+cd build
+cmake ..
+make
+sudo make install
+exit
+
+
+********************************************
 
 
 mkdir build
@@ -16,15 +27,38 @@ exit
 
 
 *********************************************
+2021-07-12 15:00 este estoy tratando de instalar
+
 
 sudo apt install ccache
 
 mkdir build
 git clone --recurse-submodules https://gitlab.com/inkscape/inkscape.git
+git clone https://gitlab.com/inkscape/lib2geom /home/wachin/gitlab/Inkscape-Releases/inkscape/src/3rdparty/2geom
+cd build
+cmake ..
+make 
+
+
+************************************************
+
+sudo apt install ccache
+
+mkdir build
+git clone --recurse-submodules https://gitlab.com/inkscape/inkscape.git
+git clone https://gitlab.com/inkscape/lib2geom /home/wachin/gitlab/Inkscape-Releases/inkscape/src/3rdparty/
 cd build
 cmake ../inkscape -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_BUILD_TYPE=Debug -G Ninja
 ninja
 
+************************
+
+
+mkdir build
+git clone --recurse-submodules https://gitlab.com/inkscape/inkscape.git
+cd build
+cmake -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_BUILD_TYPE=Debug -G Ninja ..
+ninja
 Compiling Inkscape - Inkscape Wiki
 https://wiki.inkscape.org/wiki/Compiling_Inkscape
 
@@ -42,9 +76,14 @@ cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release ..
 make
 
 
-
-
 +++++++++++++++++++++++++++++++++++++
+
+mkdir build
+cd build
+cmake -DCMAKE_BUILD_TYPE=Release -DBLAS="Open" -Dpython_version=3 -DCMAKE_CXX_FLAGS="-std=c++17" ..
+make
+
++++++++++++++++++++++++++++++++++++++++
 
 mkdir build
 cd build
@@ -91,3 +130,5 @@ Could NOT find DoubleConversion (missing: DoubleConversion_LIBRARY
 cmake fails to find DoubleConversion when building on ChromeOS (#645) · Issues · Inkscape / inkscape · GitLab
 https://gitlab.com/inkscape/inkscape/-/issues/645#note_267766355
 
+Compiling Inkscape on Windows with MSYS2 - Inkscape Wiki
+https://wiki.inkscape.org/wiki/Compiling_Inkscape_on_Windows_with_MSYS2

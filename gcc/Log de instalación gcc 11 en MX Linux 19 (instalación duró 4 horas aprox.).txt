@@ -1,0 +1,137 @@
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ /usr/bin/mkdir -p '/usr/local/share/info'
+ /usr/bin/install -c -m 644 ./libgomp.info '/usr/local/share/info'
+ install-info --info-dir='/usr/local/share/info' '/usr/local/share/info/libgomp.info'
+:
+:
+:
+ /usr/bin/mkdir -p '/usr/local/lib/gcc/i686-pc-linux-gnu/11.1.0/finclude'
+ /usr/bin/install -c -m 644 omp_lib.h omp_lib.f90 omp_lib.mod omp_lib_kinds.mod ../.././libgomp/openacc_lib.h ../.././libgomp/openacc.f90 openacc.mod openacc_kinds.mod '/usr/local/lib/gcc/i686-pc-linux-gnu/11.1.0/finclude'
+ /usr/bin/mkdir -p '/usr/local/lib/gcc/i686-pc-linux-gnu/11.1.0/include'
+ /usr/bin/install -c -m 644 omp.h ../.././libgomp/openacc.h ../.././libgomp/acc_prof.h '/usr/local/lib/gcc/i686-pc-linux-gnu/11.1.0/include'
+make[4]: se sale del directorio '/home/wachin/Instaladores-Linux/gcc/gcc-11.1.0/i686-pc-linux-gnu/libgomp'
+make[3]: se sale del directorio '/home/wachin/Instaladores-Linux/gcc/gcc-11.1.0/i686-pc-linux-gnu/libgomp'
+make[2]: se sale del directorio '/home/wachin/Instaladores-Linux/gcc/gcc-11.1.0/i686-pc-linux-gnu/libgomp'
+make[2]: se entra en el directorio '/home/wachin/Instaladores-Linux/gcc/gcc-11.1.0/i686-pc-linux-gnu/libitm'
+Making install in testsuite
+make[3]: se entra en el directorio '/home/wachin/Instaladores-Linux/gcc/gcc-11.1.0/i686-pc-linux-gnu/libitm/testsuite'
+make[4]: se entra en el directorio '/home/wachin/Instaladores-Linux/gcc/gcc-11.1.0/i686-pc-linux-gnu/libitm/testsuite'
+make[4]: No se hace nada para 'install-exec-am'.
+make[4]: No se hace nada para 'install-data-am'.
+make[4]: se sale del directorio '/home/wachin/Instaladores-Linux/gcc/gcc-11.1.0/i686-pc-linux-gnu/libitm/testsuite'
+make[3]: se sale del directorio '/home/wachin/Instaladores-Linux/gcc/gcc-11.1.0/i686-pc-linux-gnu/libitm/testsuite'
+make[3]: se entra en el directorio '/home/wachin/Instaladores-Linux/gcc/gcc-11.1.0/i686-pc-linux-gnu/libitm'
+true  DO=all multi-do # make
+make[4]: se entra en el directorio '/home/wachin/Instaladores-Linux/gcc/gcc-11.1.0/i686-pc-linux-gnu/libitm'
+true  DO=install multi-do # make
+ /usr/bin/mkdir -p '/usr/local/lib'
+ /usr/bin/install -c -m 644 libitm.spec '/usr/local/lib'
+ /usr/bin/mkdir -p '/usr/local/lib'
+ /bin/bash ./libtool   --mode=install /usr/bin/install -c   libitm.la '/usr/local/lib'
+libtool: install: /usr/bin/install -c .libs/libitm.so.1.0.0 /usr/local/lib/libitm.so.1.0.0
+libtool: install: (cd /usr/local/lib && { ln -s -f libitm.so.1.0.0 libitm.so.1 || { rm -f libitm.so.1 && ln -s libitm.so.1.0.0 libitm.so.1; }; })
+libtool: install: (cd /usr/local/lib && { ln -s -f libitm.so.1.0.0 libitm.so || { rm -f libitm.so && ln -s libitm.so.1.0.0 libitm.so; }; })
+libtool: install: /usr/bin/install -c .libs/libitm.lai /usr/local/lib/libitm.la
+libtool: install: /usr/bin/install -c .libs/libitm.a /usr/local/lib/libitm.a
+libtool: install: chmod 644 /usr/local/lib/libitm.a
+libtool: install: ranlib /usr/local/lib/libitm.a
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /usr/local/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ /usr/bin/mkdir -p '/usr/local/share/info'
+ /usr/bin/install -c -m 644 ./libitm.info '/usr/local/share/info'
+ install-info --info-dir='/usr/local/share/info' '/usr/local/share/info/libitm.info'
+make[4]: se sale del directorio '/home/wachin/Instaladores-Linux/gcc/gcc-11.1.0/i686-pc-linux-gnu/libitm'
+make[3]: se sale del directorio '/home/wachin/Instaladores-Linux/gcc/gcc-11.1.0/i686-pc-linux-gnu/libitm'
+make[2]: se sale del directorio '/home/wachin/Instaladores-Linux/gcc/gcc-11.1.0/i686-pc-linux-gnu/libitm'
+make[2]: se entra en el directorio '/home/wachin/Instaladores-Linux/gcc/gcc-11.1.0/i686-pc-linux-gnu/libatomic'
+Makefile:873: atención: se anulan las instrucciones para el objetivo 'all-multi'
+Makefile:864: atención: se ignoran las instrucciones viejas para el objetivo 'all-multi'
+Making install in testsuite
+make[3]: se entra en el directorio '/home/wachin/Instaladores-Linux/gcc/gcc-11.1.0/i686-pc-linux-gnu/libatomic/testsuite'
+make[4]: se entra en el directorio '/home/wachin/Instaladores-Linux/gcc/gcc-11.1.0/i686-pc-linux-gnu/libatomic/testsuite'
+make[4]: No se hace nada para 'install-exec-am'.
+make[4]: No se hace nada para 'install-data-am'.
+make[4]: se sale del directorio '/home/wachin/Instaladores-Linux/gcc/gcc-11.1.0/i686-pc-linux-gnu/libatomic/testsuite'
+make[3]: se sale del directorio '/home/wachin/Instaladores-Linux/gcc/gcc-11.1.0/i686-pc-linux-gnu/libatomic/testsuite'
+make[3]: se entra en el directorio '/home/wachin/Instaladores-Linux/gcc/gcc-11.1.0/i686-pc-linux-gnu/libatomic'
+Makefile:873: atención: se anulan las instrucciones para el objetivo 'all-multi'
+Makefile:864: atención: se ignoran las instrucciones viejas para el objetivo 'all-multi'
+true  DO=all multi-do # make
+make[4]: se entra en el directorio '/home/wachin/Instaladores-Linux/gcc/gcc-11.1.0/i686-pc-linux-gnu/libatomic'
+Makefile:873: atención: se anulan las instrucciones para el objetivo 'all-multi'
+Makefile:864: atención: se ignoran las instrucciones viejas para el objetivo 'all-multi'
+true  DO=install multi-do # make
+ /usr/bin/mkdir -p '/usr/local/lib'
+ /bin/bash ./libtool   --mode=install /usr/bin/install -c   libatomic.la '/usr/local/lib'
+libtool: install: /usr/bin/install -c .libs/libatomic.so.1.2.0 /usr/local/lib/libatomic.so.1.2.0
+libtool: install: (cd /usr/local/lib && { ln -s -f libatomic.so.1.2.0 libatomic.so.1 || { rm -f libatomic.so.1 && ln -s libatomic.so.1.2.0 libatomic.so.1; }; })
+libtool: install: (cd /usr/local/lib && { ln -s -f libatomic.so.1.2.0 libatomic.so || { rm -f libatomic.so && ln -s libatomic.so.1.2.0 libatomic.so; }; })
+libtool: install: /usr/bin/install -c .libs/libatomic.lai /usr/local/lib/libatomic.la
+libtool: install: /usr/bin/install -c .libs/libatomic.a /usr/local/lib/libatomic.a
+libtool: install: chmod 644 /usr/local/lib/libatomic.a
+libtool: install: ranlib /usr/local/lib/libatomic.a
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /usr/local/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[4]: No se hace nada para 'install-data-am'.
+make[4]: se sale del directorio '/home/wachin/Instaladores-Linux/gcc/gcc-11.1.0/i686-pc-linux-gnu/libatomic'
+make[3]: se sale del directorio '/home/wachin/Instaladores-Linux/gcc/gcc-11.1.0/i686-pc-linux-gnu/libatomic'
+make[2]: se sale del directorio '/home/wachin/Instaladores-Linux/gcc/gcc-11.1.0/i686-pc-linux-gnu/libatomic'
+make[1]: se sale del directorio '/home/wachin/Instaladores-Linux/gcc/gcc-11.1.0'
+wachin@mx-linux:~/Instaladores-Linux/gcc/gcc-11.1.0
+$ gcc --version
+gcc (GCC) 11.1.0
+Copyright (C) 2021 Free Software Foundation, Inc.
+Esto es software libre; vea el código para las condiciones de copia.  NO hay
+garantía; ni siquiera para MERCANTIBILIDAD o IDONEIDAD PARA UN PROPÓSITO EN
+PARTICULAR
