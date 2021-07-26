@@ -1,0 +1,122 @@
+
+Installing Kdenlive through Command line! – Library Labs
+https://labs.library.concordia.ca/blog/installing-kdenlive-through-coding/
+
+
+Installing Kdenlive through Command line!
+avam    Learn Technology Sandbox Virtual Sandbox    May 23, 2021  |  0
+
+Kdenlive is a great free opensource alternative to Adobe Premiere Pro, making it accessible to anyone with a computer and also allowing you to tweak whatever you feel is necessary through code. In this article I will be explaining how to install Kdenlive through their source code which will give you the freedom to edit the software when and where you want.
+
+Firstly, to make the downloading and installation process run a little smoother, you’ll want to download the MLT framework first.
+
+Follow the steps below in order to do so:
+
+You’ll need to download this file https://github.com/mltframework/mlt/archive/refs/tags/v7.0.1.tar.gz
+
+Then run the following command in your terminal showed below:
+
+tar -xzf Dowloads/FILENAME.tar.gz
+
+Your FILENAME should be the name of your downloaded MLT file.
+
+Now that you completed downloading the MLT file, there should be a new folder titled “mlt” in your directory.
+
+Now for the actually building of Kdenlive within your terminal. There are a few different aspects of the software we need to actually build in order to get Kdenlive up and running. Use this link https://invent.kde.org/multimedia/kdenlive/-/blob/master/dev-docs/build.mdJOB for a step-by-step tutorial for downloading and installing Kdenlive through source. This will also give you a few different options of commands you can apply in order to install Kdenlive so that it best fits your needs. It also supplies a few different commands for effects and tools to use while using Kdenlive.
+
+Below I’ll write the commands in the order I used them to install Kdenlive in a way that suits my use of the software.
+
+sudo add-apt-repository ppa:kdenlive/kdenlive-master
+sudo apt update
+
+sudo apt remove kdenlive kdenlive-data
+
+sudo apt install build-essential git cmake extra-cmake-modules libsm-dev
+
+sudo apt install libkf5archive-dev libkf5bookmarks-dev libkf5coreaddons-dev libkf5config-dev \
+libkf5configwidgets-dev libkf5dbusaddons-dev libkf5kio-dev libkf5widgetsaddons-dev \
+libkf5notifyconfig-dev libkf5newstuff-dev libkf5xmlgui-dev libkf5declarative-dev \
+libkf5notifications-dev libkf5guiaddons-dev libkf5textwidgets-dev libkf5purpose-dev \
+libkf5iconthemes-dev kdoctools-dev libkf5crash-dev libkf5filemetadata-dev kio \
+kinit qtdeclarative5-dev libqt5svg5-dev qml-module-qtquick-controls libqt5networkauth5-dev \
+qtmultimedia5-dev qtquickcontrols2-5-dev breeze-icon-theme breeze
+
+sudo apt install frei0r-plugins ffmpeg
+
+sudo apt install libmlt++-dev libmlt-dev melt
+
+sudo apt install ruby subversion gnupg2 gettext
+
+git clone https://invent.kde.org/multimedia/kdenlive.git
+
+git clone https://github.com/mltframework/mlt.git 
+
+INSTALL_PREFIX=$HOME/.local
+JOBS=4
+
+cd mlt
+./configure --enable-gpl --enable-gpl3 --prefix=$INSTALL_PREFIX
+make -j$JOBS
+make install
+
+Soy Wachi, no pude instalar mlt con .configure etc, así que así como dice arriba descargué:
+https://github.com/mltframework/mlt/archive/refs/tags/v7.0.1.tar.gz
+y allí el README.md dice que se puede instalar con:
+
+cmake .
+
+y me dice la terminal:
+
+   "CMake Error at CMakeLists.txt:1 (cmake_minimum_required):
+      CMake 3.14 or higher is required.  You are running version 3.13.4
+   -- Configuring incomplete, errors occurred!"
+
+así que me fui a la página de cmake y descargué:
+
+https://cmake.org/download/
+
+y allí en old releases:
+
+https://github.com/Kitware/CMake/releases
+
+y me descargué una un poquito superior, la 3.15:
+
+https://github.com/Kitware/CMake/releases/tag/v3.15.0
+
+y en el tutorial de instalacion:
+
+https://cmake.org/install/
+
+dice:
+
+Or, an existing CMake installation can be used to build a new version (y como yo tengo la 3.14):
+
+  cmake .
+  make      
+  make install
+
+
+
+
+
+
+cd ../kdenlive
+mkdir build
+cd build
+cmake .. -DCMAKE_INSTALL_PREFIX=$INSTALL_PREFIX- DKDE_INSTALL_USE_QT_SYS_PATHS=ON -DRELEASE_BUILD=OFF
+
+cmake -DCMAKE_INSTALL_PREFIX=$INSTALL_PREFIX- DKDE_INSTALL_USE_QT_SYS_PATHS=ON -DRELEASE_BUILD=OFF ..
+
+make -j$JOBS
+make install
+
+And finally, you should be able to open and run Kdenlive through the command:
+
+. prefix.sh
+kdenlive
+
+All commands stated above are from https://invent.kde.org/multimedia/kdenlive/-/blob/master/dev-docs/build.mdJOB
+
+ Adobe Premiere coding MLT software
+Post navigation
+Previous: Previous post: Let the computer fill in colors of black and white images…!!!

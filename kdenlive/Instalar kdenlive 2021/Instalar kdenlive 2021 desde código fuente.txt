@@ -1,0 +1,60 @@
+
+
+Según:
+Building Kdenlive from Source! - Wikis & How-to Guides - Level1Techs Forums
+https://forum.level1techs.com/t/building-kdenlive-from-source/126853
+
+
+sudo apt build-dep kdenlive
+
+Se instalarán los siguientes paquetes NUEVOS:
+  extra-cmake-modules kdoctools5 libkf5archive-dev libkf5attica-dev
+  libkf5auth-dev libkf5auth-dev-bin libkf5bookmarks-dev libkf5codecs-dev
+  libkf5completion-dev libkf5config-bin libkf5config-dev
+  libkf5config-dev-bin libkf5configwidgets-dev libkf5coreaddons-dev
+  libkf5coreaddons-dev-bin libkf5crash-dev libkf5dbusaddons-dev
+  libkf5doctools-dev libkf5filemetadata-dev libkf5globalaccel-dev
+  libkf5guiaddons-dev libkf5i18n-dev libkf5iconthemes-dev
+  libkf5itemviews-dev libkf5jobwidgets-dev libkf5kio-dev libkf5newstuff-dev
+  libkf5notifications-dev libkf5notifyconfig-dev libkf5plotting-dev
+  libkf5plotting5 libkf5service-dev libkf5solid-dev libkf5sonnet-dev
+  libkf5sonnet-dev-bin libkf5textwidgets-dev libkf5widgetsaddons-dev
+  libkf5windowsystem-dev libkf5xmlgui-dev libmlt++-dev libmlt-dev
+  libqt5opengl5-dev libqt5quickparticles5 libqt5quicktest5
+  libqt5scripttools5 libqt5svg5-dev libqt5webkit5-dev libv4l-dev libv4l2rds0
+  pkg-kde-tools qt5-qmltooling-plugins qtdeclarative5-dev
+  qtdeclarative5-dev-tools qtscript5-dev
+0 actualizados, 54 nuevos se instalarán, 0 para eliminar y 18 no actualizados.
+Se necesita descargar 4.030 kB de archivos.
+
+
+yo le instalo:
+
+frei0r-plugins-dev v4l-utils
+
+
+mkdir build
+cd build
+make -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=/usr/local -DLIB_INSTALL_DIR=lib -DKDE_INSTALL_USE_QT_SYS_PATHS=on -DBUILD_TESTING=OFF ..
+
+
+*****************************
+OTRO
+*****************************
+
+Kdenlive-21.04.2
+https://www.linuxfromscratch.org/blfs/view/svn/kde/kdenlive.html
+
+mkdir build
+cd build
+cmake -DCMAKE_INSTALL_PREFIX=$KF5_PREFIX -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -Wno-dev ..
+make
+sudo make install
+
+
+
+sudo apt install cmake extra-cmake-modules qtdeclarative5-dev libqt5x11extras5-dev libkf5iconthemes-dev libkf5plasma-dev libkf5windowsystem-dev libkf5declarative-dev libkf5xmlgui-dev libkf5activities-dev build-essential libxcb-util-dev libkf5wayland-dev git gettext libkf5archive-dev libkf5notifications-dev libxcb-util0-dev libsm-dev libkf5crash-dev libkf5newstuff-dev libxcb-shape0-dev libxcb-randr0-dev libx11-dev libx11-xcb-dev kirigami2-dev
+
+
+
+
