@@ -1,0 +1,26 @@
+
+
+
+Re: Crash during Build - invalid application of ‘sizeof’ to incomplete type ‘SPCurve’
+https://lists.inkscape.org/hyperkitty/list/inkscape-devel@lists.inkscape.org/thread/J6S7T7PGUPZ2JBFEDC67UTLORTABNJHV/
+
+
+ Marc Jeanmougin
+Friday, 28 May 2021 10:04 a.m.
+
+Hi,
+
+I can confirm that gcc 7 appears to be too old to compile a recent
+Inkscape, sorry.
+
+Please use a newer compiler (gcc 9 (or later) works, or clang)
+
+-- 
+Marc
+
+
+Le 28/05/2021 à 01:17, fi(a)igh.de a écrit :
+
+
+
+

@@ -1,20 +1,110 @@
 
 
+Si tenía instalado Inkscape desinstalarlo
+
+sudo apt remove inkscape
 
 
-Dependencias extras para Inkscape 1.1
+Dependencias para Inkscape 1.1
 
-sudo apt-get install libgsl-dev libgc-dev liblcms2-dev libpoppler-glib-dev libwpg-dev libvisio-dev libcdr-dev libpotrace-dev libgtkmm-3.0-dev libgspell-1-dev libmagick++-dev cython libgtest-dev
 
+sudo apt-get install build-essential cmake intltool pkg-config libtool \
+ ccache doxygen git clang-format clang-tidy jq clang-tools \
+ liblcms2-dev libwpg-dev libvisio-dev libcdr-dev libpotrace-dev \
+ cython libgtest-dev
+
+
+
+
+sudo apt-get install wget python3-dev \
+        libart-2.0-dev \
+        libaspell-dev \
+        libblas3 \
+        liblapack3 \
+        libcdr-dev \
+        libdouble-conversion-dev \
+        libgc-dev \
+        libgdl-3-dev \
+        libglib2.0-dev \
+        libgtk-3-dev \
+        libgtkmm-3.0-dev \
+        libgspell-1-dev \
+        libgtkspell3-3-dev \
+        libhunspell-dev \
+        libjemalloc-dev \
+        liblcms2-dev \
+        libmagick++-dev \
+        libpango1.0-dev \
+        libpng-dev \
+        libpotrace-dev \
+        libreadline-dev \
+        librevenge-dev \
+        libsigc++-2.0-dev \
+        libsoup2.4-dev \
+        libvisio-dev \
+        libwpg-dev \
+        libxslt1-dev \
+        python-lxml \
+        zlib1g-dev  \
+        google-mock \
+        fonts-dejavu  \
+        jq python-yaml \
+        clang-tools \
+        wget \
+        software-properties-common \
+        libart-2.0-dev \
+        libaspell-dev \
+        libblas3 \
+        liblapack3 \
+        libboost-dev \
+	libboost-filesystem-dev \
+        libboost-python-dev \
+        libcdr-dev \
+        libdouble-conversion-dev \
+        libgdl-3-dev \
+        libglib2.0-dev \
+        libgsl-dev \
+        libgtk-3-dev \
+        libgtkmm-3.0-dev \
+        libgtkspell3-3-dev \
+        libhunspell-dev \
+        libjemalloc-dev \
+        liblcms2-dev \
+        libmagick++-dev \
+        libpango1.0-dev \
+        libpng-dev \
+        libpoppler-glib-dev \
+        libpoppler-private-dev \
+        libpotrace-dev \
+        libreadline-dev \
+        librevenge-dev \
+        libsigc++-2.0-dev \
+        libsoup2.4-dev \
+        libvisio-dev \
+        libwpg-dev \
+        libxml-parser-perl \
+        libxml2-dev \
+        libxslt1-dev \
+        zlib1g-dev  \
+        google-mock \
+        fonts-dejavu  \
+        aspell \
+        imagemagick \
+        libwmf-bin \
+        perlmagick \
+        python3-pip \
+        python3-numpy \
+        python3-pil \
+        python3-lxml \
+        python3-serial \
+        python3-scour \
+        adwaita-icon-theme
 
 
 
 
 *********************************************
 2021-07-12 15:00 este estoy tratando de instalar
-
-
-sudo apt install ccache
 
 
 git clone --recurse-submodules https://gitlab.com/inkscape/inkscape
@@ -25,6 +115,18 @@ cd build
 cmake ..
 make 
 
+
+Aparece un error que lo busco así:
+
+inkscape /sp-use-reference.h required from here /usr/include/c++/ /bits/unique_ptr.h error: invalid application of ‘sizeof’ to incomplete type ‘SPCurve’
+
+la respuesta parece ser que se necesita gcc 9
+
+Visto en:
+https://lists.inkscape.org/hyperkitty/list/inkscape-devel@lists.inkscape.org/thread/J6S7T7PGUPZ2JBFEDC67UTLORTABNJHV/
+
+
+************************************************
 
 opcional:
 
@@ -92,6 +194,9 @@ SOLUCIONES:
 No package 'bdw-gc' found
 ./configure: bdw-gc not found when building Inkscape from source - Super User
 https://superuser.com/a/1063074/989620
+
+Install dependencies Inkscape script
+https://gitlab.com/inkscape/inkscape-ci-docker/-/raw/master/install_dependencies.sh
 
 No package 'lcms2' found
 package lcms2 was not found in the pkg-config search path

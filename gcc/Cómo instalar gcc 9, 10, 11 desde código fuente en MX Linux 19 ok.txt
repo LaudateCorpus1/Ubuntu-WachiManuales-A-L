@@ -5,12 +5,15 @@ Dependencia:
 
 sudo apt -y install build-essential	
 
-
 descargar el código fuente de la versión requerida desde:
 
 http://ftp.mirrorservice.org/sites/sourceware.org/pub/gcc/releases
 
 ejemplo:
+
+http://ftp.mirrorservice.org/sites/sourceware.org/pub/gcc/releases/gcc-9.3.0/
+Nota: Este 9.3.0 está en el mirror en github http://ftp.mirrorservice.org/sites/sourceware.org/pub/gcc/releases/gcc-9.3.0/
+o
 
 http://ftp.mirrorservice.org/sites/sourceware.org/pub/gcc/releases/gcc-9.4.0/
 
@@ -20,8 +23,8 @@ luego descomprimir el archivo y entrar en el directorio en una terminal y poner:
 
 y después que se descarguen todos los prerequisitos poner:
 
-./configure --disable-multilib
-make -j 4
+./configure --disable-multilib --prefix=/usr
+make
 make install
 
 mejor le pongo sin --disable-multilib
