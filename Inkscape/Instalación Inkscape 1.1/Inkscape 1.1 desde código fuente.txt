@@ -1,29 +1,13 @@
 
 
 
+
 Dependencias extras para Inkscape 1.1
 
 sudo apt-get install libgsl-dev libgc-dev liblcms2-dev libpoppler-glib-dev libwpg-dev libvisio-dev libcdr-dev libpotrace-dev libgtkmm-3.0-dev libgspell-1-dev libmagick++-dev cython libgtest-dev
 
 
 
-mkdir build
-cd build
-cmake ..
-make
-sudo make install
-exit
-
-
-********************************************
-
-
-mkdir build
-cd build
-cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
-make
-sudo make install
-exit
 
 
 *********************************************
@@ -32,61 +16,49 @@ exit
 
 sudo apt install ccache
 
+
+git clone --recurse-submodules https://gitlab.com/inkscape/inkscape
+cd inkscape
+git clone https://gitlab.com/inkscape/lib2geom ./src/3rdparty/2geom
 mkdir build
-git clone --recurse-submodules https://gitlab.com/inkscape/inkscape.git
-git clone https://gitlab.com/inkscape/lib2geom /home/wachin/gitlab/Inkscape-Releases/inkscape/src/3rdparty/2geom
 cd build
 cmake ..
 make 
 
 
+opcional:
+
+cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
+
+
 ************************************************
 
-sudo apt install ccache
-
-mkdir build
-git clone --recurse-submodules https://gitlab.com/inkscape/inkscape.git
-git clone https://gitlab.com/inkscape/lib2geom /home/wachin/gitlab/Inkscape-Releases/inkscape/src/3rdparty/
-cd build
 cmake ../inkscape -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_BUILD_TYPE=Debug -G Ninja
 ninja
 
 ************************
 
-
-mkdir build
-git clone --recurse-submodules https://gitlab.com/inkscape/inkscape.git
-cd build
 cmake -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_BUILD_TYPE=Debug -G Ninja ..
 ninja
+
 Compiling Inkscape - Inkscape Wiki
 https://wiki.inkscape.org/wiki/Compiling_Inkscape
 
 
 *********************************************
 
-
- Installation of Inkscape
-
-Install Inkscape by running the following commands:
-
-mkdir build
-cd build
 cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release ..
 make
 
 
 +++++++++++++++++++++++++++++++++++++
 
-mkdir build
-cd build
 cmake -DCMAKE_BUILD_TYPE=Release -DBLAS="Open" -Dpython_version=3 -DCMAKE_CXX_FLAGS="-std=c++17" ..
 make
 
 +++++++++++++++++++++++++++++++++++++++
 
-mkdir build
-cd build
+
 cmake -DCMAKE_BUILD_TYPE=Release -DBLAS="Open" -Dpython_version=3 -DCUDA_HOST_COMPILER=/usr/bin/g++-5 -DCUDA_PROPAGATE_HOST_FLAGS=off -DCMAKE_CXX_FLAGS="-std=c++11" ..
 make
 
@@ -100,8 +72,7 @@ https://gcc.gnu.org/gcc-4.7/cxx0x_status.html
 
 +++++++++++++++++++++++++++++++++++++
 
-mkdir build
-cd build
+
 cmake -DCMAKE_CXX_FLAGS="-std=c++11" ..
 make
 

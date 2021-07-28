@@ -1,0 +1,11 @@
+
+
+https://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu
+
+
+
+git clone --depth 1 https://code.videolan.org/videolan/x264.git
+cd x264
+./configure --enable-static --enable-pic
+make
+make instal
