@@ -1,0 +1,66 @@
+
+
+
+Construir un paquete Debian desde código fuente
+http://www.estrellateyarde.org/instalar-software-en-linux/construir-un-paquete-debian-desde-las-fuentes
+
+En el mundo del software libre es muy común utilizar el código fuente, por ejemplo para:
+
+    estudiar el código.
+    corregir código erróneo.
+    compilar con parámetros optimizados para nuestra máquina.
+
+Veamos cómo construir un paquete Debian desde las fuentes. Para ello utilizaremos Hello, programa cuyo objetivo en la vida es servir de ejemplo de cómo se hace un paquete Debian.
+
+Primero nos descargaremos el código fuente de Hello desde un repositorio Debian:
+
+    debemos tener en /etc/apt/sources.list una entrada deb-src:
+
+    deb-src http://ftp.rediris.es/debian/ stable main
+
+    descargaremos el código fuente con el siguiente comando (se puede ejecutar como usuario normal):
+
+    $ apt-get source hello
+    Leyendo lista de paquetes... Hecho
+    Creando &aacute;rbol de dependencias... Hecho
+    Necesito descargar 413kB de archivos fuente.
+    Des:1 http://ftp.rediris.es stable/main hello 2.1.1-5 (dsc) [519B]
+    Des:2 http://ftp.rediris.es stable/main hello 2.1.1-5 (tar) [389kB]
+    Des:3 http://ftp.rediris.es stable/main hello 2.1.1-5 (diff)[23,0kB]
+    Descargados 413kB en 6s (60,3kB/s)
+    gpg: Signature made mar 18 jul 2006 19:57:28 CEST using DSA ID3EF23CD6
+    gpg: Can't check signature: public key not found
+    dpkg-source: extracting hello in hello-2.1.1
+    dpkg-source: unpacking hello_2.1.1.orig.tar.gz
+    dpkg-source: applying ./hello_2.1.1-5.diff.gz
+
+    esto descargará tres archivos en el directorio activo:
+
+    hello_2.1.1-5.dsc
+    hello_2.1.1-5.diff.gz
+    hello_2.1.1.orig.tar.gz
+    y creará el directorio hello-2.1.1 en el directorio activo, donde descomprimirá el paquete.
+
+A partir de las fuentes descargadas podemos construir el paquete Debian:
+
+    instalaremos las dependencias necesarias para compilar el paquete:
+
+    # apt-get build-dep hello
+    Leyendo lista de paquetes... Hecho
+    Creando &aacute;rbol de dependencias... Hecho
+    Se instalar&aacute;n los siguientes paquetes NUEVOS:
+      build-essential g++ g++-4.1 libstdc++6-4.1-dev
+    0 actualizados, 4 se instalar&aacute;n, 0 para eliminar.
+    Necesito descargar 4257kB de archivos.
+    Se utilizar&aacute;n 16,3MB despu&eacute;s de desempaquetar.
+    ¿Desea continuar [S/n]?
+    ...
+
+    para construir el paquete .deb ejecutaremos:
+
+    # cd hello-2.1.1
+    # dpkg-buildpackage -uc -b
+
+    se creará el archivo hello_2.1.1-5_i386.deb en el directorio padre. Para instalarlo:
+
+    # dpkg -i hello_2.1.1-5_i386.deb

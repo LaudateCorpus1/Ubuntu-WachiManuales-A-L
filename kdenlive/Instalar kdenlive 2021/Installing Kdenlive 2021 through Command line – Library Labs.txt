@@ -50,13 +50,14 @@ sudo apt install ruby subversion gnupg2 gettext
 git clone https://invent.kde.org/multimedia/kdenlive.git
 
 git clone https://github.com/mltframework/mlt.git 
-
-INSTALL_PREFIX=$HOME/.local
-JOBS=4
+https://github.com/mltframework/mlt/releases/
+Nota: Para instalar el ultimo mlt es necesario tener cmake 3.14
+Nota 2: Para que el sistema lo reconozca hay que desinstalar:
+sudo apt remove melt
 
 cd mlt
 ./configure --enable-gpl --enable-gpl3 --prefix=$INSTALL_PREFIX
-make -j$JOBS
+make
 make install
 
 Soy Wachi, no pude instalar mlt con .configure etc, así que así como dice arriba descargué:
@@ -115,7 +116,23 @@ And finally, you should be able to open and run Kdenlive through the command:
 . prefix.sh
 kdenlive
 
-All commands stated above are from https://invent.kde.org/multimedia/kdenlive/-/blob/master/dev-docs/build.mdJOB
+All commands stated above are from https://invent.kde.org/multimedia/kdenlive/-/blob/master/dev-docs/build.md
+
+###############
+WACHI COMANDOS
+###############
+
+Hice mi propio comando según https://invent.kde.org/multimedia/kdenlive/-/blob/master/dev-docs/build.md para que se instale en .local 
+
+mkdir build
+cd build
+cmake .. -DKDE_INSTALL_USE_QT_SYS_PATHS=ON -DCMAKE_INSTALL_PREFIX=$HOME/.local -DKDE_L10N_SYNC_TRANSLATIONS=ON -DRELEASE_BUILD=OFF
+make 
+sudo make install
+
+
+/home/wachin/.local/bin/kdenlive
+
 
  Adobe Premiere coding MLT software
 Post navigation

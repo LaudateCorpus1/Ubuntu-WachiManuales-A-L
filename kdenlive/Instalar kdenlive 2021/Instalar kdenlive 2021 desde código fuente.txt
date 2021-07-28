@@ -1,4 +1,5 @@
 
+Revisar bien el sig:
 
 Según:
 Building Kdenlive from Source! - Wikis & How-to Guides - Level1Techs Forums
@@ -57,4 +58,9 @@ sudo apt install cmake extra-cmake-modules qtdeclarative5-dev libqt5x11extras5-d
 
 
 
+
+**********
+revisar por un caso la sig versión
+
+Kdenlive - https://dquinton.github.io/debian-install/netinstall/kdenlive.html
 
