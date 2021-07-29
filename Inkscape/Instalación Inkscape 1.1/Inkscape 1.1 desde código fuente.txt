@@ -147,6 +147,8 @@ que lleva a:
 
 /lib/i386-linux-gnu/libstdc++.so.6.0.25
 
+Nota: En MX Linux 19 de 32 bits libstdc++.so.6 es un enlace que lleva a libstdc++.so.6.0.25
+
 Para resolver esto y que pueda funcionar Inkscape debemos desabilitar el enlace /lib/i386-linux-gnu/libstdc++.so.6 creando un backup
 
 sudo mv /lib/i386-linux-gnu/libstdc++.so.6 /lib/i386-linux-gnu/libstdc++.so.6.back
@@ -269,6 +271,12 @@ Se soluciona enlazando correctamente la nueva librería instalada por gcc 9.3.0 
 ***********************************
 
 CONSULTAS:
+
+Solución: Error: /lib64/libstdc++.so.6: version `GLIBCXX_3.4.20′ not found
+https://omarcerecedo.wordpress.com/2018/10/12/solucion-error-lib64-libstdc-so-6-version-glibcxx_3-4-20-not-found/
+
+Solve the problem of version GLIBCXX_3.4.26 not found when CentOS uses gmake
+https://www.programmersought.com/article/94854139306/
 
 libstdc++.so.6: version `GLIBCXX_3.4.20' not found
 https://stackoverflow.com/questions/44773296/libstdc-so-6-version-glibcxx-3-4-20-not-found/45161307
