@@ -1,11 +1,35 @@
 
 
-https://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu
+###########################3
 
 
+
+git clone git://git.videolan.org/x264.git
+cd x264
+./configure --prefix=/usr --enable-shared 
+make
+sudo make install
+
+
+x264 --version
+
+
+###########################
 
 git clone --depth 1 https://code.videolan.org/videolan/x264.git
 cd x264
 ./configure --enable-static --enable-pic
 make
 make instal
+
+
+############################
+
+
+CONSULTAS.
+
+Build and install libx264, libav and rtmpd 
+https://gist.github.com/revmischa/742831/befcbd7bedfafecdfd86012df3bc1e3295a16135
+
+https://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu
+
