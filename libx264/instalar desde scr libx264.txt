@@ -10,11 +10,24 @@ cd x264
 make
 sudo make install
 
+install -d /usr/bin
+install x264 /usr/bin
+install -d /usr/include /usr/lib/pkgconfig
+install -m 644 ./x264.h x264_config.h /usr/include
+install -m 644 x264.pc /usr/lib/pkgconfig
+install -d /usr/lib
+ln -f -s libx264.so.164 /usr/lib/libx264.so
+install -m 755 libx264.so.164 /usr/lib
+install -d /usr/share/bash-completion/completions
+install -m 644 ./tools/bash-autocomplete.sh /usr/share/bash-completion/completions/x264
+
 
 x264 --version
 
 
 ###########################
+
+ESTOS COMANDOS NO LOS USÉ
 
 git clone --depth 1 https://code.videolan.org/videolan/x264.git
 cd x264

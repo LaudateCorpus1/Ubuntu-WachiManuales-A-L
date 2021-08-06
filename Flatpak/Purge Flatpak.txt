@@ -1,9 +1,8 @@
 command line - How do one uninstall a program installed with Flatpak [Xubuntu 18.04] - Ask Ubuntu
 https://askubuntu.com/questions/1051095/how-do-one-uninstall-a-program-installed-with-flatpak-xubuntu-18-04
 
-Poner uno por uno los siguientes 5 comandos en una terminal ejecutandolos:
+Poner uno por uno los siguientes 4 comandos en una terminal ejecutandolos:
 
-xdg-dbus-proxy libostree-1-1
 
 
 

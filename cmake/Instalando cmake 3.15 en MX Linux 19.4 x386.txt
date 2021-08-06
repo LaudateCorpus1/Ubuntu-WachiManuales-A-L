@@ -1,0 +1,55 @@
+
+
+###########
+CMAKE 3.15 instalar 3.14
+###########
+
+Requisitos
+- Se necesita tener instalada a versión del sistema de cmake (porque sino no se puede hacer make)
+- Se necesita gcc 9.3.0 y haber arreglado el enlace
+sudo mv /lib/i386-linux-gnu/libstdc++.so.6 /lib/i386-linux-gnu/libstdc++.so.6.back
+sudo ln -s /usr/lib/libstdc++.so.6.0.28 /lib/i386-linux-gnu/libstdc++.so.6
+sino se arregla eso aparece el mensaje: 
+Install the project...
+bin/cmake: /lib/i386-linux-gnu/libstdc++.so.6: version `GLIBCXX_3.4.26' not found (required by bin/cmake)
+make: *** [Makefile:151: install] Error 1
+
+DESCARGAR CMAKE
+
+https://cmake.org/download/
+
+y allí en old releases:
+
+https://github.com/Kitware/CMake/releases
+
+y me descargué una un poquito superior, la 3.15:
+
+https://github.com/Kitware/CMake/releases/tag/v3.15.0
+
+y en el tutorial de instalacion:
+
+https://cmake.org/install/
+
+dice:
+
+Or, an existing CMake installation can be used to build a new version (y como yo tengo la 3.14):
+
+cmake .
+make      
+sudo make install
+
+[  2%] Built target cmsys
+[  3%] Built target cmsysTestsCxx
+[  3%] Built target testConsoleBufChild
+[  3%] Built target cmsysTestDynload
+[  4%] Built target cmsys_c
+[  4%] Built target cmsysTestsC
+[ 98%] Built target pseudo_cpplint
+[ 98%] Built target pseudo_cppcheck
+[ 98%] Built target pseudo_emulator_custom_command_arg
+[ 99%] Built target pseudo_tidy
+[100%] Built target foo
+
+
+
+

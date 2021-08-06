@@ -1,0 +1,17 @@
+
+
+
+
+sudo update-alternatives --install /usr/bin/cmake cmake /usr/local/bin/cmake 60
+sudo update-alternatives --install /usr/bin/cmake cmake /usr/bin/cmake 30
+
+sudo update-alternatives --config cmake
+
+
+
+de la pagina
+sudo update-alternatives --install /usr/bin/cmake cmake /usr/local/bin/cmake 1 --force
+
+
+para arreglar el problema:
+sudo update-alternatives --install /usr/local/bin/cmake cmake /usr/bin/cmake 1 --force  

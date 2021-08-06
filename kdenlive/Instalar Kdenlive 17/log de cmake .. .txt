@@ -1,0 +1,133 @@
+ 
+
+wachin@avlinux:~/Developer/invent.kde.org/multimedia-kdenlive/kdenlive-v17.12.0/build
+$ cmake ..
+-- The C compiler identification is GNU 9.3.0
+-- The CXX compiler identification is GNU 9.3.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Looking for __GLIBC__
+-- Looking for __GLIBC__ - found
+-- Performing Test _OFFT_IS_64BIT
+-- Performing Test _OFFT_IS_64BIT - Failed
+-- Performing Test HAVE_DATE_TIME
+-- Performing Test HAVE_DATE_TIME - Success
+-- Could not set up the appstream test. appstreamcli is missing.
+-- Looking for include file malloc.h
+-- Looking for include file malloc.h - found
+-- Looking for include file pthread.h
+-- Looking for include file pthread.h - found
+-- Found KF5XmlGui: /usr/lib/i386-linux-gnu/cmake/KF5XmlGui/KF5XmlGuiConfig.cmake (found version "5.54.0") 
+-- Found KF5 >= 5.23.0 enabling icon coloring
+-- Found KF5Archive: /usr/lib/i386-linux-gnu/cmake/KF5Archive/KF5ArchiveConfig.cmake (found version "5.54.0") 
+-- Found KF5Bookmarks: /usr/lib/i386-linux-gnu/cmake/KF5Bookmarks/KF5BookmarksConfig.cmake (found version "5.54.0") 
+-- Found KF5CoreAddons: /usr/lib/i386-linux-gnu/cmake/KF5CoreAddons/KF5CoreAddonsConfig.cmake (found version "5.54.0") 
+-- Found KF5Config: /usr/lib/i386-linux-gnu/cmake/KF5Config/KF5ConfigConfig.cmake (found version "5.54.0") 
+-- Found KF5ConfigWidgets: /usr/lib/i386-linux-gnu/cmake/KF5ConfigWidgets/KF5ConfigWidgetsConfig.cmake (found version "5.54.0") 
+-- Found KF5DBusAddons: /usr/lib/i386-linux-gnu/cmake/KF5DBusAddons/KF5DBusAddonsConfig.cmake (found version "5.54.0") 
+-- Found KF5KIO: /usr/lib/i386-linux-gnu/cmake/KF5KIO/KF5KIOConfig.cmake (found version "5.54.0") 
+-- Found KF5WidgetsAddons: /usr/lib/i386-linux-gnu/cmake/KF5WidgetsAddons/KF5WidgetsAddonsConfig.cmake (found version "5.54.0") 
+-- Found KF5NotifyConfig: /usr/lib/i386-linux-gnu/cmake/KF5NotifyConfig/KF5NotifyConfigConfig.cmake (found version "5.54.0") 
+-- Found KF5NewStuff: /usr/lib/i386-linux-gnu/cmake/KF5NewStuff/KF5NewStuffConfig.cmake (found version "5.54.0") 
+-- Found KF5Notifications: /usr/lib/i386-linux-gnu/cmake/KF5Notifications/KF5NotificationsConfig.cmake (found version "5.54.0") 
+-- Found KF5GuiAddons: /usr/lib/i386-linux-gnu/cmake/KF5GuiAddons/KF5GuiAddonsConfig.cmake (found version "5.54.0") 
+-- Found Gettext: /usr/bin/msgmerge (found version "0.19.8.1") 
+-- Found KF5TextWidgets: /usr/lib/i386-linux-gnu/cmake/KF5TextWidgets/KF5TextWidgetsConfig.cmake (found version "5.54.0") 
+-- Found KF5IconThemes: /usr/lib/i386-linux-gnu/cmake/KF5IconThemes/KF5IconThemesConfig.cmake (found version "5.54.0") 
+-- Found KF5DocTools: /usr/lib/i386-linux-gnu/cmake/KF5DocTools/KF5DocToolsConfig.cmake (found version "5.54.0") 
+-- Found KF5FileMetaData: /usr/lib/i386-linux-gnu/cmake/KF5FileMetaData/KF5FileMetaDataConfig.cmake (found version "5.54.0") 
+-- Found KF5Crash: /usr/lib/i386-linux-gnu/cmake/KF5Crash/KF5CrashConfig.cmake (found version "5.54.0") 
+-- Found KF5: success (found version "5.54.0") found components:  Archive Bookmarks CoreAddons Config ConfigWidgets DBusAddons KIO WidgetsAddons NotifyConfig NewStuff XmlGui Notifications GuiAddons TextWidgets IconThemes DocTools FileMetaData Crash 
+-- Found KF5 FileMetadata to extract file metadata
+-- Checking for module 'mlt++'
+--   Found mlt++, version 6.12.0
+-- Found MLT: /usr/lib/i386-linux-gnu/libmlt.so (found suitable version "6.12.0", minimum required is "6.4.0") 
+-- Found SharedMimeInfo: /usr/bin/update-mime-database (found version "1.10") 
+CMake Warning (dev) at /usr/share/cmake-3.13/Modules/FindOpenGL.cmake:270 (message):
+  Policy CMP0072 is not set: FindOpenGL prefers GLVND by default when
+  available.  Run "cmake --help-policy CMP0072" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+
+  FindOpenGL found both a legacy GL library:
+
+    OPENGL_gl_LIBRARY: /usr/lib/i386-linux-gnu/libGL.so
+
+  and GLVND libraries for OpenGL and GLX:
+
+    OPENGL_opengl_LIBRARY: /usr/lib/i386-linux-gnu/libOpenGL.so
+    OPENGL_glx_LIBRARY: /usr/lib/i386-linux-gnu/libGLX.so
+
+  OpenGL_GL_PREFERENCE has not been set to "GLVND" or "LEGACY", so for
+  compatibility with CMake 3.10 and below the legacy GL library will be used.
+Call Stack (most recent call first):
+  src/CMakeLists.txt:3 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found OpenGL: /usr/lib/i386-linux-gnu/libOpenGL.so   
+-- Found LibV4L2: /usr/include  
+-- Looking for include file linux/input.h
+-- Looking for include file linux/input.h - found
+-- Found MLT++: /usr/lib/i386-linux-gnu/libmlt++.so
+-- Found Qt5 WebKitWidgets. You can use your Freesound.org credentials to download files
+-- The following RUNTIME packages have been found:
+
+ * LibV4L2, Collection of video4linux support libraries, <http://freecode.com/projects/libv4l>
+   Required for better webcam support
+
+-- The following OPTIONAL packages have been found:
+
+ * Qt5WebKitWidgets
+ * KF5DocTools
+ * KF5FileMetaData
+ * KF5Crash
+ * PkgConfig
+
+-- The following REQUIRED packages have been found:
+
+ * ECM (required version >= 5.18.0)
+ * Qt5Core
+ * Qt5DBus
+ * Qt5Gui (required version >= 5.11.3)
+ * Qt5Widgets
+ * Qt5Script
+ * Qt5Svg
+ * Qt5Network (required version >= 5.11.3)
+ * Qt5Qml (required version >= 5.11.3)
+ * Qt5Quick
+ * Qt5
+ * KF5Archive
+ * KF5Bookmarks
+ * KF5CoreAddons
+ * KF5Config
+ * KF5ConfigWidgets
+ * KF5DBusAddons
+ * KF5KIO
+ * KF5WidgetsAddons
+ * KF5NotifyConfig
+ * KF5NewStuff
+ * KF5XmlGui
+ * KF5Notifications
+ * KF5GuiAddons
+ * Gettext
+ * KF5TextWidgets
+ * KF5IconThemes
+ * KF5
+ * MLT (required version >= 6.4.0), Multimedia framework and video playout server for TV broadcasting, <http://mltframework.org>
+   Required to do video processing
+ * SharedMimeInfo, A database of common MIME types, <http://freedesktop.org/wiki/Software/shared-mime-info/>
+ * OpenGL, the OpenGL library
+
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/wachin/Developer/invent.kde.org/multimedia-kdenlive/kdenlive-v17.12.0/build
+wachin@avlinux:~/Developer/invent.kde.org/multimedia-kdenlive/kdenlive-v17.12.0/build

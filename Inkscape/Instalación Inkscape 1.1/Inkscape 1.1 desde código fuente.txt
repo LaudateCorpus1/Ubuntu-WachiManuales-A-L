@@ -171,7 +171,7 @@ git clone https://gitlab.com/inkscape/lib2geom ./src/3rdparty/2geom
 mkdir build
 cd build
 cmake ..
-make 
+make -j 4
 sudo make install
 
 Aparece un error que lo busco así:
@@ -191,63 +191,6 @@ ver:
 
 ************************************************
 
-opcional:
-
-cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
-
-
-************************************************
-
-cmake ../inkscape -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_BUILD_TYPE=Debug -G Ninja
-ninja
-
-************************
-
-cmake -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_BUILD_TYPE=Debug -G Ninja ..
-ninja
-
-Compiling Inkscape - Inkscape Wiki
-https://wiki.inkscape.org/wiki/Compiling_Inkscape
-
-
-*********************************************
-
-cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release ..
-make
-
-
-+++++++++++++++++++++++++++++++++++++
-
-cmake -DCMAKE_BUILD_TYPE=Release -DBLAS="Open" -Dpython_version=3 -DCMAKE_CXX_FLAGS="-std=c++17" ..
-make
-
-+++++++++++++++++++++++++++++++++++++++
-
-
-cmake -DCMAKE_BUILD_TYPE=Release -DBLAS="Open" -Dpython_version=3 -DCUDA_HOST_COMPILER=/usr/bin/g++-5 -DCUDA_PROPAGATE_HOST_FLAGS=off -DCMAKE_CXX_FLAGS="-std=c++11" ..
-make
-
-error "OpenCV 4.x+ requires enabled C++11 support · Issue #6358 · BVLC/caffe
-https://github.com/BVLC/caffe/issues/6358#issuecomment-383446222
-
-ver también:
-Status of Experimental C++11 Support in GCC 4.7 - GNU Project - Free Software Foundation (FSF)
-https://gcc.gnu.org/gcc-4.7/cxx0x_status.html
-
-
-+++++++++++++++++++++++++++++++++++++
-
-
-cmake -DCMAKE_CXX_FLAGS="-std=c++11" ..
-make
-
-
-error "OpenCV 4.x+ requires enabled C++11 support · Issue #6358 · BVLC/caffe
-https://github.com/BVLC/caffe/issues/6358#issuecomment-383446222
-
-ver también:
-Status of Experimental C++11 Support in GCC 4.7 - GNU Project - Free Software Foundation (FSF)
-https://gcc.gnu.org/gcc-4.7/cxx0x_status.html
 
 
 

@@ -1,0 +1,10 @@
+
+estando desinstalado kdenlive con 
+
+sudo apt build-dep kdenlive
+
+se instalan estos:
+
+libmlt++-dev libmlt++3 libmlt-dev libmlt6
+
+

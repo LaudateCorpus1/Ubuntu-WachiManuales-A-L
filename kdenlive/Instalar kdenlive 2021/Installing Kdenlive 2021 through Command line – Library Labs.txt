@@ -39,7 +39,7 @@ libkf5notifyconfig-dev libkf5newstuff-dev libkf5xmlgui-dev libkf5declarative-dev
 libkf5notifications-dev libkf5guiaddons-dev libkf5textwidgets-dev libkf5purpose-dev \
 libkf5iconthemes-dev kdoctools-dev libkf5crash-dev libkf5filemetadata-dev kio \
 kinit qtdeclarative5-dev libqt5svg5-dev qml-module-qtquick-controls libqt5networkauth5-dev \
-qtmultimedia5-dev qtquickcontrols2-5-dev breeze-icon-theme breeze
+qtmultimedia5-dev qtquickcontrols2-5-dev breeze-icon-theme breeze qtwebengine5-dev qtwebengine5-private-dev qtwebengine5-dev-tools qml-module-qtwebengine
 
 sudo apt install frei0r-plugins ffmpeg
 
@@ -55,12 +55,8 @@ Nota: Para instalar el ultimo mlt es necesario tener cmake 3.14
 Nota 2: Para que el sistema lo reconozca hay que desinstalar:
 sudo apt remove melt
 
-cd mlt
-./configure --enable-gpl --enable-gpl3 --prefix=$INSTALL_PREFIX
-make
-make install
 
-Soy Wachi, no pude instalar mlt con .configure etc, así que así como dice arriba descargué:
+
 https://github.com/mltframework/mlt/archive/refs/tags/v7.0.1.tar.gz
 y allí el README.md dice que se puede instalar con:
 
@@ -73,6 +69,22 @@ y me dice la terminal:
    -- Configuring incomplete, errors occurred!"
 
 así que me fui a la página de cmake y descargué:
+
+###########
+CMAKE 3.15 instalar 3.14
+###########
+
+Requisitos
+- Se necesita tener instalada a versión del sistema de cmake (porque sino no se puede hacer make)
+- Se necesita gcc 9.3.0 y haber arreglado el enlace
+sudo mv /lib/i386-linux-gnu/libstdc++.so.6 /lib/i386-linux-gnu/libstdc++.so.6.back
+sudo ln -s /usr/lib/libstdc++.so.6.0.28 /lib/i386-linux-gnu/libstdc++.so.6
+sino se arregla eso aparece el mensaje: 
+Install the project...
+bin/cmake: /lib/i386-linux-gnu/libstdc++.so.6: version `GLIBCXX_3.4.26' not found (required by bin/cmake)
+make: *** [Makefile:151: install] Error 1
+
+DESCARGAR CMAKE
 
 https://cmake.org/download/
 
@@ -92,21 +104,35 @@ dice:
 
 Or, an existing CMake installation can be used to build a new version (y como yo tengo la 3.14):
 
-  cmake .
-  make      
-  make install
+cmake .
+make      
+sudo make install
+
+[  2%] Built target cmsys
+[  3%] Built target cmsysTestsCxx
+[  3%] Built target testConsoleBufChild
+[  3%] Built target cmsysTestDynload
+[  4%] Built target cmsys_c
+[  4%] Built target cmsysTestsC
+[ 98%] Built target pseudo_cpplint
+[ 98%] Built target pseudo_cppcheck
+[ 98%] Built target pseudo_emulator_custom_command_arg
+[ 99%] Built target pseudo_tidy
+[100%] Built target foo
 
 
 
 
-
+#########
+KDENLIVE
+#########
 
 cd ../kdenlive
 mkdir build
 cd build
-cmake .. -DCMAKE_INSTALL_PREFIX=$INSTALL_PREFIX- DKDE_INSTALL_USE_QT_SYS_PATHS=ON -DRELEASE_BUILD=OFF
+cmake .. -DKDE_INSTALL_USE_QT_SYS_PATHS=ON -DRELEASE_BUILD=OFF
 
-cmake -DCMAKE_INSTALL_PREFIX=$INSTALL_PREFIX- DKDE_INSTALL_USE_QT_SYS_PATHS=ON -DRELEASE_BUILD=OFF ..
+cmake -DKDE_INSTALL_USE_QT_SYS_PATHS=ON -DRELEASE_BUILD=OFF ..
 
 make -j$JOBS
 make install
@@ -115,6 +141,14 @@ And finally, you should be able to open and run Kdenlive through the command:
 
 . prefix.sh
 kdenlive
+
+
+
+sudo apt install build-essential libboost-system-dev libboost-thread-dev libboost-program-options-dev libboost-test-dev libeigen3-dev zlib1g-dev libbz2-dev liblzma-dev
+
+
+
+
 
 All commands stated above are from https://invent.kde.org/multimedia/kdenlive/-/blob/master/dev-docs/build.md
 

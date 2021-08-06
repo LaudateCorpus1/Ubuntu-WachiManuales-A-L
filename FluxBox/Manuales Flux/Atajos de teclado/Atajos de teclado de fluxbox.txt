@@ -1,4 +1,18 @@
 
+Wachiatajos
+
+# Abrir AppFinder con atajo de teclado
+# Esto significa que la Tecla de Windows (Mod4) y la tecla A activarán a xfce4-appfinder
+Mod4 e :Exec xfce4-appfinder
+
+# Abrir el menu de aplicaciones con atajo de teclado (en el lugar donde esté el cursor)
+# Esto significa que la tecla de Windows (Mod4) y la tecla M abrirán el menú de las aplicaciones
+Mod4 m :RootMenu
+
+
+
+
+
 For version 1.1.1 and later
 Please refer to the manpage fluxbox-keys(5), as it is more up-to-date than this wiki page. Some of the sections below may serve as a useful supplement to the man page.
 
