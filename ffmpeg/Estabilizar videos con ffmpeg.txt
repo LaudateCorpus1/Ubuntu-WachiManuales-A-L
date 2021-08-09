@@ -1,0 +1,39 @@
+
+
+Ejemplo
+
+
+ffmpeg -i input.mp4 -vf vidstabdetect=stepsize=32:shakiness=10:accuracy=10:result=transforms.trf -f null -
+
+ffmpeg -y -i input.mp4 -vf vidstabtransform=input=transforms.trf:zoom=0:smoothing=10,unsharp=5:5:0.8:3:3:0.4 -vcodec libx264 -tune film -acodec copy -preset slow output.mp4
+
+
+
+
+Finally this is the script that I usually launch inside the directory with the 
+
+
+ffmpeg -i HDV_0099.MP4 -vf vidstabdetect=stepsize=32:shakiness=10:accuracy=10:result=transforms.trf -f null -
+
+ffmpeg -i HDV_0099.MP4 -vf vidstabtransform=input=transforms.trf:zoom=0:smoothing=10,unsharp=5:5:0.8:3:3:0.4 -vcodec libx264 -tune film -acodec copy -preset slow output.mp4
+
+
+
+************
+EXPERIMENTO:
+************
+
+
+ffmpeg -i HDV_0097.MP4 -vf vidstabdetect=stepsize=32:shakiness=10:accuracy=10:result=transforms1.trf -f null - && ffmpeg -i HDV_0097.MP4 -vf vidstabtransform=input=transforms1.trf:zoom=0:smoothing=10,unsharp=5:5:0.8:3:3:0.4 -vcodec libx264 -tune film -acodec copy -preset slow output.mp4 && ffmpeg -i HDV_0098.MP4 -vf vidstabdetect=stepsize=32:shakiness=10:accuracy=10:result=transforms2.trf -f null - && ffmpeg -i HDV_0098.MP4 -vf vidstabtransform=input=transforms2.trf:zoom=0:smoothing=10,unsharp=5:5:0.8:3:3:0.4 -vcodec libx264 -tune film -acodec copy -preset slow output.mp4 && ffmpeg -i HDV_0099.MP4 -vf vidstabdetect=stepsize=32:shakiness=10:accuracy=10:result=transforms3.trf -f null - && ffmpeg -i HDV_0099.MP4 -vf vidstabtransform=input=transforms3.trf:zoom=0:smoothing=10,unsharp=5:5:0.8:3:3:0.4 -vcodec libx264 -tune film -acodec copy -preset slow output.mp4 && ffmpeg -i HDV_0100.MP4 -vf vidstabdetect=stepsize=32:shakiness=10:accuracy=10:result=transforms4.trf -f null - && ffmpeg -i HDV_0100.MP4 -vf vidstabtransform=input=transforms4.trf:zoom=0:smoothing=10,unsharp=5:5:0.8:3:3:0.4 -vcodec libx264 -tune film -acodec copy -preset slow output.mp4 && ffmpeg -i HDV_0101.MP4 -vf vidstabdetect=stepsize=32:shakiness=10:accuracy=10:result=transforms5.trf -f null - && ffmpeg -i HDV_0101.MP4 -vf vidstabtransform=input=transforms5.trf:zoom=0:smoothing=10,unsharp=5:5:0.8:3:3:0.4 -vcodec libx264 -tune film -acodec copy -preset slow output.mp4 && ffmpeg -i HDV_0102.MP4 -vf vidstabdetect=stepsize=32:shakiness=10:accuracy=10:result=transforms6.trf -f null - && ffmpeg -i HDV_0102.MP4 -vf vidstabtransform=input=transforms6.trf:zoom=0:smoothing=10,unsharp=5:5:0.8:3:3:0.4 -vcodec libx264 -tune film -acodec copy -preset slow output.mp4
+
+
+
+
+
+
+
+
+
+How to stabilize a video using FFmpeg and vid.stab
+https://rainnic.altervista.org/en/how-stabilize-video-using-ffmpeg-and-vidstab
+ 
