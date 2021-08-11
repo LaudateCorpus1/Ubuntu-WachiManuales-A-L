@@ -1,0 +1,8 @@
+
+
+https://cinelerra-gg.org/download/images/
+
+wget -c https://cinelerra-gg.org/download/images/CinGG-20210731-i386.AppImage
+
+
+

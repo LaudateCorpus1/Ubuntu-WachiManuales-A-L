@@ -1,0 +1,121 @@
+
+
+No funciona Cinelerra CinGG-20210731-i386.AppImage
+
+https://cinelerra-gg.org/download/images/
+
+wget -c https://cinelerra-gg.org/download/images/CinGG-20210731-i386.AppImage
+
+wachin@avlinux:~/Instaladores-Linux/Cinelerra
+$ ./CinGG-20210731-i386.AppImage 
+./CinGG-20210731-i386.AppImage: error while loading shared libraries: libIlmImf-2_2.so.22: cannot open shared object file: No such file or directory
+
+
+
+32 bits
+ls /usr/lib/i386-linux-gnu/ | grep libIlmImf
+
+64 bits
+ls /usr/lib/x86_64-linux-gnu/ | grep libIlmImf
+
+
+wachin@avlinux:~
+$ ls /usr/lib/i386-linux-gnu/ | grep libIlmImf
+libIlmImf-2_2.so.23
+libIlmImf-2_2.so.23.0.0
+libIlmImf.a
+libIlmImf.so
+libIlmImfUtil-2_2.so.23
+libIlmImfUtil-2_2.so.23.0.0
+libIlmImfUtil.a
+libIlmImfUtil.so
+wachin@avlinux:~
+
+
+
+sudo ln -s /usr/lib/i386-linux-gnu/libIlmImf-2_2.so.23 /usr/lib/i386-linux-gnu/libIlmImf-2_2.so.22
+
+
+
+
+wachin@avlinux:~/Instaladores-Linux/Cinelerra
+$ ./CinGG-20210731-i386.AppImage ./CinGG-20210731-i386.AppImage: error while loading shared libraries: libva.so.1: cannot open shared object file: No such file or directory
+
+
+
+wachin@avlinux:~
+$ ls /usr/lib/i386-linux-gnu/ | grep libva
+libva-drm.so
+libva-drm.so.2
+libva-drm.so.2.1000.0
+libva-glx.so
+libva-glx.so.2
+libva-glx.so.2.1000.0
+libvalapanel.so.0
+libvalapanel.so.0.4.87
+libvamp-hostsdk.so.3
+libvamp-hostsdk.so.3.7.0
+libvapoursynth-script.so
+libvapoursynth-script.so.0
+libvapoursynth-script.so.0.0.0
+libvapoursynth.so
+libva.so
+libva.so.2
+libva.so.2.1000.0
+libva-wayland.so
+libva-wayland.so.2
+libva-wayland.so.2.1000.0
+libva-x11.so
+libva-x11.so.2
+libva-x11.so.2.1000.0
+
+
+SOLUCIÓN:
+
+sudo ln -s /usr/lib/i386-linux-gnu/libva.so.2 /usr/lib/i386-linux-gnu/libva.so.1
+
+
+wachin@avlinux:~/Instaladores-Linux/Cinelerra
+$ $ ./CinGG-20210731-i386.AppImage ./CinGG-20210731-i386.AppImage: error while loading shared libraries: libva-x11.so.1: cannot open shared object file: No such file or directory
+bash: $: orden no encontrada
+
+
+
+wachin@avlinux:~
+$ ls /usr/lib/i386-linux-gnu/ | grep libva-x11
+libva-x11.so
+libva-x11.so.2
+libva-x11.so.2.1000.0
+
+SOLUCIÓN:
+
+sudo ln -s /usr/lib/i386-linux-gnu/libva-x11.so.2 /usr/lib/i386-linux-gnu/libva-x11.so.1
+
+
+wachin@avlinux:~/Instaladores-Linux/Cinelerra
+$ $ ./CinGG-20210731-i386.AppImage ./CinGG-20210731-i386.AppImage: error while loading shared libraries: libva-drm.so.1: cannot open shared object file: No such file or directory
+bash: $: orden no encontrada
+
+
+sudo ln -s /usr/lib/i386-linux-gnu/libva-drm.so.2 /usr/lib/i386-linux-gnu/libva-drm.so.1
+
+
+LISTO:
+
+
+wachin@avlinux:~/Instaladores-Linux/Cinelerra
+$ ./CinGG-20210731-i386.AppImage Cinelerra Infinity - built: Jul 31 2021 12:50:39
+git://git.cinelerra-gg.org/goodguy/cinelerra.git
+(c) 2006-2019 Heroine Virtual Ltd. by Adam Williams
+2007-2020 mods for Cinelerra-GG by W.P.Morrow aka goodguy
+Cinelerra is free software, covered by the GNU General Public License,
+and you are welcome to change it and/or distribute copies of it under
+certain conditions. There is absolutely no warranty for Cinelerra.
+
+lang changed from 'es_PE.UTF-8' to ''
+init plugin index: /tmp/.mount_CinGG-V9CfaI/usr/bin/plugins
+
+
+
+
+
