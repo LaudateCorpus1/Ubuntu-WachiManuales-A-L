@@ -89,3 +89,7 @@ ffmpeg -i "Alma Surfera.mp4" -vcodec libx264 -vprofile baseline -vlevel 2.1 -ref
 
 
 
+
+
+
+
