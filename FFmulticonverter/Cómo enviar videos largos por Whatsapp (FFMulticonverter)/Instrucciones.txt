@@ -104,11 +104,12 @@ video 90k, 512x288, fps15, Audio 18k, 44100   (Convirtió un video de 19:23min a
 
 video 85k, 512x288, fps15, Audio 18k, 44100   (Convirtió un video de 20:20min a 15.8MB)
 -vf "scale=512:288" -b:v 85k -r 15 -ac 1 -b:a 18k -ar 44100
-Beto
 
 
-video 80k, 512x288, fps15, Audio 18k, 44100   (Convirtió un video de 20:33min a 14.4MB)
+video 80k, 512x288, fps15, Audio 18k, 44100   (Convirtió un video de 21:07min a 15.6MB)
 -vf "scale=512:288" -b:v 80k -r 15 -ac 1 -b:a 18k -ar 44100
+Beto para la Boda usar 
+
 
 video 70k, 512x288, fps15, Audio 18k, 44100   (Convirtió un video de 20:33min a 14.4MB)
                                               (Convirtió un video de 21:10min a 14.3MB)

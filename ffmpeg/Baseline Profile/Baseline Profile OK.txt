@@ -1,0 +1,91 @@
+
+
+Convert mp4 to maximum mobile supported MP4 using FFMPEG
+https://stackoverflow.com/a/13580953/10648253
+
+
+ffmpeg -i inputfile.avi -vcodec libx264 -vprofile baseline -preset slow -b:v 250k -maxrate 250k -bufsize 500k -vf scale=-1:360 -threads 0
+  -acodec libvo_aacenc -ab 96k output.mp4
+
+ffmpeg -i "instalando ffmpeg 4.2.4-2021-07-27_18.56.27.mp4" -vcodec libx264 -vprofile baseline -preset slow -b:v 250k -maxrate 250k -bufsize 500k -vf scale=-1:360 -threads 0 -acodec libvo_aacenc -ab 96k output.mp4
+
+
+
+ffmpeg -i "instalando ffmpeg 4.2.4-2021-07-27_18.56.27.mp4" -vcodec libx264 -vprofile baseline -preset slow output.mp4
+
+ffmpeg -i "instalando ffmpeg 4.2.4-2021-07-27_18.56.27.mp4" -vcodec libx264 -vprofile baseline output-baseline-L3.1.mp4
+
+
+
+##############################
+
+
+https://superuser.com/a/564007/989620
+
+When encoding with libx264, you can set the H.264 profile and level with:
+
+    -profile:v – one of high, main, or baseline (and others, but this is irrelevant here)
+    -level:v – as defined in Annex A of the H.264 standard, e.g., 4.0.
+
+For example:
+
+ffmpeg -i input.mp4 -c:v libx264 -profile:v high -level:v 4.0 -c:a copy output.mp4
+
+ENTONCES:
+
+ffmpeg -i "instalando ffmpeg 4.2.4-2021-07-27_18.56.27.mp4" -vcodec libx264 -vprofile baseline -vlevel 2.1 "output FFmpeg Baseline L2.1.mp4"
+
+
+##############################
+
+How to set ReFrames in ffmpeg
+https://forum.videohelp.com/threads/359104-How-to-set-ReFrames-in-ffmpeg#post2269711
+
+so if you want mediainfo to say "ReFrames 2", add:     -refs 1 -x264opts b-pyramid=0 
+
+Ejemplo:
+
+ffmpeg -i "instalando ffmpeg 4.2.4-2021-07-27_18.56.27.mp4" -vcodec libx264 -vprofile baseline -vlevel 2.1 -refs 1 -x264opts b-pyramid=0 "output FFmpeg Baseline L2.1 ref 1.mp4"
+
+
+################################
+
+
+How to convert video to MPEG-4, Format profile: Base Media / Version 2
+https://github.com/umair13adil/KotlinFFMpeg/issues/4
+https://github.com/umair13adil/KotlinFFMpeg/issues/4#issuecomment-409540220
+
+I found solution from here: https://stackoverflow.com/questions/43606730/convert-mp4-version-ffmpeg/43607479#43607479
+
+
+Using ffmpeg, it's
+
+ffmpeg -i out.mp4 -c copy -map 0 -brand mp42 out2.mp4
+
+and use it:
+
+"-i", video!!.path, "-vf", "scale=" + size, "-brand", "mp42", outputLocation.path
+
+
+-brand mp42
+
+WACHI SOLUCION:
+
+ffmpeg -i "instalando ffmpeg 4.2.4-2021-07-27_18.56.27.mp4" -vcodec libx264 -vprofile baseline -vlevel 2.1 -refs 1 -x264opts b-pyramid=0 -brand mp42 "output FFmpeg Baseline L2.1 ref 1, Base Media version 2.mp4"
+
+WACHI SOLUCION PARA PELÍCULA:
+
+
+cd "/media/wachin/Contenedor/Películas Cristianas/"
+
+ffmpeg -i "Alma Surfera.mp4" -vcodec libx264 -vprofile baseline -vlevel 2.1 -refs 1 -x264opts b-pyramid=0 -brand mp42 "Alma Surfera (FFmpeg Baseline@L2.1 ref 1, Base Media version 2).mp4"
+
+
+
+
+
+
+
+
+
+

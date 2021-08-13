@@ -1,0 +1,13 @@
+
+
+Con ffmulticonverter
+
+-vcodec libx264 -vprofile baseline -preset slow 
+
+resultado:
+
+file:///media/wachin/Contenedor/Películas Cristianas/Alma Surfera (ffmpeg baseline L2.1).mp4
+
+No se pudo reproducir en LCD LG
+
+

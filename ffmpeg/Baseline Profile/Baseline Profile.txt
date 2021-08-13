@@ -1,0 +1,40 @@
+
+How can I set a h.264 profile level with ffmpeg?
+
+https://superuser.com/questions/563997/how-can-i-set-a-h-264-profile-level-with-ffmpeg
+
+I have a movie (m4v/h.264/AAC) which plays fine on my Mac but I recently discovered that it wont play on my Apple TV3. After looking at the properties of this movie file I see that it has a profile High@4.1 but Apple TV3's only suport up to High@4.0. I think the only property that is making this video incompatible is the max video bit rate, all of the other properties look like they are supported in High@4.0.
+
+How can I use ffmpeg to downgrade this video to High@4.0?
+
+Or do I have to instead change the actual property (max bit rate) that makes this video 4.1 instead of 4.0? I am worried that if I just change the bit rate, although the file would then be compatible with High@4.0 it would still be 'tagged' as High@4.1 and therefore still wouldn't play on my Apple TV3.
+
+
+
+
+https://superuser.com/a/564007/989620
+
+When encoding with libx264, you can set the H.264 profile and level with:
+
+    -profile:v – one of high, main, or baseline (and others, but this is irrelevant here)
+    -level:v – as defined in Annex A of the H.264 standard, e.g., 4.0.
+
+For example:
+
+ffmpeg -i input.mp4 -c:v libx264 -profile:v high -level:v 4.0 -c:a copy output.mp4
+
+Here we've just copied the audio stream since it won't be affected.
+
+The output will have the correct profile and level set in its metadata. You can check this while encoding, where x264 says something like:
+
+[libx264 @ 0x7fb26103a000] profile High, level 4.0
+
+MediaInfo can also help you analyze container and codec details.
+
+Of course, reencoding the video will degrade its quality to some extent, given that you're applying a lossy conversion again. Try setting the -crf option to influence the constant quality parameter. The default value here is 23, while values between 18 and 28 are considered sane. Lower means better quality. If your input has a bit rate of up to 65,000 kBit/s, chances are it'll still look pretty good after conversion though.
+
+
+
+
+
+

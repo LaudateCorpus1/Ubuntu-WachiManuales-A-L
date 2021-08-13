@@ -118,4 +118,9 @@ init plugin index: /tmp/.mount_CinGG-V9CfaI/usr/bin/plugins
 
 
 
+Basado en:
+
+Problem with Imagemagick after upgrading Ubuntu to 20.04
+https://stackoverflow.com/questions/64738243/problem-with-imagemagick-after-upgrading-ubuntu-to-20-04
+
 
