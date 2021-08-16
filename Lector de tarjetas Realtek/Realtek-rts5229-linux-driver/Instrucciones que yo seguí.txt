@@ -1,0 +1,43 @@
+
+
+https://github.com/Zibri/Realtek-rts5229-linux-driver
+
+ 
+General Information
+
+Linux driver for Realtek PCI-Express card reader chip.
+Build Steps
+
+    Clone this repo
+    Copy the whole folder into /usr/src/rts5229-1.07/
+    sudo dkms install -m rts5229 -v 1.07
+    Copy blacklist-rts5229.conf to /etc/modprobe.d/ (Optional)
+    sudo update-initramfs -u
+    sudo dkms autoinstall
+    reboot your computer
+
+Note: Root privilege is required in step 2, 3 and 4
+
+If you wanna unload the module after suspend, run the following command:
+
+$ echo SUSPEND_MODULES="rts5229" | sudo tee -a /etc/pm/config.d/modules
+
+All procedure:
+
+git clone https://github.com/Zibri/Realtek-rts5229-linux-driver.git
+sudo mkdir /usr/src/rts5229-1.07
+sudo cp Realtek-rts5229-linux-driver/* /usr/src/rts5229-1.07
+cd /usr/src/rts5229-1.07
+sudo su
+> dkms install -m rts5229 -v 1.07
+> exit
+sudo mkinitcpio -p linux
+sudo dkms autoinstall
+reboot
+
+
+Para debian es:
+
+sudo update-initramfs
+
+

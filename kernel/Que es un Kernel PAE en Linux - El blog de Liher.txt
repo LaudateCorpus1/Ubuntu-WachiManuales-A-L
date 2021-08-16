@@ -1,0 +1,27 @@
+[Desktop Entry]
+Type=Link
+URL=https://elblogdeliher.com/que-es-un-kernel-pae-en-linux/
+
+
+Que es un Kernel PAE en Linux
+Liher 11 agosto, 2015 Conceptos basicos, Ubuntu 20 comentarios
+
+Como muchas otras esta es una duda que me asalto cuando empece en esto de Linux. Al leer artículos sobre el Kernel empece a ver como en algunos de ellos hablaban de ese tipo de Kernel y me pregunte que era. Vi muchas definiciones, algunas de ellas eran complicadas de entender y para evitar que si un usuario recién iniciado en Linux se encuentre con el mismo problema he decidido escribir un articulo explicando que es un Kernel PAE.
+
+Para explicar esto primero tengo que daros algo de información. Si tenéis un ordenador y su procesador es de 32 bits la cantidad mas grande de memoria RAM que puede manejar es de 3Gb. Hace mucho tiempo que casi la totalidad de ordenadores que se venden es de 64 bits, y cuando la mayoría era de 32 bits no suponía un problema la limitación de 3Gb en la RAM ya que eso antes era mucha RAM. Pero los tiempos cambian y hoy en día es muy habitual comprar un PC y que venga con 8Gb de RAM. Entonces, si tenemos un ordenador comprado recientemente o hace menos de 8 años mas o menos, seguramente sera de 64 bits y no habrá ningún problema ya que la cantidad de RAM que puede gestionar es mucha, no se exactamente cuanta, creo que 64Gb pero antes de llegar a ese máximo nos encontraremos con el tope que nos pone la placa base físicamente, quizás en algunos podamos tener hasta 32Gb pero mas RAM solo la encontraremos en los servidores.
+
+ 
+
+tux-duda
+
+ 
+
+Pero, ¿que pasa ti tenemos un ordenador de 32 bits y queremos ponerle 4Gb o mas? Si queremos hacerlo y usar Linux no podremos instalar el Kernel de 64 bits ya que el procesador no funcionaria y no podríamos instalarlo. Si instalásemos un Linux de 32 bits con un Kernel de 32 bits solo podría usar 3Gb de los 4Gb, ya que el Kernel no podría gestionar mas. Es entonces cuando podemos recurrir al Kernel PAE.
+
+El Kernel PAE es un Kernel de 32 bits que mediante una extensión permite usar hasta 64 Gb de RAM. Digamos que es un “parche” para que podamos usar toda la RAM que tengamos instalada. Así de sencillo.
+
+Si tenéis un ordenador de 32 bits y tenéis mas de 3GB de RAM si no tenéis instalado un Kernel PAE sera como si tuvieses 3Gb, toda la RAM de mas estará sin uso. Si os encontráis en esta situación podéis instalar un Kernel PAE buscando los Kernel de vuestra distribución Linux, en el caso de Ubuntu aquí os dejo un articulo que os puede resultar útil:
+
+    Como instalar y desinstalar un Kernel en Ubuntu paso a paso
+
+En ese articulo muestro como instalar y desinstalar de forma segura un Kernel nuevo en Ubuntu, si queréis instalar un Kernel PAE basta con buscar uno que en su nombre tenga esas tres letras “PAE”. Espero haberme explicado bien, un saludo.
