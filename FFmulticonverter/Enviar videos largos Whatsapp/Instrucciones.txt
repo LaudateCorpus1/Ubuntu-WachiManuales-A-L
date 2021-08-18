@@ -144,7 +144,10 @@ video 70k, 512x288, fps15, Audio 18k, 44100   (Convirtió un video de 20:33min a
 -vf "scale=512:288" -b:v 63k -r 15 -ac 1 -b:a 18k -ar 44100
                                               (Convirtió un video de 23:12min a 14.2MB)
 
-video 70k, 512x288, fps15, Audio 16k, 44100   (Convirtió un video de 20:50min a 14.5MB pero la calidad del audio es baja)
+-vf "scale=512:288" -b:v 72k -r 15 -ac 1 -b:a 19k -ar 44100
+                                              (Convirtió un video de 23:27min a 15.9MB)
+
+video 70k, 512x288, fps15, Audio 16k, 44100   (Convirtió un video de 23:27min a 15.1MB pero la calidad del audio es baja)
 -vf "scale=512:288" -b:v 70k -r 15 -ac 1 -b:a 16k -ar 44100
 
 
