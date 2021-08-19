@@ -1,5 +1,6 @@
 partitioning - How large should I make root, home, and swap partitions? - Ask Ubuntu
 https://askubuntu.com/questions/21719/how-large-should-i-make-root-home-and-swap-partitions
+https://askubuntu.com/a/635269/145772
 
 Partition : A H.D.D. can be divided into multiple pieces digitally. These pieces are known as Partitions/Drives.
 
