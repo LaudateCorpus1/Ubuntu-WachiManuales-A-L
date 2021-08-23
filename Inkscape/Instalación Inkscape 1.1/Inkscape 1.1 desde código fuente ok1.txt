@@ -1,11 +1,11 @@
 
+El siguiente tutorial es para instalar Inkscape 1.1 en MX Linux 19 que está basado en Debian 10 Buster por lo cual se podría utilizar en cualquier sistema operativvo Linux basado en el, y lo he hecho en MX Linux 19 de 32 bits porque no hay una AppImage de la versión 1.1 para este (los usuarios de 64 bits que quieran usar la versión 1.1 sólo deben descargar la AppImage desde https://inkscape.org/es/release/all/gnulinux/appimage/)
+
+INSTRUCCIONES
 
 Si tenía instalado Inkscape desinstalarlo
 
 sudo apt remove inkscape
-
-TUTORIAL REALIZADO EN:
-MX Linux 19 de 32 bits
 
 
 Dependencias para Inkscape 1.1
@@ -50,7 +50,7 @@ y después que se descarguen todos los prerequisitos poner:
 make -j 4
 make install
 
-Nota: Esta compilación puede demorar 4,5,6,7,8,9 horas o más. También les comento que al poner el prefix en usr esta instalación borrará los archivos del gcc que viene instalado por defecto en el Sistema Operativo
+Nota: Esta compilación puede demorar 4,5,6,7,8,9 horas o más, depende del procesador. También les comento que al poner el prefix en usr esta instalación borrará los archivos del gcc que viene instalado por defecto en el Sistema Operativo
 
 y para ver esta versión que desde ahora se debe estar usando en el sistema:
 
@@ -88,51 +88,20 @@ Nota para 64 bits: Si alguien quiere compilar esto en 64 bits allí la ruta es /
 *********************************************
 Compilando Inkscape
 
+Descargar Inkscape 1.1 desde:
 
-git clone --recurse-submodules https://gitlab.com/inkscape/inkscape
-cd inkscape
-git clone https://gitlab.com/inkscape/lib2geom ./src/3rdparty/2geom
+https://inkscape.org/es/release/all/source/archive/xz/
+
+descomprimirlo y desde una terminal entrar en la carpeta y poner:
+
 mkdir build
 cd build
 cmake ..
 make -j 4
 sudo make install
 
-Aparece un error que lo busco así:
 
-
-la respuesta parece ser que se necesita gcc 9
-
-Visto en:
-https://lists.inkscape.org/hyperkitty/list/inkscape-devel@lists.inkscape.org/thread/J6S7T7PGUPZ2JBFEDC67UTLORTABNJHV/
-
-ver:
-
-
-/media/wachin/exFAT/github-2-wid/Ubuntu-WachiManuales-A-L/gcc/Cómo instalar gcc 9, 10, 11 desde código fuente en MX Linux 19 ok.txt
-
-
-
-************************************************
-
-
-
-
-
-###########################
-
-Error
-
-inkscape /sp-use-reference.h required from here /usr/include/c++/ /bits/unique_ptr.h error: invalid application of ‘sizeof’ to incomplete type ‘SPCurve’
-
-se soluciona compilando e instalando gcc 9.3.0
-
-
-ERROR
-
- /lib/i386-linux-gnu/libstdc++.so.6: version `GLIBCXX_3.4.26' not found (required by /usr/local/bin/../lib/inkscape/libinkscape_base.so
-
-Se soluciona enlazando correctamente la nueva librería instalada por gcc 9.3.0 al enlace libstdc++.so.6 (que primero hay que desabilitar)
+Tiempo de compilado aproximado dos horas más o menos, depende del procesador
 
 ***********************************
 
@@ -152,6 +121,8 @@ https://www.mathworks.com/matlabcentral/answers/329796-issue-with-libstdc-so-6
 
 GLIBCXX_3.4.26 not found running cross-complied program on BeagleBone
 https://stackoverflow.com/questions/63190229/glibcxx-3-4-26-not-found-running-cross-complied-program-on-beaglebone
+Solución para el mensaje de error al lanzar Inkscape desde la terminal:
+/lib/i386-linux-gnu/libstdc++.so.6: version `GLIBCXX_3.4.26' not found (required by /home/wachin/Developer/source/inkscape-1.1/build/lib/libinkscape_base.so)
 
 No package 'bdw-gc' found
 ./configure: bdw-gc not found when building Inkscape from source - Super User
