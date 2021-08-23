@@ -1,0 +1,172 @@
+
+
+Si tenía instalado Inkscape desinstalarlo
+
+sudo apt remove inkscape
+
+TUTORIAL REALIZADO EN:
+MX Linux 19 de 32 bits
+
+
+Dependencias para Inkscape 1.1
+
+
+sudo apt-get install build-essential cmake intltool pkg-config libtool ccache \
+ doxygen git clang-format clang-tidy jq clang-tools libpotrace-dev libcdr-dev \
+ liblcms2-dev libwpg-dev libvisio-dev cython libgtest-dev wget python3-dev \
+ libart-2.0-dev libaspell-dev libblas3 liblapack3 libcdr-dev libdouble-conversion-dev \
+ libgc-dev libgdl-3-dev libglib2.0-dev libgtk-3-dev libgtkmm-3.0-dev libgspell-1-dev \
+ libgtkspell3-3-dev libhunspell-dev libjemalloc-dev liblcms2-dev libmagick++-dev \
+ libpango1.0-dev libpng-dev libpotrace-dev libreadline-dev librevenge-dev \
+ libsigc++-2.0-dev libsoup2.4-dev libvisio-dev libwpg-dev libxslt1-dev python-lxml \
+ zlib1g-dev google-mock fonts-dejavu jq python-yaml clang-tools software-properties-common \
+ libart-2.0-dev libaspell-dev libblas3 liblapack3 libboost-dev libboost-filesystem-dev \
+ libboost-python-dev libcdr-dev libdouble-conversion-dev libgdl-3-dev libglib2.0-dev \
+ libgsl-dev libgtk-3-dev libgtkmm-3.0-dev libgtkspell3-3-dev libhunspell-dev \
+ libjemalloc-dev liblcms2-dev libmagick++-dev libpango1.0-dev libpng-dev libpoppler-glib-dev \
+ libpoppler-private-dev libpotrace-dev libreadline-dev librevenge-dev libsigc++-2.0-dev \
+ libsoup2.4-dev libvisio-dev libwpg-dev libxml-parser-perl libxml2-dev libxslt1-dev \
+ zlib1g-dev google-mock fonts-dejavu aspell imagemagick libwmf-bin perlmagick \
+ python3-pip python3-numpy python3-pil python3-lxml python3-serial python3-scour \
+ adwaita-icon-theme
+
+
+INSTALAR GCC 9.3.0
+
+Es necesario para compilar Inkscape 1.1, descargar el código fuente desde:
+
+http://ftp.mirrorservice.org/sites/sourceware.org/pub/gcc/releases/gcc-9.3.0/
+
+Nota: Este 9.3.0 está en el mirror en github http://ftp.mirrorservice.org/sites/sourceware.org/pub/gcc/releases/gcc-9.3.0/
+
+
+luego descomprimir el archivo y entrar en el directorio en una terminal y poner:
+
+./contrib/download_prerequisites
+
+y después que se descarguen todos los prerequisitos poner:
+
+./configure --disable-multilib --prefix=/usr
+make -j 4
+make install
+
+Nota: Esta compilación puede demorar 4,5,6,7,8,9 horas o más. También les comento que al poner el prefix en usr esta instalación borrará los archivos del gcc que viene instalado por defecto en el Sistema Operativo
+
+y para ver esta versión que desde ahora se debe estar usando en el sistema:
+
+gcc --version
+
+Nota 1.1: gcc 9.3.0 (específicamente esta versión) instala una librería que después de compilado e instalado necesita Inkscape 1.1 para poder ser lanzado, la instala en: 
+
+/usr/lib/libstdc++.so.6.0.28
+
+En MX Linux 19 de 32 bits está instalada por defecto el enlace de librería:
+
+/lib/i386-linux-gnu/libstdc++.so.6
+
+que lleva a:
+
+/lib/i386-linux-gnu/libstdc++.so.6.0.25
+
+Nota 1.2: En el Sistema Operativo MX Linux 19 de 32 bits el archivo: libstdc++.so.6 en realidad es un enlace que lleva a libstdc++.so.6.0.25
+
+Para resolver esto y que pueda funcionar Inkscape debemos desabilitar el enlace /lib/i386-linux-gnu/libstdc++.so.6 creando un backup
+
+sudo mv /lib/i386-linux-gnu/libstdc++.so.6 /lib/i386-linux-gnu/libstdc++.so.6.back
+
+y luego enlazando la librería de gcc 9.3.0 libstdc++.so.6.0.28 al nombre que necesitamos de librería: libstdc++.so.6
+
+poner en la terminal únicamente para gcc 9.3.0 lo siguiente:
+
+sudo ln -s /usr/lib/libstdc++.so.6.0.28 /lib/i386-linux-gnu/libstdc++.so.6
+
+
+
+Nota para 64 bits: Si alguien quiere compilar esto en 64 bits allí la ruta es /usr/lib/x86_64-linux-gnu/ y /usr/lib/ puede que deba usar /usr/lib64 eso debe testearlo.
+
+
+*********************************************
+Compilando Inkscape
+
+
+git clone --recurse-submodules https://gitlab.com/inkscape/inkscape
+cd inkscape
+git clone https://gitlab.com/inkscape/lib2geom ./src/3rdparty/2geom
+mkdir build
+cd build
+cmake ..
+make -j 4
+sudo make install
+
+Aparece un error que lo busco así:
+
+
+la respuesta parece ser que se necesita gcc 9
+
+Visto en:
+https://lists.inkscape.org/hyperkitty/list/inkscape-devel@lists.inkscape.org/thread/J6S7T7PGUPZ2JBFEDC67UTLORTABNJHV/
+
+ver:
+
+
+/media/wachin/exFAT/github-2-wid/Ubuntu-WachiManuales-A-L/gcc/Cómo instalar gcc 9, 10, 11 desde código fuente en MX Linux 19 ok.txt
+
+
+
+************************************************
+
+
+
+
+
+###########################
+
+Error
+
+inkscape /sp-use-reference.h required from here /usr/include/c++/ /bits/unique_ptr.h error: invalid application of ‘sizeof’ to incomplete type ‘SPCurve’
+
+se soluciona compilando e instalando gcc 9.3.0
+
+
+ERROR
+
+ /lib/i386-linux-gnu/libstdc++.so.6: version `GLIBCXX_3.4.26' not found (required by /usr/local/bin/../lib/inkscape/libinkscape_base.so
+
+Se soluciona enlazando correctamente la nueva librería instalada por gcc 9.3.0 al enlace libstdc++.so.6 (que primero hay que desabilitar)
+
+***********************************
+
+CONSULTAS:
+
+Solución: Error: /lib64/libstdc++.so.6: version `GLIBCXX_3.4.20′ not found
+https://omarcerecedo.wordpress.com/2018/10/12/solucion-error-lib64-libstdc-so-6-version-glibcxx_3-4-20-not-found/
+
+Solve the problem of version GLIBCXX_3.4.26 not found when CentOS uses gmake
+https://www.programmersought.com/article/94854139306/
+
+libstdc++.so.6: version `GLIBCXX_3.4.20' not found
+https://stackoverflow.com/questions/44773296/libstdc-so-6-version-glibcxx-3-4-20-not-found/45161307
+
+Issue with libstdc++.so.6
+https://www.mathworks.com/matlabcentral/answers/329796-issue-with-libstdc-so-6
+
+GLIBCXX_3.4.26 not found running cross-complied program on BeagleBone
+https://stackoverflow.com/questions/63190229/glibcxx-3-4-26-not-found-running-cross-complied-program-on-beaglebone
+
+No package 'bdw-gc' found
+./configure: bdw-gc not found when building Inkscape from source - Super User
+https://superuser.com/a/1063074/989620
+
+Install dependencies Inkscape script
+https://gitlab.com/inkscape/inkscape-ci-docker/-/raw/master/install_dependencies.sh
+
+No package 'lcms2' found
+package lcms2 was not found in the pkg-config search path
+https://www.gimp-forum.net/Thread-package-lcms2-was-not-found-in-the-pkg-config-search-path?pid=15598#pid15598	
+
+Could NOT find DoubleConversion (missing: DoubleConversion_LIBRARY
+cmake fails to find DoubleConversion when building on ChromeOS (#645) · Issues · Inkscape / inkscape · GitLab
+https://gitlab.com/inkscape/inkscape/-/issues/645#note_267766355
+
+Compiling Inkscape on Windows with MSYS2 - Inkscape Wiki
+https://wiki.inkscape.org/wiki/Compiling_Inkscape_on_Windows_with_MSYS2
