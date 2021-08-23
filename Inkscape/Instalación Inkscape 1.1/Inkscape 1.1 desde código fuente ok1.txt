@@ -33,17 +33,18 @@ sudo apt-get install build-essential cmake intltool pkg-config libtool ccache \
 
 INSTALAR GCC 9.3.0
 
-Es necesario para compilar Inkscape 1.1, descargar el código fuente desde:
+1.) Es necesario para compilar Inkscape 1.1, descargar el código fuente desde:
 
 http://ftp.mirrorservice.org/sites/sourceware.org/pub/gcc/releases/gcc-9.3.0/
 
 Nota: Este 9.3.0 está en el mirror en github http://ftp.mirrorservice.org/sites/sourceware.org/pub/gcc/releases/gcc-9.3.0/
 
-
+2.) PREREQUISITOS
 luego descomprimir el archivo y entrar en el directorio en una terminal y poner:
 
 ./contrib/download_prerequisites
 
+3.)COMPILAR
 y después que se descarguen todos los prerequisitos poner:
 
 ./configure --disable-multilib --prefix=/usr
@@ -52,10 +53,12 @@ make install
 
 Nota: Esta compilación puede demorar 4,5,6,7,8,9 horas o más, depende del procesador. También les comento que al poner el prefix en usr esta instalación borrará los archivos del gcc que viene instalado por defecto en el Sistema Operativo
 
+4.) VER SI SE INSTALÓ
 y para ver esta versión que desde ahora se debe estar usando en el sistema:
 
 gcc --version
 
+5.) EXPLICACIÓN DEL ENLACE SIMBÓLICO A LIBSTDC++.SO.6
 Nota 1.1: gcc 9.3.0 (específicamente esta versión) instala una librería que después de compilado e instalado necesita Inkscape 1.1 para poder ser lanzado, la instala en: 
 
 /usr/lib/libstdc++.so.6.0.28
@@ -70,6 +73,8 @@ que lleva a:
 
 Nota 1.2: En el Sistema Operativo MX Linux 19 de 32 bits el archivo: libstdc++.so.6 en realidad es un enlace que lleva a libstdc++.so.6.0.25
 
+
+6.) SOLUCION A ENLACE SIMBÓLICO CORRECTO A LIBSTDC++.SO.6
 Para resolver esto y que pueda funcionar Inkscape debemos desabilitar el enlace /lib/i386-linux-gnu/libstdc++.so.6 creando un backup
 
 sudo mv /lib/i386-linux-gnu/libstdc++.so.6 /lib/i386-linux-gnu/libstdc++.so.6.back
@@ -81,8 +86,16 @@ poner en la terminal únicamente para gcc 9.3.0 lo siguiente:
 sudo ln -s /usr/lib/libstdc++.so.6.0.28 /lib/i386-linux-gnu/libstdc++.so.6
 
 
+Nota para 64 bits: Si alguien quiere compilar esto en 64 bits allí la ruta es /usr/lib/x86_64-linux-gnu/ y para /usr/lib/ puede que deba usar /usr/lib64 eso debe testearlo,pues yo no lo he hecho.
 
-Nota para 64 bits: Si alguien quiere compilar esto en 64 bits allí la ruta es /usr/lib/x86_64-linux-gnu/ y /usr/lib/ puede que deba usar /usr/lib64 eso debe testearlo.
+Nota por un caso: En el futuro si algún dían enviaran una actualización para gcc y si al momento de actualizar su sistema operativo ésta se instalara, ella borrará la que hemos hecho nosotros, sí que para solucionar eso hay que entrar desde una terminal donde está la carpeta build de gcc 0.9.3 y allí poner: 
+sudo make install
+luego usar los pasos de la "6.) SOLUCION A ENLACE SIMBÓLICO CORRECTO A LIBSTDC++.SO.6"
+e igual por un caso en algún momento no funcione Inkscape, arranquenlon desde la terminal con:
+inkscape
+y luego si no arranca pongan:
+gcc -version
+para ver qué versión está instalada y si no es la que instalamos la 0.9.3 repitan "6.) SOLUCION A ENLACE SIMBÓLICO CORRECTO A LIBSTDC++.SO.6"
 
 
 *********************************************
