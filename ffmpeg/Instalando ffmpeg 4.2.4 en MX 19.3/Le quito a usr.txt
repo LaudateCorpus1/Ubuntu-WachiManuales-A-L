@@ -1,0 +1,6 @@
+
+https://facilitarelsoftwarelibre.blogspot.com/2021/06/como-instalar-ffmpeg-4.2.4-en-mx-linux-19.html
+
+en ./configure le quito lo siguiente:
+
+--prefix=/usr  

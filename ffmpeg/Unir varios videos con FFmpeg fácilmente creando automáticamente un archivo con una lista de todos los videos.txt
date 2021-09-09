@@ -1,0 +1,15 @@
+
+
+
+
+for f in *.mp4; do echo "file '$f'" >> milista.txt; done
+
+luego:
+
+ffmpeg -f concat -safe 0 -i milista.txt -c copy output.mp4
+
+
+BASADO EN:
+
+Concatenating media files
+https://trac.ffmpeg.org/wiki/Concatenate
