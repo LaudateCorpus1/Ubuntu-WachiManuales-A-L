@@ -1,0 +1,61 @@
+
+
+How to compile and install Linux Kernel 5.6.9 from source code - nixCraft
+https://www.cyberciti.biz/tips/compiling-linux-kernel-26.html
+
+
+ 
+How To Build Linux Kernel {Step-By-Step} | phoenixNAP KB
+https://phoenixnap.com/kb/build-linux-kernel
+
+
+
+*********
+Mensaje de error:
+
+
+
+debian - Attempting to compile kernel yields a certification error - Unix & Linux Stack Exchange
+https://unix.stackexchange.com/questions/293642/attempting-to-compile-kernel-yields-a-certification-error
+
+
+Wachin dentro del kernel en el archivo que creamos:
+
+cd /home/wachin/Developer/AV-Linux/Kernel/linux-5.10.52-ll-avl2/
+
+allí hay que abrir ejmplo con gedit
+
+gedit .config
+
+y allí buscar entre las líneas comentadas con # lo siguiente:
+
+CONFIG_SYSTEM_TRUSTED_KEYS="../../certs/debian-uefi-certs.pem"
+
+
+lo cambiar por
+
+CONFIG_SYSTEM_TRUSTED_KEYS=""
+
+hacer esto es lo correcto según:
+
+BuildADebianKernelPackage - Debian Wiki
+https://wiki.debian.org/BuildADebianKernelPackage
+
+donde dice:
+
+
+   "Using your current Debian kernel configuration as a starting point
+
+   Alternatively, you can use the configuration from a Debian-built kernel that you already have installed by copying the /boot/config-* file to .config and then running make oldconfig to only answer new questions.
+
+   If you do this, ensure that you modify the configuration to set:
+
+   CONFIG_SYSTEM_TRUSTED_KEYS = ""
+
+   otherwise the build may fail:
+
+   make[4]: *** No rule to make target 'debian/certs/test-signing-certs.pem', needed by 'certs/x509_certificate_list'.  Stop.
+   make[4]: *** Waiting for unfinished jobs....
+
+
+
