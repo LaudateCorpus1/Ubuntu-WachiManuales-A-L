@@ -3,6 +3,11 @@
 How to compile and install Linux Kernel 5.6.9 from source code - nixCraft
 https://www.cyberciti.biz/tips/compiling-linux-kernel-26.html
 
+correcciónes en el entendimiento aquí:
+
+How to Compile Linux Kernel from Source to Build Custom Kernel
+https://www.thegeekstuff.com/2013/06/compile-linux-kernel/
+
 
  
 How To Build Linux Kernel {Step-By-Step} | phoenixNAP KB
