@@ -1,0 +1,51 @@
+
+
+
+
+Un sólo comando en bash script para convertir facilmente, reemplace *.mkv con el tipo de archivo que usted tiene y quiere convertir, y mp4 con el resultado que quiere obtener:
+
+mkv a mp4
+
+for i in *.mkv; do ffmpeg -i "$i" -qscale 0 "$(basename "$i" .mkv)".mp4  ; done
+
+
+
+
+BASADO EN
+
+batch processing - How do you convert an entire directory with ffmpeg? - Stack Overflow
+https://stackoverflow.com/questions/5784661/how-do-you-convert-an-entire-directory-with-ffmpeg
+https://stackoverflow.com/a/6559942/10648253
+
+
+batch processing - How do you convert an entire directory with ffmpeg? - Stack Overflow
+https://stackoverflow.com/questions/5784661/how-do-you-convert-an-entire-directory-with-ffmpeg
+https://stackoverflow.com/a/33766147/10648253
+
+For Linux and macOS this can be done in one line, using parameter expansion to change the filename extension of the output file:
+
+for i in *.avi; do ffmpeg -i "$i" "${i%.*}.mp4"; done
+
+
+
+batch processing - How do you convert an entire directory with ffmpeg? - Stack Overflow
+https://stackoverflow.com/questions/5784661/how-do-you-convert-an-entire-directory-with-ffmpeg
+https://stackoverflow.com/a/56244203/10648253
+
+For Windows:
+
+Here I'm Converting all the (.mp4) files to (.mp3) files.
+Just open cmd, goto the desired folder and type the command.
+
+Shortcut: (optional)
+1. Goto the folder where your (.mp4) files are present
+2. Press Shift and Left click and Choose "Open PowerShell Window Here"
+or "Open Command Prompt Window Here"
+3. Type "cmd" [NOTE: Skip this step if it directly opens cmd instead of PowerShell]
+4. Run the command
+
+for %i in (*.mp4) do ffmpeg -i "%i" "%~ni.mp3"
+
+If you want to put this into a batch file on Windows 10, you need to use %%i
+
+

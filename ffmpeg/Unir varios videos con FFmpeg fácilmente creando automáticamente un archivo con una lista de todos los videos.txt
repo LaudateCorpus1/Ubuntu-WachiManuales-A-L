@@ -1,10 +1,10 @@
 
 
-
+Crear una lista de todos los archivos a convertir
 
 for f in *.mp4; do echo "file '$f'" >> milista.txt; done
 
-luego:
+luego unir los archivos de la lista:
 
 ffmpeg -f concat -safe 0 -i milista.txt -c copy output.mp4
 

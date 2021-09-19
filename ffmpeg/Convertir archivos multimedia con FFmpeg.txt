@@ -1,0 +1,164 @@
+
+A quick guide to using FFmpeg to convert media files | Opensource.com
+https://opensource.com/article/17/6/ffmpeg-convert-media-file-formats
+
+A quick guide to using FFmpeg to convert media files
+FFmpeg is a great tool for quickly changing an AV file's format or quality, extracting audio, creating GIFs, and more.
+05 Jun 2017 Tim Nugent Feed 903
+up
+6 comments
+Yellow arrows going both ways with texture
+Image credits : 
+Photo by Jen Wike Huger
+x
+Subscribe now
+
+Get the highlights in your inbox every week.
+
+There are many open source tools out there for editing, tweaking, and converting multimedia into exactly what you need. Tools like Audacity or Handbrake are fantastic, but sometimes you just want to change a file from one format into another quickly. Enter FFmpeg.
+
+FFmpeg is a collection of different projects for handling multimedia files. It's often used behind the scenes in many other media-related projects. Despite its name, it has nothing to do with the Moving Picture Experts Group or the myriad multimedia formats it has created.
+
+In this article I'll be using FFmpeg through the command-line tool ffmpeg, which is only a single, small piece of the FFmpeg project. It's available on many different operating systems and is included in some operating systems by default. It can be downloaded from the FFmpeg website or through most package managers.
+
+FFmpeg is a powerful tool that can do almost anything you can imagine with multimedia files. In this article, we are interested in using it to convert files, so we won't be taking a deep dive into its entire feature set. Before we look at using FFmpeg, first we need to take a quick look at what a media file exactly is.
+Media files
+
+At a very high-level view, a media file is broken up into a container and its streams. The streams include the actual AV components, such as a movie's audio or video, and are encoded using a particular media encoding, or codec. Each codec has its own properties, strengths, and weaknesses. For example, the FLAC codec is good for high-quality lossless audio, whereas Vorbis is designed to compete with MP3 in file size while offering better audio quality. This means a FLAC-formatted file will be much larger than a Vorbis audio stream but should sound better. Neither is inherently better than the other, as each is trying to do different things.
+
+The container is the wrapper for the streams. It presents a single interface that media players and tools can interact with. Some containers are highly advanced and allow for any sort of stream, including multiple video and audio streams inside a single container. The streams in a container don't have to be just audio or video though. Different containers will allow for different streams, e.g., subtitles, chapter information, or other metadata. It all depends on what the container is set to allow.
+
+This is an abstract representation of media files and skips over a lot of the differences between containers. Many require certain streams and metadata or put restrictions on the codecs or contents allowed. This explanation is enough to get you through this article. To learn more, click on the links above.
+
+Be aware that video and audio encoding can take a very long time to run. You should be prepared to settle in for a while when you use FFmpeg.
+Basic conversion
+
+The thing that trips up most people when it comes to converting audio and video is selecting the correct formats and containers. Luckily, FFmpeg is pretty clever with its default settings. Usually it automatically selects the correct codecs and container without any complex configuration.
+
+For example, say you have an MP3 file and want it converted into an OGG file:
+
+ffmpeg -i input.mp3 output.ogg
+
+This command takes an MP3 file called input.mp3 and converts it into an OGG file called output.ogg. From FFmpeg's point of view, this means converting the MP3 audio stream into a Vorbis audio stream and wrapping this stream into an OGG container. You didn't have to specify stream or container types, because FFmpeg figured it out for you.
+
+This also works with videos:
+
+ffmpeg -i input.mp4 output.webm
+
+Because WebM is a well-defined format, FFmpeg automatically knows what video and audio it can support and will convert the streams to be a valid WebM file.
+
+Depending on your container of choice, this won't always work. For instance, containers like Matroska are designed to handle almost any stream you care to put in them, whether they're valid or not. This means the command:
+
+ffmpeg -i input.mp4 output.mkv
+
+may result in a file with the same codecs as input.mp4 had, which may or may not be what you want.
+Selecting your codecs
+
+So what do you do when you want to use a container like Matroska (which can handle almost any stream) but still influence which codecs are in the output? FFmpeg to the rescue! You can select the codecs needed by using the -c flag.
+
+This flag lets you set the different codec to use for each stream. For example, to set the audio stream to be Vorbis, you would use the following command:
+
+ffmpeg -i input.mp3 -c:a libvorbis output.ogg
+
+The same can be done to change the video as well as the audio stream:
+
+ffmpeg -i input.mp4 -c:v vp9 -c:a libvorbis output.mkv
+
+This will make a Matroska container with a VP9 video stream and a Vorbis audio stream, essentially the same as the WebM we made earlier.
+
+The command ffmpeg -codecs will print every codec FFmpeg knows about. The output of this command will change depending on the version of FFmpeg you have installed.
+Changing a single stream
+
+More often than you'd like, the file you have is partially correct with only a single stream in the wrong format. It can be very time consuming to re-encode the correct stream. FFmpeg can help with this situation:
+
+ffmpeg -i input.webm -c:v copy -c:a flac output.mkv
+
+This command copies the video stream from input.webm into output.mkv and encodes the Vorbis audio stream into a FLAC. The -c flag is really powerful.
+Changing a container
+
+The prior example can be applied to both the audio and video streams, allowing you to convert from one container format to another without having to do any additional stream encoding:
+
+ffmpeg -i input.webm -c:av copy output.mkv
+
+Influencing the quality
+
+Now that we have a handle on the codecs, the next question is: How do we set the quality of each stream?
+
+The simplest method is to change the bitrate, which may or may not result in a different quality. Humans' ability to see and hear isn't as clean and clear cut as we'd like to think. Sometimes changing bitrates makes a huge difference to the subjective quality. Other times it might do nothing but change the file size. Sometimes it's very difficult to tell what will happen without trying it out.
+
+To set the bitrate of each stream, you use the -b flag, which works in a similar fashion to the -c flag, except instead of codec options you set a bitrate.
+
+For example, to change the bitrate of the video, you would use it like this:
+
+ffmpeg -i input.webm -c:a copy -c:v vp9 -b:v 1M output.mkv
+
+This will copy the audio (-c:a copy) from input.webm and convert the video to a VP9 codec (-c:v vp9) with a bit rate of 1M/s (-b:v), all bundled up in a Matroska container (output.mkv).
+
+Another way we can impact quality is to adjust the frame rate of the video using the -r option:
+
+ffmpeg -i input.webm -c:a copy -c:v vp9 -r 30 output.mkv
+
+This creates a new Matroska with the audio stream copied over and the video stream's frame rate forced to 30 frames per second, instead of using the frame rate from the input (-r 30).
+
+You can also adjust the dimensions of your video using FFmpeg. The simplest way is to use a predetermined video size:
+
+ffmpeg -i input.mkv -c:a copy -s hd720 output.mkv
+
+This modifies the video to 1280x720 in the output, but you can set the width and height manually if you want:
+
+ffmpeg -i input.mkv -c:a copy -s 1280x720 output.mkv
+
+This produces the exact same output as the earlier command. If you want to set custom sizes in FFmpeg, please remember that the width parameter (1280) comes before height (720).
+
+Adjusting frame rate and bitrate are two crude but effective techniques for affecting media quality. Setting these values very high cannot improve the quality of an existing source if its quality is already low.
+
+Changing these settings is most effective for quickly reducing a high-quality stream to make a smaller file size. Adjusting the size of your video can't improve the quality, but can make it fit better onto a tablet instead of your TV. Changing the size of a 640x480 video to 4K will not improve it.
+
+Changing the quality of your files is a very subjective matter, which means there is no one way that will work every time. The best method is to make some changes and test whether it looks or sounds better to you.
+Modifying the streams
+
+Often you have a file that is almost perfect, and you just need to trim a few parts off. This can be done more easily with a tool that shows you what you're changing, but if you know exactly where you want it trimmed, it is very easy to do it in FFmpeg:
+
+ffmpeg -i input.mkv -c:av copy -ss 00:01:00 -t 10 output.mkv
+
+This will copy the video and audio streams (-c:av copy) but will trim the video. The -t option sets the cut duration to be 10 seconds and the -ss option sets the start point of the video for trimming, in this case at one minute (00:01:00). You can be more precise than just hours, minutes, and seconds, going down to milliseconds if needed.
+Extracting the audio
+
+Sometimes you don't really care about the video, you just want the audio. Luckily this is very straightforward in FFmpeg with the -vn flag:
+
+ffmpeg -i input.mkv -vn audio_only.ogg
+
+This command extracts only the audio from the input, encodes it as Vorbis, and saves it into audio_only.ogg. Now you have an isolated audio stream. You can also use the -an and -sn flags in the same manner to strip out audio and subtitle streams.
+Making a GIF out of it
+
+Recently, animated GIFs (with a hard g because I am not a monster) have made a comeback. Personally I think GIF is the worst format you could choose for video. It has terrible compression quality and size; has very hard limits around colors, frame rates, and container metadata; and can't support audio. Still, it's quite popular. So, how can you make a video clip into an animated GIF?
+
+Using the -an flag, similar to what we did above, is better than creating an animated GIF if you'd like to make a video without audio, but there are plenty of places that support GIFs that won't support a different video format. For all of those:
+
+ffmpeg -i input.mkv output.gif
+
+This command creates a GIF of the same dimensions as the input file. This is often a bad idea, as GIFs don't compress well relative to other video formats (in my experience a GIF will be around eight times larger than the source video). It may be helpful to use the -s option to resize your GIF to something a bit smaller, especially if the input source is quite large, such as HD video.
+Other tools
+
+While FFmpeg is the go-to tool for most AV tasks, it isn't perfect for everything. There are some tools that, used in conjunction with FFmpeg, can make everything a little bit easier.
+Grabbing videos from YouTube
+
+It can be very easy to upload something to YouTube, lose the original source video, and have only the YouTube version remaining. What is the easiest way to retrieve a copy of your YouTube videos?
+
+Youtube-dl is a nifty little tool you can use to grab videos from YouTube and several other video-streaming services. It's super straightforward to use:
+
+youtube-dl https://www.youtube.com/watch?v=2m5nW9CQLJ0
+
+This command downloads the video at the URL indicated and saves it locally.
+
+Youtube-dl has several options for controlling the quality and format of the downloaded video, but I find it easier to use the command above. It downloads the highest quality audio and video into a single file, then I use FFmpeg to convert them into the format I want.
+Getting info about the media
+
+Sometimes all you need to know is what's inside the media container. While there are several tools that can do this, my preferred one is MediaInfo. MediaInfo shows all the information inside a media container, for each of the different streams, as well as the metadata for the input file. This gives you everything you might want to know—and probably a bunch of stuff you didn't.
+
+Running the command mediainfo inputFile.mkv spits out a list of information about the input file in a human-readable form.
+And more...
+
+This is just scratching the surface of what FFmpeg can do. Luckily the documentation for FFmpeg and the project's other tools is very good and worth checking out. It'll teach you all about the many different tricks this dog can do.
+
+If you are after a tool with a graphical interface for converting multimedia, Handbrake is an exceptionally good one available on Linux, Mac OS X, and Windows. Handbrake uses FFmpeg (among other tools) under the hood.
