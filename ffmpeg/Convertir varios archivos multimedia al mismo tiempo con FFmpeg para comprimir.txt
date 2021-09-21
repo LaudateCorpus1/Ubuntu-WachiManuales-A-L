@@ -4,10 +4,41 @@
 
 Un sólo comando en bash script para convertir facilmente, reemplace *.mkv con el tipo de archivo que usted tiene y quiere convertir, y mp4 con el resultado que quiere obtener:
 
-mkv a mp4
+avi a mp4
 
-for i in *.mkv; do ffmpeg -i "$i" -qscale 0 "$(basename "$i" .mkv)".mp4  ; done
+for i in *.avi; do ffmpeg -i "$i" "${i%.*}.mp4"; done
 
+
+opus a mp3
+
+for i in *.opus; do ffmpeg -i "$i" "${i%.*}.mp3"; done
+
+
+opus a mp3 Personalizado
+
+
+for i in *.opus; do ffmpeg -i "$i" -ar 44100 -ac 2 -b:a 192k "${i%.*}.mp3"; done
+
+
+opus a mp3 Personalizado, baja calidad, mono 
+
+for i in *.opus; do ffmpeg -i "$i" -ar 44100 -ac 1 -b:a 48k "${i%.*}.mp3"; done
+
+
+
+
+PARA GUARDAR LA CONVERSIÓN EN OTRA CARPETA
+Dentro del Directorio donde están los archivos que usted desea convertir cree otro directorio ejemplo:
+
+Convertidos
+
+mp4 sin comprimir a mp4 comprimido
+
+y deberá poner el siguiente comando
+
+for i in *.mp4; do ffmpeg -i "$i" "Convertidos/${i%.*}.mp4"; done
+
+y el resultado se guardará allí
 
 
 
@@ -17,6 +48,8 @@ batch processing - How do you convert an entire directory with ffmpeg? - Stack O
 https://stackoverflow.com/questions/5784661/how-do-you-convert-an-entire-directory-with-ffmpeg
 https://stackoverflow.com/a/6559942/10648253
 
+for i in *.avi; do ffmpeg -i "$i" -qscale 0 "$(basename "$i" .avi)".mov  ; done
+
 
 batch processing - How do you convert an entire directory with ffmpeg? - Stack Overflow
 https://stackoverflow.com/questions/5784661/how-do-you-convert-an-entire-directory-with-ffmpeg
@@ -24,8 +57,7 @@ https://stackoverflow.com/a/33766147/10648253
 
 For Linux and macOS this can be done in one line, using parameter expansion to change the filename extension of the output file:
 
-for i in *.avi; do ffmpeg -i "$i" "${i%.*}.mp4"; done
-
+for i in *.mp4; do ffmpeg -i "$i" "${i%.*}.avi"; done
 
 
 batch processing - How do you convert an entire directory with ffmpeg? - Stack Overflow
@@ -49,3 +81,15 @@ for %i in (*.mp4) do ffmpeg -i "%i" "%~ni.mp3"
 If you want to put this into a batch file on Windows 10, you need to use %%i
 
 
+
+OTRAS CONSULTAS
+
+Batch conversion into a new folder with ffmpeg - Video Production Stack Exchange
+https://video.stackexchange.com/questions/19860/batch-conversion-into-a-new-folder-with-ffmpeg
+https://video.stackexchange.com/a/19862
+
+How to batch convert/multiplex any files with ffmpeg - VideoHelp Forum
+https://forum.videohelp.com/threads/356314-How-to-batch-convert-multiplex-any-files-with-ffmpeg
+
+Convert audio files to mp3 using ffmpeg - Stack Overflow
+https://stackoverflow.com/questions/3255674/convert-audio-files-to-mp3-using-ffmpeg
