@@ -1,0 +1,36 @@
+
+
+
+FFMPEG-Jack/ugk-screencast.sh at master · ungleichklang/FFMPEG-Jack
+https://github.com/ungleichklang/FFMPEG-Jack/blob/master/ugk-screencast.sh
+
+
+
+PROBLEMA CON EL CÓDIGO ORIGINAL
+
+ffmpeg -f jack -ac 2 -i ffmpeg -f x11grab 
+
+ffmpeg -f jack -ac 2 -i ffmpeg -f x11grab -s $WIN_GEO -r 15 -i :0.0+$WIN_POS -acodec pcm_s16le -sameq "$SaveName.avi"
+
+la opción -sameq ha sido removida, posiblemente funcione así:
+
+ORIGINAL:
+
+ffmpeg -f jack -ac 2 -i ffmpeg -f x11grab -video_size 854x480 -r 15 -i :0.0 -c:v libx264 -qp 0 -preset ultrafast "SaveName.mp4"
+
+
+EJEMPLO
+
+ffmpeg -follow_mouse 100 -show_region 1 -video_size 854x480 -r 30 -f x11grab -i :0.0 -f alsa -ac 2 -i default -c:v libx264 -qp 0 -preset ultrafast "$HOME/Rec-$(date '+%Y-%m-%d_%H.%M.%S').mp4"
+       
+
+FUNCIONA:
+
+
+ffmpeg -follow_mouse 100 -show_region 1 -video_size 854x480 -r 30 -f x11grab -i :0.0 \
+       -f jack -ac 2 -i ffmpeg \
+       -c:v libx264 -qp 0 -preset ultrafast \
+       "$HOME/Rec-$(date '+%Y-%m-%d_%H.%M.%S').mp4"
+
+
+     
