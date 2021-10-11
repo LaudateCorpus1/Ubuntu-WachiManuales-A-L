@@ -24,6 +24,8 @@ tar xJf linux-3.10.10.tar.xz
 cd linux-3.10.10
 xzcat ../patch-3.10.10-rt7.patch.xz | patch -p1 --dry-run
 xzcat ../patch-3.10.10-rt7.patch.xz | patch -p1
+
+
 wget https://github.com/yomguy/linux-RT-config/raw/master/.config
 make menuconfig
 export CONCURRENCY_LEVEL=4
