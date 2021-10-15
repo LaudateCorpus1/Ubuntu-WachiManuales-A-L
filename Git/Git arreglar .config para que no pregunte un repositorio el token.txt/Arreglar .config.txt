@@ -1,0 +1,41 @@
+
+
+en el archivo ejemplo:
+
+file:///home/wachin/Developer/shutter-encoder/.git/config
+
+CAMBIAR ESTO
+	
+	[remote "origin"]
+	url = https://github.com/wachi/nombredelrepo
+
+
+POR ESTO:
+
+
+
+[remote "origin"]
+	url = https://wachin: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@github.com/wachin/nombredelrepo
+	
+	
+	
+
+Mi credencial con token:
+
+
+	
+	https://wachin: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@github.com
+ 
+
+
+
+
+[remote "origin"]
+	url = https://github.com/mamimeli/Cancion
+
+
+editelo de tal manera que debe quedar así:
+
+
+[remote "origin"]
+	url = https://mamimeli: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@github.com/mamimeli/Cancion

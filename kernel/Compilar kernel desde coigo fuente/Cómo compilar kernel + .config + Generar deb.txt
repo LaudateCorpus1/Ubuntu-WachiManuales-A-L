@@ -36,11 +36,12 @@ https://blog.carreralinux.com.ar/2017/12/configurar-el-kernel-make-menuconfig/
 
 
 export CONCURRENCY_LEVEL=4
-make-kpkg --rootcmd fakeroot --initrd --revision=1 --append-to-version=-wachin kernel_image kernel_headers
 
-or
+make deb-pkg LOCALVERSION=-wachin KDEB_PKGVERSION=$(make kernelversion)-1
 
-fakeroot make-kpkg --initrd --append-to-version=-custom kernel_image kernel_headers
+8.10. Compiling a Kernel
+https://debian-handbook.info/browse/stable/sect.kernel-compilation.html
+
 
 cd ..
 sudo dpkg -i linux-image-*.*.deb linux-headers-*.*.deb
@@ -73,3 +74,10 @@ y me devuelve sin usar Jack, pero hay que habilitar QjackCtl
 
 
 A good average score for RT capabilities is around 20 and the max not above 100.
+
+
+
+En la sig dirección hay información de cosas de compilación del kernel
+
+Explicación del mecanismo de configuración del kernel de Linux (make menuconfig, Kconfig, makefile) - programador clic
+https://programmerclick.com/article/71711128011/
