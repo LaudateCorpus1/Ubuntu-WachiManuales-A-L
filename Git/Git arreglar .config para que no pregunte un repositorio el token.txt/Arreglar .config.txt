@@ -15,16 +15,16 @@ POR ESTO:
 
 
 [remote "origin"]
-	url = https://wachin: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@github.com/wachin/nombredelrepo
+	url = https://wachin:nnnnnnnnnnnnnnnnnnnnn@github.com/wachin/nombredelrepo
 	
 	
 	
 
-Mi credencial con token:
+ejemplo credencial con token:
 
 
 	
-	https://wachin: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@github.com
+	https://wachin:nnnnnnnnnnnnnnnnnnnnnnnnnn@github.com
  
 
 
