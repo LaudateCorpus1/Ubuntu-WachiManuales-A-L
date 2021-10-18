@@ -1,0 +1,68 @@
+
+
+wachin@mxlinux:~/Developer/Kernel-AV-Linux/linux-5.10.52-rt47-avl2_COMPILANDO
+$ sudo dpkg -i *.deb
+[sudo] password for wachin: 
+Seleccionando el paquete linux-headers-5.10.52-rt47avl1-wachin previamente no seleccionado.
+(Leyendo la base de datos ... 715569 ficheros o directorios instalados actualmente.)
+Preparando para desempaquetar linux-headers-5.10.52-rt47avl1-wachin_5.10.52-1_i386.deb ...
+Desempaquetando linux-headers-5.10.52-rt47avl1-wachin (5.10.52-1) ...
+Seleccionando el paquete linux-image-5.10.52-rt47avl1-wachin previamente no seleccionado.
+Preparando para desempaquetar linux-image-5.10.52-rt47avl1-wachin_5.10.52-1_i386.deb ...
+Desempaquetando linux-image-5.10.52-rt47avl1-wachin (5.10.52-1) ...
+dpkg: atención: desactualizando linux-libc-dev:i386 de 5.14.6-3~mx21+1 a 5.10.52-1
+Preparando para desempaquetar linux-libc-dev_5.10.52-1_i386.deb ...
+Desempaquetando linux-libc-dev:i386 (5.10.52-1) sobre (5.14.6-3~mx21+1) ...
+Configurando linux-headers-5.10.52-rt47avl1-wachin (5.10.52-1) ...
+Configurando linux-image-5.10.52-rt47avl1-wachin (5.10.52-1) ...
+dkms: running auto installation service for kernel 5.10.52-rt47avl1-wachin:
+Kernel preparation unnecessary for this kernel.  Skipping...
+
+Building module:
+cleaning build area...
+make -j2 KERNELRELEASE=5.10.52-rt47avl1-wachin KVER=5.10.52-rt47avl1-wachin......
+cleaning build area...
+
+DKMS: build completed.
+
+wl.ko:
+Running module version sanity check.
+ - Original module
+   - No original module exists within this kernel
+ - Installation
+   - Installing to /lib/modules/5.10.52-rt47avl1-wachin/updates/dkms/
+
+depmod......
+
+Warning: Unable to find an initial ram disk that I know how to handle.
+Will not try to make an initrd.
+
+DKMS: install completed.
+
+Kernel preparation unnecessary for this kernel.  Skipping...
+
+Building module:
+cleaning build area...
+'make' -j2 KVER=5.10.52-rt47avl1-wachin USER_MODULE_NAME=rtl8821ce CONFIG_RTW_DEBUG=n...................................................................
+cleaning build area...
+
+DKMS: build completed.
+
+rtl8821ce.ko:
+Running module version sanity check.
+ - Original module
+   - No original module exists within this kernel
+ - Installation
+   - Installing to /lib/modules/5.10.52-rt47avl1-wachin/updates/
+
+depmod.....
+
+DKMS: install completed.
+.
+update-initramfs: Generating /boot/initrd.img-5.10.52-rt47avl1-wachin
+I: The initramfs will attempt to resume from /dev/sda8
+I: (UUID=b98654fc-71f0-4485-91eb-877108d9cee3)
+I: Set the RESUME variable to override this.
+
+
+

@@ -1,0 +1,24 @@
+
+
+
+Para mi sería así:
+
+
+$ mkdir encoded
+$ for f in *.mp4; do ffmpeg -i "$f" "encoded/${f%.avi}.mp4"; done
+
+
+
+
+
+Using a bash "for loop" to perform a batch encode
+
+To encode all videos in a directory:
+
+$ mkdir encoded
+$ for f in *.avi; do ffmpeg -i "$f" -c:v libx264 -crf 23 -preset medium \
+  -c:a aac -b:a 128k -movflags +faststart -vf scale=-2:720,format=yuv420p \
+  "encoded/${f%.avi}.mp4"; done
+
+Ubuntu – Fastest way to convert videos (batch or single) – iTecTec
+https://itectec.com/ubuntu/ubuntu-fastest-way-to-convert-videos-batch-or-single/
