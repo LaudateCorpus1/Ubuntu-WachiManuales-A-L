@@ -81,6 +81,25 @@ for %i in (*.mp4) do ffmpeg -i "%i" "%~ni.mp3"
 If you want to put this into a batch file on Windows 10, you need to use %%i
 
 
+*********************************************
+
+
+Con comandos
+
+Using a bash "for loop" to perform a batch encode
+
+To encode all videos in a directory:
+
+$ mkdir encoded
+$ for f in *.avi; do ffmpeg -i "$f" -c:v libx264 -crf 23 -preset medium \
+  -c:a aac -b:a 128k -movflags +faststart -vf scale=-2:720,format=yuv420p \
+  "encoded/${f%.avi}.mp4"; done
+
+Ubuntu – Fastest way to convert videos (batch or single) – iTecTec
+https://itectec.com/ubuntu/ubuntu-fastest-way-to-convert-videos-batch-or-single/
+
+
+***********************************************
 
 OTRAS CONSULTAS
 
