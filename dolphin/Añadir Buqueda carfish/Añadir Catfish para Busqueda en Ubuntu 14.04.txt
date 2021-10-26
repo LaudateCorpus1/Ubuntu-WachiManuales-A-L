@@ -1,5 +1,20 @@
 
-La busqueda en Dolphin no funciona a esta fecha 2014-06-01 no se luego lo arreglen, pero mientras tanto, hacer esto. Clic derecho a cualquier carpeta, en propiedades añadir como nuevo programa para abrir:
+
+2021
+
+En MX Linux 21 XFCE está instalado por defecto Catfish y como he instalado Dolphin lo único que hay que hacer es darle clic derecho a alguna carpeta y en Abrir con elegir "Busqueda con catfish"
+
+
+
+La busqueda en Dolphin no funciona a esta fecha 2014-06-01 no se luego lo arreglen, pero mientras tanto, hacer esto. Clic derecho a cualquier carpeta y clic:
+
+Opciones de tipo de archivo
+
+en  Orden de preferencia de aplicaciones
+
+clic en 
+
+Añadir
 
 catfish --fileman=thunar --path=%f
 

@@ -9,18 +9,30 @@ avi a mp4
 for i in *.avi; do ffmpeg -i "$i" "${i%.*}.mp4"; done
 
 
+mp4 a mpg
+
+for i in *.mp4; do ffmpeg -i "$i" "${i%.*}.mpg"; done
+
+
+MOV a mp4
+
+for i in *.mov; do ffmpeg -i "$i" "${i%.*}.mp4"; done
+
+
 opus a mp3
 
 for i in *.opus; do ffmpeg -i "$i" "${i%.*}.mp3"; done
 
 
-opus a mp3 Personalizado
+opus a mp3 
+Personalizado
 
 
 for i in *.opus; do ffmpeg -i "$i" -ar 44100 -ac 2 -b:a 192k "${i%.*}.mp3"; done
 
 
-opus a mp3 Personalizado, baja calidad, mono 
+opus a mp3 
+Personalizado, baja calidad, mono 
 
 for i in *.opus; do ffmpeg -i "$i" -ar 44100 -ac 1 -b:a 48k "${i%.*}.mp3"; done
 
@@ -39,6 +51,13 @@ y deberá poner el siguiente comando
 for i in *.mp4; do ffmpeg -i "$i" "Convertidos/${i%.*}.mp4"; done
 
 y el resultado se guardará allí
+
+
+
+PARA GUARDAR LA CONVERSIÓN DE VARIOS FORMATOS DE VIDEO EN OTRA CARPETA
+
+for i in *.*; do ffmpeg -i "$i" "Convertidos/${i%.*}.mp4"; done
+
 
 
 

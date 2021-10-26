@@ -1,0 +1,12 @@
+
+
+
+balooctl status
+
+
+balooctl enable
+
+
+
+
+https://forum.mxlinux.org/viewtopic.php?t=49304&start=10

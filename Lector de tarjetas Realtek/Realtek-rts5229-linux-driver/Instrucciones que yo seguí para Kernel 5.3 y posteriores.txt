@@ -1,0 +1,65 @@
+	
+
+On a Terminal put the next 4 lines:	
+
+git clone https://github.com/wachin/Realtek-rts5229-linux-driver
+sudo mkdir /usr/src/rts5229-1.07
+sudo cp Realtek-rts5229-linux-driver/* /usr/src/rts5229-1.07
+cd /usr/src/rts5229-1.07
+
+Then put the next:
+
+sudo su
+
+Set your password, and next put the 4 lines:
+
+dkms install -m rts5229 -v 1.07
+make 
+make install
+depmod
+
+Then Reboot
+
+Put your SD Card on your laptop or if you have inserted remove and again put into the slot, you will see that in a File Manager appear
+
+
+The solution for build the Driver in the Kernel 5.3 I found in:
+
+Announcement of SUBDIRS removal after kernel 5.3 · Issue #187 · MEN-Mikro-Elektronik/13MD05-90
+https://github.com/MEN-Mikro-Elektronik/13MD05-90/issues/187
+
+
+
+
+************************
+EN ESPAÑOL:
+********************************************
+
+On a Terminal put the next 4 lines:	
+
+git clone https://github.com/wachin/Realtek-rts5229-linux-driver
+sudo mkdir /usr/src/rts5229-1.07
+sudo cp Realtek-rts5229-linux-driver/* /usr/src/rts5229-1.07
+cd /usr/src/rts5229-1.07
+
+Then put the next:
+
+sudo su
+
+Set your password, and next put the 4 lines:
+
+dkms install -m rts5229 -v 1.07
+make 
+make install
+depmod
+
+Then Reboot
+
+Put your SD Card on your laptop or if you have inserted remove and again put into the slot, you will see that in a File Manager appear
+
+
+
+La solución para el Kernel 5.3
+
+Announcement of SUBDIRS removal after kernel 5.3 · Issue #187 · MEN-Mikro-Elektronik/13MD05-90
+https://github.com/MEN-Mikro-Elektronik/13MD05-90/issues/187
