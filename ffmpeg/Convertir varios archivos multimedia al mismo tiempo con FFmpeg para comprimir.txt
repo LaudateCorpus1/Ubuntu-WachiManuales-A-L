@@ -53,6 +53,12 @@ for i in *.mp4; do ffmpeg -i "$i" "Convertidos/${i%.*}.mp4"; done
 y el resultado se guardará allí
 
 
+DESDE LA SD HASTA UNA CARPETA EN MI LAPTOP
+
+for i in *.mp4; do ffmpeg -i "$i" "/home/wachin/Vídeos/sd-card/${i%.*}.mp4"; done
+
+
+
 
 PARA GUARDAR LA CONVERSIÓN DE VARIOS FORMATOS DE VIDEO EN OTRA CARPETA
 
