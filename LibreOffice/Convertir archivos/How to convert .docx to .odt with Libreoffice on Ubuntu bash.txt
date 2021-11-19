@@ -11,3 +11,6 @@ libreoffice --headless --convert-to odt *.doc
 
 .doc to .txt
 libreoffice --headless --convert-to txt *.doc
+
+.odp to .txt
+libreoffice --headless --convert-to txt *.odp
