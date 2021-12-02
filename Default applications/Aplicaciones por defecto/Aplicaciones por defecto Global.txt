@@ -3,7 +3,11 @@
 nautilus - How do I change the default application for unknown file types? - Ask Ubuntu
 https://askubuntu.com/questions/65009/how-do-i-change-the-default-application-for-unknown-file-types
 
-modify ~/.local/share/applications/mimeapps.list
+modify 
+
+gedit ~/.local/share/applications/mimeapps.list
+
+gedit ~/.config/mimeapps.list
 
 [Default Applications] 
 - text/plain=bless.desktop

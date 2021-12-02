@@ -1,5 +1,10 @@
 
 
+Nota: Estos Scripts sólo funcionan si la extensión es la correcta, sea minúscula o mayúscula, esto pues algunas filmadoras ejemplo guardan los archivos mp4 con mayúsucla así: MP4
+
+
+Unir mp4
+
 Crear una lista de todos los archivos a convertir
 
 for f in *.mp4; do echo "file '$f'" >> milista.txt; done
@@ -8,6 +13,21 @@ luego unir los archivos de la lista:
 
 ffmpeg -f concat -safe 0 -i milista.txt -c copy output.mp4
 
+
+**********************
+
+Unir MP4
+
+Crear una lista de todos los archivos a convertir
+
+for f in *.MP4; do echo "file '$f'" >> milista.txt; done
+
+luego unir los archivos de la lista:
+
+ffmpeg -f concat -safe 0 -i milista.txt -c copy output.mp4
+
+
+*********************
 
 BASADO EN:
 

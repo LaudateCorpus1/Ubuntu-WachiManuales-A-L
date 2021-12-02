@@ -1,0 +1,16 @@
+
+
+dmg a iso
+
+Install dmg2img
+
+sudo apt-get install dmg2img
+
+Convert DMG image file to ISO file
+
+dmg2img -v -i /path/to/image_file.dmg -o /path/to/image_file.iso
+	
+	
+macos - Making a bootable OSX USB from dmg on Linux - Super User
+https://superuser.com/questions/505821/making-a-bootable-osx-usb-from-dmg-on-linux	
+https://superuser.com/a/668881/989620
